@@ -6,6 +6,24 @@
 			<li Class="TG.StockGen.OrbitalSilver">
 				<countRange>2000~4000</countRange>
 			</li>
+			<li Class="StockGenerator_MultiDef">
+				<thingDefs>
+					<li>ComponentSpacer</li>
+					<li>MealSurvivalPack</li>
+					<li>MedicineUltratech</li>
+					<li>Plasteel</li>
+					<li>Uranium</li>
+				</thingDefs>
+			</li>
+			<li Class="StockGenerator_MultiDef" MayRequire="VanillaExpanded.VCookE">
+				<thingDefs>
+					<li>VCE_CannedMeat</li>
+					<li>VCE_CannedProduce</li>
+					<li>VCE_CannedFruit</li>
+					<li>VCE_CannedAP</li>
+					<li>VCE_CannedFish</li>
+				</thingDefs>
+			</li>
 		</generators>
 	</TG.StockGroupDef>
 </Defs>
