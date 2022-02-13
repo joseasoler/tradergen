@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<TG.TraderGenDef>
+		<defName>TG_TestingShip</defName>
+		<label>testing ship</label>
+		<orbital>true</orbital>
+		<requestable>false</requestable>
+		<commonality>6</commonality>
+		<links>
+			<li>LD_InterstellarSupplies</li>
+			<li>LD_SecondaryLink</li>
+		</links>
+	</TG.TraderGenDef>
+</Defs>

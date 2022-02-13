@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<PropertyGroup>
+		<ProjectGuid>{4C9431F0-8CE6-11EC-B1E5-0800200C9A66}</ProjectGuid>
+		<RootNamespace>TG</RootNamespace>
+		<AssemblyName>TraderGen</AssemblyName>
+
+		<OutputType>Library</OutputType>
+		<TargetFramework>net472</TargetFramework>
+		<TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+		<PlatformTarget>x64</PlatformTarget>
+		<AppDesignerFolder>Properties</AppDesignerFolder>
+		<DebugSymbols>false</DebugSymbols>
+		<Optimize>true</Optimize>
+		<WarningLevel>4</WarningLevel>
+		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+		<TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+		<OutputPath>..\$(Configuration)\Assemblies\</OutputPath>
+	</PropertyGroup>
+
+	<!-- Dependencies and source code common to all supported RimWorld versions. -->
+	<ItemGroup>
+		<Compile Include="Harmony\DebugActionsMisc_AddTradeShipOfKind.cs" />
+		<Compile Include="Harmony\IncidentWorker_OrbitalTraderArrival_TryExecuteWorker.cs" />
+		<Compile Include="Link.cs" />
+		<Compile Include="LinkDef.cs" />
+		<Compile Include="Logger.cs" />
+		<Compile Include="Mod\Settings.cs" />
+		<Compile Include="Mod\Mod.cs" />
+		<Compile Include="StockGroupDef.cs" />
+		<Compile Include="TraderGenDef.cs" />
+		<Compile Include="Trader\ProceduralTradeShip.cs" />
+		<Reference Include="System" />
+		<PackageReference Include="DeepCloner" Version="0.10.3" />
+		<PackageReference Include="Lib.Harmony" Version="2.2.0" ExcludeAssets="runtime" />
+		<PackageReference Include="Krafs.Publicizer" Version="1.0.1" />
+		<Compile Include="Harmony\HarmonyInitialization.cs" />
+		<Compile Include="Properties\AssemblyInfo.cs" />
+	</ItemGroup>
+
+	<!-- Dependencies and source code specific to RimWorld 1.3. -->
+	<ItemGroup Condition="$(Configuration) == '1.3'">
+		<PackageReference Include="Krafs.Rimworld.Ref" Version="1.3.3200" GeneratePathProperty="true" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<!-- Allow access to private definitions in the RimWorld DLL. -->
+		<Publicize Include="Assembly-CSharp" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="Gen" />
+	</ItemGroup>
+
+	<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+
+</Project>

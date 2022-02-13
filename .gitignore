@@ -1,0 +1,10 @@
+# Rider project files.
+.idea
+
+# Build files.
+obj
+*.pdb
+*.DotSettings.user
+
+# Notepad++ bak files.
+*.bak
