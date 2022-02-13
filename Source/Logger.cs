@@ -12,18 +12,12 @@ namespace TG
 		private const string Prefix = "[TraderGen] ";
 
 		/// <summary>
-		/// Lazily initialized reference to the settings of this mod.
-		/// </summary>
-		private static readonly Lazy<Settings> Settings =
-			new Lazy<Settings>(LoadedModManager.GetMod<Mod.Mod>().GetSettings<Settings>);
-
-		/// <summary>
 		/// Logs trader procedural generation messages. 
 		/// </summary>
 		/// <param name="text">Text to be logged.</param>
 		public static void Gen(string text)
 		{
-			if (Settings.Value.LogGen)
+			if (Settings.LogGen)
 			{
 				Log.Message(Prefix + text);
 			}
@@ -32,7 +26,6 @@ namespace TG
 		public static void Error(string text)
 		{
 			Log.Error(Prefix + text);
-
 		}
 	}
 }

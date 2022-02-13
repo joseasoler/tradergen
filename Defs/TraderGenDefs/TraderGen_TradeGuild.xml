@@ -8,7 +8,6 @@
 		<commonality>6</commonality>
 		<links>
 			<li>LD_InterstellarSupplies</li>
-			<li>LD_SecondaryLink</li>
 		</links>
 	</TG.TraderGenDef>
 </Defs>

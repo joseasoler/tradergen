@@ -3,75 +3,8 @@
 	<TG.StockGroupDef>
 		<defName>SG_InterstellarSupplies</defName>
 		<generators>
-			<!-- ToDo replace with proper data later. -->
-			<li Class="StockGenerator_SingleDef">
-				<thingDef>Silver</thingDef>
-				<countRange>50~250</countRange>
-			</li>
-		</generators>
-	</TG.StockGroupDef>
-	<!-- ToDo remove -->
-	<TG.StockGroupDef>
-		<defName>SG_GoldRemove</defName>
-		<generators>
-			<!-- ToDo replace with proper data later. -->
-			<li Class="StockGenerator_SingleDef">
-				<thingDef>Gold</thingDef>
-				<countRange>50~250</countRange>
-			</li>
-		</generators>
-	</TG.StockGroupDef>
-	<TG.StockGroupDef>
-		<defName>SG_ComponentIndustrial</defName>
-		<generators>
-			<li Class="StockGenerator_SingleDef">
-				<thingDef>ComponentIndustrial</thingDef>
-				<countRange>50~250</countRange>
-			</li>
-		</generators>
-	</TG.StockGroupDef>
-	<TG.StockGroupDef>
-		<defName>SG_ComponentSpacer</defName>
-		<generators>
-			<li Class="StockGenerator_SingleDef">
-				<thingDef>ComponentSpacer</thingDef>
-				<countRange>50~250</countRange>
-			</li>
-		</generators>
-	</TG.StockGroupDef>
-	<TG.StockGroupDef>
-		<defName>SG_Plasteel</defName>
-		<generators>
-			<li Class="StockGenerator_SingleDef">
-				<thingDef>Plasteel</thingDef>
-				<countRange>50~250</countRange>
-			</li>
-		</generators>
-	</TG.StockGroupDef>
-	<TG.StockGroupDef>
-		<defName>SG_Uranium</defName>
-		<generators>
-			<li Class="StockGenerator_SingleDef">
-				<thingDef>Uranium</thingDef>
-				<countRange>50~250</countRange>
-			</li>
-		</generators>
-	</TG.StockGroupDef>
-	<TG.StockGroupDef>
-		<defName>SG_MealSurvivalPack</defName>
-		<generators>
-			<li Class="StockGenerator_SingleDef">
-				<thingDef>MealSurvivalPack</thingDef>
-				<countRange>50~250</countRange>
-			</li>
-		</generators>
-	</TG.StockGroupDef>
-	<TG.StockGroupDef>
-		<defName>SG_InsectJelly</defName>
-		<generators>
-			<li Class="StockGenerator_SingleDef">
-				<thingDef>InsectJelly</thingDef>
-				<countRange>50~250</countRange>
+			<li Class="TG.StockGen.OrbitalSilver">
+				<countRange>2000~4000</countRange>
 			</li>
 		</generators>
 	</TG.StockGroupDef>

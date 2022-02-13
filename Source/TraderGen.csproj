@@ -28,6 +28,7 @@
 		<Compile Include="Logger.cs" />
 		<Compile Include="Mod\Settings.cs" />
 		<Compile Include="Mod\Mod.cs" />
+		<Compile Include="StockGen\OrbitalSilver.cs" />
 		<Compile Include="StockGroupDef.cs" />
 		<Compile Include="TraderGenDef.cs" />
 		<Compile Include="Trader\ProceduralTradeShip.cs" />

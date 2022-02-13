@@ -34,8 +34,12 @@ namespace TG.Mod
 		{
 			var listingStandard = new Listing_Standard();
 			listingStandard.Begin(inRect);
-			listingStandard.CheckboxLabeled("TG_LogTraderGen".Translate(),
-				ref ((Settings) modSettings).LogGen,
+			listingStandard.Label("TG_SilverStockOrbitalTrader".Translate((int) Settings.OrbitalSilverScaling), -1,
+				"TG_SilverStockOrbitalTraderTooltip".Translate());
+			
+			Settings.OrbitalSilverScaling = listingStandard.Slider(Settings.OrbitalSilverScaling, Settings.MinSilverScaling,
+				Settings.MaxSilverScaling);
+			listingStandard.CheckboxLabeled("TG_LogTraderGen".Translate(), ref Settings.LogGen,
 				"TG_LogTraderGenTooltip".Translate());
 			listingStandard.End();
 			base.DoSettingsWindowContents(inRect);
