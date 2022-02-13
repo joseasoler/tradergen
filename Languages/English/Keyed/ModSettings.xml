@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
-	<TG_LogOrbitalTraderGen>Log orbital trader generation</TG_LogOrbitalTraderGen>
-	<TG_LogOrbitalTraderGenTooltip>Show a detailed report of the generation process of orbital traders in the log.</TG_LogOrbitalTraderGenTooltip>
+	<TG_LogTraderGen>Log trader generation</TG_LogTraderGen>
+	<TG_LogTraderGenTooltip>Show a detailed report of the generation process of traders in the log.</TG_LogTraderGenTooltip>
 </LanguageData>

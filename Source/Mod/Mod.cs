@@ -34,9 +34,9 @@ namespace TG.Mod
 		{
 			var listingStandard = new Listing_Standard();
 			listingStandard.Begin(inRect);
-			listingStandard.CheckboxLabeled("TG_LogOrbitalTraderGen".Translate(),
-				ref ((Settings) modSettings).LogOrbitalTraderGen,
-				"TG_LogOrbitalTraderGenTooltip".Translate());
+			listingStandard.CheckboxLabeled("TG_LogTraderGen".Translate(),
+				ref ((Settings) modSettings).LogGen,
+				"TG_LogTraderGenTooltip".Translate());
 			listingStandard.End();
 			base.DoSettingsWindowContents(inRect);
 		}

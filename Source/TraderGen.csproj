@@ -20,6 +20,7 @@
 
 	<!-- Dependencies and source code common to all supported RimWorld versions. -->
 	<ItemGroup>
+		<Compile Include="Gen\TraderKind.cs" />
 		<Compile Include="Harmony\DebugActionsMisc_AddTradeShipOfKind.cs" />
 		<Compile Include="Harmony\IncidentWorker_OrbitalTraderArrival_TryExecuteWorker.cs" />
 		<Compile Include="Link.cs" />
@@ -46,10 +47,6 @@
 	<ItemGroup>
 		<!-- Allow access to private definitions in the RimWorld DLL. -->
 		<Publicize Include="Assembly-CSharp" />
-	</ItemGroup>
-
-	<ItemGroup>
-	  <Folder Include="Gen" />
 	</ItemGroup>
 
 	<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

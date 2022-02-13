@@ -10,7 +10,7 @@ namespace TG.Mod
 		/// <summary>
 		/// Generate a detailed report of the orbital trade ship generation process and append it to the log.
 		/// </summary>
-		public bool LogOrbitalTraderGen /* = false */;
+		public bool LogGen /* = false */;
 
 		/// <summary>
 		/// Save and load preferences.
@@ -18,7 +18,7 @@ namespace TG.Mod
 		public override void ExposeData()
 		{
 			base.ExposeData();
-			Scribe_Values.Look(ref LogOrbitalTraderGen, "logOrbitalTraderGen");
+			Scribe_Values.Look(ref LogGen, "logGen");
 		}
 	}
 }

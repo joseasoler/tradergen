@@ -18,12 +18,12 @@ namespace TG
 			new Lazy<Settings>(LoadedModManager.GetMod<Mod.Mod>().GetSettings<Settings>);
 
 		/// <summary>
-		/// Logs orbital trader procedural generation messages. 
+		/// Logs trader procedural generation messages. 
 		/// </summary>
 		/// <param name="text">Text to be logged.</param>
-		public static void OrbitalTraderGen(string text)
+		public static void Gen(string text)
 		{
-			if (Settings.Value.LogOrbitalTraderGen)
+			if (Settings.Value.LogGen)
 			{
 				Log.Message(Prefix + text);
 			}
