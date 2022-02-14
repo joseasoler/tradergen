@@ -1,20 +1,51 @@
 using Force.DeepCloner;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using RimWorld;
+using RimWorld.Planet;
 using Verse;
 
 namespace TG.Gen
 {
 	/// <summary>
-	/// Includes utilities for procedurally generating TraderKindDefs.
+	/// Stores information required to recreate a TraderKindDef if necessary.
 	/// </summary>
-	public static class TraderKind
+	public class TraderGenData : IExposable
+	{
+		/// <summary>
+		/// Procedural generation template used to create the TraderKindDef.
+		/// </summary>
+		public TraderGenDef Def;
+
+		/// <summary>
+		/// Seed used to generate the TraderKindDef using the TraderGenDef.
+		/// </summary>
+		public int Seed;
+
+		public void ExposeData()
+		{
+			Scribe_Defs.Look(ref Def, "Def");
+			Scribe_Values.Look(ref Seed, "Seed");
+		}
+	}
+
+	/// <summary>
+	/// Procedurally generates TraderKindDefs and also manages their life cycle, save and load.
+	/// </summary>
+	public class TraderKind : WorldComponent
 	{
 		/// <summary>
 		/// Maximum Markov chain depth allowed.
 		/// </summary>
 		private const int MaxDepth = 32;
+
+		private Dictionary<string, TraderGenData> _defReferencesByName;
+
+		public TraderKind(World world) : base(world)
+		{
+			_defReferencesByName = new Dictionary<string, TraderGenData>();
+		}
 
 		/// <summary>
 		/// Adds all data found in a LinkDef to the TraderKindDef being generated
@@ -98,17 +129,15 @@ namespace TG.Gen
 		}
 
 		/// <summary>
-		/// Procedurally generates a new TraderKindDef, and registers it into DefDatabase.
+		/// Procedurally generates a new TraderKindDef if necessary, and registers it into DefDatabase.
 		/// </summary>
-		/// <param name="genDef">Trader generation preset to use.</param>
-		/// <param name="genSeed">Seed to use.</param>
+		/// <param name="data">Trader generation preset and seed to use.</param>
 		/// <returns>Newly generated TraderKindDef.</returns>
-		public static TraderKindDef Gen(in TraderGenDef genDef, int genSeed)
+		public TraderKindDef GenWithSeed(in TraderGenData data)
 		{
-			var newDefName = genDef.defName + '_' + genSeed;
+			var newDefName = data.Def.defName + '_' + data.Seed;
 
-			// If the def already exists, assume that it has previously been created. This can happen while loading without
-			// quitting RimWorld; in that case the def may still be there.
+			// The def may exist already after loading without quitting RimWorld.
 			DefDatabase<TraderKindDef>.defsByName.TryGetValue(newDefName, out var def);
 			if (def != null)
 			{
@@ -119,25 +148,24 @@ namespace TG.Gen
 			def = new TraderKindDef
 			{
 				defName = newDefName,
-				label = genDef.label,
-				modExtensions = genDef.modExtensions,
-				modContentPack = genDef.modContentPack,
-				fileName = genDef.fileName,
+				label = data.Def.label,
+				modExtensions = data.Def.modExtensions,
+				modContentPack = data.Def.modContentPack,
+				fileName = data.Def.fileName,
 				generated = true,
-				orbital = genDef.orbital,
-				requestable = genDef.requestable,
-				hideThingsNotWillingToTrade = genDef.hideThingsNotWillingToTrade,
-				tradeCurrency = genDef.tradeCurrency,
-				faction = genDef.faction,
-				permitRequiredForTrading = genDef.permitRequiredForTrading
+				orbital = data.Def.orbital,
+				requestable = data.Def.requestable,
+				hideThingsNotWillingToTrade = data.Def.hideThingsNotWillingToTrade,
+				tradeCurrency = data.Def.tradeCurrency,
+				faction = data.Def.faction,
+				permitRequiredForTrading = data.Def.permitRequiredForTrading
 			};
 
+			Logger.Gen($"Generating new TraderKindDef {def.defName} using seed {data.Seed}.");
 
-			Logger.Gen($"Generating new TraderKindDef {def.defName} using seed {genSeed}.");
+			var rng = new Random(data.Seed);
 
-			var rng = new Random(genSeed);
-
-			foreach (var link in genDef.links)
+			foreach (var link in data.Def.links)
 			{
 				Logger.Gen("Starting new chain.");
 				VisitLink(ref rng, ref def, link);
@@ -151,11 +179,45 @@ namespace TG.Gen
 
 			def.PostLoad();
 
+			// _defReferencesByName will already have a newDefName entry when called from ExposeData.
+			_defReferencesByName.TryAdd(newDefName, data);
 			ShortHashGiver.GiveShortHash(def, def.GetType());
 			DefDatabase<TraderKindDef>.Add(def);
 			Logger.Gen($"Finished generating new TraderKindDef {def.defName}.");
 
 			return def;
+		}
+
+		public TraderKindDef Generate(in TraderGenDef genDef)
+		{
+			return GenWithSeed(new TraderGenData
+			{
+				Def = genDef,
+				Seed = Math.Abs(Rand.Int)
+			});
+		}
+
+		public void Remove(in TraderKindDef def)
+		{
+			var defName = def.defName;
+			DefDatabase<TraderKindDef>.Remove(def);
+			ShortHashGiver.takenHashesPerDeftype[def.GetType()].Remove(def.shortHash);
+			_defReferencesByName.Remove(def.defName);
+			Logger.Gen($"Removed previously generated TraderKindDef {defName}.");
+		}
+
+		public override void ExposeData()
+		{
+			base.ExposeData();
+			Scribe_Collections.Look(ref _defReferencesByName, "_defReferencesByName", LookMode.Value, LookMode.Deep);
+			if (Scribe.mode != LoadSaveMode.LoadingVars) return;
+			foreach (var data in _defReferencesByName.Values)
+			{
+				Logger.Gen($"Loading {data.Def.defName}: {data.Seed}");
+				// Ensure that the TraderKindDef has been generated properly before loading any traders.
+				GenWithSeed(data);
+			}
+
 		}
 	}
 }

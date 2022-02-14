@@ -1,6 +1,7 @@
 using System;
 using System.Linq;
 using RimWorld;
+using TG.Gen;
 using Verse;
 
 namespace TG.Trader
@@ -51,8 +52,8 @@ namespace TG.Trader
 		/// <param name="parms">Incident generation parameters.</param>
 		public static void DoArrival(in TraderGenDef genDef, in IncidentParms parms)
 		{
+			var ship = new ProceduralTradeShip(Find.World.GetComponent<TraderKind>().Generate(genDef));
 			var map = (Map) parms.target;
-			var ship = new ProceduralTradeShip(genDef, Math.Abs(Rand.Int));
 			if (ColonistsHavePoweredCommsConsole(map))
 			{
 				var factionText = ship.Faction == null
