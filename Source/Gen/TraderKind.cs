@@ -17,27 +17,6 @@ namespace TG.Gen
 		private const int MaxDepth = 32;
 
 		/// <summary>
-		/// Generates a short summary of a StockGenerator instance and appends it to the logs.
-		/// </summary>
-		/// <param name="generator">Instance to log.</param>
-		private static void LogStockGenerator(in StockGenerator generator)
-		{
-			var text = generator.GetType().Name;
-			if (generator.GetType() == typeof(StockGenerator_SingleDef))
-			{
-				var g = (StockGenerator_SingleDef) generator;
-				text += '[' + g.thingDef.defName + "]: " + g.countRange;
-			}
-			else if (generator.GetType() == typeof(StockGenerator_BuySingleDef))
-			{
-				var g = (StockGenerator_BuySingleDef) generator;
-				text += '[' + g.thingDef.defName + "]: " + g.countRange;
-			}
-
-			Logger.Gen(text);
-		}
-
-		/// <summary>
 		/// Adds all data found in a LinkDef to the TraderKindDef being generated
 		/// </summary>
 		/// <param name="def">TraderKindDef currently being generated</param>
@@ -51,7 +30,6 @@ namespace TG.Gen
 				{
 					Logger.Gen($"{depth}: Processing StockGroup {stockGroup}.");
 
-					def.stockGenerators.AddRange(stockGroup.generators);
 					// StockGenerators have a reference to their TraderKindDef. This reference is not set for generators coming
 					// from a StockGroupDef as these lack a TraderKindDef. Since multiple TraderKindDefs may be using the same
 					// StockGroupDef at any given time, a shallow copy of the StockGenerator is provided to them instead.
@@ -61,7 +39,8 @@ namespace TG.Gen
 					{
 						def.stockGenerators.Add(stockGeneratorCopy);
 						stockGeneratorCopy.ResolveReferences(def);
-						Logger.Gen($"{depth}: Adding StockGenerator {stockGeneratorCopy}.");
+						Logger.Gen(
+							$"{depth}: Adding StockGenerator {Logger.StockGen(stockGeneratorCopy)}");
 					}
 				}
 			}
@@ -167,7 +146,7 @@ namespace TG.Gen
 			Logger.Gen("Final generators:");
 			foreach (var generator in def.stockGenerators)
 			{
-				LogStockGenerator(generator);
+				Logger.Gen($"\t{Logger.StockGen(generator)}");
 			}
 
 			def.PostLoad();
