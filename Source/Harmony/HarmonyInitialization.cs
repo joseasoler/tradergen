@@ -1,5 +1,4 @@
 ﻿using System.Reflection;
-using TG.Harmony;
 using Verse;
 
 namespace TG.Harmony
@@ -8,7 +7,6 @@ namespace TG.Harmony
 	/// Initialization of the Harmony patching of the mod.
 	/// </summary>
 	[StaticConstructorOnStartup]
-	// ReSharper disable once UnusedType.Global
 	public class HarmonyInitialization
 	{
 		/// <summary>
