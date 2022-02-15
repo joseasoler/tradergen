@@ -58,9 +58,22 @@ namespace TG
 			return text;
 		}
 
+		/// <summary>
+		/// Logs an error on the terminal.
+		/// </summary>
+		/// <param name="text">Error text to log.</param>
 		public static void Error(string text)
 		{
 			Log.Error(Prefix + text);
+		}
+
+		/// <summary>
+		/// Logs an error exactly once.
+		/// </summary>
+		/// <param name="text">Error text to log.</param>
+		public static void ErrorOnce(string text)
+		{
+			Log.ErrorOnce(text, text.GetHashCode());
 		}
 	}
 }

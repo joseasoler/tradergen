@@ -133,7 +133,7 @@ namespace TG.Gen
 		/// </summary>
 		/// <param name="data">Trader generation preset and seed to use.</param>
 		/// <returns>Newly generated TraderKindDef.</returns>
-		public TraderKindDef GenWithSeed(in TraderGenData data)
+		private TraderKindDef GenWithSeed(in TraderGenData data)
 		{
 			var newDefName = data.Def.defName + '_' + data.Seed;
 
@@ -188,6 +188,11 @@ namespace TG.Gen
 			return def;
 		}
 
+		/// <summary>
+		/// Generate a new TraderKindDef with a random seed.
+		/// </summary>
+		/// <param name="genDef">Trader generation preset to use.</param>
+		/// <returns>Newly generated TraderKindDef.</returns>
 		public TraderKindDef Generate(in TraderGenDef genDef)
 		{
 			return GenWithSeed(new TraderGenData
@@ -197,15 +202,28 @@ namespace TG.Gen
 			});
 		}
 
+		/// <summary>
+		/// Removes a procedurally generated TraderKindDef from the game.
+		/// </summary>
+		/// <param name="def">TraderKindDef that must be removed.</param>
 		public void Remove(in TraderKindDef def)
 		{
 			var defName = def.defName;
+			if (!def.generated)
+			{
+				Logger.ErrorOnce($"Attempted removal of non-generated TraderKindDef {defName}");
+				return;
+			}
+
+			_defReferencesByName.Remove(def.defName);
 			DefDatabase<TraderKindDef>.Remove(def);
 			ShortHashGiver.takenHashesPerDeftype[def.GetType()].Remove(def.shortHash);
-			_defReferencesByName.Remove(def.defName);
 			Logger.Gen($"Removed previously generated TraderKindDef {defName}.");
 		}
 
+		/// <summary>
+		/// Handles saving and loading of currently generated defs. Generates them on load as needed.
+		/// </summary>
 		public override void ExposeData()
 		{
 			base.ExposeData();
@@ -217,7 +235,6 @@ namespace TG.Gen
 				// Ensure that the TraderKindDef has been generated properly before loading any traders.
 				GenWithSeed(data);
 			}
-
 		}
 	}
 }
