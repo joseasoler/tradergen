@@ -1,4 +1,5 @@
 using System;
+using System.IO;
 using System.Linq;
 using System.Reflection;
 using HarmonyLib;
@@ -21,7 +22,7 @@ namespace TG.Harmony
 	{
 
 		/// <summary>
-		/// Applies harmony patches requires for this functionality.
+		/// Applies Harmony patches requires for this functionality.
 		/// </summary>
 		/// <param name="harmony"></param>
 		public static void Patch(HarmonyLib.Harmony harmony)
@@ -31,24 +32,18 @@ namespace TG.Harmony
 				typeof(TraderKindDef), typeof(Faction)
 			});
 
-
-			if (constructor == null)
-			{
-				Logger.Error("Could not patch the constructor of Rimworld.TradeShip.");
-				return;
-			}
-
 			var constructorPrefix = new HarmonyMethod(AccessTools.Method(typeof(TradeShip), nameof(ConstructorPrefix)));
 			var constructorPostfix = new HarmonyMethod(AccessTools.Method(typeof(TradeShip), nameof(ConstructorPostfix)));
 
 			harmony.Patch(constructor, constructorPrefix, constructorPostfix);
 
-			var depart = typeof(RimWorld.TradeShip).GetMethod(nameof(RimWorld.TradeShip.Depart));
-			if (depart == null)
+			// Patching RimWorld.TradeShip.Depart is incompatible with Trader Ships. See TG.Harmony.Mod.TraderShips.
+			if (LoadedModManager.RunningMods.FirstIndexOf(pack => pack.PackageId.Equals("automatic.traderships")) > -1)
 			{
-				Logger.Error("Could not patch Rimworld.TradeShip.Depart.");
 				return;
 			}
+
+			var depart = typeof(RimWorld.TradeShip).GetMethod(nameof(RimWorld.TradeShip.Depart));
 
 			var departPostfix = new HarmonyMethod(AccessTools.Method(typeof(TradeShip), nameof(DepartPostfix)));
 			harmony.Patch(depart, postfix: departPostfix);
@@ -100,6 +95,10 @@ namespace TG.Harmony
 			// ToDo procedural generation of names.
 		}
 
+		/// <summary>
+		/// Clean up the generated TraderKindDef after the ship departs.
+		/// </summary>
+		/// <param name="__instance">Departing TradeShip instance.</param>
 		private static void DepartPostfix(RimWorld.TradeShip __instance)
 		{
 			Find.World.GetComponent<TraderKind>().Remove(__instance.def);

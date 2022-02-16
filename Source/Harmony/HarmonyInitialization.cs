@@ -1,4 +1,5 @@
 ﻿using System.Reflection;
+using HarmonyLib;
 using Verse;
 
 namespace TG.Harmony
@@ -19,6 +20,8 @@ namespace TG.Harmony
 			harmony.PatchAll(Assembly.GetExecutingAssembly());
 			// Manual patching.
 			TradeShip.Patch(harmony);
+			// Manual patching for mods.
+			Mod.TraderShips.Patch(harmony);
 		}
 	}
 }

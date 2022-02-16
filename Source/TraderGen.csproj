@@ -21,6 +21,7 @@
 	<!-- Dependencies and source code common to all supported RimWorld versions. -->
 	<ItemGroup>
 		<Compile Include="Gen\TraderKind.cs" />
+		<Compile Include="Harmony\Mod\TraderShips.cs" />
 		<Compile Include="Harmony\TradeShip.cs" />
 		<Compile Include="Link.cs" />
 		<Compile Include="LinkDef.cs" />

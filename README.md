@@ -2,6 +2,10 @@
 
 [![RimWorld](https://img.shields.io/badge/RimWorld-1.3-informational)](https://rimworldgame.com/) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](CODE_OF_CONDUCT.md)
 
+TraderGen provides randomly generated orbital traders. Their stock variety is vastly increased, and many aspects of this generation can be customized through the mod settings.
+
+Fully compatible with the [Trader Ships](https://steamcommunity.com/sharedfiles/filedetails/?id=2046222331) mod.
+
 ## Contributions
 
 This project encourages community involvement and contributions. Check the [CONTRIBUTING](CONTRIBUTING.md) file for details. Existing contributors can be checked in the [contributors list](https://gitlab.com/joseasoler/tradergen/-/graphs/main).
