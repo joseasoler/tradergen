@@ -21,6 +21,7 @@
 	<!-- Dependencies and source code common to all supported RimWorld versions. -->
 	<ItemGroup>
 		<Compile Include="Gen\TraderKind.cs" />
+		<Compile Include="Harmony\DebugActionAddTradeShip.cs" />
 		<Compile Include="Harmony\Mod\TraderShips.cs" />
 		<Compile Include="Harmony\TradeShip.cs" />
 		<Compile Include="Link.cs" />
@@ -31,6 +32,7 @@
 		<Compile Include="StockGen\OrbitalSilver.cs" />
 		<Compile Include="StockGroupDef.cs" />
 		<Compile Include="TraderGenDef.cs" />
+		<Compile Include="Trader\OrbitalTraderArrival.cs" />
 		<Reference Include="System" />
 		<PackageReference Include="DeepCloner" Version="0.10.3" />
 		<PackageReference Include="Lib.Harmony" Version="2.2.0" ExcludeAssets="runtime" />
@@ -47,10 +49,6 @@
 	<ItemGroup>
 		<!-- Allow access to private definitions in the RimWorld DLL. -->
 		<Publicize Include="Assembly-CSharp" />
-	</ItemGroup>
-
-	<ItemGroup>
-	  <Folder Include="Trader" />
 	</ItemGroup>
 
 	<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

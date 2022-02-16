@@ -1,10 +1,8 @@
-using System;
-using System.IO;
 using System.Linq;
-using System.Reflection;
 using HarmonyLib;
 using RimWorld;
 using TG.Gen;
+using TG.Trader;
 using Verse;
 
 namespace TG.Harmony
@@ -22,9 +20,9 @@ namespace TG.Harmony
 	{
 
 		/// <summary>
-		/// Applies Harmony patches requires for this functionality.
+		/// Applies Harmony patches required for this functionality.
 		/// </summary>
-		/// <param name="harmony"></param>
+		/// <param name="harmony">Harmony instance.</param>
 		public static void Patch(HarmonyLib.Harmony harmony)
 		{
 			var constructor = typeof(RimWorld.TradeShip).GetConstructor(new[]
@@ -34,32 +32,17 @@ namespace TG.Harmony
 
 			var constructorPrefix = new HarmonyMethod(AccessTools.Method(typeof(TradeShip), nameof(ConstructorPrefix)));
 			var constructorPostfix = new HarmonyMethod(AccessTools.Method(typeof(TradeShip), nameof(ConstructorPostfix)));
-
 			harmony.Patch(constructor, constructorPrefix, constructorPostfix);
 
 			// Patching RimWorld.TradeShip.Depart is incompatible with Trader Ships. See TG.Harmony.Mod.TraderShips.
-			if (LoadedModManager.RunningMods.FirstIndexOf(pack => pack.PackageId.Equals("automatic.traderships")) > -1)
+			if (HarmonyInitialization.TraderShipsModEnabled)
 			{
 				return;
 			}
 
 			var depart = typeof(RimWorld.TradeShip).GetMethod(nameof(RimWorld.TradeShip.Depart));
-
 			var departPostfix = new HarmonyMethod(AccessTools.Method(typeof(TradeShip), nameof(DepartPostfix)));
 			harmony.Patch(depart, postfix: departPostfix);
-		}
-
-		/// <summary>
-		/// Obtain the Faction that the TradeShip will use.
-		/// </summary>
-		/// <param name="def">Procedurally generated trader definition.</param>
-		/// <returns>Faction.</returns>
-		private static Faction GetFaction(TraderKindDef def)
-		{
-			return Find.FactionManager.AllFactions.Where(faction => faction.def == def.faction)
-				.TryRandomElement(out var result)
-				? result
-				: null;
 		}
 
 		/// <summary>
@@ -74,7 +57,7 @@ namespace TG.Harmony
 			    .TryRandomElementByWeight(traderGenDef => traderGenDef.commonality, out var genDef))
 			{
 				def = Find.World.GetComponent<TraderKind>().Generate(genDef);
-				faction = GetFaction(def);
+				faction = OrbitalTraderArrival.GetFaction(def);
 			}
 			else
 			{
@@ -90,16 +73,16 @@ namespace TG.Harmony
 		/// <param name="__instance">Trade ship instance</param>
 		/// <param name="def">Procedurally generated TraderKindDef</param>
 		/// <param name="faction">Faction to use for the def</param>
-		private static void ConstructorPostfix(ref RimWorld.TradeShip __instance, TraderKindDef def, Faction faction)
+		private static void ConstructorPostfix(ref RimWorld.TradeShip __instance, in TraderKindDef def, in Faction faction)
 		{
-			// ToDo procedural generation of names.
+			// ToDo procedural generation of ship names.
 		}
 
 		/// <summary>
 		/// Clean up the generated TraderKindDef after the ship departs.
 		/// </summary>
 		/// <param name="__instance">Departing TradeShip instance.</param>
-		private static void DepartPostfix(RimWorld.TradeShip __instance)
+		private static void DepartPostfix(in RimWorld.TradeShip __instance)
 		{
 			Find.World.GetComponent<TraderKind>().Remove(__instance.def);
 		}

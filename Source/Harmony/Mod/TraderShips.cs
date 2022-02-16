@@ -6,13 +6,26 @@ using Verse;
 
 namespace TG.Harmony.Mod
 {
+
+	/// <summary>
+	/// The Trader Ships mod is not compatible with the Depart Harmony patch that TraderGen usually uses.
+	/// This class patches all Trader Ships methods responsible for TradeShip instances being destroyed to ensure the
+	/// removal of their procedurally generated TraderKindDefs.
+	/// </summary>
 	public class TraderShips
 	{
+		/// <summary>
+		/// Trade ship class field of the TraderShips.CompShip class.
+		/// </summary>
 		private static FieldInfo _tradeShipField;
 
+		/// <summary>
+		/// Applies Harmony patches required for this mod.
+		/// </summary>
+		/// <param name="harmony">Harmony instance.</param>
 		public static void Patch(HarmonyLib.Harmony harmony)
 		{
-			if (LoadedModManager.RunningMods.FirstIndexOf(pack => pack.PackageId.Equals("automatic.traderships")) < 0)
+			if (!HarmonyInitialization.TraderShipsModEnabled)
 			{
 				return;
 			}
@@ -35,15 +48,23 @@ namespace TG.Harmony.Mod
 		/// </summary>
 		/// <param name="instance">Assumed to be a TraderShips.CompShip instance.</param>
 		/// <returns>TraderKindDef used by the ship.</returns>
-		private static TraderKindDef GetDef(ThingComp instance)
+		private static TraderKindDef GetDef(in ThingComp instance)
 		{
 			return ((RimWorld.TradeShip) _tradeShipField.GetValue(instance)).def;
 		}
 
+
 		/// <summary>
-		/// Clean up the generated TraderKindDef when the ship departs.
+		/// Clean up the generated TraderKindDef just before the ship departs.
 		/// </summary>
-		private static bool SendAwayPrefix(ThingComp __instance)
+		///
+		
+		/// <summary>
+		/// Clean up the generated TraderKindDef just before the ship departs.
+		/// </summary>
+		/// <param name="__instance">Departing TraderShips.CompShip instance</param>
+		/// <returns>True, allowing the original method to run.</returns>
+		private static bool SendAwayPrefix(in ThingComp __instance)
 		{
 			Find.World.GetComponent<TraderKind>().Remove(GetDef(__instance));
 			// Carry on with the execution of the original method.
@@ -51,9 +72,10 @@ namespace TG.Harmony.Mod
 		}
 
 		/// <summary>
-		/// Clean up the generated TraderKindDef after the ship crashes.
+		/// Clean up the generated TraderKindDef after the ship crashes and its contents have already been generated.
 		/// </summary>
-		private static void CrashPostfix(ThingComp __instance)
+		/// <param name="__instance">Crashing TraderShips.CompShip instance</param>
+		private static void CrashPostfix(in ThingComp __instance)
 		{
 			Find.World.GetComponent<TraderKind>().Remove(GetDef(__instance));
 		}
