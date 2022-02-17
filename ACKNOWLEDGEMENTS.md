@@ -5,6 +5,7 @@ Developing a RimWorld mod is a huge task that is only made possible because its 
 * **[Andreas Pardeike](https://www.patreon.com/pardeike/posts)** - [Harmony](https://harmony.pardeike.net/)
 * **[force-net](https://github.com/force-net)** - [DeepCloner](https://github.com/force-net/DeepCloner)
 * **[krafs](https://github.com/krafs/)** - [RimRef](https://github.com/krafs/RimRef), [compilation without external dependencies or extra setup steps](https://ludeon.com/forums/index.php?topic=49914.0).
+* **[Microsoft developer blogs](https://devblogs.microsoft.com/)** - [The ‘in’-modifier and the readonly structs in C#](https://devblogs.microsoft.com/premier-developer/the-in-modifier-and-the-readonly-structs-in-c)
 * **[Nadia Eghbal](https://github.com/nayafia)** - [Contributing Guides: A Template](https://github.com/nayafia/contributing-template)
 * **[RimWorld Discord](https://discord.gg/rimworld)**
 * **[RimWorld Subreddit](https://www.reddit.com/r/RimWorld/)**
