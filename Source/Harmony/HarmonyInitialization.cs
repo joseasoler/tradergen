@@ -28,6 +28,8 @@ namespace TG.Harmony
 			harmony.PatchAll(Assembly.GetExecutingAssembly());
 			// Patch vanilla code.
 			DebugActionAddTradeShip.Patch(harmony);
+			DebugActionReplaceAllShips.Patch(harmony);
+			IncidentOrbitalTraderArrival.Patch(harmony);
 			TradeShip.Patch(harmony);
 			// Patch mod code.
 			Mod.TraderShips.Patch(harmony);

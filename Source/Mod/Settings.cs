@@ -3,20 +3,48 @@ using Verse;
 
 namespace TG.Mod
 {
+	public class SettingValues
+	{
+		/// <summary>
+		/// Maximum number of orbital ships allowed at the same time.
+		/// </summary>
+		public int MaxOrbitalShips = 5;
+
+		/// <summary>
+		/// Silver stock of orbital traders in %.
+		/// </summary>
+		public float OrbitalSilverScaling = 100.0f;
+
+		/// <summary>
+		/// Generate a detailed report of the orbital trade ship generation process and append it to the log.
+		/// </summary>
+		public bool LogGen /* = false */;
+	}
+
 	/// <summary>
 	/// Handles mod settings.
 	/// </summary>
 	public class Settings : ModSettings
 	{
+		private static SettingValues _values = new SettingValues();
+
 		/// <summary>
-		/// Generate a detailed report of the orbital trade ship generation process and append it to the log.
+		/// Maximum number of orbital ships allowed at the same time.
 		/// </summary>
-		public static bool LogGen /* = false */;
+		public static int MaxOrbitalShips
+		{
+			get => _values.MaxOrbitalShips;
+			set => _values.MaxOrbitalShips = value;
+		}
 
 		/// <summary>
 		/// Silver stock of orbital traders in %.
 		/// </summary>
-		public static float OrbitalSilverScaling = 100.0f;
+		public static float OrbitalSilverScaling
+		{
+			get => _values.OrbitalSilverScaling;
+			set => _values.OrbitalSilverScaling = value;
+		}
 
 		/// <summary>
 		/// Minimum allowed value for OrbitalSilverScaling.
@@ -29,13 +57,28 @@ namespace TG.Mod
 		public const float MaxSilverScaling = 500.0f;
 
 		/// <summary>
+		/// Generate a detailed report of the orbital trade ship generation process and append it to the log.
+		/// </summary>
+		public static bool LogGen
+		{
+			get => _values.LogGen;
+			set => _values.LogGen = value;
+		}
+
+		public static void Reset()
+		{
+			_values = new SettingValues();
+		}
+		
+		/// <summary>
 		/// Save and load preferences.
 		/// </summary>
 		public override void ExposeData()
 		{
 			base.ExposeData();
-			Scribe_Values.Look(ref LogGen, "LogGen");
-			Scribe_Values.Look(ref OrbitalSilverScaling, "OrbitalSilverScaling");
+			Scribe_Values.Look(ref _values.MaxOrbitalShips, "MaxOrbitalShips");
+			Scribe_Values.Look(ref _values.OrbitalSilverScaling, "OrbitalSilverScaling");
+			Scribe_Values.Look(ref _values.LogGen, "LogGen");
 		}
 	}
 }

@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using RimWorld;
 using TG.Gen;
+using TG.Mod;
 using Verse;
 
 namespace TG.Trader
@@ -81,7 +82,7 @@ namespace TG.Trader
 		{
 			var map = (Map) parms.target;
 
-			if (map == null || map.passingShipManager.passingShips.Count >= IncidentWorker_OrbitalTraderArrival.MaxShips)
+			if (map == null || map.passingShipManager.passingShips.Count >= Settings.MaxOrbitalShips)
 			{
 				return;
 			}
@@ -95,6 +96,7 @@ namespace TG.Trader
 			}
 
 			map.passingShipManager.AddShip(ship);
+
 			ship.GenerateThings();
 		}
 	}

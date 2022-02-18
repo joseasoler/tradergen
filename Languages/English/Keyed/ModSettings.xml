@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
+	<TG_MaxOrbitalShips>Max orbital ships: {0}</TG_MaxOrbitalShips>
+	<TG_MaxOrbitalShipsTooltip>Maximum number of orbital trade ships that can be in orbit at the same time.</TG_MaxOrbitalShipsTooltip>
 	<TG_SilverStockOrbitalTrader>Silver stock of orbital traders: {0}%</TG_SilverStockOrbitalTrader>
 	<TG_SilverStockOrbitalTraderTooltip>Allows to adjust the total amount of silver that orbital traders will have in stock when they arrive. Orbital traders which were already in range when the setting is changed will not be affected.</TG_SilverStockOrbitalTraderTooltip>
+	<TG_ResetSettings>Reset</TG_ResetSettings>
+	<TG_ResetSettingsTooltip>Reset all options of the mod to their default values.</TG_ResetSettingsTooltip>
+	<TG_DevelopmentOptions>Development options</TG_DevelopmentOptions>
+	<TG_DevelopmentOptionsTooltip>These options are used during developent and bug reporting, and they should have no visible in-game effects.</TG_DevelopmentOptionsTooltip>
 	<TG_LogTraderGen>Log trader generation</TG_LogTraderGen>
 	<TG_LogTraderGenTooltip>Show a detailed report of the generation process of traders in the log.</TG_LogTraderGenTooltip>
 </LanguageData>
