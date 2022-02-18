@@ -51,9 +51,7 @@ namespace TG.Gen
 		/// <summary>
 		/// TraderKindDef currently being generated.
 		/// </summary>
-		private TraderKindDef _def;
-
-		public TraderKindDef Def => _def;
+		private readonly TraderKindDef _def;
 
 		/// <summary>
 		/// TraderKindDef currently being generated.
