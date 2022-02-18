@@ -30,42 +30,61 @@ namespace TG.Gen
 		}
 	}
 
+	/// <summary>
+	/// Processes a Link that is currently being visited.
+	/// </summary>
 	internal abstract class LinkProcessor
 	{
-		public abstract void Process(in LinkDef linkDef, in int depth);
+		/// <summary>
+		/// Processes stock group data found in a LinkDef.
+		/// </summary>
+		/// <param name="linkDef">LinkDef in which the chain is currently on.</param>
+		/// <param name="depth">Depth of the current Markov chain.</param>
+		public abstract void StockGroups(in LinkDef linkDef, in int depth);
 	}
 
+	/// <summary>
+	/// Processor used for generating TraderKindDefs.
+	/// </summary>
 	internal class TraderKindDefProcessor : LinkProcessor
 	{
+		/// <summary>
+		/// TraderKindDef currently being generated.
+		/// </summary>
 		private TraderKindDef _def;
 
 		public TraderKindDef Def => _def;
 
+		/// <summary>
+		/// TraderKindDef currently being generated.
+		/// </summary>
 		public TraderKindDefProcessor(TraderKindDef def)
 		{
 			_def = def;
 		}
 
-		public override void Process(in LinkDef linkDef, in int depth)
+		/// <summary>
+		/// Adds stock group data found in a LinkDef to the TraderKindDef being generated.
+		/// </summary>
+		/// <param name="linkDef">LinkDef in which the chain is currently on.</param>
+		/// <param name="depth">Depth of the current Markov chain.</param>
+		public override void StockGroups(in LinkDef linkDef, in int depth)
 		{
-			if (linkDef.stockGroups != null)
+			foreach (var stockGroup in linkDef.stockGroups)
 			{
-				foreach (var stockGroup in linkDef.stockGroups)
-				{
-					Logger.Gen($"{depth}: Processing StockGroup {stockGroup}.");
+				Logger.Gen($"{depth}: Processing StockGroup {stockGroup}.");
 
-					// StockGenerators have a reference to their TraderKindDef. This reference is not set for generators coming
-					// from a StockGroupDef as these lack a TraderKindDef. Since multiple TraderKindDefs may be using the same
-					// StockGroupDef at any given time, a shallow copy of the StockGenerator is provided to them instead.
-					// Each copy can then point to the right TraderKindDef, and will be deleted when its TraderKindDef is deleted.
-					foreach (var stockGeneratorCopy in stockGroup.generators.Select(stockGenerator =>
-						         stockGenerator.ShallowClone()))
-					{
-						_def.stockGenerators.Add(stockGeneratorCopy);
-						stockGeneratorCopy.ResolveReferences(_def);
-						Logger.Gen(
-							$"{depth}: Adding StockGenerator {Logger.StockGen(stockGeneratorCopy)}");
-					}
+				// StockGenerators have a reference to their TraderKindDef. This reference is not set for generators coming
+				// from a StockGroupDef as these lack a TraderKindDef. Since multiple TraderKindDefs may be using the same
+				// StockGroupDef at any given time, a shallow copy of the StockGenerator is provided to them instead.
+				// Each copy can then point to the right TraderKindDef, and will be deleted when its TraderKindDef is deleted.
+				foreach (var stockGeneratorCopy in stockGroup.generators.Select(stockGenerator =>
+					         stockGenerator.ShallowClone()))
+				{
+					_def.stockGenerators.Add(stockGeneratorCopy);
+					stockGeneratorCopy.ResolveReferences(_def);
+					Logger.Gen(
+						$"{depth}: Adding StockGenerator {Logger.StockGen(stockGeneratorCopy)}");
 				}
 			}
 		}
@@ -103,7 +122,10 @@ namespace TG.Gen
 				return;
 			}
 
-			proc.Process(linkDef, depth);
+			if (linkDef.stockGroups != null)
+			{
+				proc.StockGroups(linkDef, depth);
+			}
 
 			var totalCommonality = linkDef.TotalCommonality;
 			if (totalCommonality <= 0)
@@ -187,7 +209,7 @@ namespace TG.Gen
 			};
 
 			Logger.Gen($"Generating new TraderKindDef {def.defName}.");
-			
+
 			VisitAll(genDef, new TraderKindDefProcessor(def));
 
 			Logger.Gen("Final generators:");
