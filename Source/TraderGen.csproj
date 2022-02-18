@@ -20,7 +20,6 @@
 
 	<!-- Dependencies and source code common to all supported RimWorld versions. -->
 	<ItemGroup>
-		<Compile Include="Gen\Name.cs" />
 		<Compile Include="Gen\TraderKind.cs" />
 		<Compile Include="Harmony\DebugActionAddTradeShip.cs" />
 		<Compile Include="Harmony\DebugActionReplaceAllTradeShips.cs" />

@@ -1,3 +1,4 @@
+using System;
 using System.Reflection;
 using HarmonyLib;
 using RimWorld;
@@ -6,11 +7,12 @@ using Verse;
 
 namespace TG.Harmony.Mod
 {
-
 	/// <summary>
 	/// The Trader Ships mod is not compatible with the Depart Harmony patch that TraderGen usually uses.
 	/// This class patches all Trader Ships methods responsible for TradeShip instances being destroyed to ensure the
 	/// removal of their procedurally generated TraderKindDefs.
+	/// IncidentWorkerTraderShip is also patched to push and, later, pop a new seed into Rand.
+	/// This forces all random generation related to the trader (including ship sprites) to use the same seed.
 	/// </summary>
 	public class TraderShips
 	{
@@ -41,6 +43,13 @@ namespace TG.Harmony.Mod
 			var crash = AccessTools.Method("TraderShips.CompShip:Crash");
 			var crashPostfix = new HarmonyMethod(AccessTools.Method(typeof(TraderShips), nameof(CrashPostfix)));
 			harmony.Patch(crash, postfix: crashPostfix);
+
+			var tryExecuteWorkerPub = AccessTools.Method("TraderShips.IncidentWorkerTraderShip:TryExecuteWorkerPub");
+			var tryExecuteWorkerPubPrefix =
+				new HarmonyMethod(AccessTools.Method(typeof(TraderShips), nameof(TryExecuteWorkerPubPrefix)));
+			var tryExecuteWorkerPubPostfix =
+				new HarmonyMethod(AccessTools.Method(typeof(TraderShips), nameof(TryExecuteWorkerPubPostfix)));
+			harmony.Patch(tryExecuteWorkerPub, tryExecuteWorkerPubPrefix, tryExecuteWorkerPubPostfix);
 		}
 
 		/// <summary>
@@ -53,12 +62,6 @@ namespace TG.Harmony.Mod
 			return ((RimWorld.TradeShip) _tradeShipField.GetValue(instance)).def;
 		}
 
-
-		/// <summary>
-		/// Clean up the generated TraderKindDef just before the ship departs.
-		/// </summary>
-		///
-		
 		/// <summary>
 		/// Clean up the generated TraderKindDef just before the ship departs.
 		/// </summary>
@@ -78,6 +81,25 @@ namespace TG.Harmony.Mod
 		private static void CrashPostfix(in ThingComp __instance)
 		{
 			Find.World.GetComponent<TraderKind>().Remove(GetDef(__instance));
+		}
+
+		/// <summary>
+		/// Push a new random seed into Rand.
+		/// </summary>
+		/// <returns>True, allowing the original method to run.</returns>
+		private static bool TryExecuteWorkerPubPrefix()
+		{
+			Rand.PushState(Math.Abs(Rand.Int));
+			// Carry on with the execution of the original method.
+			return true;
+		}
+		
+		/// <summary>
+		/// Pop the seed previously added into Rand.
+		/// </summary>
+		private static void TryExecuteWorkerPubPostfix()
+		{
+			Rand.PopState();
 		}
 	}
 }

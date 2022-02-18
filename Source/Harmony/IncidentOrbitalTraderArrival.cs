@@ -1,12 +1,17 @@
+using System;
 using HarmonyLib;
 using RimWorld;
 using TG.Trader;
+using Verse;
 
 namespace TG.Harmony
 {
 	/// <summary>
 	/// Patches IncidentWorker_OrbitalTraderArrival to make the maximum number of ships configurable.
 	/// Incompatible and unneeded with the Trader Ships mod.
+	/// It sets a new seed into Rand, ensuring that all random generation related to the trader uses the same seed.
+	/// This includes the generation of the stock itself. If in the future the same ship needs to be generated again,
+	/// it may be necessary to push a new random seed for TradeShip.GenerateThings, and then pop it after it is done.
 	/// </summary>
 	public static class IncidentOrbitalTraderArrival
 	{
@@ -30,13 +35,15 @@ namespace TG.Harmony
 		}
 
 		/// <summary>
-		/// Delegates orbital trade ship generation to OrbitalTraderArrival.
+		/// Sets a random seed into Rand and delegates orbital trade ship generation to OrbitalTraderArrival.
 		/// </summary>
 		/// <param name="parms">Incident parameters.</param>
 		/// <returns>False, preventing the original method from running.</returns>
 		private static bool TryExecuteWorkerPrefix(in IncidentParms parms)
 		{
+			Rand.PushState(Math.Abs(Rand.Int));
 			OrbitalTraderArrival.Arrive(parms, null);
+			Rand.PopState();
 			return false;
 		}
 	}
