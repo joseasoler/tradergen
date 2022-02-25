@@ -41,9 +41,7 @@ namespace TG.Harmony
 		/// <returns>False, preventing the original method from running.</returns>
 		private static bool TryExecuteWorkerPrefix(in IncidentParms parms)
 		{
-			Rand.PushState(Math.Abs(Rand.Int));
 			OrbitalTraderArrival.Arrive(parms, null);
-			Rand.PopState();
 			return false;
 		}
 	}

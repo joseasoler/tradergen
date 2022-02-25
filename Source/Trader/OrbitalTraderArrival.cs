@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using RimWorld;
@@ -87,7 +88,9 @@ namespace TG.Trader
 				return;
 			}
 
+			Rand.PushState(Math.Abs(Rand.Int));
 			var ship = CreateTradeShip(genDef);
+			Rand.PopState();
 
 			if (ColonistsHavePoweredCommsConsole(map))
 			{
