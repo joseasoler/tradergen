@@ -1,13 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
 	<TG.TraderGenDef>
-		<defName>TG_TestingShip</defName>
-		<label>testing ship</label>
+		<defName>TG_IndependentShip</defName>
+		<label>independent ship</label>
 		<orbital>true</orbital>
 		<requestable>false</requestable>
 		<commonality>6</commonality>
-		<links>
-			<li>LD_InterstellarSupplies</li>
-		</links>
+		<node>ND_OrbitalIndependent</node>
 	</TG.TraderGenDef>
 </Defs>

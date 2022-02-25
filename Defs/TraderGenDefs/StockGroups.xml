@@ -1,14 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
+	<!--
+	Common node to all orbital traders. Sells small quantities of supplies which are always useful for interstellar
+	travel. Purchases items required for survival, or small and valuable items which are easy to transport and sell.
+	-->
 	<TG.StockGroupDef>
 		<defName>SG_InterstellarSupplies</defName>
 		<generators>
+			<!-- Sells -->
 			<li Class="TG.StockGen.OrbitalSilver">
 				<countRange>2000~4000</countRange>
 			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>ComponentIndustrial</thingDef>
+				<countRange>15~30</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>ComponentSpacer</thingDef>
+				<countRange>1~2</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>Plasteel</thingDef>
+				<countRange>25~100</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>Cloth</thingDef>
+				<countRange>50~150</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>MedicineIndustrial</thingDef>
+				<countRange>4~8</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>Neutroamine</thingDef>
+				<countRange>25~50</countRange>
+			</li>
+			<li Class="StockGenerator_Animals">
+				<maxWildness>0.70</maxWildness>
+				<checkTemperature>false</checkTemperature>
+				<tradeTagsSell>
+					<li>AnimalPet</li>
+				</tradeTagsSell>
+				<kindCountRange>1~3</kindCountRange>
+				<countRange>1~2</countRange>
+			</li>
+			<li Class="StockGenerator_Tag" MayRequire="VanillaExpanded.VBooksE">
+				<tradeTag>Book</tradeTag>
+				<thingDefCountRange>-1~2</thingDefCountRange>
+				<countRange>1~1</countRange>
+			</li>
+			<!-- Purchases -->
 			<li Class="StockGenerator_MultiDef">
 				<thingDefs>
-					<li>ComponentSpacer</li>
 					<li>MealSurvivalPack</li>
 					<li>MedicineUltratech</li>
 					<li>Plasteel</li>
@@ -23,6 +66,52 @@
 					<li>VCE_CannedAP</li>
 					<li>VCE_CannedFish</li>
 				</thingDefs>
+			</li>
+			<li Class="StockGenerator_BuyTradeTag">
+				<tag>ExoticBuilding</tag>
+			</li>
+			<li Class="StockGenerator_BuyTradeTag">
+				<tag>PsylinkNeuroformer</tag>
+			</li>
+			<li Class="StockGenerator_Category">
+				<categoryDef>Neurotrainers</categoryDef>
+			</li>
+		</generators>
+	</TG.StockGroupDef>
+	<!-- ToDo currently using testing stock groups. -->
+	<TG.StockGroupDef>
+		<defName>SG_ComponentIndustrialTest</defName>
+		<generators>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>ComponentIndustrial</thingDef>
+				<countRange>1~1</countRange>
+			</li>
+		</generators>
+	</TG.StockGroupDef>
+	<TG.StockGroupDef>
+		<defName>SG_ComponentSpacerTest</defName>
+		<generators>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>ComponentSpacer</thingDef>
+				<countRange>1~1</countRange>
+			</li>
+		</generators>
+	</TG.StockGroupDef>
+	<TG.StockGroupDef>
+		<defName>SG_SteelTest</defName>
+		<generators>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>Steel</thingDef>
+				<countRange>1~1</countRange>
+			</li>
+		</generators>
+	</TG.StockGroupDef>
+	<TG.StockGroupDef>
+		<defName>SG_NeutroamineTest</defName>
+		<generators>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>Neutroamine</thingDef>
+				<countRange>1~1</countRange>
 			</li>
 		</generators>
 	</TG.StockGroupDef>

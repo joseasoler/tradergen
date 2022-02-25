@@ -1,5 +1,4 @@
 using Force.DeepCloner;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using RimWorld;
@@ -23,68 +22,22 @@ namespace TG.Gen
 		/// </summary>
 		public int Seed;
 
+		/// <summary>
+		/// Map tile considered as the origin of the trader.
+		/// </summary>
+		public BiomeDef BiomeDef;
+
+		/// <summary>
+		/// Faction of the trader.
+		/// </summary>
+		public FactionDef FactionDef;
+
 		public void ExposeData()
 		{
 			Scribe_Defs.Look(ref Def, "Def");
 			Scribe_Values.Look(ref Seed, "Seed");
-		}
-	}
-
-	/// <summary>
-	/// Processes a Link that is currently being visited.
-	/// </summary>
-	internal abstract class LinkProcessor
-	{
-		/// <summary>
-		/// Processes stock group data found in a LinkDef.
-		/// </summary>
-		/// <param name="linkDef">LinkDef in which the chain is currently on.</param>
-		/// <param name="depth">Depth of the current Markov chain.</param>
-		public abstract void StockGroups(in LinkDef linkDef, in int depth);
-	}
-
-	/// <summary>
-	/// Processor used for generating TraderKindDefs.
-	/// </summary>
-	internal class TraderKindDefProcessor : LinkProcessor
-	{
-		/// <summary>
-		/// TraderKindDef currently being generated.
-		/// </summary>
-		private readonly TraderKindDef _def;
-
-		/// <summary>
-		/// TraderKindDef currently being generated.
-		/// </summary>
-		public TraderKindDefProcessor(TraderKindDef def)
-		{
-			_def = def;
-		}
-
-		/// <summary>
-		/// Adds stock group data found in a LinkDef to the TraderKindDef being generated.
-		/// </summary>
-		/// <param name="linkDef">LinkDef in which the chain is currently on.</param>
-		/// <param name="depth">Depth of the current Markov chain.</param>
-		public override void StockGroups(in LinkDef linkDef, in int depth)
-		{
-			foreach (var stockGroup in linkDef.stockGroups)
-			{
-				Logger.Gen($"{depth}: Processing StockGroup {stockGroup}.");
-
-				// StockGenerators have a reference to their TraderKindDef. This reference is not set for generators coming
-				// from a StockGroupDef as these lack a TraderKindDef. Since multiple TraderKindDefs may be using the same
-				// StockGroupDef at any given time, a shallow copy of the StockGenerator is provided to them instead.
-				// Each copy can then point to the right TraderKindDef, and will be deleted when its TraderKindDef is deleted.
-				foreach (var stockGeneratorCopy in stockGroup.generators.Select(stockGenerator =>
-					         stockGenerator.ShallowClone()))
-				{
-					_def.stockGenerators.Add(stockGeneratorCopy);
-					stockGeneratorCopy.ResolveReferences(_def);
-					Logger.Gen(
-						$"{depth}: Adding StockGenerator {Logger.StockGen(stockGeneratorCopy)}");
-				}
-			}
+			Scribe_Defs.Look(ref BiomeDef, "BiomeDef");
+			Scribe_Defs.Look(ref FactionDef, "FactionDef");
 		}
 	}
 
@@ -93,11 +46,6 @@ namespace TG.Gen
 	/// </summary>
 	public class TraderKind : WorldComponent
 	{
-		/// <summary>
-		/// Maximum Markov chain depth allowed.
-		/// </summary>
-		private const int MaxDepth = 32;
-
 		private Dictionary<string, TraderGenData> _defReferencesByName;
 
 		public TraderKind(World world) : base(world)
@@ -106,79 +54,87 @@ namespace TG.Gen
 		}
 
 		/// <summary>
-		/// Visits a Markov chain link, processes it, and chooses the next link to explore (if any).
+		/// Adds stock group data found in a NodeDef to the TraderKindDef being generated.
 		/// </summary>
-		/// <param name="proc">Processor that will be called for each visited link.</param>
-		/// <param name="linkDef">LinkDef in which the chain is currently on.</param>
-		/// <param name="depth">Depth of the current Markov chain.</param>
-		private static void VisitLink(LinkProcessor proc, in LinkDef linkDef, int depth = 1)
+		/// <param name="nodeDef">NodeDef being evaluated.</param>
+		/// <param name="def">Trader being generated.</param>
+
+		private static void ApplyStockGroups(in NodeDef nodeDef, ref TraderKindDef def)
 		{
-			Logger.Gen($"{depth}: Arrived at link {linkDef.defName}.");
-			if (depth >= MaxDepth)
+			foreach (var stockGroup in nodeDef.stockGroups)
 			{
-				Logger.Error($"Maximum depth {MaxDepth} reached. No further links will be followed.");
-				return;
-			}
-
-			if (linkDef.stockGroups != null)
-			{
-				proc.StockGroups(linkDef, depth);
-			}
-
-			var totalCommonality = linkDef.TotalCommonality;
-			if (totalCommonality <= 0)
-			{
-				return;
-			}
-
-			LinkDef chosenLinkDef;
-			if (totalCommonality == 1)
-			{
-				chosenLinkDef = linkDef.next.First().def;
-			}
-			else
-			{
-				var chosenCommonality = Rand.RangeInclusive(0, totalCommonality);
-				var currentCommonality = 0;
-				var index = 0;
-
-				for (; index < linkDef.next.Count; ++index)
+				Logger.Gen($"Applying StockGroup {stockGroup}.");
+				// StockGenerators have a reference to their TraderKindDef. This reference is not set for generators coming
+				// from a StockGroupDef as these lack a TraderKindDef. Since multiple TraderKindDefs may be using the same
+				// StockGroupDef at any given time, a shallow copy of the StockGenerator is provided to them instead.
+				// Each copy can later point to the right TraderKindDef, and will be deleted when its TraderKindDef is deleted.
+				foreach (var stockGeneratorCopy in stockGroup.generators.Select(stockGenerator =>
+					         stockGenerator.ShallowClone()))
 				{
-					currentCommonality += linkDef.next[index].commonality;
-					if (currentCommonality >= chosenCommonality)
-					{
-						break;
-					}
+					def.stockGenerators.Add(stockGeneratorCopy);
+					stockGeneratorCopy.ResolveReferences(def);
+					Logger.Gen($"Adding StockGenerator {Logger.StockGen(stockGeneratorCopy)}");
 				}
-
-				chosenLinkDef = linkDef.next[index].def;
 			}
-
-			VisitLink(proc, chosenLinkDef, depth + 1);
 		}
 
 		/// <summary>
-		/// Procedurally generates a new TraderKindDef if necessary, and registers it into DefDatabase.
-		/// A new seed must have been pushed into Rand prior to calling this method.
+		/// Applies all changes required by a specific node to the generated trader.
 		/// </summary>
-		/// <param name="genDef">Trader generation preset.</param>
-		/// <param name="proc">Processor that will be called for each visited link.</param>
-		private static void VisitAll(in TraderGenDef genDef, LinkProcessor proc)
+		/// <param name="nodeDef">NodeDef being evaluated.</param>
+		/// <param name="def">Trader definition being generated.</param>
+		private static void ApplyNode(in NodeDef nodeDef, ref TraderKindDef def)
+		{
+			if (nodeDef.stockGroups != null)
+			{
+				ApplyStockGroups(nodeDef, ref def);
+			}
+		}
+
+		/// <summary>
+		/// Algorithm for procedural generation of traders.
+		/// </summary>
+		/// <param name="genDef">Pattern used to generate the trader.</param>
+		/// <param name="biomeDef">Biome from which the trader is originating.</param>
+		/// <param name="faction">Faction of the trader.</param>
+		/// <param name="def">Trader definition being generated.</param>
+		private static void ProcGen(in TraderGenDef genDef, in BiomeDef biomeDef, in Faction faction, ref TraderKindDef def)
+		{
+			const int maximumNodesThreshold = 128;
+
+			var pending = new Queue<NodeDef>();
+			pending.Enqueue(genDef.node);
+
+			while (pending.Count > 0)
+			{
+				if (pending.Count > maximumNodesThreshold)
+				{
+					Logger.ErrorOnce(
+						$"Error generating {genDef.defName}: maximum number of nodes allowed is {maximumNodesThreshold}");
+					return;
+				}
+
+				var current = pending.Dequeue();
+				ApplyNode(current, ref def);
+				current.next?.Nodes(current, biomeDef, faction).ForEach(newNodeDef => pending.Enqueue(newNodeDef));
+				Logger.Gen($"After processing {current.defName} there are {pending.Count} nodes in the pending queue.");
+			}
+		}
+
+		/// <summary>
+		/// Generates a new trader definition.
+		/// </summary>
+		/// <param name="genDef"></param>
+		/// <param name="biomeDef"></param>
+		/// <param name="faction"></param>
+		/// <returns></returns>
+		public TraderKindDef Generate(in TraderGenDef genDef, BiomeDef biomeDef = null, in Faction faction = null)
 		{
 			if (Rand.stateStack.Count == 0)
 			{
 				Logger.ErrorOnce("TraderKindDef generation started without a prior Rand.PushState call.");
 			}
 
-			foreach (var link in genDef.links)
-			{
-				Logger.Gen("Starting new chain.");
-				VisitLink(proc, link);
-			}
-		}
-
-		public TraderKindDef Generate(in TraderGenDef genDef)
-		{
 			var seed = (int) Rand.seed;
 			var newDefName = genDef.defName + '_' + seed;
 
@@ -208,13 +164,7 @@ namespace TG.Gen
 
 			Logger.Gen($"Generating new TraderKindDef {def.defName}.");
 
-			VisitAll(genDef, new TraderKindDefProcessor(def));
-
-			Logger.Gen("Final generators:");
-			foreach (var generator in def.stockGenerators)
-			{
-				Logger.Gen($"\t{Logger.StockGen(generator)}");
-			}
+			ProcGen(genDef, biomeDef, faction, ref def);
 
 			def.PostLoad();
 
@@ -222,7 +172,9 @@ namespace TG.Gen
 			_defReferencesByName.TryAdd(newDefName, new TraderGenData
 			{
 				Def = genDef,
-				Seed = seed
+				Seed = seed,
+				BiomeDef = biomeDef,
+				FactionDef = faction?.def
 			});
 			ShortHashGiver.GiveShortHash(def, def.GetType());
 			DefDatabase<TraderKindDef>.Add(def);
@@ -260,10 +212,9 @@ namespace TG.Gen
 			if (Scribe.mode != LoadSaveMode.LoadingVars) return;
 			foreach (var data in _defReferencesByName.Values)
 			{
-				Logger.Gen($"Loading {data.Def.defName}: {data.Seed}");
-				// Ensure that the TraderKindDef has been generated properly before loading any traders.
+				Logger.Gen($"Loading {data.Def.defName}: {data.Seed}, {data.BiomeDef}, {data.FactionDef}");
 				Rand.PushState(data.Seed);
-				Generate(data.Def);
+				Generate(data.Def, data.BiomeDef, Find.FactionManager.FirstFactionOfDef(data.FactionDef));
 				Rand.PopState();
 			}
 		}

@@ -23,6 +23,9 @@ namespace TG
 
 		public RoyalTitlePermitDef permitRequiredForTrading;
 
-		public List<LinkDef> links;
+		/// <summary>
+		/// Starting point of the procedural generation.
+		/// </summary>
+		public NodeDef node;
 	}
 }

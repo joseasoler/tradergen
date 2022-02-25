@@ -26,8 +26,10 @@
 		<Compile Include="Harmony\IncidentOrbitalTraderArrival.cs" />
 		<Compile Include="Harmony\Mod\TraderShips.cs" />
 		<Compile Include="Harmony\TradeShip.cs" />
-		<Compile Include="Link.cs" />
-		<Compile Include="LinkDef.cs" />
+		<Compile Include="Next\ListWithoutRepetition.cs" />
+		<Compile Include="Next\NextNode.cs" />
+		<Compile Include="Next\Rule.cs" />
+		<Compile Include="NodeDef.cs" />
 		<Compile Include="Logger.cs" />
 		<Compile Include="Mod\Settings.cs" />
 		<Compile Include="Mod\Mod.cs" />

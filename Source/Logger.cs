@@ -47,6 +47,39 @@ namespace TG
 				var g = (StockGenerator_MultiDef) generator;
 				text = g.thingDefs.Aggregate(text, (current, thingDef) => current + thingDef.defName + ',');
 			}
+			else if (generator.GetType() == typeof(StockGenerator_Tag))
+			{
+				var g = (StockGenerator_Tag) generator;
+				text += g.tradeTag;
+				text += " thingDefCountRange:{" + g.thingDefCountRange + "} ";
+				if (g.excludedThingDefs != null && g.excludedThingDefs.Count > 0)
+				{
+					text += " except{";
+					text += g.excludedThingDefs.Aggregate(text, (current, thingDef) => current + thingDef.defName + ',');
+					text += '}';
+				}
+			}
+			else if (generator.GetType() == typeof(StockGenerator_Animals))
+			{
+				var g = (StockGenerator_Animals) generator;
+				if (g.tradeTagsBuy != null && g.tradeTagsBuy.Count > 0)
+				{
+					text += "buys{";
+					text = g.tradeTagsBuy.Aggregate(text, (current, tag) => current + (tag + ','));
+					text += "} ";
+				}
+				if (g.tradeTagsSell != null && g.tradeTagsSell.Count > 0)
+				{
+					text += "sells{";
+					text = g.tradeTagsSell.Aggregate(text, (current, tag) => current + (tag + ','));
+					text += "} ";
+				}
+
+				text += "kindCountRange:" + g.kindCountRange;
+				text += " wildness:{" + g.minWildness + ", " + g.maxWildness + "} ";
+				text += "checkTemperature: " + g.checkTemperature;
+
+			}
 
 			text += ']';
 			
