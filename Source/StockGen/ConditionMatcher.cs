@@ -42,7 +42,7 @@ namespace TG.StockGen
 		/// <returns>If the item can be bought or not.</returns>
 		private bool CanBuyImpl(in ThingDef def)
 		{
-			return CanBuy(def) && def.tradeability.PlayerCanSell();
+			return CanBuy(def) && def.tradeability.PlayerCanSell() && def.techLevel <= maxTechLevelBuy;
 		}
 
 		/// <summary>
@@ -55,7 +55,8 @@ namespace TG.StockGen
 		/// <returns>If the item an be sold or not.</returns>
 		private bool CanSellImpl(in ThingDef def, in int forTile, in Faction faction)
 		{
-			return CanSell(def, forTile, faction) && def.tradeability.TraderCanSell() && def.PlayerAcquirable;
+			return CanSell(def, forTile, faction) && def.tradeability.TraderCanSell() && def.PlayerAcquirable &&
+				def.techLevel <= maxTechLevelGenerate;
 		}
 
 		public override IEnumerable<Thing> GenerateThings(int forTile, Faction faction = null)
