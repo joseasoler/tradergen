@@ -2,6 +2,7 @@ using System;
 using System.Linq;
 using RimWorld;
 using TG.Mod;
+using TG.StockGen;
 using Verse;
 
 namespace TG
@@ -24,7 +25,7 @@ namespace TG
 				Log.Message(Prefix + text);
 			}
 		}
-		
+
 		/// <summary>
 		/// Generates a short summary of a StockGenerator instance.
 		/// </summary>
@@ -35,7 +36,7 @@ namespace TG
 			if (generator.GetType() == typeof(StockGenerator_SingleDef))
 			{
 				var g = (StockGenerator_SingleDef) generator;
-				text += g.thingDef.defName ;
+				text += g.thingDef.defName;
 			}
 			else if (generator.GetType() == typeof(StockGenerator_BuySingleDef))
 			{
@@ -68,6 +69,7 @@ namespace TG
 					text = g.tradeTagsBuy.Aggregate(text, (current, tag) => current + (tag + ','));
 					text += "} ";
 				}
+
 				if (g.tradeTagsSell != null && g.tradeTagsSell.Count > 0)
 				{
 					text += "sells{";
@@ -78,11 +80,15 @@ namespace TG
 				text += "kindCountRange:" + g.kindCountRange;
 				text += " wildness:{" + g.minWildness + ", " + g.maxWildness + "} ";
 				text += "checkTemperature: " + g.checkTemperature;
-
+			}
+			else if (generator.GetType().IsAssignableFrom(typeof(ConditionMatcher)))
+			{
+				var g = (ConditionMatcher) generator;
+				text += " thingDefCountRange:{" + g.thingDefCountRange + '}';
 			}
 
 			text += ']';
-			
+
 			if (generator.countRange.min != 0 || generator.countRange.max != 0)
 			{
 				text += ": " + generator.countRange;

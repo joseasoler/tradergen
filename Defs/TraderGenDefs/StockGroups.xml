@@ -76,6 +76,7 @@
 			<li Class="StockGenerator_Category">
 				<categoryDef>Neurotrainers</categoryDef>
 			</li>
+			<li Class="TG.StockGen.ExoticAnimalPart"/>
 		</generators>
 	</TG.StockGroupDef>
 	<!-- ToDo currently using testing stock groups. -->
