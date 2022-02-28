@@ -52,6 +52,7 @@
 			<!-- Purchases -->
 			<li Class="StockGenerator_MultiDef">
 				<thingDefs>
+					<li>Gold</li>
 					<li>MealSurvivalPack</li>
 					<li>MedicineUltratech</li>
 					<li>Plasteel</li>
@@ -78,9 +79,7 @@
 			</li>
 			<li Class="TG.StockGen.ExoticAnimalPart"/>
 			<li Class="TG.StockGen.Alcohol"/>
-			<li Class="StockGenerator_SingleDef">
-				<thingDef>Gold</thingDef>
-			</li>
+			<li Class="TG.StockGen.Jewelry" MayRequire="kikohi.jewelry"/>
 		</generators>
 	</TG.StockGroupDef>
 </Defs>

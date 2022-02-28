@@ -37,6 +37,7 @@
 		<Compile Include="StockGen\Alcohol.cs" />
 		<Compile Include="StockGen\ConditionMatcher.cs" />
 		<Compile Include="StockGen\ExoticAnimalPart.cs" />
+		<Compile Include="StockGen\Jewelry.cs" />
 		<Compile Include="StockGen\OrbitalSilver.cs" />
 		<Compile Include="StockGroupDef.cs" />
 		<Compile Include="TraderGenDef.cs" />
