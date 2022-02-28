@@ -125,10 +125,9 @@ namespace TG.StockGen
 				foreach (var currentEntry in weightedDefs)
 				{
 					cumulativeWeight += currentEntry.Item1;
-					if (randomCumulativeWeight < cumulativeWeight)
-					{
-						chosenEntry = currentEntry;
-					}
+					if (randomCumulativeWeight > cumulativeWeight) continue;
+					chosenEntry = currentEntry;
+					break;
 				}
 
 				if (chosenEntry == null)
@@ -143,7 +142,6 @@ namespace TG.StockGen
 				++generatedThingDefs;
 				var (weight, def) = chosenEntry;
 				total -= weight;
-				Logger.Gen($"\tchose item {def.defName}. Total weight is now {total}. Remaining pool of defs is {weightedDefs.Count}");
 
 				// Yield things generated from the chosen ThingDef.
 				foreach (var thing in StockGeneratorUtility.TryMakeForStock(def, RandomCountOf(def), faction))
