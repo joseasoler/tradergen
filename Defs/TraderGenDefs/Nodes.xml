@@ -5,55 +5,5 @@
 		<stockGroups>
 			<li>SG_InterstellarSupplies</li>
 		</stockGroups>
-		<!-- ToDo currently using testing nodes. -->
-		<next Class="TG.Next.ListWithoutRepetition">
-			<num>2~6</num>
-			<nodes>
-				<li>
-					<node>ND_ComponentIndustrialTest</node>
-					<commonality>1</commonality>
-				</li>
-				<li>
-					<node>ND_ComponentSpacerTest</node>
-					<commonality>1</commonality>
-					<times>1~5</times>
-				</li>
-				<li>
-					<node>ND_SteelTest</node>
-					<commonality>4</commonality>
-					<times>-3~3</times>
-				</li>
-				<li>
-					<node>ND_NeutroamineTest</node>
-					<commonality>1</commonality>
-					<times>0~1</times>
-				</li>
-			</nodes>
-		</next>
-	</TG.NodeDef>
-	<!-- ToDo currently using testing nodes. -->
-	<TG.NodeDef>
-		<defName>ND_ComponentIndustrialTest</defName>
-		<stockGroups>
-			<li>SG_ComponentIndustrialTest</li>
-		</stockGroups>
-	</TG.NodeDef>
-	<TG.NodeDef>
-		<defName>ND_ComponentSpacerTest</defName>
-		<stockGroups>
-			<li>SG_ComponentSpacerTest</li>
-		</stockGroups>
-	</TG.NodeDef>
-	<TG.NodeDef>
-		<defName>ND_SteelTest</defName>
-		<stockGroups>
-			<li>SG_SteelTest</li>
-		</stockGroups>
-	</TG.NodeDef>
-	<TG.NodeDef>
-		<defName>ND_NeutroamineTest</defName>
-		<stockGroups>
-			<li>SG_NeutroamineTest</li>
-		</stockGroups>
 	</TG.NodeDef>
 </Defs>

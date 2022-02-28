@@ -80,41 +80,4 @@
 			<li Class="TG.StockGen.Alcohol"/>
 		</generators>
 	</TG.StockGroupDef>
-	<!-- ToDo currently using testing stock groups. -->
-	<TG.StockGroupDef>
-		<defName>SG_ComponentIndustrialTest</defName>
-		<generators>
-			<li Class="StockGenerator_SingleDef">
-				<thingDef>ComponentIndustrial</thingDef>
-				<countRange>1~1</countRange>
-			</li>
-		</generators>
-	</TG.StockGroupDef>
-	<TG.StockGroupDef>
-		<defName>SG_ComponentSpacerTest</defName>
-		<generators>
-			<li Class="StockGenerator_SingleDef">
-				<thingDef>ComponentSpacer</thingDef>
-				<countRange>1~1</countRange>
-			</li>
-		</generators>
-	</TG.StockGroupDef>
-	<TG.StockGroupDef>
-		<defName>SG_SteelTest</defName>
-		<generators>
-			<li Class="StockGenerator_SingleDef">
-				<thingDef>Steel</thingDef>
-				<countRange>1~1</countRange>
-			</li>
-		</generators>
-	</TG.StockGroupDef>
-	<TG.StockGroupDef>
-		<defName>SG_NeutroamineTest</defName>
-		<generators>
-			<li Class="StockGenerator_SingleDef">
-				<thingDef>Neutroamine</thingDef>
-				<countRange>1~1</countRange>
-			</li>
-		</generators>
-	</TG.StockGroupDef>
 </Defs>
