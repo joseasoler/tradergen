@@ -14,8 +14,10 @@ This project encourages community involvement and contributions. Check the [CONT
 
 Although TraderGen supports most items provided by other mods out of the box, certain cases have explicit support to provide a better experience.
 
+* [Jewelry](https://steamcommunity.com/workshop/filedetails/?id=2020964421)
+  * Orbital traders always purchase jewelry.
 * [Vanilla Cooking Expanded](https://steamcommunity.com/sharedfiles/filedetails/?id=2134308519)
-  * All orbital traders will purchase canned food.
+  * Orbital traders always purchase canned food.
 
 ## License
 
