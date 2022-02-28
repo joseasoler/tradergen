@@ -20,6 +20,7 @@
 
 	<!-- Dependencies and source code common to all supported RimWorld versions. -->
 	<ItemGroup>
+		<Compile Include="DefOf\JoyKind.cs" />
 		<Compile Include="Gen\TraderKind.cs" />
 		<Compile Include="Harmony\DebugActionAddTradeShip.cs" />
 		<Compile Include="Harmony\DebugActionReplaceAllTradeShips.cs" />
@@ -33,6 +34,7 @@
 		<Compile Include="Logger.cs" />
 		<Compile Include="Mod\Settings.cs" />
 		<Compile Include="Mod\Mod.cs" />
+		<Compile Include="StockGen\Alcohol.cs" />
 		<Compile Include="StockGen\ConditionMatcher.cs" />
 		<Compile Include="StockGen\ExoticAnimalPart.cs" />
 		<Compile Include="StockGen\OrbitalSilver.cs" />

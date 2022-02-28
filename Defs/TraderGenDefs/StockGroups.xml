@@ -77,7 +77,7 @@
 				<categoryDef>Neurotrainers</categoryDef>
 			</li>
 			<li Class="TG.StockGen.ExoticAnimalPart"/>
-
+			<li Class="TG.StockGen.Alcohol"/>
 		</generators>
 	</TG.StockGroupDef>
 	<!-- ToDo currently using testing stock groups. -->
