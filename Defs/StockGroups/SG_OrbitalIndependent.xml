@@ -78,6 +78,9 @@
 			</li>
 			<li Class="TG.StockGen.ExoticAnimalPart"/>
 			<li Class="TG.StockGen.Alcohol"/>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>Gold</thingDef>
+			</li>
 		</generators>
 	</TG.StockGroupDef>
 </Defs>
