@@ -6,7 +6,7 @@ using Verse;
 namespace TG.StockGen
 {
 	/// <summary>
-	/// Handles any alcoholic beverage, while excluding non-alcoholic beverages and rotting mounds from mods.
+	/// Handles alcoholic beverages, but excludes non-alcoholic beverages and alcoholic foodstuffs like rotting mounds.
 	/// </summary>
 	public class Alcohol : ConditionMatcher
 	{
@@ -17,7 +17,8 @@ namespace TG.StockGen
 
 			return (from outcomeDoer in def.ingestible.outcomeDoers
 				where outcomeDoer.GetType() == typeof(IngestionOutcomeDoer_GiveHediff)
-				select (IngestionOutcomeDoer_GiveHediff) outcomeDoer).Any(o => o.toleranceChemical == ChemicalDefOf.Alcohol);
+				select (IngestionOutcomeDoer_GiveHediff) outcomeDoer).Any(o =>
+				o.hediffDef?.hediffClass == typeof(Hediff_Alcohol));
 		}
 	}
 }
