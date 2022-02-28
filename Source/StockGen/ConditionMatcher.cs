@@ -1,13 +1,40 @@
-﻿using System.Collections.Generic;
-using System.Linq;
+﻿using System;
+using System.Collections.Generic;
 using RimWorld;
 using Verse;
 
 namespace TG.StockGen
 {
 	/// <summary>
+	/// Sorts weighted ThingDefs in descending order to reduce the average number of iterations for finding an item.
+	/// </summary>
+	internal class WeightedThingDefComparer : IComparer<Tuple<float, ThingDef>>
+	{
+		public int Compare(Tuple<float, ThingDef> x, Tuple<float, ThingDef> y)
+		{
+			if (x == null || y == null)
+			{
+				throw new ArgumentException("WeightedThingDefComparer: unexpected null parameter.");
+			}
+
+			// Elements with larger weights go first.
+			var (xWeight, xDef) = x;
+			var (yWeight, yDef) = y;
+			var result = yWeight.CompareTo(xWeight);
+
+			if (result == 0)
+			{
+				result = xDef.shortHash.CompareTo(yDef.shortHash);
+			}
+
+			return result;
+		}
+	}
+
+	/// <summary>
 	/// Purchases any item matching a specific criteria.
 	/// Sells thingDefCountRange random types of thingDefs matching the criteria, with countRange in stock for each one.
+	/// ThingDef are randomly chosen using a customizable weight.
 	/// </summary>
 	public abstract class ConditionMatcher : StockGenerator
 	{
@@ -30,7 +57,7 @@ namespace TG.StockGen
 		/// <param name="forTile">Tile in which the transaction takes place.</param>
 		/// <param name="faction">Faction of the trader.</param>
 		/// <returns>If the item an be sold or not.</returns>
-		protected bool CanSell(in ThingDef def, in int forTile, in Faction faction)
+		protected virtual bool CanSell(in ThingDef def, in int forTile, in Faction faction)
 		{
 			return CanBuy(def);
 		}
@@ -56,29 +83,70 @@ namespace TG.StockGen
 		private bool CanSellImpl(in ThingDef def, in int forTile, in Faction faction)
 		{
 			return CanSell(def, forTile, faction) && def.tradeability.TraderCanSell() && def.PlayerAcquirable &&
-				def.techLevel <= maxTechLevelGenerate;
+			       def.techLevel <= maxTechLevelGenerate;
+		}
+
+		protected virtual float Weight(in ThingDef def, in int forTile, in Faction faction) => 1f;
+
+		private void GetWeightedThingDefs(in int forTile, in Faction faction,
+			out SortedSet<Tuple<float, ThingDef>> weightedDefs,
+			out float total)
+		{
+			var defs = new List<Tuple<float, ThingDef>>();
+			total = 0.0f;
+			foreach (var def in DefDatabase<ThingDef>.AllDefs)
+			{
+				if (!CanSellImpl(def, forTile, faction)) continue;
+				var weight = Weight(def, forTile, faction);
+				if (!(weight > 0.0f)) continue;
+				total += weight;
+				defs.Add(new Tuple<float, ThingDef>(weight, def));
+			}
+
+			// Sort in descending order.
+			weightedDefs = new SortedSet<Tuple<float, ThingDef>>(defs, new WeightedThingDefComparer());
 		}
 
 		public override IEnumerable<Thing> GenerateThings(int forTile, Faction faction = null)
 		{
-			var numThingDefsToUse = thingDefCountRange.RandomInRange;
-			var thingDefs = DefDatabase<ThingDef>.AllDefs
-				.Where(d => CanSellImpl(d, forTile, faction)).ToList();
-			var chosenThingDefs = new HashSet<ThingDef>();
-			while (numThingDefsToUse > 0 && thingDefs.Count > 0)
-			{
-				var index = Rand.Range(0, thingDefs.Count);
-				var randomThingDef = thingDefs[index];
-				if (chosenThingDefs.Contains(randomThingDef)) continue;
-				chosenThingDefs.Add(randomThingDef);
-				thingDefs.RemoveAt(index);
-				--numThingDefsToUse;
-			}
+			GetWeightedThingDefs(forTile, faction, out var weightedDefs, out var total);
 
-			foreach (var chosenThingDef in chosenThingDefs)
+			var numThingDefs = thingDefCountRange.RandomInRange;
+			var generatedThingDefs = 0;
+
+			Logger.Gen(
+				$"{Logger.StockGen(this)} generating {numThingDefs} categories of items, with a total weight of {total}. Total pool of defs is {weightedDefs.Count}");
+			while (generatedThingDefs < numThingDefs && weightedDefs.Count > 0)
 			{
-				foreach (var thing in StockGeneratorUtility.TryMakeForStock(chosenThingDef, RandomCountOf(chosenThingDef),
-					faction))
+				// Choose a random cumulative weight, get chosenEntry as the first entry with that random cumulative weight.
+				var randomCumulativeWeight = Rand.Range(0.0f, total);
+				var cumulativeWeight = 0.0f;
+				Tuple<float, ThingDef> chosenEntry = null;
+				foreach (var currentEntry in weightedDefs)
+				{
+					cumulativeWeight += currentEntry.Item1;
+					if (randomCumulativeWeight < cumulativeWeight)
+					{
+						chosenEntry = currentEntry;
+					}
+				}
+
+				if (chosenEntry == null)
+				{
+					Logger.ErrorOnce("ConditionMatcher.GenerateThings could not find a weighted ThingDef:");
+					Logger.ErrorOnce('\t' + Logger.StockGen(this));
+					break;
+				}
+
+				// Prepare variables for the next iteration of the loop.
+				weightedDefs.Remove(chosenEntry);
+				++generatedThingDefs;
+				var (weight, def) = chosenEntry;
+				total -= weight;
+				Logger.Gen($"\tchose item {def.defName}. Total weight is now {total}. Remaining pool of defs is {weightedDefs.Count}");
+
+				// Yield things generated from the chosen ThingDef.
+				foreach (var thing in StockGeneratorUtility.TryMakeForStock(def, RandomCountOf(def), faction))
 				{
 					yield return thing;
 				}

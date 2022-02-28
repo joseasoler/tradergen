@@ -81,7 +81,7 @@ namespace TG
 				text += " wildness:{" + g.minWildness + ", " + g.maxWildness + "} ";
 				text += "checkTemperature: " + g.checkTemperature;
 			}
-			else if (generator.GetType().IsAssignableFrom(typeof(ConditionMatcher)))
+			else if (generator.GetType().IsSubclassOf(typeof(ConditionMatcher)))
 			{
 				var g = (ConditionMatcher) generator;
 				text += " thingDefCountRange:{" + g.thingDefCountRange + '}';
