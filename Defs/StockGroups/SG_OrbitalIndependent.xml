@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 	<!--
-	Common node to all orbital traders. Sells small quantities of supplies which are always useful for interstellar
+	Common StockGroup for all orbital traders. Sells small quantities of supplies which are always useful for interstellar
 	travel. Purchases items required for survival, or small and valuable items which are easy to transport and sell.
 	-->
 	<TG.StockGroupDef>
