@@ -114,8 +114,6 @@ namespace TG.StockGen
 			var numThingDefs = thingDefCountRange.RandomInRange;
 			var generatedThingDefs = 0;
 
-			Logger.Gen(
-				$"{Logger.StockGen(this)} generating {numThingDefs} categories of items, with a total weight of {total}. Total pool of defs is {weightedDefs.Count}");
 			while (generatedThingDefs < numThingDefs && weightedDefs.Count > 0)
 			{
 				// Choose a random cumulative weight, get chosenEntry as the first entry with that random cumulative weight.
