@@ -5,7 +5,7 @@
 	travel. Purchases items required for survival, or small and valuable items which are easy to transport and sell.
 	-->
 	<TG.StockGroupDef>
-		<defName>SG_InterstellarSupplies</defName>
+		<defName>SG_OrbitalIndependent</defName>
 		<generators>
 			<!-- Sells -->
 			<li Class="TG.StockGen.OrbitalSilver">

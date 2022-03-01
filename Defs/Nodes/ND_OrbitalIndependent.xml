@@ -3,7 +3,7 @@
 	<TG.NodeDef>
 		<defName>ND_OrbitalIndependent</defName>
 		<stockGroups>
-			<li>SG_InterstellarSupplies</li>
+			<li>SG_OrbitalIndependent</li>
 		</stockGroups>
 	</TG.NodeDef>
 </Defs>
