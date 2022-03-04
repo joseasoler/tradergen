@@ -1,9 +1,269 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
+
+	<!--
+	Common NodeDef for all orbital traders. Sells small quantities of supplies which are always useful for interstellar
+	travel. Purchases items required for survival, or small and valuable items which are easy to transport and sell.
+	-->
 	<TG.NodeDef>
 		<defName>ND_OrbitalIndependent</defName>
-		<stockGroups>
-			<li>SG_OrbitalIndependent</li>
-		</stockGroups>
+		<generators>
+			<!-- Sells -->
+			<li Class="TG.StockGen.OrbitalSilver">
+				<countRange>2000~4000</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>ComponentIndustrial</thingDef>
+				<countRange>10~20</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>ComponentSpacer</thingDef>
+				<countRange>1~2</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>Plasteel</thingDef>
+				<countRange>10~40</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>Cloth</thingDef>
+				<countRange>25~75</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>MedicineIndustrial</thingDef>
+				<countRange>4~8</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>Neutroamine</thingDef>
+				<countRange>10~40</countRange>
+			</li>
+			<li Class="StockGenerator_Animals">
+				<maxWildness>0.70</maxWildness>
+				<checkTemperature>false</checkTemperature>
+				<tradeTagsSell>
+					<li>AnimalPet</li>
+				</tradeTagsSell>
+				<kindCountRange>1~3</kindCountRange>
+				<countRange>1~2</countRange>
+			</li>
+			<li Class="StockGenerator_Tag" MayRequire="VanillaExpanded.VBooksE">
+				<tradeTag>Book</tradeTag>
+				<thingDefCountRange>-1~2</thingDefCountRange>
+				<countRange>1~1</countRange>
+			</li>
+			<li Class="StockGenerator_Tag">
+				<tradeTag>Artifact</tradeTag>
+				<thingDefCountRange>-6~1</thingDefCountRange>
+				<countRange>1~1</countRange>
+			</li>
+			<!-- Purchases -->
+			<li Class="StockGenerator_MultiDef">
+				<thingDefs>
+					<li>Ambrosia</li>
+					<li>Gold</li>
+					<li>MealSurvivalPack</li>
+					<li>MedicineUltratech</li>
+					<li>Pemmican</li>
+					<li>Plasteel</li>
+					<li>Uranium</li>
+				</thingDefs>
+			</li>
+			<li Class="StockGenerator_MultiDef" MayRequire="VanillaExpanded.VCookE">
+				<thingDefs>
+					<li>VCE_CannedMeat</li>
+					<li>VCE_CannedProduce</li>
+					<li>VCE_CannedFruit</li>
+					<li>VCE_CannedAP</li>
+					<li>VCE_CannedFish</li>
+					<li>VCE_Cheese</li>
+					<li>VCE_Flour</li>
+				</thingDefs>
+			</li>
+			<li Class="TG.StockGen.Alcohol"/>
+			<li Class="TG.StockGen.FoodGluttonous"/>
+			<li Class="StockGenerator_BuyTradeTag">
+				<tag>ExoticBuilding</tag>
+			</li>
+			<li Class="StockGenerator_BuyTradeTag">
+				<tag>PsylinkNeuroformer</tag>
+			</li>
+			<li Class="StockGenerator_Category">
+				<categoryDef>Neurotrainers</categoryDef>
+			</li>
+			<li Class="TG.StockGen.ExoticAnimalPart"/>
+			<li Class="TG.StockGen.Jewelry" MayRequire="kikohi.jewelry"/>
+		</generators>
+		<next Class="TG.Next.ListWithoutRepetition">
+			<num>1</num>
+			<nodes>
+				<li>
+					<node>ND_OrbitalFood</node>
+				</li>
+				<!-- ToDo switch to these when all categories are finished and tested.
+				<li>
+					<node>ND_OrbitalGeneralist</node>
+					<commonality>1</commonality>
+				</li>
+				<li>
+					<node>ND_OrbitalFocused</node>
+					<commonality>3</commonality>
+				</li>
+				<li>
+					<node>ND_OrbitalSpecialist</node>
+					<commonality>5</commonality>
+				</li>
+				-->
+			</nodes>
+		</next>
 	</TG.NodeDef>
+
+	<!-- ToDo switch to these when all categories are finished and tested.
+	<TG.NodeDef>
+		<defName>ND_OrbitalGeneralist</defName>
+		<next Class="TG.Next.ListWithoutRepetition">
+			<num>3~4</num>
+			<nodes>
+				<li>
+					<node>ND_OrbitalFood</node>
+				</li>
+				<li>
+					<node>ND_OrbitalCombat</node>
+				</li>
+				<li>
+					<node>ND_OrbitalMetal</node>
+				</li>
+				<li>
+					<node>ND_OrbitalTextiles</node>
+				</li>
+				<li>
+					<node>ND_OrbitalStone</node>
+				</li>
+				<li>
+					<node>ND_OrbitalWood</node>
+				</li>
+				<li>
+					<node>ND_OrbitalTech</node>
+				</li>
+				<li>
+					<node>ND_OrbitalMedicine</node>
+				</li>
+				<li>
+					<node>ND_OrbitalTranshumanist</node>
+				</li>
+				<li>
+					<node>ND_OrbitalCulture</node>
+				</li>
+				<li>
+					<node>ND_OrbitalAnimal</node>
+				</li>
+			</nodes>
+		</next>
+	</TG.NodeDef>
+
+	<TG.NodeDef>
+		<defName>ND_OrbitalFocused</defName>
+		<next Class="TG.Next.ListWithoutRepetition">
+			<num>2~3</num>
+			<nodes>
+				<li>
+					<node>ND_OrbitalFood</node>
+					<times>1~2</times>
+				</li>
+				<li>
+					<node>ND_OrbitalCombat</node>
+					<times>1~2</times>
+				</li>
+				<li>
+					<node>ND_OrbitalMetal</node>
+					<times>1~2</times>
+				</li>
+				<li>
+					<node>ND_OrbitalTextiles</node>
+					<times>1~2</times>
+				</li>
+				<li>
+					<node>ND_OrbitalStone</node>
+					<times>1~2</times>
+				</li>
+				<li>
+					<node>ND_OrbitalWood</node>
+					<times>1~2</times>
+				</li>
+				<li>
+					<node>ND_OrbitalTech</node>
+					<times>1~2</times>
+				</li>
+				<li>
+					<node>ND_OrbitalMedicine</node>
+					<times>1~2</times>
+				</li>
+				<li>
+					<node>ND_OrbitalTranshumanist</node>
+					<times>1~2</times>
+				</li>
+				<li>
+					<node>ND_OrbitalCulture</node>
+					<times>1~2</times>
+				</li>
+				<li>
+					<node>ND_OrbitalAnimal</node>
+					<times>1~2</times>
+				</li>
+			</nodes>
+		</next>
+	</TG.NodeDef>
+
+	<TG.NodeDef>
+		<defName>ND_OrbitalSpecialist</defName>
+		<next Class="TG.Next.ListWithoutRepetition">
+			<num>1~2</num>
+			<nodes>
+				<li>
+					<node>ND_OrbitalFood</node>
+					<times>2~3</times>
+				</li>
+				<li>
+					<node>ND_OrbitalCombat</node>
+					<times>2~3</times>
+				</li>
+				<li>
+					<node>ND_OrbitalMetal</node>
+					<times>2~3</times>
+				</li>
+				<li>
+					<node>ND_OrbitalTextiles</node>
+					<times>2~3</times>
+				</li>
+				<li>
+					<node>ND_OrbitalStone</node>
+					<times>2~3</times>
+				</li>
+				<li>
+					<node>ND_OrbitalWood</node>
+					<times>2~3</times>
+				</li>
+				<li>
+					<node>ND_OrbitalTech</node>
+					<times>2~3</times>
+				</li>
+				<li>
+					<node>ND_OrbitalMedicine</node>
+					<times>2~3</times>
+				</li>
+				<li>
+					<node>ND_OrbitalTranshumanist</node>
+					<times>2~3</times>
+				</li>
+				<li>
+					<node>ND_OrbitalCulture</node>
+					<times>2~3</times>
+				</li>
+				<li>
+					<node>ND_OrbitalAnimal</node>
+					<times>2~3</times>
+				</li>
+			</nodes>
+		</next>
+	</TG.NodeDef>
+	-->
+
 </Defs>

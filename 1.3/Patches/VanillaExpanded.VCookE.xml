@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Allow traders to sell canned food and meals. -->
+<Patch>
+	<Operation Class="PatchOperationReplace" MayRequire="VanillaExpanded.VCookE">
+		<xpath>/Defs/ThingDef[defName="VCE_CannedMeat" or defName="VCE_CannedProduce" or defName="VCE_CannedFruit" or
+			defName="VCE_CannedAP" or defName="VCE_CannedFish" or defName="VCE_DeepFriedBigMeat" or
+			defName="VCE_DeepFriedVegetables" or defName="VCE_DeepFriedFish"]/tradeability
+		</xpath>
+		<value>
+			<tradeability>All</tradeability>
+		</value>
+	</Operation>
+</Patch>
+

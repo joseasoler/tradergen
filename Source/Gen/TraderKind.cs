@@ -59,22 +59,18 @@ namespace TG.Gen
 		/// <param name="nodeDef">NodeDef being evaluated.</param>
 		/// <param name="def">Trader being generated.</param>
 
-		private static void ApplyStockGroups(in NodeDef nodeDef, ref TraderKindDef def)
+		private static void ApplyGenerators(in NodeDef nodeDef, ref TraderKindDef def)
 		{
-			foreach (var stockGroup in nodeDef.stockGroups)
+			foreach (var generator in nodeDef.generators)
 			{
-				Logger.Gen($"Applying StockGroup {stockGroup}.");
 				// StockGenerators have a reference to their TraderKindDef. This reference is not set for generators coming
 				// from a StockGroupDef as these lack a TraderKindDef. Since multiple TraderKindDefs may be using the same
 				// StockGroupDef at any given time, a shallow copy of the StockGenerator is provided to them instead.
 				// Each copy can later point to the right TraderKindDef, and will be deleted when its TraderKindDef is deleted.
-				foreach (var stockGeneratorCopy in stockGroup.generators.Select(stockGenerator =>
-					         stockGenerator.ShallowClone()))
-				{
-					def.stockGenerators.Add(stockGeneratorCopy);
-					stockGeneratorCopy.ResolveReferences(def);
-					Logger.Gen($"Adding StockGenerator {Logger.StockGen(stockGeneratorCopy)}");
-				}
+				var generatorCopy = generator.ShallowClone();
+				def.stockGenerators.Add(generatorCopy);
+				generatorCopy.ResolveReferences(def);
+				// Logger.Gen($"Adding StockGenerator {Logger.StockGen(generatorCopy)}");
 			}
 		}
 
@@ -85,9 +81,9 @@ namespace TG.Gen
 		/// <param name="def">Trader definition being generated.</param>
 		private static void ApplyNode(in NodeDef nodeDef, ref TraderKindDef def)
 		{
-			if (nodeDef.stockGroups != null)
+			if (nodeDef.generators != null)
 			{
-				ApplyStockGroups(nodeDef, ref def);
+				ApplyGenerators(nodeDef, ref def);
 			}
 		}
 
