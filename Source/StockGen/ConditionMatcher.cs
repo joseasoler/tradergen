@@ -87,8 +87,21 @@ namespace TG.StockGen
 			       def.techLevel <= maxTechLevelGenerate;
 		}
 
+		/// <summary>
+		/// Defines the weight of a def when randomly choosing which defs to generate.
+		/// </summary>
+		/// <param name="def">Thing being checked</param>
+		/// <param name="forTile">Tile in which the transaction takes place.</param>
+		/// <param name="faction">Faction of the trader.</param>
+		/// <returns></returns>
 		protected virtual float Weight(in ThingDef def, in int forTile, in Faction faction) => 1f;
 
+		/// <summary>
+		/// Sells thingDefCountRange random thingDefs matching the criteria, with countRange in stock for each one.
+		/// </summary>
+		/// <param name="forTile">Tile in which the transaction takes place.</param>
+		/// <param name="faction">Faction of the trader.</param>
+		/// <returns></returns>
 		public override IEnumerable<Thing> GenerateThings(int forTile, Faction faction = null)
 		{
 			var thingDefs = DefDatabase<ThingDef>.AllDefs.Where(def => CanSellImpl(def, forTile, faction)).ToList();
@@ -102,6 +115,11 @@ namespace TG.StockGen
 			}
 		}
 
+		/// <summary>
+		/// Checks if the trader can purchase a given item.
+		/// </summary>
+		/// <param name="thingDef">ThingDef being checked.</param>
+		/// <returns>True if the trader will buy the item.</returns>
 		public override bool HandlesThingDef(ThingDef thingDef)
 		{
 			return CanBuyImpl(thingDef);
