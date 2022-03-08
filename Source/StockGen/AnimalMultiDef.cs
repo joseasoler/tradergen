@@ -7,6 +7,7 @@ namespace TG.StockGen
 {
 	/// <summary>
 	/// Sells kindCountRange random types of animals in pawnKindDefs, with countRange/totalPriceRange in stock for each.
+	/// Uses the same random weight depending on wildness as StockGenerator_Animals.
 	/// Takes into account totalPriceRange and customCountRanges, which are ignored by vanilla StockGenerator_Animals.
 	/// </summary>
 	public class AnimalMultiDef : StockGenerator

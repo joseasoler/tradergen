@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using RimWorld;
 using Verse;
@@ -7,34 +6,9 @@ using Verse;
 namespace TG.StockGen
 {
 	/// <summary>
-	/// Sorts weighted ThingDefs in descending order to reduce the average number of iterations for finding an item.
-	/// </summary>
-	internal class WeightedThingDefComparer : IComparer<Tuple<float, ThingDef>>
-	{
-		public int Compare(Tuple<float, ThingDef> x, Tuple<float, ThingDef> y)
-		{
-			if (x == null || y == null)
-			{
-				throw new ArgumentException("WeightedThingDefComparer: unexpected null parameter.");
-			}
-
-			// Elements with larger weights go first.
-			var (xWeight, xDef) = x;
-			var (yWeight, yDef) = y;
-			var result = yWeight.CompareTo(xWeight);
-
-			if (result == 0)
-			{
-				result = xDef.shortHash.CompareTo(yDef.shortHash);
-			}
-
-			return result;
-		}
-	}
-
-	/// <summary>
 	/// Purchases any item matching a specific criteria.
-	/// Sells thingDefCountRange random types of thingDefs matching the criteria, with countRange in stock for each one.
+	/// Sells thingDefCountRange random types of thingDefs matching the criteria, with countRange/totalPriceRange in stock
+	/// for each one.
 	/// ThingDef are randomly chosen using a customizable weight.
 	/// </summary>
 	public abstract class ConditionMatcher : StockGenerator
