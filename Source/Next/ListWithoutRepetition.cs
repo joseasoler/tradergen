@@ -17,46 +17,20 @@ namespace TG.Next
 
 		public override List<NodeDef> Nodes(in NodeDef nodeDef, in BiomeDef biomeDef = null, in Faction faction = null)
 		{
-			var nextNodes = new List<NodeDef>();
-			var times = num.RandomInRange;
+			var chosenNextNodes = Algorithm.ChooseNWeightedRandomly(nodes, x => x.commonality, num.RandomInRange);
+			var nodeDefs = new List<NodeDef>();
 
-			var remainingNodes = new List<NextNode>(nodes);
-			var totalCommonality = remainingNodes.Sum(nextNode => nextNode.commonality);
-
-			while (times > 0)
+			foreach (var chosenNextNode in chosenNextNodes)
 			{
-				var currentCommonality = 0;
-				var chosenCommonality = Rand.RangeInclusive(0, totalCommonality);
-
-				NextNode chosenNode = null;
-				foreach (var currentNode in remainingNodes)
-				{
-					currentCommonality += currentNode.commonality;
-					if (currentCommonality < chosenCommonality) continue;
-					chosenNode = currentNode;
-					break;
-				}
-
-				if (chosenNode == null)
-				{
-					break;
-				}
-
-				// Nodes are chosen without repetition.
-				remainingNodes.Remove(chosenNode);
-				totalCommonality -= chosenNode.commonality;
-
-				var nodeTimes = chosenNode.times.RandomInRange;
+				var nodeTimes = chosenNextNode.times.RandomInRange;
 				while (nodeTimes > 0)
 				{
-					nextNodes.Add(chosenNode.node);
+					nodeDefs.Add(chosenNextNode.node);
 					--nodeTimes;
 				}
-
-				--times;
 			}
 
-			return nextNodes;
+			return nodeDefs;
 		}
 	}
 }
