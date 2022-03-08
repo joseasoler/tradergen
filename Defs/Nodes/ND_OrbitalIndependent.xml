@@ -55,6 +55,14 @@
 				<thingDefCountRange>-6~1</thingDefCountRange>
 				<countRange>1~1</countRange>
 			</li>
+			<li Class="StockGenerator_Techprints">
+				<countChances>
+					<li>
+						<count>1</count>
+						<chance>0.3</chance>
+					</li>
+				</countChances>
+			</li>
 			<!-- Purchases -->
 			<li Class="StockGenerator_MultiDef">
 				<thingDefs>
@@ -127,6 +135,7 @@
 				</li>
 				<li>
 					<node>ND_OrbitalCombat</node>
+					<commonality>3</commonality>
 				</li>
 				<li>
 					<node>ND_OrbitalMetal</node>
@@ -142,6 +151,7 @@
 				</li>
 				<li>
 					<node>ND_OrbitalTech</node>
+					<commonality>2</commonality>
 				</li>
 				<li>
 					<node>ND_OrbitalMedicine</node>
@@ -171,6 +181,7 @@
 				<li>
 					<node>ND_OrbitalCombat</node>
 					<times>1~2</times>
+					<commonality>2</commonality>
 				</li>
 				<li>
 					<node>ND_OrbitalMetal</node>
@@ -191,14 +202,17 @@
 				<li>
 					<node>ND_OrbitalTech</node>
 					<times>1~2</times>
+					<commonality>2</commonality>
 				</li>
 				<li>
 					<node>ND_OrbitalMedicine</node>
 					<times>1~2</times>
+					<commonality>2</commonality>
 				</li>
 				<li>
 					<node>ND_OrbitalTranshumanist</node>
 					<times>1~2</times>
+					<commonality>2</commonality>
 				</li>
 				<li>
 					<node>ND_OrbitalCulture</node>
@@ -224,6 +238,7 @@
 				<li>
 					<node>ND_OrbitalCombat</node>
 					<times>2~3</times>
+					<commonality>2</commonality>
 				</li>
 				<li>
 					<node>ND_OrbitalMetal</node>

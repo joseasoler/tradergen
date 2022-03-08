@@ -19,7 +19,6 @@
 			</li>
 		</generators>
 		<next Class="TG.Next.ListWithoutRepetition">
-			<num>1</num>
 			<nodes>
 				<li>
 					<node>ND_OrbitalFoodSurvivalist</node>
