@@ -191,6 +191,16 @@
 				<thingDef>VFEI_RoyalGenome</thingDef>
 				<countRange>2~8</countRange>
 			</li>
+			<li Class="TG.StockGen.AnimalMultiDef" MayRequire="OskarPotocki.VFE.Insectoid">
+				<pawnKindDefs>
+					<li>VFEI_VatGrownMilkbeetle</li>
+					<li>VFEI_VatGrownPrincess</li>
+					<li>VFEI_VatgrownRoyalLarva</li>
+					<li>VFEI_VatGrownRoyalMaggot</li>
+				</pawnKindDefs>
+				<kindCountRange>1~2</kindCountRange>
+				<totalPriceRange>400~800</totalPriceRange>
+			</li>
 		</generators>
 	</TG.NodeDef>
 </Defs>

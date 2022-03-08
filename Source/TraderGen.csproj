@@ -37,6 +37,7 @@
 		<Compile Include="Mod\Settings.cs" />
 		<Compile Include="Mod\Mod.cs" />
 		<Compile Include="StockGen\Alcohol.cs" />
+		<Compile Include="StockGen\AnimalMultiDef.cs" />
 		<Compile Include="StockGen\ConditionMatcher.cs" />
 		<Compile Include="StockGen\ExoticAnimalPart.cs" />
 		<Compile Include="StockGen\FoodRaw.cs" />
