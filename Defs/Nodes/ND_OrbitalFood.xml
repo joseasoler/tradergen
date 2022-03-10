@@ -178,15 +178,15 @@
 				<thingDefCountRange>2~3</thingDefCountRange>
 				<totalPriceRange>300~600</totalPriceRange>
 			</li>
-			<li Class="StockGenerator_SingleDef">
+			<li Class="StockGenerator_SingleDef" MayRequire="OskarPotocki.VFE.Insectoid">
 				<thingDef>VFEI_BioengineeringIncubator</thingDef>
 				<countRange>0~2</countRange>
 			</li>
-			<li Class="StockGenerator_SingleDef">
+			<li Class="StockGenerator_SingleDef" MayRequire="OskarPotocki.VFE.Insectoid">
 				<thingDef>VFEI_DroneGenome</thingDef>
 				<countRange>2~8</countRange>
 			</li>
-			<li Class="StockGenerator_SingleDef">
+			<li Class="StockGenerator_SingleDef" MayRequire="OskarPotocki.VFE.Insectoid">
 				<thingDef>VFEI_RoyalGenome</thingDef>
 				<countRange>2~8</countRange>
 			</li>
@@ -197,8 +197,20 @@
 					<li>VFEI_VatgrownRoyalLarva</li>
 					<li>VFEI_VatGrownRoyalMaggot</li>
 				</pawnKindDefs>
+				<newborn>true</newborn>
 				<kindCountRange>1~2</kindCountRange>
 				<totalPriceRange>400~800</totalPriceRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>Kibble</thingDef>
+				<totalPriceRange>500~1000</totalPriceRange>
+			</li>
+			<!-- Purchases -->
+			<li Class="StockGenerator_Animals">
+				<tradeTagsBuy>
+					<li>AnimalInsect</li>
+					<li>AnimalExotic</li>
+				</tradeTagsBuy>
 			</li>
 		</generators>
 	</TG.NodeDef>
