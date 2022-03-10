@@ -72,6 +72,7 @@
 					<li>MedicineUltratech</li>
 					<li>Pemmican</li>
 					<li>Plasteel</li>
+					<li>TechprofSubpersonaCore</li>
 					<li>Uranium</li>
 				</thingDefs>
 			</li>
@@ -99,6 +100,12 @@
 			</li>
 			<li Class="TG.StockGen.ExoticAnimalPart"/>
 			<li Class="TG.StockGen.Jewelry" MayRequire="kikohi.jewelry"/>
+			<li Class="StockGenerator_BuyTradeTag"><tag>Art</tag></li>
+			<li Class="StockGenerator_BuyTradeTag"><tag>MusicalInstrument</tag></li>
+			<li Class="StockGenerator_Tag">
+				<tradeTag>TechHediff</tradeTag>
+			</li>
+			<!-- ExoticBuilding -->
 		</generators>
 		<next Class="TG.Next.ListWithoutRepetition">
 			<nodes>
