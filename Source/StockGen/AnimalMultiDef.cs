@@ -16,6 +16,8 @@ namespace TG.StockGen
 
 		public IntRange kindCountRange = new IntRange(1, 1);
 
+		public bool newborn = false;
+
 		private HashSet<ThingDef> _cachedThingDefs;
 
 		public override IEnumerable<Thing> GenerateThings(int forTile, Faction faction = null)
@@ -29,7 +31,7 @@ namespace TG.StockGen
 				var count = RandomCountOf(pawnDef.race);
 				for (var i = 0; i < count; ++i)
 				{
-					yield return PawnGenerator.GeneratePawn(new PawnGenerationRequest(pawnDef, tile: forTile));
+					yield return PawnGenerator.GeneratePawn(new PawnGenerationRequest(pawnDef, tile: forTile, newborn: newborn));
 				}
 			}
 		}

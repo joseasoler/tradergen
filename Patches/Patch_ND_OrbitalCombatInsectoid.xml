@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Vanilla Factions Expanded - Insectoids</li>
+		</mods>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/TG.NodeDef[defName="ND_OrbitalCombatInsectoid"]/generators
+			</xpath>
+			<value>
+				<li Class="TG.StockGen.AnimalMultiDef">
+					<pawnKindDefs>
+						<li>Megascarab</li>
+						<li>Spelopede</li>
+						<li>Megaspider</li>
+					</pawnKindDefs>
+					<newborn>true</newborn>
+					<kindCountRange>3</kindCountRange>
+					<totalPriceRange>500~1300</totalPriceRange>
+				</li>
+			</value>
+		</nomatch>
+	</Operation>
+</Patch>

@@ -6,5 +6,6 @@ namespace TG.DefOf
 	public class ThingCategory
 	{
 		public static ThingCategoryDef FoodRaw;
+		public static ThingCategoryDef Grenades;
 	}
 }

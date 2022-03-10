@@ -101,10 +101,9 @@
 			<li Class="TG.StockGen.Jewelry" MayRequire="kikohi.jewelry"/>
 		</generators>
 		<next Class="TG.Next.ListWithoutRepetition">
-			<num>1</num>
 			<nodes>
 				<li>
-					<node>ND_OrbitalFood</node>
+					<node>ND_OrbitalCombat</node>
 				</li>
 				<!-- ToDo switch to these when all categories are finished and tested.
 				<li>
