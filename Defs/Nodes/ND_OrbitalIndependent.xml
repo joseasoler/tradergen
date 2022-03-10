@@ -83,9 +83,11 @@
 					<li>VCE_CannedFruit</li>
 					<li>VCE_CannedAP</li>
 					<li>VCE_CannedFish</li>
-					<li>VCE_Cheese</li>
 					<li>VCE_Flour</li>
 				</thingDefs>
+			</li>
+			<li Class="StockGenerator_Category" MayRequire="VanillaExpanded.VCookE">
+				<categoryDef>VCE_Cheese</categoryDef>
 			</li>
 			<li Class="TG.StockGen.Alcohol"/>
 			<li Class="TG.StockGen.FoodGluttonous"/>
