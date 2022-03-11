@@ -83,6 +83,12 @@ namespace TG
 			}
 			else if (generator.GetType().IsSubclassOf(typeof(ConditionMatcher)))
 			{
+				if (generator.GetType().IsSubclassOf(typeof(FromStuff)))
+				{
+					var fs = (FromStuff) generator;
+					text += '{' + fs.StuffDef.defName + '}';
+				}
+
 				var g = (ConditionMatcher) generator;
 				text += " thingDefCountRange:{" + g.thingDefCountRange + '}';
 			}

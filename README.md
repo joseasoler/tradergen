@@ -18,6 +18,7 @@ TraderGen also provides extra features when certain mods are enabled, including 
 
 * [Alpha Animals](https://steamcommunity.com/sharedfiles/filedetails/?id=1541721856)
 * [Jewelry](https://steamcommunity.com/workshop/filedetails/?id=2020964421)
+* [RimBees](https://steamcommunity.com/sharedfiles/filedetails/?id=1558161673)
 * [Trader Ships](https://steamcommunity.com/sharedfiles/filedetails/?id=2046222331)
 * [Vanilla Apparel Expanded — Accessories](https://steamcommunity.com/sharedfiles/filedetails/?id=2521176396)
 * [Vanilla Armour Expanded](https://steamcommunity.com/workshop/filedetails/?id=1814988282)

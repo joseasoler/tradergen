@@ -36,7 +36,7 @@ namespace TG.StockGen
 		/// <param name="def">Thing to check</param>
 		/// <param name="forTile">Tile in which the transaction takes place.</param>
 		/// <param name="faction">Faction of the trader.</param>
-		/// <returns>If the item an be sold or not.</returns>
+		/// <returns>If the item can be sold or not.</returns>
 		protected virtual bool CanSell(in ThingDef def, in int forTile, in Faction faction)
 		{
 			return CanBuy(def);
@@ -76,6 +76,17 @@ namespace TG.StockGen
 		protected virtual float Weight(in ThingDef def, in int forTile, in Faction faction) => 1f;
 
 		/// <summary>
+		/// Generates stock using a ThingDef. Allows child classes to override thing generation rules if needed.
+		/// </summary>
+		/// <param name="def">Thing being generated.</param>
+		/// <param name="faction">Faction of the trader.</param>
+		/// <returns></returns>
+		protected virtual IEnumerable<Thing> TryMakeForStock(ThingDef def, Faction faction)
+		{
+			return StockGeneratorUtility.TryMakeForStock(def, RandomCountOf(def), faction);
+		}
+
+		/// <summary>
 		/// Sells thingDefCountRange random thingDefs matching the criteria, with countRange in stock for each one.
 		/// </summary>
 		/// <param name="forTile">Tile in which the transaction takes place.</param>
@@ -87,8 +98,7 @@ namespace TG.StockGen
 			var chosenThingDefs = Algorithm.ChooseNWeightedRandomly(thingDefs, def => Weight(def, forTile, faction),
 				thingDefCountRange.RandomInRange);
 
-			foreach (var thing in chosenThingDefs.SelectMany(def =>
-				         StockGeneratorUtility.TryMakeForStock(def, RandomCountOf(def), faction)))
+			foreach (var thing in chosenThingDefs.SelectMany(def => TryMakeForStock(def, faction)))
 			{
 				yield return thing;
 			}

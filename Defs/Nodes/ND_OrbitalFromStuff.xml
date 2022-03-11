@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<TG.NodeDef>
+		<defName>ND_OrbitalFromStuff</defName>
+		<next Class="TG.Next.ListWithoutRepetition">
+			<nodes>
+				<li>
+					<node>ND_OrbitalFromStuffMetallic</node>
+					<commonality>3</commonality>
+				</li>
+				<!-- ToDo
+				<li>
+					<node>ND_OrbitalFromStuffWoody</node>
+					<commonality>1</commonality>
+				</li>
+				-->
+				<li>
+					<node>ND_OrbitalFromStuffStony</node>
+					<commonality>2</commonality>
+				</li>
+				<li>
+					<node>ND_OrbitalFromStuffFabric</node>
+					<commonality>3</commonality>
+				</li>
+				<li>
+					<node>ND_OrbitalFromStuffLeathery</node>
+					<commonality>3</commonality>
+				</li>
+				<li MayRequire="kikohi.jewelry">
+					<node>ND_OrbitalFromStuffGemstones</node>
+					<commonality>2</commonality>
+				</li>
+				<!-- ToDo
+				<li MayRequire="sarg.rimbees">
+					<node>ND_OrbitalFromStuffWaxy</node>
+					<commonality>1</commonality>
+				</li>
+				-->
+			</nodes>
+		</next>
+	</TG.NodeDef>
+	<TG.NodeDef>
+		<defName>ND_OrbitalFromStuffMetallic</defName>
+		<generators>
+			<!-- Sells -->
+			<li Class="TG.StockGen.FromStuffCategory">
+				<stuffCategoryDef>Metallic</stuffCategoryDef>
+				<maxTechLevelGenerate>Spacer</maxTechLevelGenerate>
+				<excludeThingDefs>
+					<!-- Chitin is handled separately. -->
+					<li MayRequire="OskarPotocki.VFE.Insectoid">VFEI_Chitin</li>
+				</excludeThingDefs>
+				<stuffCountRange>300~700</stuffCountRange>
+				<thingDefCountRange>4~7</thingDefCountRange>
+				<countRange>1~2</countRange>
+			</li>
+			<li Class="TG.StockGen.FromStuffCategory">
+				<stuffCategoryDef>Metallic</stuffCategoryDef>
+				<maxTechLevelGenerate>Spacer</maxTechLevelGenerate>
+				<excludeThingDefs>
+					<!-- Chitin is handled separately. -->
+					<li MayRequire="OskarPotocki.VFE.Insectoid">VFEI_Chitin</li>
+				</excludeThingDefs>
+				<stuffCountRange>300~700</stuffCountRange>
+				<thingDefCountRange>4~7</thingDefCountRange>
+				<countRange>1~2</countRange>
+			</li>
+		</generators>
+	</TG.NodeDef>
+	<TG.NodeDef>
+		<defName>ND_OrbitalFromStuffStony</defName>
+		<generators>
+			<!-- Sells -->
+			<li Class="TG.StockGen.FromStuffCategory">
+				<stuffCategoryDef>Stony</stuffCategoryDef>
+				<maxTechLevelGenerate>Spacer</maxTechLevelGenerate>
+				<stuffCountRange>300~700</stuffCountRange>
+				<thingDefCountRange>4~7</thingDefCountRange>
+				<countRange>1~2</countRange>
+			</li>
+			<li Class="TG.StockGen.FromStuffCategory">
+				<stuffCategoryDef>Stony</stuffCategoryDef>
+				<maxTechLevelGenerate>Spacer</maxTechLevelGenerate>
+				<stuffCountRange>300~700</stuffCountRange>
+				<thingDefCountRange>3~7</thingDefCountRange>
+				<countRange>1~2</countRange>
+			</li>
+			<!-- Unfortunately StoneBlocks are set to be only buyable. StockGenerator_Category bypasses this check. -->
+			<li Class="StockGenerator_Category">
+				<categoryDef>StoneBlocks</categoryDef>
+			</li>
+		</generators>
+	</TG.NodeDef>
+	<TG.NodeDef>
+		<defName>ND_OrbitalFromStuffFabric</defName>
+		<generators>
+			<!-- Sells -->
+			<li Class="TG.StockGen.FromStuffCategory">
+				<stuffCategoryDef>Fabric</stuffCategoryDef>
+				<maxTechLevelGenerate>Spacer</maxTechLevelGenerate>
+				<stuffCountRange>300~700</stuffCountRange>
+				<thingDefCountRange>4~7</thingDefCountRange>
+				<countRange>1~2</countRange>
+			</li>
+			<li Class="TG.StockGen.FromStuffCategory">
+				<stuffCategoryDef>Fabric</stuffCategoryDef>
+				<maxTechLevelGenerate>Spacer</maxTechLevelGenerate>
+				<stuffCountRange>300~700</stuffCountRange>
+				<thingDefCountRange>4~7</thingDefCountRange>
+				<countRange>1~2</countRange>
+			</li>
+		</generators>
+	</TG.NodeDef>
+	<TG.NodeDef>
+		<defName>ND_OrbitalFromStuffLeathery</defName>
+		<generators>
+			<!-- Sells -->
+			<li Class="TG.StockGen.FromStuffCategory">
+				<stuffCategoryDef>Leathery</stuffCategoryDef>
+				<maxTechLevelGenerate>Spacer</maxTechLevelGenerate>
+				<excludeThingDefs>
+					<li>Leather_Human</li>
+				</excludeThingDefs>
+				<stuffCountRange>300~700</stuffCountRange>
+				<thingDefCountRange>4~7</thingDefCountRange>
+				<countRange>1~2</countRange>
+			</li>
+			<li Class="TG.StockGen.FromStuffCategory">
+				<stuffCategoryDef>Leathery</stuffCategoryDef>
+				<maxTechLevelGenerate>Spacer</maxTechLevelGenerate>
+				<excludeThingDefs>
+					<li>Leather_Human</li>
+				</excludeThingDefs>
+				<stuffCountRange>300~700</stuffCountRange>
+				<thingDefCountRange>4~7</thingDefCountRange>
+				<countRange>1~2</countRange>
+			</li>
+		</generators>
+	</TG.NodeDef>
+	<TG.NodeDef MayRequire="kikohi.jewelry">
+		<defName>ND_OrbitalFromStuffGemstones</defName>
+		<generators>
+			<!-- Sells -->
+			<li Class="TG.StockGen.FromStuffCategory">
+				<stuffCategoryDef>Gemstones</stuffCategoryDef>
+				<maxTechLevelGenerate>Spacer</maxTechLevelGenerate>
+				<stuffCountRange>150~400</stuffCountRange>
+				<thingDefCountRange>4~7</thingDefCountRange>
+				<countRange>1~2</countRange>
+			</li>
+			<li Class="TG.StockGen.Jewelry">
+				<thingDefCountRange>3~5</thingDefCountRange>
+				<countRange>1</countRange>
+			</li>
+		</generators>
+	</TG.NodeDef>
+</Defs>
