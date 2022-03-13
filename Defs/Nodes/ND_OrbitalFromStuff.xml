@@ -43,7 +43,7 @@
 		<defName>ND_OrbitalFromStuffMetallic</defName>
 		<generators>
 			<!-- Sells -->
-			<li Class="TG.StockGen.FromStuffCategory">
+			<li Class="TG.StockGen.RandomStuffFromCategory">
 				<stuffCategoryDef>Metallic</stuffCategoryDef>
 				<maxTechLevelGenerate>Spacer</maxTechLevelGenerate>
 				<excludeThingDefs>
@@ -54,7 +54,7 @@
 				<thingDefCountRange>4~7</thingDefCountRange>
 				<countRange>1~2</countRange>
 			</li>
-			<li Class="TG.StockGen.FromStuffCategory">
+			<li Class="TG.StockGen.RandomStuffFromCategory">
 				<stuffCategoryDef>Metallic</stuffCategoryDef>
 				<maxTechLevelGenerate>Spacer</maxTechLevelGenerate>
 				<excludeThingDefs>
@@ -71,14 +71,14 @@
 		<defName>ND_OrbitalFromStuffStony</defName>
 		<generators>
 			<!-- Sells -->
-			<li Class="TG.StockGen.FromStuffCategory">
+			<li Class="TG.StockGen.RandomStuffFromCategory">
 				<stuffCategoryDef>Stony</stuffCategoryDef>
 				<maxTechLevelGenerate>Spacer</maxTechLevelGenerate>
 				<stuffCountRange>300~700</stuffCountRange>
 				<thingDefCountRange>4~7</thingDefCountRange>
 				<countRange>1~2</countRange>
 			</li>
-			<li Class="TG.StockGen.FromStuffCategory">
+			<li Class="TG.StockGen.RandomStuffFromCategory">
 				<stuffCategoryDef>Stony</stuffCategoryDef>
 				<maxTechLevelGenerate>Spacer</maxTechLevelGenerate>
 				<stuffCountRange>300~700</stuffCountRange>
@@ -95,14 +95,14 @@
 		<defName>ND_OrbitalFromStuffFabric</defName>
 		<generators>
 			<!-- Sells -->
-			<li Class="TG.StockGen.FromStuffCategory">
+			<li Class="TG.StockGen.RandomStuffFromCategory">
 				<stuffCategoryDef>Fabric</stuffCategoryDef>
 				<maxTechLevelGenerate>Spacer</maxTechLevelGenerate>
 				<stuffCountRange>300~700</stuffCountRange>
 				<thingDefCountRange>4~7</thingDefCountRange>
 				<countRange>1~2</countRange>
 			</li>
-			<li Class="TG.StockGen.FromStuffCategory">
+			<li Class="TG.StockGen.RandomStuffFromCategory">
 				<stuffCategoryDef>Fabric</stuffCategoryDef>
 				<maxTechLevelGenerate>Spacer</maxTechLevelGenerate>
 				<stuffCountRange>300~700</stuffCountRange>
@@ -115,7 +115,7 @@
 		<defName>ND_OrbitalFromStuffLeathery</defName>
 		<generators>
 			<!-- Sells -->
-			<li Class="TG.StockGen.FromStuffCategory">
+			<li Class="TG.StockGen.RandomStuffFromCategory">
 				<stuffCategoryDef>Leathery</stuffCategoryDef>
 				<maxTechLevelGenerate>Spacer</maxTechLevelGenerate>
 				<excludeThingDefs>
@@ -125,7 +125,7 @@
 				<thingDefCountRange>4~7</thingDefCountRange>
 				<countRange>1~2</countRange>
 			</li>
-			<li Class="TG.StockGen.FromStuffCategory">
+			<li Class="TG.StockGen.RandomStuffFromCategory">
 				<stuffCategoryDef>Leathery</stuffCategoryDef>
 				<maxTechLevelGenerate>Spacer</maxTechLevelGenerate>
 				<excludeThingDefs>
@@ -141,7 +141,7 @@
 		<defName>ND_OrbitalFromStuffGemstones</defName>
 		<generators>
 			<!-- Sells -->
-			<li Class="TG.StockGen.FromStuffCategory">
+			<li Class="TG.StockGen.RandomStuffFromCategory">
 				<stuffCategoryDef>Gemstones</stuffCategoryDef>
 				<maxTechLevelGenerate>Spacer</maxTechLevelGenerate>
 				<stuffCountRange>150~400</stuffCountRange>

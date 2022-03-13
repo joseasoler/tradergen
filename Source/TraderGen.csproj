@@ -44,7 +44,7 @@
 		<Compile Include="StockGen\FoodRaw.cs" />
 		<Compile Include="StockGen\FoodGluttonous.cs" />
 		<Compile Include="StockGen\FromStuff.cs" />
-		<Compile Include="StockGen\FromStuffCategory.cs" />
+		<Compile Include="StockGen\RandomStuffFromCategory.cs" />
 		<Compile Include="StockGen\Grenades.cs" />
 		<Compile Include="StockGen\InsectMeat.cs" />
 		<Compile Include="StockGen\Jewelry.cs" />

@@ -8,7 +8,7 @@ namespace TG.StockGen
 	/// <summary>
 	/// Chooses a ThingDef with stuffProps from a specific StuffCategory and generates stock made from it.
 	/// </summary>
-	public class FromStuffCategory : FromStuff
+	public class RandomStuffFromCategory : FromStuff
 	{
 		public StuffCategoryDef stuffCategoryDef;
 
