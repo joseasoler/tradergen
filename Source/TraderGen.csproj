@@ -50,10 +50,10 @@
 		<Compile Include="StockGen\Jewelry.cs" />
 		<Compile Include="StockGen\MultiDef.cs" />
 		<Compile Include="StockGen\OrbitalSilver.cs" />
+		<Compile Include="StockGen\Util.cs" />
 		<Compile Include="StockGen\Weapon.cs" />
 		<Compile Include="StockGen\WeaponMelee.cs" />
 		<Compile Include="StockGen\WeaponRanged.cs" />
-		<Compile Include="ThingDefUtil.cs" />
 		<Compile Include="TraderGenDef.cs" />
 		<Compile Include="Trader\OrbitalTraderArrival.cs" />
 		<Reference Include="System" />

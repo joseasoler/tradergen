@@ -105,7 +105,7 @@ namespace TG.StockGen
 			       // Only accept material which could be made from this stuff.
 			       _stuffDef.stuffProps.CanMake(def) &&
 			       // Only sell non-armor apparel...
-			       (def.IsApparel && !ThingDefUtil.IsArmor(def)
+			       (def.IsApparel && !Util.IsArmor(def)
 			        // ... minifiable buildings which are not security buildings...
 			        || def.IsWithinCategory(ThingCategoryDefOf.Buildings) && def.Minifiable && (def.thingCategories == null ||
 				        !def.thingCategories.Contains(DefOf.ThingCategory.BuildingsSecurity)));

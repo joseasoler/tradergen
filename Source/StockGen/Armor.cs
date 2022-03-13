@@ -32,7 +32,7 @@ namespace TG.StockGen
 				return false;
 			}
 
-			return ThingDefUtil.IsArmor(def);
+			return Util.IsArmor(def);
 		}
 
 		/// <summary>
