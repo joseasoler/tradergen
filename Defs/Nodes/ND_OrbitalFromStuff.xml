@@ -6,29 +6,27 @@
 			<nodes>
 				<li>
 					<node>ND_OrbitalFromStuffMetallic</node>
-					<commonality>3</commonality>
+					<commonality>6</commonality>
 				</li>
-				<!-- ToDo
 				<li>
 					<node>ND_OrbitalFromStuffWoody</node>
-					<commonality>1</commonality>
+					<commonality>2</commonality>
 				</li>
-				-->
 				<li>
 					<node>ND_OrbitalFromStuffStony</node>
-					<commonality>2</commonality>
+					<commonality>4</commonality>
 				</li>
 				<li>
 					<node>ND_OrbitalFromStuffFabric</node>
-					<commonality>3</commonality>
+					<commonality>6</commonality>
 				</li>
 				<li>
 					<node>ND_OrbitalFromStuffLeathery</node>
-					<commonality>3</commonality>
+					<commonality>6</commonality>
 				</li>
 				<li MayRequire="kikohi.jewelry">
 					<node>ND_OrbitalFromStuffGemstones</node>
-					<commonality>2</commonality>
+					<commonality>3</commonality>
 				</li>
 				<!-- ToDo
 				<li MayRequire="sarg.rimbees">
@@ -63,6 +61,26 @@
 				</excludeThingDefs>
 				<stuffCountRange>300~700</stuffCountRange>
 				<thingDefCountRange>4~7</thingDefCountRange>
+				<countRange>1~2</countRange>
+			</li>
+		</generators>
+	</TG.NodeDef>
+	<TG.NodeDef>
+		<defName>ND_OrbitalFromStuffWoody</defName>
+		<generators>
+			<!-- Sells -->
+			<li Class="TG.StockGen.RandomStuffFromCategory">
+				<stuffCategoryDef>Woody</stuffCategoryDef>
+				<maxTechLevelGenerate>Spacer</maxTechLevelGenerate>
+				<stuffCountRange>300~700</stuffCountRange>
+				<thingDefCountRange>5~9</thingDefCountRange>
+				<countRange>5~9</countRange>
+			</li>
+			<li Class="TG.StockGen.RandomStuffFromCategory">
+				<stuffCategoryDef>Woody</stuffCategoryDef>
+				<maxTechLevelGenerate>Spacer</maxTechLevelGenerate>
+				<stuffCountRange>300~700</stuffCountRange>
+				<thingDefCountRange>5~9</thingDefCountRange>
 				<countRange>1~2</countRange>
 			</li>
 		</generators>
