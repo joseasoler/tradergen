@@ -58,7 +58,6 @@ namespace TG.Gen
 		/// </summary>
 		/// <param name="nodeDef">NodeDef being evaluated.</param>
 		/// <param name="def">Trader being generated.</param>
-
 		private static void ApplyGenerators(in NodeDef nodeDef, ref TraderKindDef def)
 		{
 			foreach (var generator in nodeDef.generators)
@@ -70,7 +69,11 @@ namespace TG.Gen
 				var generatorCopy = generator.ShallowClone();
 				def.stockGenerators.Add(generatorCopy);
 				generatorCopy.ResolveReferences(def);
-				// Logger.Gen($"Adding StockGenerator {Logger.StockGen(generatorCopy)}");
+				Logger.Gen($"Adding StockGenerator {Logger.StockGen(generatorCopy)}");
+				foreach (var configError in generatorCopy.ConfigErrors(def))
+				{
+					Log.Error($"\tStockGenerator config error: {configError}");
+				}
 			}
 		}
 

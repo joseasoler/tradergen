@@ -30,6 +30,24 @@ namespace TG.StockGen
 			SetStuffDef();
 		}
 
+		public override IEnumerable<string> ConfigErrors(TraderKindDef parentDef)
+		{
+			foreach (var err in base.ConfigErrors(parentDef))
+			{
+				yield return err;
+
+			}
+
+			if (_stuffDef == null)
+			{
+				yield return "TG.StockGen.FromStuff has a null ThingDef.";
+			}
+			else if (!_stuffDef.IsStuff)
+			{
+				yield return $"TG.StockGen.FromStuff is using a ThingDef which is not Stuff: {_stuffDef.defName}.";
+			}
+		}
+
 		/// <summary>
 		/// Generates stock using a ThingDef.
 		/// </summary>
