@@ -1,8 +1,11 @@
 using Force.DeepCloner;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using RimWorld;
 using RimWorld.Planet;
+using TG.Mod;
+using TG.StockGen;
 using Verse;
 
 namespace TG.Gen
@@ -69,11 +72,13 @@ namespace TG.Gen
 				var generatorCopy = generator.ShallowClone();
 				def.stockGenerators.Add(generatorCopy);
 				generatorCopy.ResolveReferences(def);
-				Logger.Gen($"Adding StockGenerator {Logger.StockGen(generatorCopy)}");
 				foreach (var configError in generatorCopy.ConfigErrors(def))
 				{
-					Log.Error($"\tStockGenerator config error: {configError}");
+					Log.Error($"\t{generatorCopy.GetType().Name} config error: {configError}");
 				}
+
+				if (!Settings.LogGen) continue;
+				Logger.Gen(Util.ToText(generatorCopy).ToString());
 			}
 		}
 
