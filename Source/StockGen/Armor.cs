@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using RimWorld;
 using Verse;
 
@@ -19,6 +20,13 @@ namespace TG.StockGen
 		/// The armor must not have any of these trade tags.
 		/// </summary>
 		public List<string> excludeTradeTags;
+
+		public override void ConditionToText(ref StringBuilder b)
+		{
+			base.ConditionToText(ref b);
+			Util.ToText(ref b, "tradeTags", tradeTags);
+			Util.ToText(ref b, "excludeTradeTags", excludeTradeTags);
+		}
 
 		protected override bool CanBuy(in ThingDef def)
 		{

@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using RimWorld;
 using Verse;
 
@@ -19,6 +20,13 @@ namespace TG.StockGen
 		public bool newborn = false;
 
 		private HashSet<ThingDef> _cachedThingDefs;
+
+		public override void ToText(ref StringBuilder b)
+		{
+			b.Append($"pawnKindDefs: {string.Join(", ", pawnKindDefs)}\n");
+			b.Append($"kindCountRange: {kindCountRange}\n");
+			b.Append($"newborn: {newborn}\n");
+		}
 
 		public override IEnumerable<Thing> GenerateThings(int forTile, Faction faction = null)
 		{

@@ -33,22 +33,30 @@ namespace TG.StockGen
 			       def.GetStatValueAbstract(StatDefOf.ArmorRating_Sharp, stuff) > armorThreshold;
 		}
 
+		public static void ToText<T>(ref StringBuilder b, string label, IReadOnlyCollection<T> list)
+		{
+			if (list != null && list.Count > 0)
+			{
+				b.Append($"{label}: {string.Join(", ", list)}\n");
+			}
+		}
+
 		private static void DerivedToText(ref StringBuilder b, StockGenerator g)
 		{
 			var type = g.GetType();
 
+			if (type.IsSubclassOf(typeof(StockGen)))
+			{
+				var gen = (StockGen) g;
+				gen.ToText(ref b);
+				return;
+			}
+
 			if (type == typeof(StockGenerator_Animals))
 			{
 				var gen = (StockGenerator_Animals) g;
-				if (gen.tradeTagsBuy != null && gen.tradeTagsBuy.Count > 0)
-				{
-					b.Append($"tradeTagsBuy: {string.Join(", ", gen.tradeTagsBuy)}\n");
-				}
-
-				if (gen.tradeTagsSell != null && gen.tradeTagsSell.Count > 0)
-				{
-					b.Append($"tradeTagsSell: {string.Join(", ", gen.tradeTagsSell)}\n");
-				}
+				ToText(ref b, "tradeTagsBuy", gen.tradeTagsBuy);
+				ToText(ref b, "tradeTagsSell", gen.tradeTagsSell);
 
 				if (gen.kindCountRange != IntRange.one)
 				{
@@ -77,15 +85,8 @@ namespace TG.StockGen
 					b.Append($"thingDefCountRange: {gen.thingDefCountRange}\n");
 				}
 
-				if (gen.excludedThingDefs != null && gen.excludedThingDefs.Count > 0)
-				{
-					b.Append($"excludedThingDefs: {string.Join(", ", gen.excludedThingDefs)}\n");
-				}
-
-				if (gen.excludedCategories != null && gen.excludedCategories.Count > 0)
-				{
-					b.Append($"excludedCategories: {string.Join(", ", gen.excludedCategories)}\n");
-				}
+				ToText(ref b, "excludedThingDefs", gen.excludedThingDefs);
+				ToText(ref b, "excludedCategories", gen.excludedCategories);
 
 				return;
 			}
@@ -109,10 +110,7 @@ namespace TG.StockGen
 				var gen = (StockGenerator_Tag) g;
 				b.Append($"tradeTag: {gen.tradeTag}");
 				b.Append($"thingDefCountRange: {gen.thingDefCountRange}\n");
-				if (gen.excludedThingDefs != null && gen.excludedThingDefs.Count > 0)
-				{
-					b.Append($"excludedThingDefs: {string.Join(", ", gen.excludedThingDefs)}\n");
-				}
+				ToText(ref b, "excludedThingDefs", gen.excludedThingDefs);
 
 				return;
 			}
@@ -120,10 +118,8 @@ namespace TG.StockGen
 			if (type == typeof(StockGenerator_Techprints))
 			{
 				var gen = (StockGenerator_Techprints) g;
-				if (gen.countChances != null && gen.countChances.Count > 0)
-				{
-					b.Append($"countChances: {string.Join(", ", gen.countChances)}\n");
-				}
+				ToText(ref b, "countChances", gen.countChances);
+
 
 				return;
 			}
@@ -155,10 +151,7 @@ namespace TG.StockGen
 				b.Append($"countRange: {g.countRange}\n");
 			}
 
-			if (g.customCountRanges != null && g.customCountRanges.Count > 0)
-			{
-				b.Append($"customCountRanges: {g.customCountRanges}\n");
-			}
+			ToText(ref b, "customCountRanges", g.customCountRanges);
 
 			if (g.totalPriceRange != FloatRange.Zero)
 			{

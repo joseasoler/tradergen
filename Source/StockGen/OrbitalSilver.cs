@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Text;
 using RimWorld;
 using TG.Mod;
 using Verse;
@@ -25,6 +26,10 @@ namespace TG.StockGen
 		public override bool HandlesThingDef(ThingDef thingDef)
 		{
 			return thingDef == ThingDefOf.Silver;
+		}
+
+		public override void ToText(ref StringBuilder b)
+		{
 		}
 	}
 }

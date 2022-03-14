@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Linq;
 using RimWorld;
 using TG.DefOf;
@@ -11,6 +12,7 @@ namespace TG.StockGen
 	/// </summary>
 	public class Alcohol : ConditionMatcher
 	{
+
 		protected override bool CanBuy(in ThingDef def)
 		{
 			if (def.ingestible?.outcomeDoers == null || def.ingestible.JoyKind != JoyKind.Chemical ||

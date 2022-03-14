@@ -1,5 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using RimWorld;
 using Verse;
 
@@ -22,6 +24,17 @@ namespace TG.StockGen
 		/// Will only have in stock items with this tech level or higher. Helpful for removing fluff in orbital traders.
 		/// </summary>
 		public TechLevel minTechLevelGenerate = TechLevel.Undefined;
+
+		public override void ToText(ref StringBuilder b)
+		{
+			b.Append($"thingDefCountRange: {thingDefCountRange}\n");
+			b.Append($"minTechLevelGenerate: {Enum.GetName(typeof(TechLevel), minTechLevelGenerate)}\n");
+			ConditionToText(ref b);
+		}
+
+		public virtual void ConditionToText(ref StringBuilder b)
+		{
+		}
 
 		/// <summary>
 		/// Returns true for any items which can be purchased.

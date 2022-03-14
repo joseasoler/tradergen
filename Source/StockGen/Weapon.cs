@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using RimWorld;
 using Verse;
 
@@ -19,6 +20,12 @@ namespace TG.StockGen
 		/// The weapon must not have any of these weapon tags.
 		/// </summary>
 		public List<string> excludeWeaponTags;
+
+		public override void ConditionToText(ref StringBuilder b)
+		{
+			b.Append($"weaponTags: {weaponTags}\n");
+			Util.ToText(ref b, "excludeWeaponTags", excludeWeaponTags);
+		}
 
 		/// <summary>
 		/// Condition which must be implemented by child classes.

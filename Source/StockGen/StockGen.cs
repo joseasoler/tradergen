@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using System.Text;
 using RimWorld;
 
 namespace TG.StockGen
@@ -7,6 +9,6 @@ namespace TG.StockGen
 	/// </summary>
 	public abstract class StockGen : StockGenerator
 	{
-
+		public abstract void ToText(ref StringBuilder b);
 	}
 }

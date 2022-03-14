@@ -1,4 +1,5 @@
-﻿using Verse;
+﻿using System.Collections.Generic;
+using Verse;
 
 namespace TG.StockGen
 {
@@ -7,7 +8,6 @@ namespace TG.StockGen
 	/// </summary>
 	public class ExoticAnimalPart : ConditionMatcher
 	{
-
 		protected override bool CanBuy(in ThingDef def)
 		{
 			return def.thingSetMakerTags != null && def.thingSetMakerTags.Contains("AnimalPart") &&

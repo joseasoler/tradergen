@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using RimWorld;
 using Verse;
 
@@ -13,6 +14,13 @@ namespace TG.StockGen
 		public StuffCategoryDef stuffCategoryDef;
 
 		public List<ThingDef> excludeThingDefs;
+
+		public override void ConditionToText(ref StringBuilder b)
+		{
+			base.ConditionToText(ref b);
+			b.Append($"stuffCategoryDef: {stuffCategoryDef}\n");
+			Util.ToText(ref b, "excludeThingDefs", excludeThingDefs);
+		}
 
 		/// <summary>
 		/// Materials belonging to explicit-only stuffCategories are only used if their stuffCategory is selected

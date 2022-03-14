@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Text;
 using RimWorld;
 using Verse;
 
@@ -14,6 +15,12 @@ namespace TG.StockGen
 		protected ThingDef _stuffDef;
 
 		public ThingDef StuffDef => _stuffDef;
+
+		public override void ConditionToText(ref StringBuilder b)
+		{
+			base.ConditionToText(ref b);
+			b.Append($"stuffCountRange: {stuffCountRange}\n");
+		}
 
 		/// <summary>
 		/// Used by derived classes to choose the ThingDef to use as material.
