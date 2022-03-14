@@ -16,9 +16,14 @@ namespace TG.Mod
 		public float OrbitalSilverScaling = 100.0f;
 
 		/// <summary>
-		/// Generate a detailed report of the orbital trade ship generation process and append it to the log.
+		/// Generate a detailed report of the trader generation process and append it to the log.
 		/// </summary>
 		public bool LogGen /* = false */;
+
+		/// <summary>
+		/// Add stock generator info to the trader generation process log. Only used if LogGen is true.
+		/// </summary>
+		public bool LogStockGen /* = false */;
 	}
 
 	/// <summary>
@@ -57,12 +62,21 @@ namespace TG.Mod
 		public const float MaxSilverScaling = 500.0f;
 
 		/// <summary>
-		/// Generate a detailed report of the orbital trade ship generation process and append it to the log.
+		/// Generate a detailed report of the trader generation process and append it to the log.
 		/// </summary>
 		public static bool LogGen
 		{
 			get => _values.LogGen;
 			set => _values.LogGen = value;
+		}
+
+		/// <summary>
+		/// Add stock generator info to the trader generation process log. Only used if LogGen is true.
+		/// </summary>
+		public static bool LogStockGen
+		{
+			get => _values.LogStockGen;
+			set => _values.LogStockGen = value;
 		}
 
 		public static void Reset()
@@ -79,6 +93,7 @@ namespace TG.Mod
 			Scribe_Values.Look(ref _values.MaxOrbitalShips, "MaxOrbitalShips");
 			Scribe_Values.Look(ref _values.OrbitalSilverScaling, "OrbitalSilverScaling");
 			Scribe_Values.Look(ref _values.LogGen, "LogGen");
+			Scribe_Values.Look(ref _values.LogStockGen, "LogStockGen");
 		}
 	}
 }

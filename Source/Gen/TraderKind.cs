@@ -77,7 +77,7 @@ namespace TG.Gen
 					Log.Error($"\t{generatorCopy.GetType().Name} config error: {configError}");
 				}
 
-				if (!Settings.LogGen) continue;
+				if (!Settings.LogGen || !Settings.LogStockGen) continue;
 				Logger.Gen(Util.ToText(generatorCopy).ToString());
 			}
 		}

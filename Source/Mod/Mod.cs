@@ -66,6 +66,11 @@ namespace TG.Mod
 				"TG_LogTraderGenTooltip".Translate());
 			Settings.LogGen = logGen;
 
+			var logStockGen = Settings.LogStockGen;
+			listing.CheckboxLabeled("TG_LogTraderStockGen".Translate(), ref logStockGen,
+				"TG_LogTraderStockGenTooltip".Translate());
+			Settings.LogStockGen = logStockGen;
+
 			listing.End();
 			base.DoSettingsWindowContents(inRect);
 		}

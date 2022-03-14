@@ -7,7 +7,9 @@
 	<TG_ResetSettings>Reset</TG_ResetSettings>
 	<TG_ResetSettingsTooltip>Reset all options of the mod to their default values.</TG_ResetSettingsTooltip>
 	<TG_DevelopmentOptions>Development options</TG_DevelopmentOptions>
-	<TG_DevelopmentOptionsTooltip>These options are used during developent and bug reporting, and they should have no visible in-game effects.</TG_DevelopmentOptionsTooltip>
+	<TG_DevelopmentOptionsTooltip>These options are meant for development and bug reporting, and should not have any in-game effects.</TG_DevelopmentOptionsTooltip>
 	<TG_LogTraderGen>Log trader generation</TG_LogTraderGen>
 	<TG_LogTraderGenTooltip>Show a detailed report of the generation process of traders in the log.</TG_LogTraderGenTooltip>
+	<TG_LogTraderStockGen>Log stock generators</TG_LogTraderStockGen>
+	<TG_LogTraderStockGenTooltip>Include stock generator information when Log trader generation is enabled.</TG_LogTraderStockGenTooltip>
 </LanguageData>
