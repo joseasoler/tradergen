@@ -8,7 +8,7 @@ namespace TG.StockGen
 	/// <summary>
 	/// Adds silver to the stock of orbital traders. The amount can be scaled using mod settings.
 	/// </summary>
-	public class OrbitalSilver : StockGenerator
+	public class OrbitalSilver : StockGen
 	{
 		/// <summary>
 		/// Add silver to the stock, scaled by the OrbitalSilverScaling setting.

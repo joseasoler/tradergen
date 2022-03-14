@@ -11,7 +11,7 @@ namespace TG.StockGen
 	/// for each one.
 	/// ThingDef are randomly chosen using a customizable weight.
 	/// </summary>
-	public abstract class ConditionMatcher : StockGenerator
+	public abstract class ConditionMatcher : StockGen
 	{
 		/// <summary>
 		/// Number of thingDefs to choose and generate.

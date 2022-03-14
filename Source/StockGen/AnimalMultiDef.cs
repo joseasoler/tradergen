@@ -10,7 +10,7 @@ namespace TG.StockGen
 	/// Uses the same random weight depending on wildness as StockGenerator_Animals.
 	/// Takes into account totalPriceRange and customCountRanges, which are ignored by vanilla StockGenerator_Animals.
 	/// </summary>
-	public class AnimalMultiDef : StockGenerator
+	public class AnimalMultiDef : StockGen
 	{
 		public List<PawnKindDef> pawnKindDefs;
 
