@@ -21,7 +21,7 @@ namespace TG.Next
 		/// </summary>
 		public List<NextNode> nodes;
 
-		public override List<NodeDef> Nodes(in NodeDef nodeDef, in BiomeDef biomeDef = null, in Faction faction = null)
+		public override List<NodeDef> Nodes(in NodeDef nodeDef, in int fromTile = -1, in Faction faction = null)
 		{
 			var chosenNextNodes = Algorithm.ChooseNWeightedRandomly(nodes, x => x.commonality, num.RandomInRange);
 			var nodeDefs = new List<NodeDef>();

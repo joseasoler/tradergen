@@ -1,7 +1,6 @@
 using Force.DeepCloner;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using RimWorld;
 using RimWorld.Planet;
 using TG.Mod;
@@ -28,7 +27,7 @@ namespace TG.Gen
 		/// <summary>
 		/// Map tile considered as the origin of the trader.
 		/// </summary>
-		public BiomeDef BiomeDef;
+		public int FromTile;
 
 		/// <summary>
 		/// Faction of the trader.
@@ -39,7 +38,7 @@ namespace TG.Gen
 		{
 			Scribe_Defs.Look(ref Def, "Def");
 			Scribe_Values.Look(ref Seed, "Seed");
-			Scribe_Defs.Look(ref BiomeDef, "BiomeDef");
+			Scribe_Values.Look(ref FromTile, "FromTile");
 			Scribe_Defs.Look(ref FactionDef, "FactionDef");
 		}
 	}
@@ -100,10 +99,10 @@ namespace TG.Gen
 		/// Algorithm for procedural generation of traders.
 		/// </summary>
 		/// <param name="genDef">Pattern used to generate the trader.</param>
-		/// <param name="biomeDef">Biome from which the trader is originating.</param>
+		/// <param name="fromTile">Map tile considered as the origin of the trader.</param>
 		/// <param name="faction">Faction of the trader.</param>
 		/// <param name="def">Trader definition being generated.</param>
-		private static void ProcGen(in TraderGenDef genDef, in BiomeDef biomeDef, in Faction faction, ref TraderKindDef def)
+		private static void ProcGen(in TraderGenDef genDef, in int fromTile, in Faction faction, ref TraderKindDef def)
 		{
 			const int maximumNodesThreshold = 128;
 
@@ -121,7 +120,7 @@ namespace TG.Gen
 
 				var current = pending.Dequeue();
 				ApplyNode(current, ref def);
-				current.next?.Nodes(current, biomeDef, faction).ForEach(newNodeDef => pending.Enqueue(newNodeDef));
+				current.next?.Nodes(current, fromTile, faction).ForEach(newNodeDef => pending.Enqueue(newNodeDef));
 				Logger.Gen($"After processing {current.defName} there are {pending.Count} nodes in the pending queue.");
 			}
 		}
@@ -130,10 +129,10 @@ namespace TG.Gen
 		/// Generates a new trader definition.
 		/// </summary>
 		/// <param name="genDef">Pattern used to generate the trader.</param>
-		/// <param name="biomeDef">Biome from which the trader is originating.</param>
+		/// <param name="fromTile">Map tile considered as the origin of the trader.</param>
 		/// <param name="faction">Faction of the trader.</param>
 		/// <returns>Procedurally generated TraderKindDef.</returns>
-		public TraderKindDef Generate(in TraderGenDef genDef, BiomeDef biomeDef = null, in Faction faction = null)
+		public TraderKindDef Generate(in TraderGenDef genDef, in int fromTile = -1, in Faction faction = null)
 		{
 			if (Rand.stateStack.Count == 0)
 			{
@@ -169,7 +168,7 @@ namespace TG.Gen
 
 			Logger.Gen($"Generating new TraderKindDef {def.defName}.");
 
-			ProcGen(genDef, biomeDef, faction, ref def);
+			ProcGen(genDef, fromTile, faction, ref def);
 
 			def.PostLoad();
 
@@ -178,7 +177,7 @@ namespace TG.Gen
 			{
 				Def = genDef,
 				Seed = seed,
-				BiomeDef = biomeDef,
+				FromTile = fromTile,
 				FactionDef = faction?.def
 			});
 			ShortHashGiver.GiveShortHash(def, def.GetType());
@@ -217,9 +216,9 @@ namespace TG.Gen
 			if (Scribe.mode != LoadSaveMode.LoadingVars) return;
 			foreach (var data in _defReferencesByName.Values)
 			{
-				Logger.Gen($"Loading {data.Def.defName}: {data.Seed}, {data.BiomeDef}, {data.FactionDef}");
+				Logger.Gen($"Loading {data.Def.defName}: {data.Seed}, {data.FromTile}, {data.FactionDef}");
 				Rand.PushState(data.Seed);
-				Generate(data.Def, data.BiomeDef, Find.FactionManager.FirstFactionOfDef(data.FactionDef));
+				Generate(data.Def, data.FromTile, Find.FactionManager.FirstFactionOfDef(data.FactionDef));
 				Rand.PopState();
 			}
 		}

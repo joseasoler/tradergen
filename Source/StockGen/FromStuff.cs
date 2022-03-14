@@ -42,6 +42,11 @@ namespace TG.StockGen
 
 		public override IEnumerable<string> ConfigErrors(TraderKindDef parentDef)
 		{
+			if (_stuffDef == null)
+			{
+				SetStuffDef();
+			}
+
 			foreach (var err in base.ConfigErrors(parentDef))
 			{
 				yield return err;

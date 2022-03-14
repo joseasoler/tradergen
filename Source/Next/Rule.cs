@@ -13,9 +13,9 @@ namespace TG.Next
 		/// Evaluates and obtains the list of nodes to evaluate next.
 		/// </summary>
 		/// <param name="nodeDef">Node definition currently in use.</param>
-		/// <param name="biomeDef">Biome from which the trader is originating.</param>
+		/// <param name="fromTile">Map tile considered as the origin of the trader.</param>
 		/// <param name="faction">Faction of the trader.</param>
 		/// <returns>List of nodes to evaluate next.</returns>
-		public abstract List<NodeDef> Nodes(in NodeDef nodeDef, in BiomeDef biomeDef = null, in Faction faction = null);
+		public abstract List<NodeDef> Nodes(in NodeDef nodeDef, in int fromTile = -1, in Faction faction = null);
 	}
 }
