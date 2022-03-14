@@ -129,10 +129,10 @@ namespace TG.Gen
 		/// <summary>
 		/// Generates a new trader definition.
 		/// </summary>
-		/// <param name="genDef"></param>
-		/// <param name="biomeDef"></param>
-		/// <param name="faction"></param>
-		/// <returns></returns>
+		/// <param name="genDef">Pattern used to generate the trader.</param>
+		/// <param name="biomeDef">Biome from which the trader is originating.</param>
+		/// <param name="faction">Faction of the trader.</param>
+		/// <returns>Procedurally generated TraderKindDef.</returns>
 		public TraderKindDef Generate(in TraderGenDef genDef, BiomeDef biomeDef = null, in Faction faction = null)
 		{
 			if (Rand.stateStack.Count == 0)

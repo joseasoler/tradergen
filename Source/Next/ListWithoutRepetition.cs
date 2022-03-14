@@ -6,6 +6,9 @@ using Verse;
 
 namespace TG.Next
 {
+	/// <summary>
+	/// Chooses num nodes to use, without repetition, from a list.
+	/// </summary>
 	public class ListWithoutRepetition : Rule
 	{
 		/// <summary>
@@ -13,6 +16,9 @@ namespace TG.Next
 		/// </summary>
 		public IntRange num = IntRange.one;
 
+		/// <summary>
+		/// Provided group of nodes.
+		/// </summary>
 		public List<NextNode> nodes;
 
 		public override List<NodeDef> Nodes(in NodeDef nodeDef, in BiomeDef biomeDef = null, in Faction faction = null)
