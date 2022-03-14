@@ -16,6 +16,10 @@ namespace TG.StockGen
 
 		public ThingDef StuffDef => _stuffDef;
 
+		protected int _fromTile = -1;
+
+		protected Faction _faction = null;
+
 		public override void ConditionToText(ref StringBuilder b)
 		{
 			base.ConditionToText(ref b);
@@ -31,12 +35,15 @@ namespace TG.StockGen
 		protected abstract void SetStuffDef();
 
 		/// <summary>
-		/// Takes advantage of the ResolveReferences call in ProcGen to choose the stuff to use as material.
+		/// Takes advantage of the SetTraderInfo call in ProcGen to choose the stuff to use as material.
 		/// </summary>
-		/// <param name="newTrader">TraderKindDef being associated with this StockGenerator.</param>
-		public override void ResolveReferences(TraderKindDef newTrader)
+		/// <param name="fromTile">Map tile considered as the origin of the trader.</param>
+		/// <param name="faction">Faction of the trader.</param>
+		public override void SetTraderInfo(in int fromTile, in Faction faction)
 		{
-			base.ResolveReferences(newTrader);
+			base.SetTraderInfo(fromTile, faction);
+			_fromTile = fromTile;
+			_faction = faction;
 			SetStuffDef();
 		}
 
