@@ -28,6 +28,10 @@
 					<node>ND_OrbitalFromStuffGemstones</node>
 					<commonality>3</commonality>
 				</li>
+				<li MayRequire="OskarPotocki.VFE.Insectoid">
+					<node>ND_OrbitalFromStuffChitin</node>
+					<commonality>2</commonality>
+				</li>
 				<!-- ToDo
 				<li MayRequire="sarg.rimbees">
 					<node>ND_OrbitalFromStuffWaxy</node>
@@ -169,6 +173,62 @@
 			<li Class="TG.StockGen.Jewelry">
 				<thingDefCountRange>3~5</thingDefCountRange>
 				<countRange>1</countRange>
+			</li>
+		</generators>
+	</TG.NodeDef>
+	<TG.NodeDef MayRequire="OskarPotocki.VFE.Insectoid">
+		<defName>ND_OrbitalFromStuffChitin</defName>
+		<generators>
+			<!-- Sells -->
+			<li Class="TG.StockGen.StuffFromThingDef">
+				<thingDef>VFEI_Chitin</thingDef>
+				<maxTechLevelGenerate>Spacer</maxTechLevelGenerate>
+				<stuffCountRange>400~800</stuffCountRange>
+				<thingDefCountRange>7~9</thingDefCountRange>
+				<countRange>1~2</countRange>
+			</li>
+			<li Class="TG.StockGen.MultiDef" MayRequire="sarg.alphaanimals">
+				<thingDefs>
+					<li>Leather_BlackChitin</li>
+					<li>Leather_Chitin</li>
+					<li>Leather_IronChitin</li>
+					<li>Leather_RaptorPlates</li>
+				</thingDefs>
+				<thingDefCountRange>1~2</thingDefCountRange>
+				<totalPriceRange>500~900</totalPriceRange>
+			</li>
+			<li Class="TG.StockGen.AnimalMultiDef">
+				<pawnKindDefs>
+					<li>VFEI_VatGrownMilkbeetle</li>
+				</pawnKindDefs>
+				<newborn>true</newborn>
+				<kindCountRange>1</kindCountRange>
+				<totalPriceRange>400~800</totalPriceRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>VFEI_BioengineeringIncubator</thingDef>
+				<countRange>0~2</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>VFEI_DroneGenome</thingDef>
+				<countRange>2~10</countRange>
+			</li>
+			<!-- Purchases -->
+			<li Class="StockGenerator_Animals">
+				<tradeTagsBuy>
+					<li>AnimalInsect</li>
+					<li>AnimalExotic</li>
+				</tradeTagsBuy>
+			</li>
+			<li Class="TG.StockGen.MultiDef">
+				<thingDefs>
+					<li>InsectJelly</li>
+					<li MayRequire="VanillaExpanded.VCookE">VCE_InsectJellyPreserves</li>
+					<li MayRequire="sarg.alphaanimals">AA_BlackInsectJelly</li>
+					<li>VFEI_RoyalInsectJelly</li>
+					<li>VFEI_InsectMilk</li>
+					<li>VFEI_EggInsectoidUnfertilized</li>
+				</thingDefs>
 			</li>
 		</generators>
 	</TG.NodeDef>

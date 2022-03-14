@@ -112,7 +112,7 @@ namespace TG.StockGen
 		{
 			return def == _stuffDef ||
 			       // Only accept material which could be made from this stuff.
-			       _stuffDef.stuffProps.CanMake(def) &&
+			       _stuffDef.IsStuff && _stuffDef.stuffProps.CanMake(def) &&
 			       // Only sell non-armor apparel...
 			       (def.IsApparel && !Util.IsArmor(def)
 			        // ... minifiable buildings which are not security buildings...

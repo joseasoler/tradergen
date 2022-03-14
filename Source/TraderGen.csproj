@@ -51,6 +51,7 @@
 		<Compile Include="StockGen\MultiDef.cs" />
 		<Compile Include="StockGen\OrbitalSilver.cs" />
 		<Compile Include="StockGen\StockGen.cs" />
+		<Compile Include="StockGen\StuffFromThingDef.cs" />
 		<Compile Include="StockGen\Util.cs" />
 		<Compile Include="StockGen\Weapon.cs" />
 		<Compile Include="StockGen\WeaponMelee.cs" />
