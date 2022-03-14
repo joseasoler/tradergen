@@ -10,7 +10,7 @@ namespace TG.StockGen
 	/// </summary>
 	public abstract class FromStuff : ConditionMatcher
 	{
-		public IntRange stuffCountRange;
+		public IntRange stuffCountRange = IntRange.zero;
 
 		protected ThingDef _stuffDef;
 
@@ -19,7 +19,10 @@ namespace TG.StockGen
 		public override void ConditionToText(ref StringBuilder b)
 		{
 			base.ConditionToText(ref b);
-			b.Append($"stuffCountRange: {stuffCountRange}\n");
+			if (stuffCountRange != IntRange.zero)
+			{
+				b.Append($"stuffCountRange: {stuffCountRange}\n");
+			}
 		}
 
 		/// <summary>

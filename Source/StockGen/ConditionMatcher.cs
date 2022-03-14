@@ -27,8 +27,16 @@ namespace TG.StockGen
 
 		public override void ToText(ref StringBuilder b)
 		{
-			b.Append($"thingDefCountRange: {thingDefCountRange}\n");
-			b.Append($"minTechLevelGenerate: {Enum.GetName(typeof(TechLevel), minTechLevelGenerate)}\n");
+			if (thingDefCountRange != IntRange.zero)
+			{
+				b.Append($"thingDefCountRange: {thingDefCountRange}\n");
+			}
+
+			if (minTechLevelGenerate != TechLevel.Undefined)
+			{
+				b.Append($"minTechLevelGenerate: {Enum.GetName(typeof(TechLevel), minTechLevelGenerate)}\n");
+			}
+
 			ConditionToText(ref b);
 		}
 

@@ -39,7 +39,10 @@ namespace TG.StockGen
 		{
 			b.Append($"pawnKindDefs: {string.Join(", ", pawnKindDefs)}\n");
 			b.Append($"kindCountRange: {kindCountRange}\n");
-			b.Append($"newborn: {newborn}\n");
+			if (newborn)
+			{
+				b.Append($"newborn: {newborn}\n");
+			}
 		}
 
 		public override IEnumerable<Thing> GenerateThings(int forTile, Faction faction = null)
