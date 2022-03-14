@@ -42,7 +42,6 @@ namespace TG.StockGen
 			foreach (var err in base.ConfigErrors(parentDef))
 			{
 				yield return err;
-
 			}
 
 			if (_stuffDef == null)

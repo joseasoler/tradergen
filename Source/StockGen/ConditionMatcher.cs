@@ -32,6 +32,19 @@ namespace TG.StockGen
 			ConditionToText(ref b);
 		}
 
+		public override IEnumerable<string> ConfigErrors(TraderKindDef parentDef)
+		{
+			foreach (var err in base.ConfigErrors(parentDef))
+			{
+				yield return err;
+			}
+
+			if (minTechLevelGenerate > maxTechLevelGenerate)
+			{
+				yield return "TG.StockGen.ConditionMatcher: minTechLevelGenerate is greater than maxTechLevelGenerate.";
+			}
+		}
+
 		public virtual void ConditionToText(ref StringBuilder b)
 		{
 		}

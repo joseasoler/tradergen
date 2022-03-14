@@ -21,6 +21,20 @@ namespace TG.StockGen
 
 		private HashSet<ThingDef> _cachedThingDefs;
 
+		public override IEnumerable<string> ConfigErrors(TraderKindDef parentDef)
+		{
+			foreach (var err in base.ConfigErrors(parentDef))
+			{
+				yield return err;
+			}
+
+			foreach (var pawnKindDef in pawnKindDefs.Where(pawnKindDef =>
+				         pawnKindDef.race?.race == null || !pawnKindDef.race.race.Animal))
+			{
+				yield return $"TG.StockGen.AnimalMultiDef: {pawnKindDef} is not an animal.";
+			}
+		}
+
 		public override void ToText(ref StringBuilder b)
 		{
 			b.Append($"pawnKindDefs: {string.Join(", ", pawnKindDefs)}\n");

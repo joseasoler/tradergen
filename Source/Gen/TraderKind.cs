@@ -72,9 +72,10 @@ namespace TG.Gen
 				var generatorCopy = generator.ShallowClone();
 				def.stockGenerators.Add(generatorCopy);
 				generatorCopy.ResolveReferences(def);
-				foreach (var configError in generatorCopy.ConfigErrors(def))
+				var configErrors = generatorCopy.ConfigErrors(def).ToList();
+				if (configErrors.Count > 0)
 				{
-					Log.Error($"\t{generatorCopy.GetType().Name} config error: {configError}");
+					Log.Error($"{generatorCopy.GetType().Name} config error: {string.Join("\n", configErrors)}");
 				}
 
 				if (!Settings.LogGen || !Settings.LogStockGen) continue;

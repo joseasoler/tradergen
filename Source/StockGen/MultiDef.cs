@@ -11,7 +11,20 @@ namespace TG.StockGen
 	/// </summary>
 	public class MultiDef : ConditionMatcher
 	{
-		public List<ThingDef> thingDefs = new List<ThingDef>();
+		public List<ThingDef> thingDefs;
+
+		public override IEnumerable<string> ConfigErrors(TraderKindDef parentDef)
+		{
+			foreach (var err in base.ConfigErrors(parentDef))
+			{
+				yield return err;
+			}
+
+			if (thingDefs == null || thingDefs.Count == 0)
+			{
+				yield return "TG.StockGen.MultiDef: empty thingDefs list";
+			}
+		}
 
 		public override void ConditionToText(ref StringBuilder b)
 		{
@@ -21,7 +34,7 @@ namespace TG.StockGen
 
 		protected override bool CanBuy(in ThingDef def)
 		{
-			return thingDefs.Contains(def);
+			return thingDefs != null && thingDefs.Contains(def);
 		}
 	}
 }
