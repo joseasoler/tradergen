@@ -110,14 +110,52 @@ namespace TG.StockGen
 		protected virtual float Weight(in ThingDef def, in int forTile, in Faction faction) => 1f;
 
 		/// <summary>
-		/// Generates stock using a ThingDef. Allows child classes to override thing generation rules if needed.
+		/// Generates stock for a specific ThingDef.
 		/// </summary>
 		/// <param name="def">Thing being generated.</param>
 		/// <param name="faction">Faction of the trader.</param>
-		/// <returns></returns>
+		/// <returns>Generated things.</returns>
 		protected virtual IEnumerable<Thing> TryMakeForStock(ThingDef def, Faction faction)
 		{
-			return StockGeneratorUtility.TryMakeForStock(def, RandomCountOf(def), faction);
+			// The default implementation mimics StockGeneratorUtility.TryMakeForStock with some optimizations.
+			if (!def.tradeability.TraderCanSell())
+			{
+				Log.Error($"Tried to make non-trader-sellable thing {def} for trader stock.");
+				yield break;
+			}
+
+			var count = RandomCountOf(def);
+			if (count <= 0)
+			{
+				yield break;
+			}
+
+			var stackCount = def.MadeFromStuff ? 1 : count;
+			var times = def.MadeFromStuff ? count : 1;
+
+			// The list of available stuff ThingDefs is only generated once.
+			List<ThingDef> stuffs = null;
+			if (def.MadeFromStuff)
+			{
+				stuffs = GenStuff.AllowedStuffsFor(def).Where(x => !PawnWeaponGenerator.IsDerpWeapon(def, x)).ToList();
+				if (stuffs.Count == 0 || stuffs.All(x => x.stuffProps.commonality <= 0))
+				{
+					stuffs = new List<ThingDef> {GenStuff.DefaultStuffFor(def)};
+				}
+			}
+
+			for (var idx = 0; idx < times; ++idx)
+			{
+				ThingDef stuff = null;
+				if (stuffs != null)
+				{
+					stuff = stuffs.Count > 1 ? stuffs.RandomElementByWeight(x => x.stuffProps.commonality) : stuffs[0];
+				}
+
+				var thing = ThingMaker.MakeThing(def, stuff);
+				thing.stackCount = stackCount;
+				yield return thing;
+			}
 		}
 
 		/// <summary>
