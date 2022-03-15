@@ -115,6 +115,21 @@ namespace TG.StockGen
 		}
 
 		/// <summary>
+		/// Sell anything which could potentially be made from the chosen stuff.
+		/// </summary>
+		/// <param name="def">Thing to check</param>
+		/// <param name="forTile">Tile in which the transaction takes place.</param>
+		/// <param name="faction">Faction of the trader.</param>
+		/// <returns>If the item can be sold or not.</returns>
+		protected override bool CanSell(in ThingDef def, in int forTile, in Faction faction)
+		{
+			// Only accept things which could be made from the chosen stuff.
+			return _stuffDef.IsStuff && _stuffDef.stuffProps.CanMake(def) &&
+			       // Only sell non-armor apparel or furniture.
+			       (def.IsApparel && !Util.IsArmor(def) || def.IsWithinCategory(DefOf.ThingCategory.BuildingsFurniture));
+		}
+
+		/// <summary>
 		/// Purchases the chosen stuff and anything which could potentially be made from the same stuff.
 		/// Weapons are handled in other StockGens.
 		/// </summary>
@@ -122,11 +137,7 @@ namespace TG.StockGen
 		/// <returns>True if the trader will buy the item.</returns>
 		protected override bool CanBuy(in ThingDef def)
 		{
-			return def == _stuffDef ||
-			       // Only accept things which could be made from the chosen stuff.
-			       _stuffDef.IsStuff && _stuffDef.stuffProps.CanMake(def) &&
-			       // Only sell non-armor apparel or furniture.
-			       (def.IsApparel && !Util.IsArmor(def) || def.IsWithinCategory(DefOf.ThingCategory.BuildingsFurniture));
+			return def == _stuffDef || CanSell(def, -1, null);
 		}
 
 		/// <summary>
@@ -138,12 +149,6 @@ namespace TG.StockGen
 		/// <returns>Random weight of the def.</returns>
 		protected override float Weight(in ThingDef def, in int forTile, in Faction faction)
 		{
-			// Prevent the base material from being chosen again. Its generation is handled separately.
-			if (def == _stuffDef)
-			{
-				return 0.0f;
-			}
-
 			return def.IsApparel
 				? StockGenerator_Clothes.SelectionWeightMarketValueCurve.Evaluate(def.BaseMarketValue)
 				: StockGenerator_Art.SelectionWeightMarketValueCurve.Evaluate(def.BaseMarketValue);
