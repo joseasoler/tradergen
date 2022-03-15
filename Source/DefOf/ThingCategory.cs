@@ -5,6 +5,7 @@ namespace TG.DefOf
 	[RimWorld.DefOf]
 	public class ThingCategory
 	{
+		public static ThingCategoryDef BuildingsJoy;
 		public static ThingCategoryDef BuildingsFurniture;
 		public static ThingCategoryDef BuildingsSecurity;
 		public static ThingCategoryDef FoodRaw;
