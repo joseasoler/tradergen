@@ -29,7 +29,7 @@
 					<commonality>3</commonality>
 				</li>
 				<li MayRequire="OskarPotocki.VFE.Insectoid">
-					<node>ND_OrbitalFromStuffChitin</node>
+					<node>ND_OrbitalFromStuffInsect</node>
 					<commonality>2</commonality>
 				</li>
 				<li MayRequire="sarg.rimbees">
@@ -174,15 +174,22 @@
 		</generators>
 	</TG.NodeDef>
 	<TG.NodeDef MayRequire="OskarPotocki.VFE.Insectoid">
-		<defName>ND_OrbitalFromStuffChitin</defName>
+		<defName>ND_OrbitalFromStuffInsect</defName>
 		<generators>
 			<!-- Sells -->
 			<li Class="TG.StockGen.StuffFromThingDef">
 				<thingDef>VFEI_Chitin</thingDef>
 				<maxTechLevelGenerate>Spacer</maxTechLevelGenerate>
-				<stuffCountRange>400~800</stuffCountRange>
-				<thingDefCountRange>8~12</thingDefCountRange>
-				<countRange>1~2</countRange>
+				<stuffCountRange>300~500</stuffCountRange>
+				<thingDefCountRange>3~6</thingDefCountRange>
+				<countRange>1</countRange>
+			</li>
+			<li Class="TG.StockGen.StuffFromThingDef">
+				<thingDef>VFEI_Spidersilk</thingDef>
+				<maxTechLevelGenerate>Spacer</maxTechLevelGenerate>
+				<stuffCountRange>300~500</stuffCountRange>
+				<thingDefCountRange>3~6</thingDefCountRange>
+				<countRange>1</countRange>
 			</li>
 			<li Class="TG.StockGen.MultiDef" MayRequire="sarg.alphaanimals">
 				<thingDefs>
@@ -190,6 +197,7 @@
 					<li>Leather_Chitin</li>
 					<li>Leather_IronChitin</li>
 					<li>Leather_RaptorPlates</li>
+					<li>AA_MothSilk</li>
 				</thingDefs>
 				<thingDefCountRange>1~2</thingDefCountRange>
 				<totalPriceRange>500~900</totalPriceRange>
@@ -197,18 +205,23 @@
 			<li Class="TG.StockGen.AnimalMultiDef">
 				<pawnKindDefs>
 					<li>VFEI_VatGrownMilkbeetle</li>
+					<li>VFEI_VatGrownSpiderweaver</li>
 				</pawnKindDefs>
 				<newborn>true</newborn>
-				<kindCountRange>1</kindCountRange>
+				<kindCountRange>1~2</kindCountRange>
 				<totalPriceRange>400~800</totalPriceRange>
 			</li>
 			<li Class="StockGenerator_SingleDef">
 				<thingDef>VFEI_BioengineeringIncubator</thingDef>
-				<countRange>0~2</countRange>
+				<countRange>0~1</countRange>
 			</li>
 			<li Class="StockGenerator_SingleDef">
 				<thingDef>VFEI_DroneGenome</thingDef>
-				<countRange>2~10</countRange>
+				<countRange>2~6</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>VFEI_RoyalGenome</thingDef>
+				<countRange>2~4</countRange>
 			</li>
 			<!-- Purchases -->
 			<li Class="StockGenerator_Animals">
