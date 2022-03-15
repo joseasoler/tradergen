@@ -123,13 +123,10 @@ namespace TG.StockGen
 		protected override bool CanBuy(in ThingDef def)
 		{
 			return def == _stuffDef ||
-			       // Only accept material which could be made from this stuff.
+			       // Only accept things which could be made from the chosen stuff.
 			       _stuffDef.IsStuff && _stuffDef.stuffProps.CanMake(def) &&
-			       // Only sell non-armor apparel...
-			       (def.IsApparel && !Util.IsArmor(def)
-			        // ... minifiable buildings which are not security buildings...
-			        || def.IsWithinCategory(ThingCategoryDefOf.Buildings) && def.Minifiable && (def.thingCategories == null ||
-				        !def.thingCategories.Contains(DefOf.ThingCategory.BuildingsSecurity)));
+			       // Only sell non-armor apparel or furniture.
+			       (def.IsApparel && !Util.IsArmor(def)|| def.IsWithinCategory(DefOf.ThingCategory.BuildingsFurniture));
 		}
 
 		/// <summary>
