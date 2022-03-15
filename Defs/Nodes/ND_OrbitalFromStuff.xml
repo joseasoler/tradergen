@@ -32,12 +32,10 @@
 					<node>ND_OrbitalFromStuffChitin</node>
 					<commonality>2</commonality>
 				</li>
-				<!-- ToDo
 				<li MayRequire="sarg.rimbees">
 					<node>ND_OrbitalFromStuffWaxy</node>
 					<commonality>1</commonality>
 				</li>
-				-->
 			</nodes>
 		</next>
 	</TG.NodeDef>
@@ -229,6 +227,53 @@
 					<li>VFEI_InsectMilk</li>
 					<li>VFEI_EggInsectoidUnfertilized</li>
 				</thingDefs>
+			</li>
+		</generators>
+	</TG.NodeDef>
+	<TG.NodeDef>
+		<defName>ND_OrbitalFromStuffWaxy</defName>
+		<generators>
+			<!-- Sells -->
+			<li Class="TG.StockGen.RandomStuffFromCategory">
+				<stuffCategoryDef>RB_Waxy</stuffCategoryDef>
+				<allowNonTradeableStuff>true</allowNonTradeableStuff>
+				<maxTechLevelGenerate>Spacer</maxTechLevelGenerate>
+				<thingDefCountRange>2~5</thingDefCountRange>
+				<countRange>1~2</countRange>
+			</li>
+			<li Class="TG.StockGen.RandomStuffFromCategory">
+				<stuffCategoryDef>RB_Waxy</stuffCategoryDef>
+				<allowNonTradeableStuff>true</allowNonTradeableStuff>
+				<maxTechLevelGenerate>Spacer</maxTechLevelGenerate>
+				<thingDefCountRange>2~5</thingDefCountRange>
+				<countRange>1~2</countRange>
+			</li>
+			<li Class="TG.StockGen.RandomStuffFromCategory">
+				<stuffCategoryDef>RB_Waxy</stuffCategoryDef>
+				<allowNonTradeableStuff>true</allowNonTradeableStuff>
+				<maxTechLevelGenerate>Spacer</maxTechLevelGenerate>
+				<thingDefCountRange>2~5</thingDefCountRange>
+				<countRange>1~2</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>RB_WaxCandle</thingDef>
+				<countRange>1~3</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>RB_Bee_Temperate_Drone</thingDef>
+				<countRange>1~2</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>RB_Bee_Temperate_Queen</thingDef>
+				<countRange>1~2</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>RB_Bee_Mild_Drone</thingDef>
+				<countRange>1~2</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>RB_Bee_Mild_Queen</thingDef>
+				<countRange>1~2</countRange>
 			</li>
 		</generators>
 	</TG.NodeDef>

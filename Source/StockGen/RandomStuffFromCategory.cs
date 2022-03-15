@@ -11,15 +11,31 @@ namespace TG.StockGen
 	/// </summary>
 	public class RandomStuffFromCategory : FromStuff
 	{
+		/// <summary>
+		/// A random material from this category will be chosen.
+		/// </summary>
 		public StuffCategoryDef stuffCategoryDef;
 
+		/// <summary>
+		/// Never choose any of these stuff defs.
+		/// </summary>
 		public List<ThingDef> excludeThingDefs = new List<ThingDef>();
+
+		/// <summary>
+		/// Allow choosing stuff which should never be sold by traders. Keep in mind that the things made from this stuff
+		/// still need to be tradeable.
+		/// </summary>
+		public bool allowNonTradeableStuff = false;
 
 		public override void ConditionToText(ref StringBuilder b)
 		{
 			base.ConditionToText(ref b);
 			b.Append($"stuffCategoryDef: {stuffCategoryDef}\n");
 			Util.ToText(ref b, "excludeThingDefs", excludeThingDefs);
+			if (allowNonTradeableStuff)
+			{
+				b.Append("allowNonTradeableStuff: true\n");
+			}
 		}
 
 		/// <summary>
@@ -43,7 +59,8 @@ namespace TG.StockGen
 				// Stuff which is not excluded from being used.
 				!excludeThingDefs.Contains(stuffDef) &&
 				// Avoid materials not intended for sale.
-				stuffDef.stuffProps.commonality > 0.0f && stuffDef.tradeability.TraderCanSell() && stuffDef.PlayerAcquirable &&
+				(allowNonTradeableStuff || stuffDef.stuffProps.commonality > 0.0f && stuffDef.tradeability.TraderCanSell()) &&
+				stuffDef.PlayerAcquirable &&
 				// Avoid hyperweave and modded materials such as archotech mass.
 				(stuffDef.tradeTags == null || !stuffDef.tradeTags.Contains("ExoticMisc")) &&
 				// Materials belonging to explicit-only stuffCategories are only used if their stuffCategory is selected
