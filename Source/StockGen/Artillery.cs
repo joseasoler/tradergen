@@ -9,7 +9,7 @@ namespace TG.StockGen
 		/// <summary>
 		/// Will never generate any ThingDefs included in this list.
 		/// </summary>
-		public List<ThingDef> excludeThingDefs;
+		public List<ThingDef> excludeThingDefs = new List<ThingDef>();
 
 		/// <summary>
 		/// Whenever possible, create all artillery using steel.
@@ -34,6 +34,7 @@ namespace TG.StockGen
 					thing.stackCount = 1;
 					yield return thing;
 				}
+
 				yield break;
 			}
 
@@ -47,7 +48,7 @@ namespace TG.StockGen
 		{
 			return def.IsWithinCategory(DefOf.ThingCategory.BuildingsSecurity) && def.building?.buildingTags != null &&
 			       def.building.buildingTags.Contains("Artillery") && def.Minifiable &&
-			       (excludeThingDefs == null || !excludeThingDefs.Contains(def));
+			       !excludeThingDefs.Contains(def);
 		}
 	}
 }

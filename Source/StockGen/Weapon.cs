@@ -19,7 +19,7 @@ namespace TG.StockGen
 		/// <summary>
 		/// The weapon must not have any of these weapon tags.
 		/// </summary>
-		public List<string> excludeWeaponTags;
+		public List<string> excludeWeaponTags = new List<string>();
 
 		public override void ConditionToText(ref StringBuilder b)
 		{
@@ -38,8 +38,7 @@ namespace TG.StockGen
 		{
 			return def.IsWeapon && WeaponCheck(def) &&
 			       (weaponTags == null || def.weaponTags != null && def.weaponTags.Intersect(weaponTags).Any()) &&
-			       (excludeWeaponTags == null ||
-			        def.weaponTags != null && !def.weaponTags.Intersect(excludeWeaponTags).Any());
+			       def.weaponTags != null && !def.weaponTags.Intersect(excludeWeaponTags).Any();
 		}
 	}
 }

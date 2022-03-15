@@ -13,7 +13,7 @@ namespace TG.StockGen
 	{
 		public StuffCategoryDef stuffCategoryDef;
 
-		public List<ThingDef> excludeThingDefs;
+		public List<ThingDef> excludeThingDefs = new List<ThingDef>();
 
 		public override void ConditionToText(ref StringBuilder b)
 		{
@@ -41,7 +41,7 @@ namespace TG.StockGen
 				// Stuff belonging to the chosen category.
 				stuffDef.stuffProps?.categories != null && stuffDef.stuffProps.categories.Contains(stuffCategoryDef) &&
 				// Stuff which is not excluded from being used.
-				(excludeThingDefs == null || !excludeThingDefs.Contains(stuffDef)) &&
+				!excludeThingDefs.Contains(stuffDef) &&
 				// Avoid materials not intended for sale.
 				stuffDef.stuffProps.commonality > 0.0f && stuffDef.tradeability.TraderCanSell() && stuffDef.PlayerAcquirable &&
 				// Avoid hyperweave and modded materials such as archotech mass.
