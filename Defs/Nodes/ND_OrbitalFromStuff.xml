@@ -46,10 +46,10 @@
 			<li Class="TG.StockGen.RandomStuffFromCategory">
 				<stuffCategoryDef>Metallic</stuffCategoryDef>
 				<maxTechLevelGenerate>Spacer</maxTechLevelGenerate>
-				<excludeThingDefs>
+				<excludeStuffDefs>
 					<!-- Chitin is handled separately. -->
 					<li MayRequire="OskarPotocki.VFE.Insectoid">VFEI_Chitin</li>
-				</excludeThingDefs>
+				</excludeStuffDefs>
 				<stuffCountRange>300~700</stuffCountRange>
 				<thingDefCountRange>5~9</thingDefCountRange>
 				<countRange>1~2</countRange>
@@ -57,10 +57,10 @@
 			<li Class="TG.StockGen.RandomStuffFromCategory">
 				<stuffCategoryDef>Metallic</stuffCategoryDef>
 				<maxTechLevelGenerate>Spacer</maxTechLevelGenerate>
-				<excludeThingDefs>
+				<excludeStuffDefs>
 					<!-- Chitin is handled separately. -->
 					<li MayRequire="OskarPotocki.VFE.Insectoid">VFEI_Chitin</li>
-				</excludeThingDefs>
+				</excludeStuffDefs>
 				<stuffCountRange>300~700</stuffCountRange>
 				<thingDefCountRange>5~9</thingDefCountRange>
 				<countRange>1~2</countRange>
@@ -138,9 +138,9 @@
 			<li Class="TG.StockGen.RandomStuffFromCategory">
 				<stuffCategoryDef>Leathery</stuffCategoryDef>
 				<maxTechLevelGenerate>Spacer</maxTechLevelGenerate>
-				<excludeThingDefs>
+				<excludeStuffDefs>
 					<li>Leather_Human</li>
-				</excludeThingDefs>
+				</excludeStuffDefs>
 				<stuffCountRange>300~700</stuffCountRange>
 				<thingDefCountRange>6~10</thingDefCountRange>
 				<countRange>1~2</countRange>
@@ -148,9 +148,9 @@
 			<li Class="TG.StockGen.RandomStuffFromCategory">
 				<stuffCategoryDef>Leathery</stuffCategoryDef>
 				<maxTechLevelGenerate>Spacer</maxTechLevelGenerate>
-				<excludeThingDefs>
+				<excludeStuffDefs>
 					<li>Leather_Human</li>
-				</excludeThingDefs>
+				</excludeStuffDefs>
 				<stuffCountRange>300~700</stuffCountRange>
 				<thingDefCountRange>6~10</thingDefCountRange>
 				<countRange>1~2</countRange>

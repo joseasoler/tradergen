@@ -19,7 +19,7 @@ namespace TG.StockGen
 		/// <summary>
 		/// Never choose any of these stuff defs.
 		/// </summary>
-		public List<ThingDef> excludeThingDefs = new List<ThingDef>();
+		public List<ThingDef> excludeStuffDefs = new List<ThingDef>();
 
 		/// <summary>
 		/// Allow choosing stuff which should never be sold by traders. Keep in mind that the things made from this stuff
@@ -31,7 +31,7 @@ namespace TG.StockGen
 		{
 			base.ConditionToText(ref b);
 			b.Append($"stuffCategoryDef: {stuffCategoryDef}\n");
-			Util.ToText(ref b, "excludeThingDefs", excludeThingDefs);
+			Util.ToText(ref b, "excludeStuffDefs", excludeStuffDefs);
 			if (allowNonTradeableStuff)
 			{
 				b.Append("allowNonTradeableStuff: true\n");
@@ -57,7 +57,7 @@ namespace TG.StockGen
 				// Stuff belonging to the chosen category.
 				stuffDef.stuffProps?.categories != null && stuffDef.stuffProps.categories.Contains(stuffCategoryDef) &&
 				// Stuff which is not excluded from being used.
-				!excludeThingDefs.Contains(stuffDef) &&
+				!excludeStuffDefs.Contains(stuffDef) &&
 				// Avoid materials not intended for sale.
 				(allowNonTradeableStuff || stuffDef.stuffProps.commonality > 0.0f && stuffDef.tradeability.TraderCanSell()) &&
 				stuffDef.PlayerAcquirable &&

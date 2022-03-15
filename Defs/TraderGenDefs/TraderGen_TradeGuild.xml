@@ -6,6 +6,6 @@
 		<orbital>true</orbital>
 		<requestable>false</requestable>
 		<commonality>6</commonality>
-		<node>ND_OrbitalIndependent</node>
+		<node>ND_OrbitalFromStuffLeathery</node>
 	</TG.TraderGenDef>
 </Defs>
