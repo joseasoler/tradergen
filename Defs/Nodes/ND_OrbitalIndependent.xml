@@ -133,7 +133,7 @@
 	<TG.NodeDef>
 		<defName>ND_OrbitalGeneralist</defName>
 		<next Class="TG.Next.ListWithoutRepetition">
-			<num>4~6</num>
+			<num>3~4</num>
 			<nodes>
 				<li>
 					<node>ND_OrbitalFood</node>
@@ -144,6 +144,9 @@
 				</li>
 				<li>
 					<node>ND_OrbitalFromStuff</node>
+				</li>
+				<li>
+					<node>ND_OrbitalBulk</node>
 					<commonality>3</commonality>
 				</li>
 				<!--
@@ -171,7 +174,7 @@
 	<TG.NodeDef>
 		<defName>ND_OrbitalFocused</defName>
 		<next Class="TG.Next.ListWithoutRepetition">
-			<num>2~3</num>
+			<num>2</num>
 			<nodes>
 				<li>
 					<node>ND_OrbitalFood</node>
@@ -184,6 +187,10 @@
 				</li>
 				<li>
 					<node>ND_OrbitalFromStuff</node>
+					<times>1~2</times>
+				</li>
+				<li>
+					<node>ND_OrbitalBulk</node>
 					<times>1~2</times>
 					<commonality>2</commonality>
 				</li>
@@ -219,7 +226,7 @@
 	<TG.NodeDef>
 		<defName>ND_OrbitalSpecialist</defName>
 		<next Class="TG.Next.ListWithoutRepetition">
-			<num>1~2</num>
+			<num>1</num>
 			<nodes>
 				<li>
 					<node>ND_OrbitalFood</node>
@@ -232,6 +239,10 @@
 				</li>
 				<li>
 					<node>ND_OrbitalFromStuff</node>
+					<times>2~3</times>
+				</li>
+				<li>
+					<node>ND_OrbitalBulk</node>
 					<times>2~3</times>
 					<commonality>2</commonality>
 				</li>

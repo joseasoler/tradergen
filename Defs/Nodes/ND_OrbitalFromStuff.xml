@@ -34,7 +34,6 @@
 				</li>
 				<li MayRequire="sarg.rimbees">
 					<node>ND_OrbitalFromStuffWaxy</node>
-					<commonality>1</commonality>
 				</li>
 			</nodes>
 		</next>
