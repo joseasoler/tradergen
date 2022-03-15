@@ -258,6 +258,15 @@
 			<li Class="StockGenerator_ReinforcedBarrels">
 				<countRange>10~15</countRange>
 			</li>
+			<li Class="TG.StockGen.Artillery">
+				<excludeThingDefs>
+					<li MayRequire="OskarPotocki.VFE.Mechanoid">VFE_Turret_AutoMortar</li>
+				</excludeThingDefs>
+				<minTechLevelGenerate>Industrial</minTechLevelGenerate>
+				<maxTechLevelGenerate>Spacer</maxTechLevelGenerate>
+				<thingDefCountRange>1</thingDefCountRange>
+				<countRange>-1~2</countRange>
+			</li>
 			<li Class="StockGenerator_Tag">
 				<tradeTag>MortarShell</tradeTag>
 				<thingDefCountRange>2~3</thingDefCountRange>
