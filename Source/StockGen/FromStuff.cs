@@ -141,7 +141,7 @@ namespace TG.StockGen
 			// Prevent the base material from being chosen again. Its generation is handled separately.
 			if (def == _stuffDef)
 			{
-				return 0.00001f;
+				return 0.0f;
 			}
 
 			return def.IsApparel
