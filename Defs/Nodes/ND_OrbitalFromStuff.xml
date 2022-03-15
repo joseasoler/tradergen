@@ -53,7 +53,7 @@
 					<li MayRequire="OskarPotocki.VFE.Insectoid">VFEI_Chitin</li>
 				</excludeThingDefs>
 				<stuffCountRange>300~700</stuffCountRange>
-				<thingDefCountRange>4~7</thingDefCountRange>
+				<thingDefCountRange>5~9</thingDefCountRange>
 				<countRange>1~2</countRange>
 			</li>
 			<li Class="TG.StockGen.RandomStuffFromCategory">
@@ -64,7 +64,7 @@
 					<li MayRequire="OskarPotocki.VFE.Insectoid">VFEI_Chitin</li>
 				</excludeThingDefs>
 				<stuffCountRange>300~700</stuffCountRange>
-				<thingDefCountRange>4~7</thingDefCountRange>
+				<thingDefCountRange>5~9</thingDefCountRange>
 				<countRange>1~2</countRange>
 			</li>
 		</generators>
@@ -77,14 +77,14 @@
 				<stuffCategoryDef>Woody</stuffCategoryDef>
 				<maxTechLevelGenerate>Spacer</maxTechLevelGenerate>
 				<stuffCountRange>300~700</stuffCountRange>
-				<thingDefCountRange>5~9</thingDefCountRange>
+				<thingDefCountRange>7~11</thingDefCountRange>
 				<countRange>5~9</countRange>
 			</li>
 			<li Class="TG.StockGen.RandomStuffFromCategory">
 				<stuffCategoryDef>Woody</stuffCategoryDef>
 				<maxTechLevelGenerate>Spacer</maxTechLevelGenerate>
 				<stuffCountRange>300~700</stuffCountRange>
-				<thingDefCountRange>5~9</thingDefCountRange>
+				<thingDefCountRange>7~11</thingDefCountRange>
 				<countRange>1~2</countRange>
 			</li>
 		</generators>
@@ -97,14 +97,14 @@
 				<stuffCategoryDef>Stony</stuffCategoryDef>
 				<maxTechLevelGenerate>Spacer</maxTechLevelGenerate>
 				<stuffCountRange>300~700</stuffCountRange>
-				<thingDefCountRange>4~7</thingDefCountRange>
+				<thingDefCountRange>5~9</thingDefCountRange>
 				<countRange>1~2</countRange>
 			</li>
 			<li Class="TG.StockGen.RandomStuffFromCategory">
 				<stuffCategoryDef>Stony</stuffCategoryDef>
 				<maxTechLevelGenerate>Spacer</maxTechLevelGenerate>
 				<stuffCountRange>300~700</stuffCountRange>
-				<thingDefCountRange>3~7</thingDefCountRange>
+				<thingDefCountRange>5~9</thingDefCountRange>
 				<countRange>1~2</countRange>
 			</li>
 			<!-- Unfortunately StoneBlocks are set to be only buyable. StockGenerator_Category bypasses this check. -->
@@ -121,14 +121,14 @@
 				<stuffCategoryDef>Fabric</stuffCategoryDef>
 				<maxTechLevelGenerate>Spacer</maxTechLevelGenerate>
 				<stuffCountRange>300~700</stuffCountRange>
-				<thingDefCountRange>4~7</thingDefCountRange>
+				<thingDefCountRange>6~10</thingDefCountRange>
 				<countRange>1~2</countRange>
 			</li>
 			<li Class="TG.StockGen.RandomStuffFromCategory">
 				<stuffCategoryDef>Fabric</stuffCategoryDef>
 				<maxTechLevelGenerate>Spacer</maxTechLevelGenerate>
 				<stuffCountRange>300~700</stuffCountRange>
-				<thingDefCountRange>4~7</thingDefCountRange>
+				<thingDefCountRange>6~10</thingDefCountRange>
 				<countRange>1~2</countRange>
 			</li>
 		</generators>
@@ -144,7 +144,7 @@
 					<li>Leather_Human</li>
 				</excludeThingDefs>
 				<stuffCountRange>300~700</stuffCountRange>
-				<thingDefCountRange>4~7</thingDefCountRange>
+				<thingDefCountRange>6~10</thingDefCountRange>
 				<countRange>1~2</countRange>
 			</li>
 			<li Class="TG.StockGen.RandomStuffFromCategory">
@@ -154,7 +154,7 @@
 					<li>Leather_Human</li>
 				</excludeThingDefs>
 				<stuffCountRange>300~700</stuffCountRange>
-				<thingDefCountRange>4~7</thingDefCountRange>
+				<thingDefCountRange>6~10</thingDefCountRange>
 				<countRange>1~2</countRange>
 			</li>
 		</generators>
@@ -167,7 +167,7 @@
 				<stuffCategoryDef>Gemstones</stuffCategoryDef>
 				<maxTechLevelGenerate>Spacer</maxTechLevelGenerate>
 				<stuffCountRange>150~400</stuffCountRange>
-				<thingDefCountRange>4~7</thingDefCountRange>
+				<thingDefCountRange>5~9</thingDefCountRange>
 				<countRange>1~2</countRange>
 			</li>
 			<li Class="TG.StockGen.Jewelry">
@@ -184,7 +184,7 @@
 				<thingDef>VFEI_Chitin</thingDef>
 				<maxTechLevelGenerate>Spacer</maxTechLevelGenerate>
 				<stuffCountRange>400~800</stuffCountRange>
-				<thingDefCountRange>7~9</thingDefCountRange>
+				<thingDefCountRange>8~12</thingDefCountRange>
 				<countRange>1~2</countRange>
 			</li>
 			<li Class="TG.StockGen.MultiDef" MayRequire="sarg.alphaanimals">
