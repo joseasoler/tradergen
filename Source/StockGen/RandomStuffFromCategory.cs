@@ -33,42 +33,6 @@ namespace TG.StockGen
 		};
 
 		/// <summary>
-		/// Material random weight from market value.
-		/// </summary>
-		private static readonly SimpleCurve MarketValueWeight = new SimpleCurve
-		{
-			new CurvePoint(2f, 1f),
-			new CurvePoint(3f, 0.8f),
-			new CurvePoint(5f, 0.4f),
-			new CurvePoint(8, 0.3f),
-			new CurvePoint(10, 0.1f)
-		};
-
-		/// <summary>
-		/// Material random weight from mass.
-		/// </summary>
-		private static readonly SimpleCurve MassWeight = new SimpleCurve
-		{
-			new CurvePoint(0.8f, 0.2f),
-			new CurvePoint(0.5f, 1f),
-			new CurvePoint(0.4f, 0.6f),
-			new CurvePoint(0.2f, 0.4f),
-			new CurvePoint(0.1f, 0.2f),
-			new CurvePoint(0.01f, 0.1f)
-		};
-
-		/// <summary>
-		/// Weight used for randomly choosing a material to use.
-		/// </summary>
-		/// <param name="stuffDef">ThingDef being considered as material.</param>
-		/// <returns>Total weight for the random choosing algorithm.</returns>
-		private static float StuffDefWeight(ThingDef stuffDef)
-		{
-			return 3.0f * stuffDef.stuffProps.commonality + MarketValueWeight.Evaluate(stuffDef.BaseMarketValue) +
-			       MassWeight.Evaluate(stuffDef.BaseMass) + (!stuffDef.smallVolume ? 0.4f : 0.0f);
-		}
-
-		/// <summary>
 		/// Choose a material with the specified category matching certain criteria.
 		/// </summary>
 		protected override void SetStuffDef()
@@ -91,7 +55,7 @@ namespace TG.StockGen
 				!stuffDef.defName.StartsWith("VFEArch_WoodLog_")
 			);
 
-			if (stuffDefs.TryRandomElementByWeight(StuffDefWeight, out _stuffDef))
+			if (stuffDefs.TryRandomElementByWeight(Util.RandomStuffDefWeight, out _stuffDef))
 			{
 				return;
 			}

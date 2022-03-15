@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 using RimWorld;
 using Verse;
@@ -31,6 +30,42 @@ namespace TG.StockGen
 			var stuff = GenStuff.DefaultStuffFor(def);
 			return def.GetStatValueAbstract(StatDefOf.ArmorRating_Blunt, stuff) > armorThreshold ||
 			       def.GetStatValueAbstract(StatDefOf.ArmorRating_Sharp, stuff) > armorThreshold;
+		}
+
+		/// <summary>
+		/// Material random weight from market value.
+		/// </summary>
+		private static readonly SimpleCurve RandomStuffMarketValueWeight = new SimpleCurve
+		{
+			new CurvePoint(2f, 1f),
+			new CurvePoint(3f, 0.8f),
+			new CurvePoint(5f, 0.4f),
+			new CurvePoint(8, 0.3f),
+			new CurvePoint(10, 0.1f)
+		};
+
+		/// <summary>
+		/// Material random weight from mass.
+		/// </summary>
+		private static readonly SimpleCurve RandomStuffMassWeight = new SimpleCurve
+		{
+			new CurvePoint(0.8f, 0.2f),
+			new CurvePoint(0.5f, 1f),
+			new CurvePoint(0.4f, 0.6f),
+			new CurvePoint(0.2f, 0.4f),
+			new CurvePoint(0.1f, 0.2f),
+			new CurvePoint(0.01f, 0.1f)
+		};
+
+		/// <summary>
+		/// Weight used for choosing randomly between different materials.
+		/// </summary>
+		/// <param name="stuffDef">ThingDef assumed to have valid stuffProps.</param>
+		/// <returns>Stuff weight for the choosing algorithm.</returns>
+		public static float RandomStuffDefWeight(ThingDef stuffDef)
+		{
+			return 3.0f * stuffDef.stuffProps.commonality + RandomStuffMarketValueWeight.Evaluate(stuffDef.BaseMarketValue) +
+			       RandomStuffMassWeight.Evaluate(stuffDef.BaseMass) + (!stuffDef.smallVolume ? 0.4f : 0.0f);
 		}
 
 		public static void ToText<T>(ref StringBuilder b, string label, IReadOnlyCollection<T> list)
