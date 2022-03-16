@@ -29,7 +29,10 @@
 		<Compile Include="Harmony\IncidentOrbitalTraderArrival.cs" />
 		<Compile Include="Harmony\Mod\TraderShips.cs" />
 		<Compile Include="Harmony\TradeShip.cs" />
+		<Compile Include="Next\All.cs" />
+		<Compile Include="Next\ChooseGroup.cs" />
 		<Compile Include="Next\ChooseN.cs" />
+		<Compile Include="Next\GroupChoice.cs" />
 		<Compile Include="Next\NodeChoice.cs" />
 		<Compile Include="Next\Rule.cs" />
 		<Compile Include="NodeDef.cs" />

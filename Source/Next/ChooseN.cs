@@ -15,7 +15,7 @@ namespace TG.Next
 		public IntRange num = IntRange.one;
 
 		/// <summary>
-		/// Provided group of nodes.
+		/// Available nodes to choose from.
 		/// </summary>
 		public List<NodeChoice> nodes;
 

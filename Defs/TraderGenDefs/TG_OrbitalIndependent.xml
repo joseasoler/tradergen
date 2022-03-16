@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<!-- Small ships have less stock, but ships carrying rarer stock are more frequent. -->
+	<TG.TraderGenDef>
+		<defName>TG_OrbitalIndependentSmall</defName>
+		<label>small independent ship</label>
+		<orbital>true</orbital>
+		<requestable>false</requestable>
+		<commonality>60</commonality>
+		<node>ND_OrbitalIndependentSmall</node>
+	</TG.TraderGenDef>
+	<!-- Average stock amount and rarity. -->
+	<TG.TraderGenDef>
+		<defName>TG_OrbitalIndependentMedium</defName>
+		<label>medium independent ship</label>
+		<orbital>true</orbital>
+		<requestable>false</requestable>
+		<commonality>40</commonality>
+		<node>ND_OrbitalIndependentMedium</node>
+	</TG.TraderGenDef>
+	<!-- Large amount of stock, but they frequently focus on the most common stuff. -->
+	<TG.TraderGenDef>
+		<defName>TG_OrbitalIndependentLarge</defName>
+		<label>large independent ship</label>
+		<orbital>true</orbital>
+		<requestable>false</requestable>
+		<commonality>20</commonality>
+		<node>ND_OrbitalIndependentLarge</node>
+	</TG.TraderGenDef>
+</Defs>

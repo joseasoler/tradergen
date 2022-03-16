@@ -3,7 +3,7 @@ using Verse;
 namespace TG.Next
 {
 	/// <summary>
-	/// Represents information about a specific choice in some rules.
+	/// Choose a single node, with a specific commonality, and apply it a random amount of times.
 	/// </summary>
 	public class NodeChoice
 	{
