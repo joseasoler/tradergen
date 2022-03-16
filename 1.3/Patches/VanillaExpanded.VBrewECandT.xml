@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Allow traders to sell lemonade. -->
+<Patch>
+	<Operation Class="PatchOperationReplace" MayRequire="VanillaExpanded.VCookE">
+		<xpath>/Defs/ThingDef[defName="VBE_Lemonade"]/tradeability
+		</xpath>
+		<value>
+			<tradeability>All</tradeability>
+		</value>
+	</Operation>
+</Patch>
+
