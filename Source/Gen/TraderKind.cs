@@ -133,7 +133,7 @@ namespace TG.Gen
 				var current = pending.Dequeue();
 				ApplyNode(current, fromTile, faction, ref def);
 				current.next?.Nodes(current, fromTile, faction).ForEach(newNodeDef => pending.Enqueue(newNodeDef));
-				Logger.Gen($"After processing {current.defName} there are {pending.Count} nodes in the pending queue.");
+				Logger.Gen($"Processed {current.defName}. {pending.Count} nodes remaining.");
 			}
 		}
 
@@ -178,7 +178,7 @@ namespace TG.Gen
 				permitRequiredForTrading = genDef.permitRequiredForTrading
 			};
 
-			Logger.Gen($"Generating new TraderKindDef {def.defName}.");
+			Logger.Gen($"Generating TraderKindDef {def.defName}.");
 
 			ProcGen(genDef, fromTile, faction, ref def);
 
@@ -194,7 +194,7 @@ namespace TG.Gen
 			});
 			ShortHashGiver.GiveShortHash(def, def.GetType());
 			DefDatabase<TraderKindDef>.Add(def);
-			Logger.Gen($"Finished generating new TraderKindDef {def.defName}.");
+			Logger.Gen($"Finished generating TraderKindDef {def.defName}.");
 
 			return def;
 		}
@@ -215,7 +215,7 @@ namespace TG.Gen
 			_defReferencesByName.Remove(def.defName);
 			DefDatabase<TraderKindDef>.Remove(def);
 			ShortHashGiver.takenHashesPerDeftype[def.GetType()].Remove(def.shortHash);
-			Logger.Gen($"Removed previously generated TraderKindDef {defName}.");
+			Logger.Gen($"Removed generated TraderKindDef {defName}.");
 		}
 
 		/// <summary>
