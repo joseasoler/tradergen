@@ -1,47 +1,51 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!-- Allow traders to sell extra armor types. -->
 <Patch>
-	<Operation Class="PatchOperationSequence" MayRequire="VanillaExpanded.VARME">
-		<operations>
-			<li Class="PatchOperationReplace">
-				<xpath>/Defs/ThingDef[defName="VAE_Headgear_BallisticGoggles" or defName="VAE_Apparel_HeavyMarineArmor" or
-					defName="VAE_Headgear_HeavyMarineHelmet" or defName="VAE_Apparel_TrooperArmor" or
-					defName="VAE_Headgear_TrooperHelmet" or defName="VAE_Apparel_GhillieSuit" or
-					defName="VAE_Headgear_GhillieHood"]/tradeability
-				</xpath>
-				<value>
-					<tradeability>All</tradeability>
-				</value>
-			</li>
-			<li Class="PatchOperationAdd">
-				<xpath>/Defs/ThingDef[defName="VAE_Headgear_HeavyMarineHelmet" or defName="VAE_Apparel_TrooperArmor" or
-					defName="VAE_Headgear_TrooperHelmet"]
-				</xpath>
-				<value>
-					<tradeTags>
-						<li>TG_PatchedHiTechArmor</li>
-					</tradeTags>
-				</value>
-			</li>
-			<li Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Royalty">
-				<xpath>/Defs/ThingDef[defName="VAE_Headgear_RoyalSiegeHelmet" or defName="VAE_Apparel_RoyalSiegeArmor" or
-					defName="VAE_Headgear_RoyalTrooperHelmet" or defName="VAE_Apparel_RoyalTrooperArmor"]/tradeability
-				</xpath>
-				<value>
-					<tradeability>All</tradeability>
-				</value>
-			</li>
-			<li Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Royalty">
-				<xpath>/Defs/ThingDef[defName="VAE_Headgear_RoyalSiegeHelmet" or defName="VAE_Headgear_RoyalTrooperHelmet" or
-					defName="VAE_Apparel_RoyalTrooperArmor"]
-				</xpath>
-				<value>
-					<tradeTags>
-						<li>TG_PatchedHiTechArmor</li>
-					</tradeTags>
-				</value>
-			</li>
-		</operations>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Vanilla Armour Expanded</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="VAE_Headgear_BallisticGoggles" or defName="VAE_Apparel_HeavyMarineArmor" or
+						defName="VAE_Headgear_HeavyMarineHelmet" or defName="VAE_Apparel_TrooperArmor" or
+						defName="VAE_Headgear_TrooperHelmet" or defName="VAE_Apparel_GhillieSuit" or
+						defName="VAE_Headgear_GhillieHood"]/tradeability
+					</xpath>
+					<value>
+						<tradeability>All</tradeability>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="VAE_Headgear_HeavyMarineHelmet" or defName="VAE_Apparel_TrooperArmor" or
+						defName="VAE_Headgear_TrooperHelmet"]
+					</xpath>
+					<value>
+						<tradeTags>
+							<li>TG_PatchedHiTechArmor</li>
+						</tradeTags>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace" MayRequire="Ludeon.RimWorld.Royalty">
+					<xpath>/Defs/ThingDef[defName="VAE_Headgear_RoyalSiegeHelmet" or defName="VAE_Apparel_RoyalSiegeArmor" or
+						defName="VAE_Headgear_RoyalTrooperHelmet" or defName="VAE_Apparel_RoyalTrooperArmor"]/tradeability
+					</xpath>
+					<value>
+						<tradeability>All</tradeability>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd" MayRequire="Ludeon.RimWorld.Royalty">
+					<xpath>/Defs/ThingDef[defName="VAE_Headgear_RoyalSiegeHelmet" or defName="VAE_Headgear_RoyalTrooperHelmet" or
+						defName="VAE_Apparel_RoyalTrooperArmor"]
+					</xpath>
+					<value>
+						<tradeTags>
+							<li>TG_PatchedHiTechArmor</li>
+						</tradeTags>
+					</value>
+				</li>
+			</operations>
+		</match>
 	</Operation>
 </Patch>
-

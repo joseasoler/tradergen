@@ -209,8 +209,8 @@
 					</nodes>
 					<commonality>10</commonality>
 				</li>
-				<li>
-					<nodes MayRequire="sarg.alphaanimals">
+				<li MayRequire="sarg.alphaanimals">
+					<nodes>
 						<li>ND_OrbitalUncommonBiomaterials</li>
 					</nodes>
 					<commonality>10</commonality>
