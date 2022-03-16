@@ -1,15 +1,13 @@
 using System.Collections.Generic;
-using System.Linq;
 using RimWorld;
-using RimWorld.Planet;
 using Verse;
 
 namespace TG.Next
 {
 	/// <summary>
-	/// Chooses num nodes to use, without repetition, from a list.
+	/// Chooses num nodes to use, without repetition.
 	/// </summary>
-	public class ListWithoutRepetition : Rule
+	public class ChooseN : Rule
 	{
 		/// <summary>
 		/// Number of nodes to be chosen from the list.

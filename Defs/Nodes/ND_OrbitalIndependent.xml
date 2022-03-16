@@ -113,7 +113,7 @@
 			</li>
 			<!-- ExoticBuilding -->
 		</generators>
-		<next Class="TG.Next.ListWithoutRepetition">
+		<next Class="TG.Next.ChooseN">
 			<nodes>
 				<li>
 					<node>ND_OrbitalGeneralist</node>
@@ -132,7 +132,7 @@
 	</TG.NodeDef>
 	<TG.NodeDef>
 		<defName>ND_OrbitalGeneralist</defName>
-		<next Class="TG.Next.ListWithoutRepetition">
+		<next Class="TG.Next.ChooseN">
 			<num>3~4</num>
 			<nodes>
 				<li>
@@ -173,7 +173,7 @@
 
 	<TG.NodeDef>
 		<defName>ND_OrbitalFocused</defName>
-		<next Class="TG.Next.ListWithoutRepetition">
+		<next Class="TG.Next.ChooseN">
 			<num>2</num>
 			<nodes>
 				<li>
@@ -225,7 +225,7 @@
 
 	<TG.NodeDef>
 		<defName>ND_OrbitalSpecialist</defName>
-		<next Class="TG.Next.ListWithoutRepetition">
+		<next Class="TG.Next.ChooseN">
 			<num>1</num>
 			<nodes>
 				<li>

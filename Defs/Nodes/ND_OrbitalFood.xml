@@ -18,7 +18,7 @@
 				<categoryDef>VCE_Condiments</categoryDef>
 			</li>
 		</generators>
-		<next Class="TG.Next.ListWithoutRepetition">
+		<next Class="TG.Next.ChooseN">
 			<nodes>
 				<li>
 					<node>ND_OrbitalFoodSurvivalist</node>

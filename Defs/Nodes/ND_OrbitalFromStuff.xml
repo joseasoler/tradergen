@@ -2,7 +2,7 @@
 <Defs>
 	<TG.NodeDef>
 		<defName>ND_OrbitalFromStuff</defName>
-		<next Class="TG.Next.ListWithoutRepetition">
+		<next Class="TG.Next.ChooseN">
 			<nodes>
 				<li>
 					<node>ND_OrbitalFromStuffMetallic</node>
