@@ -1,11 +1,11 @@
 using Verse;
 
-namespace TG
+namespace TG.Next
 {
 	/// <summary>
-	/// Represents information about a specific node choice in some rules.
+	/// Represents information about a specific choice in some rules.
 	/// </summary>
-	public class NextNode
+	public class NodeChoice
 	{
 		/// <summary>
 		/// Node to be chosen.

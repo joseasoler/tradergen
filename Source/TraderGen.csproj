@@ -30,7 +30,7 @@
 		<Compile Include="Harmony\Mod\TraderShips.cs" />
 		<Compile Include="Harmony\TradeShip.cs" />
 		<Compile Include="Next\ChooseN.cs" />
-		<Compile Include="Next\NextNode.cs" />
+		<Compile Include="Next\NodeChoice.cs" />
 		<Compile Include="Next\Rule.cs" />
 		<Compile Include="NodeDef.cs" />
 		<Compile Include="Logger.cs" />

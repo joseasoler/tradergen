@@ -17,7 +17,7 @@ namespace TG.Next
 		/// <summary>
 		/// Provided group of nodes.
 		/// </summary>
-		public List<NextNode> nodes;
+		public List<NodeChoice> nodes;
 
 		public override List<NodeDef> Nodes(in NodeDef nodeDef, in int fromTile = -1, in Faction faction = null)
 		{
