@@ -43,6 +43,10 @@ namespace TG.Harmony
 			var depart = typeof(RimWorld.TradeShip).GetMethod(nameof(RimWorld.TradeShip.Depart));
 			var departPostfix = new HarmonyMethod(AccessTools.Method(typeof(TradeShip), nameof(DepartPostfix)));
 			harmony.Patch(depart, postfix: departPostfix);
+
+			var generateThings = typeof(RimWorld.TradeShip).GetMethod(nameof(RimWorld.TradeShip.GenerateThings));
+			var generatePostfix = new HarmonyMethod(AccessTools.Method(typeof(TradeShip), nameof(GenerateThingsPostfix)));
+			harmony.Patch(generateThings, postfix: generatePostfix);
 		}
 
 		/// <summary>
@@ -85,6 +89,15 @@ namespace TG.Harmony
 		private static void DepartPostfix(in RimWorld.TradeShip __instance)
 		{
 			Find.World.GetComponent<TraderKind>().Remove(__instance.def);
+		}
+
+		/// <summary>
+		/// Log a generated things report if necessary.
+		/// </summary>
+		/// <param name="__instance">TradeShip instance.</param>
+		private static void GenerateThingsPostfix(in RimWorld.TradeShip __instance)
+		{
+			Logger.GeneratedThingsReport(__instance, __instance.things);
 		}
 	}
 }

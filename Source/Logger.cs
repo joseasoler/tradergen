@@ -1,6 +1,7 @@
 using System;
 using System.Linq;
 using RimWorld;
+using TG.Gen;
 using TG.Mod;
 using TG.StockGen;
 using Verse;
@@ -42,6 +43,26 @@ namespace TG
 		public static void ErrorOnce(string text)
 		{
 			Log.ErrorOnce(text, text.GetHashCode());
+		}
+
+		public static void GeneratedThingsReport(in ITrader trader, in ThingOwner things)
+		{
+			if (!Settings.LogGen)
+			{
+				return;
+			}
+
+			var marketValue = 0.0f;
+			var weight = 0.0f;
+			var volume = 0.0f;
+			foreach (var thing in things)
+			{
+				marketValue += thing.MarketValue * thing.stackCount;
+				weight += thing.def.BaseMass * thing.stackCount;
+				volume += thing.def.VolumePerUnit * thing.stackCount;
+			}
+
+			Gen($"{trader.TraderName} stock -> marketValue: {marketValue}, weight: {weight}, volume: {volume}");
 		}
 	}
 }
