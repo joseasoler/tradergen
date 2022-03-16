@@ -96,7 +96,7 @@ namespace TG.StockGen
 		/// <returns>If the item an be sold or not.</returns>
 		private bool CanSellImpl(in ThingDef def, in int forTile, in Faction faction)
 		{
-			return CanSell(def, forTile, faction) && def.tradeability.TraderCanSell() && def.PlayerAcquirable &&
+			return CanSell(def, forTile, faction) && def.tradeability == Tradeability.All && def.PlayerAcquirable &&
 			       def.techLevel <= maxTechLevelGenerate && def.techLevel >= minTechLevelGenerate;
 		}
 
