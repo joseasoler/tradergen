@@ -129,7 +129,7 @@ namespace TG.StockGen
 			if (type == typeof(StockGenerator_MultiDef))
 			{
 				var gen = (StockGenerator_MultiDef) g;
-				b.Append($"thingDefs: {gen.thingDefs}\n");
+				ToText(ref b, "thingDefs", gen.thingDefs);
 				return;
 			}
 
