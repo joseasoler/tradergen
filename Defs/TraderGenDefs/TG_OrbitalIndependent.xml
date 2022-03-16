@@ -27,4 +27,13 @@
 		<commonality>20</commonality>
 		<node>ND_OrbitalIndependentLarge</node>
 	</TG.TraderGenDef>
+	<!-- Traders with specific and rare combinations of stock. -->
+	<TG.TraderGenDef>
+		<defName>TG_OrbitalIndependentUncommon</defName>
+		<label>uncommon independent ship</label>
+		<orbital>true</orbital>
+		<requestable>false</requestable>
+		<commonality>10</commonality>
+		<node>ND_OrbitalIndependentUncommon</node>
+	</TG.TraderGenDef>
 </Defs>

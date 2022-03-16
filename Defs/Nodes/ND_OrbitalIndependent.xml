@@ -178,4 +178,44 @@
 			</nodeGroups>
 		</next>
 	</TG.NodeDef>
+	<!-- Traders with specific and rare combinations of stock. -->
+	<TG.NodeDef>
+		<defName>ND_OrbitalIndependentUncommon</defName>
+		<next Class="TG.Next.All">
+			<nodes>
+				<li>ND_Orbital</li>
+				<li>ND_OrbitalIndependentUncommonGroups</li>
+			</nodes>
+		</next>
+	</TG.NodeDef>
+	<TG.NodeDef>
+		<defName>ND_OrbitalIndependentUncommonGroups</defName>
+		<next Class="TG.Next.ChooseGroup">
+			<nodeGroups>
+				<li>
+					<nodes>
+						<li>ND_OrbitalUncommonHiTech</li>
+						<li>ND_OrbitalCombatHiTech</li>
+						<!-- ToDo implants -->
+					</nodes>
+					<commonality>20</commonality>
+				</li>
+				<li MayRequire="OskarPotocki.VFE.Insectoid">
+					<nodes>
+						<li>ND_OrbitalCombatInsectoid</li>
+						<li>ND_OrbitalFoodInsectoid</li>
+						<li>ND_OrbitalFromStuffInsect</li>
+						<li MayRequire="sarg.rimbees">ND_OrbitalFromStuffWaxy</li>
+					</nodes>
+					<commonality>10</commonality>
+				</li>
+				<li>
+					<nodes MayRequire="sarg.alphaanimals">
+						<li>ND_OrbitalUncommonBiomaterials</li>
+					</nodes>
+					<commonality>10</commonality>
+				</li>
+			</nodeGroups>
+		</next>
+	</TG.NodeDef>
 </Defs>

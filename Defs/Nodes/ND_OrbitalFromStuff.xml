@@ -242,7 +242,7 @@
 			</li>
 		</generators>
 	</TG.NodeDef>
-	<TG.NodeDef>
+	<TG.NodeDef MayRequire="sarg.rimbees">
 		<defName>ND_OrbitalFromStuffWaxy</defName>
 		<generators>
 			<!-- Sells -->

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<TG.NodeDef>
+		<defName>ND_OrbitalUncommonHiTech</defName>
+		<generators>
+			<!-- Sells -->
+			<li Class="TG.StockGen.StuffFromThingDef">
+				<thingDef>Hyperweave</thingDef>
+				<maxTechLevelGenerate>Spacer</maxTechLevelGenerate>
+				<stuffCountRange>200~300</stuffCountRange>
+				<thingDefCountRange>2~4</thingDefCountRange>
+				<countRange>1</countRange>
+			</li>
+			<li Class="TG.StockGen.StuffFromThingDef">
+				<thingDef>Plasteel</thingDef>
+				<maxTechLevelGenerate>Spacer</maxTechLevelGenerate>
+				<stuffCountRange>300~500</stuffCountRange>
+				<thingDefCountRange>3~6</thingDefCountRange>
+				<countRange>1</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>ComponentIndustrial</thingDef>
+				<countRange>5~30</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>ComponentSpacer</thingDef>
+				<countRange>3~8</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>Gold</thingDef>
+				<countRange>200~400</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>MedicineUltratech</thingDef>
+				<countRange>5~30</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>Neutroamine</thingDef>
+				<countRange>100~500</countRange>
+			</li>
+			<li Class="StockGenerator_Category">
+				<categoryDef>Drugs</categoryDef>
+				<thingDefCountRange>3~4</thingDefCountRange>
+				<totalPriceRange>2000~3000</totalPriceRange>
+			</li>
+			<li Class="StockGenerator_Techprints">
+				<countChances>
+					<li>
+						<count>3</count>
+						<chance>1</chance>
+					</li>
+				</countChances>
+			</li>
+			<li Class="StockGenerator_Tag">
+				<tradeTag>ExoticMisc</tradeTag>
+				<thingDefCountRange>3~5</thingDefCountRange>
+				<countRange>1~2</countRange>
+				<excludedThingDefs>
+					<li>Luciferium</li> <!-- already handled by drugs -->
+					<li>MedicineUltratech</li> <!-- already handled by single def -->
+					<li>ComponentSpacer</li> <!-- already handled by single def -->
+				</excludedThingDefs>
+				<customCountRanges>
+					<Hyperweave>50~200</Hyperweave>
+				</customCountRanges>
+			</li>
+			<li Class="StockGenerator_Tag">
+				<tradeTag>Artifact</tradeTag>
+				<thingDefCountRange>2~4</thingDefCountRange>
+				<countRange>1~1</countRange>
+			</li>
+		</generators>
+	</TG.NodeDef>
+	<TG.NodeDef MayRequire="sarg.alphaanimals">
+		<defName>ND_OrbitalUncommonBiomaterials</defName>
+		<generators>
+			<!-- Sells -->
+			<li Class="TG.StockGen.AnimalMultiDef">
+				<pawnKindDefs>
+					<li>AA_Aerofleet</li>
+					<li>AA_AngelMoth</li>
+					<li>AA_DevilSheep</li>
+					<li>AA_Feralisk</li>
+					<li>AA_IronhuskBeetle</li>
+					<li>AA_Radyak</li>
+					<li>AA_Terramorph</li>
+					<li>AA_WaywardMobileAssembler</li>
+				</pawnKindDefs>
+				<kindCountRange>3~4</kindCountRange>
+				<totalPriceRange>700~800</totalPriceRange>
+			</li>
+			<li Class="TG.StockGen.StuffFromThingDef">
+				<thingDef>DevilstrandCloth</thingDef>
+				<maxTechLevelGenerate>Spacer</maxTechLevelGenerate>
+				<stuffCountRange>300~500</stuffCountRange>
+				<thingDefCountRange>3~6</thingDefCountRange>
+				<countRange>1</countRange>
+			</li>
+			<li Class="TG.StockGen.StuffFromThingDef">
+				<thingDef>AA_MothSilk</thingDef>
+				<maxTechLevelGenerate>Spacer</maxTechLevelGenerate>
+				<stuffCountRange>300~500</stuffCountRange>
+				<thingDefCountRange>3~6</thingDefCountRange>
+				<countRange>1</countRange>
+			</li>
+			<li Class="TG.StockGen.StuffFromThingDef">
+				<thingDef>AA_SkySteel</thingDef>
+				<maxTechLevelGenerate>Spacer</maxTechLevelGenerate>
+				<stuffCountRange>300~500</stuffCountRange>
+				<thingDefCountRange>3~6</thingDefCountRange>
+				<countRange>1</countRange>
+			</li>
+			<li Class="TG.StockGen.StuffFromThingDef">
+				<thingDef>DevilstrandCloth</thingDef>
+				<maxTechLevelGenerate>Spacer</maxTechLevelGenerate>
+				<stuffCountRange>300~500</stuffCountRange>
+				<thingDefCountRange>3~6</thingDefCountRange>
+				<countRange>1</countRange>
+			</li>
+			<li Class="TG.StockGen.StuffFromThingDef">
+				<thingDef>Synthread</thingDef>
+				<maxTechLevelGenerate>Spacer</maxTechLevelGenerate>
+				<stuffCountRange>300~500</stuffCountRange>
+				<thingDefCountRange>3~6</thingDefCountRange>
+				<countRange>1</countRange>
+			</li>
+		</generators>
+	</TG.NodeDef>
+</Defs>
