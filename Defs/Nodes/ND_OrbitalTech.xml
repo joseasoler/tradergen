@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<TG.NodeDef>
+		<defName>ND_OrbitalTech</defName>
+		<generators>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>ComponentIndustrial</thingDef>
+				<countRange>30~100</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>ComponentSpacer</thingDef>
+				<countRange>4~12</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef" MayRequire="OskarPotocki.VFE.Mechanoid">
+				<thingDef>VFE_ComponentMechanoid</thingDef>
+				<countRange>-2~5</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef" MayRequire="sarg.rimbees">
+				<thingDef>RB_ComponentBioInterface</thingDef>
+				<countRange>-1~1</countRange>
+			</li>
+			<li Class="TG.StockGen.BuildingsJoy">
+				<minTechLevelGenerate>Industrial</minTechLevelGenerate>
+				<maxTechLevelGenerate>Spacer</maxTechLevelGenerate>
+				<thingDefCountRange>2~4</thingDefCountRange>
+				<countRange>1</countRange>
+			</li>
+			<!-- Telescopes do not have a tech level, so they are handled separately here. -->
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>Telescope</thingDef>
+				<countRange>1</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>Chemfuel</thingDef>
+				<countRange>250~400</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>Gold</thingDef>
+				<countRange>100~200</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>Hyperweave</thingDef>
+				<countRange>50~200</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>Plasteel</thingDef>
+				<countRange>150~300</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>Uranium</thingDef>
+				<countRange>200~400</countRange>
+			</li>
+			<li Class="StockGenerator_Tag">
+				<tradeTag>Artifact</tradeTag>
+				<thingDefCountRange>2~4</thingDefCountRange>
+				<countRange>1~1</countRange>
+			</li>
+		</generators>
+	</TG.NodeDef>
+</Defs>

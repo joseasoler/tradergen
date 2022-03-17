@@ -86,6 +86,11 @@ namespace TG.StockGen
 			return CanBuy(def) && def.tradeability.PlayerCanSell() && def.techLevel <= maxTechLevelBuy;
 		}
 
+		protected virtual bool ValidTechLevel(in ThingDef def)
+		{
+			return def.techLevel >= minTechLevelGenerate && def.techLevel <= maxTechLevelGenerate;
+		}
+
 		/// <summary>
 		/// In addition to the conditions specified in CanSell, only sell items which can be acquired by the player,
 		/// and can be sold by traders.
@@ -97,7 +102,7 @@ namespace TG.StockGen
 		private bool CanSellImpl(in ThingDef def, in int forTile, in Faction faction)
 		{
 			return CanSell(def, forTile, faction) && def.tradeability == Tradeability.All && def.PlayerAcquirable &&
-			       def.techLevel <= maxTechLevelGenerate && def.techLevel >= minTechLevelGenerate;
+			       ValidTechLevel(def);
 		}
 
 		/// <summary>

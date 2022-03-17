@@ -29,6 +29,10 @@
 					<node>ND_OrbitalFromStuff</node>
 					<commonality>2</commonality>
 				</li>
+				<li>
+					<node>ND_OrbitalTech</node>
+					<commonality>2</commonality>
+				</li>
 			</nodes>
 		</next>
 	</TG.NodeDef>
@@ -56,6 +60,12 @@
 				<li>
 					<nodes>
 						<li>ND_OrbitalBulk</li>
+						<li>ND_OrbitalTech</li>
+					</nodes>
+				</li>
+				<li>
+					<nodes>
+						<li>ND_OrbitalBulk</li>
 						<li>ND_OrbitalCombat</li>
 					</nodes>
 				</li>
@@ -80,6 +90,12 @@
 				</li>
 				<li>
 					<nodes>
+						<li>ND_OrbitalCombat</li>
+						<li>ND_OrbitalTech</li>
+					</nodes>
+				</li>
+				<li>
+					<nodes>
 						<li>ND_OrbitalFood</li>
 						<li>ND_OrbitalFood</li>
 					</nodes>
@@ -89,6 +105,18 @@
 					<nodes>
 						<li>ND_OrbitalFood</li>
 						<li>ND_OrbitalFromStuff</li>
+					</nodes>
+				</li>
+				<li>
+					<nodes>
+						<li>ND_OrbitalFromStuff</li>
+						<li>ND_OrbitalTech</li>
+					</nodes>
+				</li>
+				<li>
+					<nodes>
+						<li>ND_OrbitalTech</li>
+						<li>ND_OrbitalTech</li>
 					</nodes>
 				</li>
 			</nodeGroups>
@@ -141,6 +169,13 @@
 				</li>
 				<li>
 					<nodes>
+						<li>ND_OrbitalBulk</li>
+						<li>ND_OrbitalTech</li>
+						<li>ND_OrbitalTech</li>
+					</nodes>
+				</li>
+				<li>
+					<nodes>
 						<li>ND_OrbitalCombat</li>
 						<li>ND_OrbitalCombat</li>
 						<li>ND_OrbitalCombat</li>
@@ -158,6 +193,20 @@
 						<li>ND_OrbitalCombat</li>
 						<li>ND_OrbitalCombat</li>
 						<li>ND_OrbitalFromStuff</li>
+					</nodes>
+				</li>
+				<li>
+					<nodes>
+						<li>ND_OrbitalCombat</li>
+						<li>ND_OrbitalCombat</li>
+						<li>ND_OrbitalTech</li>
+					</nodes>
+				</li>
+				<li>
+					<nodes>
+						<li>ND_OrbitalCombat</li>
+						<li>ND_OrbitalTech</li>
+						<li>ND_OrbitalTech</li>
 					</nodes>
 				</li>
 				<li>
@@ -173,6 +222,20 @@
 						<li>ND_OrbitalFood</li>
 						<li>ND_OrbitalFromStuff</li>
 						<li>ND_OrbitalFromStuff</li>
+					</nodes>
+				</li>
+				<li>
+					<nodes>
+						<li>ND_OrbitalFromStuff</li>
+						<li>ND_OrbitalFromStuff</li>
+						<li>ND_OrbitalTech</li>
+					</nodes>
+				</li>
+				<li>
+					<nodes>
+						<li>ND_OrbitalTech</li>
+						<li>ND_OrbitalTech</li>
+						<li>ND_OrbitalTech</li>
 					</nodes>
 				</li>
 			</nodeGroups>
