@@ -1,7 +1,9 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using RimWorld;
+using TG.DefOf;
 using Verse;
 
 namespace TG.StockGen
@@ -30,6 +32,22 @@ namespace TG.StockGen
 			var stuff = GenStuff.DefaultStuffFor(def);
 			return def.GetStatValueAbstract(StatDefOf.ArmorRating_Blunt, stuff) > armorThreshold ||
 			       def.GetStatValueAbstract(StatDefOf.ArmorRating_Sharp, stuff) > armorThreshold;
+		}
+
+		/// <summary>
+		/// Checks if provided def is an alcoholic drink.
+		/// </summary>
+		/// <param name="def">Provided ThingDef</param>
+		/// <returns>True if def is an alcoholic drink.</returns>
+		public static bool IsAlcohol(in ThingDef def)
+		{
+			if (def.ingestible?.outcomeDoers == null || def.ingestible.JoyKind != JoyKind.Chemical ||
+			    !def.ingestible.foodType.HasFlag(FoodTypeFlags.Liquor)) return false;
+
+			return (from outcomeDoer in def.ingestible.outcomeDoers
+				where outcomeDoer.GetType() == typeof(IngestionOutcomeDoer_GiveHediff)
+				select (IngestionOutcomeDoer_GiveHediff) outcomeDoer).Any(o =>
+				o.hediffDef?.hediffClass == typeof(Hediff_Alcohol));
 		}
 
 		/// <summary>

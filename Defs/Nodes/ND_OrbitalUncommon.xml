@@ -38,8 +38,7 @@
 				<thingDef>Neutroamine</thingDef>
 				<countRange>100~500</countRange>
 			</li>
-			<li Class="StockGenerator_Category">
-				<categoryDef>Drugs</categoryDef>
+			<li Class="TG.StockGen.Drugs">
 				<thingDefCountRange>3~4</thingDefCountRange>
 				<totalPriceRange>2000~3000</totalPriceRange>
 			</li>

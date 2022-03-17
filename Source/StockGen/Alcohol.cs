@@ -1,7 +1,4 @@
-using System.Collections.Generic;
-using System.Linq;
 using RimWorld;
-using TG.DefOf;
 using Verse;
 
 namespace TG.StockGen
@@ -15,13 +12,7 @@ namespace TG.StockGen
 
 		protected override bool CanBuy(in ThingDef def)
 		{
-			if (def.ingestible?.outcomeDoers == null || def.ingestible.JoyKind != JoyKind.Chemical ||
-			    !def.ingestible.foodType.HasFlag(FoodTypeFlags.Liquor)) return false;
-
-			return (from outcomeDoer in def.ingestible.outcomeDoers
-				where outcomeDoer.GetType() == typeof(IngestionOutcomeDoer_GiveHediff)
-				select (IngestionOutcomeDoer_GiveHediff) outcomeDoer).Any(o =>
-				o.hediffDef?.hediffClass == typeof(Hediff_Alcohol));
+			return Util.IsAlcohol(def);
 		}
 
 		private static readonly SimpleCurve SelectionWeight = new SimpleCurve
