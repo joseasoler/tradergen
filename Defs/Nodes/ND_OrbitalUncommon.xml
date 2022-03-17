@@ -64,6 +64,12 @@
 					<Hyperweave>50~200</Hyperweave>
 				</customCountRanges>
 			</li>
+			<li Class="TG.StockGen.TechHediff">
+				<minTechLevelGenerate>Industrial</minTechLevelGenerate>
+				<maxTechLevelGenerate>Spacer</maxTechLevelGenerate>
+				<thingDefCountRange>3~5</thingDefCountRange>
+				<countRange>1</countRange>
+			</li>
 			<li Class="StockGenerator_Tag">
 				<tradeTag>Artifact</tradeTag>
 				<thingDefCountRange>2~4</thingDefCountRange>

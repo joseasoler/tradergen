@@ -43,6 +43,7 @@
 		<Compile Include="StockGen\AnimalMultiDef.cs" />
 		<Compile Include="StockGen\Armor.cs" />
 		<Compile Include="StockGen\Artillery.cs" />
+		<Compile Include="StockGen\TechHediff.cs" />
 		<Compile Include="StockGen\ConditionMatcher.cs" />
 		<Compile Include="StockGen\ExoticAnimalPart.cs" />
 		<Compile Include="StockGen\FoodRaw.cs" />

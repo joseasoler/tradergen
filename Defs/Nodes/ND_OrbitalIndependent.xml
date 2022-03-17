@@ -196,7 +196,6 @@
 					<nodes>
 						<li>ND_OrbitalUncommonHiTech</li>
 						<li>ND_OrbitalCombatHiTech</li>
-						<!-- ToDo implants -->
 					</nodes>
 					<commonality>20</commonality>
 				</li>
