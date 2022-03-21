@@ -45,6 +45,7 @@
 		<Compile Include="StockGen\Armor.cs" />
 		<Compile Include="StockGen\Artillery.cs" />
 		<Compile Include="StockGen\BuildingsJoy.cs" />
+		<Compile Include="StockGen\ExpensiveSimple.cs" />
 		<Compile Include="StockGen\Drugs.cs" />
 		<Compile Include="StockGen\TechHediff.cs" />
 		<Compile Include="StockGen\ConditionMatcher.cs" />

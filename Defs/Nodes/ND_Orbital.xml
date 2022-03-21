@@ -66,12 +66,10 @@
 			<li Class="TG.StockGen.MultiDef">
 				<thingDefs>
 					<li>Ambrosia</li>
-					<li>Gold</li>
 					<li>MealSurvivalPack</li>
 					<li>MedicineUltratech</li>
 					<li>Pemmican</li>
 					<li>Plasteel</li>
-					<li>TechprofSubpersonaCore</li>
 					<li>Uranium</li>
 				</thingDefs>
 			</li>
@@ -93,9 +91,6 @@
 			<li Class="StockGenerator_BuyTradeTag">
 				<tag>ExoticBuilding</tag>
 			</li>
-			<li Class="StockGenerator_BuyTradeTag">
-				<tag>PsylinkNeuroformer</tag>
-			</li>
 			<li Class="StockGenerator_Category">
 				<categoryDef>Neurotrainers</categoryDef>
 			</li>
@@ -110,6 +105,7 @@
 			<li Class="StockGenerator_Tag">
 				<tradeTag>TechHediff</tradeTag>
 			</li>
+			<li Class="TG.StockGen.ExpensiveSimple" />
 		</generators>
 	</TG.NodeDef>
 </Defs>

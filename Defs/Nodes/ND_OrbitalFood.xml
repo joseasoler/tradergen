@@ -102,7 +102,6 @@
 				</thingDefs>
 				<totalPriceRange>1200~2000</totalPriceRange>
 			</li>
-			<!-- Purchases -->
 		</generators>
 	</TG.NodeDef>
 	<TG.NodeDef>
@@ -122,7 +121,6 @@
 				<thingDefCountRange>1~2</thingDefCountRange>
 				<totalPriceRange>500~800</totalPriceRange>
 			</li>
-			<!-- Purchases -->
 		</generators>
 	</TG.NodeDef>
 	<TG.NodeDef>
