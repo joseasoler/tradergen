@@ -21,6 +21,7 @@
 	<!-- Dependencies and source code common to all supported RimWorld versions. -->
 	<ItemGroup>
 		<Compile Include="Algorithm.cs" />
+		<Compile Include="Debug\DebugActions.cs" />
 		<Compile Include="DefOf\JoyKind.cs" />
 		<Compile Include="DefOf\ThingCategory.cs" />
 		<Compile Include="Gen\TraderKind.cs" />
