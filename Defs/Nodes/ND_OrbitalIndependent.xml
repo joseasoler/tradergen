@@ -267,7 +267,6 @@
 						<li>ND_OrbitalCombatInsectoid</li>
 						<li>ND_OrbitalFoodInsectoid</li>
 						<li>ND_OrbitalFromStuffInsect</li>
-						<li MayRequire="sarg.rimbees">ND_OrbitalFromStuffWaxy</li>
 					</nodes>
 					<commonality>10</commonality>
 				</li>
