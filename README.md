@@ -2,9 +2,15 @@
 
 [![RimWorld](https://img.shields.io/badge/RimWorld-1.3-informational)](https://rimworldgame.com/) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](CODE_OF_CONDUCT.md)
 
-TraderGen provides randomly generated orbital traders. Their stock variety is vastly increased, is more believable and includes support for many mods. Most aspects of this generation can be customized through the mod settings.
+TraderGen provides randomly generated orbital traders. Their stock variety is vastly increased, is more believable and supports most mods. Most aspects of this generation can be customized through the mod settings.
 
 Fully compatible with the [Trader Ships](https://steamcommunity.com/sharedfiles/filedetails/?id=2046222331) mod.
+
+## Features
+
+* Orbital traders now have more variety in general, but each individual orbital trader may be specialized in certain types of wares.
+* Orbital trader ships have different sizes. Larger ships have more stock quantity and variety, but smaller ships have higher chances of carrying infrequent wares.
+* Customizable amount of silver for orbital traders.
 
 ## Contributions
 
@@ -12,9 +18,9 @@ This project encourages community involvement and contributions. Check the [CONT
 
 ## Mod support
 
-TraderGen should support all mods out of the box; please make a bug report if you find any issues.
+TraderGen should support all mods out of the box; please submit a [bug report](CONTRIBUTING.md) if you find any issues.
 
-TraderGen also provides extra features when certain mods are enabled, including specific trader types, stock combinations and other tweaks to improve the experience. TraderGen includes extra features for the following mods:  
+TraderGen also provides extra features when certain mods are enabled, including specific trader types, stock combinations and other tweaks to improve the experience. TraderGen includes extra content for the following mods:  
 
 * [Alpha Animals](https://steamcommunity.com/sharedfiles/filedetails/?id=1541721856)
 * [Jewelry](https://steamcommunity.com/workshop/filedetails/?id=2020964421)
