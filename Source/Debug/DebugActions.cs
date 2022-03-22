@@ -1,11 +1,15 @@
+using System.Collections.Generic;
+using System.Linq;
 using RimWorld;
+using TG.Gen;
+using TG.Trader;
 using Verse;
 
 namespace TG.Debug
 {
 	public class DebugActions
 	{
-		[DebugAction("TraderGen", null, allowedGameStates = AllowedGameStates.PlayingOnMap)]
+		[DebugAction("TraderGen", allowedGameStates = AllowedGameStates.PlayingOnMap)]
 		private static void PlaceAllTradeableThings()
 		{
 			foreach (var def in DefDatabase<ThingDef>.AllDefs)
@@ -36,6 +40,44 @@ namespace TG.Debug
 				var newPawn = PawnGenerator.GeneratePawn(def, Faction.OfPlayer);
 				GenSpawn.Spawn(newPawn, UI.MouseCell(), Find.CurrentMap);
 			}
+		}
+
+		/// <summary>
+		/// Generates a trader kind definition with a single NodeDef chosen by the user.
+		/// </summary>
+		/// <param name="genDef">Chosen TraderGenDef.</param>
+		/// <param name="nodeDef">Chosen NodeDef.</param>
+		/// <returns>Generated trader definition.</returns>
+		private static TraderKindDef DoGenerateTrader(in TraderGenDef genDef, NodeDef nodeDef)
+		{
+			var def = Find.World.GetComponent<TraderKind>().PreGenerate(genDef);
+			TraderKind.ApplyNode(nodeDef, -1, null, ref def);
+			Find.World.GetComponent<TraderKind>().PostGenerate(def, genDef);
+
+			return def;
+		}
+
+		/// <summary>
+		/// Generates a new orbital trade ship with a TraderGenDef and NodeDef chosen by the user.
+		/// </summary>
+		[DebugAction("TraderGen", allowedGameStates = AllowedGameStates.PlayingOnMap)]
+		private static void GenerateOrbitalTrader()
+		{
+			var options = DefDatabase<TraderGenDef>.AllDefs.Where(t => t.orbital)
+				.Select(genDef =>
+					new DebugMenuOption(genDef.label, DebugMenuOptionMode.Action, () =>
+					{
+						var nodeDefsOptions = DefDatabase<NodeDef>.AllDefs
+							.Select(nodeDef =>
+								new DebugMenuOption(nodeDef.defName, DebugMenuOptionMode.Action, () =>
+								{
+									Find.CurrentMap.passingShipManager.DebugSendAllShipsAway();
+									OrbitalTraderArrival.Arrive(new IncidentParms {target = Find.CurrentMap}, genDef,
+										traderGenDef => DoGenerateTrader(traderGenDef, nodeDef));
+								}));
+						Find.WindowStack.Add(new Dialog_DebugOptionListLister(nodeDefsOptions));
+					}));
+			Find.WindowStack.Add(new Dialog_DebugOptionListLister(options));
 		}
 	}
 }
