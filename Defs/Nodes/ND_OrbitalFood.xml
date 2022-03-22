@@ -142,15 +142,10 @@
 				<thingDefCountRange>1~2</thingDefCountRange>
 				<totalPriceRange>300~700</totalPriceRange>
 			</li>
-			<li Class="TG.StockGen.MultiDef">
-				<thingDefs>
-					<li MayRequire="VanillaExpanded.VBrewE">VBE_Cigars</li>
-					<li MayRequire="VanillaExpanded.VBrewE">VBE_Cigarettes</li>
-					<li>PsychiteTea</li>
-					<li>SmokeleafJoint</li>
-				</thingDefs>
+			<li Class="TG.StockGen.Drugs">
+				<drugCategory>Social</drugCategory>
 				<thingDefCountRange>2~3</thingDefCountRange>
-				<totalPriceRange>400~900</totalPriceRange>
+				<totalPriceRange>600~1300</totalPriceRange>
 			</li>
 		</generators>
 	</TG.NodeDef>
