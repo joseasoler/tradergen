@@ -36,7 +36,7 @@
 			</li>
 			<li Class="StockGenerator_SingleDef">
 				<thingDef>Neutroamine</thingDef>
-				<countRange>100~500</countRange>
+				<countRange>100~200</countRange>
 			</li>
 			<li Class="TG.StockGen.Drugs">
 				<thingDefCountRange>3~4</thingDefCountRange>

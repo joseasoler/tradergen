@@ -6,7 +6,7 @@
 			<!-- Sells -->
 			<li Class="StockGenerator_SingleDef">
 				<thingDef>MedicineIndustrial</thingDef>
-				<countRange>30~50</countRange>
+				<countRange>20~30</countRange>
 			</li>
 			<li Class="StockGenerator_ReinforcedBarrels">
 				<countRange>2~4</countRange>
