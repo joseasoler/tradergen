@@ -3,15 +3,11 @@
 	<TG.NodeDef>
 		<defName>ND_OrbitalFood</defName>
 		<generators>
-			<!-- Sells -->
-			<li Class="StockGenerator_SingleDef" MayRequire="VanillaExpanded.VCookE">
-				<thingDef>VCE_CannedMeat</thingDef>
-				<totalPriceRange>1000~1250</totalPriceRange>
-			</li>
-			<li Class="StockGenerator_SingleDef" MayRequire="VanillaExpanded.VCookE">
-				<thingDef>VCE_CannedProduce</thingDef>
-				<totalPriceRange>650~875</totalPriceRange>
-			</li>
+			<!--
+			Sells canned food when Vanilla Cooking is enabled. Raw vanilla food otherwise.
+			See VanillaExpanded.VCookE.xml patch for details.
+			-->
+
 			<!-- Purchases -->
 			<li Class="TG.StockGen.FoodRaw"/>
 			<li Class="StockGenerator_Category" MayRequire="VanillaExpanded.VCookE">
