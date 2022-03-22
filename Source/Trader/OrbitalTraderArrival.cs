@@ -54,7 +54,14 @@ namespace TG.Trader
 				: null;
 		}
 
-		private static TradeShip CreateTradeShip(in TraderGenDef genDef)
+		/// <summary>
+		/// Creates a new trade ship.
+		/// </summary>
+		/// <param name="genDef">Trader generation definition to use.</param>
+		/// <param name="gen">Trader generation function. If null, the default will be used.</param>
+		/// <returns></returns>
+		private static TradeShip CreateTradeShip(in TraderGenDef genDef,
+			Func<TraderGenDef, TraderKindDef> gen)
 		{
 			if (genDef == null)
 			{
@@ -64,7 +71,7 @@ namespace TG.Trader
 
 			// Create a TradeShip using a specific TraderGenDef. Avoid using the patched parameter constructor.
 			var ship = new TradeShip();
-			ship.def = Find.World.GetComponent<TraderKind>().Generate(genDef);
+			ship.def = gen != null ? gen(genDef) : Find.World.GetComponent<TraderKind>().Generate(genDef);
 			ship.faction = GetFaction(ship.def);
 			ship.things = new ThingOwner<Thing>(ship);
 			// ToDo procedural generation of ship names.
@@ -79,7 +86,14 @@ namespace TG.Trader
 			return ship;
 		}
 
-		public static void Arrive(in IncidentParms parms, in TraderGenDef genDef)
+		/// <summary>
+		/// Triggers the arrival of a new orbital trader.
+		/// </summary>
+		/// <param name="parms">Incident parameters</param>
+		/// <param name="genDef">Trader generation definition to use.</param>
+		/// <param name="gen">Trader generation function. If null, the default will be used.</param>
+		public static void Arrive(in IncidentParms parms, in TraderGenDef genDef,
+			Func<TraderGenDef, TraderKindDef> gen = null)
 		{
 			var map = (Map) parms.target;
 
@@ -89,7 +103,7 @@ namespace TG.Trader
 			}
 
 			Rand.PushState(Math.Abs(Rand.Int));
-			var ship = CreateTradeShip(genDef);
+			var ship = CreateTradeShip(genDef, gen);
 			Rand.PopState();
 
 			if (ColonistsHavePoweredCommsConsole(map))

@@ -41,6 +41,7 @@ namespace TG.Harmony
 		/// <returns>False, preventing the original method from running.</returns>
 		private static bool TryExecuteWorkerPrefix(in IncidentParms parms)
 		{
+			// Provide no genDef as it must be chosen randomly.
 			OrbitalTraderArrival.Arrive(parms, null);
 			return false;
 		}
