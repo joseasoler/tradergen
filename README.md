@@ -40,6 +40,8 @@ TraderGen also provides extra features when certain mods are enabled, including 
 * [Vanilla Apparel Expanded — Accessories](https://steamcommunity.com/sharedfiles/filedetails/?id=2521176396)
   * Ranged shield belts are as frequent as regular shield belts in orbital trader stock.
   * Orbital traders specialized on hunting supplies will frequently have quivers in stock.
+  * Orbital traders specialized on medicine will frequently have medic bags in stock.
+  * Orbital traders specialized on tech will sometimes have tool belts in stock.
 * [Vanilla Armour Expanded](https://steamcommunity.com/workshop/filedetails/?id=1814988282)
   * Orbital traders specialized on hunting supplies have ghillie gear in stock.
   * Orbital traders can have the new power armor types in stock.

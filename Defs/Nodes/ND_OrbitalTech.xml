@@ -64,6 +64,10 @@
 				<thingDefCountRange>0~2</thingDefCountRange>
 				<countRange>0~2</countRange>
 			</li>
+			<li Class="StockGenerator_SingleDef" MayRequire="VanillaExpanded.VAEAccessories">
+				<thingDef>VAEA_Apparel_ToolBelt</thingDef>
+				<countRange>0~2</countRange>
+			</li>
 		</generators>
 	</TG.NodeDef>
 </Defs>
