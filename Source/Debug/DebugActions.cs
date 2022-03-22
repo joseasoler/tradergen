@@ -5,8 +5,8 @@ namespace TG.Debug
 {
 	public class DebugActions
 	{
-		[DebugAction("TraderGen", "Place all tradeable things", allowedGameStates = AllowedGameStates.PlayingOnMap)]
-		private static void PlaceAllThings()
+		[DebugAction("TraderGen", null, allowedGameStates = AllowedGameStates.PlayingOnMap)]
+		private static void PlaceAllTradeableThings()
 		{
 			foreach (var def in DefDatabase<ThingDef>.AllDefs)
 			{
