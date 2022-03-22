@@ -2,6 +2,17 @@
 <Defs>
 	<TG.NodeDef>
 		<defName>ND_OrbitalFromStuff</defName>
+		<generators>
+			<!-- Sells -->
+			<li Class="TG.StockGen.MultiDef" MayRequire="VanillaExpanded.VWE">
+				<thingDefs>
+					<li>VWE_MeleeWeapon_Hammer</li>
+					<li>VWE_MeleeWeapon_Wrench</li>
+				</thingDefs>
+				<thingDefCountRange>0~2</thingDefCountRange>
+				<countRange>0~2</countRange>
+			</li>
+		</generators>
 		<next Class="TG.Next.ChooseN">
 			<nodes>
 				<li>
@@ -64,6 +75,14 @@
 				<thingDefCountRange>4~7</thingDefCountRange>
 				<countRange>1~2</countRange>
 			</li>
+			<li Class="TG.StockGen.MultiDef" MayRequire="VanillaExpanded.VWE">
+				<thingDefs>
+					<li>VWE_MeleeWeapon_Pickaxe</li>
+					<li>VWE_MeleeWeapon_Shovel</li>
+				</thingDefs>
+				<thingDefCountRange>0~2</thingDefCountRange>
+				<countRange>0~2</countRange>
+			</li>
 		</generators>
 	</TG.NodeDef>
 	<TG.NodeDef>
@@ -83,6 +102,10 @@
 				<stuffCountRange>300~700</stuffCountRange>
 				<thingDefCountRange>6~9</thingDefCountRange>
 				<countRange>1~2</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef" MayRequire="VanillaExpanded.VWE">
+				<thingDef>VWE_MeleeWeapon_Axe</thingDef>
+				<countRange>-1~2</countRange>
 			</li>
 		</generators>
 	</TG.NodeDef>
@@ -104,7 +127,17 @@
 				<thingDefCountRange>5~9</thingDefCountRange>
 				<countRange>1~2</countRange>
 			</li>
-			<!-- Unfortunately StoneBlocks are set to be only buyable. StockGenerator_Category bypasses this check. -->
+			<li Class="TG.StockGen.MultiDef" MayRequire="VanillaExpanded.VWE">
+				<thingDefs>
+					<li>VWE_MeleeWeapon_Pickaxe</li>
+					<li>VWE_MeleeWeapon_Shovel</li>
+				</thingDefs>
+				<thingDefCountRange>0~2</thingDefCountRange>
+				<countRange>0~2</countRange>
+			</li>
+			<!--
+			Purchases: Unfortunately StoneBlocks are set to be only buyable. StockGenerator_Category bypasses this check.
+			-->
 			<li Class="StockGenerator_Category">
 				<categoryDef>StoneBlocks</categoryDef>
 			</li>
@@ -170,6 +203,14 @@
 			<li Class="TG.StockGen.Jewelry">
 				<thingDefCountRange>3~5</thingDefCountRange>
 				<countRange>1</countRange>
+			</li>
+			<li Class="TG.StockGen.MultiDef" MayRequire="VanillaExpanded.VWE">
+				<thingDefs>
+					<li>VWE_MeleeWeapon_Pickaxe</li>
+					<li>VWE_MeleeWeapon_Shovel</li>
+				</thingDefs>
+				<thingDefCountRange>0~2</thingDefCountRange>
+				<countRange>0~2</countRange>
 			</li>
 		</generators>
 	</TG.NodeDef>

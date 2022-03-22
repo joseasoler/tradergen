@@ -60,6 +60,15 @@
 				<thingDefCountRange>2~4</thingDefCountRange>
 				<totalPriceRange>400~800</totalPriceRange>
 			</li>
+			<li Class="TG.StockGen.MultiDef" MayRequire="VanillaExpanded.VWE">
+				<thingDefs>
+					<li>VWE_MeleeWeapon_Hammer</li>
+					<li>VWE_MeleeWeapon_Pickaxe</li>
+					<li>VWE_MeleeWeapon_Wrench</li>
+				</thingDefs>
+				<thingDefCountRange>0~2</thingDefCountRange>
+				<countRange>0~2</countRange>
+			</li>
 		</generators>
 	</TG.NodeDef>
 </Defs>

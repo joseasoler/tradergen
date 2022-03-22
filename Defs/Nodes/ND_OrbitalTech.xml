@@ -3,6 +3,7 @@
 	<TG.NodeDef>
 		<defName>ND_OrbitalTech</defName>
 		<generators>
+			<!-- Sells -->
 			<li Class="StockGenerator_SingleDef">
 				<thingDef>ComponentIndustrial</thingDef>
 				<countRange>30~100</countRange>
@@ -54,6 +55,14 @@
 				<tradeTag>Artifact</tradeTag>
 				<thingDefCountRange>2~4</thingDefCountRange>
 				<countRange>1~1</countRange>
+			</li>
+			<li Class="TG.StockGen.MultiDef" MayRequire="VanillaExpanded.VWE">
+				<thingDefs>
+					<li>VWE_MeleeWeapon_Hammer</li>
+					<li>VWE_MeleeWeapon_Wrench</li>
+				</thingDefs>
+				<thingDefCountRange>0~2</thingDefCountRange>
+				<countRange>0~2</countRange>
 			</li>
 		</generators>
 	</TG.NodeDef>

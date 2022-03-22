@@ -129,6 +129,10 @@
 				<thingDefCountRange>3~6</thingDefCountRange>
 				<countRange>1</countRange>
 			</li>
+			<li Class="StockGenerator_SingleDef" MayRequire="VanillaExpanded.VWE">
+				<thingDef>VWE_Tool_Whip</thingDef>
+				<countRange>-1~2</countRange>
+			</li>
 		</generators>
 	</TG.NodeDef>
 </Defs>

@@ -56,7 +56,7 @@ TraderGen also provides extra features when certain mods are enabled, including 
 * [Vanilla Factions Expanded - Insectoids](https://steamcommunity.com/sharedfiles/filedetails/?id=2149755445)
   * Although the bio-engineering supplier no longer appears, orbital traders specialized in insectoid wares will usually have insectoid genomes and, more rarely, bio-engineering incubators in stock.
   * Uncommon trader specialized in insectoid wares, vat-grown insectoids and insectoid bio-engineering.
-  * Orbital traders will sometimes be specialized in insectoid animal products, chitin, and combat insectoids.
+  * Orbital traders will sometimes be specialized in insectoid animal products, chitin or combat insectoids.
 * [Vanilla Factions Expanded - Pirates](https://steamcommunity.com/sharedfiles/filedetails/?id=2723801948)
   * Ordnance orbital traders sometimes have field guns in stock.
 * [Vanilla Factions Expanded - Settlers](https://steamcommunity.com/sharedfiles/filedetails/?id=2052918119)
@@ -66,7 +66,7 @@ TraderGen also provides extra features when certain mods are enabled, including 
 * [Vanilla Furniture Expanded - Security](https://steamcommunity.com/workshop/filedetails/?id=1845154007)
   * Ordnance orbital traders sometimes have artillery in stock.
 * [Vanilla Weapons Expanded](https://steamcommunity.com/sharedfiles/filedetails/?id=1814383360)
-  * Tools will not be generated in place of regular weapons.
+  * Tools will not be generated in place of regular weapons, but orbital traders may have tools relevant to their specializations in stock.
   * Orbital traders specialized on hunting supplies will frequently have compound bows in stock.
 * [Vanilla Weapons Expanded - Grenades](https://steamcommunity.com/sharedfiles/filedetails/?id=2194472657)
   * Ordnance orbital traders will have some grenades in stock.

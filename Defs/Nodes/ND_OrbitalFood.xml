@@ -7,7 +7,10 @@
 			Sells canned food when Vanilla Cooking is enabled. Raw vanilla food otherwise.
 			See VanillaExpanded.VCookE.xml patch for details.
 			-->
-
+			<li Class="StockGenerator_SingleDef" MayRequire="VanillaExpanded.VWE">
+				<thingDef>VWE_MeleeWeapon_Cleaver</thingDef>
+				<countRange>-1~2</countRange>
+			</li>
 			<!-- Purchases -->
 			<li Class="TG.StockGen.FoodRaw"/>
 			<li Class="StockGenerator_Category" MayRequire="VanillaExpanded.VCookE">
@@ -197,6 +200,10 @@
 			<li Class="StockGenerator_SingleDef">
 				<thingDef>Kibble</thingDef>
 				<totalPriceRange>1200~1600</totalPriceRange>
+			</li>
+			<li Class="StockGenerator_SingleDef" MayRequire="VanillaExpanded.VWE">
+				<thingDef>VWE_Tool_Whip</thingDef>
+				<countRange>-1~2</countRange>
 			</li>
 			<!-- Purchases -->
 			<li Class="StockGenerator_Animals">
