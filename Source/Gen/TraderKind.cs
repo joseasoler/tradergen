@@ -99,7 +99,7 @@ namespace TG.Gen
 		/// <param name="fromTile">Map tile considered as the origin of the trader.</param>
 		/// <param name="faction">Faction of the trader.</param>
 		/// <param name="def">Trader definition being generated.</param>
-		private static void ApplyNode(in NodeDef nodeDef, in int fromTile, in Faction faction, ref TraderKindDef def)
+		public static void ApplyNode(in NodeDef nodeDef, in int fromTile, in Faction faction, ref TraderKindDef def)
 		{
 			if (nodeDef.generators != null)
 			{
@@ -138,13 +138,13 @@ namespace TG.Gen
 		}
 
 		/// <summary>
-		/// Generates a new trader definition.
+		/// Initializes a new TraderKindDef and prepares it for the procedural generation phase.
 		/// </summary>
 		/// <param name="genDef">Pattern used to generate the trader.</param>
 		/// <param name="fromTile">Map tile considered as the origin of the trader.</param>
 		/// <param name="faction">Faction of the trader.</param>
-		/// <returns>Procedurally generated TraderKindDef.</returns>
-		public TraderKindDef Generate(in TraderGenDef genDef, in int fromTile = -1, in Faction faction = null)
+		/// <returns>New TraderKindDef.</returns>
+		public TraderKindDef PreGenerate(in TraderGenDef genDef, in int fromTile = -1, in Faction faction = null)
 		{
 			if (Rand.stateStack.Count == 0)
 			{
@@ -178,25 +178,53 @@ namespace TG.Gen
 				permitRequiredForTrading = genDef.permitRequiredForTrading
 			};
 
+			return def;
+		}
+
+		/// <summary>
+		/// Generates a new trader definition.
+		/// </summary>
+		/// <param name="genDef">Pattern used to generate the trader.</param>
+		/// <param name="fromTile">Map tile considered as the origin of the trader.</param>
+		/// <param name="faction">Faction of the trader.</param>
+		/// <returns>Procedurally generated TraderKindDef.</returns>
+		public TraderKindDef Generate(in TraderGenDef genDef, in int fromTile = -1, in Faction faction = null)
+		{
+			var def = PreGenerate(genDef, fromTile, faction);
+
 			Logger.Gen($"Generating TraderKindDef {def.defName}.");
 
 			ProcGen(genDef, fromTile, faction, ref def);
 
+			PostGenerate(def, genDef, fromTile, faction);
+
+			Logger.Gen($"Finished generating TraderKindDef {def.defName}.");
+
+			return def;
+		}
+
+		/// <summary>
+		/// Finishes initialization of a procedurally generated trader definition.
+		/// </summary>
+		/// <param name="def">New trader definition.</param>
+		/// <param name="genDef">Pattern used to generate the trader.</param>
+		/// <param name="fromTile">Map tile considered as the origin of the trader.</param>
+		/// <param name="faction">Faction of the trader.</param>
+		public void PostGenerate(TraderKindDef def, in TraderGenDef genDef, in int fromTile = -1,
+			in Faction faction = null)
+		{
 			def.PostLoad();
 
 			// _defReferencesByName will already have a newDefName entry when called from ExposeData.
-			_defReferencesByName.TryAdd(newDefName, new TraderGenData
+			_defReferencesByName.TryAdd(def.defName, new TraderGenData
 			{
 				Def = genDef,
-				Seed = seed,
+				Seed = (int) Rand.seed,
 				FromTile = fromTile,
 				FactionDef = faction?.def
 			});
 			ShortHashGiver.GiveShortHash(def, def.GetType());
 			DefDatabase<TraderKindDef>.Add(def);
-			Logger.Gen($"Finished generating TraderKindDef {def.defName}.");
-
-			return def;
 		}
 
 		/// <summary>
