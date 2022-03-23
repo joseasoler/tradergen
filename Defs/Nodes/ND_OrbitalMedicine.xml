@@ -98,6 +98,12 @@
 				<thingDefCountRange>6~11</thingDefCountRange>
 				<countRange>1~2</countRange>
 			</li>
+			<li Class="TG.StockGen.TechHediff">
+				<minTechLevelGenerate>Archotech</minTechLevelGenerate>
+				<maxTechLevelGenerate>Archotech</maxTechLevelGenerate>
+				<thingDefCountRange>-3~1</thingDefCountRange>
+				<countRange>1</countRange>
+			</li>
 		</generators>
 	</TG.NodeDef>
 </Defs>
