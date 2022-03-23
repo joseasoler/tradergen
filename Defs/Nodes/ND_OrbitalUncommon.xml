@@ -75,6 +75,11 @@
 				<countRange>1~1</countRange>
 			</li>
 		</generators>
+		<next Class="TG.Next.All">
+			<nodes>
+				<li>ND_OrbitalCombatHiTech</li>
+			</nodes>
+		</next>
 	</TG.NodeDef>
 	<TG.NodeDef MayRequire="sarg.alphaanimals">
 		<defName>ND_OrbitalUncommonBiomaterials</defName>
@@ -134,5 +139,15 @@
 				<countRange>-1~2</countRange>
 			</li>
 		</generators>
+	</TG.NodeDef>
+	<TG.NodeDef>
+		<defName>ND_OrbitalUncommonInsectoid</defName>
+		<next Class="TG.Next.All">
+			<nodes>
+				<li>ND_OrbitalCombatInsectoid</li>
+				<li>ND_OrbitalFoodInsectoid</li>
+				<li MayRequire="OskarPotocki.VFE.Insectoid">ND_OrbitalFromStuffInsect</li>
+			</nodes>
+		</next>
 	</TG.NodeDef>
 </Defs>

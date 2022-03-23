@@ -253,30 +253,21 @@
 	</TG.NodeDef>
 	<TG.NodeDef>
 		<defName>ND_OrbitalIndependentUncommonGroups</defName>
-		<next Class="TG.Next.ChooseGroup">
-			<nodeGroups>
+		<next Class="TG.Next.ChooseN">
+			<nodes>
 				<li>
-					<nodes>
-						<li>ND_OrbitalUncommonHiTech</li>
-						<li>ND_OrbitalCombatHiTech</li>
-					</nodes>
-					<commonality>20</commonality>
+					<node>ND_OrbitalUncommonBiomaterials</node>
+					<commonality>100</commonality>
+				</li>
+				<li>
+					<node>ND_OrbitalUncommonHiTech</node>
+					<commonality>200</commonality>
 				</li>
 				<li MayRequire="OskarPotocki.VFE.Insectoid">
-					<nodes>
-						<li>ND_OrbitalCombatInsectoid</li>
-						<li>ND_OrbitalFoodInsectoid</li>
-						<li>ND_OrbitalFromStuffInsect</li>
-					</nodes>
-					<commonality>10</commonality>
+					<node>ND_OrbitalUncommonInsectoid</node>
+					<commonality>100</commonality>
 				</li>
-				<li MayRequire="sarg.alphaanimals">
-					<nodes>
-						<li>ND_OrbitalUncommonBiomaterials</li>
-					</nodes>
-					<commonality>10</commonality>
-				</li>
-			</nodeGroups>
+			</nodes>
 		</next>
 	</TG.NodeDef>
 </Defs>
