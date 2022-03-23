@@ -16,6 +16,11 @@
 				<thingDef>Neutroamine</thingDef>
 				<countRange>100~200</countRange>
 			</li>
+			<li Class="StockGenerator_Category">
+				<categoryDef>NeurotrainersSkill</categoryDef>
+				<thingDefCountRange>-1~2</thingDefCountRange>
+				<countRange>1~2</countRange>
+			</li>
 			<li Class="StockGenerator_SingleDef" MayRequire="VanillaExpanded.VWE">
 				<thingDef>VWE_MeleeWeapon_Scalpel</thingDef>
 				<countRange>0~2</countRange>
