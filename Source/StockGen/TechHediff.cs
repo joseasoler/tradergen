@@ -3,6 +3,9 @@ using Verse;
 
 namespace TG.StockGen
 {
+	/// <summary>
+	/// Produces bionics with a selection curve that makes very cheap and very expensive bionics less common.
+	/// </summary>
 	public class TechHediff : ConditionMatcher
 	{
 		protected override bool CanBuy(in ThingDef def)

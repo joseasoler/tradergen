@@ -36,6 +36,10 @@
 					<node>ND_OrbitalMedicineDrugs</node>
 					<commonality>100</commonality>
 				</li>
+				<li>
+					<node>ND_OrbitalMedicineBionics</node>
+					<commonality>50</commonality>
+				</li>
 			</nodes>
 		</next>
 	</TG.NodeDef>
@@ -81,6 +85,18 @@
 				<maxTechLevelGenerate>Spacer</maxTechLevelGenerate>
 				<thingDefCountRange>2~3</thingDefCountRange>
 				<totalPriceRange>900~1600</totalPriceRange>
+			</li>
+		</generators>
+	</TG.NodeDef>
+	<TG.NodeDef>
+		<defName>ND_OrbitalMedicineBionics</defName>
+		<generators>
+			<!-- Sells -->
+			<li Class="TG.StockGen.TechHediff">
+				<minTechLevelGenerate>Industrial</minTechLevelGenerate>
+				<maxTechLevelGenerate>Ultra</maxTechLevelGenerate>
+				<thingDefCountRange>6~11</thingDefCountRange>
+				<countRange>1~2</countRange>
 			</li>
 		</generators>
 	</TG.NodeDef>
