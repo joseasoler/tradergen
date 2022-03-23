@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using RimWorld;
@@ -58,12 +59,23 @@ namespace TG.Debug
 		}
 
 		/// <summary>
+		/// Sort DebugMenuOptions by label.
+		/// </summary>
+		/// <param name="a">First menu option.</param>
+		/// <param name="b">Second menu option.</param>
+		/// <returns></returns>
+		private static int CompareDebugMenuOptions(DebugMenuOption a, DebugMenuOption b)
+		{
+			return string.Compare(a.label, b.label, StringComparison.Ordinal);
+		}
+
+		/// <summary>
 		/// Generates a new orbital trade ship with a TraderGenDef and NodeDef chosen by the user.
 		/// </summary>
 		[DebugAction("TraderGen", allowedGameStates = AllowedGameStates.PlayingOnMap)]
 		private static void GenerateOrbitalTrader()
 		{
-			var options = DefDatabase<TraderGenDef>.AllDefs.Where(t => t.orbital)
+			var genDefOptions = DefDatabase<TraderGenDef>.AllDefs.Where(t => t.orbital)
 				.Select(genDef =>
 					new DebugMenuOption(genDef.label, DebugMenuOptionMode.Action, () =>
 					{
@@ -74,10 +86,12 @@ namespace TG.Debug
 									Find.CurrentMap.passingShipManager.DebugSendAllShipsAway();
 									OrbitalTraderArrival.Arrive(new IncidentParms {target = Find.CurrentMap}, genDef,
 										traderGenDef => DoGenerateTrader(traderGenDef, nodeDef));
-								}));
+								})).ToList();
+						nodeDefsOptions.Sort(CompareDebugMenuOptions);
 						Find.WindowStack.Add(new Dialog_DebugOptionListLister(nodeDefsOptions));
-					}));
-			Find.WindowStack.Add(new Dialog_DebugOptionListLister(options));
+					})).ToList();
+			genDefOptions.Sort(CompareDebugMenuOptions);
+			Find.WindowStack.Add(new Dialog_DebugOptionListLister(genDefOptions));
 		}
 	}
 }
