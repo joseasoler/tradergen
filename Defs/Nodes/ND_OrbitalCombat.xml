@@ -61,6 +61,12 @@
 				<thingDefCountRange>7~11</thingDefCountRange>
 				<countRange>1~2</countRange>
 			</li>
+			<li Class="TG.StockGen.TechHediff">
+				<minTechLevelGenerate>Industrial</minTechLevelGenerate>
+				<maxTechLevelGenerate>Spacer</maxTechLevelGenerate>
+				<thingDefCountRange>-1~2</thingDefCountRange>
+				<countRange>1</countRange>
+			</li>
 			<!-- Purchases -->
 			<li Class="StockGenerator_Category">
 				<categoryDef>Drugs</categoryDef>
@@ -317,6 +323,12 @@
 			<li Class="StockGenerator_WeaponsMelee" MayRequire="Ludeon.RimWorld.Royalty">
 				<weaponTag>UltratechMelee</weaponTag>
 				<countRange>-1~2</countRange>
+			</li>
+			<li Class="TG.StockGen.TechHediff">
+				<minTechLevelGenerate>Ultra</minTechLevelGenerate>
+				<maxTechLevelGenerate>Ultra</maxTechLevelGenerate>
+				<thingDefCountRange>-1~2</thingDefCountRange>
+				<countRange>1</countRange>
 			</li>
 		</generators>
 	</TG.NodeDef>
