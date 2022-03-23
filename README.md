@@ -26,6 +26,7 @@ TraderGen should support all mods out of the box; please submit a [bug report](C
 TraderGen also provides extra features when certain mods are enabled, including specific trader types, stock combinations and other tweaks to improve the experience. TraderGen includes extra content for the following mods:  
 
 * [Alpha Animals](https://steamcommunity.com/sharedfiles/filedetails/?id=1541721856):
+  * Healthcare orbital traders sometimes carry a limited stock of cactipine quills.
   * Traders with insectoid genomes from Vanilla Factions Expanded - Insectoids will have Black Hive genome in stock when appropriate.
   * Traders purchasing insectoid animal products or gluttonous foods will also purchase Black Hive insect jelly.
   * Uncommon biomaterials orbital trader. 

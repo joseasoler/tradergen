@@ -25,5 +25,58 @@
 				<countRange>0~2</countRange>
 			</li>
 		</generators>
+		<next Class="TG.Next.ChooseN">
+			<nodes>
+				<li>
+					<node>ND_OrbitalMedicineDrugs</node>
+					<commonality>100</commonality>
+				</li>
+			</nodes>
+		</next>
+	</TG.NodeDef>
+	<TG.NodeDef>
+		<defName>ND_OrbitalMedicineDrugs</defName>
+		<generators>
+			<!-- Sells -->
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>MedicineHerbal</thingDef>
+				<countRange>100~250</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef" MayRequire="sarg.alphaanimals">
+				<thingDef>AA_CactipineQuill</thingDef>
+				<countRange>-10~20</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>MedicineIndustrial</thingDef>
+				<countRange>20~30</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>MedicineUltratech</thingDef>
+				<countRange>15~25</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>Neutroamine</thingDef>
+				<countRange>150~300</countRange>
+			</li>
+			<li Class="TG.StockGen.Drugs">
+				<drugCategory>Social</drugCategory>
+				<thingDefCountRange>1~2</thingDefCountRange>
+				<totalPriceRange>700~1400</totalPriceRange>
+			</li>
+			<li Class="TG.StockGen.Drugs">
+				<drugCategory>Medical</drugCategory>
+				<minTechLevelGenerate>Industrial</minTechLevelGenerate>
+				<maxTechLevelGenerate>Spacer</maxTechLevelGenerate>
+				<thingDefCountRange>1~2</thingDefCountRange>
+				<totalPriceRange>800~1300</totalPriceRange>
+			</li>
+			<li Class="TG.StockGen.Drugs">
+				<drugCategory>Hard</drugCategory>
+				<minTechLevelGenerate>Industrial</minTechLevelGenerate>
+				<maxTechLevelGenerate>Spacer</maxTechLevelGenerate>
+				<thingDefCountRange>2~3</thingDefCountRange>
+				<totalPriceRange>900~1600</totalPriceRange>
+			</li>
+		</generators>
 	</TG.NodeDef>
 </Defs>
