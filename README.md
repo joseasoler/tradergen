@@ -15,10 +15,6 @@ Keep in mind that since TraderGen overhauls orbital trade ship generation, orbit
 * Uncommon orbital traders are very specialized and carry rare wares.
 * Customizable amount of silver for orbital traders.
 
-## Contributions
-
-This project encourages community involvement and contributions. Check the [CONTRIBUTING](CONTRIBUTING.md) file for details. Existing contributors can be checked in the [contributors list](https://gitlab.com/joseasoler/tradergen/-/graphs/main).
-
 ## Mod support
 
 TraderGen should support all mods out of the box; please submit a [bug report](CONTRIBUTING.md) if you find any issues.
@@ -75,6 +71,16 @@ TraderGen also provides extra features when certain mods are enabled, including 
   * Ordnance orbital traders will have some grenades in stock.
 * [Vanilla Weapons Expanded - Non-Lethal](https://steamcommunity.com/sharedfiles/filedetails/?id=2454918354)
   * Orbital traders specialized on hunting supplies will frequently have dart guns in stock.
+
+## Development
+
+To compile this mod on Windows, you will need to install the [.NET Framework 4.7.2 Developer Pack](https://dotnet.microsoft.com/en-us/download/dotnet-framework/net472). On Linux the packages you need vary depending on your distribution of choice.
+
+Dependencies are managed using NuGet. Compiling this project does not require any [external dependencies or extra setup steps](https://ludeon.com/forums/index.php?topic=49914.0).
+
+## Contributions
+
+This project encourages community involvement and contributions. Check the [CONTRIBUTING](CONTRIBUTING.md) file for details. Existing contributors can be checked in the [contributors list](https://gitlab.com/joseasoler/tradergen/-/graphs/main).
 
 ## License
 
