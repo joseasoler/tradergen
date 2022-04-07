@@ -24,11 +24,8 @@
 		<Compile Include="Debug\DebugActions.cs" />
 		<Compile Include="DefOf\JoyKind.cs" />
 		<Compile Include="DefOf\ThingCategory.cs" />
-		<Compile Include="Gen\TraderKind.cs" />
-		<Compile Include="Harmony\DebugActionAddTradeShip.cs" />
-		<Compile Include="Harmony\DebugActionReplaceAllTradeShips.cs" />
-		<Compile Include="Harmony\IncidentOrbitalTraderArrival.cs" />
-		<Compile Include="Harmony\Mod\TraderShips.cs" />
+		<Compile Include="Gen\GenResult.cs" />
+		<Compile Include="Gen\Gen.cs" />
 		<Compile Include="Harmony\TradeShip.cs" />
 		<Compile Include="Next\All.cs" />
 		<Compile Include="Next\ChooseGroup.cs" />
@@ -65,10 +62,8 @@
 		<Compile Include="StockGen\Weapon.cs" />
 		<Compile Include="StockGen\WeaponMelee.cs" />
 		<Compile Include="StockGen\WeaponRanged.cs" />
-		<Compile Include="TraderGenDef.cs" />
-		<Compile Include="Trader\OrbitalTraderArrival.cs" />
+		<Compile Include="TraderKind\GenExtension.cs" />
 		<Reference Include="System" />
-		<PackageReference Include="DeepCloner" Version="0.10.*" />
 		<PackageReference Include="Lib.Harmony" Version="2.*" ExcludeAssets="runtime" />
 		<PackageReference Include="Krafs.Publicizer" Version="1.*" />
 		<Compile Include="Harmony\HarmonyInitialization.cs" />
@@ -83,6 +78,10 @@
 	<ItemGroup>
 		<!-- Allow access to private definitions in the RimWorld DLL. -->
 		<Publicize Include="Assembly-CSharp" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="TraderKind" />
 	</ItemGroup>
 
 	<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

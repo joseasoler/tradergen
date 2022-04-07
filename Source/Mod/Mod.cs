@@ -35,10 +35,6 @@ namespace TG.Mod
 			var listing = new Listing_Standard();
 			listing.Begin(inRect);
 
-			listing.Label("TG_MaxOrbitalShips".Translate(Settings.MaxOrbitalShips), -1,
-				"TG_MaxOrbitalShipsTooltip".Translate());
-			Settings.MaxOrbitalShips = (int) listing.Slider(Settings.MaxOrbitalShips, 1.0f, 10.0f);
-
 			listing.Label("TG_SilverStockOrbitalTrader".Translate((int) Settings.OrbitalSilverScaling), -1,
 				"TG_SilverStockOrbitalTraderTooltip".Translate());
 			Settings.OrbitalSilverScaling = listing.Slider(Settings.OrbitalSilverScaling, Settings.MinSilverScaling,

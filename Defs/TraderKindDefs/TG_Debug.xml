@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<!-- Used for debug actions only. -->
+	<TraderKindDef>
+		<defName>TG_OrbitalDebug</defName>
+		<label>debug node ship</label>
+		<orbital>true</orbital>
+		<requestable>false</requestable>
+		<commonality>0</commonality>
+		<modExtensions>
+			<li Class="TG.TraderKind.GenExtension">
+				<!-- This value will be overwritten by the GenerateOrbitalTrader debug action. -->
+				<node>ND_OrbitalIndependentSmall</node>
+			</li>
+		</modExtensions>
+	</TraderKindDef>
+</Defs>

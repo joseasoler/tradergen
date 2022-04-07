@@ -1,15 +1,9 @@
-using System.Collections.Generic;
 using Verse;
 
 namespace TG.Mod
 {
 	public class SettingValues
 	{
-		/// <summary>
-		/// Maximum number of orbital ships allowed at the same time.
-		/// </summary>
-		public int MaxOrbitalShips = 5;
-
 		/// <summary>
 		/// Silver stock of orbital traders in %.
 		/// </summary>
@@ -32,15 +26,6 @@ namespace TG.Mod
 	public class Settings : ModSettings
 	{
 		private static SettingValues _values = new SettingValues();
-
-		/// <summary>
-		/// Maximum number of orbital ships allowed at the same time.
-		/// </summary>
-		public static int MaxOrbitalShips
-		{
-			get => _values.MaxOrbitalShips;
-			set => _values.MaxOrbitalShips = value;
-		}
 
 		/// <summary>
 		/// Silver stock of orbital traders in %.
@@ -90,7 +75,6 @@ namespace TG.Mod
 		public override void ExposeData()
 		{
 			base.ExposeData();
-			Scribe_Values.Look(ref _values.MaxOrbitalShips, "MaxOrbitalShips");
 			Scribe_Values.Look(ref _values.OrbitalSilverScaling, "OrbitalSilverScaling");
 			Scribe_Values.Look(ref _values.LogGen, "LogGen");
 			Scribe_Values.Look(ref _values.LogStockGen, "LogStockGen");
