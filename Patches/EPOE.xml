@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Disable Prostheses and Textiles Trader as their role is fulfilled by some specializations.
+-->
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Expanded Prosthetics and Organ Engineering</li>
+			<li>Expanded Prosthetics and Organ Engineering - Forked</li>
+		</mods>
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/TraderKindDef[defName="ProsthesesTrader" or defName="TextilesTrader"]
+			</xpath>
+			<value>
+				<commonality>0</commonality>
+			</value>
+		</match>
+	</Operation>
+</Patch>
