@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- When Vanilla Factions Expanded - Insectoids is not found, ND_OrbitalCombatInsectoid sells vanilla insectoids. -->
 <Patch>
 	<Operation Class="PatchOperationFindMod">
 		<mods>
