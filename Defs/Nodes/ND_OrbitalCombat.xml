@@ -67,6 +67,11 @@
 				<thingDefCountRange>-1~2</thingDefCountRange>
 				<countRange>1</countRange>
 			</li>
+			<li Class="StockGenerator_Category" MayRequire="vat.epoeforked">
+				<categoryDef>EPIA_OrganicOptimizer</categoryDef>
+				<thingDefCountRange>-1~1</thingDefCountRange>
+				<countRange>1</countRange>
+			</li>
 			<!-- Purchases -->
 			<li Class="StockGenerator_Category">
 				<categoryDef>Drugs</categoryDef>
@@ -328,6 +333,11 @@
 				<minTechLevelGenerate>Ultra</minTechLevelGenerate>
 				<maxTechLevelGenerate>Ultra</maxTechLevelGenerate>
 				<thingDefCountRange>-1~2</thingDefCountRange>
+				<countRange>1</countRange>
+			</li>
+			<li Class="StockGenerator_Category" MayRequire="vat.epoeforked">
+				<categoryDef>EPIA_OrganicOptimizer</categoryDef>
+				<thingDefCountRange>0~2</thingDefCountRange>
 				<countRange>1</countRange>
 			</li>
 		</generators>

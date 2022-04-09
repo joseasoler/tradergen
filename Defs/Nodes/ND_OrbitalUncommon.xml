@@ -121,13 +121,6 @@
 				<countRange>1</countRange>
 			</li>
 			<li Class="TG.StockGen.StuffFromThingDef">
-				<thingDef>DevilstrandCloth</thingDef>
-				<maxTechLevelGenerate>Spacer</maxTechLevelGenerate>
-				<stuffCountRange>300~500</stuffCountRange>
-				<thingDefCountRange>3~6</thingDefCountRange>
-				<countRange>1</countRange>
-			</li>
-			<li Class="TG.StockGen.StuffFromThingDef">
 				<thingDef>Synthread</thingDef>
 				<maxTechLevelGenerate>Spacer</maxTechLevelGenerate>
 				<stuffCountRange>300~500</stuffCountRange>

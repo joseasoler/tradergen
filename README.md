@@ -26,11 +26,19 @@ TraderGen also provides extra features when certain mods are enabled, including 
 * Traders purchasing insectoid animal products or gluttonous foods will also purchase Black Hive insect jelly.
 * Uncommon biomaterials orbital trader.
 
-[Expanded Prosthetics and Organ Engineering](https://steamcommunity.com/sharedfiles/filedetails/?id=725956940) / [Expanded Prosthetics and Organ Engineering - Forked](https://steamcommunity.com/sharedfiles/filedetails/?id=1949064302):
+[Expanded Prosthetics and Organ Engineering](https://steamcommunity.com/sharedfiles/filedetails/?id=725956940)
 
-* Many orbital trader specializations carry prosthetics, both from vanilla and from these mods.
+* Many orbital trader specializations carry prosthetics, both from vanilla and from this mod.
 * The prosthesis orbital trader no longer appears, but the role it fulfilled is now split between different orbital trader categories.
 * The textiles trader no longer appears, but there are multiple orbital trader categories specialized on textiles.
+  
+[Expanded Prosthetics and Organ Engineering - Forked](https://steamcommunity.com/sharedfiles/filedetails/?id=1949064302):
+
+* Many orbital trader specializations carry prosthetics, both from vanilla and from this mod.
+* The prosthesis orbital trader no longer appears, but the role it fulfilled is now split between different orbital trader categories.
+* The textiles trader no longer appears, but there are multiple orbital trader categories specialized on textiles.
+* Tech and bionic orbital traders may have MA-AI chips in stock.
+* Combat and body part orbital traders organic may have optimizing nanobots and instinct optimizing nanobots in stock.
 
 [Jewelry](https://steamcommunity.com/workshop/filedetails/?id=2020964421):
 
