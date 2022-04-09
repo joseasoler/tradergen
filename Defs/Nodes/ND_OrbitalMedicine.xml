@@ -138,7 +138,7 @@
 		<defName>ND_OrbitalMedicineInsect</defName>
 		<generators>
 			<!-- Sells -->
-			<li Class="TG.StockGen.MultiDef" MayRequire="OskarPotocki.VFE.Insectoid">
+			<li Class="TG.StockGen.MultiDef">
 				<thingDefs>
 					<li>VFEI_DroneGenome</li>
 					<li>VFEI_RoyalGenome</li>

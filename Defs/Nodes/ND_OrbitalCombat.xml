@@ -202,7 +202,7 @@
 		<defName>ND_OrbitalCombatInsectoid</defName>
 		<generators>
 			<!--
-			Sells vanilla insectoids when VFE.Insectoid is not found. Check Patch_ND_OrbitalCombatInsectoid for details.
+			Without VFE-I, it sells vanilla insectoids instead. See OskarPotocki.VFE.Insectoid.xml for details.
 			-->
 			<li Class="StockGenerator_SingleDef" MayRequire="OskarPotocki.VFE.Insectoid">
 				<thingDef>VFEI_WarriorGenome</thingDef>
@@ -223,24 +223,29 @@
 			</li>
 			<li Class="StockGenerator_SingleDef" MayRequire="OskarPotocki.VFE.Insectoid">
 				<thingDef>VFEI_SonicInfestationRepeller</thingDef>
-				<countRange>-2~1</countRange>
+				<countRange>0~1</countRange>
 			</li>
 			<li Class="StockGenerator_SingleDef">
 				<thingDef>Kibble</thingDef>
-				<totalPriceRange>400~800</totalPriceRange>
+				<totalPriceRange>1000~1300</totalPriceRange>
 			</li>
 			<li Class="TG.StockGen.AnimalMultiDef" MayRequire="OskarPotocki.VFE.Insectoid">
 				<pawnKindDefs>
+					<li MayRequire="sarg.alphaanimals">AA_BlackSpider</li>
+					<li MayRequire="sarg.alphaanimals">AA_BlackScarab</li>
+					<li MayRequire="sarg.alphaanimals">AA_BlackSpelopede</li>
+					<li MayRequire="sarg.alphaanimals">AA_MegaLouse</li>
+					<li MayRequire="sarg.alphaanimals">AA_MammothWorm</li>
+					<li>VFEI_VatGrownGigalocust</li>
+					<li>VFEI_VatGrownGigascorpion</li>
+					<li>VFEI_VatGrownMegapede</li>
 					<li>VFEI_VatGrownMegascarab</li>
 					<li>VFEI_VatgrownMegaspider</li>
 					<li>VFEI_VatGrownSpelopede</li>
 					<li>VFEI_VatGrownWargling</li>
-					<li>VFEI_VatGrownGigascorpion</li>
-					<li>VFEI_VatGrownMegapede</li>
-					<li>VFEI_VatGrownGigalocust</li>
 				</pawnKindDefs>
 				<newborn>true</newborn>
-				<kindCountRange>3~4</kindCountRange>
+				<kindCountRange>3~5</kindCountRange>
 				<totalPriceRange>700~1900</totalPriceRange>
 			</li>
 			<!-- Purchases -->
