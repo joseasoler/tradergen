@@ -16,10 +16,6 @@ namespace TG.StockGen
 
 		public ThingDef StuffDef => _stuffDef;
 
-		protected int _fromTile = -1;
-
-		protected Faction _faction = null;
-
 		public override void ConditionToText(ref StringBuilder b)
 		{
 			base.ConditionToText(ref b);
@@ -42,8 +38,6 @@ namespace TG.StockGen
 		public override void SetTraderInfo(in int fromTile, in Faction faction)
 		{
 			base.SetTraderInfo(fromTile, faction);
-			_fromTile = fromTile;
-			_faction = faction;
 			SetStuffDef();
 		}
 
