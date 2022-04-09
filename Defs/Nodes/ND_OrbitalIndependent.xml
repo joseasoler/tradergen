@@ -255,7 +255,7 @@
 		<defName>ND_OrbitalIndependentUncommonGroups</defName>
 		<next Class="TG.Next.ChooseN">
 			<nodes>
-				<li>
+				<li MayRequire="sarg.alphaanimals">
 					<node>ND_OrbitalUncommonBiomaterials</node>
 					<commonality>100</commonality>
 				</li>
