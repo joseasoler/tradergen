@@ -133,15 +133,88 @@
 			</nodes>
 		</next>
 	</TG.NodeDef>
-	<TG.NodeDef>
+	<TG.NodeDef MayRequire="OskarPotocki.VFE.Insectoid">
 		<defName>ND_OrbitalUncommonInsectoid</defName>
-		<next Class="TG.Next.All">
-			<nodes>
-				<li>ND_OrbitalCombatInsectoid</li>
-				<li>ND_OrbitalFoodInsectoid</li>
-				<li MayRequire="OskarPotocki.VFE.Insectoid">ND_OrbitalFromStuffInsect</li>
-			</nodes>
-		</next>
+		<generators>
+			<!-- Sells -->
+			<li Class="TG.StockGen.InsectMeat">
+				<thingDefCountRange>1</thingDefCountRange>
+				<totalPriceRange>2300~3400</totalPriceRange>
+			</li>
+			<li Class="TG.StockGen.MultiDef">
+				<thingDefs>
+					<li>InsectJelly</li>
+					<li MayRequire="VanillaExpanded.VCookE">VCE_InsectJellyPreserves</li>
+					<li MayRequire="sarg.alphaanimals">AA_BlackInsectJelly</li>
+					<li>VFEI_RoyalInsectJelly</li>
+					<li>VFEI_InsectMilk</li>
+					<li>VFEI_EggInsectoidUnfertilized</li>
+				</thingDefs>
+				<thingDefCountRange>4~6</thingDefCountRange>
+				<totalPriceRange>1000~1550</totalPriceRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>VFEI_BioengineeringIncubator</thingDef>
+				<countRange>1~2</countRange>
+			</li>
+			<li Class="TG.StockGen.MultiDef">
+				<thingDefs>
+					<li>VFEI_DroneGenome</li>
+					<li>VFEI_RoyalGenome</li>
+					<li>VFEI_WarriorGenome</li>
+					<li MayRequire="sarg.alphaanimals">VFEI_BlackHiveGenome</li>
+				</thingDefs>
+				<thingDefCountRange>4</thingDefCountRange>
+				<countRange>4~12</countRange>
+			</li>
+			<li Class="TG.StockGen.AnimalMultiDef">
+				<pawnKindDefs>
+					<li MayRequire="sarg.alphaanimals">AA_BlackSpider</li>
+					<li MayRequire="sarg.alphaanimals">AA_BlackScarab</li>
+					<li MayRequire="sarg.alphaanimals">AA_BlackSpelopede</li>
+					<li MayRequire="sarg.alphaanimals">AA_MegaLouse</li>
+					<li MayRequire="sarg.alphaanimals">AA_MammothWorm</li>
+					<li>VFEI_VatGrownGigalocust</li>
+					<li>VFEI_VatGrownGigascorpion</li>
+					<li>VFEI_VatGrownMegascarab</li>
+					<li>VFEI_VatgrownMegaspider</li>
+					<li>VFEI_VatGrownMilkbeetle</li>
+					<li>VFEI_VatGrownMegapede</li>
+					<li>VFEI_VatGrownPrincess</li>
+					<li>VFEI_VatgrownRoyalLarva</li>
+					<li>VFEI_VatGrownRoyalMaggot</li>
+					<li>VFEI_VatGrownSpelopede</li>
+					<li>VFEI_VatGrownWargling</li>
+				</pawnKindDefs>
+				<newborn>true</newborn>
+				<kindCountRange>4~8</kindCountRange>
+				<totalPriceRange>900~2000</totalPriceRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>Kibble</thingDef>
+				<totalPriceRange>2400~3900</totalPriceRange>
+			</li>
+			<li Class="StockGenerator_SingleDef" MayRequire="VanillaExpanded.VWE">
+				<thingDef>VWE_Tool_Whip</thingDef>
+				<countRange>1~4</countRange>
+			</li>
+			<li Class="StockGenerator_Category">
+				<categoryDef>VFEI_BodyPartsInsect</categoryDef>
+				<thingDefCountRange>3~6</thingDefCountRange>
+				<countRange>1~2</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>VFEI_SonicInfestationRepeller</thingDef>
+				<countRange>1</countRange>
+			</li>
+			<!-- Purchases -->
+			<li Class="StockGenerator_Animals">
+				<tradeTagsBuy>
+					<li>AnimalInsect</li>
+					<li>AnimalExotic</li>
+				</tradeTagsBuy>
+			</li>
+		</generators>
 	</TG.NodeDef>
 	<TG.NodeDef>
 		<defName>ND_OrbitalUncommonTailor</defName>
