@@ -267,6 +267,10 @@
 					<node>ND_OrbitalUncommonInsectoid</node>
 					<commonality>100</commonality>
 				</li>
+				<li>
+					<node>ND_OrbitalUncommonTailor</node>
+					<commonality>100</commonality>
+				</li>
 			</nodes>
 		</next>
 	</TG.NodeDef>

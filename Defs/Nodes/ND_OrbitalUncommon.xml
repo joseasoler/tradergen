@@ -143,4 +143,37 @@
 			</nodes>
 		</next>
 	</TG.NodeDef>
+	<TG.NodeDef>
+		<defName>ND_OrbitalUncommonTailor</defName>
+		<generators>
+			<!-- Sells -->
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>Cloth</thingDef>
+				<totalPriceRange>1600~2400</totalPriceRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>Synthread</thingDef>
+				<totalPriceRange>1600~2400</totalPriceRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>Hyperweave</thingDef>
+				<totalPriceRange>1600~2400</totalPriceRange>
+			</li>
+			<li Class="StockGenerator_Category">
+				<categoryDef>Textiles</categoryDef>
+				<excludedThingDefs>
+					<li>Cloth</li>
+					<li>Synthread</li>
+					<li>Hyperweave</li>
+				</excludedThingDefs>
+				<thingDefCountRange>7~11</thingDefCountRange>
+				<totalPriceRange>1600~2400</totalPriceRange>
+			</li>
+			<li Class="StockGenerator_Category">
+				<categoryDef>Apparel</categoryDef>
+				<thingDefCountRange>4~9</thingDefCountRange>
+				<countRange>1~2</countRange>
+			</li>
+		</generators>
+	</TG.NodeDef>
 </Defs>

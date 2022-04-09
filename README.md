@@ -30,13 +30,13 @@ TraderGen also provides extra features when certain mods are enabled, including 
 
 * Many orbital trader specializations carry prosthetics, both from vanilla and from this mod.
 * The prosthesis orbital trader no longer appears, but the role it fulfilled is now split between different orbital trader categories.
-* The textiles trader no longer appears, but there are multiple orbital trader categories specialized on textiles.
+* The textiles trader is now a rare type of uncommon orbital trader. Other orbital trader specialities carry synthread and hyperweave more frequently.
   
 [Expanded Prosthetics and Organ Engineering - Forked](https://steamcommunity.com/sharedfiles/filedetails/?id=1949064302):
 
 * Many orbital trader specializations carry prosthetics, both from vanilla and from this mod.
 * The prosthesis orbital trader no longer appears, but the role it fulfilled is now split between different orbital trader categories.
-* The textiles trader no longer appears, but there are multiple orbital trader categories specialized on textiles.
+* The textiles trader is now a rare type of uncommon orbital trader. Other orbital trader specialities carry synthread and hyperweave more frequently.
 * Tech and bionic orbital traders may have MA-AI chips in stock.
 * Combat and body part orbital traders organic may have optimizing nanobots and instinct optimizing nanobots in stock.
 
