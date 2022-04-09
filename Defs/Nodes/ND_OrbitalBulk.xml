@@ -49,7 +49,7 @@
 				<excludedThingDefs>
 					<li>Leather_Human</li>
 				</excludedThingDefs>
-				<thingDefCountRange>1~2</thingDefCountRange>
+				<thingDefCountRange>2~4</thingDefCountRange>
 				<totalPriceRange>1100~2000</totalPriceRange>
 			</li>
 			<li Class="StockGenerator_Category">
