@@ -1,5 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
+	<TG.NodeDef MayRequire="sarg.alphaanimals">
+		<defName>ND_OrbitalUncommonBiomaterials</defName>
+		<generators>
+			<!-- Sells -->
+			<li Class="TG.StockGen.AnimalMultiDef">
+				<pawnKindDefs>
+					<li>AA_Aerofleet</li>
+					<li>AA_AngelMoth</li>
+					<li>AA_DevilSheep</li>
+					<li>AA_Feralisk</li>
+					<li>AA_IronhuskBeetle</li>
+					<li>AA_Radyak</li>
+					<li>AA_Terramorph</li>
+					<li>AA_WaywardMobileAssembler</li>
+				</pawnKindDefs>
+				<kindCountRange>3~4</kindCountRange>
+				<totalPriceRange>700~800</totalPriceRange>
+			</li>
+			<li Class="TG.StockGen.StuffFromThingDef">
+				<thingDef>DevilstrandCloth</thingDef>
+				<maxTechLevelGenerate>Spacer</maxTechLevelGenerate>
+				<stuffCountRange>300~500</stuffCountRange>
+				<thingDefCountRange>3~6</thingDefCountRange>
+				<countRange>1</countRange>
+			</li>
+			<li Class="TG.StockGen.StuffFromThingDef">
+				<thingDef>AA_MothSilk</thingDef>
+				<maxTechLevelGenerate>Spacer</maxTechLevelGenerate>
+				<stuffCountRange>300~500</stuffCountRange>
+				<thingDefCountRange>3~6</thingDefCountRange>
+				<countRange>1</countRange>
+			</li>
+			<li Class="TG.StockGen.StuffFromThingDef">
+				<thingDef>AA_SkySteel</thingDef>
+				<maxTechLevelGenerate>Spacer</maxTechLevelGenerate>
+				<stuffCountRange>300~500</stuffCountRange>
+				<thingDefCountRange>3~6</thingDefCountRange>
+				<countRange>1</countRange>
+			</li>
+			<li Class="TG.StockGen.StuffFromThingDef">
+				<thingDef>Synthread</thingDef>
+				<maxTechLevelGenerate>Spacer</maxTechLevelGenerate>
+				<stuffCountRange>300~500</stuffCountRange>
+				<thingDefCountRange>3~6</thingDefCountRange>
+				<countRange>1</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef" MayRequire="VanillaExpanded.VWE">
+				<thingDef>VWE_Tool_Whip</thingDef>
+				<countRange>-1~2</countRange>
+			</li>
+		</generators>
+	</TG.NodeDef>
 	<TG.NodeDef>
 		<defName>ND_OrbitalUncommonHiTech</defName>
 		<generators>
@@ -80,58 +132,6 @@
 				<li>ND_OrbitalCombatHiTech</li>
 			</nodes>
 		</next>
-	</TG.NodeDef>
-	<TG.NodeDef MayRequire="sarg.alphaanimals">
-		<defName>ND_OrbitalUncommonBiomaterials</defName>
-		<generators>
-			<!-- Sells -->
-			<li Class="TG.StockGen.AnimalMultiDef">
-				<pawnKindDefs>
-					<li>AA_Aerofleet</li>
-					<li>AA_AngelMoth</li>
-					<li>AA_DevilSheep</li>
-					<li>AA_Feralisk</li>
-					<li>AA_IronhuskBeetle</li>
-					<li>AA_Radyak</li>
-					<li>AA_Terramorph</li>
-					<li>AA_WaywardMobileAssembler</li>
-				</pawnKindDefs>
-				<kindCountRange>3~4</kindCountRange>
-				<totalPriceRange>700~800</totalPriceRange>
-			</li>
-			<li Class="TG.StockGen.StuffFromThingDef">
-				<thingDef>DevilstrandCloth</thingDef>
-				<maxTechLevelGenerate>Spacer</maxTechLevelGenerate>
-				<stuffCountRange>300~500</stuffCountRange>
-				<thingDefCountRange>3~6</thingDefCountRange>
-				<countRange>1</countRange>
-			</li>
-			<li Class="TG.StockGen.StuffFromThingDef">
-				<thingDef>AA_MothSilk</thingDef>
-				<maxTechLevelGenerate>Spacer</maxTechLevelGenerate>
-				<stuffCountRange>300~500</stuffCountRange>
-				<thingDefCountRange>3~6</thingDefCountRange>
-				<countRange>1</countRange>
-			</li>
-			<li Class="TG.StockGen.StuffFromThingDef">
-				<thingDef>AA_SkySteel</thingDef>
-				<maxTechLevelGenerate>Spacer</maxTechLevelGenerate>
-				<stuffCountRange>300~500</stuffCountRange>
-				<thingDefCountRange>3~6</thingDefCountRange>
-				<countRange>1</countRange>
-			</li>
-			<li Class="TG.StockGen.StuffFromThingDef">
-				<thingDef>Synthread</thingDef>
-				<maxTechLevelGenerate>Spacer</maxTechLevelGenerate>
-				<stuffCountRange>300~500</stuffCountRange>
-				<thingDefCountRange>3~6</thingDefCountRange>
-				<countRange>1</countRange>
-			</li>
-			<li Class="StockGenerator_SingleDef" MayRequire="VanillaExpanded.VWE">
-				<thingDef>VWE_Tool_Whip</thingDef>
-				<countRange>-1~2</countRange>
-			</li>
-		</generators>
 	</TG.NodeDef>
 	<TG.NodeDef>
 		<defName>ND_OrbitalUncommonInsectoid</defName>
