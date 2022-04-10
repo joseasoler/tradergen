@@ -45,7 +45,7 @@
 		<label>uncommon independent ship</label>
 		<orbital>true</orbital>
 		<requestable>false</requestable>
-		<commonality>0.25</commonality>
+		<commonality>0.5</commonality>
 		<modExtensions>
 			<li Class="TG.TraderKind.GenExtension">
 				<node>ND_OrbitalIndependentUncommon</node>
