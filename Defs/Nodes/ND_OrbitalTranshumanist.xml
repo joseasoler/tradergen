@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<TG.NodeDef>
+		<defName>ND_OrbitalTranshumanist</defName>
+		<generators>
+			<!-- Sells -->
+			<li Class="TG.StockGen.PsylinkNeuroformer" MayRequire="Ludeon.RimWorld.Royalty">
+				<countRange>0~1</countRange>
+			</li>
+			<li Class="StockGenerator_Tag" MayRequire="Ludeon.RimWorld.Royalty">
+				<tradeTag>PsychicApparel</tradeTag>
+				<thingDefCountRange>4~6</thingDefCountRange>
+				<countRange>1~2</countRange>
+			</li>
+			<li Class="StockGenerator_Tag" MayRequire="Ludeon.RimWorld.Royalty">
+				<tradeTag>PsychicWeapon</tradeTag>
+				<thingDefCountRange>-1~1</thingDefCountRange>
+				<countRange>1~2</countRange>
+			</li>
+			<li Class="StockGenerator_Category" MayRequire="Ludeon.RimWorld.Royalty">
+				<categoryDef>NeurotrainersPsycast</categoryDef>
+				<thingDefCountRange>2~3</thingDefCountRange>
+				<countRange>1~2</countRange>
+			</li>
+			<li Class="StockGenerator_Category">
+				<categoryDef>NeurotrainersSkill</categoryDef>
+				<thingDefCountRange>1~2</thingDefCountRange>
+				<countRange>1</countRange>
+			</li>
+			<li Class="TG.StockGen.TechHediff">
+				<minTechLevelGenerate>Industrial</minTechLevelGenerate>
+				<maxTechLevelGenerate>Ultra</maxTechLevelGenerate>
+				<thingDefCountRange>4~9</thingDefCountRange>
+				<countRange>1</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef" MayRequire="vat.epoeforked">
+				<thingDef>EPOE_MAAI_Chip</thingDef>
+				<countRange>0~1</countRange>
+			</li>
+			<li Class="StockGenerator_Category" MayRequire="OskarPotocki.VFE.Insectoid">
+				<categoryDef>VFEI_BodyPartsInsect</categoryDef>
+				<thingDefCountRange>2~5</thingDefCountRange>
+				<countRange>1</countRange>
+			</li>
+			<li Class="StockGenerator_Tag">
+				<tradeTag>Artifact</tradeTag>
+				<thingDefCountRange>1~3</thingDefCountRange>
+				<countRange>1</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef" MayRequire="sarg.alphaanimals">
+				<thingDef>AA_BlueMilk</thingDef>
+				<totalPriceRange>1138~2187</totalPriceRange>
+			</li>
+		</generators>
+	</TG.NodeDef>
+</Defs>

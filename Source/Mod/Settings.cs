@@ -5,6 +5,11 @@ namespace TG.Mod
 	public class SettingValues
 	{
 		/// <summary>
+		/// Determines if traders can have psylink neuroformers in stock.
+		/// </summary>
+		public bool SellPsylinkNeuroformers /* = false */;
+
+		/// <summary>
 		/// Silver stock of orbital traders in %.
 		/// </summary>
 		public float OrbitalSilverScaling = 100.0f;
@@ -26,6 +31,16 @@ namespace TG.Mod
 	public class Settings : ModSettings
 	{
 		private static SettingValues _values = new SettingValues();
+
+		/// <summary>
+		/// Determines if traders can have psylink neuroformers in stock.
+		/// Always returns false if Royalty is not active.
+		/// </summary>
+		public static bool SellPsylinkNeuroformers
+		{
+			get => _values.SellPsylinkNeuroformers && ModsConfig.RoyaltyActive;
+			set => _values.SellPsylinkNeuroformers = value;
+		}
 
 		/// <summary>
 		/// Silver stock of orbital traders in %.

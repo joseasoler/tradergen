@@ -40,6 +40,14 @@ namespace TG.Mod
 			Settings.OrbitalSilverScaling = listing.Slider(Settings.OrbitalSilverScaling, Settings.MinSilverScaling,
 				Settings.MaxSilverScaling);
 
+			if (ModsConfig.RoyaltyActive)
+			{
+				var sellPsylinkNeuroformers = Settings.SellPsylinkNeuroformers;
+				listing.CheckboxLabeled("TG_SellPsylinkNeuroformers".Translate(), ref sellPsylinkNeuroformers,
+					"TG_SellPsylinkNeuroformersTooltip".Translate());
+				Settings.SellPsylinkNeuroformers = sellPsylinkNeuroformers;
+			}
+
 			var resetButtonRect = listing.GetRect(30f);
 			var width = resetButtonRect.width;
 			resetButtonRect.width /= 5f;

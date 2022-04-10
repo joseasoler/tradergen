@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!-- Psylink neuroformers can be purchased and sold. -->
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Royalty</li>
+		</mods>
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName="PsychicAmplifier"]</xpath>
+			<value>
+				<tradeability>All</tradeability>
+			</value>
+		</match>
+	</Operation>
+</Patch>

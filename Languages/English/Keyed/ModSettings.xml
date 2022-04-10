@@ -2,6 +2,8 @@
 <LanguageData>
 	<TG_SilverStockOrbitalTrader>Silver stock of orbital traders: {0}%</TG_SilverStockOrbitalTrader>
 	<TG_SilverStockOrbitalTraderTooltip>Allows to adjust the total amount of silver that orbital traders will have in stock when they arrive. Orbital traders which were already in range when the setting is changed will not be affected.</TG_SilverStockOrbitalTraderTooltip>
+	<TG_SellPsylinkNeuroformers>Traders sell psylink neuroformers</TG_SellPsylinkNeuroformers>
+	<TG_SellPsylinkNeuroformersTooltip>Allows traders to have psylink neuroformers in stock.</TG_SellPsylinkNeuroformersTooltip>
 	<TG_ResetSettings>Reset</TG_ResetSettings>
 	<TG_ResetSettingsTooltip>Reset all options of the mod to their default values.</TG_ResetSettingsTooltip>
 	<TG_DevelopmentOptions>Development options</TG_DevelopmentOptions>

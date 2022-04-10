@@ -33,6 +33,10 @@
 					<node>ND_OrbitalTech</node>
 					<commonality>2</commonality>
 				</li>
+				<li>
+					<node>ND_OrbitalTranshumanist</node>
+					<commonality>2</commonality>
+				</li>
 			</nodes>
 		</next>
 	</TG.NodeDef>
@@ -96,6 +100,12 @@
 				</li>
 				<li>
 					<nodes>
+						<li>ND_OrbitalCombat</li>
+						<li>ND_OrbitalTranshumanist</li>
+					</nodes>
+				</li>
+				<li>
+					<nodes>
 						<li>ND_OrbitalFood</li>
 						<li>ND_OrbitalFood</li>
 					</nodes>
@@ -117,6 +127,18 @@
 					<nodes>
 						<li>ND_OrbitalTech</li>
 						<li>ND_OrbitalTech</li>
+					</nodes>
+				</li>
+				<li>
+					<nodes>
+						<li>ND_OrbitalTech</li>
+						<li>ND_OrbitalTranshumanist</li>
+					</nodes>
+				</li>
+				<li>
+					<nodes>
+						<li>ND_OrbitalTranshumanist</li>
+						<li>ND_OrbitalTranshumanist</li>
 					</nodes>
 				</li>
 			</nodeGroups>
@@ -211,6 +233,13 @@
 				</li>
 				<li>
 					<nodes>
+						<li>ND_OrbitalCombat</li>
+						<li>ND_OrbitalTranshumanist</li>
+						<li>ND_OrbitalTranshumanist</li>
+					</nodes>
+				</li>
+				<li>
+					<nodes>
 						<li>ND_OrbitalFood</li>
 						<li>ND_OrbitalFood</li>
 						<li>ND_OrbitalFood</li>
@@ -236,6 +265,20 @@
 						<li>ND_OrbitalTech</li>
 						<li>ND_OrbitalTech</li>
 						<li>ND_OrbitalTech</li>
+					</nodes>
+				</li>
+				<li>
+					<nodes>
+						<li>ND_OrbitalTech</li>
+						<li>ND_OrbitalTech</li>
+						<li>ND_OrbitalTranshumanist</li>
+					</nodes>
+				</li>
+				<li>
+					<nodes>
+						<li>ND_OrbitalTech</li>
+						<li>ND_OrbitalTranshumanist</li>
+						<li>ND_OrbitalTranshumanist</li>
 					</nodes>
 				</li>
 			</nodeGroups>

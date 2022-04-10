@@ -12,10 +12,11 @@ Orbital traders coming from vanilla or mods with explicit support (see Mod suppo
 
 * Random generation of orbital trader stock using ship specializations and ship size.
 * Customizable amount of silver for orbital traders.
+* Appropriate traders may have psylink neuroformers in stock (must be enabled using mod settings, requires Royalty).
 
 ## Mod support
 
-TraderGen should support wares from all mods out of the box; please submit a [bug report](CONTRIBUTING.md) if you find any issues.
+TraderGen should support wares from most mods out of the box; please submit a [bug report](CONTRIBUTING.md) if you find any issues.
 
 TraderGen also provides extra features when certain mods are enabled, including specific trader types, stock combinations and other tweaks to improve the experience. TraderGen includes extra content for the following mods:  
 
@@ -101,7 +102,7 @@ TraderGen also provides extra features when certain mods are enabled, including 
 
 [Vanilla Furniture Expanded](https://steamcommunity.com/sharedfiles/filedetails/?id=1718190143):
 
-* Orbital traders carrying joy furniture will include items from this mod.
+* Orbital traders carrying joy furniture will include items from this mod in their stock.
 
 [Vanilla Furniture Expanded - Security](https://steamcommunity.com/workshop/filedetails/?id=1845154007):
 
