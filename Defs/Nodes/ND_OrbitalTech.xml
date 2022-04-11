@@ -24,10 +24,6 @@
 					</li>
 				</countChances>
 			</li>
-			<li Class="StockGenerator_SingleDef" MayRequire="sarg.rimbees">
-				<thingDef>RB_ComponentBioInterface</thingDef>
-				<countRange>-1~1</countRange>
-			</li>
 			<li Class="TG.StockGen.BuildingsJoy">
 				<minTechLevelGenerate>Industrial</minTechLevelGenerate>
 				<maxTechLevelGenerate>Spacer</maxTechLevelGenerate>

@@ -2,17 +2,23 @@
 
 [![RimWorld](https://img.shields.io/badge/RimWorld-1.3-informational)](https://rimworldgame.com/) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](CODE_OF_CONDUCT.md)
 
-TraderGen overhauls the random generation of stock in orbital traders to increase their stock variety while still generating combinations which make sense. Uncommon orbital traders are very specialized and carry rare stock.
+TraderGen is a mod for the [RimWorld](https://rimworldgame.com/) game. It overhauls the random generation of stock in orbital traders to increase their stock variety while generating logical combinations.
 
-Each orbital trader will have different specializations chosen randomly. Larger ships will have more specializations and as a result will have more stock quantity and variety, but smaller ships have higher chances of carrying infrequent wares.
-
-Orbital traders coming from vanilla or mods with explicit support (see Mod support section below) will no longer appear, but their wares have been added to the orbital traders added by TraderGen.
+Orbital traders from mods not supported by TraderGen will appear normally. Orbital traders coming from vanilla or mods with explicit support (see Mod support section below) will no longer appear. Their wares have been added to the orbital traders created by TraderGen.
 
 ## Features
 
 * Random generation of orbital trader stock using ship specializations and ship size.
 * Customizable amount of silver for orbital traders.
 * Appropriate traders may have psylink neuroformers in stock (must be enabled using mod settings, requires Royalty).
+
+## How it works
+
+Stock is grouped in loosely defined categories. For example, an orbital trader with the Medicine category will always have different types of medicine, neutroamine and related goods in stock.  Each category may in turn have different specializations.
+
+An orbital trader can have one or more categories, depending on their size. Small orbital traders have just one, medium traders have two, and large traders have three. Uncommon orbital traders do not follow category rules and have their stock specifically defined instead.
+
+Certain categories become less common as ship size increases, as larger ships tend to be less specialized.
 
 ## Mod support
 
@@ -22,35 +28,33 @@ TraderGen also provides extra features when certain mods are enabled, including 
 
 [Alpha Animals](https://steamcommunity.com/sharedfiles/filedetails/?id=1541721856):
 
-* Healthcare orbital traders sometimes carry a limited stock of cactipine quills.
+* Medicine orbital traders sometimes carry a limited stock of cactipine quills.
 * Traders with insectoid genomes from Vanilla Factions Expanded - Insectoids have Black Hive genome in stock when appropriate.
 * Traders purchasing insectoid animal products or gluttonous foods will also purchase Black Hive insect jelly.
 * Uncommon biomaterials orbital trader.
 
 [Expanded Prosthetics and Organ Engineering](https://steamcommunity.com/sharedfiles/filedetails/?id=725956940)
 
-* Many orbital trader specializations carry prosthetics, both from vanilla and from this mod.
-* The prosthesis orbital trader no longer appears, but the role it fulfilled is now split between different orbital trader categories.
-* The textiles trader is now a rare type of uncommon orbital trader. Other orbital trader specialities carry synthread and hyperweave more frequently.
+* The prosthesis orbital trader no longer appears, but the role it fulfilled is now split between different orbital trader categories and specializations.
+* The textiles trader is now a rare type of uncommon orbital trader. Other orbital trader categories or specialities carry synthread and hyperweave more frequently.
   
 [Expanded Prosthetics and Organ Engineering - Forked](https://steamcommunity.com/sharedfiles/filedetails/?id=1949064302):
 
-* Many orbital trader specializations carry prosthetics, both from vanilla and from this mod.
-* The prosthesis orbital trader no longer appears, but the role it fulfilled is now split between different orbital trader categories.
-* The textiles trader is now a rare type of uncommon orbital trader. Other orbital trader specialities carry synthread and hyperweave more frequently.
+* The prosthesis orbital trader no longer appears, but the role it fulfilled is now split between different orbital trader categories and specializations.
+* The textiles trader is now a rare type of uncommon orbital trader. Other orbital trader categories or specialities carry synthread and hyperweave more frequently.
 * Tech and bionic orbital traders may have MA-AI chips in stock.
-* Combat and body part orbital traders organic may have optimizing nanobots and instinct optimizing nanobots in stock.
+* Combat and body part orbital traders may have optimizing nanobots and instinct optimizing nanobots in stock.
 
 [Jewelry](https://steamcommunity.com/workshop/filedetails/?id=2020964421):
 
 * Orbital traders always purchase jewelry.
 * Orbital traders may sometimes be specialized on items created from gemstones.
+* Transhumanist orbital traders may have eltex jewelry in stock.
 
 [RimBees](https://steamcommunity.com/sharedfiles/filedetails/?id=1558161673):
 
-* Orbital traders from the food category always have some temperate and mild bees in stock.
+* Food orbital traders always have temperate and mild bees in stock.
 * Orbital traders may sometimes be specialized on craft created from different wax types. These traders will also have some temperate and mild bees in stock.
-* Orbital traders specialized on tech may very rarely have a bio interface component in stock.
 
 [Trader Ships](https://steamcommunity.com/sharedfiles/filedetails/?id=2046222331):
 
@@ -60,7 +64,7 @@ TraderGen also provides extra features when certain mods are enabled, including 
 
 * Ranged shield belts now appear along with regular shield belts in orbital trader stock.
 * Hunting supplies orbital traders may have quivers in stock.
-* Healthcare orbital traders can have medic bags in stock.
+* Medicine orbital traders can have medic bags in stock.
 * Tech orbital traders can have tool belts in stock.
 
 [Vanilla Armour Expanded](https://steamcommunity.com/workshop/filedetails/?id=1814988282):
@@ -79,14 +83,14 @@ TraderGen also provides extra features when certain mods are enabled, including 
 [Vanilla Books Expanded](https://steamcommunity.com/workshop/filedetails/?id=2193152410):
 
 * All orbital traders may have a couple of books in stock.
-* Orbital traders with the Culture category will have books, blueprints and maps in stock. You can purchase the newspaper of their ship as well.
-* Orbital traders with the Tech category will have blueprints in stock.
+* Culture orbital traders will have books, blueprints and maps in stock. You can purchase the newspaper of their ship as well.
+* Tech orbital traders will have blueprints in stock.
 
 [Vanilla Cooking Expanded](https://steamcommunity.com/sharedfiles/filedetails/?id=2134308519):
 
-* All Orbital traders purchase long-shelf life food such as canned food and cheese.
-* Food-oriented orbital traders have canned food in stock, and purchase condiments. They will also have different food items from this mod depending on their specialization.
-* Orbital traders from the food and medicine categories may have digestible resurrector nanites in stock.
+* All orbital traders purchase long-shelf life food such as canned food and cheese.
+* Food orbital traders have canned food in stock, and purchase condiments. They will also have different food items from this mod depending on their specialization.
+* Food and medicine orbital traders may have digestible resurrector nanites in stock.
 * Traders purchasing insectoid animal products always purchase insect jelly preserves.
 
 [Vanilla Factions Expanded - Insectoids](https://steamcommunity.com/sharedfiles/filedetails/?id=2149755445):
@@ -94,11 +98,11 @@ TraderGen also provides extra features when certain mods are enabled, including 
 * Orbital traders will sometimes be specialized in insectoid animal products, chitin or combat insectoids.
 * Orbital traders specialized in insectoid wares will have relevant insectoid genomes and, sometimes bio-engineering incubators in stock.
 * Uncommon trader specialized in all kinds of insectoid wares, vat-grown insectoids and insectoid bio-engineering.
-* The bio-engineering supplier no longer appears, but all of the wares it had still appear frequently in other orbital traders. 
+* The bio-engineering supplier no longer appears, but as mentioned above all of the wares it had still appear in other orbital traders. 
 
 [Vanilla Factions Expanded - Mechanoids](https://steamcommunity.com/sharedfiles/filedetails/?id=2329011599):
 
-* Orbital traders from the Bulk and Tech categories have mechanoid components in stock.
+* Bulk and Tech orbital traders have mechanoid components in stock.
 * High tech uncommon orbital traders have mechanoid components in stock.
 
 [Vanilla Factions Expanded - Pirates](https://steamcommunity.com/sharedfiles/filedetails/?id=2723801948):
