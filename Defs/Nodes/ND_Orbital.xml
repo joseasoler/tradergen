@@ -41,7 +41,7 @@
 				<tradeTagsSell>
 					<li>AnimalPet</li>
 				</tradeTagsSell>
-				<kindCountRange>1~3</kindCountRange>
+				<kindCountRange>1~2</kindCountRange>
 				<countRange>1~2</countRange>
 			</li>
 			<li Class="StockGenerator_Tag" MayRequire="VanillaExpanded.VBooksE">

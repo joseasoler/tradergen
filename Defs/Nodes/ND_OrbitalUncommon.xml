@@ -193,6 +193,7 @@
 					<li>VFEI_VatgrownRoyalLarva</li>
 					<li>VFEI_VatGrownRoyalMaggot</li>
 					<li>VFEI_VatGrownSpelopede</li>
+					<li>VFEI_VatGrownSpiderweaver</li>
 					<li>VFEI_VatGrownWargling</li>
 				</pawnKindDefs>
 				<newborn>true</newborn>
