@@ -79,7 +79,8 @@ TraderGen also provides extra features when certain mods are enabled, including 
 [Vanilla Books Expanded](https://steamcommunity.com/workshop/filedetails/?id=2193152410):
 
 * All orbital traders may have a couple of books in stock.
-* Orbital traders with the Culture category will have books, blueprints and maps in stock. You can purchase the newspaper of their ship as well. 
+* Orbital traders with the Culture category will have books, blueprints and maps in stock. You can purchase the newspaper of their ship as well.
+* Orbital traders with the Tech category will have blueprints in stock.
 
 [Vanilla Cooking Expanded](https://steamcommunity.com/sharedfiles/filedetails/?id=2134308519):
 
