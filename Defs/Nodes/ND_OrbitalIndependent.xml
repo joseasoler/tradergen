@@ -22,6 +22,10 @@
 					<commonality>2</commonality>
 				</li>
 				<li>
+					<node>ND_OrbitalCulture</node>
+					<commonality>2</commonality>
+				</li>
+				<li>
 					<node>ND_OrbitalFood</node>
 					<commonality>2</commonality>
 				</li>
@@ -89,6 +93,12 @@
 				<li>
 					<nodes>
 						<li>ND_OrbitalCombat</li>
+						<li>ND_OrbitalCulture</li>
+					</nodes>
+				</li>
+				<li>
+					<nodes>
+						<li>ND_OrbitalCombat</li>
 						<li>ND_OrbitalFood</li>
 					</nodes>
 				</li>
@@ -101,6 +111,30 @@
 				<li>
 					<nodes>
 						<li>ND_OrbitalCombat</li>
+						<li>ND_OrbitalTranshumanist</li>
+					</nodes>
+				</li>
+				<li>
+					<nodes>
+						<li>ND_OrbitalCulture</li>
+						<li>ND_OrbitalCulture</li>
+					</nodes>
+				</li>
+				<li>
+					<nodes>
+						<li>ND_OrbitalCulture</li>
+						<li>ND_OrbitalFromStuff</li>
+					</nodes>
+				</li>
+				<li>
+					<nodes>
+						<li>ND_OrbitalCulture</li>
+						<li>ND_OrbitalTech</li>
+					</nodes>
+				</li>
+				<li>
+					<nodes>
+						<li>ND_OrbitalCulture</li>
 						<li>ND_OrbitalTranshumanist</li>
 					</nodes>
 				</li>
@@ -207,6 +241,13 @@
 					<nodes>
 						<li>ND_OrbitalCombat</li>
 						<li>ND_OrbitalCombat</li>
+						<li>ND_OrbitalCulture</li>
+					</nodes>
+				</li>
+				<li>
+					<nodes>
+						<li>ND_OrbitalCombat</li>
+						<li>ND_OrbitalCombat</li>
 						<li>ND_OrbitalFood</li>
 					</nodes>
 				</li>
@@ -227,6 +268,13 @@
 				<li>
 					<nodes>
 						<li>ND_OrbitalCombat</li>
+						<li>ND_OrbitalCulture</li>
+						<li>ND_OrbitalTech</li>
+					</nodes>
+				</li>
+				<li>
+					<nodes>
+						<li>ND_OrbitalCombat</li>
 						<li>ND_OrbitalTech</li>
 						<li>ND_OrbitalTech</li>
 					</nodes>
@@ -236,6 +284,27 @@
 						<li>ND_OrbitalCombat</li>
 						<li>ND_OrbitalTranshumanist</li>
 						<li>ND_OrbitalTranshumanist</li>
+					</nodes>
+				</li>
+				<li>
+					<nodes>
+						<li>ND_OrbitalCulture</li>
+						<li>ND_OrbitalTech</li>
+						<li>ND_OrbitalTech</li>
+					</nodes>
+				</li>
+				<li>
+					<nodes>
+						<li>ND_OrbitalCulture</li>
+						<li>ND_OrbitalTranshumanist</li>
+						<li>ND_OrbitalTranshumanist</li>
+					</nodes>
+				</li>
+				<li>
+					<nodes>
+						<li>ND_OrbitalCulture</li>
+						<li>ND_OrbitalFromStuff</li>
+						<li>ND_OrbitalFromStuff</li>
 					</nodes>
 				</li>
 				<li>

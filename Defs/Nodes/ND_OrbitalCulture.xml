@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<TG.NodeDef>
+		<defName>ND_OrbitalCulture</defName>
+		<generators>
+			<!-- Sells -->
+			<li Class="StockGenerator_Category">
+				<categoryDef>NeurotrainersSkill</categoryDef>
+				<thingDefCountRange>-1~3</thingDefCountRange>
+				<countRange>1</countRange>
+			</li>
+			<li Class="StockGenerator_Tag">
+				<tradeTag>Artifact</tradeTag>
+				<thingDefCountRange>0~2</thingDefCountRange>
+				<countRange>1</countRange>
+			</li>
+			<li Class="StockGenerator_Techprints">
+				<countChances>
+					<li>
+						<count>3</count>
+						<chance>1</chance>
+					</li>
+				</countChances>
+			</li>
+			<li Class="TG.StockGen.BuildingsJoy">
+				<thingDefCountRange>3~7</thingDefCountRange>
+				<countRange>1</countRange>
+			</li>
+			<li Class="StockGenerator_Art">
+				<countRange>7~11</countRange>
+			</li>
+			<!-- Telescopes do not have a tech level, so they are handled separately here. -->
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>Telescope</thingDef>
+				<countRange>1</countRange>
+			</li>
+			<li Class="StockGenerator_Tag" MayRequire="VanillaExpanded.VBooksE">
+				<tradeTag>Book</tradeTag>
+				<thingDefCountRange>3~7</thingDefCountRange>
+				<countRange>1</countRange>
+			</li>
+			<li Class="StockGenerator_Tag" MayRequire="VanillaExpanded.VBooksE">
+				<tradeTag>Book_Blueprint</tradeTag>
+				<thingDefCountRange>2~4</thingDefCountRange>
+				<countRange>1</countRange>
+			</li>
+			<li Class="StockGenerator_Tag" MayRequire="VanillaExpanded.VBooksE">
+				<tradeTag>Book_Map</tradeTag>
+				<thingDefCountRange>2~3</thingDefCountRange>
+				<countRange>1</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef" MayRequire="VanillaExpanded.VBooksE">
+				<thingDef>VBE_Newspaper</thingDef>
+				<countRange>0~2</countRange>
+			</li>
+		</generators>
+	</TG.NodeDef>
+</Defs>
