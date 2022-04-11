@@ -107,13 +107,11 @@
 				<thingDefCountRange>3~5</thingDefCountRange>
 				<countRange>1~2</countRange>
 				<excludedThingDefs>
-					<li>Luciferium</li> <!-- already handled by drugs -->
-					<li>MedicineUltratech</li> <!-- already handled by single def -->
-					<li>ComponentSpacer</li> <!-- already handled by single def -->
+					<li>Luciferium</li>
+					<li>MedicineUltratech</li>
+					<li>ComponentSpacer</li>
+					<li>Hyperweave</li>
 				</excludedThingDefs>
-				<customCountRanges>
-					<Hyperweave>50~200</Hyperweave>
-				</customCountRanges>
 			</li>
 			<li Class="TG.StockGen.TechHediff">
 				<minTechLevelGenerate>Industrial</minTechLevelGenerate>
@@ -125,6 +123,9 @@
 				<tradeTag>Artifact</tradeTag>
 				<thingDefCountRange>2~4</thingDefCountRange>
 				<countRange>1~1</countRange>
+			</li>
+			<li Class="TG.StockGen.PsylinkNeuroformer" MayRequire="Ludeon.RimWorld.Royalty">
+				<countRange>1</countRange>
 			</li>
 		</generators>
 		<next Class="TG.Next.All">
