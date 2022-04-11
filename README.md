@@ -48,7 +48,8 @@ TraderGen also provides extra features when certain mods are enabled, including 
 
 [RimBees](https://steamcommunity.com/sharedfiles/filedetails/?id=1558161673):
 
-* Orbital traders may sometimes be specialized on craft created from different wax types.
+* Orbital traders from the food category always have some temperate and mild bees in stock.
+* Orbital traders may sometimes be specialized on craft created from different wax types. These traders will also have some temperate and mild bees in stock.
 * Orbital traders specialized on tech may very rarely have a bio interface component in stock.
 
 [Trader Ships](https://steamcommunity.com/sharedfiles/filedetails/?id=2046222331):
@@ -84,6 +85,7 @@ TraderGen also provides extra features when certain mods are enabled, including 
 
 * All Orbital traders purchase long-shelf life food such as canned food and cheese.
 * Food-oriented orbital traders have canned food in stock, and purchase condiments. They will also have different food items from this mod depending on their specialization.
+* Orbital traders from the food and medicine categories may have digestible resurrector nanites in stock.
 * Traders purchasing insectoid animal products always purchase insect jelly preserves.
 
 [Vanilla Factions Expanded - Insectoids](https://steamcommunity.com/sharedfiles/filedetails/?id=2149755445):
@@ -92,6 +94,11 @@ TraderGen also provides extra features when certain mods are enabled, including 
 * Orbital traders specialized in insectoid wares will have relevant insectoid genomes and, sometimes bio-engineering incubators in stock.
 * Uncommon trader specialized in all kinds of insectoid wares, vat-grown insectoids and insectoid bio-engineering.
 * The bio-engineering supplier no longer appears, but all of the wares it had still appear frequently in other orbital traders. 
+
+[Vanilla Factions Expanded - Mechanoids](https://steamcommunity.com/sharedfiles/filedetails/?id=2329011599):
+
+* Orbital traders from the Bulk and Tech categories have mechanoid components in stock.
+* High tech uncommon orbital traders have mechanoid components in stock.
 
 [Vanilla Factions Expanded - Pirates](https://steamcommunity.com/sharedfiles/filedetails/?id=2723801948):
 

@@ -12,6 +12,10 @@
 				<thingDef>ComponentSpacer</thingDef>
 				<countRange>1~2</countRange>
 			</li>
+			<li Class="StockGenerator_SingleDef" MayRequire="OskarPotocki.VFE.Mechanoid">
+				<thingDef>VFE_ComponentMechanoid</thingDef>
+				<countRange>1~2</countRange>
+			</li>
 			<li Class="StockGenerator_SingleDef">
 				<thingDef>Steel</thingDef>
 				<countRange>300~600</countRange>

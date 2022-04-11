@@ -11,6 +11,20 @@
 				<thingDef>VWE_MeleeWeapon_Cleaver</thingDef>
 				<countRange>-1~2</countRange>
 			</li>
+			<li Class="StockGenerator_SingleDef" MayRequire="VanillaExpanded.VCookE">
+				<thingDef>VCE_DigestibleResurrectorNanites</thingDef>
+				<countRange>-1~1</countRange>
+			</li>
+			<li Class="TG.StockGen.MultiDef" MayRequire="sarg.rimbees">
+				<thingDefs>
+					<li>RB_Bee_Temperate_Drone</li>
+					<li>RB_Bee_Temperate_Queen</li>
+					<li>RB_Bee_Mild_Drone</li>
+					<li>RB_Bee_Mild_Queen</li>
+				</thingDefs>
+				<thingDefCountRange>4</thingDefCountRange>
+				<countRange>1~2</countRange>
+			</li>
 			<!-- Purchases -->
 			<li Class="TG.StockGen.FoodRaw"/>
 			<li Class="StockGenerator_Category" MayRequire="VanillaExpanded.VCookE">

@@ -78,6 +78,10 @@
 				<thingDef>ComponentSpacer</thingDef>
 				<countRange>3~8</countRange>
 			</li>
+			<li Class="StockGenerator_SingleDef" MayRequire="OskarPotocki.VFE.Mechanoid">
+				<thingDef>VFE_ComponentMechanoid</thingDef>
+				<countRange>1~2</countRange>
+			</li>
 			<li Class="StockGenerator_SingleDef">
 				<thingDef>Gold</thingDef>
 				<countRange>200~400</countRange>
@@ -126,6 +130,10 @@
 			</li>
 			<li Class="TG.StockGen.PsylinkNeuroformer" MayRequire="Ludeon.RimWorld.Royalty">
 				<countRange>1</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef" MayRequire="VanillaExpanded.VCookE">
+				<thingDef>VCE_DigestibleResurrectorNanites</thingDef>
+				<countRange>-1~1</countRange>
 			</li>
 		</generators>
 		<next Class="TG.Next.All">

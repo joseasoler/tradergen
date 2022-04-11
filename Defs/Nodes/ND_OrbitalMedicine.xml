@@ -29,6 +29,10 @@
 				<thingDef>VAEA_Apparel_MedicBag</thingDef>
 				<countRange>0~2</countRange>
 			</li>
+			<li Class="StockGenerator_SingleDef" MayRequire="VanillaExpanded.VCookE">
+				<thingDef>VCE_DigestibleResurrectorNanites</thingDef>
+				<countRange>-1~1</countRange>
+			</li>
 		</generators>
 		<next Class="TG.Next.ChooseN">
 			<nodes>
