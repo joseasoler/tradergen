@@ -1,7 +1,5 @@
-using System.Collections.Generic;
 using HarmonyLib;
 using RimWorld;
-using TG.TraderKind;
 
 namespace TG.Harmony
 {
@@ -38,12 +36,15 @@ namespace TG.Harmony
 		/// <param name="faction">Faction to use for the def</param>
 		private static void ConstructorPostfix(ref RimWorld.TradeShip __instance, in TraderKindDef def, in Faction faction)
 		{
+			// ToDo: Adapt to the new code.
+			/*
 			var extension = __instance.TraderKind.GetModExtension<GenExtension>();
 			if (extension == null) return;
 
 			var result = Gen.Gen.Generate(extension.node, -1, __instance.faction);
 			// Result may be null if an error happened.
 			__instance.TraderKind.stockGenerators = result != null ? result.generators : new List<StockGenerator>();
+			*/
 		}
 
 		/// <summary>

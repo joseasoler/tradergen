@@ -17,6 +17,7 @@
 					</value>
 				</li>
 				<!-- Food-oriented orbital traders sell canned food. -->
+				<!--
 				<li Class="PatchOperationAdd">
 					<xpath>/Defs/TG.NodeDef[defName="ND_OrbitalFood"]/generators
 					</xpath>
@@ -31,23 +32,9 @@
 						</li>
 					</value>
 				</li>
+				-->
 			</operations>
 		</match>
-		<!-- Food-oriented orbital traders sell raw food. -->
-		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/TG.NodeDef[defName="ND_OrbitalFood"]/generators
-			</xpath>
-			<value>
-				<li Class="StockGenerator_SingleDef">
-					<thingDef>Meat_Cow</thingDef>
-					<totalPriceRange>1000~1250</totalPriceRange>
-				</li>
-				<li Class="StockGenerator_SingleDef">
-					<thingDef>RawRice</thingDef>
-					<totalPriceRange>650~875</totalPriceRange>
-				</li>
-			</value>
-		</nomatch>
 	</Operation>
 </Patch>
 

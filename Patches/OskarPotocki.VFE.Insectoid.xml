@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-Disable VFEI_Orbital_BioEngineeringSupplier as its role is fulfilled by some specializations.
-When Vanilla Factions Expanded - Insectoids is not found, ND_OrbitalCombatInsectoid sells vanilla insectoids.
+Disable VFEI_Orbital_BioEngineeringSupplier as its role is fulfilled by specializations.
 -->
 <Patch>
 	<Operation Class="PatchOperationFindMod">
@@ -15,21 +14,5 @@ When Vanilla Factions Expanded - Insectoids is not found, ND_OrbitalCombatInsect
 				<commonality>0</commonality>
 			</value>
 		</match>
-		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/TG.NodeDef[defName="ND_OrbitalCombatInsectoid"]/generators
-			</xpath>
-			<value>
-				<li Class="TG.StockGen.AnimalMultiDef">
-					<pawnKindDefs>
-						<li>Megascarab</li>
-						<li>Spelopede</li>
-						<li>Megaspider</li>
-					</pawnKindDefs>
-					<newborn>true</newborn>
-					<kindCountRange>3</kindCountRange>
-					<totalPriceRange>500~1300</totalPriceRange>
-				</li>
-			</value>
-		</nomatch>
 	</Operation>
 </Patch>

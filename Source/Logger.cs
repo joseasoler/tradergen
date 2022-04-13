@@ -1,9 +1,5 @@
-using System;
-using System.Linq;
 using RimWorld;
-using TG.Gen;
 using TG.Mod;
-using TG.StockGen;
 using Verse;
 
 namespace TG
