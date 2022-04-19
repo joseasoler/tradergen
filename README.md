@@ -22,6 +22,11 @@ Currently most of the features of the mod are only implemented for orbital trade
 * Guaranteed to have a few pieces of power armor in stock.
 * May rarely have a shield belt or smokepop belt in stock.
 
+### Exotic
+
+* Very cheap and very expensive bionics are less common. Ultratech bionics are unfrequent.
+* Increased variety of joy buildings in stock.
+
 ## Mod support
 
 TraderGen should support wares from most mods out of the box; please submit a [bug report](CONTRIBUTING.md) if you find any issues.
@@ -95,7 +100,7 @@ TraderGen also provides extra features when certain mods are enabled. TraderGen 
 
 [Vanilla Furniture Expanded](https://steamcommunity.com/sharedfiles/filedetails/?id=1718190143):
 
-* ...
+* Orbital traders carrying joy buildings will include items from this mod in their stock.
 
 [Vanilla Furniture Expanded - Security](https://steamcommunity.com/workshop/filedetails/?id=1845154007):
 
