@@ -17,6 +17,11 @@ Currently most of the features of the mod are only implemented for orbital trade
 * May have any alcohol type in stock, instead of only beer. Cheaper varieties are more common.
 * Increased variety and quantity of textiles in stock. Never has human leather in stock by default.
 
+### Combat
+
+* Guaranteed to have a few pieces of power armor in stock.
+* May rarely have a shield belt or smokepop belt in stock.
+
 ## Mod support
 
 TraderGen should support wares from most mods out of the box; please submit a [bug report](CONTRIBUTING.md) if you find any issues.
@@ -50,10 +55,11 @@ TraderGen also provides extra features when certain mods are enabled. TraderGen 
 [Vanilla Apparel Expanded — Accessories](https://steamcommunity.com/sharedfiles/filedetails/?id=2521176396):
 
 * Bulk good orbital traders can have tool belts in stock.
+* Combat orbital traders may rarely have a ranged shield belt in stock.
 
 [Vanilla Armour Expanded](https://steamcommunity.com/workshop/filedetails/?id=1814988282):
 
-* ...
+* Combat orbital traders may rarely have the new power armor types in stock.
 
 [Vanilla Brewing Expanded](https://steamcommunity.com/sharedfiles/filedetails/?id=2186560858):
 
@@ -81,7 +87,7 @@ TraderGen also provides extra features when certain mods are enabled. TraderGen 
 
 [Vanilla Factions Expanded - Pirates](https://steamcommunity.com/sharedfiles/filedetails/?id=2723801948):
 
-* ...
+* Combat orbital traders may rarely have privateer armor in stock.
 
 [Vanilla Factions Expanded - Settlers](https://steamcommunity.com/sharedfiles/filedetails/?id=2052918119):
 
@@ -98,6 +104,7 @@ TraderGen also provides extra features when certain mods are enabled. TraderGen 
 [Vanilla Weapons Expanded](https://steamcommunity.com/sharedfiles/filedetails/?id=1814383360):
 
 * Bulk good orbital traders can have tools in stock.
+* Orbital traders will never generate tools when they are meant to generate weapons.
 
 [Vanilla Weapons Expanded - Grenades](https://steamcommunity.com/sharedfiles/filedetails/?id=2194472657):
 

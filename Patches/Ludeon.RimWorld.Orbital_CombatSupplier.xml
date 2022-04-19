@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!-- Changes to the combat goods orbital trader. -->
+<Patch>
+	<!--
+	Will never count tools from VWE as weapons.
+	-->
+	<Operation Class="PatchOperationConditional">
+		<xpath>
+			/Defs/TraderKindDef[defName="Orbital_CombatSupplier"]/stockGenerators/li[@Class="StockGenerator_WeaponsRanged"]
+		</xpath>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationRemove">
+					<xpath>
+						/Defs/TraderKindDef[defName="Orbital_CombatSupplier"]/stockGenerators/li[@Class="StockGenerator_WeaponsRanged"]
+					</xpath>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/TraderKindDef[defName="Orbital_CombatSupplier"]/stockGenerators</xpath>
+					<value>
+						<li Class="TG.StockGen.WeaponRanged">
+							<minTechLevelGenerate>Industrial</minTechLevelGenerate>
+							<maxTechLevelGenerate>Spacer</maxTechLevelGenerate>
+							<excludeWeaponTags>
+								<li MayRequire="VanillaExpanded.VWE">ToolDecent</li>
+								<li MayRequire="OskarPotocki.VFE.Pirates">WarcasketAll</li>
+							</excludeWeaponTags>
+							<thingDefCountRange>10~14</thingDefCountRange>
+							<countRange>1</countRange>
+						</li>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+	<!--
+	Guaranteed to have a few pieces of power armor in stock, but on average it will have less.
+	-->
+	<Operation Class="PatchOperationConditional">
+		<xpath>
+			/Defs/TraderKindDef[defName="Orbital_CombatSupplier"]/stockGenerators/li[@Class="StockGenerator_Armor"]
+		</xpath>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationRemove">
+					<xpath>
+						/Defs/TraderKindDef[defName="Orbital_CombatSupplier"]/stockGenerators/li[@Class="StockGenerator_Armor"]
+					</xpath>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/TraderKindDef[defName="Orbital_CombatSupplier"]/stockGenerators</xpath>
+					<value>
+						<li Class="TG.StockGen.Armor">
+							<minTechLevelGenerate>Industrial</minTechLevelGenerate>
+							<maxTechLevelGenerate>Spacer</maxTechLevelGenerate>
+							<excludeTradeTags>
+								<li>HiTechArmor</li>
+								<!-- VFEP_Apparel_Privateer lacks the HiTechArmor trade tag used by other power armor items. -->
+								<li MayRequire="OskarPotocki.VFE.Pirates">PrivateerArmor</li>
+								<!--
+								Some Vanilla Armor Expanded power armor lacks the HiTechArmor tradeTag. A new tradeTag is patched into
+								them to avoid changing other behavior.
+								-->
+								<li MayRequire="VanillaExpanded.VARME">TG_PatchedHiTechArmor</li>
+							</excludeTradeTags>
+							<thingDefCountRange>7~8</thingDefCountRange>
+							<countRange>1</countRange>
+						</li>
+						<li Class="TG.StockGen.Armor">
+							<minTechLevelGenerate>Industrial</minTechLevelGenerate>
+							<tradeTags>
+								<li>HiTechArmor</li>
+								<!-- VFEP_Apparel_Privateer lacks the HiTechArmor trade tag used by other power armor items. -->
+								<li MayRequire="OskarPotocki.VFE.Pirates">PrivateerArmor</li>
+								<!--
+								Some Vanilla Armor Expanded power armor lacks the HiTechArmor tradeTag. A new tradeTag is patched into
+								them to avoid changing other unrelated behavior.
+								-->
+								<li MayRequire="VanillaExpanded.VARME">TG_PatchedHiTechArmor</li>
+							</tradeTags>
+							<thingDefCountRange>1~2</thingDefCountRange>
+							<countRange>1</countRange>
+						</li>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+	<!--
+	Never counts tools from VWE as weapons.
+	-->
+	<Operation Class="PatchOperationConditional">
+		<xpath>
+			/Defs/TraderKindDef[defName="Orbital_CombatSupplier"]/stockGenerators/li[@Class="StockGenerator_Category" and
+			categoryDef="WeaponsMelee"]
+		</xpath>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationRemove">
+					<xpath>
+						/Defs/TraderKindDef[defName="Orbital_CombatSupplier"]/stockGenerators/li[@Class="StockGenerator_Category"
+						and categoryDef="WeaponsMelee"]
+					</xpath>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/TraderKindDef[defName="Orbital_CombatSupplier"]/stockGenerators</xpath>
+					<value>
+						<li Class="TG.StockGen.WeaponMelee">
+							<minTechLevelGenerate>Medieval</minTechLevelGenerate>
+							<maxTechLevelGenerate>Spacer</maxTechLevelGenerate>
+							<excludeWeaponTags>
+								<li MayRequire="VanillaExpanded.VWE">ToolDecent</li>
+								<li MayRequire="OskarPotocki.VFE.Pirates">WarcasketMelee</li>
+							</excludeWeaponTags>
+							<thingDefCountRange>5~6</thingDefCountRange>
+							<countRange>2~3</countRange>
+						</li>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+	<!-- May have some defensive utilities in stock. -->
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/TraderKindDef[defName="Orbital_CombatSupplier"]/stockGenerators
+		</xpath>
+		<value>
+			<li Class="TG.StockGen.MultiDef">
+				<thingDefs>
+					<li>Apparel_ShieldBelt</li>
+					<li>Apparel_SmokepopBelt</li>
+					<li MayRequire="VanillaExpanded.VAEAccessories">VAEA_Apparel_RangedShieldBelt</li>
+				</thingDefs>
+				<thingDefCountRange>-3~2</thingDefCountRange>
+				<countRange>1</countRange>
+			</li>
+		</value>
+	</Operation>
+</Patch>
