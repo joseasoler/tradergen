@@ -19,7 +19,7 @@ namespace TG.Harmony
 			// Annotation patches.
 			harmony.PatchAll(Assembly.GetExecutingAssembly());
 			// Patch vanilla code.
-			TradeShip.Patch(harmony);
+			TraderStock.Patch(harmony);
 		}
 	}
 }

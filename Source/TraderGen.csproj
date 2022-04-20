@@ -24,7 +24,7 @@
 		<Compile Include="Debug\DebugActions.cs" />
 		<Compile Include="DefOf\JoyKind.cs" />
 		<Compile Include="DefOf\ThingCategory.cs" />
-		<Compile Include="Harmony\TradeShip.cs" />
+		<Compile Include="Harmony\TraderStock.cs" />
 		<Compile Include="Logger.cs" />
 		<Compile Include="Mod\Settings.cs" />
 		<Compile Include="Mod\Mod.cs" />
@@ -68,10 +68,6 @@
 	<ItemGroup>
 		<!-- Allow access to private definitions in the RimWorld DLL. -->
 		<Publicize Include="Assembly-CSharp" />
-	</ItemGroup>
-
-	<ItemGroup>
-	  <Folder Include="Gen" />
 	</ItemGroup>
 
 	<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

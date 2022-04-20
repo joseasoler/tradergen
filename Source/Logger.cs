@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using RimWorld;
 using TG.Mod;
 using Verse;
@@ -41,7 +42,7 @@ namespace TG
 			Log.ErrorOnce(text, text.GetHashCode());
 		}
 
-		public static void GeneratedThingsReport(in ITrader trader, in ThingOwner things)
+		public static void GeneratedThingsReport(in string traderName, in List<Thing> things)
 		{
 			if (!Settings.LogGen)
 			{
@@ -58,7 +59,7 @@ namespace TG
 				volume += thing.def.VolumePerUnit * thing.stackCount;
 			}
 
-			Gen($"{trader.TraderName} stock -> marketValue: {marketValue}, weight: {weight}, volume: {volume}");
+			Gen($"{traderName} stock -> marketValue: {marketValue}, weight: {weight}, volume: {volume}");
 		}
 	}
 }
