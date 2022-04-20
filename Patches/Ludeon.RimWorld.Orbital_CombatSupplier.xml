@@ -1,6 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<!-- Changes to the combat goods orbital trader. -->
 <Patch>
+	<Operation Class="PatchOperationAddModExtension">
+		<xpath>/Defs/TraderKindDef[defName="Orbital_CombatSupplier"]</xpath>
+		<value>
+			<li Class="TG.GenExtension"/>
+		</value>
+	</Operation>
 	<!--
 	Will never count tools from VWE as weapons.
 	-->

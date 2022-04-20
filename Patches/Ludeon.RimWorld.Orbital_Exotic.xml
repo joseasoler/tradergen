@@ -1,5 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Patch>
+	<Operation Class="PatchOperationAddModExtension">
+		<xpath>/Defs/TraderKindDef[defName="Orbital_Exotic"]</xpath>
+		<value>
+			<li Class="TG.GenExtension"/>
+		</value>
+	</Operation>
 	<!-- Very cheap and very expensive bionics are less common. Ultratech bionics are unfrequent. -->
 	<Operation Class="PatchOperationConditional">
 		<xpath>/Defs/TraderKindDef[defName="Orbital_Exotic"]/stockGenerators/li[@Class="StockGenerator_Tag" and

@@ -20,7 +20,8 @@ namespace TG.Harmony
 		public static void Patch(HarmonyLib.Harmony harmony)
 		{
 			var method = typeof(ThingSetMaker_TraderStock).GetMethod(nameof(ThingSetMaker_TraderStock.Generate),
-				BindingFlags.NonPublic | BindingFlags.Instance, null, new[] {typeof(ThingSetMakerParams), typeof(List<Thing>)}, null);
+				BindingFlags.NonPublic | BindingFlags.Instance, null, new[] {typeof(ThingSetMakerParams), typeof(List<Thing>)},
+				null);
 			var prefix = new HarmonyMethod(AccessTools.Method(typeof(TraderStock), nameof(GeneratePrefix)));
 			harmony.Patch(method, prefix);
 		}
@@ -38,6 +39,19 @@ namespace TG.Harmony
 			Logger.Gen($"Generating stock for {parms.traderDef.defName}.");
 			var gens = new List<StockGenerator>();
 			gens.AddRange(parms.traderDef.stockGenerators);
+
+			var extension = parms.traderDef.GetModExtension<GenExtension>();
+			if (extension != null)
+			{
+				// ToDo configurable amount of specializations.
+				var chosenSpecializations =
+					Algorithm.ChooseNWeightedRandomly(extension.specializations, spec => spec.commonality, 1);
+				foreach (var specialization in chosenSpecializations)
+				{
+					Logger.Gen($"Adding specialization {specialization.def.defName}");
+					gens.AddRange(specialization.def.stockGens);
+				}
+			}
 
 			var tile = parms.tile ?? (Find.AnyPlayerHomeMap == null
 				? Find.CurrentMap == null ? -1 : Find.CurrentMap.Tile

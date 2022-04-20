@@ -1,6 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<!-- Changes to the bulk goods orbital trader. -->
 <Patch>
+	<Operation Class="PatchOperationAddModExtension">
+		<xpath>/Defs/TraderKindDef[defName="Orbital_BulkGoods"]</xpath>
+		<value>
+			<li Class="TG.GenExtension"/>
+		</value>
+	</Operation>
 	<!-- Beer is replaced with the mod-friendly StockGen.Alcohol generator. -->
 	<Operation Class="PatchOperationConditional">
 		<xpath>/Defs/TraderKindDef[defName="Orbital_BulkGoods"]/stockGenerators/li[@Class="StockGenerator_SingleDef" and

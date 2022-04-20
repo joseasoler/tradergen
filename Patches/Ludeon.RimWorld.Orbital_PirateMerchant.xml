@@ -1,5 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Patch>
+	<Operation Class="PatchOperationAddModExtension">
+		<xpath>/Defs/TraderKindDef[defName="Orbital_PirateMerchant"]</xpath>
+		<value>
+			<li Class="TG.GenExtension"/>
+		</value>
+	</Operation>
 	<!-- Beer is replaced with the mod-friendly StockGen.Alcohol generator. -->
 	<Operation Class="PatchOperationConditional">
 		<xpath>/Defs/TraderKindDef[defName="Orbital_PirateMerchant"]/stockGenerators/li[@Class="StockGenerator_SingleDef"

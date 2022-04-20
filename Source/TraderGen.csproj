@@ -24,10 +24,12 @@
 		<Compile Include="Debug\DebugActions.cs" />
 		<Compile Include="DefOf\JoyKind.cs" />
 		<Compile Include="DefOf\ThingCategory.cs" />
+		<Compile Include="GenExtension.cs" />
 		<Compile Include="Harmony\TraderStock.cs" />
 		<Compile Include="Logger.cs" />
 		<Compile Include="Mod\Settings.cs" />
 		<Compile Include="Mod\Mod.cs" />
+		<Compile Include="SpecializationCommonality.cs" />
 		<Compile Include="StockGen\Alcohol.cs" />
 		<Compile Include="StockGen\AnimalMultiDef.cs" />
 		<Compile Include="StockGen\Armor.cs" />
@@ -53,6 +55,7 @@
 		<Compile Include="StockGen\Weapon.cs" />
 		<Compile Include="StockGen\WeaponMelee.cs" />
 		<Compile Include="StockGen\WeaponRanged.cs" />
+		<Compile Include="TraderSpecializationDef.cs" />
 		<Reference Include="System" />
 		<PackageReference Include="Lib.Harmony" Version="2.*" ExcludeAssets="runtime" />
 		<PackageReference Include="Krafs.Publicizer" Version="1.*" />

@@ -8,12 +8,21 @@ Disable Prostheses and Textiles Trader as their role is fulfilled by some specia
 			<li>Expanded Prosthetics and Organ Engineering</li>
 			<li>Expanded Prosthetics and Organ Engineering - Forked</li>
 		</mods>
-		<match Class="PatchOperationAdd">
-			<xpath>/Defs/TraderKindDef[defName="ProsthesesTrader" or defName="TextilesTrader"]
-			</xpath>
-			<value>
-				<commonality>0</commonality>
-			</value>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationAddModExtension">
+					<xpath>/Defs/TraderKindDef[defName="ProsthesesTrader"]</xpath>
+					<value>
+						<li Class="TG.GenExtension"/>
+					</value>
+				</li>
+				<li Class="PatchOperationAddModExtension">
+					<xpath>/Defs/TraderKindDef[defName="TextilesTrader"]</xpath>
+					<value>
+						<li Class="TG.GenExtension"/>
+					</value>
+				</li>
+			</operations>
 		</match>
 	</Operation>
 </Patch>

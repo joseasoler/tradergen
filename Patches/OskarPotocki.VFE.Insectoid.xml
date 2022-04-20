@@ -7,12 +7,15 @@ Disable VFEI_Orbital_BioEngineeringSupplier as its role is fulfilled by speciali
 		<mods>
 			<li>Vanilla Factions Expanded - Insectoids</li>
 		</mods>
-		<match Class="PatchOperationAdd">
-			<xpath>/Defs/TraderKindDef[defName="VFEI_Orbital_BioEngineeringSupplier"]
-			</xpath>
-			<value>
-				<commonality>0</commonality>
-			</value>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationAddModExtension">
+					<xpath>/Defs/TraderKindDef[defName="VFEI_Orbital_BioEngineeringSupplier"]</xpath>
+					<value>
+						<li Class="TG.GenExtension"/>
+					</value>
+				</li>
+			</operations>
 		</match>
 	</Operation>
 </Patch>
