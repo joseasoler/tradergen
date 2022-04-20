@@ -14,7 +14,7 @@ namespace TG.StockGen
 		/// <summary>
 		/// The weapon must have one of these weapon tags.
 		/// </summary>
-		public List<string> weaponTags;
+		public List<string> weaponTags = new List<string>();
 
 		/// <summary>
 		/// The weapon must not have any of these weapon tags.
@@ -37,7 +37,7 @@ namespace TG.StockGen
 		protected override bool CanBuy(in ThingDef def)
 		{
 			return def.IsWeapon && WeaponCheck(def) &&
-			       (weaponTags == null || def.weaponTags != null && def.weaponTags.Intersect(weaponTags).Any()) &&
+			       (weaponTags.Count == 0 || def.weaponTags != null && def.weaponTags.Intersect(weaponTags).Any()) &&
 			       def.weaponTags != null && !def.weaponTags.Intersect(excludeWeaponTags).Any();
 		}
 	}
