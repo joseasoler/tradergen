@@ -16,23 +16,6 @@
 						<tradeability>All</tradeability>
 					</value>
 				</li>
-				<!-- Food-oriented orbital traders sell canned food. -->
-				<!--
-				<li Class="PatchOperationAdd">
-					<xpath>/Defs/TG.NodeDef[defName="ND_OrbitalFood"]/generators
-					</xpath>
-					<value>
-						<li Class="StockGenerator_SingleDef">
-							<thingDef>VCE_CannedMeat</thingDef>
-							<totalPriceRange>1000~1250</totalPriceRange>
-						</li>
-						<li Class="StockGenerator_SingleDef">
-							<thingDef>VCE_CannedProduce</thingDef>
-							<totalPriceRange>650~875</totalPriceRange>
-						</li>
-					</value>
-				</li>
-				-->
 			</operations>
 		</match>
 	</Operation>
