@@ -33,6 +33,10 @@ Currently most of the features of the mod are only implemented for orbital trade
 * May have more variety of gluttonous food instead of just chocolate.
 * Very cheap and very expensive bionics are less common. Ultratech bionics are unfrequent.
 
+### Imperial
+* Increased variety of joy buildings in stock.
+* Has some gluttonous food in stock.
+
 ## Mod support
 
 TraderGen should support wares from most mods out of the box; please submit a [bug report](CONTRIBUTING.md) if you find any issues.

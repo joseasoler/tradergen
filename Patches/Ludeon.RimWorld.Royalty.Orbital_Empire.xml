@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Royalty</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/TraderKindDef[defName="Orbital_Empire"]/stockGenerators</xpath>
+					<value>
+						<!-- Include some Joy buildings for bored nobles -->
+						<li Class="TG.StockGen.BuildingsJoy">
+							<minTechLevelGenerate>Industrial</minTechLevelGenerate>
+							<thingDefCountRange>3~5</thingDefCountRange>
+							<countRange>1</countRange>
+						</li>
+						<!-- And also some decadent food. -->
+						<li Class="TG.StockGen.FoodGluttonous">
+							<thingDefCountRange>2~3</thingDefCountRange>
+							<totalPriceRange>1000~1300</totalPriceRange>
+						</li>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+</Patch>
