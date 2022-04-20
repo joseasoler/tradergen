@@ -2,42 +2,39 @@
 
 [![RimWorld](https://img.shields.io/badge/RimWorld-1.3-informational)](https://rimworldgame.com/) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](CODE_OF_CONDUCT.md)
 
-TraderGen is a mod for the [RimWorld](https://rimworldgame.com/) game. It overhauls the random generation of stock for traders, increasing stock variety and customization while improving mod compatibility.
+TraderGen is a mod for the [RimWorld](https://rimworldgame.com/) game. It modifies the random generation of stock for traders, increasing stock variety and customization while improving mod compatibility.
 
 Currently most of the features of the mod are only implemented for orbital traders, but expansions are planned for the future.
 
 ## Features
 
-* Vanilla orbital traders have increased stock variety by default and include some mod compatibility improvements.
 
-## Orbital trader changes
+Orbital traders now have an specialization in addition to their type. The specialization adds a limited amount of stock but it may be particularly rare or useful. Each trader type has its own set of available specializations, with some of them being less common than the others.
 
-### Bulk goods
+All vanilla orbital traders (and several modded ones) have some changes to their base stock aiming for increasing their variety and improving compatibility with mods.
 
-* May have any alcohol type in stock, instead of only beer. Cheaper varieties are more common.
-* Increased variety and quantity of textiles in stock. Never has human leather in stock by default.
+### Give me the details!
 
-### Combat
+#### Specializations
 
-* Guaranteed to have a few pieces of power armor in stock.
-* May rarely have a shield belt or smokepop belt in stock.
+...
 
-### Exotic
 
-* Very cheap and very expensive bionics are less common. Ultratech bionics are unfrequent.
-* Increased variety of joy buildings in stock.
+#### Orbital trader changes
 
-### Slaver
+**Bulk goods:** May have any alcohol type in stock instead of only beer. Increased variety and quantity of textiles in stock. Never has human leather in stock by default.
 
-* May have any alcohol type in stock, instead of only beer. Cheaper varieties are more common.
-* May have more variety of gluttonous food instead of just chocolate.
-* Very cheap and very expensive bionics are less common. Ultratech bionics are unfrequent.
+**Combat:** Guaranteed to have a few pieces of power armor in stock. May rarely have a shield belt or smokepop belt in stock.
 
-### Imperial
-* Increased variety of joy buildings in stock.
-* Has some gluttonous food in stock.
+**Exotic:** Very cheap and very expensive bionics are less common. Ultratech bionics are unfrequent. Increased variety of joy buildings in stock.
 
-## Mod support
+**Slaver:** May have any alcohol type in stock instead of only beer. Has more variety of gluttonous food instead of just chocolate. Very cheap and very expensive bionics are less common. Ultratech bionics are unfrequent.
+
+**Imperial:** Increased variety of joy buildings in stock. Has some gluttonous food in stock.
+
+Some orbital trader types added by mods have received changes as well. In the cases of traders with limited stock or having way less total wealth than vanilla traders, an effort has been made to add stock which makes sense to them. Check the Mod support section for details.  
+
+#### Mod support
 
 TraderGen should support wares from most mods out of the box; please submit a [bug report](CONTRIBUTING.md) if you find any issues.
 
