@@ -31,13 +31,13 @@ namespace TG.StockGen
 		protected abstract void SetStuffDef();
 
 		/// <summary>
-		/// Takes advantage of the SetTraderInfo call in ProcGen to choose the stuff to use as material.
+		/// Choose the stuff to use as material.
 		/// </summary>
-		/// <param name="fromTile">Map tile considered as the origin of the trader.</param>
+		/// <param name="fromTile">Tile in which the transaction will take place.</param>
 		/// <param name="faction">Faction of the trader.</param>
-		public override void SetTraderInfo(in int fromTile, in Faction faction)
+		public override void BeforeGen(in int fromTile, in Faction faction)
 		{
-			base.SetTraderInfo(fromTile, faction);
+			base.BeforeGen(fromTile, faction);
 			SetStuffDef();
 		}
 
