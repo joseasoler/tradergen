@@ -27,6 +27,12 @@ Currently most of the features of the mod are only implemented for orbital trade
 * Very cheap and very expensive bionics are less common. Ultratech bionics are unfrequent.
 * Increased variety of joy buildings in stock.
 
+### Slaver
+
+* May have any alcohol type in stock, instead of only beer. Cheaper varieties are more common.
+* May have more variety of gluttonous food instead of just chocolate.
+* Very cheap and very expensive bionics are less common. Ultratech bionics are unfrequent.
+
 ## Mod support
 
 TraderGen should support wares from most mods out of the box; please submit a [bug report](CONTRIBUTING.md) if you find any issues.
@@ -117,7 +123,7 @@ TraderGen also provides extra features when certain mods are enabled. TraderGen 
 
 [Vanilla Weapons Expanded - Non-Lethal](https://steamcommunity.com/sharedfiles/filedetails/?id=2454918354):
 
-* ...
+* Slaver orbital traders may have some non-lethal weapons in stock.
 
 ## Development
 

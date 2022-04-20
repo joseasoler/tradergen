@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<!-- Beer is replaced with the mod-friendly StockGen.Alcohol generator. -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/TraderKindDef[defName="Orbital_PirateMerchant"]/stockGenerators/li[@Class="StockGenerator_SingleDef"
+			and thingDef="Beer"]
+		</xpath>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationRemove">
+					<xpath>
+						/Defs/TraderKindDef[defName="Orbital_PirateMerchant"]/stockGenerators/li[@Class="StockGenerator_SingleDef"
+						and thingDef="Beer"]
+					</xpath>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/TraderKindDef[defName="Orbital_PirateMerchant"]/stockGenerators</xpath>
+					<value>
+						<li Class="TG.StockGen.Alcohol">
+							<thingDefCountRange>0~2</thingDefCountRange>
+							<totalPriceRange>80~200</totalPriceRange>
+						</li>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+	<!-- Chocolate is replaced with a more generic FoodGluttonous generator. -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/TraderKindDef[defName="Orbital_PirateMerchant"]/stockGenerators/li[@Class="StockGenerator_SingleDef"
+			and thingDef="Chocolate"]
+		</xpath>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationRemove">
+					<xpath>
+						/Defs/TraderKindDef[defName="Orbital_PirateMerchant"]/stockGenerators/li[@Class="StockGenerator_SingleDef"
+						and thingDef="Chocolate"]
+					</xpath>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/TraderKindDef[defName="Orbital_PirateMerchant"]/stockGenerators</xpath>
+					<value>
+						<li Class="TG.StockGen.FoodGluttonous">
+							<thingDefCountRange>1~2</thingDefCountRange>
+							<totalPriceRange>500~900</totalPriceRange>
+						</li>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+	<!-- Will never count tools from VWE as weapons. -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>
+			/Defs/TraderKindDef[defName="Orbital_PirateMerchant"]/stockGenerators/li[@Class="StockGenerator_WeaponsRanged"]
+		</xpath>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationRemove">
+					<xpath>
+						/Defs/TraderKindDef[defName="Orbital_PirateMerchant"]/stockGenerators/li[@Class="StockGenerator_WeaponsRanged"]
+					</xpath>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/TraderKindDef[defName="Orbital_PirateMerchant"]/stockGenerators</xpath>
+					<value>
+						<li Class="TG.StockGen.WeaponRanged">
+							<minTechLevelGenerate>Industrial</minTechLevelGenerate>
+							<maxTechLevelGenerate>Spacer</maxTechLevelGenerate>
+							<excludeWeaponTags>
+								<li MayRequire="VanillaExpanded.VWE">ToolDecent</li>
+								<li MayRequire="OskarPotocki.VFE.Pirates">WarcasketAll</li>
+							</excludeWeaponTags>
+							<thingDefCountRange>-1~2</thingDefCountRange>
+							<countRange>1</countRange>
+						</li>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+	<!-- May rarely have power armor in stock. -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>
+			/Defs/TraderKindDef[defName="Orbital_PirateMerchant"]/stockGenerators/li[@Class="StockGenerator_Armor"]
+		</xpath>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationRemove">
+					<xpath>
+						/Defs/TraderKindDef[defName="Orbital_PirateMerchant"]/stockGenerators/li[@Class="StockGenerator_Armor"]
+					</xpath>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/TraderKindDef[defName="Orbital_PirateMerchant"]/stockGenerators</xpath>
+					<value>
+						<li Class="TG.StockGen.Armor">
+							<minTechLevelGenerate>Industrial</minTechLevelGenerate>
+							<maxTechLevelGenerate>Spacer</maxTechLevelGenerate>
+							<excludeTradeTags>
+								<li>HiTechArmor</li>
+								<!-- VFEP_Apparel_Privateer lacks the HiTechArmor trade tag used by other power armor items. -->
+								<li MayRequire="OskarPotocki.VFE.Pirates">PrivateerArmor</li>
+								<!--
+								Some Vanilla Armor Expanded power armor lacks the HiTechArmor tradeTag. A new tradeTag is patched into
+								them to avoid changing other behavior.
+								-->
+								<li MayRequire="VanillaExpanded.VARME">TG_PatchedHiTechArmor</li>
+							</excludeTradeTags>
+							<thingDefCountRange>-2~2</thingDefCountRange>
+							<countRange>1</countRange>
+						</li>
+						<li Class="TG.StockGen.Armor">
+							<minTechLevelGenerate>Industrial</minTechLevelGenerate>
+							<tradeTags>
+								<li>HiTechArmor</li>
+								<!-- VFEP_Apparel_Privateer lacks the HiTechArmor trade tag used by other power armor items. -->
+								<li MayRequire="OskarPotocki.VFE.Pirates">PrivateerArmor</li>
+								<!--
+								Some Vanilla Armor Expanded power armor lacks the HiTechArmor tradeTag. A new tradeTag is patched into
+								them to avoid changing other unrelated behavior.
+								-->
+								<li MayRequire="VanillaExpanded.VARME">TG_PatchedHiTechArmor</li>
+							</tradeTags>
+							<thingDefCountRange>-5~1</thingDefCountRange>
+							<countRange>1</countRange>
+						</li>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+	<!-- Very cheap and very expensive bionics are less common. Ultratech bionics are unfrequent. -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/TraderKindDef[defName="Orbital_PirateMerchant"]/stockGenerators/li[@Class="StockGenerator_Tag" and
+			tradeTag="TechHediff"]
+		</xpath>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationRemove">
+					<xpath>
+						/Defs/TraderKindDef[defName="Orbital_PirateMerchant"]/stockGenerators/li[@Class="StockGenerator_Tag" and
+						tradeTag="TechHediff"]
+					</xpath>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/TraderKindDef[defName="Orbital_PirateMerchant"]/stockGenerators</xpath>
+					<value>
+						<li Class="TG.StockGen.TechHediff">
+							<minTechLevelGenerate>Industrial</minTechLevelGenerate>
+							<maxTechLevelGenerate>Spacer</maxTechLevelGenerate>
+							<thingDefCountRange>-3~5</thingDefCountRange>
+							<countRange>1</countRange>
+						</li>
+						<li Class="TG.StockGen.TechHediff">
+							<minTechLevelGenerate>Ultra</minTechLevelGenerate>
+							<maxTechLevelGenerate>Ultra</maxTechLevelGenerate>
+							<thingDefCountRange>-3~1</thingDefCountRange>
+							<countRange>1</countRange>
+						</li>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+	<!-- May have non-lethal weapons in stock -->
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/TraderKindDef[defName="Orbital_PirateMerchant"]/stockGenerators
+		</xpath>
+		<value>
+			<li Class="TG.StockGen.WeaponRanged" MayRequire="VanillaExpanded.VWENL">
+				<minTechLevelGenerate>Industrial</minTechLevelGenerate>
+				<maxTechLevelGenerate>Spacer</maxTechLevelGenerate>
+				<weaponTags>
+					<li>NonLethal</li>
+				</weaponTags>
+				<thingDefCountRange>-1~2</thingDefCountRange>
+				<countRange>1~2</countRange>
+			</li>
+		</value>
+	</Operation>
+</Patch>
