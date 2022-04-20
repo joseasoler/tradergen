@@ -9,7 +9,15 @@
 				<li Class="PatchOperationAddModExtension">
 					<xpath>/Defs/TraderKindDef[defName="Orbital_Empire"]</xpath>
 					<value>
-						<li Class="TG.GenExtension"/>
+						<li Class="TG.GenExtension">
+							<specializations>
+								<li>
+									<def>TG_Bionics</def>
+									<commonality>10.0</commonality>
+								</li>
+							</specializations>
+						</li>
+
 					</value>
 				</li>
 				<li Class="PatchOperationAdd">

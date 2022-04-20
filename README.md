@@ -13,14 +13,13 @@ Orbital traders now have an specialization in addition to their type. The specia
 
 All vanilla orbital traders (and several modded ones) have some changes to their base stock aiming for increasing their variety and improving compatibility with mods.
 
-### Give me the details!
+## Give me the details!
 
-#### Specializations
+### Specializations
 
-...
+**Bionics:** Adds prostheses between the industrial and ultratech technology levels. May rarely have a single archotech bionic in stock.
 
-
-#### Orbital trader changes
+### Orbital trader changes
 
 **Bulk goods:** May have any alcohol type in stock instead of only beer. Increased variety and quantity of textiles in stock. Never has human leather in stock by default.
 
@@ -50,7 +49,7 @@ TraderGen also provides extra features when certain mods are enabled. TraderGen 
   
 [Expanded Prosthetics and Organ Engineering - Forked](https://steamcommunity.com/sharedfiles/filedetails/?id=1949064302):
 
-* ...
+* Traders with the bionic specialization may rarely have MA-AI chips in stock.
 
 [Jewelry](https://steamcommunity.com/workshop/filedetails/?id=2020964421):
 

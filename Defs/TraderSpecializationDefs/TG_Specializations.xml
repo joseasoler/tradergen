@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<TG.TraderSpecializationDef>
+		<defName>TG_Bionics</defName>
+			<stockGens>
+				<li Class="TG.StockGen.TechHediff">
+					<minTechLevelGenerate>Industrial</minTechLevelGenerate>
+					<maxTechLevelGenerate>Ultra</maxTechLevelGenerate>
+					<thingDefCountRange>2~4</thingDefCountRange>
+					<countRange>1</countRange>
+				</li>
+				<li Class="TG.StockGen.TechHediff">
+					<minTechLevelGenerate>Archotech</minTechLevelGenerate>
+					<maxTechLevelGenerate>Archotech</maxTechLevelGenerate>
+					<thingDefCountRange>-3~1</thingDefCountRange>
+					<countRange>1</countRange>
+				</li>
+				<li Class="StockGenerator_SingleDef" MayRequire="vat.epoeforked">
+					<thingDef>EPOE_MAAI_Chip</thingDef>
+					<countRange>-1~2</countRange>
+				</li>
+			</stockGens>
+	</TG.TraderSpecializationDef>	
+</Defs>

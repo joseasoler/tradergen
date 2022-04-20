@@ -3,7 +3,14 @@
 	<Operation Class="PatchOperationAddModExtension">
 		<xpath>/Defs/TraderKindDef[defName="Orbital_Exotic"]</xpath>
 		<value>
-			<li Class="TG.GenExtension"/>
+			<li Class="TG.GenExtension">
+				<specializations>
+					<li>
+						<def>TG_Bionics</def>
+						<commonality>10.0</commonality>
+					</li>
+				</specializations>
+			</li>
 		</value>
 	</Operation>
 	<!-- Very cheap and very expensive bionics are less common. Ultratech bionics are unfrequent. -->
