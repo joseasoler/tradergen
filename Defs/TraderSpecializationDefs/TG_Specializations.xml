@@ -2,23 +2,52 @@
 <Defs>
 	<TG.TraderSpecializationDef>
 		<defName>TG_Bionics</defName>
-			<stockGens>
-				<li Class="TG.StockGen.TechHediff">
-					<minTechLevelGenerate>Industrial</minTechLevelGenerate>
-					<maxTechLevelGenerate>Ultra</maxTechLevelGenerate>
-					<thingDefCountRange>2~4</thingDefCountRange>
-					<countRange>1</countRange>
-				</li>
-				<li Class="TG.StockGen.TechHediff">
-					<minTechLevelGenerate>Archotech</minTechLevelGenerate>
-					<maxTechLevelGenerate>Archotech</maxTechLevelGenerate>
-					<thingDefCountRange>-3~1</thingDefCountRange>
-					<countRange>1</countRange>
-				</li>
-				<li Class="StockGenerator_SingleDef" MayRequire="vat.epoeforked">
-					<thingDef>EPOE_MAAI_Chip</thingDef>
-					<countRange>-1~2</countRange>
-				</li>
-			</stockGens>
-	</TG.TraderSpecializationDef>	
+		<stockGens>
+			<li Class="TG.StockGen.TechHediff">
+				<minTechLevelGenerate>Industrial</minTechLevelGenerate>
+				<maxTechLevelGenerate>Ultra</maxTechLevelGenerate>
+				<thingDefCountRange>2~4</thingDefCountRange>
+				<countRange>1</countRange>
+			</li>
+			<li Class="TG.StockGen.TechHediff">
+				<minTechLevelGenerate>Archotech</minTechLevelGenerate>
+				<maxTechLevelGenerate>Archotech</maxTechLevelGenerate>
+				<thingDefCountRange>-3~1</thingDefCountRange>
+				<countRange>1</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef" MayRequire="vat.epoeforked">
+				<thingDef>EPOE_MAAI_Chip</thingDef>
+				<countRange>-1~2</countRange>
+			</li>
+		</stockGens>
+	</TG.TraderSpecializationDef>
+	<TG.TraderSpecializationDef>
+		<defName>TG_Cannibal</defName>
+		<stockGens>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>Meat_Human</thingDef>
+				<totalPriceRange>1020~2120</totalPriceRange>
+			</li>
+			<li Class="TG.StockGen.StuffFromThingDef">
+				<thingDef>Leather_Human</thingDef>
+				<maxTechLevelGenerate>Spacer</maxTechLevelGenerate>
+				<stuffCountRange>200~400</stuffCountRange>
+				<thingDefCountRange>4~7</thingDefCountRange>
+				<countRange>1~2</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>Kibble</thingDef>
+				<totalPriceRange>700~1300</totalPriceRange>
+			</li>
+			<li Class="StockGenerator_Tag">
+				<tradeTag>BodyPartsNatural</tradeTag>
+				<thingDefCountRange>1~2</thingDefCountRange>
+				<countRange>1~2</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef" MayRequire="VanillaExpanded.VBrewECandT">
+				<thingDef>VBE_CannibalCoffee</thingDef>
+				<totalPriceRange>-1000~1000</totalPriceRange>
+			</li>
+		</stockGens>
+	</TG.TraderSpecializationDef>
 </Defs>
