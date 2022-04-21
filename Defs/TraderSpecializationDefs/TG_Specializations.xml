@@ -26,7 +26,7 @@
 		<stockGens>
 			<li Class="StockGenerator_SingleDef">
 				<thingDef>Meat_Human</thingDef>
-				<totalPriceRange>1020~2120</totalPriceRange>
+				<totalPriceRange>500~1111</totalPriceRange>
 			</li>
 			<li Class="TG.StockGen.StuffFromThingDef">
 				<thingDef>Leather_Human</thingDef>
