@@ -33,11 +33,11 @@ namespace TG.StockGen
 		/// <summary>
 		/// Choose the stuff to use as material.
 		/// </summary>
-		/// <param name="fromTile">Tile in which the transaction will take place.</param>
+		/// <param name="tile">Tile in which the transaction will take place.</param>
 		/// <param name="faction">Faction of the trader.</param>
-		public override void BeforeGen(in int fromTile, in Faction faction)
+		public override void BeforeGen(in int tile, in Faction faction)
 		{
-			base.BeforeGen(fromTile, faction);
+			base.BeforeGen(tile, faction);
 			SetStuffDef();
 		}
 
