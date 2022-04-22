@@ -1,6 +1,8 @@
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using RimWorld;
+using TG.TraderKind;
 using Verse;
 
 namespace TG.Debug
@@ -38,6 +40,22 @@ namespace TG.Debug
 				var newPawn = PawnGenerator.GeneratePawn(def, Faction.OfPlayer);
 				GenSpawn.Spawn(newPawn, UI.MouseCell(), Find.CurrentMap);
 			}
+		}
+
+		[DebugAction("TraderGen", allowedGameStates = AllowedGameStates.Playing)]
+		private static void GenerateTraderNames()
+		{
+			var options = DefDatabase<TraderKindDef>.AllDefs.Where(t => t.orbital)
+				.Select(traderKindDef => new DebugMenuOption(traderKindDef.label, DebugMenuOptionMode.Action, () =>
+				{
+					Logger.Gen($"{traderKindDef.label}:");
+					for (var index = 0; index < 50; ++index)
+					{
+						Logger.Gen($"\t{Generator.Name(traderKindDef, null)}");
+					}
+				}))
+				.ToList();
+			Find.WindowStack.Add(new Dialog_DebugOptionListLister(options));
 		}
 	}
 }
