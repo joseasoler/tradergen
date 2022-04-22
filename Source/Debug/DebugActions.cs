@@ -9,6 +9,9 @@ namespace TG.Debug
 {
 	public class DebugActions
 	{
+		/// <summary>
+		/// Place all things and animals which can be sold or purchased in the map.
+		/// </summary>
 		[DebugAction("TraderGen", allowedGameStates = AllowedGameStates.PlayingOnMap)]
 		private static void PlaceAllTradeableThings()
 		{
@@ -42,6 +45,9 @@ namespace TG.Debug
 			}
 		}
 
+		/// <summary>
+		/// Generate a large number of trader names for a specific orbital trader type.
+		/// </summary>
 		[DebugAction("TraderGen", allowedGameStates = AllowedGameStates.Playing)]
 		private static void GenerateTraderNames()
 		{
@@ -56,6 +62,41 @@ namespace TG.Debug
 				}))
 				.ToList();
 			Find.WindowStack.Add(new Dialog_DebugOptionListLister(options));
+		}
+
+		/// <summary>
+		/// Sort DebugMenuOptions by label.
+		/// </summary>
+		/// <param name="a">First menu option.</param>
+		/// <param name="b">Second menu option.</param>
+		/// <returns></returns>
+		private static int CompareDebugMenuOptions(DebugMenuOption a, DebugMenuOption b)
+		{
+			return string.Compare(a.label, b.label, StringComparison.Ordinal);
+		}
+
+		/// <summary>
+		/// Generates a new orbital trader with a specialization chosen by the user.
+		/// </summary>
+		[DebugAction("TraderGen", allowedGameStates = AllowedGameStates.PlayingOnMap)]
+		private static void GenerateOrbitalTrader()
+		{
+			var debugOrbitalTrader = DefDatabase<TraderKindDef>.GetNamed("TG_OrbitalDebug");
+
+			var specializationOptions = DefDatabase<TraderSpecializationDef>.AllDefs
+				.Select(specializationDef =>
+					new DebugMenuOption(specializationDef.defName, DebugMenuOptionMode.Action, () =>
+					{
+						debugOrbitalTrader.GetModExtension<GenExtension>().specializations.First().def = specializationDef;
+						Find.CurrentMap.passingShipManager.DebugSendAllShipsAway();
+						IncidentDefOf.OrbitalTraderArrival.Worker.TryExecute(new IncidentParms
+						{
+							target = Find.CurrentMap,
+							traderKind = debugOrbitalTrader
+						});
+					})).ToList();
+			specializationOptions.Sort(CompareDebugMenuOptions);
+			Find.WindowStack.Add(new Dialog_DebugOptionListLister(specializationOptions));
 		}
 	}
 }
