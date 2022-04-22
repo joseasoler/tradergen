@@ -24,11 +24,16 @@
 		<rulePack>
 			<rulesStrings>
 				<li>r_name(p=4)->[businessname] [traderkindbusinesstype]</li>
+				<li>r_name(p=4)->[weapon] [traderkindbusinesstype]</li>
 				<li>r_name(p=2)->[AdjectiveBadass] [traderkindbusinesstype]</li>
 				<li>r_name->[AdjectiveBadass] [Animal] [traderkindbusinesstype]</li>
+				<li>r_name->[AdjectiveBadass] [Animal]</li>
+				<li>r_name->[AdjectiveBadass] [weapon] [traderkindbusinesstype]</li>
+				<li>r_name->[AdjectiveBadass] [weapon]</li>
 			</rulesStrings>
 			<rulesFiles>
 				<li>traderkindbusinesstype->Words/Nouns/TG_CombatBusinessTypes</li>
+				<li>weapon->Words/Nouns/Weapons</li>
 			</rulesFiles>
 		</rulePack>
 	</RulePackDef>
