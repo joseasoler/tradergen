@@ -24,9 +24,9 @@ namespace TG.Harmony
 		private static void ConstructTraderKindDef(TraderKindDef def, Faction faction, ref TradeShip __instance)
 		{
 			__instance.def = Generator.Def(def, __instance.RandomPriceFactorSeed, __instance.Map?.Tile ?? -1,
-				__instance.faction, out var specializations);
+				__instance.faction);
 
-			var name = Generator.Name(__instance.def, __instance.faction, specializations);
+			var name = Generator.Name(__instance.def, __instance.faction);
 			if (name != null)
 			{
 				__instance.name = name;
@@ -48,37 +48,8 @@ namespace TG.Harmony
 			if (Scribe.mode == LoadSaveMode.PostLoadInit)
 			{
 				__instance.def = Generator.Def(__instance.def, __instance.RandomPriceFactorSeed, __instance.Map?.Tile ?? -1,
-					__instance.faction, out var specializations);
+					__instance.faction);
 			}
 		}
-
-
-		/*
-
-		/// <summary>
-		/// Regenerates all TraderKindDefs associated to TradeShips after loading. 
-		/// Since the generated TraderKindDefs must have the same defName as a real one, TradeShip.ExposeData will work
-		/// correctly but it load a real TraderKindDefs instead of a generated one.
-		/// Since Generator.Generate must know the tile of the transaction and that is initialized by PassingShipManager,
-		/// the TraderKindDefs are regenerated here instead.
-		/// </summary>
-		/// <param name="__instance">TradeShip instance.</param>
-		[HarmonyPostfix]
-		[HarmonyPatch(typeof(PassingShipManager), nameof(PassingShipManager.ExposeData))]
-		private static void LoadTraderKindDefs(ref PassingShipManager __instance)
-		{
-			// Wait until the map is fully loaded before using it.
-			if (Scribe.mode != LoadSaveMode.PostLoadInit)
-			{
-				return;
-			}
-
-			foreach (var tradeShip in __instance.passingShips.Cast<TradeShip>().Where(tradeShip => tradeShip != null))
-			{
-				tradeShip.def = Generator.Generate(tradeShip.def, tradeShip.RandomPriceFactorSeed, tradeShip.Map?.Tile ?? -1,
-					tradeShip.faction);
-			}
-		}
-		 */
 	}
 }
