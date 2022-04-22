@@ -6,6 +6,30 @@
 		</mods>
 		<match Class="PatchOperationSequence">
 			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs</xpath>
+					<value>
+						<RulePackDef>
+							<defName>TG_OrbitalNamerImperial</defName>
+							<include>
+								<li>EmpireNameUtility</li>
+							</include>
+							<rulePack>
+								<rulesStrings>
+									<li>r_name(p=2)->[townname_fixed] [traderkindbusinesstype]</li>
+									<li>r_name(p=2)->[ImperialNameFirstMale] [traderkindbusinesstype]</li>
+									<li>r_name(p=2)->[ImperialNameFirstFemale] [traderkindbusinesstype]</li>
+									<li>r_name(p=2)->[ImperialNameLast] [traderkindbusinesstype]</li>
+									<li>r_name(p=2)->[WordImperial] [traderkindbusinesstype]</li>
+								</rulesStrings>
+								<rulesFiles>
+									<li>traderkindbusinesstype->Words/Nouns/BusinessTypes</li>
+									<li>townname_fixed->Names/EmpireTown</li>
+								</rulesFiles>
+							</rulePack>
+						</RulePackDef>
+					</value>
+				</li>
 				<li Class="PatchOperationAddModExtension">
 					<xpath>/Defs/TraderKindDef[defName="Orbital_Empire"]</xpath>
 					<value>
@@ -16,8 +40,8 @@
 									<commonality>10.0</commonality>
 								</li>
 							</specializations>
+							<extraNameRules>TG_OrbitalNamerImperial</extraNameRules>
 						</li>
-
 					</value>
 				</li>
 				<li Class="PatchOperationAdd">

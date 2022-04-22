@@ -1,0 +1,10 @@
+﻿Armory
+Defense
+Dynamics
+Factories
+Firearms
+Marauders
+Ordnance
+Security
+Systems
+Vikings

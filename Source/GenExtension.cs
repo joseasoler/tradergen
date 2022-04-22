@@ -9,6 +9,14 @@ namespace TG
 	/// </summary>
 	public class GenExtension : DefModExtension
 	{
+		/// <summary>
+		/// List of specializations allowed for this trader type.
+		/// </summary>
 		public List<SpecializationCommonality> specializations = new List<SpecializationCommonality>();
+
+		/// <summary>
+		/// Extra name rules used for orbital traders.
+		/// </summary>
+		public RulePackDef extraNameRules;
 	}
 }

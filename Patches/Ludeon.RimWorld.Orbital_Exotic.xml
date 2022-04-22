@@ -10,6 +10,7 @@
 						<commonality>10.0</commonality>
 					</li>
 				</specializations>
+				<extraNameRules>TG_OrbitalNamerExotic</extraNameRules>
 			</li>
 		</value>
 	</Operation>

@@ -8,8 +8,9 @@ Currently most of the features of the mod are only implemented for orbital trade
 
 ## Features
 
-
 Orbital traders now have an specialization in addition to their type. The specialization adds a limited amount of stock but it may be particularly rare or useful. Each trader type has its own set of available specializations, with some of them being less common than the others.
+
+Orbital traders will frequently have randomly generated names matching their type and specialization.
 
 All vanilla orbital traders (and several modded ones) have some changes to their base stock aiming for increasing their variety and improving compatibility with mods.
 

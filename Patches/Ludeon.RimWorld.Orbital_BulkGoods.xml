@@ -3,7 +3,9 @@
 	<Operation Class="PatchOperationAddModExtension">
 		<xpath>/Defs/TraderKindDef[defName="Orbital_BulkGoods"]</xpath>
 		<value>
-			<li Class="TG.GenExtension"/>
+			<li Class="TG.GenExtension">
+				<extraNameRules>TG_OrbitalNamerBulk</extraNameRules>
+			</li>
 		</value>
 	</Operation>
 	<!-- Beer is replaced with the mod-friendly StockGen.Alcohol generator. -->

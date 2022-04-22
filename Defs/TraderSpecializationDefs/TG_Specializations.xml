@@ -2,6 +2,7 @@
 <Defs>
 	<TG.TraderSpecializationDef>
 		<defName>TG_Bionics</defName>
+		<label>bionics</label>
 		<stockGens>
 			<li Class="TG.StockGen.TechHediff">
 				<minTechLevelGenerate>Industrial</minTechLevelGenerate>
@@ -23,6 +24,7 @@
 	</TG.TraderSpecializationDef>
 	<TG.TraderSpecializationDef>
 		<defName>TG_Cannibal</defName>
+		<label>cannibal</label>
 		<stockGens>
 			<li Class="StockGenerator_SingleDef">
 				<thingDef>Meat_Human</thingDef>

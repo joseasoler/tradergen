@@ -40,7 +40,8 @@ namespace TG.Harmony.Mod
 		{
 			if (Scribe.mode == LoadSaveMode.PostLoadInit)
 			{
-				___def = Generator.Generate(___def, ___randomPriceFactorSeed, ___map?.Tile ?? -1, ___faction);
+				___def = Generator.Def(___def, ___randomPriceFactorSeed, ___map?.Tile ?? -1, ___faction,
+					out var specializations);
 			}
 		}
 	}

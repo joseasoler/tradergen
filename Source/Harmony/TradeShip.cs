@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using System.Linq;
 using HarmonyLib;
 using RimWorld;
 using TG.TraderKind;
@@ -22,8 +23,14 @@ namespace TG.Harmony
 		[HarmonyPatch(typeof(TradeShip), MethodType.Constructor, typeof(TraderKindDef), typeof(Faction))]
 		private static void ConstructTraderKindDef(TraderKindDef def, Faction faction, ref TradeShip __instance)
 		{
-			__instance.def = Generator.Generate(def, __instance.RandomPriceFactorSeed, __instance.Map?.Tile ?? -1,
-				__instance.faction);
+			__instance.def = Generator.Def(def, __instance.RandomPriceFactorSeed, __instance.Map?.Tile ?? -1,
+				__instance.faction, out var specializations);
+
+			var name = Generator.Name(__instance.def, __instance.faction, specializations);
+			if (name != null)
+			{
+				__instance.name = name;
+			}
 		}
 
 		/// <summary>
@@ -40,8 +47,8 @@ namespace TG.Harmony
 			// Wait until Map and PassingShipManager are fully loaded before using them.
 			if (Scribe.mode == LoadSaveMode.PostLoadInit)
 			{
-				__instance.def = Generator.Generate(__instance.def, __instance.RandomPriceFactorSeed,
-					__instance.Map?.Tile ?? -1, __instance.faction);
+				__instance.def = Generator.Def(__instance.def, __instance.RandomPriceFactorSeed, __instance.Map?.Tile ?? -1,
+					__instance.faction, out var specializations);
 			}
 		}
 
