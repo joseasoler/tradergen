@@ -41,9 +41,9 @@
 				<thingDef>Kibble</thingDef>
 				<totalPriceRange>700~1300</totalPriceRange>
 			</li>
-			<li Class="StockGenerator_Tag">
-				<tradeTag>BodyPartsNatural</tradeTag>
-				<thingDefCountRange>1~2</thingDefCountRange>
+			<li Class="StockGenerator_Category">
+				<categoryDef>BodyPartsNatural</categoryDef>
+				<thingDefCountRange>1~3</thingDefCountRange>
 				<countRange>1~2</countRange>
 			</li>
 			<li Class="StockGenerator_SingleDef" MayRequire="VanillaExpanded.VBrewECandT">
