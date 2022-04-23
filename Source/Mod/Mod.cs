@@ -1,4 +1,5 @@
 using System;
+using RimWorld;
 using TG.TraderKind;
 using UnityEngine;
 using Verse;
@@ -45,6 +46,17 @@ namespace TG.Mod
 				Settings.SellPsylinkNeuroformers = sellPsylinkNeuroformers;
 			}
 
+			var labelValue = Settings.PeriodOrbital != Settings.DisablePeriodOrbital
+				? ((int) Settings.PeriodOrbital * GenDate.TicksPerDay).ToStringTicksToPeriodVerbose()
+				: (string) "TG_ModifyPeriodOrbitalDoNotChange".Translate();
+
+			var label = Settings.PeriodOrbital != 15U ? "TG_ModifyPeriodOrbital" : "TG_ModifyPeriodOrbitalDefault";
+
+			listing.Label(label.Translate(labelValue), -1f, "TG_ModifyPeriodOrbitalTooltip".Translate());
+			Settings.PeriodOrbital = (uint) Widgets.HorizontalSlider(listing.GetRect(22f), Settings.PeriodOrbital,
+				Settings.DisablePeriodOrbital, Settings.MaxPeriodOrbital, false, null, null, null, 1.0f);
+			listing.Gap(listing.verticalSpacing);
+
 			foreach (var categoryObj in Enum.GetValues(typeof(TraderKindCategory)))
 			{
 				var category = (TraderKindCategory) categoryObj;
@@ -70,6 +82,7 @@ namespace TG.Mod
 			{
 				Settings.Reset();
 			}
+
 			TooltipHandler.TipRegion(resetButtonRect, "TG_ResetSettingsTooltip".Translate());
 			listing.Gap(listing.verticalSpacing);
 
@@ -90,6 +103,12 @@ namespace TG.Mod
 
 			listing.End();
 			base.DoSettingsWindowContents(inRect);
+		}
+
+		public override void WriteSettings()
+		{
+			base.WriteSettings();
+			DefPatcher.Patch();
 		}
 	}
 }

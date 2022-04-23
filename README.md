@@ -2,7 +2,7 @@
 
 [![RimWorld](https://img.shields.io/badge/RimWorld-1.3-informational)](https://rimworldgame.com/) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](CODE_OF_CONDUCT.md)
 
-TraderGen is a mod for the [RimWorld](https://rimworldgame.com/) game. It modifies the random generation of stock for traders, increasing stock variety and customization while improving mod compatibility.
+TraderGen is a mod for the [RimWorld](https://rimworldgame.com/) game. It modifies the random generation of traders, increasing stock variety and customization while improving mod compatibility.
 
 Currently most of the features of the mod are only implemented for orbital traders, but expansions are planned for the future.
 
@@ -10,11 +10,13 @@ Currently most of the features of the mod are only implemented for orbital trade
 
 * Configurable amount of silver in stock. There are different settings for orbital, settlement, caravan and visitor traders. Compatible with all traders, both vanilla and modded.
 
+* Customizable frequency of orbital traders. Compatible with any non-random storyteller, including modded ones.
+
 * Orbital traders now have an specialization in addition to their type. An specialization adds a limited amount of stock but it may be particularly rare or useful. Each trader type has its own set of available specializations, with some of them being less common than the others.
 
 * Each orbital trader type has an expanded pool of random name rules which produces better fitting results.
 
-* All vanilla orbital traders (and several modded ones) have some changes to their base stock aiming for increasing their variety and improving compatibility with mods.
+* All vanilla orbital traders (and several modded ones) have some minor changes to their base stock aiming at increasing their variety and improving mod compatibility.
 
 ## Give me the details!
 

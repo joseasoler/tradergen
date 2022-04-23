@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using RimWorld;
 using TG.TraderKind;
 using Verse;
 
@@ -10,6 +11,12 @@ namespace TG.Mod
 		/// Determines if traders can have psylink neuroformers in stock.
 		/// </summary>
 		public bool SellPsylinkNeuroformers /* = false */;
+
+		/// <summary>
+		/// Period of orbital trader arrival in days.
+		/// 0 means "Disable".
+		/// </summary>
+		public int PeriodOrbital /* = 0 */;
 
 		/// <summary>
 		/// Silver stock of each trader category in %.
@@ -44,6 +51,15 @@ namespace TG.Mod
 		private static SettingValues _values = new SettingValues();
 
 		/// <summary>
+		/// Period of orbital trader arrival in days.
+		/// </summary>
+		public static uint PeriodOrbital
+		{
+			get => (uint) _values.PeriodOrbital;
+			set => _values.PeriodOrbital = (int) value;
+		}
+
+		/// <summary>
 		/// Determines if traders can have psylink neuroformers in stock.
 		/// Always returns false if Royalty is not active.
 		/// </summary>
@@ -62,6 +78,16 @@ namespace TG.Mod
 		{
 			_values.SilverScaling[category] = value;
 		}
+
+		/// <summary>
+		/// Disables modification of the period of orbital traders.
+		/// </summary>
+		public const uint DisablePeriodOrbital = 0U;
+
+		/// <summary>
+		/// Maximum allowed value for PeriodOrbital settings in days.
+		/// </summary>
+		public const uint MaxPeriodOrbital = GenDate.DaysPerYear;
 
 		/// <summary>
 		/// Minimum allowed value for SilverScaling settings in %.
@@ -103,6 +129,7 @@ namespace TG.Mod
 		{
 			base.ExposeData();
 			Scribe_Values.Look(ref _values.SellPsylinkNeuroformers, "SellPsylinkNeuroformers");
+			Scribe_Values.Look(ref _values.PeriodOrbital, "PeriodOrbital");
 			Scribe_Collections.Look(ref _values.SilverScaling, "SilverScaling");
 			Scribe_Values.Look(ref _values.LogGen, "LogGen");
 			Scribe_Values.Look(ref _values.LogStockGen, "LogStockGen");
