@@ -14,13 +14,15 @@ Currently most of the features of the mod are only implemented for orbital trade
 
 * Each orbital trader type has an expanded pool of random name rules which produces better fitting results.
 
-All vanilla orbital traders (and several modded ones) have some changes to their base stock aiming for increasing their variety and improving compatibility with mods.
+* All vanilla orbital traders (and several modded ones) have some changes to their base stock aiming for increasing their variety and improving compatibility with mods.
 
 ## Give me the details!
 
 ### Specializations
 
-**Bionics:** Adds prostheses between the industrial and ultratech technology levels. May rarely have a single archotech bionic in stock.
+**Bionics:** Adds prostheses between the industrial and ultratech technology levels. May rarely have a single archotech bionic in stock. Present in Combat, Exotic, Slaver and Imperial(requires Royalty) orbital traders.
+
+**Cannibal:** Adds resources from morally questionable origins to the trader stock. Present in Combat and Slaver orbital traders.
 
 ### Orbital trader changes
 
@@ -32,7 +34,7 @@ All vanilla orbital traders (and several modded ones) have some changes to their
 
 **Slaver:** May have any alcohol type in stock instead of only beer. Has more variety of gluttonous food instead of just chocolate. Very cheap and very expensive bionics are less common. Ultratech bionics are infrequent.
 
-**Imperial:** Increased variety of joy buildings in stock. Has some gluttonous food in stock.
+**Imperial(requires Royalty):** Increased variety of joy buildings in stock. Has some gluttonous food in stock.
 
 Some orbital trader types added by mods have received changes as well. In the cases of traders with limited stock or having way less total wealth than vanilla traders, an effort has been made to add stock which makes sense to them. Check the Mod support section for details.  
 
