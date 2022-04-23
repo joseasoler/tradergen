@@ -13,23 +13,25 @@ namespace TG.TraderKind
 		/// <summary>
 		/// Creates a copy with initialized internal state if necessary. Logs stock generator information if enabled.
 		/// </summary>
-		/// <param name="gen">StockGenerator being added</param>
+		/// <param name="def">Owner of the stock generator.</param>
+		/// <param name="gen">StockGenerator being added.</param>
 		/// <param name="tile">Map tile in which the transaction takes place.</param>
 		/// <param name="faction">Faction of the trader.</param>
 		/// <returns></returns>
-		private static StockGenerator StockGenFrom(StockGenerator gen, int tile, Faction faction)
+		private static StockGenerator StockGenFrom(TraderKindDef def, StockGenerator gen, int tile, Faction faction)
 		{
-			var generator = gen;
+			var generator = gen.ShallowClone();
+			generator.ResolveReferences(def);
+
 			// This code assumes that vanilla StockGenerators have no internal state requiring a copy.
 			if (gen.GetType().IsSubclassOf(typeof(TG.StockGen.StockGen)))
 			{
-				generator = gen.ShallowClone();
 				((TG.StockGen.StockGen) generator).BeforeGen(tile, faction);
 			}
 
 			if (Settings.LogGen && Settings.LogStockGen)
 			{
-				Logger.Gen(Util.ToText(generator).ToString());
+				Logger.Gen(StockGen.Util.ToText(generator).ToString());
 			}
 
 			return generator;
@@ -58,7 +60,7 @@ namespace TG.TraderKind
 			// Add stock generators from the template TraderKindDef.
 			foreach (var gen in originalDef.stockGenerators)
 			{
-				def.stockGenerators.Add(StockGenFrom(gen, tile, faction));
+				def.stockGenerators.Add(StockGenFrom(def, gen, tile, faction));
 			}
 
 			// Stock generators coming from the specialization(s).
@@ -76,7 +78,7 @@ namespace TG.TraderKind
 
 					foreach (var gen in specialization.def.stockGens)
 					{
-						def.stockGenerators.Add(StockGenFrom(gen, tile, faction));
+						def.stockGenerators.Add(StockGenFrom(def, gen, tile, faction));
 					}
 				}
 			}

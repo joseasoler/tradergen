@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using TG.TraderKind;
 using Verse;
 
 namespace TG.Mod
@@ -10,9 +12,15 @@ namespace TG.Mod
 		public bool SellPsylinkNeuroformers /* = false */;
 
 		/// <summary>
-		/// Silver stock of orbital traders in %.
+		/// Silver stock of each trader category in %.
 		/// </summary>
-		public float OrbitalSilverScaling = 100.0f;
+		public Dictionary<TraderKindCategory, float> SilverScaling = new Dictionary<TraderKindCategory, float>
+		{
+			{TraderKindCategory.Orbital, 100.0f},
+			{TraderKindCategory.Settlement, 100.0f},
+			{TraderKindCategory.Caravan, 100.0f},
+			{TraderKindCategory.Visitor, 100.0f}
+		};
 
 		/// <summary>
 		/// Generate a detailed report of the trader generation process and append it to the log.
@@ -30,6 +38,9 @@ namespace TG.Mod
 	/// </summary>
 	public class Settings : ModSettings
 	{
+		/// <summary>
+		/// Current values for all settings.
+		/// </summary>
 		private static SettingValues _values = new SettingValues();
 
 		/// <summary>
@@ -42,24 +53,25 @@ namespace TG.Mod
 			set => _values.SellPsylinkNeuroformers = value;
 		}
 
-		/// <summary>
-		/// Silver stock of orbital traders in %.
-		/// </summary>
-		public static float OrbitalSilverScaling
+		public static float GetSilverScaling(TraderKindCategory category)
 		{
-			get => _values.OrbitalSilverScaling;
-			set => _values.OrbitalSilverScaling = value;
+			return _values.SilverScaling[category];
+		}
+
+		public static void SetSilverScaling(TraderKindCategory category, float value)
+		{
+			_values.SilverScaling[category] = value;
 		}
 
 		/// <summary>
-		/// Minimum allowed value for OrbitalSilverScaling.
+		/// Minimum allowed value for SilverScaling settings in %.
 		/// </summary>
 		public const float MinSilverScaling = 5.0f;
 
 		/// <summary>
-		/// Maximum allowed value for OrbitalSilverScaling.
+		/// Maximum allowed value for SilverScaling settings in %.
 		/// </summary>
-		public const float MaxSilverScaling = 500.0f;
+		public const float MaxSilverScaling = 1000.0f;
 
 		/// <summary>
 		/// Generate a detailed report of the trader generation process and append it to the log.
@@ -83,14 +95,15 @@ namespace TG.Mod
 		{
 			_values = new SettingValues();
 		}
-		
+
 		/// <summary>
 		/// Save and load preferences.
 		/// </summary>
 		public override void ExposeData()
 		{
 			base.ExposeData();
-			Scribe_Values.Look(ref _values.OrbitalSilverScaling, "OrbitalSilverScaling");
+			Scribe_Values.Look(ref _values.SellPsylinkNeuroformers, "SellPsylinkNeuroformers");
+			Scribe_Collections.Look(ref _values.SilverScaling, "SilverScaling");
 			Scribe_Values.Look(ref _values.LogGen, "LogGen");
 			Scribe_Values.Look(ref _values.LogStockGen, "LogStockGen");
 		}

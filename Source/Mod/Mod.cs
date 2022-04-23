@@ -1,3 +1,5 @@
+using System;
+using TG.TraderKind;
 using UnityEngine;
 using Verse;
 
@@ -35,11 +37,6 @@ namespace TG.Mod
 			var listing = new Listing_Standard();
 			listing.Begin(inRect);
 
-			listing.Label("TG_SilverStockOrbitalTrader".Translate((int) Settings.OrbitalSilverScaling), -1,
-				"TG_SilverStockOrbitalTraderTooltip".Translate());
-			Settings.OrbitalSilverScaling = listing.Slider(Settings.OrbitalSilverScaling, Settings.MinSilverScaling,
-				Settings.MaxSilverScaling);
-
 			if (ModsConfig.RoyaltyActive)
 			{
 				var sellPsylinkNeuroformers = Settings.SellPsylinkNeuroformers;
@@ -48,15 +45,31 @@ namespace TG.Mod
 				Settings.SellPsylinkNeuroformers = sellPsylinkNeuroformers;
 			}
 
+			foreach (var categoryObj in Enum.GetValues(typeof(TraderKindCategory)))
+			{
+				var category = (TraderKindCategory) categoryObj;
+				if (category == TraderKindCategory.None)
+				{
+					continue;
+				}
+
+				var categoryName = Enum.GetName(typeof(TraderKindCategory), category);
+
+				listing.Label($"TG_SilverStock{categoryName}".Translate((int) Settings.GetSilverScaling(category)), -1,
+					$"TG_SilverStock{categoryName}Tooltip".Translate());
+				var silverScaling = listing.Slider(Settings.GetSilverScaling(category), Settings.MinSilverScaling,
+					Settings.MaxSilverScaling);
+				Settings.SetSilverScaling(category, silverScaling);
+			}
+
 			var resetButtonRect = listing.GetRect(30f);
-			var width = resetButtonRect.width;
+			var resetWidth = resetButtonRect.width;
 			resetButtonRect.width /= 5f;
-			resetButtonRect.x += width - resetButtonRect.width;
+			resetButtonRect.x += resetWidth - resetButtonRect.width;
 			if (Widgets.ButtonText(resetButtonRect, "TG_ResetSettings".Translate()))
 			{
 				Settings.Reset();
 			}
-
 			TooltipHandler.TipRegion(resetButtonRect, "TG_ResetSettingsTooltip".Translate());
 			listing.Gap(listing.verticalSpacing);
 

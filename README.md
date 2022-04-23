@@ -6,11 +6,13 @@ TraderGen is a mod for the [RimWorld](https://rimworldgame.com/) game. It modifi
 
 Currently most of the features of the mod are only implemented for orbital traders, but expansions are planned for the future.
 
-## Features
+## Feature highlights
 
-Orbital traders now have an specialization in addition to their type. The specialization adds a limited amount of stock but it may be particularly rare or useful. Each trader type has its own set of available specializations, with some of them being less common than the others.
+* Configurable amount of silver in stock. There are different settings for orbital, settlement, caravan and visitor traders. Compatible with all traders, both vanilla and modded.
 
-Orbital traders will frequently have randomly generated names matching their type and specialization.
+* Orbital traders now have an specialization in addition to their type. An specialization adds a limited amount of stock but it may be particularly rare or useful. Each trader type has its own set of available specializations, with some of them being less common than the others.
+
+* Each orbital trader type has an expanded pool of random name rules which produces better fitting results.
 
 All vanilla orbital traders (and several modded ones) have some changes to their base stock aiming for increasing their variety and improving compatibility with mods.
 
@@ -26,9 +28,9 @@ All vanilla orbital traders (and several modded ones) have some changes to their
 
 **Combat:** Guaranteed to have a few pieces of power armor in stock. May rarely have a shield belt or smokepop belt in stock.
 
-**Exotic:** Very cheap and very expensive bionics are less common. Ultratech bionics are unfrequent. Increased variety of joy buildings in stock.
+**Exotic:** Very cheap and very expensive bionics are less common. Ultratech bionics are infrequent. Increased variety of joy buildings in stock.
 
-**Slaver:** May have any alcohol type in stock instead of only beer. Has more variety of gluttonous food instead of just chocolate. Very cheap and very expensive bionics are less common. Ultratech bionics are unfrequent.
+**Slaver:** May have any alcohol type in stock instead of only beer. Has more variety of gluttonous food instead of just chocolate. Very cheap and very expensive bionics are less common. Ultratech bionics are infrequent.
 
 **Imperial:** Increased variety of joy buildings in stock. Has some gluttonous food in stock.
 
