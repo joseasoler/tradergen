@@ -14,7 +14,7 @@ Currently most of the features of the mod are only implemented for orbital trade
 
 * Orbital traders now have an specialization in addition to their type. An specialization adds a limited amount of stock but it may be particularly rare or useful. Each trader type has its own set of available specializations, with some of them being less common than the others.
 
-* All vanilla traders (and several modded ones) have some minor changes to their stock aiming at increasing their variety and improving mod compatibility.
+* Orbital vanilla traders (and several modded ones) have some minor changes to their stock aiming at increasing their variety and improving mod compatibility.
 
 * Each orbital trader type has an expanded pool of random name rules which produces better fitting results.
 
@@ -58,7 +58,7 @@ TraderGen also provides extra features when certain mods are enabled. TraderGen 
   
 [Expanded Prosthetics and Organ Engineering - Forked](https://steamcommunity.com/sharedfiles/filedetails/?id=1949064302):
 
-* Traders with the bionic specialization may rarely have MA-AI chips in stock.
+* Traders with the bionics specialization may rarely have MA-AI chips in stock.
 
 [Jewelry](https://steamcommunity.com/workshop/filedetails/?id=2020964421):
 
@@ -82,8 +82,7 @@ TraderGen also provides extra features when certain mods are enabled. TraderGen 
 
 [Vanilla Apparel Expanded — Accessories](https://steamcommunity.com/sharedfiles/filedetails/?id=2521176396):
 
-* Bulk good orbital traders can have tool belts in stock.
-* Combat orbital traders may rarely have a ranged shield belt in stock.
+* ...
 
 [Vanilla Armour Expanded](https://steamcommunity.com/workshop/filedetails/?id=1814988282):
 
@@ -123,7 +122,7 @@ TraderGen also provides extra features when certain mods are enabled. TraderGen 
 
 [Vanilla Furniture Expanded](https://steamcommunity.com/sharedfiles/filedetails/?id=1718190143):
 
-* Orbital traders carrying joy buildings will include items from this mod in their stock.
+* ...
 
 [Vanilla Furniture Expanded - Security](https://steamcommunity.com/workshop/filedetails/?id=1845154007):
 
@@ -131,7 +130,7 @@ TraderGen also provides extra features when certain mods are enabled. TraderGen 
 
 [Vanilla Weapons Expanded](https://steamcommunity.com/sharedfiles/filedetails/?id=1814383360):
 
-* Bulk good orbital traders can have tools in stock.
+* ...
 * Orbital traders will never generate tools when they are meant to generate weapons.
 
 [Vanilla Weapons Expanded - Grenades](https://steamcommunity.com/sharedfiles/filedetails/?id=2194472657):
