@@ -18,9 +18,7 @@
 			</li>
 		</value>
 	</Operation>
-	<!--
-	Will never count tools from VWE as weapons.
-	-->
+	<!-- Will never count tools from VWE as weapons. -->
 	<Operation Class="PatchOperationConditional">
 		<xpath>
 			/Defs/TraderKindDef[defName="Orbital_CombatSupplier"]/stockGenerators/li[@Class="StockGenerator_WeaponsRanged"]
@@ -50,9 +48,7 @@
 			</operations>
 		</match>
 	</Operation>
-	<!--
-	Guaranteed to have a few pieces of power armor in stock, but on average it will have less.
-	-->
+	<!-- ToDo. -->
 	<Operation Class="PatchOperationConditional">
 		<xpath>
 			/Defs/TraderKindDef[defName="Orbital_CombatSupplier"]/stockGenerators/li[@Class="StockGenerator_Armor"]
@@ -69,33 +65,7 @@
 					<value>
 						<li Class="TG.StockGen.Armor">
 							<minTechLevelGenerate>Industrial</minTechLevelGenerate>
-							<maxTechLevelGenerate>Spacer</maxTechLevelGenerate>
-							<excludeTradeTags>
-								<li>HiTechArmor</li>
-								<!-- VFEP_Apparel_Privateer lacks the HiTechArmor trade tag used by other power armor items. -->
-								<li MayRequire="OskarPotocki.VFE.Pirates">PrivateerArmor</li>
-								<!--
-								Some Vanilla Armor Expanded power armor lacks the HiTechArmor tradeTag. A new tradeTag is patched into
-								them to avoid changing other behavior.
-								-->
-								<li MayRequire="VanillaExpanded.VARME">TG_PatchedHiTechArmor</li>
-							</excludeTradeTags>
-							<thingDefCountRange>7~8</thingDefCountRange>
-							<countRange>1</countRange>
-						</li>
-						<li Class="TG.StockGen.Armor">
-							<minTechLevelGenerate>Industrial</minTechLevelGenerate>
-							<tradeTags>
-								<li>HiTechArmor</li>
-								<!-- VFEP_Apparel_Privateer lacks the HiTechArmor trade tag used by other power armor items. -->
-								<li MayRequire="OskarPotocki.VFE.Pirates">PrivateerArmor</li>
-								<!--
-								Some Vanilla Armor Expanded power armor lacks the HiTechArmor tradeTag. A new tradeTag is patched into
-								them to avoid changing other unrelated behavior.
-								-->
-								<li MayRequire="VanillaExpanded.VARME">TG_PatchedHiTechArmor</li>
-							</tradeTags>
-							<thingDefCountRange>1~2</thingDefCountRange>
+							<thingDefCountRange>8~10</thingDefCountRange>
 							<countRange>1</countRange>
 						</li>
 					</value>
@@ -103,9 +73,7 @@
 			</operations>
 		</match>
 	</Operation>
-	<!--
-	Never counts tools from VWE as weapons.
-	-->
+	<!-- Never counts tools from VWE as weapons. -->
 	<Operation Class="PatchOperationConditional">
 		<xpath>
 			/Defs/TraderKindDef[defName="Orbital_CombatSupplier"]/stockGenerators/li[@Class="StockGenerator_Category" and
@@ -136,21 +104,5 @@
 				</li>
 			</operations>
 		</match>
-	</Operation>
-	<!-- May have some defensive utilities in stock. -->
-	<Operation Class="PatchOperationAdd">
-		<xpath>/Defs/TraderKindDef[defName="Orbital_CombatSupplier"]/stockGenerators
-		</xpath>
-		<value>
-			<li Class="TG.StockGen.MultiDef">
-				<thingDefs>
-					<li>Apparel_ShieldBelt</li>
-					<li>Apparel_SmokepopBelt</li>
-					<li MayRequire="VanillaExpanded.VAEAccessories">VAEA_Apparel_RangedShieldBelt</li>
-				</thingDefs>
-				<thingDefCountRange>-3~2</thingDefCountRange>
-				<countRange>1</countRange>
-			</li>
-		</value>
 	</Operation>
 </Patch>

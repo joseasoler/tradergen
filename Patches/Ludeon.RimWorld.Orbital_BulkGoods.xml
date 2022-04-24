@@ -100,9 +100,7 @@
 			</match>
 		</match>
 	</Operation>
-	<!--
-	May have some tools in stock.
-	-->
+	<!-- May have some tools in stock. -->
 	<Operation Class="PatchOperationAdd">
 		<xpath>/Defs/TraderKindDef[defName="Orbital_BulkGoods"]/stockGenerators
 		</xpath>

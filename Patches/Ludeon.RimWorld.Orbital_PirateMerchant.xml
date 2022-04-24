@@ -116,33 +116,7 @@
 					<value>
 						<li Class="TG.StockGen.Armor">
 							<minTechLevelGenerate>Industrial</minTechLevelGenerate>
-							<maxTechLevelGenerate>Spacer</maxTechLevelGenerate>
-							<excludeTradeTags>
-								<li>HiTechArmor</li>
-								<!-- VFEP_Apparel_Privateer lacks the HiTechArmor trade tag used by other power armor items. -->
-								<li MayRequire="OskarPotocki.VFE.Pirates">PrivateerArmor</li>
-								<!--
-								Some Vanilla Armor Expanded power armor lacks the HiTechArmor tradeTag. A new tradeTag is patched into
-								them to avoid changing other behavior.
-								-->
-								<li MayRequire="VanillaExpanded.VARME">TG_PatchedHiTechArmor</li>
-							</excludeTradeTags>
 							<thingDefCountRange>-2~2</thingDefCountRange>
-							<countRange>1</countRange>
-						</li>
-						<li Class="TG.StockGen.Armor">
-							<minTechLevelGenerate>Industrial</minTechLevelGenerate>
-							<tradeTags>
-								<li>HiTechArmor</li>
-								<!-- VFEP_Apparel_Privateer lacks the HiTechArmor trade tag used by other power armor items. -->
-								<li MayRequire="OskarPotocki.VFE.Pirates">PrivateerArmor</li>
-								<!--
-								Some Vanilla Armor Expanded power armor lacks the HiTechArmor tradeTag. A new tradeTag is patched into
-								them to avoid changing other unrelated behavior.
-								-->
-								<li MayRequire="VanillaExpanded.VARME">TG_PatchedHiTechArmor</li>
-							</tradeTags>
-							<thingDefCountRange>-5~1</thingDefCountRange>
 							<countRange>1</countRange>
 						</li>
 					</value>
@@ -150,7 +124,7 @@
 			</operations>
 		</match>
 	</Operation>
-	<!-- Very cheap and very expensive bionics are less common. Ultratech bionics are unfrequent. -->
+	<!-- Very cheap and very expensive bionics are less common. -->
 	<Operation Class="PatchOperationConditional">
 		<xpath>/Defs/TraderKindDef[defName="Orbital_PirateMerchant"]/stockGenerators/li[@Class="StockGenerator_Tag" and
 			tradeTag="TechHediff"]
@@ -168,14 +142,7 @@
 					<value>
 						<li Class="TG.StockGen.TechHediff">
 							<minTechLevelGenerate>Industrial</minTechLevelGenerate>
-							<maxTechLevelGenerate>Spacer</maxTechLevelGenerate>
 							<thingDefCountRange>-3~5</thingDefCountRange>
-							<countRange>1</countRange>
-						</li>
-						<li Class="TG.StockGen.TechHediff">
-							<minTechLevelGenerate>Ultra</minTechLevelGenerate>
-							<maxTechLevelGenerate>Ultra</maxTechLevelGenerate>
-							<thingDefCountRange>-3~1</thingDefCountRange>
 							<countRange>1</countRange>
 						</li>
 					</value>

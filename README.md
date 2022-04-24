@@ -14,9 +14,9 @@ Currently most of the features of the mod are only implemented for orbital trade
 
 * Orbital traders now have an specialization in addition to their type. An specialization adds a limited amount of stock but it may be particularly rare or useful. Each trader type has its own set of available specializations, with some of them being less common than the others.
 
-* Each orbital trader type has an expanded pool of random name rules which produces better fitting results.
+* All vanilla traders (and several modded ones) have some minor changes to their stock aiming at increasing their variety and improving mod compatibility.
 
-* All vanilla orbital traders (and several modded ones) have some minor changes to their base stock aiming at increasing their variety and improving mod compatibility.
+* Each orbital trader type has an expanded pool of random name rules which produces better fitting results.
 
 ## Give me the details!
 
@@ -26,19 +26,21 @@ Currently most of the features of the mod are only implemented for orbital trade
 
 **Cannibal:** Adds resources from morally questionable origins to the trader stock. Present in Combat and Slaver orbital traders.
 
-### Orbital trader changes
+### Trader changes
 
-**Bulk goods:** May have any alcohol type in stock instead of only beer. Increased variety and quantity of textiles in stock. Never has human leather in stock by default.
+The following changes are applied to all vanilla orbital traders. Some modded traders receive the same support as well, as shown in the Mod Support section.
 
-**Combat:** Guaranteed to have a few pieces of power armor in stock. May rarely have a shield belt or smokepop belt in stock.
+* Traders which could only have beer in stock now may have any alcohol type.
 
-**Exotic:** Very cheap and very expensive bionics are less common. Ultratech bionics are infrequent. Increased variety of joy buildings in stock.
+* Traders with textiles in stock now have increased variety but will not carry human leather in stock.
 
-**Slaver:** May have any alcohol type in stock instead of only beer. Has more variety of gluttonous food instead of just chocolate. Very cheap and very expensive bionics are less common. Ultratech bionics are infrequent.
+* Traders with recreation buildings in stock will now have increased stock variety.
 
-**Imperial(requires Royalty):** Increased variety of joy buildings in stock. Has some gluttonous food in stock.
+* Bionics with an average price are more common. Really cheap and really expensive bionics are less common. Should have more impact when bionics mods are being used.
 
-Some orbital trader types added by mods have received changes as well. In the cases of traders with limited stock or having way less total wealth than vanilla traders, an effort has been made to add stock which makes sense to them. Check the Mod support section for details.  
+* Orbital traders usually only carry ranged weapons, armor or bionics which are industrial or better.
+
+** Imperial orbital traders (with Royalty) have some recreation buildings and gluttonous food in stock.
 
 #### Mod support
 
@@ -77,7 +79,7 @@ TraderGen also provides extra features when certain mods are enabled. TraderGen 
 
 [Vanilla Armour Expanded](https://steamcommunity.com/workshop/filedetails/?id=1814988282):
 
-* Combat orbital traders may rarely have the new power armor types in stock.
+* ...
 
 [Vanilla Brewing Expanded](https://steamcommunity.com/sharedfiles/filedetails/?id=2186560858):
 
@@ -105,7 +107,7 @@ TraderGen also provides extra features when certain mods are enabled. TraderGen 
 
 [Vanilla Factions Expanded - Pirates](https://steamcommunity.com/sharedfiles/filedetails/?id=2723801948):
 
-* Combat orbital traders may rarely have privateer armor in stock.
+* ...
 
 [Vanilla Factions Expanded - Settlers](https://steamcommunity.com/sharedfiles/filedetails/?id=2052918119):
 

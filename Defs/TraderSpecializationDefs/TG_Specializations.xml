@@ -37,10 +37,6 @@
 				<thingDefCountRange>4~7</thingDefCountRange>
 				<countRange>1~2</countRange>
 			</li>
-			<li Class="StockGenerator_SingleDef">
-				<thingDef>Kibble</thingDef>
-				<totalPriceRange>700~1300</totalPriceRange>
-			</li>
 			<li Class="StockGenerator_Category">
 				<categoryDef>BodyPartsNatural</categoryDef>
 				<thingDefCountRange>1~3</thingDefCountRange>
@@ -49,6 +45,15 @@
 			<li Class="StockGenerator_SingleDef" MayRequire="VanillaExpanded.VBrewECandT">
 				<thingDef>VBE_CannibalCoffee</thingDef>
 				<totalPriceRange>-1000~1000</totalPriceRange>
+			</li>
+		</stockGens>
+	</TG.TraderSpecializationDef>
+	<TG.TraderSpecializationDef>
+		<defName>TG_CombatDebug</defName>
+		<label>combat debugging test</label>
+		<stockGens>
+			<li Class="StockGenerator_Armor">
+				<countRange>800~1000</countRange>
 			</li>
 		</stockGens>
 	</TG.TraderSpecializationDef>

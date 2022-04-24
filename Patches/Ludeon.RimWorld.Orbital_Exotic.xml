@@ -14,7 +14,7 @@
 			</li>
 		</value>
 	</Operation>
-	<!-- Very cheap and very expensive bionics are less common. Ultratech bionics are unfrequent. -->
+	<!-- Very cheap and very expensive bionics are less common. -->
 	<Operation Class="PatchOperationConditional">
 		<xpath>/Defs/TraderKindDef[defName="Orbital_Exotic"]/stockGenerators/li[@Class="StockGenerator_Tag" and
 			tradeTag="TechHediff"]
@@ -32,14 +32,7 @@
 					<value>
 						<li Class="TG.StockGen.TechHediff">
 							<minTechLevelGenerate>Industrial</minTechLevelGenerate>
-							<maxTechLevelGenerate>Spacer</maxTechLevelGenerate>
 							<thingDefCountRange>3~5</thingDefCountRange>
-							<countRange>1</countRange>
-						</li>
-						<li Class="TG.StockGen.TechHediff">
-							<minTechLevelGenerate>Ultra</minTechLevelGenerate>
-							<maxTechLevelGenerate>Ultra</maxTechLevelGenerate>
-							<thingDefCountRange>-1~1</thingDefCountRange>
 							<countRange>1</countRange>
 						</li>
 					</value>
@@ -47,7 +40,7 @@
 			</operations>
 		</match>
 	</Operation>
-	<!-- Can have any industrial or spacer joy building in stock instead of just televisions.  -->
+	<!-- Increased variety of joy buildings in stock. -->
 	<Operation Class="PatchOperationConditional">
 		<xpath>/Defs/TraderKindDef[defName="Orbital_Exotic"]/stockGenerators/li[@Class="StockGenerator_Tag" and
 			tradeTag="Television"]
