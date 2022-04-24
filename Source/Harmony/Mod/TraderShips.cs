@@ -8,17 +8,25 @@ using Verse;
 namespace TG.Harmony.Mod
 {
 	/// <summary>
-	/// Compatibility with the Trader Ships mod.
+	/// Compatibility with the Trader Ships mod and its retextures.
 	/// </summary>
 	public static class TraderShips
 	{
+		// PackageIDs of the Trader Ships mod and its retextures.
+		private static readonly string[] traderShipMods =
+		{
+			"automatic.traderships",
+			"steampunk.tradeships",
+			"rimeffect.themistraders"
+		};
+
 		/// <summary>
-		/// Apply the Harmony patch for TraderShips compatibility only if the mod is loaded.
+		/// Apply the Harmony patch for Trader Ships compatibility only if the mod is loaded.
 		/// </summary>
 		/// <param name="harmony"></param>
 		public static void Patch(HarmonyLib.Harmony harmony)
 		{
-			if (!LoadedModManager.RunningMods.Any(pack => pack.PackageId.Equals("automatic.traderships")))
+			if (!LoadedModManager.RunningMods.Any(pack => traderShipMods.Contains(pack.PackageId)))
 			{
 				return;
 			}

@@ -68,6 +68,14 @@ TraderGen also provides extra features when certain mods are enabled. TraderGen 
 
 * ...
 
+[Rim-Effect: Themis Traders](https://steamcommunity.com/sharedfiles/filedetails/?id=2488461271):
+
+* Trader ship stock is generated using the TraderGen rules for orbital traders.
+
+[Steampunk: Trader Airships](https://steamcommunity.com/sharedfiles/filedetails/?id=2708154727):
+
+* Trader ship stock is generated using the TraderGen rules for orbital traders.
+
 [Trader Ships](https://steamcommunity.com/sharedfiles/filedetails/?id=2046222331):
 
 * Trader ship stock is generated using the TraderGen rules for orbital traders.
