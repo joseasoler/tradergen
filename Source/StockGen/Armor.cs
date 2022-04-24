@@ -30,17 +30,9 @@ namespace TG.StockGen
 
 		protected override bool CanBuy(in ThingDef def)
 		{
-			if (tradeTags != null && (def.tradeTags == null || !def.tradeTags.Intersect(tradeTags).Any()))
-			{
-				return false;
-			}
-
-			if (excludeTradeTags != null && def.tradeTags != null && def.tradeTags.Intersect(excludeTradeTags).Any())
-			{
-				return false;
-			}
-
-			return Util.IsArmor(def);
+			return Util.IsArmor(def) &&
+			       (tradeTags == null || def.tradeTags != null && def.tradeTags.Intersect(tradeTags).Any()) &&
+			       (excludeTradeTags == null || def.tradeTags == null || !def.tradeTags.Intersect(excludeTradeTags).Any());
 		}
 
 		/// <summary>
