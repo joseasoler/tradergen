@@ -48,13 +48,4 @@
 			</li>
 		</stockGens>
 	</TG.TraderSpecializationDef>
-	<TG.TraderSpecializationDef>
-		<defName>TG_CombatDebug</defName>
-		<label>combat debugging test</label>
-		<stockGens>
-			<li Class="StockGenerator_Armor">
-				<countRange>800~1000</countRange>
-			</li>
-		</stockGens>
-	</TG.TraderSpecializationDef>
 </Defs>
