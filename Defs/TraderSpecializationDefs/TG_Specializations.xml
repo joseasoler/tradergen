@@ -48,5 +48,42 @@
 			</li>
 		</stockGens>
 	</TG.TraderSpecializationDef>
-
+	<TG.TraderSpecializationDef>
+		<defName>TG_Craftsmanship</defName>
+		<label>craftsmanship</label>
+		<stockGens>
+			<!-- Sells -->
+			<li Class="TG.StockGen.RandomStuffFromCategory">
+				<stuffCategoryDef>Woody</stuffCategoryDef>
+				<maxTechLevelGenerate>Spacer</maxTechLevelGenerate>
+				<stuffCountRange>100~200</stuffCountRange>
+				<thingDefCountRange>3~6</thingDefCountRange>
+				<countRange>1~2</countRange>
+			</li>
+			<li Class="TG.StockGen.RandomStuffFromCategory">
+				<stuffCategoryDef>Stony</stuffCategoryDef>
+				<maxTechLevelGenerate>Spacer</maxTechLevelGenerate>
+				<stuffCountRange>100~200</stuffCountRange>
+				<thingDefCountRange>3~6</thingDefCountRange>
+				<countRange>1~2</countRange>
+			</li>
+			<li Class="TG.StockGen.RandomStuffFromCategory">
+				<stuffCategoryDef>Metallic</stuffCategoryDef>
+				<maxTechLevelGenerate>Spacer</maxTechLevelGenerate>
+				<excludeStuffDefs>
+					<!-- Chitin is handled separately. -->
+					<li MayRequire="OskarPotocki.VFE.Insectoid">VFEI_Chitin</li>
+				</excludeStuffDefs>
+				<stuffCountRange>100~200</stuffCountRange>
+				<thingDefCountRange>3~6</thingDefCountRange>
+				<countRange>1~2</countRange>
+			</li>
+			<!--
+			Purchases: Unfortunately StoneBlocks are set to be only buyable. StockGenerator_Category bypasses this check.
+			-->
+			<li Class="StockGenerator_Category">
+				<categoryDef>StoneBlocks</categoryDef>
+			</li>
+		</stockGens>
+	</TG.TraderSpecializationDef>
 </Defs>

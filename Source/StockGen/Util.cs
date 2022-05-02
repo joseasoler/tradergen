@@ -57,9 +57,9 @@ namespace TG.StockGen
 		{
 			new CurvePoint(2f, 1f),
 			new CurvePoint(3f, 0.8f),
-			new CurvePoint(5f, 0.4f),
-			new CurvePoint(8, 0.3f),
-			new CurvePoint(10, 0.1f)
+			new CurvePoint(5f, 0.3f),
+			new CurvePoint(8, 0.2f),
+			new CurvePoint(10, 0.05f)
 		};
 
 		/// <summary>
@@ -76,14 +76,15 @@ namespace TG.StockGen
 		};
 
 		/// <summary>
-		/// Weight used for choosing randomly between different materials.
+		/// Weight used for choosing randomly between different materials. Prefers cheap and light stuff.
 		/// </summary>
 		/// <param name="stuffDef">ThingDef assumed to have valid stuffProps.</param>
 		/// <returns>Stuff weight for the choosing algorithm.</returns>
 		public static float RandomStuffDefWeight(ThingDef stuffDef)
 		{
-			return 3.0f * stuffDef.stuffProps.commonality + RandomStuffMarketValueWeight.Evaluate(stuffDef.BaseMarketValue) +
-			       RandomStuffMassWeight.Evaluate(stuffDef.BaseMass) + (!stuffDef.smallVolume ? 0.4f : 0.0f);
+			return stuffDef.stuffProps.commonality * (RandomStuffMarketValueWeight.Evaluate(stuffDef.BaseMarketValue) +
+			                                          RandomStuffMassWeight.Evaluate(stuffDef.BaseMass) +
+			                                          (!stuffDef.smallVolume ? 0.4f : 0.0f));
 		}
 
 		public static void ToText<T>(ref StringBuilder b, string label, IReadOnlyCollection<T> list)

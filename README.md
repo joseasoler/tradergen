@@ -22,7 +22,9 @@ TraderGen is a mod focused on improving trader stock variety and customization i
 
 **Bionics:** Adds prostheses between the industrial and ultratech technology levels. May rarely have a single archotech bionic in stock. Present in Combat, Exotic, Slaver and Imperial(requires Royalty) orbital traders.
 
-**Cannibal:** Adds resources from morally questionable origins to the trader stock. Present in Combat and Slaver orbital traders.
+**Cannibal:** Adds items from morally questionable origins to the trader stock. Present in Combat and Slaver orbital traders.
+
+**Craftmanship:** Includes apparel, furniture and art created from stone, metal or wood.
 
 ### Trader changes
 

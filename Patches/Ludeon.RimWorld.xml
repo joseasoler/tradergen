@@ -5,6 +5,12 @@
 		<xpath>/Defs/TraderKindDef[defName="Orbital_BulkGoods"]</xpath>
 		<value>
 			<li Class="TG.GenExtension">
+				<specializations>
+					<li>
+						<def>TG_Craftsmanship</def>
+						<commonality>10.0</commonality>
+					</li>
+				</specializations>
 				<extraNameRules>TG_OrbitalNamerBulk</extraNameRules>
 			</li>
 		</value>

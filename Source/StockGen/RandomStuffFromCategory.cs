@@ -44,8 +44,8 @@ namespace TG.StockGen
 		/// </summary>
 		private static readonly List<string> ExplicitOnlyStuffCategories = new List<string>
 		{
-			"RB_Waxy",
-			"Gemstones"
+			"RB_Waxy", // Wax from RimBees
+			"Gemstones" // Gemstones from Jewelry
 		};
 
 		/// <summary>
