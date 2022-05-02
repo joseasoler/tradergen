@@ -10,7 +10,7 @@ TraderGen is a mod focused on improving trader stock variety and customization i
 
 * Orbital traders now have an specialization in addition to their type. An specialization adds a limited amount of stock but it may be particularly rare or useful.
 
-* Better names for orbital traders.
+* More diversity of names for orbital traders.
 
 * Minor tweaks to vanilla trader stock, aiming at increasing their variety and improving mod compatibility.
 

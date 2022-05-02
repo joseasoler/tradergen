@@ -38,14 +38,6 @@ namespace TG.Mod
 			var listing = new Listing_Standard();
 			listing.Begin(inRect);
 
-			if (ModsConfig.RoyaltyActive)
-			{
-				var sellPsylinkNeuroformers = Settings.SellPsylinkNeuroformers;
-				listing.CheckboxLabeled("TG_SellPsylinkNeuroformers".Translate(), ref sellPsylinkNeuroformers,
-					"TG_SellPsylinkNeuroformersTooltip".Translate());
-				Settings.SellPsylinkNeuroformers = sellPsylinkNeuroformers;
-			}
-
 			var labelValue = Settings.PeriodOrbital != Settings.DisablePeriodOrbital
 				? ((int) Settings.PeriodOrbital * GenDate.TicksPerDay).ToStringTicksToPeriodVerbose()
 				: (string) "TG_ModifyPeriodOrbitalDoNotChange".Translate();
@@ -73,6 +65,15 @@ namespace TG.Mod
 					Settings.MaxSilverScaling);
 				Settings.SetSilverScaling(category, silverScaling);
 			}
+
+			if (ModsConfig.RoyaltyActive)
+			{
+				var sellPsylinkNeuroformers = Settings.SellPsylinkNeuroformers;
+				listing.CheckboxLabeled("TG_SellPsylinkNeuroformers".Translate(), ref sellPsylinkNeuroformers,
+					"TG_SellPsylinkNeuroformersTooltip".Translate());
+				Settings.SellPsylinkNeuroformers = sellPsylinkNeuroformers;
+			}
+			listing.Gap(listing.verticalSpacing);
 
 			var resetButtonRect = listing.GetRect(30f);
 			var resetWidth = resetButtonRect.width;
