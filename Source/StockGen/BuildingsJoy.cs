@@ -4,6 +4,8 @@ using Verse;
 namespace TG.StockGen
 {
 	/// <summary>
+	/// Generates recreation buildings. When compared against the vanilla television approach, it also generates
+	/// musical instruments.
 	/// Unfortunately, BuildingsJoy buildings have their TechLevel set to undefined and therefore it is not possible
 	/// to use it to filter lower tech buildings out. This StockGen uses the TechLevel of their research instead.
 	/// </summary>

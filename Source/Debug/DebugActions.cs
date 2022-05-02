@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
+using Force.DeepCloner;
 using RimWorld;
 using TG.TraderKind;
 using Verse;
@@ -10,9 +12,14 @@ namespace TG.Debug
 	public class DebugActions
 	{
 		/// <summary>
+		/// Category to use for TraderGen debug actions.
+		/// </summary>
+		private const string DebugCategory = "TraderGen";
+
+		/// <summary>
 		/// Place all things and animals which can be sold or purchased in the map.
 		/// </summary>
-		[DebugAction("TraderGen", allowedGameStates = AllowedGameStates.PlayingOnMap)]
+		[DebugAction(DebugCategory, allowedGameStates = AllowedGameStates.PlayingOnMap)]
 		private static void PlaceAllTradeableThings()
 		{
 			foreach (var def in DefDatabase<ThingDef>.AllDefs)
@@ -48,7 +55,7 @@ namespace TG.Debug
 		/// <summary>
 		/// Generate a large number of trader names for a specific orbital trader type.
 		/// </summary>
-		[DebugAction("TraderGen", allowedGameStates = AllowedGameStates.Playing)]
+		[DebugAction(DebugCategory, allowedGameStates = AllowedGameStates.Playing)]
 		private static void GenerateTraderNames()
 		{
 			var options = DefDatabase<TraderKindDef>.AllDefs.Where(t => t.orbital)
@@ -78,8 +85,8 @@ namespace TG.Debug
 		/// <summary>
 		/// Generates a new orbital trader with a specialization chosen by the user.
 		/// </summary>
-		[DebugAction("TraderGen", allowedGameStates = AllowedGameStates.PlayingOnMap)]
-		private static void GenerateOrbitalTrader()
+		[DebugAction(DebugCategory, allowedGameStates = AllowedGameStates.PlayingOnMap)]
+		private static void TestTraderSpecialization()
 		{
 			var debugOrbitalTrader = DefDatabase<TraderKindDef>.GetNamed("TG_OrbitalDebug");
 
@@ -97,6 +104,36 @@ namespace TG.Debug
 					})).ToList();
 			specializationOptions.Sort(CompareDebugMenuOptions);
 			Find.WindowStack.Add(new Dialog_DebugOptionListLister(specializationOptions));
+		}
+
+		/// <summary>
+		/// Adds an orbital trader using the stock of any TraderKindDef even if they are not orbital.
+		/// </summary>
+		[DebugAction(DebugCategory, null, false, false, allowedGameStates = AllowedGameStates.PlayingOnMap)]
+		private static void TestAnyTrader()
+		{
+			var traderOptions = DefDatabase<TraderKindDef>.AllDefs.Select(def => new DebugMenuOption(def.defName,
+					DebugMenuOptionMode.Action, () =>
+					{
+						Find.CurrentMap.passingShipManager.DebugSendAllShipsAway();
+
+						var newDef = def.ShallowClone();
+
+						// IncidentWorker_OrbitalTraderArrival uses this to set the faction. IncidentParms.faction is ignored.
+						newDef.faction = Util.GetFactionDef(def);
+						newDef.orbital = true;
+						if (string.IsNullOrEmpty(newDef.label))
+						{
+							newDef.label = newDef.defName;
+						}
+
+						IncidentDefOf.OrbitalTraderArrival.Worker.TryExecute(new IncidentParms
+							{target = Find.CurrentMap, traderKind = newDef});
+					}))
+				.ToList();
+
+			traderOptions.Sort(CompareDebugMenuOptions);
+			Find.WindowStack.Add(new Dialog_DebugOptionListLister(traderOptions));
 		}
 	}
 }

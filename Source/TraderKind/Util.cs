@@ -30,5 +30,32 @@ namespace TG.TraderKind
 
 			return TraderKindCategory.None;
 		}
+
+		/// <summary>
+		/// Find out the factionDef of a trader.
+		/// </summary>
+		/// <param name="def">Trader being evaluate</param>
+		/// <returns>FactionDef of the trader.</returns>
+		public static FactionDef GetFactionDef(TraderKindDef def)
+		{
+			// The faction defined in the trader takes precedence.
+			var traderFactionDef = def.faction;
+			// If the trader has no faction, check if it is a base, caravan or visitor of a faction.
+			if (traderFactionDef == null && !def.orbital)
+			{
+				foreach (var factionDef in DefDatabase<FactionDef>.AllDefs)
+				{
+					if (factionDef.baseTraderKinds.Contains(def) || factionDef.caravanTraderKinds.Contains(def) ||
+					    factionDef.visitorTraderKinds.Contains(def))
+					{
+						traderFactionDef = factionDef;
+						break;
+					}
+				}
+			}
+
+			// Return the found faction definition, if any.
+			return traderFactionDef;
+		}
 	}
 }
