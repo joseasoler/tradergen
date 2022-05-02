@@ -4,19 +4,17 @@
 
 TraderGen is a mod focused on improving trader stock variety and customization in the [RimWorld](https://rimworldgame.com/) game.
 
-## Feature highlights
-
 * Configurable amount of silver in stock for orbital, settlement, caravan and visitor traders. Compatible with traders from mods.
 
-* Customizable frequency of orbital traders. Compatible with storytellers from mods. Randy Random and similar storytellers will just ignore it, though.
+* Customizable frequency of orbital traders. Compatible with both vanilla and mod storytellers (you cannot tell Random storytellers what to do, though).
 
 * Orbital traders now have an specialization in addition to their type. An specialization adds a limited amount of stock but it may be particularly rare or useful.
 
 * Better names for orbital traders.
 
-* Minor changes to vanilla trader stock, aiming at increasing their variety and improving mod compatibility.
+* Minor tweaks to vanilla trader stock, aiming at increasing their variety and improving mod compatibility.
 
-## Give me the details!
+## Features
 
 ### Specializations
 
@@ -26,19 +24,9 @@ TraderGen is a mod focused on improving trader stock variety and customization i
 
 ### Trader changes
 
-**Bulk orbital trader:** Increased variety of alcoholic beverages (requires mods adding other alcohol types).
+**Increased variety of alcoholic beverages (requires mods adding other alcohol types):** Bulk orbital trader, Slaver orbital trader, Outlander settlements, Outlander bulk goods caravan
 
-**Slaver orbital trader:** Increased variety of alcoholic beverages (requires mods adding other alcohol types).
-
-**Outlander settlements:** Increased variety of alcoholic beverages (requires mods adding other alcohol types).
-
-**Outlander bulk goods caravan:** Increased variety of alcoholic beverages (requires mods adding other alcohol types).
-
-**Imperial orbital trader (requires Royalty):** Extra recreation buildings and gluttonous food in stock.
-
-**Imperial settlements (requires Royalty):** Increased variety of alcoholic beverages (requires mods adding other alcohol types).
-
-**Imperial caravan (requires Royalty):** Increased variety of alcoholic beverages (requires mods adding other alcohol types).
+**Extra recreation buildings and gluttonous food in stock:** (Royalty) Imperial orbital trader, Imperial settlements, Imperial caravan
 
 #### Mod support
 
