@@ -35,6 +35,12 @@ namespace TG.Mod
 		/// </summary>
 		public IntRange OrbitalSpecializations = IntRange.one;
 
+
+		/// <summary>
+		/// Disable TraderKindDef.commonalityMultFromPopulationIntent calculations.
+		/// </summary>
+		public bool IgnoreColonyPopulationCommonality /* = false */;
+
 		/// <summary>
 		/// Generate a detailed report of the trader generation process and append it to the log.
 		/// </summary>
@@ -90,6 +96,17 @@ namespace TG.Mod
 			get => _values.OrbitalSpecializations;
 			set => _values.OrbitalSpecializations = value;
 		}
+		
+		
+		/// <summary>
+		/// Ignore colony population when calculating trader commonality.
+		/// </summary>
+		public static bool IgnoreColonyPopulationCommonality
+		{
+			get => _values.IgnoreColonyPopulationCommonality;
+			set => _values.IgnoreColonyPopulationCommonality = value;
+		}
+
 
 		/// <summary>
 		/// Disables modification of the period of orbital traders.
@@ -154,6 +171,8 @@ namespace TG.Mod
 			Scribe_Values.Look(ref orbitalSpecializationsMin, "OrbitalSpecializationsMin", 1);
 			Scribe_Values.Look(ref orbitalSpecializationsMax, "OrbitalSpecializationsMax", 1);
 			_values.OrbitalSpecializations = new IntRange(orbitalSpecializationsMin, orbitalSpecializationsMax);
+
+			Scribe_Values.Look(ref _values.IgnoreColonyPopulationCommonality, "IgnoreColonyPopulationCommonality");
 
 			Scribe_Values.Look(ref _values.LogGen, "LogGen");
 			Scribe_Values.Look(ref _values.LogStockGen, "LogStockGen");

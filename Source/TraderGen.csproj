@@ -27,6 +27,7 @@
 		<Compile Include="GenExtension.cs" />
 		<Compile Include="Harmony\Mod\TraderShips.cs" />
 		<Compile Include="Harmony\StockGeneratorCount.cs" />
+		<Compile Include="Harmony\TraderKindDefCommonality.cs" />
 		<Compile Include="Harmony\TraderStock.cs" />
 		<Compile Include="Harmony\TradeShip.cs" />
 		<Compile Include="Logger.cs" />

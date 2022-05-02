@@ -67,19 +67,26 @@ namespace TG.Mod
 			}
 
 			var orbitalSpecializations = Settings.OrbitalSpecializations;
-			listing.Label("TG_OrbitalSpecializations".Translate());
+			listing.Label("TG_OrbitalSpecializations".Translate(), -1, "TG_OrbitalSpecializationsTooltip".Translate());
 			listing.IntRange(ref orbitalSpecializations, 0, Settings.MaxOrbitalSpecializations);
 			Settings.OrbitalSpecializations = orbitalSpecializations;
-			
+
+			listing.Gap();
+			var ignoreColonyPopulationCommonality = Settings.IgnoreColonyPopulationCommonality;
+			listing.CheckboxLabeled("TG_IgnoreColonyPopulationCommonality".Translate(), ref ignoreColonyPopulationCommonality,
+				"TG_IgnoreColonyPopulationCommonalityTooltip".Translate());
+			Settings.IgnoreColonyPopulationCommonality = ignoreColonyPopulationCommonality;
+
 			if (ModsConfig.RoyaltyActive)
 			{
+				listing.Gap();
 				var sellPsylinkNeuroformers = Settings.SellPsylinkNeuroformers;
 				listing.CheckboxLabeled("TG_SellPsylinkNeuroformers".Translate(), ref sellPsylinkNeuroformers,
 					"TG_SellPsylinkNeuroformersTooltip".Translate());
 				Settings.SellPsylinkNeuroformers = sellPsylinkNeuroformers;
 			}
-			listing.Gap(listing.verticalSpacing);
 
+			listing.Gap();
 			var resetButtonRect = listing.GetRect(30f);
 			var resetWidth = resetButtonRect.width;
 			resetButtonRect.width /= 5f;

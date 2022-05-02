@@ -8,6 +8,8 @@ TraderGen is a mod focused on improving trader stock variety and customization i
 
 * Customizable frequency of orbital traders. Compatible with both vanilla and mod storytellers (you cannot tell Random storytellers what to do, though).
 
+* In vanilla RimWorld, traders such as the slaver orbital trader become less frequent when the population of the colony increases until they cannot appear at all. This can now be disabled through mod settings.
+
 * Orbital traders now have an specialization in addition to their type. An specialization adds a limited amount of stock but it may be particularly rare or useful. It is possible to modify the number of specializations or disable the feature entirely through the settings.
 
 * More diversity of names for orbital traders.
