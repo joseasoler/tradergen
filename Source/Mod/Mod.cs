@@ -66,6 +66,11 @@ namespace TG.Mod
 				Settings.SetSilverScaling(category, silverScaling);
 			}
 
+			var orbitalSpecializations = Settings.OrbitalSpecializations;
+			listing.Label("TG_OrbitalSpecializations".Translate());
+			listing.IntRange(ref orbitalSpecializations, 0, Settings.MaxOrbitalSpecializations);
+			Settings.OrbitalSpecializations = orbitalSpecializations;
+			
 			if (ModsConfig.RoyaltyActive)
 			{
 				var sellPsylinkNeuroformers = Settings.SellPsylinkNeuroformers;

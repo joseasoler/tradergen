@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using Force.DeepCloner;
 using RimWorld;
@@ -68,17 +69,22 @@ namespace TG.TraderKind
 			var extension = originalDef.GetModExtension<GenExtension>();
 			if (extension != null)
 			{
-				// ToDo configurable amount of specializations.
-				var chosenSpecializations =
-					Algorithm.ChooseNWeightedRandomly(extension.specializations, spec => spec.commonality, 1);
-				foreach (var specialization in chosenSpecializations)
-				{
-					Logger.Gen($"Adding specialization {specialization.def.defName}");
-					specializationNames.Add(specialization.def.label);
+				var numSpecializations = Math.Max(Settings.OrbitalSpecializations.RandomInRange, 0);
 
-					foreach (var gen in specialization.def.stockGens)
+				if (numSpecializations > 0)
+				{
+					var chosenSpecializations =
+						Algorithm.ChooseNWeightedRandomly(extension.specializations, spec => spec.commonality,
+							numSpecializations);
+					foreach (var specialization in chosenSpecializations)
 					{
-						def.stockGenerators.Add(StockGenFrom(def, gen, tile, faction));
+						Logger.Gen($"Adding specialization {specialization.def.defName}");
+						specializationNames.Add(specialization.def.label);
+
+						foreach (var gen in specialization.def.stockGens)
+						{
+							def.stockGenerators.Add(StockGenFrom(def, gen, tile, faction));
+						}
 					}
 				}
 			}

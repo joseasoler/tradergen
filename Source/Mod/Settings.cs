@@ -30,6 +30,12 @@ namespace TG.Mod
 		};
 
 		/// <summary>
+		/// Orbital traders will have a random number of specializations in this interval.
+		/// Set both values to zero to disable specializations.
+		/// </summary>
+		public IntRange OrbitalSpecializations = IntRange.one;
+
+		/// <summary>
 		/// Generate a detailed report of the trader generation process and append it to the log.
 		/// </summary>
 		public bool LogGen /* = false */;
@@ -79,6 +85,12 @@ namespace TG.Mod
 			_values.SilverScaling[category] = value;
 		}
 
+		public static IntRange OrbitalSpecializations
+		{
+			get => _values.OrbitalSpecializations;
+			set => _values.OrbitalSpecializations = value;
+		}
+
 		/// <summary>
 		/// Disables modification of the period of orbital traders.
 		/// </summary>
@@ -98,6 +110,11 @@ namespace TG.Mod
 		/// Maximum allowed value for SilverScaling settings in %.
 		/// </summary>
 		public const float MaxSilverScaling = 1000.0f;
+
+		/// <summary>
+		/// Maximum value allowed for OrbitalSpecializations.
+		/// </summary>
+		public const int MaxOrbitalSpecializations = 5;
 
 		/// <summary>
 		/// Generate a detailed report of the trader generation process and append it to the log.
@@ -131,6 +148,13 @@ namespace TG.Mod
 			Scribe_Values.Look(ref _values.SellPsylinkNeuroformers, "SellPsylinkNeuroformers");
 			Scribe_Values.Look(ref _values.PeriodOrbital, "PeriodOrbital");
 			Scribe_Collections.Look(ref _values.SilverScaling, "SilverScaling");
+
+			var orbitalSpecializationsMin = _values.OrbitalSpecializations.min;
+			var orbitalSpecializationsMax = _values.OrbitalSpecializations.max;
+			Scribe_Values.Look(ref orbitalSpecializationsMin, "OrbitalSpecializationsMin", 1);
+			Scribe_Values.Look(ref orbitalSpecializationsMax, "OrbitalSpecializationsMax", 1);
+			_values.OrbitalSpecializations = new IntRange(orbitalSpecializationsMin, orbitalSpecializationsMax);
+
 			Scribe_Values.Look(ref _values.LogGen, "LogGen");
 			Scribe_Values.Look(ref _values.LogStockGen, "LogStockGen");
 		}
