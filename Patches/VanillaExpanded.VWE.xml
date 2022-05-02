@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Vanilla Weapons Expanded</li>
+		</mods>
+		<!-- Some traders may have some tools in stock. -->
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/TraderKindDef[defName="Orbital_BulkGoods"]/stockGenerators</xpath>
+					<value>
+						<li Class="TG.StockGen.MultiDef">
+							<thingDefs>
+								<li>VWE_MeleeWeapon_Cleaver</li>
+								<li>VWE_MeleeWeapon_Hammer</li>
+								<li>VWE_MeleeWeapon_Pickaxe</li>
+								<li>VWE_MeleeWeapon_Shovel</li>
+								<li>VWE_MeleeWeapon_Wrench</li>
+							</thingDefs>
+							<thingDefCountRange>-1~2</thingDefCountRange>
+							<countRange>1</countRange>
+						</li>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+</Patch>

@@ -30,7 +30,15 @@ TraderGen is a mod focused on improving trader stock variety and customization i
 
 **Slaver orbital trader:** Increased variety of alcoholic beverages (requires mods adding other alcohol types).
 
+**Outlander settlements:** Increased variety of alcoholic beverages (requires mods adding other alcohol types).
+
+**Outlander bulk goods caravan:** Increased variety of alcoholic beverages (requires mods adding other alcohol types).
+
 **Imperial orbital trader (requires Royalty):** Extra recreation buildings and gluttonous food in stock.
+
+**Imperial settlements (requires Royalty):** Increased variety of alcoholic beverages (requires mods adding other alcohol types).
+
+**Imperial caravan (requires Royalty):** Increased variety of alcoholic beverages (requires mods adding other alcohol types).
 
 #### Mod support
 
@@ -72,7 +80,7 @@ Trader ship stock is generated using the TraderGen rules for orbital traders.
 
 [Vanilla Apparel Expanded — Accessories](https://steamcommunity.com/sharedfiles/filedetails/?id=2521176396):
 
-...
+Bulk goods orbital traders and outlander settlements may have tool belts in stock.
 
 [Vanilla Armour Expanded](https://steamcommunity.com/workshop/filedetails/?id=1814988282):
 
@@ -120,7 +128,7 @@ Bulk goods orbital traders sell canned food instead of raw food.
 
 [Vanilla Weapons Expanded](https://steamcommunity.com/sharedfiles/filedetails/?id=1814383360):
 
-...
+Bulk goods orbital traders and outlander settlements may have tools in stock.
 
 [Vanilla Weapons Expanded - Grenades](https://steamcommunity.com/sharedfiles/filedetails/?id=2194472657):
 

@@ -1,15 +1,104 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<!-- Psylink neuroformers can be purchased and sold. -->
 <Patch>
 	<Operation Class="PatchOperationFindMod">
 		<mods>
 			<li>Royalty</li>
 		</mods>
-		<match Class="PatchOperationAdd">
-			<xpath>/Defs/ThingDef[defName="PsychicAmplifier"]</xpath>
-			<value>
-				<tradeability>All</tradeability>
-			</value>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<!-- Psylink neuroformers can be purchased and sold. -->
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="PsychicAmplifier"]</xpath>
+					<value>
+						<tradeability>All</tradeability>
+					</value>
+				</li>
+				<!-- New namer for imperial orbital traders. -->
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs</xpath>
+					<value>
+						<RulePackDef>
+							<defName>TG_OrbitalNamerImperial</defName>
+							<include>
+								<li>EmpireNameUtility</li>
+							</include>
+							<rulePack>
+								<rulesStrings>
+									<li>r_name(p=6)->[WordImperial] [traderkindbusinesstype]</li>
+									<li>r_name(p=4)->[townname_fixed] [traderkindbusinesstype]</li>
+									<li>r_name(p=4)->[ImperialNameLast] [traderkindbusinesstype]</li>
+									<li>r_name(p=2)->[ImperialNameFirstMale] [traderkindbusinesstype]</li>
+									<li>r_name(p=2)->[ImperialNameFirstFemale] [traderkindbusinesstype]</li>
+								</rulesStrings>
+								<rulesFiles>
+									<li>traderkindbusinesstype->Words/Nouns/BusinessTypes</li>
+									<li>townname_fixed->Names/EmpireTown</li>
+								</rulesFiles>
+							</rulePack>
+						</RulePackDef>
+					</value>
+				</li>
+				<!-- Specializations and namer of the imperial orbital trader. -->
+				<li Class="PatchOperationAddModExtension">
+					<xpath>/Defs/TraderKindDef[defName="Orbital_Empire"]</xpath>
+					<value>
+						<li Class="TG.GenExtension">
+							<specializations>
+								<li>
+									<def>TG_Bionics</def>
+									<commonality>10.0</commonality>
+								</li>
+							</specializations>
+							<extraNameRules>TG_OrbitalNamerImperial</extraNameRules>
+						</li>
+					</value>
+				</li>
+				<!-- Tweaks for the imperial orbital trader. -->
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/TraderKindDef[defName="Orbital_Empire"]/stockGenerators</xpath>
+					<value>
+						<li Class="TG.StockGen.BuildingsJoy">
+							<minTechLevelGenerate>Industrial</minTechLevelGenerate>
+							<thingDefCountRange>3~5</thingDefCountRange>
+							<countRange>1</countRange>
+						</li>
+						<li Class="TG.StockGen.FoodGluttonous">
+							<thingDefCountRange>2~3</thingDefCountRange>
+							<totalPriceRange>1000~1300</totalPriceRange>
+						</li>
+					</value>
+				</li>
+				<!-- Tweaks for imperial settlements. -->
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/TraderKindDef[defName="Base_Empire_Standard"]/stockGenerators</xpath>
+					<value>
+						<li Class="TG.StockGen.BuildingsJoy">
+							<minTechLevelGenerate>Industrial</minTechLevelGenerate>
+							<thingDefCountRange>5~8</thingDefCountRange>
+							<countRange>1</countRange>
+						</li>
+						<li Class="TG.StockGen.FoodGluttonous">
+							<thingDefCountRange>3~5</thingDefCountRange>
+							<totalPriceRange>1500~2340</totalPriceRange>
+						</li>
+					</value>
+				</li>
+				<!-- Tweaks for imperial caravans. -->
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/TraderKindDef[defName="Empire_Caravan_TraderGeneral"]/stockGenerators</xpath>
+					<value>
+						<li Class="TG.StockGen.BuildingsJoy">
+							<minTechLevelGenerate>Industrial</minTechLevelGenerate>
+							<thingDefCountRange>2~3</thingDefCountRange>
+							<countRange>1</countRange>
+						</li>
+						<li Class="TG.StockGen.FoodGluttonous">
+							<thingDefCountRange>1~2</thingDefCountRange>
+							<totalPriceRange>1000~1800</totalPriceRange>
+						</li>
+					</value>
+				</li>
+			</operations>
 		</match>
 	</Operation>
 </Patch>
