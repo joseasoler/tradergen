@@ -48,6 +48,10 @@
 						<def>TG_Cannibal</def>
 						<commonality>5.0</commonality>
 					</li>
+					<li MayRequire="Ludeon.RimWorld.Royalty">
+						<def>TG_Psycasting</def>
+						<commonality>5.0</commonality>
+					</li>
 				</specializations>
 				<extraNameRules>TG_OrbitalNamerCombat</extraNameRules>
 			</li>
@@ -62,6 +66,10 @@
 					<li>
 						<def>TG_Bionics</def>
 						<commonality>10.0</commonality>
+					</li>
+					<li MayRequire="Ludeon.RimWorld.Royalty">
+						<def>TG_Psycasting</def>
+						<commonality>8.0</commonality>
 					</li>
 				</specializations>
 				<extraNameRules>TG_OrbitalNamerExotic</extraNameRules>
@@ -80,7 +88,7 @@
 					</li>
 					<li>
 						<def>TG_Cannibal</def>
-						<commonality>5.0</commonality>
+						<commonality>8.0</commonality>
 					</li>
 				</specializations>
 				<extraNameRules>TG_OrbitalNamerSlaver</extraNameRules>

@@ -120,6 +120,7 @@ namespace TG.Debug
 						var newDef = def.ShallowClone();
 
 						// IncidentWorker_OrbitalTraderArrival uses this to set the faction. IncidentParms.faction is ignored.
+						// But IncidentParms.faction is used in other cases such as when generating stock.
 						newDef.faction = Util.GetFactionDef(def);
 						newDef.orbital = true;
 						if (string.IsNullOrEmpty(newDef.label))
@@ -127,8 +128,11 @@ namespace TG.Debug
 							newDef.label = newDef.defName;
 						}
 
+						var factionParam = newDef.faction == null
+							? null
+							: Find.FactionManager.AllFactions.FirstOrDefault(f => f.def == newDef.faction);
 						IncidentDefOf.OrbitalTraderArrival.Worker.TryExecute(new IncidentParms
-							{target = Find.CurrentMap, traderKind = newDef});
+							{target = Find.CurrentMap, traderKind = newDef, faction = factionParam});
 					}))
 				.ToList();
 

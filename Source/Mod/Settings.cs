@@ -10,7 +10,7 @@ namespace TG.Mod
 		/// <summary>
 		/// Determines if traders can have psylink neuroformers in stock.
 		/// </summary>
-		public bool SellPsylinkNeuroformers /* = false */;
+		public bool SellPsylinkNeuroformers = true;
 
 		/// <summary>
 		/// Period of orbital trader arrival in days.

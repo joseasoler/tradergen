@@ -13,6 +13,40 @@
 						<tradeability>All</tradeability>
 					</value>
 				</li>
+				<!-- Extra specialization for orbital traders. -->
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs</xpath>
+					<value>
+						<TG.TraderSpecializationDef>
+							<defName>TG_Psycasting</defName>
+							<label>psycasting</label>
+							<stockGens>
+								<li Class="TG.StockGen.PsylinkNeuroformer">
+									<countRange>1</countRange>
+								</li>
+								<li Class="StockGenerator_Category">
+									<categoryDef>NeurotrainersPsycast</categoryDef>
+									<thingDefCountRange>1~2</thingDefCountRange>
+									<countRange>1</countRange>
+								</li>
+								<li Class="StockGenerator_Tag">
+									<tradeTag>PsychicApparel</tradeTag>
+									<thingDefCountRange>1~3</thingDefCountRange>
+									<countRange>1</countRange>
+								</li>
+								<li Class="StockGenerator_Tag">
+									<tradeTag>PsychicWeapon</tradeTag>
+									<thingDefCountRange>1~2</thingDefCountRange>
+									<countRange>1</countRange>
+								</li>
+								<li Class="StockGenerator_SingleDef" MayRequire="sarg.alphaanimals">
+									<thingDef>AA_BlueMilk</thingDef>
+									<totalPriceRange>-2187~1138</totalPriceRange>
+								</li>
+							</stockGens>
+						</TG.TraderSpecializationDef>
+					</value>
+				</li>
 				<!-- New namer for imperial orbital traders. -->
 				<li Class="PatchOperationAdd">
 					<xpath>/Defs</xpath>
@@ -46,6 +80,11 @@
 							<specializations>
 								<li>
 									<def>TG_Bionics</def>
+									<commonality>10.0</commonality>
+								</li>
+								<!-- The Empire will not sell psylink neuroformers so this can be a common specialization.-->
+								<li>
+									<def>TG_Psycasting</def>
 									<commonality>10.0</commonality>
 								</li>
 							</specializations>
