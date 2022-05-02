@@ -24,7 +24,9 @@ TraderGen is a mod focused on improving trader stock variety and customization i
 
 **Cannibal:** Adds items from morally questionable origins to the trader stock. Present in Combat and Slaver orbital traders.
 
-**Craftmanship:** Includes apparel, furniture and art created from stone, metal or wood.
+**Craftmanship:** Includes apparel, furniture and art created from stone, metal or wood. Present in Bulk and Imperial orbital traders.
+
+**Psycasting (Requires Royalty):** Sells psytrainers, psychic apparel and weapons. If a mod setting is enabled, it will also sell psylink neuroformers if the trader does not belong to the Empire faction. Present in Exotic and Imperial orbital traders.
 
 ### Trader changes
 
