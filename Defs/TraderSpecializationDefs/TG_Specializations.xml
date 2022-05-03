@@ -183,6 +183,7 @@
 					<li>AnimalFighter</li>
 				</tradeTagsSell>
 				<tradeTagsBuy>
+					<li>AnimalPet</li>
 					<li>AnimalUncommon</li>
 					<li>AnimalExotic</li>
 				</tradeTagsBuy>
@@ -210,6 +211,59 @@
 			<li Class="TG.StockGen.ExoticAnimalPart">
 				<thingDefCountRange>0~2</thingDefCountRange>
 				<countRange>1</countRange>
+			</li>
+		</stockGens>
+	</TG.TraderSpecializationDef>
+	<TG.TraderSpecializationDef>
+		<defName>TG_Husbandry</defName>
+		<label>husbandry</label>
+		<stockGens>
+			<!-- Sells. -->
+			<li Class="StockGenerator_Animals">
+				<maxWildness>0.70</maxWildness>
+				<checkTemperature>false</checkTemperature>
+				<tradeTagsSell>
+					<li>AnimalFarm</li>
+				</tradeTagsSell>
+				<tradeTagsBuy>
+					<li>AnimalExotic</li>
+				</tradeTagsBuy>
+				<kindCountRange>1~2</kindCountRange>
+				<countRange>5~8</countRange>
+				<createMatingPair>
+					<li>AnimalFarm</li>
+				</createMatingPair>
+			</li>
+			<li Class="StockGenerator_Animals">
+				<maxWildness>0.70</maxWildness>
+				<checkTemperature>false</checkTemperature>
+				<tradeTagsSell>
+					<li>AnimalPet</li>
+				</tradeTagsSell>
+				<kindCountRange>1</kindCountRange>
+				<countRange>1~2</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>Kibble</thingDef>
+				<totalPriceRange>500~1000</totalPriceRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>Hay</thingDef>
+				<totalPriceRange>500~1000</totalPriceRange>
+			</li>
+
+			<li Class="TG.StockGen.MultiDef" MayRequire="VanillaExpanded.VAPPE">
+				<thingDefs>
+					<li>VAE_Apparel_Overalls</li>
+					<li>VAE_Apparel_FleeceShirt</li>
+				</thingDefs>
+				<thingDefCountRange>-2~1</thingDefCountRange>
+				<countRange>1</countRange>
+			</li>
+			
+			<li Class="StockGenerator_SingleDef" MayRequire="VanillaExpanded.VWE">
+				<thingDef>VWE_Tool_Whip</thingDef>
+				<countRange>-2~1</countRange>
 			</li>
 		</stockGens>
 	</TG.TraderSpecializationDef>

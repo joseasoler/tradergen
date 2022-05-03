@@ -18,6 +18,10 @@
 						<def>TG_Gourmet</def>
 						<commonality>10.0</commonality>
 					</li>
+					<li>
+						<def>TG_Husbandry</def>
+						<commonality>10.0</commonality>
+					</li>
 				</specializations>
 				<extraNameRules>TG_OrbitalNamerBulk</extraNameRules>
 			</li>

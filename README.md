@@ -24,7 +24,7 @@ TraderGen is a mod focused on improving trader stock variety and customization i
 
 **Cannibal:** Adds items from morally questionable origins to the trader stock. Present in combat and slaver orbital traders.
 
-**Craftsmanship:** Includes apparel, furniture and art created from stone, metal or wood. Present in bulk and imperial orbital traders.
+**Craftsmanship:** Adds apparel, furniture and art created from stone, metal or wood to the stock of the trader. Present in bulk and imperial orbital traders.
 
 **Culture (With [Vanilla Books Expanded](https://steamcommunity.com/workshop/filedetails/?id=2193152410)):** Has recreation buildings, books, blueprints and maps in stock. You can purchase the newspaper of their ship as well. Present in exotic and imperial orbital traders.
 
@@ -34,7 +34,9 @@ TraderGen is a mod focused on improving trader stock variety and customization i
 
 **Gourmet:** Sells gluttonous food, recreational drugs and alcohol. Present in bulk and imperial orbital traders.
 
-**Hunting:** Has combat animals, hunting gear and exotic animal parts in stock. Present in combat, slaver and imperial orbital traders. 
+**Hunting:** Has combat animals, hunting gear and exotic animal parts (including ones from mods) in stock. Present in combat, slaver and imperial orbital traders.
+
+**Husbandry:** Adds farm and pet animals, kibble, hay and animal products to the stock. Present in bulk and imperial orbital traders. 
 
 **Psycasting (with [Royalty](https://rimworldgame.com/royalty/)):** Sells psytrainers, psychic apparel and weapons. If a mod setting is enabled, it will also sell psylink neuroformers if the trader does not belong to the Empire faction. Present in exotic and imperial orbital traders.
 
@@ -81,6 +83,10 @@ Trader ship stock is generated using the TraderGen rules for orbital traders.
 [Trader Ships](https://steamcommunity.com/sharedfiles/filedetails/?id=2046222331):
 
 Trader ship stock is generated using the TraderGen rules for orbital traders.
+
+[Vanilla Apparel Expanded](https://steamcommunity.com/sharedfiles/filedetails/?id=1814987817):
+
+Orbital traders with the husbandry specialization may have overalls and fleece shirts in stock.
 
 [Vanilla Apparel Expanded — Accessories](https://steamcommunity.com/sharedfiles/filedetails/?id=2521176396):
 
@@ -141,6 +147,8 @@ Orbital traders with the hunting specialization may have hunting rifles in stock
 Bulk goods orbital traders and outlander settlements may have tools in stock.
 
 Orbital traders with the hunting specialization may have compound bows in stock.
+
+Orbital traders with the husbandry specialization may have whips in stock.
 
 [Vanilla Weapons Expanded - Grenades](https://steamcommunity.com/sharedfiles/filedetails/?id=2194472657):
 
