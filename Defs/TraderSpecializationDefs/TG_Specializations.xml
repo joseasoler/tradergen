@@ -86,4 +86,31 @@
 			</li>
 		</stockGens>
 	</TG.TraderSpecializationDef>
+	<TG.TraderSpecializationDef>
+		<defName>TG_Draper</defName>
+		<label>draper</label>
+		<stockGens>
+			<li Class="TG.StockGen.RandomStuffFromCategory">
+				<stuffCategoryDef>Fabric</stuffCategoryDef>
+				<maxTechLevelGenerate>Spacer</maxTechLevelGenerate>
+				<excludeStuffDefs>
+					<!-- Spidersilk is handled separately. -->
+					<li MayRequire="OskarPotocki.VFE.Insectoid">VFEI_Spidersilk</li>
+				</excludeStuffDefs>
+				<stuffCountRange>150~300</stuffCountRange>
+				<thingDefCountRange>4~7</thingDefCountRange>
+				<countRange>1~2</countRange>
+			</li>
+			<li Class="TG.StockGen.RandomStuffFromCategory">
+				<stuffCategoryDef>Leathery</stuffCategoryDef>
+				<maxTechLevelGenerate>Spacer</maxTechLevelGenerate>
+				<excludeStuffDefs>
+					<li>Leather_Human</li>
+				</excludeStuffDefs>
+				<stuffCountRange>150~300</stuffCountRange>
+				<thingDefCountRange>4~7</thingDefCountRange>
+				<countRange>1~2</countRange>
+			</li>
+		</stockGens>
+	</TG.TraderSpecializationDef>
 </Defs>

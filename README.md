@@ -28,6 +28,8 @@ TraderGen is a mod focused on improving trader stock variety and customization i
 
 **Culture (With [Vanilla Books Expanded](https://steamcommunity.com/workshop/filedetails/?id=2193152410)):** Has recreation buildings, books, blueprints and maps in stock. You can purchase the newspaper of their ship as well. Present in exotic and imperial orbital traders.
 
+**Draper:** Sells apparel and furniture created from textiles. Present in exotic and imperial orbital traders.
+
 **Psycasting (with [Royalty](https://rimworldgame.com/royalty/)):** Sells psytrainers, psychic apparel and weapons. If a mod setting is enabled, it will also sell psylink neuroformers if the trader does not belong to the Empire faction. Present in exotic and imperial orbital traders.
 
 ### Trader changes

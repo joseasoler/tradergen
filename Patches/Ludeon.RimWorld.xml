@@ -77,7 +77,10 @@
 						<def>TG_Culture</def>
 						<commonality>10.0</commonality>
 					</li>
-
+					<li>
+						<def>TG_Draper</def>
+						<commonality>10.0</commonality>
+					</li>
 					<li MayRequire="Ludeon.RimWorld.Royalty">
 						<def>TG_Psycasting</def>
 						<commonality>8.0</commonality>
