@@ -7,6 +7,12 @@
 		<orbital>true</orbital>
 		<requestable>false</requestable>
 		<commonality>0</commonality>
+		<stockGenerators>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>Silver</thingDef>
+				<countRange>2000~4000</countRange>
+			</li>
+		</stockGenerators>
 		<modExtensions>
 			<li Class="TG.GenExtension">
 				<specializations>
