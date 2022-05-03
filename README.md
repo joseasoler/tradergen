@@ -32,6 +32,8 @@ TraderGen is a mod focused on improving trader stock variety and customization i
 
 **Drugs:** Has hard drugs and some recreational drugs (except alcohol) in stock. Present in bulk and slaver orbital traders.
 
+**Gourmet:** Sells gluttonous food, recreational drugs and alcohol. Present in bulk and imperial orbital traders.
+
 **Psycasting (with [Royalty](https://rimworldgame.com/royalty/)):** Sells psytrainers, psychic apparel and weapons. If a mod setting is enabled, it will also sell psylink neuroformers if the trader does not belong to the Empire faction. Present in exotic and imperial orbital traders.
 
 ### Trader changes
@@ -90,6 +92,8 @@ Bulk goods orbital traders and outlander settlements may have tool belts in stoc
 
 Orbital trader specializations distinguish between alcoholic beverages, non-alcoholic beverages and other drugs when appropriate.
 
+Orbital traders with the gourmet specialization have some non-alcoholic beverages in stock.
+
 [Vanilla Brewing Expanded - Coffees and Teas](https://steamcommunity.com/sharedfiles/filedetails/?id=2275449762):
 
 Orbital traders belonging to the Cannibal specialization will usually have cannibal coffee in stock.
@@ -101,6 +105,8 @@ Culture orbital trader category.
 [Vanilla Cooking Expanded](https://steamcommunity.com/sharedfiles/filedetails/?id=2134308519):
 
 Bulk goods orbital traders sell canned food instead of raw food.
+
+Orbital traders with the gourmet specialization always have some condiments in stock.
 
 [Vanilla Factions Expanded - Insectoids](https://steamcommunity.com/sharedfiles/filedetails/?id=2149755445):
 

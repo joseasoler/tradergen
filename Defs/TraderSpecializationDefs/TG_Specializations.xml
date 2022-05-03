@@ -117,6 +117,7 @@
 		<defName>TG_Drugs</defName>
 		<label>drugs</label>
 		<stockGens>
+			<!-- Sells. -->
 			<li Class="TG.StockGen.Drugs">
 				<drugCategory>Social</drugCategory>
 				<thingDefCountRange>1~2</thingDefCountRange>
@@ -127,6 +128,46 @@
 				<maxTechLevelGenerate>Spacer</maxTechLevelGenerate>
 				<thingDefCountRange>2~3</thingDefCountRange>
 				<totalPriceRange>900~1600</totalPriceRange>
+			</li>
+			<!-- Purchases -->
+			<li Class="StockGenerator_Category">
+				<categoryDef>Drugs</categoryDef>
+			</li>
+		</stockGens>
+	</TG.TraderSpecializationDef>
+	<TG.TraderSpecializationDef>
+		<defName>TG_Gourmet</defName>
+		<label>gourmet</label>
+		<stockGens>
+			<!-- Sells. -->
+			<li Class="TG.StockGen.Alcohol">
+				<thingDefCountRange>1~2</thingDefCountRange>
+				<totalPriceRange>700~1400</totalPriceRange>
+			</li>
+			<li Class="TG.StockGen.Drugs">
+				<drugCategory>Social</drugCategory>
+				<thingDefCountRange>2~3</thingDefCountRange>
+				<totalPriceRange>900~1600</totalPriceRange>
+			</li>
+			<li Class="StockGenerator_Category" MayRequire="VanillaExpanded.VBrewE">
+				<categoryDef>VBE_DrinksNonAlcoholic</categoryDef>
+				<excludedThingDefs>
+					<li MayRequire="VanillaExpanded.VBrewECandT">VBE_CannibalCoffee</li>
+				</excludedThingDefs>
+				<thingDefCountRange>1</thingDefCountRange>
+				<totalPriceRange>700~1100</totalPriceRange>
+			</li>
+			<li Class="StockGenerator_Category" MayRequire="VanillaExpanded.VCookE">
+				<categoryDef>VCE_Condiments</categoryDef>
+				<thingDefCountRange>1~2</thingDefCountRange>
+				<totalPriceRange>600~800</totalPriceRange>
+			</li>
+			<!-- Purchases -->
+			<li Class="StockGenerator_Category">
+				<categoryDef>FoodRaw</categoryDef>
+				<excludedCategories>
+					<li>EggsFertilized</li>
+				</excludedCategories>
 			</li>
 		</stockGens>
 	</TG.TraderSpecializationDef>
