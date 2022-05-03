@@ -113,4 +113,21 @@
 			</li>
 		</stockGens>
 	</TG.TraderSpecializationDef>
+	<TG.TraderSpecializationDef>
+		<defName>TG_Drugs</defName>
+		<label>drugs</label>
+		<stockGens>
+			<li Class="TG.StockGen.Drugs">
+				<drugCategory>Social</drugCategory>
+				<thingDefCountRange>1~2</thingDefCountRange>
+				<totalPriceRange>700~1400</totalPriceRange>
+			</li>
+			<li Class="TG.StockGen.Drugs">
+				<drugCategory>Hard</drugCategory>
+				<maxTechLevelGenerate>Spacer</maxTechLevelGenerate>
+				<thingDefCountRange>2~3</thingDefCountRange>
+				<totalPriceRange>900~1600</totalPriceRange>
+			</li>
+		</stockGens>
+	</TG.TraderSpecializationDef>
 </Defs>

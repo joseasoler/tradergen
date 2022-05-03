@@ -30,6 +30,8 @@ TraderGen is a mod focused on improving trader stock variety and customization i
 
 **Draper:** Sells apparel and furniture created from textiles. Present in exotic and imperial orbital traders.
 
+**Drugs:** Has hard drugs and some recreational drugs (except alcohol) in stock. Present in bulk and slaver orbital traders.
+
 **Psycasting (with [Royalty](https://rimworldgame.com/royalty/)):** Sells psytrainers, psychic apparel and weapons. If a mod setting is enabled, it will also sell psylink neuroformers if the trader does not belong to the Empire faction. Present in exotic and imperial orbital traders.
 
 ### Trader changes
@@ -86,7 +88,7 @@ Bulk goods orbital traders and outlander settlements may have tool belts in stoc
 
 [Vanilla Brewing Expanded](https://steamcommunity.com/sharedfiles/filedetails/?id=2186560858):
 
-TraderGen distinguishes between alcoholic beverages, non-alcoholic beverages and other drugs when appropriate.
+Orbital trader specializations distinguish between alcoholic beverages, non-alcoholic beverages and other drugs when appropriate.
 
 [Vanilla Brewing Expanded - Coffees and Teas](https://steamcommunity.com/sharedfiles/filedetails/?id=2275449762):
 
