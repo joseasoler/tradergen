@@ -99,6 +99,10 @@
 									<commonality>10.0</commonality>
 								</li>
 								<li>
+									<def>TG_Hunting</def>
+									<commonality>10.0</commonality>
+								</li>
+								<li>
 									<!-- The Empire will not sell psylink neuroformers so this can be a common specialization.-->
 									<def>TG_Psycasting</def>
 									<commonality>10.0</commonality>

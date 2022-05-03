@@ -34,6 +34,8 @@ TraderGen is a mod focused on improving trader stock variety and customization i
 
 **Gourmet:** Sells gluttonous food, recreational drugs and alcohol. Present in bulk and imperial orbital traders.
 
+**Hunting:** Has combat animals, hunting gear and exotic animal parts in stock. Present in combat, slaver and imperial orbital traders. 
+
 **Psycasting (with [Royalty](https://rimworldgame.com/royalty/)):** Sells psytrainers, psychic apparel and weapons. If a mod setting is enabled, it will also sell psylink neuroformers if the trader does not belong to the Empire faction. Present in exotic and imperial orbital traders.
 
 ### Trader changes
@@ -84,9 +86,11 @@ Trader ship stock is generated using the TraderGen rules for orbital traders.
 
 Bulk goods orbital traders and outlander settlements may have tool belts in stock.
 
+Orbital traders with the hunting specialization may have quivers in stock.
+
 [Vanilla Armour Expanded](https://steamcommunity.com/workshop/filedetails/?id=1814988282):
 
-...
+Orbital traders with the hunting specialization may have ghillie gear in stock.
 
 [Vanilla Brewing Expanded](https://steamcommunity.com/sharedfiles/filedetails/?id=2186560858):
 
@@ -122,7 +126,7 @@ Orbital traders with the gourmet specialization always have some condiments in s
 
 [Vanilla Factions Expanded - Settlers](https://steamcommunity.com/sharedfiles/filedetails/?id=2052918119):
 
-...
+Orbital traders with the hunting specialization may have hunting rifles in stock.
 
 [Vanilla Furniture Expanded](https://steamcommunity.com/sharedfiles/filedetails/?id=1718190143):
 
@@ -136,6 +140,8 @@ Orbital traders with the gourmet specialization always have some condiments in s
 
 Bulk goods orbital traders and outlander settlements may have tools in stock.
 
+Orbital traders with the hunting specialization may have compound bows in stock.
+
 [Vanilla Weapons Expanded - Grenades](https://steamcommunity.com/sharedfiles/filedetails/?id=2194472657):
 
 ...
@@ -143,6 +149,8 @@ Bulk goods orbital traders and outlander settlements may have tools in stock.
 [Vanilla Weapons Expanded - Non-Lethal](https://steamcommunity.com/sharedfiles/filedetails/?id=2454918354):
 
 Slaver orbital traders may have some non-lethal weapons in stock.
+
+Orbital traders with the hunting specialization may have dart guns in stock.
 
 ## Development
 

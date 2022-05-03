@@ -62,6 +62,10 @@
 						<def>TG_Cannibal</def>
 						<commonality>3.0</commonality>
 					</li>
+					<li>
+						<def>TG_Hunting</def>
+						<commonality>10.0</commonality>
+					</li>
 					<li MayRequire="Ludeon.RimWorld.Royalty">
 						<def>TG_Psycasting</def>
 						<commonality>5.0</commonality>
@@ -114,6 +118,10 @@
 					</li>
 					<li>
 						<def>TG_Drugs</def>
+						<commonality>10.0</commonality>
+					</li>
+					<li>
+						<def>TG_Hunting</def>
 						<commonality>10.0</commonality>
 					</li>
 				</specializations>

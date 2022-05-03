@@ -171,4 +171,46 @@
 			</li>
 		</stockGens>
 	</TG.TraderSpecializationDef>
+	<TG.TraderSpecializationDef>
+		<defName>TG_Hunting</defName>
+		<label>hunting</label>
+		<stockGens>
+			<!-- Sells -->
+			<li Class="StockGenerator_Animals">
+				<maxWildness>0.70</maxWildness>
+				<checkTemperature>false</checkTemperature>
+				<tradeTagsSell>
+					<li>AnimalFighter</li>
+				</tradeTagsSell>
+				<tradeTagsBuy>
+					<li>AnimalUncommon</li>
+					<li>AnimalExotic</li>
+				</tradeTagsBuy>
+				<kindCountRange>2</kindCountRange>
+				<countRange>1~3</countRange>
+			</li>
+			<li Class="TG.StockGen.MultiDef">
+				<thingDefs>
+					<li>Gun_BoltActionRifle</li>
+					<li>Gun_SniperRifle</li>
+					<li MayRequire="OskarPotocki.VanillaFactionsExpanded.SettlersModule">VFES_Gun_HuntingRifle</li>
+					<li MayRequire="VanillaExpanded.VAEAccessories">VAEA_Apparel_Quiver</li>
+					<li MayRequire="VanillaExpanded.VARME">VAE_Apparel_GhillieSuit</li>
+					<li MayRequire="VanillaExpanded.VARME">VAE_Headgear_GhillieHood</li>
+					<li MayRequire="VanillaExpanded.VWE">VWE_Bow_Compound</li>
+					<li MayRequire="VanillaExpanded.VWENL">VWE_Gun_DartGun</li>
+				</thingDefs>
+				<thingDefCountRange>5</thingDefCountRange>
+				<countRange>1~2</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>Kibble</thingDef>
+				<totalPriceRange>500~1000</totalPriceRange>
+			</li>
+			<li Class="TG.StockGen.ExoticAnimalPart">
+				<thingDefCountRange>0~2</thingDefCountRange>
+				<countRange>1</countRange>
+			</li>
+		</stockGens>
+	</TG.TraderSpecializationDef>
 </Defs>
