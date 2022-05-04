@@ -448,8 +448,8 @@
 		</stockGens>
 	</TG.TraderSpecializationDef>
 	<TG.TraderSpecializationDef>
-		<defName>TG_Wealthy</defName>
-		<label>wealthy</label>
+		<defName>TG_Wealth</defName>
+		<label>wealth</label>
 		<stockGens>
 			<li Class="StockGenerator_SingleDef">
 				<thingDef>Silver</thingDef>
