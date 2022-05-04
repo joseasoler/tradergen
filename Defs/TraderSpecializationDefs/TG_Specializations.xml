@@ -309,4 +309,50 @@
 			</li>
 		</stockGens>
 	</TG.TraderSpecializationDef>
+	<TG.TraderSpecializationDef>
+		<defName>TG_Medicine</defName>
+		<label>medicine</label>
+		<stockGens>
+			<!-- Sells. -->
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>MedicineHerbal</thingDef>
+				<countRange>30~60</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>MedicineIndustrial</thingDef>
+				<countRange>10~15</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>MedicineUltratech</thingDef>
+				<countRange>5~10</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>Neutroamine</thingDef>
+				<countRange>50~125</countRange>
+			</li>
+			<li Class="TG.StockGen.Drugs">
+				<drugCategory>Medical</drugCategory>
+				<minTechLevelGenerate>Industrial</minTechLevelGenerate>
+				<maxTechLevelGenerate>Spacer</maxTechLevelGenerate>
+				<thingDefCountRange>2~3</thingDefCountRange>
+				<totalPriceRange>800~1300</totalPriceRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>Luciferium</thingDef>
+				<countRange>-3~5</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef" MayRequire="VanillaExpanded.VWE">
+				<thingDef>VWE_MeleeWeapon_Scalpel</thingDef>
+				<countRange>0~2</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef" MayRequire="VanillaExpanded.VAEAccessories">
+				<thingDef>VAEA_Apparel_MedicBag</thingDef>
+				<countRange>0~2</countRange>
+			</li>
+			<!-- Purchases -->
+			<li Class="StockGenerator_Category">
+				<categoryDef>Drugs</categoryDef>
+			</li>
+		</stockGens>
+	</TG.TraderSpecializationDef>
 </Defs>

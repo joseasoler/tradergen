@@ -42,6 +42,8 @@ TraderGen is a mod focused on improving trader stock variety and customization i
 
 **Jewelry (with [Jewelry](https://steamcommunity.com/workshop/filedetails/?id=2020964421):** Sells jewels, small quantities of gemstones, and other items created from gemstones. Present in exotic and imperial orbital traders.
 
+**Medicine:** Sells different types of medicine, neutroamine and medical drugs. May have small amounts of luciferium in stock. Present in bulk orbital traders.
+
 **Psycasting (with [Royalty](https://rimworldgame.com/royalty/)):** An uncommon specialization which sells psytrainers, psychic apparel and weapons. If a mod setting is enabled, it will also sell psylink neuroformers if the trader does not belong to the Empire faction. Present in exotic and imperial orbital traders.
 
 ### Trader changes

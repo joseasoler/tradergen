@@ -74,6 +74,10 @@
 						<def>TG_Hunting</def>
 						<commonality>10.0</commonality>
 					</li>
+					<li>
+						<def>TG_Medicine</def>
+						<commonality>10.0</commonality>
+					</li>
 					<li MayRequire="Ludeon.RimWorld.Royalty">
 						<def>TG_Psycasting</def>
 						<commonality>5.0</commonality>
