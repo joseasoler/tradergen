@@ -7,6 +7,10 @@
 			<li Class="TG.GenExtension">
 				<specializations>
 					<li>
+						<def>TG_Biomaterials</def>
+						<commonality>5.0</commonality>
+					</li>
+					<li>
 						<def>TG_Craftsmanship</def>
 						<commonality>10.0</commonality>
 					</li>
@@ -85,6 +89,10 @@
 		<value>
 			<li Class="TG.GenExtension">
 				<specializations>
+					<li>
+						<def>TG_Biomaterials</def>
+						<commonality>5.0</commonality>
+					</li>
 					<li>
 						<def>TG_Bionics</def>
 						<commonality>10.0</commonality>

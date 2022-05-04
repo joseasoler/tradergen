@@ -20,6 +20,8 @@ TraderGen is a mod focused on improving trader stock variety and customization i
 
 ### Orbital trader specializations
 
+**Biomaterials:** This uncommon specialization adds items created with materials obtained from exotic animals or plants. Present in bulk and exotic orbital traders.
+
 **Bionics:** Adds prostheses between the industrial and ultratech technology levels. May rarely have a single archotech bionic in stock. Present in combat, exotic, slaver and imperial orbital traders.
 
 **Cannibal:** Adds items from morally questionable origins to the trader stock. Present in combat and slaver orbital traders.
@@ -40,7 +42,7 @@ TraderGen is a mod focused on improving trader stock variety and customization i
 
 **Jewelry (with [Jewelry](https://steamcommunity.com/workshop/filedetails/?id=2020964421):** Sells jewels, small quantities of gemstones, and other items created from gemstones. Present in exotic and imperial orbital traders.
 
-**Psycasting (with [Royalty](https://rimworldgame.com/royalty/)):** Sells psytrainers, psychic apparel and weapons. If a mod setting is enabled, it will also sell psylink neuroformers if the trader does not belong to the Empire faction. Present in exotic and imperial orbital traders.
+**Psycasting (with [Royalty](https://rimworldgame.com/royalty/)):** An uncommon specialization which sells psytrainers, psychic apparel and weapons. If a mod setting is enabled, it will also sell psylink neuroformers if the trader does not belong to the Empire faction. Present in exotic and imperial orbital traders.
 
 ### Trader changes
 
@@ -56,7 +58,11 @@ TraderGen also provides extra features when certain mods are enabled. TraderGen 
 
 [Alpha Animals](https://steamcommunity.com/sharedfiles/filedetails/?id=1541721856):
 
-...
+The biomaterials specialization may have items created from giant crowned silkie silk, moth silk or sky steel.
+
+[Alpha Biomes](https://steamcommunity.com/sharedfiles/filedetails/?id=1841354677):
+
+The biomaterials specialization may have items created from crystalline wood, mushroom stalks or red wood.
 
 [Expanded Prosthetics and Organ Engineering](https://steamcommunity.com/sharedfiles/filedetails/?id=725956940)
 
@@ -65,6 +71,10 @@ TraderGen also provides extra features when certain mods are enabled. TraderGen 
 [Expanded Prosthetics and Organ Engineering - Forked](https://steamcommunity.com/sharedfiles/filedetails/?id=1949064302):
 
 Traders with the bionics specialization may rarely have MA-AI chips in stock.
+
+[Forsakens](https://steamcommunity.com/sharedfiles/filedetails/?id=1728999127):
+
+The biomaterials specialization may have items created from ultima fabric.
 
 [Jewelry](https://steamcommunity.com/workshop/filedetails/?id=2020964421):
 
@@ -143,6 +153,10 @@ Orbital traders with the hunting specialization may have hunting rifles in stock
 [Vanilla Furniture Expanded - Security](https://steamcommunity.com/workshop/filedetails/?id=1845154007):
 
 ...
+
+[Vanilla Ideology Expanded - Dryads](https://steamcommunity.com/sharedfiles/filedetails/?id=2720631512):
+
+The biomaterials specialization may have items created from gaubric.
 
 [Vanilla Weapons Expanded](https://steamcommunity.com/sharedfiles/filedetails/?id=1814383360):
 

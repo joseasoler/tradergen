@@ -1,24 +1,39 @@
+using System.Collections.Generic;
 using System.Text;
+using RimWorld;
 using Verse;
 
 namespace TG.StockGen
 {
 	/// <summary>
-	/// Generates stock created using a specific ThingDef as stuff.
+	/// Generates stock created using a single ThingDef as stuff. This ThingDef is chosen from a list.
 	/// </summary>
 	public class StuffFromThingDef : FromStuff
 	{
-		public ThingDef thingDef;
+		public List<ThingDef> availableThingDefs = new List<ThingDef>();
 
 		public override void ConditionToText(ref StringBuilder b)
 		{
 			base.ConditionToText(ref b);
-			b.Append($"thingDef: {thingDef}\n");
+			Util.ToText(ref b, "availableThingDefs", availableThingDefs);
+		}
+
+		public override IEnumerable<string> ConfigErrors(TraderKindDef parentDef)
+		{
+			foreach (var err in base.ConfigErrors(parentDef))
+			{
+				yield return err;
+			}
+
+			if (availableThingDefs.Count == 0)
+			{
+				yield return "TG.StockGen.StuffFromThingDef: availableThingDefs must not be empty.";
+			}
 		}
 
 		protected override void SetStuffDef()
 		{
-			_stuffDef = thingDef;
+			_stuffDef = availableThingDefs.RandomElement();
 		}
 	}
 }

@@ -1,6 +1,52 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
 	<TG.TraderSpecializationDef>
+		<defName>TG_Biomaterials</defName>
+		<label>biomaterials</label>
+		<stockGens>
+			<!--
+			StuffFromThingDef respects the tradeability of materials set in their mods. For materials which cannot be sold by
+			traders, it will not generate the material itself. It will only generate items created from that material.
+			-->
+			<li Class="TG.StockGen.StuffFromThingDef">
+				<availableThingDefs>
+					<li>DevilstrandCloth</li>
+					<li>Synthread</li>
+					<li MayRequire="kikohi.forsakens">Ultima</li>
+					<li MayRequire="sarg.alphaanimals">AA_GiantCrownedSilkieSilk</li>
+					<li MayRequire="sarg.alphaanimals">AA_MothSilk</li>
+					<li MayRequire="sarg.alphaanimals">AA_SkySteel</li>
+					<li MayRequire="sarg.alphabiomes">AB_CrystalWood</li>
+					<li MayRequire="sarg.alphabiomes">AB_MushroomWoodLog</li>
+					<li MayRequire="sarg.alphabiomes">GU_RedWood</li>
+					<li MayRequire="VanillaExpanded.Ideo.Dryads">VDE_Gaubric</li>
+				</availableThingDefs>
+				<maxTechLevelGenerate>Spacer</maxTechLevelGenerate>
+				<stuffCountRange>50~200</stuffCountRange>
+				<thingDefCountRange>4~7</thingDefCountRange>
+				<countRange>1~2</countRange>
+			</li>
+			<li Class="TG.StockGen.StuffFromThingDef">
+				<availableThingDefs>
+					<li>DevilstrandCloth</li>
+					<li>Synthread</li>
+					<li MayRequire="kikohi.forsakens">Ultima</li>
+					<li MayRequire="sarg.alphaanimals">AA_GiantCrownedSilkieSilk</li>
+					<li MayRequire="sarg.alphaanimals">AA_MothSilk</li>
+					<li MayRequire="sarg.alphaanimals">AA_SkySteel</li>
+					<li MayRequire="sarg.alphabiomes">AB_CrystalWood</li>
+					<li MayRequire="sarg.alphabiomes">AB_MushroomWoodLog</li>
+					<li MayRequire="sarg.alphabiomes">GU_RedWood</li>
+					<li MayRequire="VanillaExpanded.Ideo.Dryads">VDE_Gaubric</li>
+				</availableThingDefs>
+				<maxTechLevelGenerate>Spacer</maxTechLevelGenerate>
+				<stuffCountRange>50~200</stuffCountRange>
+				<thingDefCountRange>4~7</thingDefCountRange>
+				<countRange>1~2</countRange>
+			</li>
+		</stockGens>
+	</TG.TraderSpecializationDef>
+	<TG.TraderSpecializationDef>
 		<defName>TG_Bionics</defName>
 		<label>bionics</label>
 		<stockGens>
@@ -31,7 +77,9 @@
 				<totalPriceRange>500~1111</totalPriceRange>
 			</li>
 			<li Class="TG.StockGen.StuffFromThingDef">
-				<thingDef>Leather_Human</thingDef>
+				<availableThingDefs>
+					<li>Leather_Human</li>
+				</availableThingDefs>
 				<maxTechLevelGenerate>Spacer</maxTechLevelGenerate>
 				<stuffCountRange>200~400</stuffCountRange>
 				<thingDefCountRange>4~7</thingDefCountRange>
