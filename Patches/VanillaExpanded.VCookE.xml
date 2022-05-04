@@ -6,11 +6,10 @@
 		</mods>
 		<match Class="PatchOperationSequence">
 			<operations>
-				<!-- Allow traders to sell canned food and meals. -->
+				<!-- Allow traders to sell canned food. -->
 				<li Class="PatchOperationReplace">
 					<xpath>/Defs/ThingDef[defName="VCE_CannedMeat" or defName="VCE_CannedProduce" or defName="VCE_CannedFruit" or
-						defName="VCE_CannedAP" or defName="VCE_CannedFish" or defName="VCE_DeepFriedBigMeat" or
-						defName="VCE_DeepFriedVegetables" or defName="VCE_DeepFriedFish"]/tradeability
+						defName="VCE_CannedAP" or defName="VCE_CannedFish"]/tradeability
 					</xpath>
 					<value>
 						<tradeability>All</tradeability>

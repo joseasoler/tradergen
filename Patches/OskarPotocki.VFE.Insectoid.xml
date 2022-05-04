@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-Disable VFEI_Orbital_BioEngineeringSupplier as its role is fulfilled by specializations.
--->
+<!-- Specializations for the bio-engineering supplier. -->
 <Patch>
 	<Operation Class="PatchOperationFindMod">
 		<mods>

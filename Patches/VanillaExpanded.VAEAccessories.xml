@@ -4,7 +4,7 @@
 		<mods>
 			<li>Vanilla Apparel Expanded — Accessories</li>
 		</mods>
-		<!-- Some traders may have tool belts in stock. -->
+		<!-- Bulk goods orbital traders may have tool belts in stock. -->
 		<match Class="PatchOperationSequence">
 			<operations>
 				<li Class="PatchOperationAdd">

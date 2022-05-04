@@ -4,7 +4,7 @@
 		<mods>
 			<li>Vanilla Weapons Expanded</li>
 		</mods>
-		<!-- Some traders may have some tools in stock. -->
+		<!-- Bulk goods orbital traders may have some tools in stock. -->
 		<match Class="PatchOperationSequence">
 			<operations>
 				<li Class="PatchOperationAdd">

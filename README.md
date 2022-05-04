@@ -130,6 +130,8 @@ Orbital traders with the medicine specialization may have medic bags in stock.
 
 [Vanilla Armour Expanded](https://steamcommunity.com/workshop/filedetails/?id=1814988282):
 
+Traders can now sell extra types of armor from this mod.
+
 Orbital traders with the hunting specialization may have ghillie gear in stock.
 
 [Vanilla Brewing Expanded](https://steamcommunity.com/sharedfiles/filedetails/?id=2186560858):
@@ -154,7 +156,7 @@ Orbital traders with the gourmet specialization always have some condiments in s
 
 [Vanilla Factions Expanded - Insectoids](https://steamcommunity.com/sharedfiles/filedetails/?id=2149755445):
 
-... 
+The bio-engineering supplier gets access to insectoid-themed versions of these specializations: craftsmanship, draper, gourmand, hunting, husbandry.
 
 [Vanilla Factions Expanded - Mechanoids](https://steamcommunity.com/sharedfiles/filedetails/?id=2329011599):
 
