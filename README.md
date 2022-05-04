@@ -26,7 +26,7 @@ TraderGen is a mod focused on improving trader stock variety and customization i
 
 **Craftsmanship:** Adds apparel, furniture and art created from stone, metal or wood to the stock of the trader. Present in bulk and imperial orbital traders.
 
-**Culture (With [Vanilla Books Expanded](https://steamcommunity.com/workshop/filedetails/?id=2193152410)):** Has recreation buildings, books, blueprints and maps in stock. You can purchase the newspaper of their ship as well. Present in exotic and imperial orbital traders.
+**Culture (with [Vanilla Books Expanded](https://steamcommunity.com/workshop/filedetails/?id=2193152410)):** Has recreation buildings, books, blueprints and maps in stock. You can purchase the newspaper of their ship as well. Present in exotic and imperial orbital traders.
 
 **Draper:** Sells apparel and furniture created from textiles. Present in exotic and imperial orbital traders.
 
@@ -36,7 +36,9 @@ TraderGen is a mod focused on improving trader stock variety and customization i
 
 **Hunting:** Has combat animals, hunting gear and exotic animal parts (including ones from mods) in stock. Present in combat, slaver and imperial orbital traders.
 
-**Husbandry:** Adds farm and pet animals, kibble, hay and animal products to the stock. Present in bulk and imperial orbital traders. 
+**Husbandry:** Adds farm and pet animals, kibble, hay and animal products to the stock. Present in bulk and imperial orbital traders.
+
+**Jewelry (with [Jewelry](https://steamcommunity.com/workshop/filedetails/?id=2020964421):** Sells jewels, small quantities of gemstones, and other items created from gemstones. Present in exotic and imperial orbital traders.
 
 **Psycasting (with [Royalty](https://rimworldgame.com/royalty/)):** Sells psytrainers, psychic apparel and weapons. If a mod setting is enabled, it will also sell psylink neuroformers if the trader does not belong to the Empire faction. Present in exotic and imperial orbital traders.
 
@@ -66,7 +68,7 @@ Traders with the bionics specialization may rarely have MA-AI chips in stock.
 
 [Jewelry](https://steamcommunity.com/workshop/filedetails/?id=2020964421):
 
-...
+Jewelry orbital trader category.
 
 [RimBees](https://steamcommunity.com/sharedfiles/filedetails/?id=1558161673):
 
