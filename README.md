@@ -112,6 +112,9 @@ TraderGen should support wares from mods out of the box; please submit a [bug re
 * **[Remedies](https://steamcommunity.com/sharedfiles/filedetails/?id=2466826996):** Traders with the medicine specialization will have some poison ivy leaves in stock.
 
 
+* **[Replimat](https://steamcommunity.com/sharedfiles/filedetails/?id=1715402900):** Traders with the gourmet or tech specializations may have an isolinear computing module in stock.
+
+
 * **[RimBees](https://steamcommunity.com/sharedfiles/filedetails/?id=1558161673):** ...
 
 
