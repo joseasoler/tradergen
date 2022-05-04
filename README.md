@@ -44,7 +44,9 @@ TraderGen is a mod focused on improving trader stock variety and customization i
 
 **Medicine:** Sells different types of medicine, neutroamine and medical drugs. May have small amounts of luciferium in stock. Present in bulk orbital traders.
 
-**Ordnance:** Sells chemfuel, mortar shells, grenades, and reinforced barrels. May have boomalopes in stock. Present in combat and slaver traders.
+**Ordnance:** Sells chemfuel, mortar shells, grenades, and reinforced barrels. May have boomalopes in stock. Present in combat and slaver orbital traders.
+
+**Organs:** Sells some human organs and medicine. Present in exotic and slaver orbital traders.
 
 **Psycasting (with [Royalty](https://rimworldgame.com/royalty/)):** An uncommon specialization which sells psytrainers, psychic apparel and weapons. If a mod setting is enabled, it will also sell psylink neuroformers if the trader does not belong to the Empire faction. Present in exotic and imperial orbital traders.
 
@@ -75,6 +77,8 @@ The biomaterials specialization may have items created from crystalline wood, mu
 [Expanded Prosthetics and Organ Engineering - Forked](https://steamcommunity.com/sharedfiles/filedetails/?id=1949064302):
 
 Traders with the bionics specialization may rarely have MA-AI chips in stock.
+
+Traders with the organs specialization may have optimizing nanobots and instinct optimizing nanobots in stock.
 
 [Forsakens](https://steamcommunity.com/sharedfiles/filedetails/?id=1728999127):
 
