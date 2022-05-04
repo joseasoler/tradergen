@@ -332,7 +332,6 @@
 			</li>
 			<li Class="TG.StockGen.Drugs">
 				<drugCategory>Medical</drugCategory>
-				<minTechLevelGenerate>Industrial</minTechLevelGenerate>
 				<maxTechLevelGenerate>Spacer</maxTechLevelGenerate>
 				<thingDefCountRange>2~3</thingDefCountRange>
 				<totalPriceRange>800~1300</totalPriceRange>
