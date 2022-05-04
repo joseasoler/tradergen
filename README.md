@@ -82,6 +82,10 @@ The biomaterials specialization may have items created from ultima fabric.
 
 Jewelry orbital trader category.
 
+[Remedies](https://steamcommunity.com/sharedfiles/filedetails/?id=2466826996):
+
+Traders with the medicine specialization will have some poison ivy leaves in stock.
+
 [RimBees](https://steamcommunity.com/sharedfiles/filedetails/?id=1558161673):
 
 ...
@@ -107,6 +111,8 @@ Orbital traders with the husbandry specialization may have overalls and fleece s
 Bulk goods orbital traders and outlander settlements may have tool belts in stock.
 
 Orbital traders with the hunting specialization may have quivers in stock.
+
+Orbital traders with the medicine specialization may have medic bags in stock.
 
 [Vanilla Armour Expanded](https://steamcommunity.com/workshop/filedetails/?id=1814988282):
 
@@ -167,6 +173,8 @@ Bulk goods orbital traders and outlander settlements may have tools in stock.
 Orbital traders with the hunting specialization may have compound bows in stock.
 
 Orbital traders with the husbandry specialization may have whips in stock.
+
+Orbital traders with the medicine specialization may have scalpels in stock.
 
 [Vanilla Weapons Expanded - Grenades](https://steamcommunity.com/sharedfiles/filedetails/?id=2194472657):
 

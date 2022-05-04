@@ -342,11 +342,15 @@
 			</li>
 			<li Class="StockGenerator_SingleDef" MayRequire="VanillaExpanded.VWE">
 				<thingDef>VWE_MeleeWeapon_Scalpel</thingDef>
-				<countRange>0~2</countRange>
+				<countRange>0~1</countRange>
 			</li>
 			<li Class="StockGenerator_SingleDef" MayRequire="VanillaExpanded.VAEAccessories">
 				<thingDef>VAEA_Apparel_MedicBag</thingDef>
-				<countRange>0~2</countRange>
+				<countRange>0~1</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef" MayRequire="freefolk.Remedies">
+				<thingDef>FF_PoisonIvyLeaves</thingDef>
+				<countRange>30~50</countRange>
 			</li>
 			<!-- Purchases -->
 			<li Class="StockGenerator_Category">
