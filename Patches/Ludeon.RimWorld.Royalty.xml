@@ -106,7 +106,7 @@
 									<def>TG_Husbandry</def>
 									<commonality>10.0</commonality>
 								</li>
-								<li>
+								<li MayRequire="kikohi.jewelry">
 									<def>TG_Jewelry</def>
 									<commonality>10.0</commonality>
 								</li>
