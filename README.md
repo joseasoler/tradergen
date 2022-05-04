@@ -175,16 +175,10 @@ TraderGen should support wares from mods out of the box; please submit a [bug re
 * **[Vanilla Factions Expanded - Mechanoids](https://steamcommunity.com/sharedfiles/filedetails/?id=2329011599):** Traders with the technology specialization may have a mechanoid component in stock.
 
 
-* **[Vanilla Factions Expanded - Pirates](https://steamcommunity.com/sharedfiles/filedetails/?id=2723801948):** ...
-
-
 * **[Vanilla Factions Expanded - Settlers](https://steamcommunity.com/sharedfiles/filedetails/?id=2052918119):** Orbital traders with the hunting specialization may have hunting rifles in stock.
 
 
-* **[Vanilla Furniture Expanded](https://steamcommunity.com/sharedfiles/filedetails/?id=1718190143):** ...
-
-
-* **[Vanilla Furniture Expanded - Security](https://steamcommunity.com/workshop/filedetails/?id=1845154007):** ...
+* **[Vanilla Furniture Expanded](https://steamcommunity.com/sharedfiles/filedetails/?id=1718190143):** Orbital traders carrying joy furniture will include items from this mod in their stock.
 
 
 * **[Vanilla Ideology Expanded - Dryads](https://steamcommunity.com/sharedfiles/filedetails/?id=2720631512):** The biomaterials specialization may have items created from gaubric.
