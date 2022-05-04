@@ -115,7 +115,7 @@ TraderGen should support wares from mods out of the box; please submit a [bug re
 * **[Replimat](https://steamcommunity.com/sharedfiles/filedetails/?id=1715402900):** Traders with the gourmet or tech specializations may have an isolinear computing module in stock.
 
 
-* **[RimBees](https://steamcommunity.com/sharedfiles/filedetails/?id=1558161673):** ...
+* **[RimBees](https://steamcommunity.com/sharedfiles/filedetails/?id=1558161673):** Orbital traders with the husbandry specialization have temperate and mild bees in stock.
 
 
 * **[Rim-Effect: Themis Traders](https://steamcommunity.com/sharedfiles/filedetails/?id=2488461271):** Trader ship stock is generated using the TraderGen rules for orbital traders.
