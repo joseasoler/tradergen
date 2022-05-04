@@ -56,12 +56,6 @@
 				<thingDefCountRange>2~4</thingDefCountRange>
 				<countRange>1</countRange>
 			</li>
-			<li Class="TG.StockGen.TechHediff">
-				<minTechLevelGenerate>Archotech</minTechLevelGenerate>
-				<maxTechLevelGenerate>Archotech</maxTechLevelGenerate>
-				<thingDefCountRange>-3~1</thingDefCountRange>
-				<countRange>1</countRange>
-			</li>
 			<li Class="StockGenerator_SingleDef" MayRequire="vat.epoeforked">
 				<thingDef>EPOE_MAAI_Chip</thingDef>
 				<countRange>-1~2</countRange>

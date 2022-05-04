@@ -22,7 +22,7 @@ TraderGen is a mod focused on improving trader stock variety and customization i
 
 **Biomaterials:** This uncommon specialization adds items created with materials obtained from exotic animals or plants. Present in bulk and exotic orbital traders.
 
-**Bionics:** Adds prostheses between the industrial and ultratech technology levels. May rarely have a single archotech bionic in stock. Present in combat, exotic, slaver and imperial orbital traders.
+**Bionics:** Adds prostheses between the industrial and ultratech technology levels. Present in combat, exotic, slaver and imperial orbital traders.
 
 **Cannibal:** Adds items from morally questionable origins to the trader stock. Present in combat and slaver orbital traders.
 
