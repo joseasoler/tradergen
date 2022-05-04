@@ -30,6 +30,10 @@
 						<def>TG_Medicine</def>
 						<commonality>10.0</commonality>
 					</li>
+					<li>
+						<def>TG_Tech</def>
+						<commonality>10.0</commonality>
+					</li>
 				</specializations>
 				<extraNameRules>TG_OrbitalNamerBulk</extraNameRules>
 			</li>
@@ -128,6 +132,10 @@
 					<li MayRequire="Ludeon.RimWorld.Royalty">
 						<def>TG_Psycasting</def>
 						<commonality>8.0</commonality>
+					</li>
+					<li>
+						<def>TG_Tech</def>
+						<commonality>10.0</commonality>
 					</li>
 				</specializations>
 				<extraNameRules>TG_OrbitalNamerExotic</extraNameRules>

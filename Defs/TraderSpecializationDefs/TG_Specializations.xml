@@ -415,6 +415,36 @@
 				<countRange>1</countRange>
 			</li>
 		</stockGens>
-
+	</TG.TraderSpecializationDef>
+	<TG.TraderSpecializationDef>
+		<defName>TG_Tech</defName>
+		<label>technology</label>
+		<stockGens>
+			<!-- Sells -->
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>ComponentIndustrial</thingDef>
+				<countRange>6~21</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>ComponentSpacer</thingDef>
+				<countRange>2~6</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef" MayRequire="OskarPotocki.VFE.Mechanoid">
+				<thingDef>VFE_ComponentMechanoid</thingDef>
+				<countRange>0~1</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>Gold</thingDef>
+				<countRange>50~100</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>Plasteel</thingDef>
+				<countRange>25~66</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>Uranium</thingDef>
+				<countRange>80~160</countRange>
+			</li>
+		</stockGens>
 	</TG.TraderSpecializationDef>
 </Defs>

@@ -50,6 +50,8 @@ TraderGen is a mod focused on improving trader stock variety and customization i
 
 **Psycasting (with [Royalty](https://rimworldgame.com/royalty/)):** An uncommon specialization which sells psytrainers, psychic apparel and weapons. If a mod setting is enabled, it will also sell psylink neuroformers if the trader does not belong to the Empire faction. Present in exotic and imperial orbital traders.
 
+**Technology:** Has components and materials required for high technology devices. Present in bulk and exotic orbital traders.
+
 ### Trader changes
 
 **Increased variety of alcoholic beverages (requires mods adding other alcohol types):** Bulk orbital trader, slaver orbital trader, outlander settlements, outlander bulk goods caravan.
@@ -154,7 +156,7 @@ Orbital traders with the gourmet specialization always have some condiments in s
 
 [Vanilla Factions Expanded - Mechanoids](https://steamcommunity.com/sharedfiles/filedetails/?id=2329011599):
 
-...
+Traders with the technology specialization may have a mechanoid component in stock.
 
 [Vanilla Factions Expanded - Pirates](https://steamcommunity.com/sharedfiles/filedetails/?id=2723801948):
 
