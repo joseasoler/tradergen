@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
-	<TG_ModifyPeriodOrbitalDoNotChange>Unchanged</TG_ModifyPeriodOrbitalDoNotChange>
-	<TG_ModifyPeriodOrbital>Period of orbital trader arrivals: {0}</TG_ModifyPeriodOrbital>
-	<TG_ModifyPeriodOrbitalDefault>Period of orbital trader arrivals: {0} (Default period for vanilla storytellers)</TG_ModifyPeriodOrbitalDefault>
-	<TG_ModifyPeriodOrbitalTooltip>Changes the average arrival period of orbital trader arrivals. Set to the minimum to disable this feature and let each storyteller use its default value. The default value used by Cassandra Classic and Phoebe Chillax is a quadrum. Randy Random will ignore this rule.\n\nModded storytellers using random events will also ignore this setting, but non-random modded storytellers should respect it.</TG_ModifyPeriodOrbitalTooltip>
 	<TG_SilverStockOrbital>Silver stock of orbital traders: {0}%</TG_SilverStockOrbital>
 	<TG_SilverStockOrbitalTooltip>Allows to adjust the total amount of silver that orbital traders will have in stock when they arrive. Orbital traders which were already in range when the setting is changed will not be affected.</TG_SilverStockOrbitalTooltip>
 	<TG_SilverStockSettlement>Silver stock of settlements: {0}%</TG_SilverStockSettlement>

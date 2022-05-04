@@ -31,7 +31,6 @@
 		<Compile Include="Harmony\TraderStock.cs" />
 		<Compile Include="Harmony\TradeShip.cs" />
 		<Compile Include="Logger.cs" />
-		<Compile Include="Mod\DefPatcher.cs" />
 		<Compile Include="Mod\Settings.cs" />
 		<Compile Include="Mod\Mod.cs" />
 		<Compile Include="SpecializationCommonality.cs" />

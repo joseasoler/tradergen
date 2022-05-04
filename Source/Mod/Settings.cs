@@ -13,12 +13,6 @@ namespace TG.Mod
 		public bool SellPsylinkNeuroformers = true;
 
 		/// <summary>
-		/// Period of orbital trader arrival in days.
-		/// 0 means "Disable".
-		/// </summary>
-		public int PeriodOrbital /* = 0 */;
-
-		/// <summary>
 		/// Silver stock of each trader category in %.
 		/// </summary>
 		public Dictionary<TraderKindCategory, float> SilverScaling = new Dictionary<TraderKindCategory, float>
@@ -61,15 +55,6 @@ namespace TG.Mod
 		/// Current values for all settings.
 		/// </summary>
 		private static SettingValues _values = new SettingValues();
-
-		/// <summary>
-		/// Period of orbital trader arrival in days.
-		/// </summary>
-		public static uint PeriodOrbital
-		{
-			get => (uint) _values.PeriodOrbital;
-			set => _values.PeriodOrbital = (int) value;
-		}
 
 		/// <summary>
 		/// Determines if traders can have psylink neuroformers in stock.
@@ -163,7 +148,6 @@ namespace TG.Mod
 		{
 			base.ExposeData();
 			Scribe_Values.Look(ref _values.SellPsylinkNeuroformers, "SellPsylinkNeuroformers");
-			Scribe_Values.Look(ref _values.PeriodOrbital, "PeriodOrbital");
 			Scribe_Collections.Look(ref _values.SilverScaling, "SilverScaling");
 
 			var orbitalSpecializationsMin = _values.OrbitalSpecializations.min;

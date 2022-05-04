@@ -12,9 +12,6 @@ TraderGen is a mod focused on improving trader generation and stock in the [RimW
 * Configurable amount of silver in stock for orbital, settlement, caravan and visitor traders. Compatible with traders from mods.
 
 
-* Customizable frequency of orbital traders. Compatible with both vanilla and mod storytellers (you cannot tell Random storytellers what to do, though).
-
-
 * Traders such as the slaver orbital trader become less frequent when the population of the colony increases until they cannot appear at all. With TraderGen, this can now be disabled through mod settings.
 
 
