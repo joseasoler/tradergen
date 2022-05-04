@@ -34,6 +34,10 @@
 						<def>TG_Tech</def>
 						<commonality>10.0</commonality>
 					</li>
+					<li>
+						<def>TG_Wealthy</def>
+						<commonality>5.0</commonality>
+					</li>
 				</specializations>
 				<extraNameRules>TG_OrbitalNamerBulk</extraNameRules>
 			</li>
@@ -94,6 +98,10 @@
 						<def>TG_Psycasting</def>
 						<commonality>5.0</commonality>
 					</li>
+					<li>
+						<def>TG_Wealthy</def>
+						<commonality>5.0</commonality>
+					</li>
 				</specializations>
 				<extraNameRules>TG_OrbitalNamerCombat</extraNameRules>
 			</li>
@@ -137,6 +145,10 @@
 						<def>TG_Tech</def>
 						<commonality>10.0</commonality>
 					</li>
+					<li>
+						<def>TG_Wealthy</def>
+						<commonality>5.0</commonality>
+					</li>
 				</specializations>
 				<extraNameRules>TG_OrbitalNamerExotic</extraNameRules>
 			</li>
@@ -171,6 +183,10 @@
 					<li>
 						<def>TG_Organs</def>
 						<commonality>20.0</commonality>
+					</li>
+					<li>
+						<def>TG_Wealthy</def>
+						<commonality>5.0</commonality>
 					</li>
 				</specializations>
 				<extraNameRules>TG_OrbitalNamerSlaver</extraNameRules>

@@ -115,6 +115,10 @@
 									<def>TG_Psycasting</def>
 									<commonality>10.0</commonality>
 								</li>
+								<li>
+									<def>TG_Wealthy</def>
+									<commonality>10.0</commonality>
+								</li>
 							</specializations>
 							<extraNameRules>TG_OrbitalNamerImperial</extraNameRules>
 						</li>

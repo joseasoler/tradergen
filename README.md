@@ -52,6 +52,8 @@ TraderGen is a mod focused on improving trader stock variety and customization i
 
 **Technology:** Has components and materials required for high technology devices. Present in bulk and exotic orbital traders.
 
+**Wealthy:** This trader has been successful or lucky in the past, and has more silver than usual in stock. This specialization is rare, but it is present in all orbital traders.
+
 ### Trader changes
 
 **Increased variety of alcoholic beverages (requires mods adding other alcohol types):** Bulk orbital trader, slaver orbital trader, outlander settlements, outlander bulk goods caravan.

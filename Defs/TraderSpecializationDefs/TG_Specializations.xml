@@ -447,4 +447,14 @@
 			</li>
 		</stockGens>
 	</TG.TraderSpecializationDef>
+	<TG.TraderSpecializationDef>
+		<defName>TG_Wealthy</defName>
+		<label>wealthy</label>
+		<stockGens>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>Silver</thingDef>
+				<countRange>2000~2500</countRange>
+			</li>
+		</stockGens>
+	</TG.TraderSpecializationDef>
 </Defs>
