@@ -44,6 +44,8 @@ TraderGen is a mod focused on improving trader stock variety and customization i
 
 **Medicine:** Sells different types of medicine, neutroamine and medical drugs. May have small amounts of luciferium in stock. Present in bulk orbital traders.
 
+**Ordnance:** Sells chemfuel, mortar shells, grenades, and reinforced barrels. May have boomalopes in stock. Present in combat and slaver traders.
+
 **Psycasting (with [Royalty](https://rimworldgame.com/royalty/)):** An uncommon specialization which sells psytrainers, psychic apparel and weapons. If a mod setting is enabled, it will also sell psylink neuroformers if the trader does not belong to the Empire faction. Present in exotic and imperial orbital traders.
 
 ### Trader changes
@@ -101,6 +103,10 @@ Trader ship stock is generated using the TraderGen rules for orbital traders.
 [Trader Ships](https://steamcommunity.com/sharedfiles/filedetails/?id=2046222331):
 
 Trader ship stock is generated using the TraderGen rules for orbital traders.
+
+[Vanilla Animals Expanded — Australia](https://steamcommunity.com/sharedfiles/filedetails/?id=1814987817):
+
+Orbital traders with the ordnance specialization may have some boombats in stock.
 
 [Vanilla Apparel Expanded](https://steamcommunity.com/sharedfiles/filedetails/?id=1814987817):
 
@@ -178,7 +184,7 @@ Orbital traders with the medicine specialization may have scalpels in stock.
 
 [Vanilla Weapons Expanded - Grenades](https://steamcommunity.com/sharedfiles/filedetails/?id=2194472657):
 
-...
+Orbital traders with the ordnance specialization may also have grenade belts in stock.
 
 [Vanilla Weapons Expanded - Non-Lethal](https://steamcommunity.com/sharedfiles/filedetails/?id=2454918354):
 

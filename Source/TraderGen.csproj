@@ -38,7 +38,6 @@
 		<Compile Include="StockGen\Alcohol.cs" />
 		<Compile Include="StockGen\AnimalMultiDef.cs" />
 		<Compile Include="StockGen\Armor.cs" />
-		<Compile Include="StockGen\Artillery.cs" />
 		<Compile Include="StockGen\BuildingsJoy.cs" />
 		<Compile Include="StockGen\ExpensiveSimple.cs" />
 		<Compile Include="StockGen\Drugs.cs" />
