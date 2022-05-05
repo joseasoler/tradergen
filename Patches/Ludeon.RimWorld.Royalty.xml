@@ -6,12 +6,26 @@
 		</mods>
 		<match Class="PatchOperationSequence">
 			<operations>
-				<!-- Psylink neuroformers can be purchased and sold. -->
-				<li Class="PatchOperationAdd">
-					<xpath>/Defs/ThingDef[defName="PsychicAmplifier"]</xpath>
-					<value>
-						<tradeability>All</tradeability>
-					</value>
+				<!--
+				Allow traders to sell psylink neuroformers.
+				This is not required if Buyable psylink neuroformers is enabled.
+				-->
+				<li Class="PatchOperationFindMod">
+					<mods>
+						<li>Buyable psylink neuroformers</li>
+					</mods>
+					<match Class="PatchOperationReplace">
+						<xpath>/Defs/ThingDef[defName="PsychicAmplifier"]/tradeability</xpath>
+						<value>
+							<tradeability>All</tradeability>
+						</value>
+					</match>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName="PsychicAmplifier"]</xpath>
+						<value>
+							<tradeability>All</tradeability>
+						</value>
+					</nomatch>
 				</li>
 				<!-- Extra specialization for orbital traders. -->
 				<li Class="PatchOperationAdd">
@@ -21,6 +35,7 @@
 							<defName>TG_Psycasting</defName>
 							<label>psycasting</label>
 							<stockGens>
+								<!-- Sells. -->
 								<li Class="TG.StockGen.PsylinkNeuroformer">
 									<countRange>1</countRange>
 								</li>
@@ -42,6 +57,10 @@
 								<li Class="StockGenerator_SingleDef" MayRequire="sarg.alphaanimals">
 									<thingDef>AA_BlueMilk</thingDef>
 									<totalPriceRange>-2187~1138</totalPriceRange>
+								</li>
+								<!-- Purchases. -->
+								<li Class="StockGenerator_BuyTradeTag">
+									<tag>PsylinkNeuroformer</tag>
 								</li>
 							</stockGens>
 						</TG.TraderSpecializationDef>

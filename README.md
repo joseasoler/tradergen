@@ -93,6 +93,9 @@ TraderGen should support wares from mods out of the box; please submit a [bug re
 * **[Alpha Biomes](https://steamcommunity.com/sharedfiles/filedetails/?id=1841354677):** The biomaterials specialization may have items created from crystalline wood, mushroom stalks or red wood.
 
 
+* **[Buyable psylink neuroformers](https://steamcommunity.com/sharedfiles/filedetails/?id=2190288136):** TraderGen is fully compatible with this mod. TraderGen only adds psylink neuroformers to a specific specialization, while Buyable psylink neuroformers adds it to some of the traders regardless of their specialization.
+
+
 * **[Expanded Prosthetics and Organ Engineering](https://steamcommunity.com/sharedfiles/filedetails/?id=725956940)** ...
 
 
