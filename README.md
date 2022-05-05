@@ -142,13 +142,6 @@ TraderGen should support wares from mods out of the box; please submit a [bug re
   * Orbital traders with the medicine specialization may have medic bags in stock.
 
 
-* **[Vanilla Armour Expanded](https://steamcommunity.com/workshop/filedetails/?id=1814988282):**
-
-  * Traders can now sell extra types of armor from this mod.
-
-  * Orbital traders with the hunting specialization may have ghillie gear in stock.
-
-
 * **[Vanilla Brewing Expanded](https://steamcommunity.com/sharedfiles/filedetails/?id=2186560858):**
 
   * Orbital trader specializations distinguish between alcoholic beverages, non-alcoholic beverages and other drugs when appropriate.
@@ -162,11 +155,7 @@ TraderGen should support wares from mods out of the box; please submit a [bug re
 * **[Vanilla Books Expanded](https://steamcommunity.com/workshop/filedetails/?id=2193152410):** Culture orbital trader category.
 
 
-* **[Vanilla Cooking Expanded](https://steamcommunity.com/sharedfiles/filedetails/?id=2134308519):**
-
-  * Bulk goods orbital traders sell canned food instead of raw food.
-
-  * Orbital traders with the gourmet specialization always have some condiments in stock.
+* **[Vanilla Cooking Expanded](https://steamcommunity.com/sharedfiles/filedetails/?id=2134308519):** Orbital traders with the gourmet specialization have some condiments in stock.
 
 
 * **[Vanilla Factions Expanded - Insectoids](https://steamcommunity.com/sharedfiles/filedetails/?id=2149755445):** The bio-engineering supplier gets access to insectoid-themed versions of these specializations: craftsmanship, draper, gourmet, hunting, husbandry.

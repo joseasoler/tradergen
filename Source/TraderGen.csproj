@@ -44,7 +44,6 @@
 		<Compile Include="StockGen\TechHediff.cs" />
 		<Compile Include="StockGen\ConditionMatcher.cs" />
 		<Compile Include="StockGen\ExoticAnimalPart.cs" />
-		<Compile Include="StockGen\FoodRaw.cs" />
 		<Compile Include="StockGen\FoodGluttonous.cs" />
 		<Compile Include="StockGen\FromStuff.cs" />
 		<Compile Include="StockGen\RandomStuffFromCategory.cs" />

@@ -242,8 +242,6 @@
 					<li>Gun_SniperRifle</li>
 					<li MayRequire="OskarPotocki.VanillaFactionsExpanded.SettlersModule">VFES_Gun_HuntingRifle</li>
 					<li MayRequire="VanillaExpanded.VAEAccessories">VAEA_Apparel_Quiver</li>
-					<li MayRequire="VanillaExpanded.VARME">VAE_Apparel_GhillieSuit</li>
-					<li MayRequire="VanillaExpanded.VARME">VAE_Headgear_GhillieHood</li>
 					<li MayRequire="VanillaExpanded.VWE">VWE_Bow_Compound</li>
 					<li MayRequire="VanillaExpanded.VWENL">VWE_Gun_DartGun</li>
 				</thingDefs>
