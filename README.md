@@ -210,4 +210,4 @@ This project is licensed under the MIT license. Check the [LICENSE](LICENSE) fil
 
 ## Acknowledgements
 
-Read the [ACKNOWLEDGEMENTS.md](ACKNOWLEDGEMENTS.md) file for details.
+Read the [ACKNOWLEDGEMENTS](ACKNOWLEDGEMENTS.md) file for details.

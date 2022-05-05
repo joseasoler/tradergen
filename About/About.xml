@@ -7,8 +7,212 @@
 	</supportedVersions>
 	<url/>
 	<packageId>joseasoler.TraderGen</packageId>
-	<description>ToDo
-	</description>
+	<description><![CDATA[TraderGen is a mod focused on improving trader generation and stock.
+
+[h3]Overview[/h3]
+• Orbital traders now have an specialization in addition to their type. An specialization adds a limited amount of stock but it may be particularly rare or useful. It is possible to modify the number of specializations or disable the feature entirely through the mod settings.
+
+
+• Configurable amount of silver in stock for orbital, settlement, caravan and visitor traders. Compatible with traders from mods.
+
+
+• Traders such as the slaver orbital trader become less frequent when the population of the colony increases until they cannot appear at all. With TraderGen, this can now be disabled through mod settings.
+
+
+• Additional features when other mods are enabled.
+
+
+• More diversity of names for vanilla orbital traders.
+
+
+• Minor tweaks to vanilla trader stock, aiming at increasing their variety and improving mod compatibility.
+
+[h2]Features[/h2]
+
+[h3]Orbital trader specializations[/h3]
+• [b]Biomaterials:[/b] This uncommon specialization adds items created with materials obtained from exotic animals or plants. Present in bulk and exotic orbital traders.
+
+
+• [b]Bionics:[/b] Adds prostheses between the industrial and ultratech technology levels. Present in combat, exotic, slaver and imperial orbital traders.
+
+
+• [b]Cannibal:[/b] Adds items from extremely questionable origins to the trader stock. Present in combat and slaver orbital traders.
+
+
+• [b]Craftsmanship:[/b] Adds apparel, furniture and art created from stone, metal or wood to the stock of the trader. Present in bulk and imperial orbital traders.
+
+
+• [b]Culture (with [url=https://steamcommunity.com/workshop/filedetails/?id=2193152410]Vanilla Books Expanded[/url]):[/b] Has recreation buildings, books, blueprints and maps in stock. You can purchase the newspaper of their ship as well. Present in exotic and imperial orbital traders.
+
+
+• [b]Draper:[/b] Sells apparel and furniture created from textiles. Present in exotic and imperial orbital traders.
+
+
+• [b]Drugs:[/b] Has hard drugs and some recreational drugs (except alcohol) in stock. Present in bulk and slaver orbital traders.
+
+
+• [b]Gourmet:[/b] Sells gluttonous food, recreational drugs and alcohol. Present in bulk and imperial orbital traders.
+
+
+• [b]Hunting:[/b] Has combat animals, hunting gear and exotic animal parts (including ones from mods) in stock. Present in combat, slaver and imperial orbital traders.
+
+
+• [b]Husbandry:[/b] Adds farm and pet animals, kibble, hay and animal products to the stock. Present in bulk and imperial orbital traders.
+
+
+• [b]Jewelry (with [url=https://steamcommunity.com/workshop/filedetails/?id=2020964421]Jewelry[/url]):[/b] Sells jewels, small quantities of gemstones, and other items created from gemstones. Present in exotic and imperial orbital traders.
+
+
+• [b]Medicine:[/b] Sells different types of medicine, neutroamine and medical drugs. May have small amounts of luciferium in stock. Present in bulk orbital traders.
+
+
+• [b]Ordnance:[/b] Sells chemfuel, mortar shells, grenades, and reinforced barrels. May have boomalopes in stock. Present in combat and slaver orbital traders.
+
+
+• [b]Organs:[/b] Sells some human organs and medicine. Present in exotic and slaver orbital traders.
+
+
+• [b]Psycasting (with [url=https://rimworldgame.com/royalty/]Royalty[/url]):[/b] An uncommon specialization which sells psytrainers, psychic apparel and weapons. If a mod setting is enabled, it will also sell psylink neuroformers if the trader does not belong to the Empire faction. Present in exotic and imperial orbital traders.
+
+
+• [b]Technology:[/b] Has components and materials required for high technology devices. Present in bulk and exotic orbital traders.
+
+
+• [b]Wealth:[/b] This trader has been successful or lucky in the past, and has more silver than usual in stock. This specialization is rare, but it is present in all orbital traders.
+
+[h3]Trader changes[/h3]
+• [b]Increased variety of alcoholic beverages (requires mods adding other alcohol types):[/b] Bulk orbital trader, slaver orbital trader, outlander settlements, outlander bulk goods caravan.
+
+• [b]Extra recreation buildings and gluttonous food in stock:[/b] Imperial orbital trader, imperial settlements, imperial caravan.
+
+[h3]Mod support[/h3]
+TraderGen should support wares from mods out of the box; please submit a [url=CONTRIBUTING.md]bug report[/url] if you find any issues. TraderGen also provides extra features or content when the following mods are enabled:  
+
+• [b][url=https://steamcommunity.com/sharedfiles/filedetails/?id=1541721856]Alpha Animals[/url]:[/b] The biomaterials specialization may have items created from giant crowned silkie silk, moth silk or sky steel.
+
+
+• [b][url=https://steamcommunity.com/sharedfiles/filedetails/?id=1841354677]Alpha Biomes[/url]:[/b] The biomaterials specialization may have items created from crystalline wood, mushroom stalks or red wood.
+
+
+• [b][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2190288136]Buyable psylink neuroformers[/url]:[/b] TraderGen is fully compatible with this mod. TraderGen only adds psylink neuroformers to a specific specialization, while Buyable psylink neuroformers adds it to some of the traders regardless of their specialization.
+
+
+• [b][url=https://steamcommunity.com/sharedfiles/filedetails/?id=725956940]Expanded Prosthetics and Organ Engineering[/url][/b] ...
+
+
+• [b][url=https://steamcommunity.com/sharedfiles/filedetails/?id=1949064302]Expanded Prosthetics and Organ Engineering - Forked[/url]:[/b]
+
+  • Traders with the bionics specialization may rarely have MA-AI chips in stock.
+
+  • Traders with the organs specialization may have optimizing nanobots and instinct optimizing nanobots in stock.
+
+
+• [b][url=https://steamcommunity.com/sharedfiles/filedetails/?id=1728999127]Forsakens[/url]:[/b] The biomaterials specialization may have items created from ultima fabric.
+
+
+• [b][url=https://steamcommunity.com/workshop/filedetails/?id=2020964421]Jewelry[/url]:[/b] Jewelry orbital trader category.
+
+
+• [b][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2466826996]Remedies[/url]:[/b] Traders with the medicine specialization will have some poison ivy leaves in stock.
+
+
+• [b][url=https://steamcommunity.com/sharedfiles/filedetails/?id=1715402900]Replimat[/url]:[/b] Traders with the gourmet or tech specializations may have an isolinear computing module in stock.
+
+
+• [b][url=https://steamcommunity.com/sharedfiles/filedetails/?id=1558161673]RimBees[/url]:[/b] Orbital traders with the husbandry specialization have temperate and mild bees in stock.
+
+
+• [b][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2488461271]Rim-Effect: Themis Traders[/url]:[/b] Trader ship stock is generated using the TraderGen rules for orbital traders.
+
+
+• [b][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2708154727]Steampunk: Trader Airships[/url]:[/b] Trader ship stock is generated using the TraderGen rules for orbital traders.
+
+
+• [b][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2046222331]Trader Ships[/url]:[/b] Trader ship stock is generated using the TraderGen rules for orbital traders.
+
+
+• [b][url=https://steamcommunity.com/sharedfiles/filedetails/?id=1814987817]Vanilla Animals Expanded — Australia[/url]:[/b] Orbital traders with the ordnance specialization may have some boombats in stock.
+
+
+• [b][url=https://steamcommunity.com/sharedfiles/filedetails/?id=1814987817]Vanilla Apparel Expanded[/url]:[/b] Orbital traders with the husbandry specialization may have overalls and fleece shirts in stock.
+
+
+• [b][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2521176396]Vanilla Apparel Expanded — Accessories[/url]:[/b]
+
+  • Bulk goods orbital traders may have tool belts in stock.
+
+  • Orbital traders with the hunting specialization may have quivers in stock.
+
+  • Orbital traders with the medicine specialization may have medic bags in stock.
+
+
+• [b][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2186560858]Vanilla Brewing Expanded[/url]:[/b]
+
+  • Orbital trader specializations distinguish between alcoholic beverages, non-alcoholic beverages and other drugs when appropriate.
+
+  • Orbital traders with the gourmet specialization have some non-alcoholic beverages in stock.
+
+
+• [b][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2275449762]Vanilla Brewing Expanded - Coffees and Teas[/url]:[/b] Orbital traders belonging to the cannibal specialization can have cannibal coffee in stock.
+
+
+• [b][url=https://steamcommunity.com/workshop/filedetails/?id=2193152410]Vanilla Books Expanded[/url]:[/b] Culture orbital trader category.
+
+
+• [b][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2134308519]Vanilla Cooking Expanded[/url]:[/b] Orbital traders with the gourmet specialization have some condiments in stock.
+
+
+• [b][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2149755445]Vanilla Factions Expanded - Insectoids[/url]:[/b] The bio-engineering supplier gets access to insectoid-themed versions of these specializations: craftsmanship, draper, gourmet, hunting, husbandry.
+
+
+• [b][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2329011599]Vanilla Factions Expanded - Mechanoids[/url]:[/b] Traders with the technology specialization may have a mechanoid component in stock.
+
+
+• [b][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2052918119]Vanilla Factions Expanded - Settlers[/url]:[/b] Orbital traders with the hunting specialization may have hunting rifles in stock.
+
+
+• [b][url=https://steamcommunity.com/sharedfiles/filedetails/?id=1718190143]Vanilla Furniture Expanded[/url]:[/b] Orbital traders carrying joy furniture will include items from this mod in their stock.
+
+
+• [b][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2720631512]Vanilla Ideology Expanded - Dryads[/url]:[/b] The biomaterials specialization may have items created from gaubric.
+
+
+• [b][url=https://steamcommunity.com/sharedfiles/filedetails/?id=1814383360]Vanilla Weapons Expanded[/url]:[/b]
+
+  • Bulk goods orbital traders and outlander settlements may have tools in stock.
+
+  • Orbital traders with the hunting specialization may have compound bows in stock.
+
+  • Orbital traders with the husbandry specialization may have whips in stock.
+
+  • Orbital traders with the medicine specialization may have scalpels in stock.
+
+
+• [b][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2194472657]Vanilla Weapons Expanded - Grenades[/url]:[/b] Orbital traders with the ordnance specialization may also have grenade belts in stock.
+
+
+• [b][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2454918354]Vanilla Weapons Expanded - Non-Lethal[/url]:[/b]
+
+  • Slaver orbital traders may have some non-lethal weapons in stock.
+
+  • Orbital traders with the hunting specialization may have dart guns in stock.
+
+[h2]Development[/h2]
+
+To compile this mod on Windows, you will need to install the [url=https://dotnet.microsoft.com/en-us/download/dotnet-framework/net472].NET Framework 4.7.2 Developer Pack[/url]. On Linux the packages you need vary depending on your distribution of choice. Dependencies are managed using NuGet. Compiling this project does not require any [url=https://ludeon.com/forums/index.php?topic=49914.0]external dependencies or extra setup steps[/url].
+
+[h2]Contributions[/h2]
+
+This project encourages community involvement and contributions. Check the [url=https://gitlab.com/joseasoler/tradergen/-/blob/main/CONTRIBUTING.md]CONTRIBUTING[/url] file for details. Existing contributors can be checked in the [url=https://gitlab.com/joseasoler/tradergen/-/graphs/main]contributors list[/url].
+
+[h2]License[/h2]
+
+This project is licensed under the MIT license. Check the [url=https://gitlab.com/joseasoler/tradergen/-/blob/main/LICENSE]LICENSE[/url] file for details.
+
+[h2]Acknowledgements[/h2]
+
+Read the [url=https://gitlab.com/joseasoler/tradergen/-/blob/main/ACKNOWLEDGEMENTS.md]ACKNOWLEDGEMENTS[/url] file for details.
+]]></description>
 	<modDependencies>
 		<li>
 			<packageId>brrainz.harmony</packageId>

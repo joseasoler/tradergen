@@ -3,6 +3,7 @@
 Developing a RimWorld mod is a huge task that is only made possible because its awesome community shares their expertise and knowledge with others. There are also people and groups outside of the RimWorld community that have been helpful in creating this mod.  Hopefully, all of them should be listed below. Please create a new issue report if anyone is missing!
 
 * **[Andreas Pardeike](https://www.patreon.com/pardeike/posts)** - [Harmony](https://harmony.pardeike.net/)
+* **feralhosting** - [Markdown to BBcode](https://feralhosting.github.io/) 
 * **[force-net](https://github.com/force-net)** - [DeepCloner](https://github.com/force-net/DeepCloner)
 * **[FrozenSnowFox](https://steamcommunity.com/id/FrozenSnowFox/myworkshopfiles/?appid=294100)** - [[FSF] Pose For Me](https://steamcommunity.com/sharedfiles/filedetails/?id=1932628728)
 * **[gguake](https://steamcommunity.com/id/gguake/myworkshopfiles/?appid=294100)** - [Optional Name Display](https://steamcommunity.com/sharedfiles/filedetails/?id=2466336893)
@@ -17,3 +18,4 @@ Developing a RimWorld mod is a huge task that is only made possible because its 
 * **[Vanilla Expanded Framework](https://steamcommunity.com/sharedfiles/filedetails/?id=2023507013)**
 * **[Vanilla Expanded Series community](https://www.patreon.com/oskarpotocki)**
 * **[Vicky Brasseur](https://www.vmbrasseur.com)** - [Forge your future with Open Source](https://pragprog.com/titles/vbopens/forge-your-future-with-open-source/)
+
