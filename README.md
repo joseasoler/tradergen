@@ -18,7 +18,7 @@ TraderGen is a mod focused on improving trader generation and stock in the [RimW
 * Additional features when other mods are enabled.
 
 
-* More diversity of names for orbital traders.
+* More diversity of names for vanilla orbital traders.
 
 
 * Minor tweaks to vanilla trader stock, aiming at increasing their variety and improving mod compatibility.
