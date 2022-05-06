@@ -9,7 +9,7 @@ namespace TG.StockGen
 	public class Drugs : ConditionMatcher
 	{
 		/// <summary>
-		/// If set to an specific value, it will only generate drugs from the chosen category.
+		/// If set to a specific value, it will only generate drugs from the chosen category.
 		/// </summary>
 		public DrugCategory drugCategory = DrugCategory.Any;
 
