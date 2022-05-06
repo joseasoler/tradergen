@@ -7,13 +7,13 @@
 	</supportedVersions>
 	<url>https://gitlab.com/joseasoler/tradergen</url>
 	<packageId>joseasoler.TraderGen</packageId>
-	<description><![CDATA[TraderGen is a mod focused on improving trader generation and stock.
+	<description><![CDATA[TraderGen adds new options for improving trader generation and trader stock.
 
-• Orbital traders now have an specialization in addition to their type. An specialization adds a limited amount of stock but it may be particularly rare or useful. It is possible to modify the number of specializations or disable the feature entirely through the mod settings.
+• Orbital traders now have an specialization, which adds a limited amount of stock that could be particularly rare or useful. It is possible to modify the number of specializations or disable the feature entirely through the mod settings.
 
 • Configurable amount of silver in stock for orbital, settlement, caravan and visitor traders. Compatible with traders from mods.
 
-• Traders such as the slaver orbital trader become less frequent when the population of the colony increases until they cannot appear at all. With TraderGen, this can now be disabled through mod settings.
+• Mod setting for making traders such as the slaver orbital trader appear even when the population of the colony is large.
 
 • Additional features when other mods are enabled.
 
@@ -21,6 +21,7 @@
 
 • Minor tweaks to vanilla trader stock, aiming at increasing their variety and improving mod compatibility.
 
+You can find a detailed description of all specializations, trader tweaks and mod compatibility features in the project website.
 ]]></description>
 	<modDependencies>
 		<li>
