@@ -153,6 +153,9 @@ TraderGen should support wares from mods out of the box; please submit a [bug re
 * **[Vanilla Ideology Expanded - Dryads](https://steamcommunity.com/sharedfiles/filedetails/?id=2720631512):** The biomaterials specialization may have items created from gaubric.
 
 
+* **[Vanilla Trading Expanded](https://steamcommunity.com/sharedfiles/filedetails/?id=2785616901):** TraderGen is fully compatible with this mod. The trade companies of the stock market in Vanilla Trading Expanded can use the new orbital trader names added by TraderGen.
+
+
 * **[Vanilla Weapons Expanded](https://steamcommunity.com/sharedfiles/filedetails/?id=1814383360):**
 
     * Bulk goods orbital traders and outlander settlements may have tools in stock.
