@@ -24,7 +24,7 @@
 									</availableThingDefs>
 									<maxTechLevelGenerate>Spacer</maxTechLevelGenerate>
 									<stuffCountRange>0</stuffCountRange>
-									<thingDefCountRange>6~9</thingDefCountRange>
+									<thingDefCountRange>8~11</thingDefCountRange>
 									<countRange>1</countRange>
 								</li>
 								<li Class="TG.StockGen.AnimalMultiDef">
@@ -33,7 +33,7 @@
 									</pawnKindDefs>
 									<newborn>true</newborn>
 									<kindCountRange>1</kindCountRange>
-									<countRange>1~2</countRange>
+									<countRange>2~3</countRange>
 								</li>
 							</stockGens>
 						</TG.TraderSpecializationDef>
@@ -48,7 +48,7 @@
 									</availableThingDefs>
 									<maxTechLevelGenerate>Spacer</maxTechLevelGenerate>
 									<stuffCountRange>0</stuffCountRange>
-									<thingDefCountRange>5~7</thingDefCountRange>
+									<thingDefCountRange>7~9</thingDefCountRange>
 									<countRange>1</countRange>
 								</li>
 								<li Class="TG.StockGen.AnimalMultiDef">
@@ -57,7 +57,7 @@
 									</pawnKindDefs>
 									<newborn>true</newborn>
 									<kindCountRange>1</kindCountRange>
-									<countRange>1~2</countRange>
+									<countRange>2~3</countRange>
 								</li>
 							</stockGens>
 						</TG.TraderSpecializationDef>
@@ -68,7 +68,7 @@
 								<!-- Sells. -->
 								<li Class="TG.StockGen.InsectMeat">
 									<thingDefCountRange>1</thingDefCountRange>
-									<totalPriceRange>700~950</totalPriceRange>
+									<totalPriceRange>800~1150</totalPriceRange>
 								</li>
 								<li Class="TG.StockGen.MultiDef">
 									<thingDefs>
@@ -79,8 +79,8 @@
 										<li MayRequire="sarg.alphaanimals">AA_BlackInsectJelly</li>
 										<li MayRequire="VanillaExpanded.VCookE">VCE_InsectJellyPreserves</li>
 									</thingDefs>
-									<thingDefCountRange>2~3</thingDefCountRange>
-									<totalPriceRange>500~920</totalPriceRange>
+									<thingDefCountRange>3~4</thingDefCountRange>
+									<totalPriceRange>600~920</totalPriceRange>
 								</li>
 								<li Class="TG.StockGen.AnimalMultiDef">
 									<pawnKindDefs>
@@ -90,7 +90,7 @@
 									</pawnKindDefs>
 									<newborn>true</newborn>
 									<kindCountRange>1~2</kindCountRange>
-									<totalPriceRange>300~600</totalPriceRange>
+									<totalPriceRange>400~700</totalPriceRange>
 								</li>
 								<li Class="StockGenerator_SingleDef" MayRequire="sumghai.Replimat">
 									<thingDef>IsolinearModule</thingDef>
@@ -122,12 +122,12 @@
 										<li MayRequire="sarg.alphaanimals">AA_BlackScarab</li>
 									</pawnKindDefs>
 									<newborn>true</newborn>
-									<kindCountRange>2</kindCountRange>
+									<kindCountRange>3~4</kindCountRange>
 									<totalPriceRange>300~600</totalPriceRange>
 								</li>
 								<li Class="StockGenerator_SingleDef">
 									<thingDef>Kibble</thingDef>
-									<totalPriceRange>500~1000</totalPriceRange>
+									<totalPriceRange>600~1000</totalPriceRange>
 								</li>
 								<li Class="TG.StockGen.MultiDef">
 									<thingDefs>
@@ -157,7 +157,7 @@
 									</pawnKindDefs>
 									<newborn>true</newborn>
 									<kindCountRange>3~4</kindCountRange>
-									<totalPriceRange>400~800</totalPriceRange>
+									<totalPriceRange>500~800</totalPriceRange>
 								</li>
 								<li Class="TG.StockGen.AnimalMultiDef">
 									<pawnKindDefs>
@@ -169,11 +169,11 @@
 								</li>
 								<li Class="StockGenerator_SingleDef">
 									<thingDef>Kibble</thingDef>
-									<totalPriceRange>500~1000</totalPriceRange>
+									<totalPriceRange>600~1000</totalPriceRange>
 								</li>
 								<li Class="StockGenerator_SingleDef">
 									<thingDef>Hay</thingDef>
-									<totalPriceRange>500~1000</totalPriceRange>
+									<totalPriceRange>600~1000</totalPriceRange>
 								</li>
 								<li Class="TG.StockGen.MultiDef" MayRequire="VanillaExpanded.VAPPE">
 									<thingDefs>
@@ -185,7 +185,7 @@
 								</li>
 								<li Class="StockGenerator_SingleDef" MayRequire="VanillaExpanded.VWE">
 									<thingDef>VWE_Tool_Whip</thingDef>
-									<countRange>-2~1</countRange>
+									<countRange>-1~1</countRange>
 								</li>
 							</stockGens>
 						</TG.TraderSpecializationDef>
