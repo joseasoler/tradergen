@@ -217,6 +217,10 @@
 									<def>TG_InsectoidHusbandry</def>
 									<commonality>10.0</commonality>
 								</li>
+								<li>
+									<def>TG_Wealth</def>
+									<commonality>10.0</commonality>
+								</li>
 							</specializations>
 						</li>
 					</value>
