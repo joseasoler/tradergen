@@ -76,11 +76,22 @@ TraderGen should support wares from mods out of the box; please submit a [bug re
 * **[Buyable psylink neuroformers](https://steamcommunity.com/sharedfiles/filedetails/?id=2190288136):** TraderGen is fully compatible with this mod. TraderGen only adds psylink neuroformers to a specific specialization, while Buyable psylink neuroformers adds it to some of the traders regardless of their specialization.
 
 
+* **[Expanded Prosthetics and Organ Engineering](https://steamcommunity.com/sharedfiles/filedetails/?id=725956940):**
+
+  * The prosthesis trader gets access to these specializations: drugs, hunting, medicine, organs, psycasting, wealth.
+
+  * The textiles trader gets access to these specializations: biomaterials, cannibal, draper, hunting, husbandry, wealth.
+
+
 * **[Expanded Prosthetics and Organ Engineering - Forked](https://steamcommunity.com/sharedfiles/filedetails/?id=1949064302):**
 
-    * Traders with the bionics specialization may rarely have MA-AI chips in stock.
+  * The prosthesis trader gets access to these specializations: drugs, hunting, medicine, organs, psycasting, wealth.
 
-    * Traders with the organs specialization may have optimizing nanobots and instinct optimizing nanobots in stock.
+  * The textiles trader gets access to these specializations: biomaterials, cannibal, draper, hunting, husbandry, wealth.
+
+  * Traders with the bionics specialization may rarely have MA-AI chips in stock.
+
+  * Traders with the organs specialization may have optimizing nanobots and instinct optimizing nanobots in stock.
 
 
 * **[Forsakens](https://steamcommunity.com/sharedfiles/filedetails/?id=1728999127):** The biomaterials specialization may have items created from ultima fabric.
@@ -115,18 +126,18 @@ TraderGen should support wares from mods out of the box; please submit a [bug re
 
 * **[Vanilla Apparel Expanded — Accessories](https://steamcommunity.com/sharedfiles/filedetails/?id=2521176396):**
 
-    * Bulk goods orbital traders may have tool belts in stock.
+  * Bulk goods orbital traders may have tool belts in stock.
 
-    * Orbital traders with the hunting specialization may have quivers in stock.
+  * Orbital traders with the hunting specialization may have quivers in stock.
 
-    * Orbital traders with the medicine specialization may have medic bags in stock.
+  * Orbital traders with the medicine specialization may have medic bags in stock.
 
 
 * **[Vanilla Brewing Expanded](https://steamcommunity.com/sharedfiles/filedetails/?id=2186560858):**
 
-    * Orbital trader specializations distinguish between alcoholic beverages, non-alcoholic beverages and other drugs when appropriate.
+  * Orbital trader specializations distinguish between alcoholic beverages, non-alcoholic beverages and other drugs when appropriate.
 
-    * Orbital traders with the gourmet specialization have some non-alcoholic beverages in stock.
+  * Orbital traders with the gourmet specialization have some non-alcoholic beverages in stock.
 
 
 * **[Vanilla Brewing Expanded - Coffees and Teas](https://steamcommunity.com/sharedfiles/filedetails/?id=2275449762):** Orbital traders belonging to the cannibal specialization can have cannibal coffee in stock.
@@ -150,7 +161,7 @@ TraderGen should support wares from mods out of the box; please submit a [bug re
 * **[Vanilla Furniture Expanded](https://steamcommunity.com/sharedfiles/filedetails/?id=1718190143):** Orbital traders carrying joy furniture will include items from this mod in their stock.
 
 
-* **[Vanilla Genetics Expanded](https://steamcommunity.com/sharedfiles/filedetails/?id=2149755445):** The genetics supplier gets access to these specializations: culture, drugs, medicine, tech and wealth.
+* **[Vanilla Genetics Expanded](https://steamcommunity.com/sharedfiles/filedetails/?id=2801160906):** The genetics supplier gets access to these specializations: culture, drugs, medicine, tech and wealth.
 
 
 * **[Vanilla Ideology Expanded - Dryads](https://steamcommunity.com/sharedfiles/filedetails/?id=2720631512):** The biomaterials specialization may have items created from gaubric.
@@ -161,13 +172,13 @@ TraderGen should support wares from mods out of the box; please submit a [bug re
 
 * **[Vanilla Weapons Expanded](https://steamcommunity.com/sharedfiles/filedetails/?id=1814383360):**
 
-    * Bulk goods orbital traders and outlander settlements may have tools in stock.
+  * Bulk goods orbital traders and outlander settlements may have tools in stock.
 
-    * Orbital traders with the hunting specialization may have compound bows in stock.
+  * Orbital traders with the hunting specialization may have compound bows in stock.
 
-    * Orbital traders with the husbandry specialization may have whips in stock.
+  * Orbital traders with the husbandry specialization may have whips in stock.
 
-    * Orbital traders with the medicine specialization may have scalpels in stock.
+  * Orbital traders with the medicine specialization may have scalpels in stock.
 
 
 * **[Vanilla Weapons Expanded - Grenades](https://steamcommunity.com/sharedfiles/filedetails/?id=2194472657):** Orbital traders with the ordnance specialization may also have grenade belts in stock.
@@ -175,6 +186,6 @@ TraderGen should support wares from mods out of the box; please submit a [bug re
 
 * **[Vanilla Weapons Expanded - Non-Lethal](https://steamcommunity.com/sharedfiles/filedetails/?id=2454918354):**
 
-    * Slaver orbital traders may have some non-lethal weapons in stock.
+  * Slaver orbital traders may have some non-lethal weapons in stock.
 
-    * Orbital traders with the hunting specialization may have dart guns in stock.
+  * Orbital traders with the hunting specialization may have dart guns in stock.

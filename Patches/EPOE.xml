@@ -13,13 +13,67 @@ Disable Prostheses and Textiles Trader as their role is fulfilled by some specia
 				<li Class="PatchOperationAddModExtension">
 					<xpath>/Defs/TraderKindDef[defName="ProsthesesTrader"]</xpath>
 					<value>
-						<li Class="TG.GenExtension"/>
+						<li Class="TG.GenExtension">
+							<specializations>
+								<li>
+									<def>TG_Drugs</def>
+									<commonality>10.0</commonality>
+								</li>
+								<li>
+									<def>TG_Hunting</def>
+									<commonality>10.0</commonality>
+								</li>
+								<li>
+									<def>TG_Medicine</def>
+									<commonality>10.0</commonality>
+								</li>
+								<li>
+									<def>TG_Organs</def>
+									<commonality>10.0</commonality>
+								</li>
+								<li MayRequire="Ludeon.RimWorld.Royalty">
+									<def>TG_Psycasting</def>
+									<commonality>5.0</commonality>
+								</li>
+								<li>
+									<def>TG_Wealth</def>
+									<commonality>10.0</commonality>
+								</li>
+							</specializations>
+						</li>
 					</value>
 				</li>
 				<li Class="PatchOperationAddModExtension">
 					<xpath>/Defs/TraderKindDef[defName="TextilesTrader"]</xpath>
 					<value>
-						<li Class="TG.GenExtension"/>
+						<li Class="TG.GenExtension">
+							<specializations>
+								<li>
+									<def>TG_Biomaterials</def>
+									<commonality>5.0</commonality>
+								</li>
+								<li>
+									<def>TG_Cannibal</def>
+									<commonality>6.0</commonality>
+								</li>
+								<li>
+									<def>TG_Draper</def>
+									<commonality>5.0</commonality>
+								</li>
+								<li>
+									<def>TG_Hunting</def>
+									<commonality>10.0</commonality>
+								</li>
+								<li>
+									<def>TG_Husbandry</def>
+									<commonality>15.0</commonality>
+								</li>
+								<li>
+									<def>TG_Wealth</def>
+									<commonality>10.0</commonality>
+								</li>
+							</specializations>
+						</li>
 					</value>
 				</li>
 			</operations>
