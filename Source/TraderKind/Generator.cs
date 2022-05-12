@@ -1,10 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using Force.DeepCloner;
 using RimWorld;
 using TG.Mod;
-using TG.StockGen;
 using Verse;
 
 namespace TG.TraderKind
