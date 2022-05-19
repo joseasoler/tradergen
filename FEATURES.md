@@ -193,3 +193,6 @@ TraderGen should support wares from mods out of the box; please submit a [bug re
   * Slaver orbital traders may have some non-lethal weapons in stock.
 
   * Orbital traders with the hunting specialization may have dart guns in stock.
+
+
+* **[Zoological Orbital Traders](https://steamcommunity.com/sharedfiles/filedetails/?id=1952216926):** The zoological trader gets access to these specializations: draper, hunting, husbandry and medicine. This draper specialization only sells animal fabrics.
