@@ -149,7 +149,11 @@ TraderGen should support wares from mods out of the box; please submit a [bug re
 * **[Vanilla Cooking Expanded](https://steamcommunity.com/sharedfiles/filedetails/?id=2134308519):** Orbital traders with the gourmet specialization have some condiments in stock.
 
 
-* **[Vanilla Factions Expanded - Insectoids](https://steamcommunity.com/sharedfiles/filedetails/?id=2149755445):** The bio-engineering supplier gets access to insectoid-themed versions of these specializations: craftsmanship, draper, gourmet, hunting, husbandry and wealth.
+* **[Vanilla Factions Expanded - Insectoids](https://steamcommunity.com/sharedfiles/filedetails/?id=2149755445):**
+
+  * The bio-engineering supplier gets access to insectoid-themed versions of these specializations: craftsmanship, draper, gourmet, hunting, husbandry and wealth.
+
+  * The bio-engineering supplier now purchases very expensive items as the other orbital traders do.
 
 
 * **[Vanilla Factions Expanded - Mechanoids](https://steamcommunity.com/sharedfiles/filedetails/?id=2329011599):** Traders with the technology specialization may have a mechanoid component in stock.

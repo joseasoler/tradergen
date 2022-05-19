@@ -225,6 +225,14 @@
 						</li>
 					</value>
 				</li>
+				<!-- Modifications to the bio-engineering supplier. -->
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/TraderKindDef[defName="VFEI_Orbital_BioEngineeringSupplier"]/stockGenerators</xpath>
+					<value>
+						<!-- The supplier purchases expensive simple items. -->
+						<li Class="StockGenerator_BuyExpensiveSimple"/>
+					</value>
+				</li>
 			</operations>
 		</match>
 	</Operation>
