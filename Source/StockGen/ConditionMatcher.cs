@@ -98,7 +98,7 @@ namespace TG.StockGen
 		/// <param name="def">Thing to check</param>
 		/// <param name="forTile">Tile in which the transaction takes place.</param>
 		/// <param name="faction">Faction of the trader.</param>
-		/// <returns>If the item an be sold or not.</returns>
+		/// <returns>If the item can be sold or not.</returns>
 		private bool CanSellImpl(in ThingDef def, in int forTile, in Faction faction)
 		{
 			return CanSell(def, forTile, faction) && def.tradeability == Tradeability.All && def.PlayerAcquirable &&
