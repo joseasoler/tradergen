@@ -225,6 +225,31 @@
 						</li>
 					</value>
 				</li>
+				<!-- Increase the pool of items that bio-engineering suppliers are willing to buy. -->
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/TraderKindDef[defName="VFEI_Orbital_BioEngineeringSupplier"]/stockGenerators</xpath>
+					<value>
+						<li Class="TG.StockGen.MultiDef">
+							<thingDefs>
+								<li>InsectJelly</li>
+								<li>Kibble</li>
+								<li>VFEI_RoyalInsectJelly</li>
+								<li MayRequire="VanillaExpanded.VCookE">VCE_InsectJellyPreserves</li>
+								<li MayRequire="sarg.alphaanimals">AA_BlackInsectJelly</li>
+							</thingDefs>
+						</li>
+						<!--
+						Purchases some really expensive and easily resellable items. 56 is chosen to prevent it from purchasing
+						mortar shells.
+						-->
+						<li Class="TG.StockGen.ExpensiveSimple">
+							<minValuePerUnit>56</minValuePerUnit>
+						</li>
+						<li Class="StockGenerator_BuyTradeTag">
+							<tag>ExoticBuilding</tag>
+						</li>
+					</value>
+				</li>
 			</operations>
 		</match>
 	</Operation>

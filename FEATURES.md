@@ -153,7 +153,8 @@ TraderGen should support wares from mods out of the box; please submit a [bug re
 
   * The bio-engineering supplier gets access to insectoid-themed versions of these specializations: craftsmanship, draper, gourmet, hunting, husbandry and wealth.
 
-  * The bio-engineering supplier now purchases very expensive items as the other orbital traders do.
+  * The bio-engineering supplier will now purchase most really expensive items that could be resold for profit. It will also purchase insect jelly related items and kibble.
+
 
 
 * **[Vanilla Factions Expanded - Mechanoids](https://steamcommunity.com/sharedfiles/filedetails/?id=2329011599):** Traders with the technology specialization may have a mechanoid component in stock.
