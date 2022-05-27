@@ -21,7 +21,7 @@ TraderGen
 * More diversity of names for vanilla orbital traders.
 
 
-* Minor tweaks to vanilla trader stock, aiming at increasing their variety and improving mod compatibility.
+* Tweaks and additions to both vanilla and modded trader stock, aiming at increasing their variety and improving mod compatibility.
 
 
 You can find a detailed description of all specializations, trader tweaks and mod compatibility features in the [FEATURES](FEATURES.md) file.
