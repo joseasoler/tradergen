@@ -9,9 +9,6 @@ TraderGen
 * Orbital traders now have a specialization, which adds a limited amount of stock that could be particularly rare or useful. It is possible to modify the number of specializations or disable the feature entirely through the mod settings.
 
 
-* Adjustable amount of silver in stock for orbital, settlement, caravan and visitor traders. Compatible with traders from mods.
-
-
 * Mod setting for making traders such as the slaver orbital trader appear even when the population of the colony is large.
 
 

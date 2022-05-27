@@ -1,13 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
-	<TG_SilverStockOrbital>Silver stock of orbital traders: {0}%</TG_SilverStockOrbital>
-	<TG_SilverStockOrbitalTooltip>Allows to adjust the total amount of silver that orbital traders will have in stock when they arrive. Orbital traders which were already in range when the setting is changed will not be affected.</TG_SilverStockOrbitalTooltip>
-	<TG_SilverStockSettlement>Silver stock of settlements: {0}%</TG_SilverStockSettlement>
-	<TG_SilverStockSettlementTooltip>Allows to adjust the total amount of silver that settlements will have in stock. Changes will only apply when settlements restock.</TG_SilverStockSettlementTooltip>
-	<TG_SilverStockCaravan>Silver stock of caravans: {0}%</TG_SilverStockCaravan>
-	<TG_SilverStockCaravanTooltip>Allows to adjust the total amount of silver that caravans will have in stock when they arrive. Caravans which were already in the map when the setting is changed will not be affected.</TG_SilverStockCaravanTooltip>
-	<TG_SilverStockVisitor>Silver stock of visitors: {0}%</TG_SilverStockVisitor>
-	<TG_SilverStockVisitorTooltip>Allows to adjust the total amount of silver that visitors will have in stock when they arrive. Visitors which were already in the map when the setting is changed will not be affected.</TG_SilverStockVisitorTooltip>
 	<TG_OrbitalSpecializations>Number of orbital trader specializations:</TG_OrbitalSpecializations>
 	<TG_OrbitalSpecializationsTooltip>Orbital traders will have a random number of specializations in this interval. Set both values to zero to disable specializations.</TG_OrbitalSpecializationsTooltip>
 	<TG_IgnoreColonyPopulationCommonality>Ignore colony population when calculating trader commonality</TG_IgnoreColonyPopulationCommonality>

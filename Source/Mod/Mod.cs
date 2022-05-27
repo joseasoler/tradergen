@@ -37,23 +37,6 @@ namespace TG.Mod
 			var listing = new Listing_Standard();
 			listing.Begin(inRect);
 
-			foreach (var categoryObj in Enum.GetValues(typeof(TraderKindCategory)))
-			{
-				var category = (TraderKindCategory) categoryObj;
-				if (category == TraderKindCategory.None)
-				{
-					continue;
-				}
-
-				var categoryName = Enum.GetName(typeof(TraderKindCategory), category);
-
-				listing.Label($"TG_SilverStock{categoryName}".Translate((int) Settings.GetSilverScaling(category)), -1,
-					$"TG_SilverStock{categoryName}Tooltip".Translate());
-				var silverScaling = listing.Slider(Settings.GetSilverScaling(category), Settings.MinSilverScaling,
-					Settings.MaxSilverScaling);
-				Settings.SetSilverScaling(category, silverScaling);
-			}
-
 			var orbitalSpecializations = Settings.OrbitalSpecializations;
 			listing.Label("TG_OrbitalSpecializations".Translate(), -1, "TG_OrbitalSpecializationsTooltip".Translate());
 			listing.IntRange(ref orbitalSpecializations, 0, Settings.MaxOrbitalSpecializations);

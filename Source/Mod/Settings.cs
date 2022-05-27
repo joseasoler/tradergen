@@ -13,22 +13,10 @@ namespace TG.Mod
 		public bool SellPsylinkNeuroformers = true;
 
 		/// <summary>
-		/// Silver stock of each trader category in %.
-		/// </summary>
-		public Dictionary<TraderKindCategory, float> SilverScaling = new Dictionary<TraderKindCategory, float>
-		{
-			{TraderKindCategory.Orbital, 100.0f},
-			{TraderKindCategory.Settlement, 100.0f},
-			{TraderKindCategory.Caravan, 100.0f},
-			{TraderKindCategory.Visitor, 100.0f}
-		};
-
-		/// <summary>
 		/// Orbital traders will have a random number of specializations in this interval.
 		/// Set both values to zero to disable specializations.
 		/// </summary>
 		public IntRange OrbitalSpecializations = IntRange.one;
-
 
 		/// <summary>
 		/// Disable TraderKindDef.commonalityMultFromPopulationIntent calculations.
@@ -66,16 +54,6 @@ namespace TG.Mod
 			set => _values.SellPsylinkNeuroformers = value;
 		}
 
-		public static float GetSilverScaling(TraderKindCategory category)
-		{
-			return _values.SilverScaling[category];
-		}
-
-		public static void SetSilverScaling(TraderKindCategory category, float value)
-		{
-			_values.SilverScaling[category] = value;
-		}
-
 		public static IntRange OrbitalSpecializations
 		{
 			get => _values.OrbitalSpecializations;
@@ -91,17 +69,6 @@ namespace TG.Mod
 			get => _values.IgnoreColonyPopulationCommonality;
 			set => _values.IgnoreColonyPopulationCommonality = value;
 		}
-
-
-		/// <summary>
-		/// Disables modification of the period of orbital traders.
-		/// </summary>
-		public const uint DisablePeriodOrbital = 0U;
-
-		/// <summary>
-		/// Maximum allowed value for PeriodOrbital settings in days.
-		/// </summary>
-		public const uint MaxPeriodOrbital = GenDate.DaysPerYear;
 
 		/// <summary>
 		/// Minimum allowed value for SilverScaling settings in %.
@@ -148,7 +115,6 @@ namespace TG.Mod
 		{
 			base.ExposeData();
 			Scribe_Values.Look(ref _values.SellPsylinkNeuroformers, "SellPsylinkNeuroformers");
-			Scribe_Collections.Look(ref _values.SilverScaling, "SilverScaling");
 
 			var orbitalSpecializationsMin = _values.OrbitalSpecializations.min;
 			var orbitalSpecializationsMax = _values.OrbitalSpecializations.max;
