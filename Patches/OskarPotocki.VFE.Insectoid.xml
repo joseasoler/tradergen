@@ -35,6 +35,13 @@
 									<kindCountRange>1</kindCountRange>
 									<countRange>2~3</countRange>
 								</li>
+								<!-- Purchases -->
+								<li Class="StockGenerator_Category">
+									<categoryDef>StoneBlocks</categoryDef>
+								</li>
+								<li Class="StockGenerator_Category">
+									<categoryDef>ResourcesRaw</categoryDef>
+								</li>
 							</stockGens>
 						</TG.TraderSpecializationDef>
 						<TG.TraderSpecializationDef>
@@ -58,6 +65,10 @@
 									<newborn>true</newborn>
 									<kindCountRange>1</kindCountRange>
 									<countRange>2~3</countRange>
+								</li>
+								<!-- Purchases -->
+								<li Class="StockGenerator_Category">
+									<categoryDef>Textiles</categoryDef>
 								</li>
 							</stockGens>
 						</TG.TraderSpecializationDef>
@@ -103,6 +114,19 @@
 										<li>EggsFertilized</li>
 									</excludedCategories>
 								</li>
+								<li Class="TG.StockGen.Alcohol" />
+								<li Class="TG.StockGen.Drugs">
+									<drugCategory>Social</drugCategory>
+								</li>
+								<li Class="StockGenerator_Category" MayRequire="VanillaExpanded.VBrewE">
+									<categoryDef>VBE_DrinksNonAlcoholic</categoryDef>
+									<excludedThingDefs>
+										<li MayRequire="VanillaExpanded.VBrewECandT">VBE_CannibalCoffee</li>
+									</excludedThingDefs>
+								</li>
+								<li Class="StockGenerator_Category" MayRequire="VanillaExpanded.VCookE">
+									<categoryDef>VCE_Condiments</categoryDef>
+								</li>
 							</stockGens>
 						</TG.TraderSpecializationDef>
 						<TG.TraderSpecializationDef>
@@ -141,13 +165,25 @@
 									<thingDefCountRange>2~3</thingDefCountRange>
 									<countRange>1~2</countRange>
 								</li>
+								<!-- Purchases -->
+								<li Class="StockGenerator_Animals">
+									<maxWildness>0.70</maxWildness>
+									<checkTemperature>false</checkTemperature>
+									<tradeTagsBuy>
+										<li>AnimalFighter</li>
+										<li>AnimalPet</li>
+										<li>AnimalUncommon</li>
+										<li>AnimalExotic</li>
+									</tradeTagsBuy>
+								</li>
+								<li Class="TG.StockGen.ExoticAnimalPart" />
 							</stockGens>
 						</TG.TraderSpecializationDef>
 						<TG.TraderSpecializationDef>
 							<defName>TG_InsectoidHusbandry</defName>
 							<label>husbandry</label>
 							<stockGens>
-								<!-- Sells. -->
+								<!-- Sells -->
 								<li Class="TG.StockGen.AnimalMultiDef">
 									<pawnKindDefs>
 										<li>VFEI_VatGrownMilkbeetle</li>
@@ -186,6 +222,16 @@
 								<li Class="StockGenerator_SingleDef" MayRequire="VanillaExpanded.VWE">
 									<thingDef>VWE_Tool_Whip</thingDef>
 									<countRange>-1~1</countRange>
+								</li>
+								<!-- Purchases -->
+								<li Class="StockGenerator_Animals">
+									<maxWildness>0.70</maxWildness>
+									<checkTemperature>false</checkTemperature>
+									<tradeTagsBuy>
+										<li>AnimalFarm</li>
+										<li>AnimalPet</li>
+										<li>AnimalExotic</li>
+									</tradeTagsBuy>
 								</li>
 							</stockGens>
 						</TG.TraderSpecializationDef>
