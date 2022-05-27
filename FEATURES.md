@@ -195,4 +195,8 @@ TraderGen should support wares from mods out of the box; please submit a [bug re
   * Orbital traders with the hunting specialization may have dart guns in stock.
 
 
-* **[Zoological Orbital Traders](https://steamcommunity.com/sharedfiles/filedetails/?id=1952216926):** The zoological trader gets access to these specializations: draper, hunting, husbandry and medicine. This draper specialization only sells animal fabrics.
+* **[Zoological Orbital Traders](https://steamcommunity.com/sharedfiles/filedetails/?id=1952216926):**
+
+  * The zoological trader gets access to these specializations: draper, hunting, husbandry and medicine. This draper specialization only sells animal fabrics.
+
+  * The zoological trader will now purchase most really expensive items that could be resold for profit.
