@@ -3,23 +3,13 @@ TraderGen
 
 [![RimWorld](https://img.shields.io/badge/RimWorld-1.3-informational)](https://rimworldgame.com/) [![Steam Downloads](https://img.shields.io/steam/downloads/2804121197)](https://steamcommunity.com/sharedfiles/filedetails/?id=2804121197) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](CODE_OF_CONDUCT.md)
 
-[TraderGen](https://steamcommunity.com/sharedfiles/filedetails/?id=2804121197) adds new options for improving trader generation and trader stock in the [RimWorld](https://rimworldgame.com/) game.
+[TraderGen](https://steamcommunity.com/sharedfiles/filedetails/?id=2804121197) is a [RimWorld](https://rimworldgame.com/) mod which improves trader stock variety and quantity, along with providing better mod support for traders.
 
+The main feature added by the mod is specializations for orbital traders. Each specialization adds a limited amount of stock that could be particularly rare or useful. It is possible to modify the number of specializations or disable the feature entirely through the mod settings.
 
-* Orbital traders now have a specialization, which adds a limited amount of stock that could be particularly rare or useful. It is possible to modify the number of specializations or disable the feature entirely through the mod settings.
+Orbital traders will now get more fitting names, with imperial orbital traders usually bearing the name of the noble that owns them, while combat orbital traders could have names based on animals or weapons.
 
-
-* Mod setting for making traders such as the slaver orbital trader appear even when the population of the colony is large.
-
-
-* Additional features when other mods are enabled.
-
-
-* More diversity of names for vanilla orbital traders.
-
-
-* Tweaks and additions to both vanilla and modded trader stock, aiming at increasing their variety and improving mod compatibility.
-
+TraderGen also provides extensive mod support. Orbital trader specializations are compatible with all mods, keeping their theme regardless of the contents of your modlist. There are also other tweaks and additions such as traders having other alcohol types in stock besides beer.
 
 You can find a detailed description of all specializations, trader tweaks and mod compatibility features in the [FEATURES](FEATURES.md) file.
 
