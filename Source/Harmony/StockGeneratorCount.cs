@@ -25,7 +25,6 @@ namespace TG.Harmony
 				}
 
 				var category = _categoryByHash[def.shortHash];
-				// Logger.Error($"{__instance.trader.defName} is a {Enum.GetName(typeof(TraderKindCategory), category)}");
 				__result = (int) (Settings.GetSilverScaling(category) * __result / 100.0f);
 			}
 		}
