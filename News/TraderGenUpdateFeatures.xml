@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<HugsLib.UpdateFeatureDef Abstract="true" Name="TraderGenUpdateFeature">
+		<defName>TraderGenUpdateFeature</defName>
+		<modNameReadable>TraderGen</modNameReadable>
+		<modIdentifier>joseasoler.TraderGen</modIdentifier>
+		<linkUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2804121197</linkUrl>
+	</HugsLib.UpdateFeatureDef>
+
+	<HugsLib.UpdateFeatureDef ParentName="TraderGenUpdateFeature">
+		<defName>TraderGen_0_1_0</defName>
+		<assemblyVersion>0.1.0</assemblyVersion>
+		<content>
+			<![CDATA[The customizable silver stock feature has been removed from TraderGen, and has been released as a standalone mod called Customizable Silver Stock which is linked in this news item.|This removal is savegame compatible so your existing games will be safe.]]>
+		</content>
+		<linkUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2813426619</linkUrl>
+	</HugsLib.UpdateFeatureDef>
+</Defs>
