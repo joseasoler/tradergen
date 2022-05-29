@@ -12,6 +12,15 @@ namespace TG
 		private const string Prefix = "[TraderGen] ";
 
 		/// <summary>
+		/// Logs a message, prefixed with the mod name.. 
+		/// </summary>
+		/// <param name="text">Text to be logged.</param>
+		public static void Message(string text)
+		{
+			Log.Message(Prefix + text);
+		}
+
+		/// <summary>
 		/// Logs trader procedural generation messages. 
 		/// </summary>
 		/// <param name="text">Text to be logged.</param>
@@ -19,7 +28,7 @@ namespace TG
 		{
 			if (Settings.LogGen)
 			{
-				Log.Message(Prefix + text);
+				Message(text);
 			}
 		}
 

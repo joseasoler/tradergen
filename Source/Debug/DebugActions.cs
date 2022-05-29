@@ -59,10 +59,10 @@ namespace TG.Debug
 			var options = DefDatabase<TraderKindDef>.AllDefs.Where(t => t.orbital)
 				.Select(traderKindDef => new DebugMenuOption(traderKindDef.label, DebugMenuOptionMode.Action, () =>
 				{
-					Logger.Gen($"{traderKindDef.label}:");
+					Logger.Message($"{traderKindDef.label}:");
 					for (var index = 0; index < 50; ++index)
 					{
-						Logger.Gen($"\t{Generator.Name(traderKindDef, null)}");
+						Logger.Message($"\t{Generator.Name(traderKindDef, null)}");
 					}
 				}))
 				.ToList();
