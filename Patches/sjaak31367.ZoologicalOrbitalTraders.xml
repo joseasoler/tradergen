@@ -80,6 +80,8 @@
 				<li Class="PatchOperationAdd">
 					<xpath>/Defs/TraderKindDef[defName="Orbital_ZoologicalTrader"]/stockGenerators</xpath>
 					<value>
+						<!-- Purchases any exotic animal part, including those from mods such as Alpha Animals or Dinosauria. -->
+						<li Class="TG.StockGen.ExoticAnimalPart" />
 						<!--
 						Purchases some really expensive and easily resellable items. 56 is chosen to prevent it from purchasing
 						mortar shells.
