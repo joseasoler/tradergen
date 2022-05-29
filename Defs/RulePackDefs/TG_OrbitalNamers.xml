@@ -62,6 +62,7 @@
 			<rulesStrings>
 				<li>r_name(p=3)->[PersonBadass] [traderkindbusinesstype]</li>
 				<li>r_name(p=2)->[AdjectiveBadass] [traderkindbusinesstype]</li>
+				<li>r_name(p=2)->[businessname] [traderkindbusinesstype]</li>
 				<li>r_name->[AdjectiveBadass] [AnimalBadass] [traderkindbusinesstype]</li>
 			</rulesStrings>
 			<rulesFiles>

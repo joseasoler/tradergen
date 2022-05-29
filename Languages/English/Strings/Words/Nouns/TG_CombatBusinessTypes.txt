@@ -1,5 +1,7 @@
 ﻿Armory
+Avengers
 Defense
+Defenders
 Dynamics
 Factories
 Firearms
