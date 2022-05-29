@@ -155,6 +155,8 @@ TraderGen should support wares from mods out of the box; please submit a [bug re
 
   * The bio-engineering supplier will now purchase most really expensive items that could be resold for profit. It will also purchase insect jelly related items and kibble.
 
+  * Bio-engineering suppliers now get names specific to them.
+
 
 * **[Vanilla Factions Expanded - Mechanoids](https://steamcommunity.com/sharedfiles/filedetails/?id=2329011599):** Traders with the technology specialization may have a mechanoid component in stock.
 

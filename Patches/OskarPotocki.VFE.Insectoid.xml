@@ -237,7 +237,34 @@
 						</TG.TraderSpecializationDef>
 					</value>
 				</li>
-				<!-- Specializations for the bio-engineering supplier. -->
+				<!-- New namer for bio-engineering suppliers. -->
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs</xpath>
+					<value>
+						<RulePackDef>
+							<defName>TG_OrbitalNamerBioEngineering</defName>
+							<include>
+								<li>NamerTraderGeneral</li>
+							</include>
+							<rulePack>
+								<rulesStrings>
+									<li>r_name(p=4)->[InsectoidName] [GeneticBusinessType]</li>
+									<li>r_name(p=2)->[InsectoidName] [businesstype]</li>
+									<li>r_name(p=4)->[InsectoidAdjective] [GeneticBusinessType]</li>
+									<li>r_name(p=2)->[InsectoidAdjective] [businesstype]</li>
+									<li>r_name(p=2)->[InsectoidAdjective] [InsectoidName] [GeneticBusinessType]</li>
+									<li>r_name->[InsectoidAdjective] [InsectoidName] [businesstype]</li>
+								</rulesStrings>
+								<rulesFiles>
+									<li>GeneticBusinessType->Words/Nouns/TG_GeneticBusinessTypes</li>
+									<li>InsectoidAdjective->Words/Insect</li>
+									<li>InsectoidName->Words/Nouns/TG_InsectoidNames</li>
+								</rulesFiles>
+							</rulePack>
+						</RulePackDef>
+					</value>
+				</li>
+				<!-- Specializations and custom namer for the bio-engineering supplier. -->
 				<li Class="PatchOperationAddModExtension">
 					<xpath>/Defs/TraderKindDef[defName="VFEI_Orbital_BioEngineeringSupplier"]</xpath>
 					<value>
@@ -268,6 +295,7 @@
 									<commonality>5.0</commonality>
 								</li>
 							</specializations>
+							<extraNameRules>TG_OrbitalNamerBioEngineering</extraNameRules>
 						</li>
 					</value>
 				</li>
