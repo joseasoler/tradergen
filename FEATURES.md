@@ -170,7 +170,11 @@ TraderGen should support wares from mods out of the box; please submit a [bug re
 * **[Vanilla Furniture Expanded](https://steamcommunity.com/sharedfiles/filedetails/?id=1718190143):** Orbital traders carrying joy furniture will include items from this mod in their stock.
 
 
-* **[Vanilla Genetics Expanded](https://steamcommunity.com/sharedfiles/filedetails/?id=2801160906):** The genetics supplier gets access to these specializations: culture, drugs, medicine, tech and wealth.
+* **[Vanilla Genetics Expanded](https://steamcommunity.com/sharedfiles/filedetails/?id=2801160906):**
+
+  * The genetics supplier gets access to these specializations: culture, drugs, medicine, tech and wealth.
+
+  * Genetics suppliers now get names specific to them.
 
 
 * **[Vanilla Ideology Expanded - Dryads](https://steamcommunity.com/sharedfiles/filedetails/?id=2720631512):** The biomaterials specialization may have items created from gaubric.
