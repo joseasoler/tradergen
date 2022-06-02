@@ -32,6 +32,7 @@
 		<Compile Include="Harmony\TraderKindDefCommonality.cs" />
 		<Compile Include="Harmony\TraderStock.cs" />
 		<Compile Include="Harmony\TradeShip.cs" />
+		<Compile Include="Harmony\Visitor.cs" />
 		<Compile Include="Ideo\IdeoStockCache.cs" />
 		<Compile Include="Ideo\PreceptGenDef.cs" />
 		<Compile Include="Logger.cs" />

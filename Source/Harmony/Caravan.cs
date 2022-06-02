@@ -33,7 +33,7 @@ namespace TG.Harmony
 			if (parms.traderKind.tradeCurrency != TradeCurrency.Favor)
 			{
 				// Deterministic seed is not implemented for pawn generation.
-				parms.traderKind = Generator.Def(parms.traderKind, Rand.Int, parms.tile, parms.faction);
+				parms.traderKind = Generator.Def(parms.traderKind, -1, parms.tile, parms.faction);
 			}
 
 			return true;

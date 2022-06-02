@@ -104,6 +104,7 @@ namespace TG.TraderKind
 			{
 				return;
 			}
+
 			Logger.Gen($"Applying ideology {ideo.name} of faction {faction.def.defName}");
 
 			// The cache is lazily initialized here.
@@ -139,6 +140,20 @@ namespace TG.TraderKind
 			}
 		}
 
+
+		/// <summary>
+		/// Overload of Generator.Def allowing a Map as a parameter.
+		/// </summary>
+		/// <param name="originalDef">Template TraderKindDef</param>
+		/// <param name="seed">Random seed to use for generation.</param>
+		/// <param name="map">Map in which the transaction takes place.</param>
+		/// <param name="faction">Faction of the trader.</param>
+		/// <returns>New TraderKindDef. The caller is responsible for managing its life cycle.</returns>
+		public static TraderKindDef Def(TraderKindDef originalDef, int seed, Map map, Faction faction)
+		{
+			return Def(originalDef, seed, map?.Tile ?? -1, faction);
+		}
+
 		/// <summary>
 		/// Generate a new TraderKindDef from a template.
 		/// StockGenerators with randomized internal state will be correctly initialized.
@@ -157,6 +172,11 @@ namespace TG.TraderKind
 			var def = originalDef.ShallowClone();
 			def.generated = true;
 			def.stockGenerators = new List<StockGenerator>();
+
+			if (seed == -1)
+			{
+				seed = Rand.Int;
+			}
 
 			Rand.PushState(seed);
 			// Add stock generators from the template TraderKindDef.
