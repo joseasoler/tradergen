@@ -12,7 +12,7 @@ namespace TG.StockGen
 
 		protected override bool CanBuy(in ThingDef def)
 		{
-			return Util.IsAlcohol(def);
+			return Things.Util.IsAlcohol(def);
 		}
 
 		private static readonly SimpleCurve SelectionWeight = new SimpleCurve

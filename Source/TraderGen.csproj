@@ -55,6 +55,7 @@
 		<Compile Include="StockGen\Weapon.cs" />
 		<Compile Include="StockGen\WeaponMelee.cs" />
 		<Compile Include="StockGen\WeaponRanged.cs" />
+		<Compile Include="Things\Util.cs" />
 		<Compile Include="TraderKind\Generator.cs" />
 		<Compile Include="TraderKind\Util.cs" />
 		<Compile Include="TraderSpecializationDef.cs" />

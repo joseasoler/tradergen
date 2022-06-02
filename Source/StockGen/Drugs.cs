@@ -15,7 +15,7 @@ namespace TG.StockGen
 
 		protected override bool CanBuy(in ThingDef def)
 		{
-			return def.IsWithinCategory(ThingCategoryDefOf.Drugs) && !Util.IsAlcohol(def) &&
+			return def.IsWithinCategory(ThingCategoryDefOf.Drugs) && !Things.Util.IsAlcohol(def) &&
 			       (def.thingCategories == null ||
 			        !def.thingCategories.Any(cat => cat.defName == "VBE_DrinksNonAlcoholic")) &&
 			       def.IsIngestible && (drugCategory == DrugCategory.Any || def.ingestible.drugCategory == drugCategory);

@@ -120,7 +120,7 @@ namespace TG.StockGen
 			// Only accept things which could be made from the chosen stuff.
 			return _stuffDef.IsStuff && _stuffDef.stuffProps.CanMake(def) &&
 			       // Only sell non-armor apparel, furniture or art.
-			       (def.IsApparel && !Util.IsArmor(def) || def.Minifiable &&
+			       (def.IsApparel && !Things.Util.IsArmor(def) || def.Minifiable &&
 				       (def.IsWithinCategory(DefOf.ThingCategory.BuildingsFurniture) ||
 				        def.IsWithinCategory(ThingCategoryDefOf.BuildingsArt) ||
 				        def.IsWithinCategory(DefOf.ThingCategory.BuildingsJoy)));
