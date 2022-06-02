@@ -23,12 +23,17 @@
 		<Compile Include="Algorithm.cs" />
 		<Compile Include="Debug\DebugActions.cs" />
 		<Compile Include="DefOf\JoyKind.cs" />
+		<Compile Include="DefOf\PreceptGen.cs" />
 		<Compile Include="DefOf\ThingCategory.cs" />
 		<Compile Include="GenExtension.cs" />
+		<Compile Include="Harmony\IdeologyCaravan.cs" />
+		<Compile Include="Harmony\IdeoInvalidateCache.cs" />
 		<Compile Include="Harmony\Mod\TraderShips.cs" />
 		<Compile Include="Harmony\TraderKindDefCommonality.cs" />
 		<Compile Include="Harmony\TraderStock.cs" />
 		<Compile Include="Harmony\TradeShip.cs" />
+		<Compile Include="Ideo\IdeoStockCache.cs" />
+		<Compile Include="Ideo\PreceptGenDef.cs" />
 		<Compile Include="Logger.cs" />
 		<Compile Include="Mod\Settings.cs" />
 		<Compile Include="Mod\Mod.cs" />
@@ -57,6 +62,7 @@
 		<Compile Include="StockGen\WeaponRanged.cs" />
 		<Compile Include="Things\Util.cs" />
 		<Compile Include="TraderKind\Generator.cs" />
+		<Compile Include="TraderKind\TraderKindCategory.cs" />
 		<Compile Include="TraderKind\Util.cs" />
 		<Compile Include="TraderSpecializationDef.cs" />
 		<Reference Include="System" />

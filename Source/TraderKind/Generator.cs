@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Force.DeepCloner;
 using RimWorld;
+using TG.Ideo;
 using TG.Mod;
 using Verse;
 
@@ -83,6 +84,62 @@ namespace TG.TraderKind
 		}
 
 		/// <summary>
+		/// When the Ideology DLC is active and the trader follows a faction with an ideology, some stock changes dependent
+		/// on precepts will be applied. Check IdeoStockCache for details.
+		/// </summary>
+		/// <param name="originalDef">Template trader.</param>
+		/// <param name="def">New trader created from the template.</param>
+		/// <param name="tile">Map tile in which the transaction takes place.</param>
+		/// <param name="faction">Faction of the trader.</param>
+		private static void ApplyIdeologyChanges(TraderKindDef originalDef, ref TraderKindDef def, int tile,
+			Faction faction)
+		{
+			if (!ModsConfig.IdeologyActive)
+			{
+				return;
+			}
+
+			var ideo = faction?.ideos.PrimaryIdeo;
+			if (ideo == null)
+			{
+				return;
+			}
+			Logger.Gen($"Applying ideology {ideo.name} of faction {faction.def.defName}");
+
+			// The cache is lazily initialized here.
+			IdeoStockCache.Instance.TryAdd(ideo);
+			List<StockGenerator> generatorsToAdd = null;
+			var traderCategory = Util.GetTraderCategory(originalDef, faction);
+			switch (traderCategory)
+			{
+				case TraderKindCategory.Visitor:
+					generatorsToAdd = IdeoStockCache.Instance.VisitorStockGens(ideo);
+					break;
+				case TraderKindCategory.Settlement:
+					generatorsToAdd = IdeoStockCache.Instance.SettlementStockGens(ideo);
+					break;
+				case TraderKindCategory.Caravan:
+				case TraderKindCategory.Orbital:
+					generatorsToAdd = IdeoStockCache.Instance.TraderStockGens(ideo);
+					break;
+				case TraderKindCategory.None:
+				default:
+					break;
+			}
+
+			Logger.Gen($"Trader category of {def.defName} is {Enum.GetName(typeof(TraderKindCategory), traderCategory)}");
+			if (generatorsToAdd == null)
+			{
+				return;
+			}
+
+			foreach (var gen in generatorsToAdd)
+			{
+				def.stockGenerators.Add(StockGenFrom(def, gen, tile, faction));
+			}
+		}
+
+		/// <summary>
 		/// Generate a new TraderKindDef from a template.
 		/// StockGenerators with randomized internal state will be correctly initialized.
 		/// Specializations will be added, if the TraderKindDef has a GenExtension defining them.
@@ -109,6 +166,7 @@ namespace TG.TraderKind
 			}
 
 			ApplySpecializations(originalDef, ref def, tile, faction);
+			ApplyIdeologyChanges(originalDef, ref def, tile, faction);
 
 			Rand.PopState();
 

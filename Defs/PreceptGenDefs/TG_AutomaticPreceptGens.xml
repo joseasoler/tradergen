@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<!-- Added automatically to ideologies with any precept with approvesOfCharity set to true. -->
+	<TG.Ideo.PreceptGenDef>
+		<defName>TG_AutomaticApprovesOfCharity</defName>
+		<visitorStockGens>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>MedicineHerbal</thingDef>
+				<countRange>5~8</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>MedicineIndustrial</thingDef>
+			</li>
+			<li Class="TG.StockGen.Drugs">
+				<drugCategory>Medical</drugCategory>
+			</li>
+		</visitorStockGens>
+		<traderStockGens>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>MedicineHerbal</thingDef>
+				<countRange>10~20</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>MedicineIndustrial</thingDef>
+				<countRange>5~10</countRange>
+			</li>
+			<li Class="TG.StockGen.Drugs">
+				<drugCategory>Medical</drugCategory>
+				<thingDefCountRange>1</thingDefCountRange>
+				<totalPriceRange>200~400</totalPriceRange>
+			</li>
+		</traderStockGens>
+		<settlementStockGens>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>MedicineHerbal</thingDef>
+				<countRange>20~30</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>MedicineIndustrial</thingDef>
+				<countRange>10~18</countRange>
+			</li>
+			<li Class="TG.StockGen.Drugs">
+				<drugCategory>Medical</drugCategory>
+				<thingDefCountRange>1~2</thingDefCountRange>
+				<totalPriceRange>500~900</totalPriceRange>
+			</li>
+		</settlementStockGens>
+	</TG.Ideo.PreceptGenDef>
+</Defs>

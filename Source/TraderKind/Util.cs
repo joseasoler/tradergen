@@ -34,5 +34,23 @@ namespace TG.TraderKind
 			// Return the found faction definition, if any.
 			return traderFactionDef;
 		}
+
+		/// <summary>
+		/// Find out the trader kind category of a trader.
+		/// </summary>
+		/// <param name="def">Trader being evaluated.</param>
+		/// <param name="faction">Faction of the trader.</param>
+		/// <returns>Trader category.</returns>
+		public static TraderKindCategory GetTraderCategory(TraderKindDef def, Faction faction)
+		{
+			if (def.orbital)
+			{
+				return TraderKindCategory.Orbital;
+			}
+
+			if (faction.def.baseTraderKinds.Contains(def)) return TraderKindCategory.Settlement;
+			if (faction.def.caravanTraderKinds.Contains(def)) return TraderKindCategory.Caravan;
+			return faction.def.visitorTraderKinds.Contains(def) ? TraderKindCategory.Visitor : TraderKindCategory.None;
+		}
 	}
 }
