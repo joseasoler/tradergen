@@ -37,6 +37,52 @@ namespace TG.TraderKind
 		}
 
 		/// <summary>
+		/// Apply specializations to the trader, if it has any.
+		/// </summary>
+		/// <param name="originalDef">Template trader.</param>
+		/// <param name="def">New trader created from the template.</param>
+		/// <param name="tile">Map tile in which the transaction takes place.</param>
+		/// <param name="faction">Faction of the trader.</param>
+		private static void ApplySpecializations(TraderKindDef originalDef, ref TraderKindDef def, int tile,
+			Faction faction)
+		{
+			var extension = originalDef.GetModExtension<GenExtension>();
+
+			if (extension == null)
+			{
+				return;
+			}
+
+			var numSpecializations = Math.Max(Settings.OrbitalSpecializations.RandomInRange, 0);
+
+			if (numSpecializations <= 0)
+			{
+				return;
+			}
+
+			var chosenSpecializations =
+				Algorithm.ChooseNWeightedRandomly(extension.specializations, spec => spec.commonality,
+					numSpecializations);
+
+			var specializationNames = new List<string>();
+			foreach (var specialization in chosenSpecializations)
+			{
+				Logger.Gen($"Adding specialization {specialization.def.defName}");
+				specializationNames.Add(specialization.def.label);
+
+				foreach (var gen in specialization.def.stockGens)
+				{
+					def.stockGenerators.Add(StockGenFrom(def, gen, tile, faction));
+				}
+			}
+
+			if (specializationNames.Count > 0)
+			{
+				def.label = $"{def.label} ({string.Join(", ", specializationNames)})";
+			}
+		}
+
+		/// <summary>
 		/// Generate a new TraderKindDef from a template.
 		/// StockGenerators with randomized internal state will be correctly initialized.
 		/// Specializations will be added, if the TraderKindDef has a GenExtension defining them.
@@ -62,37 +108,9 @@ namespace TG.TraderKind
 				def.stockGenerators.Add(StockGenFrom(def, gen, tile, faction));
 			}
 
-			// Stock generators coming from the specialization(s).
-			var specializationNames = new List<string>();
-			var extension = originalDef.GetModExtension<GenExtension>();
-			if (extension != null)
-			{
-				var numSpecializations = Math.Max(Settings.OrbitalSpecializations.RandomInRange, 0);
-
-				if (numSpecializations > 0)
-				{
-					var chosenSpecializations =
-						Algorithm.ChooseNWeightedRandomly(extension.specializations, spec => spec.commonality,
-							numSpecializations);
-					foreach (var specialization in chosenSpecializations)
-					{
-						Logger.Gen($"Adding specialization {specialization.def.defName}");
-						specializationNames.Add(specialization.def.label);
-
-						foreach (var gen in specialization.def.stockGens)
-						{
-							def.stockGenerators.Add(StockGenFrom(def, gen, tile, faction));
-						}
-					}
-				}
-			}
+			ApplySpecializations(originalDef, ref def, tile, faction);
 
 			Rand.PopState();
-
-			if (specializationNames.Count > 0)
-			{
-				def.label = $"{def.label} ({string.Join(", ", specializationNames)})";
-			}
 
 			return def;
 		}
