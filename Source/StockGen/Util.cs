@@ -191,6 +191,18 @@ namespace TG.StockGen
 				b.Append($"weaponTag: {gen.weaponTag}\n");
 				return;
 			}
+
+			if (type == typeof(StockGenerator_Slaves))
+			{
+				var gen = (StockGenerator_Slaves) g;
+				b.Append($"respectPopulationIntent: {gen.respectPopulationIntent}\n");
+				if (gen.slaveKindDef != null)
+				{
+					b.Append($"slaveKindDef: {gen.slaveKindDef.race.defName}\n");
+				}
+
+				return;
+			}
 		}
 
 		public static StringBuilder ToText(StockGenerator g)
