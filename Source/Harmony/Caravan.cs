@@ -7,7 +7,7 @@ using Verse;
 namespace TG.Harmony
 {
 	[HarmonyPatch]
-	public class IdeologyCaravan
+	public class Caravan
 	{
 		/// <summary>
 		/// Inject a modified TraderKindDef into the caravan generation process.
@@ -18,7 +18,7 @@ namespace TG.Harmony
 		private static bool InjectModifiedTrader(ref PawnGroupMakerParms parms, PawnGroupMaker groupMaker,
 			List<Pawn> outPawns, bool errorOnZeroResults)
 		{
-			if (!ModsConfig.IdeologyActive || parms.faction == null || parms.faction.def.caravanTraderKinds.Count == 0)
+			if (parms.faction == null || parms.faction.def.caravanTraderKinds.Count == 0)
 			{
 				return true;
 			}

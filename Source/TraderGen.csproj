@@ -26,7 +26,7 @@
 		<Compile Include="DefOf\PreceptGen.cs" />
 		<Compile Include="DefOf\ThingCategory.cs" />
 		<Compile Include="GenExtension.cs" />
-		<Compile Include="Harmony\IdeologyCaravan.cs" />
+		<Compile Include="Harmony\Caravan.cs" />
 		<Compile Include="Harmony\IdeoInvalidateCache.cs" />
 		<Compile Include="Harmony\Mod\TraderShips.cs" />
 		<Compile Include="Harmony\TraderKindDefCommonality.cs" />
