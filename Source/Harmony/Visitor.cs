@@ -16,32 +16,28 @@ namespace TG.Harmony
 			nameof(IncidentWorker_VisitorGroup.TryConvertOnePawnToSmallTrader))]
 		public static IEnumerable<CodeInstruction> InjectModifiedTrader(IEnumerable<CodeInstruction> instructions)
 		{
-			var traderKindObtained = false;
 			var traderKindInjected = false;
 			foreach (var code in instructions)
 			{
-				if (!traderKindObtained && code.opcode == OpCodes.Call && code.operand is MethodInfo method)
-				{
-					if (method.ReturnParameter?.ParameterType == typeof(TraderKindDef))
-					{
-						traderKindObtained = true;
-					}
-				}
-
 				yield return code;
 
-				if (traderKindInjected || !traderKindObtained || code.opcode != OpCodes.Stloc_2)
+				// TryConvertOnePawnToSmallTrader stores the chosen TraderKindDef using Stloc_2.
+				// The injection point is right after that call.
+				if (traderKindInjected || code.opcode != OpCodes.Stloc_2)
 				{
 					continue;
 				}
-
-				// The first Stloc_2 after obtaining the traderKindDef is storing it into a local variable.
-				// The new TraderKindDef can now be injected into that variable.
-
+	
 				// Set the previously generated TraderKindDef as an argument.
 				yield return new CodeInstruction(opcode: OpCodes.Ldloc_2);
-				// Set a seed of -1 as an argument so it can be generated randomly later.
-				yield return new CodeInstruction(opcode: OpCodes.Ldc_I4_M1);
+
+				// Set the chosen deterministic generation seed.
+				// Load the pawn as an argument.
+				yield return new CodeInstruction(opcode: OpCodes.Ldloc_0);
+				// Obtain the random price factor seed. The result is set as the second argument.
+				yield return new CodeInstruction(OpCodes.Call,
+					AccessTools.Property(typeof(Pawn), nameof(Pawn.RandomPriceFactorSeed)).GetGetMethod());
+
 				// Set the map as an argument.
 				yield return new CodeInstruction(opcode: OpCodes.Ldarg_3);
 				// Set the faction as an argument.

@@ -32,7 +32,7 @@ namespace TG.Harmony
 		}
 
 		/// <summary>
-		/// Regenerate the TraderKindDef after loading. 
+		/// Regenerate the TraderKindDef after loading a trade ship.
 		/// Since the generated TraderKindDef has the same defName as the real one, TradeShip.ExposeData will "save"
 		/// the real TraderKindDef. When it is loaded, it will also get the real TraderKindDef. After the loading process is
 		/// finished, it is replaced with the generated TraderKindDef.

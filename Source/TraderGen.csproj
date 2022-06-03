@@ -28,6 +28,7 @@
 		<Compile Include="GenExtension.cs" />
 		<Compile Include="Harmony\Caravan.cs" />
 		<Compile Include="Harmony\IdeoInvalidateCache.cs" />
+		<Compile Include="Harmony\PawnTraderTracker.cs" />
 		<Compile Include="Harmony\Mod\TraderShips.cs" />
 		<Compile Include="Harmony\TraderKindDefCommonality.cs" />
 		<Compile Include="Harmony\TraderStock.cs" />

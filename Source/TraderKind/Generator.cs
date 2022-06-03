@@ -145,7 +145,7 @@ namespace TG.TraderKind
 		/// Overload of Generator.Def allowing a Map as a parameter.
 		/// </summary>
 		/// <param name="originalDef">Template TraderKindDef</param>
-		/// <param name="seed">Random seed to use for generation.</param>
+		/// <param name="seed">Seed to use for deterministic generation of TraderKindDefs.</param>
 		/// <param name="map">Map in which the transaction takes place.</param>
 		/// <param name="faction">Faction of the trader.</param>
 		/// <returns>New TraderKindDef. The caller is responsible for managing its life cycle.</returns>
@@ -156,13 +156,15 @@ namespace TG.TraderKind
 
 		/// <summary>
 		/// Generate a new TraderKindDef from a template.
+		/// This process is deterministic; it will always produce the same result with the same template and seed.
 		/// StockGenerators with randomized internal state will be correctly initialized.
 		/// Specializations will be added, if the TraderKindDef has a GenExtension defining them.
+		/// If the Ideology DLC is present and the trader belongs to a faction, ideology precepts may add extra stock.
 		/// The new TraderKindDef is not registered into the DefDatabase so it should not be used by the game in any way.
 		/// Since this def is not registered anywhere, it will be garbage-collected if the caller stops using it.
 		/// </summary>
 		/// <param name="originalDef">Template TraderKindDef</param>
-		/// <param name="seed">Random seed to use for generation.</param>
+		/// <param name="seed">Seed to use for deterministic generation of TraderKindDefs.</param>
 		/// <param name="tile">Map tile in which the transaction takes place.</param>
 		/// <param name="faction">Faction of the trader.</param>
 		/// <returns>New TraderKindDef. The caller is responsible for managing its life cycle.</returns>
@@ -172,11 +174,6 @@ namespace TG.TraderKind
 			var def = originalDef.ShallowClone();
 			def.generated = true;
 			def.stockGenerators = new List<StockGenerator>();
-
-			if (seed == -1)
-			{
-				seed = Rand.Int;
-			}
 
 			Rand.PushState(seed);
 			// Add stock generators from the template TraderKindDef.
