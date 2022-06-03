@@ -48,4 +48,17 @@
 			</li>
 		</settlementStockGens>
 	</TG.Ideo.PreceptGenDef>
+	<!-- Added automatically for ideologies with any precept which sets approvesOfSlavery to true. -->
+	<TG.Ideo.PreceptGenDef>
+		<defName>TG_AutomaticApprovesOfSlavery</defName>
+		<traderStockGens>
+			<li Class="StockGenerator_Slaves"/>
+		</traderStockGens>
+		<settlementStockGens>
+			<li Class="StockGenerator_Slaves">
+				<respectPopulationIntent>true</respectPopulationIntent>
+				<countRange>1~3</countRange>
+			</li>
+		</settlementStockGens>
+	</TG.Ideo.PreceptGenDef>
 </Defs>

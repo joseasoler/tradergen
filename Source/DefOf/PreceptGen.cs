@@ -6,5 +6,6 @@ namespace TG.DefOf
 	public class PreceptGen
 	{
 		public static PreceptGenDef TG_AutomaticApprovesOfCharity;
+		public static PreceptGenDef TG_AutomaticApprovesOfSlavery;
 	}
 }

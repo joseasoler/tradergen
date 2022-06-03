@@ -48,19 +48,26 @@ namespace TG.Ideo
 		{
 			// Generic flags which may be added in any precept.
 			var approvesOfCharity = false;
+			var approvesOfSlavery = false;
 
 			var preceptGenDefs = new List<PreceptGenDef>();
 
 			foreach (var precept in ideo.PreceptsListForReading)
 			{
 				approvesOfCharity = approvesOfCharity || precept.def.approvesOfCharity;
+				approvesOfSlavery = approvesOfSlavery || precept.def.approvesOfSlavery;
 			}
-			
+
 
 			// Automatically adds some PreceptGens based on the precepts checked before.
 			if (approvesOfCharity)
 			{
 				preceptGenDefs.Add(PreceptGen.TG_AutomaticApprovesOfCharity);
+			}
+
+			if (approvesOfSlavery)
+			{
+				preceptGenDefs.Add(PreceptGen.TG_AutomaticApprovesOfSlavery);
 			}
 
 			return preceptGenDefs;
@@ -77,7 +84,6 @@ namespace TG.Ideo
 
 			foreach (var preceptGenDef in preceptGenDefs)
 			{
-
 				_visitorStockGens[key].AddRange(preceptGenDef.visitorStockGens);
 				_traderStockGens[key].AddRange(preceptGenDef.traderStockGens);
 				_settlementStockGens[key].AddRange(preceptGenDef.settlementStockGens);
