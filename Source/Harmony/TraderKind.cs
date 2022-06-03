@@ -5,7 +5,7 @@ using TG.Mod;
 namespace TG.Harmony
 {
 	[HarmonyPatch]
-	public static class TraderKindDefCommonality
+	public static class TraderKind
 	{
 		/// <summary>
 		/// Overrides commonalityMultFromPopulationIntent if requested.
