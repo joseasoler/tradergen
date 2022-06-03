@@ -30,6 +30,7 @@
 		<Compile Include="Harmony\IdeoInvalidateCache.cs" />
 		<Compile Include="Harmony\PawnSpawnAfterLoad.cs" />
 		<Compile Include="Harmony\Mod\TraderShips.cs" />
+		<Compile Include="Harmony\Settlement.cs" />
 		<Compile Include="Harmony\TraderKindDefCommonality.cs" />
 		<Compile Include="Harmony\TraderStock.cs" />
 		<Compile Include="Harmony\TradeShip.cs" />
@@ -39,6 +40,7 @@
 		<Compile Include="Logger.cs" />
 		<Compile Include="Mod\Settings.cs" />
 		<Compile Include="Mod\Mod.cs" />
+		<Compile Include="Settlement\SettlementTraderData.cs" />
 		<Compile Include="SpecializationCommonality.cs" />
 		<Compile Include="StockGen\Alcohol.cs" />
 		<Compile Include="StockGen\AnimalMultiDef.cs" />
