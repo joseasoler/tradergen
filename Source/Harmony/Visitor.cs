@@ -11,6 +11,11 @@ namespace TG.Harmony
 	[HarmonyPatch]
 	public class Visitor
 	{
+		/// <summary>
+		/// Inject a modified TraderKindDef into the visitor trader generation process.
+		/// </summary>
+		/// <param name="instructions">Original set of instructions.</param>
+		/// <returns>New set of instructions.</returns>
 		[HarmonyTranspiler]
 		[HarmonyPatch(typeof(IncidentWorker_VisitorGroup),
 			nameof(IncidentWorker_VisitorGroup.TryConvertOnePawnToSmallTrader))]
@@ -27,26 +32,26 @@ namespace TG.Harmony
 				{
 					continue;
 				}
-	
-				// Set the previously generated TraderKindDef as an argument.
-				yield return new CodeInstruction(opcode: OpCodes.Ldloc_2);
+
+				// traderKindDef is the first argument of Generator.Def.
+				yield return new CodeInstruction(OpCodes.Ldloc_2);
 
 				// Set the chosen deterministic generation seed.
 				// Load the pawn as an argument.
-				yield return new CodeInstruction(opcode: OpCodes.Ldloc_0);
-				// Obtain the random price factor seed. The result is set as the second argument.
+				yield return new CodeInstruction(OpCodes.Ldloc_0);
+				// Obtain the random price factor seed. The result is set as the second argument of Generator.Def.
 				yield return new CodeInstruction(OpCodes.Call,
 					AccessTools.Property(typeof(Pawn), nameof(Pawn.RandomPriceFactorSeed)).GetGetMethod());
 
-				// Set the map as an argument.
-				yield return new CodeInstruction(opcode: OpCodes.Ldarg_3);
-				// Set the faction as an argument.
-				yield return new CodeInstruction(opcode: OpCodes.Ldarg_2);
-				// Perform the call.
+				// Load the pawn as the third argument of Generator.Def.
+				yield return new CodeInstruction(OpCodes.Ldloc_0);
+
+				// Perform the Generator.Def call.
 				yield return CodeInstruction.Call(typeof(Generator), nameof(Generator.Def),
-					new[] {typeof(TraderKindDef), typeof(int), typeof(Map), typeof(Faction)});
+					new[] {typeof(TraderKindDef), typeof(int), typeof(Pawn)});
 				// Pop the result and assign it into the traderKindDef variable
-				yield return new CodeInstruction(opcode: OpCodes.Stloc_2);
+				yield return new CodeInstruction(OpCodes.Stloc_2);
+
 				// Disallow further modifications.
 				traderKindInjected = true;
 			}

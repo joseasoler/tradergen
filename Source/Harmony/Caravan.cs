@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Reflection.Emit;
 using HarmonyLib;
 using RimWorld;
 using TG.TraderKind;
@@ -10,33 +11,67 @@ namespace TG.Harmony
 	public class Caravan
 	{
 		/// <summary>
-		/// Inject a modified TraderKindDef into the caravan generation process.
-		/// This implementation takes advantage of the fact that GeneratePawns will use parms.traderKind if it is available.
+		/// Injects a modified TraderKindDef into the caravan generation process.
 		/// </summary>
-		[HarmonyPrefix]
+		[HarmonyTranspiler]
 		[HarmonyPatch(typeof(PawnGroupKindWorker_Trader), nameof(PawnGroupKindWorker_Trader.GeneratePawns))]
-		private static bool InjectModifiedTrader(ref PawnGroupMakerParms parms, PawnGroupMaker groupMaker,
-			List<Pawn> outPawns, bool errorOnZeroResults)
+		private static IEnumerable<CodeInstruction> InjectModifiedTrader(IEnumerable<CodeInstruction> instructions)
 		{
-			if (parms.faction == null || parms.faction.def.caravanTraderKinds.Count == 0)
+			var traderKindInjected = false;
+			foreach (var code in instructions)
 			{
-				return true;
-			}
+				yield return code;
 
-			if (parms.traderKind == null)
-			{
-				parms.traderKind =
-					parms.faction.def.caravanTraderKinds.RandomElementByWeight(traderDef => traderDef.CalculatedCommonality);
-			}
+				// GeneratePawns stores the trader pawn using Stloc_1.
+				// The injection point is right after that call.
+				if (traderKindInjected || code.opcode != OpCodes.Stloc_1)
+				{
+					continue;
+				}
 
-			// Avoid modifying favor traders.
-			if (parms.traderKind.tradeCurrency != TradeCurrency.Favor)
-			{
-				// Deterministic seed is not implemented for pawn generation.
-				parms.traderKind = Generator.Def(parms.traderKind, -1, parms.tile, parms.faction);
-			}
+				// traderKindDef is the first argument of Generator.Def.
+				yield return new CodeInstruction(OpCodes.Ldloc_0);
 
-			return true;
+				// Set the chosen deterministic generation seed.
+				// Load the pawn as an argument.
+				yield return new CodeInstruction(OpCodes.Ldloc_1);
+				// Obtain the random price factor seed. The result is set as the second argument of Generator.Def.
+				yield return new CodeInstruction(OpCodes.Call,
+					AccessTools.Property(typeof(Pawn), nameof(Pawn.RandomPriceFactorSeed)).GetGetMethod());
+
+				// Load the parms object.
+				yield return new CodeInstruction(OpCodes.Ldarg_1);
+				// Load the map tile as the third argument of Generator.Def.
+				yield return new CodeInstruction(OpCodes.Ldfld,
+					AccessTools.Field(typeof(PawnGroupMakerParms), nameof(PawnGroupMakerParms.tile)));
+
+				// Load the parms object.
+				yield return new CodeInstruction(OpCodes.Ldarg_1);
+				// Load the faction as the fourth and final argument of Generator.Def.
+				yield return new CodeInstruction(OpCodes.Ldfld,
+					AccessTools.Field(typeof(PawnGroupMakerParms), nameof(PawnGroupMakerParms.faction)));
+
+				// Perform the Generator.Def call.
+				yield return CodeInstruction.Call(typeof(Generator), nameof(Generator.Def),
+					new[] {typeof(TraderKindDef), typeof(int), typeof(int), typeof(Faction)});
+				// Pop the result and assign it into the traderKindDef variable
+				yield return new CodeInstruction(OpCodes.Stloc_0);
+
+				// At this point, the pawn trader tracker still holds the template traderKindDef.
+
+				// Load the pawn as an argument.
+				yield return new CodeInstruction(OpCodes.Ldloc_1);
+				// Load the pawn trader tracker.
+				yield return new CodeInstruction(OpCodes.Ldfld, AccessTools.Field(typeof(Pawn), nameof(Pawn.trader)));
+				// Load the traderKindDef.
+				yield return new CodeInstruction(OpCodes.Ldloc_0);
+				// Store it into the pawn trader tracker.
+				yield return new CodeInstruction(OpCodes.Stfld,
+					AccessTools.Field(typeof(Pawn_TraderTracker), nameof(Pawn_TraderTracker.traderKind)));
+
+				// Disallow further modifications.
+				traderKindInjected = true;
+			}
 		}
 	}
 }

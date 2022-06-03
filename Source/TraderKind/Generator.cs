@@ -146,12 +146,11 @@ namespace TG.TraderKind
 		/// </summary>
 		/// <param name="originalDef">Template TraderKindDef</param>
 		/// <param name="seed">Seed to use for deterministic generation of TraderKindDefs.</param>
-		/// <param name="map">Map in which the transaction takes place.</param>
-		/// <param name="faction">Faction of the trader.</param>
+		/// <param name="pawn">Trader pawn.</param>
 		/// <returns>New TraderKindDef. The caller is responsible for managing its life cycle.</returns>
-		public static TraderKindDef Def(TraderKindDef originalDef, int seed, Map map, Faction faction)
+		public static TraderKindDef Def(TraderKindDef originalDef, int seed, Pawn pawn)
 		{
-			return Def(originalDef, seed, map?.Tile ?? -1, faction);
+			return Def(originalDef, seed, pawn.Map.Tile, pawn.Faction);
 		}
 
 		/// <summary>
@@ -170,6 +169,12 @@ namespace TG.TraderKind
 		/// <returns>New TraderKindDef. The caller is responsible for managing its life cycle.</returns>
 		public static TraderKindDef Def(TraderKindDef originalDef, int seed, int tile, Faction faction)
 		{
+			// The TraderGen system is not intended for favor traders.
+			if (originalDef.tradeCurrency == TradeCurrency.Favor)
+			{
+				return originalDef;
+			}
+
 			Logger.Gen($"Generating stock for {originalDef.defName}.");
 			var def = originalDef.ShallowClone();
 			def.generated = true;
