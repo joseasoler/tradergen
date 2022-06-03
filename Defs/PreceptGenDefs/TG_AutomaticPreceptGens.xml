@@ -61,4 +61,11 @@
 			</li>
 		</settlementStockGens>
 	</TG.Ideo.PreceptGenDef>
+	<!-- Added automatically for ideologies lacking any precept setting likesHumanLeatherApparel to true. -->
+	<TG.Ideo.PreceptGenDef>
+		<defName>TG_AutomaticDislikesHumanApparel</defName>
+		<stockRules>
+			<li Class="TG.Ideo.Rule.NoHumanLeatherPurchase"/>
+		</stockRules>
+	</TG.Ideo.PreceptGenDef>
 </Defs>

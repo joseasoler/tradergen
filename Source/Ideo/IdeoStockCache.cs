@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using RimWorld;
 using TG.DefOf;
 using Verse;
+using Thing = TG.DefOf.Thing;
 
 namespace TG.Ideo
 {
@@ -30,6 +31,11 @@ namespace TG.Ideo
 			new Dictionary<int, List<StockGenerator>>();
 
 		/// <summary>
+		/// Traders following this ideology refuse to purchase these items.
+		/// </summary>
+		private readonly Dictionary<int, HashSet<ThingDef>> _willNotPurchase = new Dictionary<int, HashSet<ThingDef>>();
+
+		/// <summary>
 		/// Caches the IdeoStockCache to avoid Current.Game.GetComponent calls.
 		/// </summary>
 		public static IdeoStockCache Instance;
@@ -49,6 +55,7 @@ namespace TG.Ideo
 			// Generic flags which may be added in any precept.
 			var approvesOfCharity = false;
 			var approvesOfSlavery = false;
+			var likesHumanLeatherApparel = false;
 
 			var preceptGenDefs = new List<PreceptGenDef>();
 
@@ -56,6 +63,7 @@ namespace TG.Ideo
 			{
 				approvesOfCharity = approvesOfCharity || precept.def.approvesOfCharity;
 				approvesOfSlavery = approvesOfSlavery || precept.def.approvesOfSlavery;
+				likesHumanLeatherApparel = likesHumanLeatherApparel || precept.def.likesHumanLeatherApparel;
 			}
 
 
@@ -70,6 +78,11 @@ namespace TG.Ideo
 				preceptGenDefs.Add(PreceptGen.TG_AutomaticApprovesOfSlavery);
 			}
 
+			if (!likesHumanLeatherApparel)
+			{
+				preceptGenDefs.Add(PreceptGen.TG_AutomaticDislikesHumanApparel);
+			}
+
 			return preceptGenDefs;
 		}
 
@@ -82,11 +95,24 @@ namespace TG.Ideo
 		{
 			var key = ideo.id;
 
+			var rules = new List<Rule.Rule>();
 			foreach (var preceptGenDef in preceptGenDefs)
 			{
 				_visitorStockGens[key].AddRange(preceptGenDef.visitorStockGens);
 				_traderStockGens[key].AddRange(preceptGenDef.traderStockGens);
 				_settlementStockGens[key].AddRange(preceptGenDef.settlementStockGens);
+				rules.AddRange(preceptGenDef.stockRules);
+			}
+
+			foreach (var def in DefDatabase<ThingDef>.AllDefs)
+			{
+				foreach (var rule in rules)
+				{
+					if (rule.ForbidsPurchase(def))
+					{
+						_willNotPurchase[key].Add(def);
+					}
+				}
 			}
 		}
 
@@ -96,6 +122,7 @@ namespace TG.Ideo
 			_visitorStockGens.Remove(key);
 			_traderStockGens.Remove(key);
 			_settlementStockGens.Remove(key);
+			_willNotPurchase.Remove(key);
 		}
 
 		/// <summary>
@@ -114,6 +141,7 @@ namespace TG.Ideo
 			_visitorStockGens[key] = new List<StockGenerator>();
 			_traderStockGens[key] = new List<StockGenerator>();
 			_settlementStockGens[key] = new List<StockGenerator>();
+			_willNotPurchase[key] = new HashSet<ThingDef>();
 
 			var preceptGenDefs = GatherPreceptGens(ideo);
 			EvaluatePreceptGens(ideo, preceptGenDefs);
@@ -147,6 +175,17 @@ namespace TG.Ideo
 		public List<StockGenerator> SettlementStockGens(RimWorld.Ideo ideo)
 		{
 			return _settlementStockGens.ContainsKey(ideo.id) ? _settlementStockGens[ideo.id] : new List<StockGenerator>();
+		}
+
+		/// <summary>
+		/// Checks if an ideology allows purchasing a specific item.
+		/// </summary>
+		/// <param name="ideoId">Id of the ideology to check.</param>
+		/// <param name="def">Item to check</param>
+		/// <returns>True if the item can be purchased.</returns>
+		public bool Purchases(int ideoId, ThingDef def)
+		{
+			return !_willNotPurchase.ContainsKey(ideoId) || !_willNotPurchase[ideoId].Contains(def);
 		}
 	}
 }

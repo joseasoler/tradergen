@@ -18,6 +18,8 @@ namespace TG.Harmony
 			var harmony = new HarmonyLib.Harmony("joseasoler.TraderGen");
 			// Annotation patches.
 			harmony.PatchAll(Assembly.GetExecutingAssembly());
+			// DLC-specific patches
+			DLC.IdeologyTraderKind.Patch(harmony);
 			// Manual patching for other mods.
 			Mod.TraderShips.Patch(harmony);
 		}

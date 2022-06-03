@@ -178,6 +178,17 @@ namespace TG.TraderKind
 			Logger.Gen($"Generating stock for {originalDef.defName}.");
 			var def = originalDef.ShallowClone();
 			def.generated = true;
+			if (faction != null)
+			{
+				// Allows StockGenerators to know which factionDef generated the trader, if any.
+				def.faction = faction.def;
+				if (ModsConfig.IdeologyActive)
+				{
+					// Since debugRandomId appears to be unused, it is used by TraderGen to cache the ideo id.
+					def.debugRandomId = (ushort) (faction.ideos.PrimaryIdeo?.id ?? ushort.MaxValue);
+				}
+			}
+
 			def.stockGenerators = new List<StockGenerator>();
 
 			Rand.PushState(seed);

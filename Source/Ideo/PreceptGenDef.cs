@@ -26,6 +26,11 @@ namespace TG.Ideo
 		public List<StockGenerator> settlementStockGens = new List<StockGenerator>();
 
 		/// <summary>
+		/// Contains rules which may prevent stock from being purchased, generated or sold.
+		/// </summary>
+		public List<Rule.Rule> stockRules = new List<Rule.Rule>();
+
+		/// <summary>
 		/// Displays all XML configuration errors.
 		/// </summary>
 		/// <returns>Errors triggered by the data contained in this structure.</returns>
@@ -47,6 +52,11 @@ namespace TG.Ideo
 			}
 
 			foreach (var error in settlementStockGens.SelectMany(stockGenerator => stockGenerator.ConfigErrors(null)))
+			{
+				yield return error;
+			}
+
+			foreach (var error in stockRules.SelectMany(rule => rule.ConfigErrors()))
 			{
 				yield return error;
 			}
