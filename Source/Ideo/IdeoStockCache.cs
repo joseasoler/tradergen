@@ -2,7 +2,6 @@ using System.Collections.Generic;
 using RimWorld;
 using TG.DefOf;
 using Verse;
-using Thing = TG.DefOf.Thing;
 
 namespace TG.Ideo
 {
@@ -78,10 +77,9 @@ namespace TG.Ideo
 				preceptGenDefs.Add(PreceptGen.TG_AutomaticApprovesOfSlavery);
 			}
 
-			if (!likesHumanLeatherApparel)
-			{
-				preceptGenDefs.Add(PreceptGen.TG_AutomaticDislikesHumanApparel);
-			}
+			preceptGenDefs.Add(likesHumanLeatherApparel
+				? PreceptGen.TG_AutomaticLikesHumanApparel
+				: PreceptGen.TG_AutomaticDislikesHumanApparel);
 
 			return preceptGenDefs;
 		}

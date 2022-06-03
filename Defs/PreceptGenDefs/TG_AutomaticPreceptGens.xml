@@ -68,4 +68,28 @@
 			<li Class="TG.Ideo.Rule.NoHumanLeatherPurchase"/>
 		</stockRules>
 	</TG.Ideo.PreceptGenDef>
+	<!-- Added automatically for ideologies with any precept setting likesHumanLeatherApparel to true. -->
+	<TG.Ideo.PreceptGenDef>
+		<defName>TG_AutomaticLikesHumanApparel</defName>
+		<visitorStockGens>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>Leather_Human</thingDef>
+			</li>
+		</visitorStockGens>
+		<traderStockGens>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>Leather_Human</thingDef>
+			</li>
+		</traderStockGens>
+		<settlementStockGens>
+			<li Class="TG.StockGen.StuffFromThingDef">
+				<availableThingDefs>
+					<li>Leather_Human</li>
+				</availableThingDefs>
+				<stuffCountRange>100~200</stuffCountRange>
+				<thingDefCountRange>2~3</thingDefCountRange>
+				<countRange>1</countRange>
+			</li>
+		</settlementStockGens>
+	</TG.Ideo.PreceptGenDef>
 </Defs>
