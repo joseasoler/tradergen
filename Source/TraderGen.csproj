@@ -29,6 +29,7 @@
 		<Compile Include="GenExtension.cs" />
 		<Compile Include="Harmony\Caravan.cs" />
 		<Compile Include="Harmony\DLC\IdeologyTraderKind.cs" />
+		<Compile Include="Harmony\DLC\IdeologyStockGeneratorCount.cs" />
 		<Compile Include="Harmony\IdeoInvalidateCache.cs" />
 		<Compile Include="Harmony\PawnSpawnAfterLoad.cs" />
 		<Compile Include="Harmony\Mod\TraderShips.cs" />
@@ -40,6 +41,7 @@
 		<Compile Include="Ideo\IdeoStockCache.cs" />
 		<Compile Include="Ideo\PreceptGenDef.cs" />
 		<Compile Include="Ideo\Rule\NoHumanLeatherPurchase.cs" />
+		<Compile Include="Ideo\Rule\NoRawVegetables.cs" />
 		<Compile Include="Ideo\Rule\Rule.cs" />
 		<Compile Include="Logger.cs" />
 		<Compile Include="Mod\Settings.cs" />

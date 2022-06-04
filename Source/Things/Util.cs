@@ -46,5 +46,15 @@ namespace TG.Things
 				select (IngestionOutcomeDoer_GiveHediff) outcomeDoer).Any(o =>
 				o.hediffDef?.hediffClass == typeof(Hediff_Alcohol));
 		}
+
+		/// <summary>
+		/// Checks if the def is a type of raw vegetable food.
+		/// </summary>
+		/// <param name="def">Provided ThingDef</param>
+		/// <returns>True for all raw vegetarian foods.</returns>
+		public static bool IsRawVegetable(in ThingDef def)
+		{
+			return def.IsIngestible && def.ingestible.foodType.HasFlag(FoodTypeFlags.VegetableOrFruit);
+		}
 	}
 }

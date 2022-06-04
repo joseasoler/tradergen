@@ -26,5 +26,15 @@ namespace TG.Ideo.Rule
 		{
 			return false;
 		}
+
+		/// <summary>
+		/// Items that this rule forbids traders from having in stock.
+		/// </summary>
+		/// <param name="def">Item to check.</param>
+		/// <returns>True if the rule does not impede having this item in stock.</returns>
+		public virtual bool ForbidsStocking(in ThingDef def)
+		{
+			return false;
+		}
 	}
 }

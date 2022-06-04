@@ -35,6 +35,11 @@ namespace TG.Ideo
 		private readonly Dictionary<int, HashSet<ThingDef>> _willNotPurchase = new Dictionary<int, HashSet<ThingDef>>();
 
 		/// <summary>
+		/// Traders following this ideology never have these items in stock.
+		/// </summary>
+		private readonly Dictionary<int, HashSet<ThingDef>> _willNotStock = new Dictionary<int, HashSet<ThingDef>>();
+
+		/// <summary>
 		/// Caches the IdeoStockCache to avoid Current.Game.GetComponent calls.
 		/// </summary>
 		public static IdeoStockCache Instance;
@@ -55,6 +60,7 @@ namespace TG.Ideo
 			var approvesOfCharity = false;
 			var approvesOfSlavery = false;
 			var likesHumanLeatherApparel = false;
+			var willNotStockRawVegetables = false;
 
 			var preceptGenDefs = new List<PreceptGenDef>();
 
@@ -63,6 +69,7 @@ namespace TG.Ideo
 				approvesOfCharity = approvesOfCharity || precept.def.approvesOfCharity;
 				approvesOfSlavery = approvesOfSlavery || precept.def.approvesOfSlavery;
 				likesHumanLeatherApparel = likesHumanLeatherApparel || precept.def.likesHumanLeatherApparel;
+				willNotStockRawVegetables = willNotStockRawVegetables || precept.def.disallowFarmingCamps;
 			}
 
 
@@ -80,6 +87,11 @@ namespace TG.Ideo
 			preceptGenDefs.Add(likesHumanLeatherApparel
 				? PreceptGen.TG_AutomaticLikesHumanApparel
 				: PreceptGen.TG_AutomaticDislikesHumanApparel);
+
+			if (willNotStockRawVegetables)
+			{
+				preceptGenDefs.Add(PreceptGen.TG_AutomaticNoRawVegetables);
+			}
 
 			return preceptGenDefs;
 		}
@@ -110,6 +122,11 @@ namespace TG.Ideo
 					{
 						_willNotPurchase[key].Add(def);
 					}
+
+					if (rule.ForbidsStocking(def))
+					{
+						_willNotStock[key].Add(def);
+					}
 				}
 			}
 		}
@@ -121,6 +138,7 @@ namespace TG.Ideo
 			_traderStockGens.Remove(key);
 			_settlementStockGens.Remove(key);
 			_willNotPurchase.Remove(key);
+			_willNotStock.Remove(key);
 		}
 
 		/// <summary>
@@ -140,6 +158,7 @@ namespace TG.Ideo
 			_traderStockGens[key] = new List<StockGenerator>();
 			_settlementStockGens[key] = new List<StockGenerator>();
 			_willNotPurchase[key] = new HashSet<ThingDef>();
+			_willNotStock[key] = new HashSet<ThingDef>();
 
 			var preceptGenDefs = GatherPreceptGens(ideo);
 			EvaluatePreceptGens(ideo, preceptGenDefs);
@@ -184,6 +203,17 @@ namespace TG.Ideo
 		public bool Purchases(int ideoId, ThingDef def)
 		{
 			return !_willNotPurchase.ContainsKey(ideoId) || !_willNotPurchase[ideoId].Contains(def);
+		}
+
+		/// <summary>
+		/// Checks if an ideology allows having a specific item in stock.
+		/// </summary>
+		/// <param name="ideoId">Id of the ideology to check.</param>
+		/// <param name="def">Item to check</param>
+		/// <returns>True if the item can be in stock.</returns>
+		public bool Stocks(int ideoId, ThingDef def)
+		{
+			return !_willNotPurchase.ContainsKey(ideoId) || !_willNotStock[ideoId].Contains(def);
 		}
 	}
 }

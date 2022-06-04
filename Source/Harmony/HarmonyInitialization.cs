@@ -20,6 +20,7 @@ namespace TG.Harmony
 			harmony.PatchAll(Assembly.GetExecutingAssembly());
 			// DLC-specific patches
 			DLC.IdeologyTraderKind.Patch(harmony);
+			DLC.StockGeneratorCount.Patch(harmony);
 			// Manual patching for other mods.
 			Mod.TraderShips.Patch(harmony);
 		}
