@@ -1,3 +1,4 @@
+using RimWorld;
 using TG.Ideo;
 
 namespace TG.DefOf
@@ -10,5 +11,7 @@ namespace TG.DefOf
 		public static PreceptGenDef TG_AutomaticDislikesHumanApparel;
 		public static PreceptGenDef TG_AutomaticLikesHumanApparel;
 		public static PreceptGenDef TG_AutomaticNoRawVegetables;
+
+		static PreceptGen() => DefOfHelper.EnsureInitializedInCtor(typeof (PreceptGen));
 	}
 }

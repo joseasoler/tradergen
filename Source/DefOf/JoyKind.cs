@@ -6,5 +6,7 @@ namespace TG.DefOf
 	public class JoyKind
 	{
 		public static JoyKindDef Chemical;
+
+		static JoyKind() => DefOfHelper.EnsureInitializedInCtor(typeof (JoyKind));
 	}
 }

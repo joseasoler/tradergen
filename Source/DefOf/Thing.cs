@@ -1,3 +1,4 @@
+using RimWorld;
 using Verse;
 
 namespace TG.DefOf
@@ -6,5 +7,7 @@ namespace TG.DefOf
 	public class Thing
 	{
 		public static ThingDef Leather_Human;
+
+		static Thing() => DefOfHelper.EnsureInitializedInCtor(typeof (Thing));
 	}
 }

@@ -1,3 +1,4 @@
+using RimWorld;
 using Verse;
 
 namespace TG.DefOf
@@ -15,5 +16,7 @@ namespace TG.DefOf
 		public static ThingCategoryDef FoodRaw;
 		public static ThingCategoryDef Grenades;
 		public static ThingCategoryDef InertRelics;
+
+		static ThingCategory() => DefOfHelper.EnsureInitializedInCtor(typeof(ThingCategory));
 	}
 }
