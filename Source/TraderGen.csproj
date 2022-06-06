@@ -25,8 +25,11 @@
 		<Compile Include="DefOf\JoyKind.cs" />
 		<Compile Include="DefOf\ThingCategory.cs" />
 		<Compile Include="GenExtension.cs" />
+		<Compile Include="Harmony\DialogSellableItems.cs" />
+		<Compile Include="Harmony\DialogTrade.cs" />
+		<Compile Include="Harmony\HarmonyUtils.cs" />
 		<Compile Include="Harmony\Mod\TraderShips.cs" />
-		<Compile Include="Harmony\TraderKindDefCommonality.cs" />
+		<Compile Include="Harmony\TraderKind.cs" />
 		<Compile Include="Harmony\TraderStock.cs" />
 		<Compile Include="Harmony\TradeShip.cs" />
 		<Compile Include="Logger.cs" />
@@ -55,7 +58,8 @@
 		<Compile Include="StockGen\Weapon.cs" />
 		<Compile Include="StockGen\WeaponMelee.cs" />
 		<Compile Include="StockGen\WeaponRanged.cs" />
-		<Compile Include="TraderKind\Generator.cs" />
+		<Compile Include="TraderKind\Cache.cs" />
+		<Compile Include="TraderKind\TraderKindCategory.cs" />
 		<Compile Include="TraderKind\Util.cs" />
 		<Compile Include="TraderSpecializationDef.cs" />
 		<Reference Include="System" />

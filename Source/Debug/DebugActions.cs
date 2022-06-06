@@ -62,7 +62,7 @@ namespace TG.Debug
 					Logger.Message($"{traderKindDef.label}:");
 					for (var index = 0; index < 50; ++index)
 					{
-						Logger.Message($"\t{Generator.Name(traderKindDef, null)}");
+						Logger.Message($"\t{Cache.Name(Rand.Int, traderKindDef, null)}");
 					}
 				}))
 				.ToList();
