@@ -47,14 +47,17 @@ namespace TG.Things
 				o.hediffDef?.hediffClass == typeof(Hediff_Alcohol));
 		}
 
+		private static readonly FoodTypeFlags[] vegan =
+			{FoodTypeFlags.VegetableOrFruit, FoodTypeFlags.Seed};
+
 		/// <summary>
-		/// Checks if the def is a type of raw vegetable food.
+		/// Checks if the def is a type of raw vegan food. Ignores fungus as that is handled by other precept.
 		/// </summary>
 		/// <param name="def">Provided ThingDef</param>
-		/// <returns>True for all raw vegetarian foods.</returns>
-		public static bool IsRawVegetable(in ThingDef def)
+		/// <returns>True for all raw vegan foods.</returns>
+		public static bool IsRawVegan(ThingDef def)
 		{
-			return def.IsIngestible && def.ingestible.foodType.HasFlag(FoodTypeFlags.VegetableOrFruit);
+			return def.IsIngestible && vegan.Any(flag => def.ingestible.foodType.HasFlag(flag));
 		}
 	}
 }

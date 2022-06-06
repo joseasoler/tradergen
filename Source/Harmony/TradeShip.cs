@@ -1,4 +1,6 @@
-﻿using HarmonyLib;
+﻿using System.Collections.Generic;
+using System.Reflection.Emit;
+using HarmonyLib;
 using RimWorld;
 using TG.TraderKind;
 using Verse;
@@ -6,25 +8,68 @@ using Verse;
 namespace TG.Harmony
 {
 	/// <summary>
-	/// Patches required for orbital trader compatibility.
+	/// Handles Orbital Trade Ship information.
 	/// </summary>
-	[HarmonyPatch]
 	public static class TradeShipGen
 	{
 		/// <summary>
-		/// Replaces the chosen TraderKindDef with a shallow copy with all required StockGenerators properly initialized. 
+		/// Apply the Harmony patches for orbital trader compatibility. Some patches are conditionally applied only if
+		/// the Trader Ships mod is not loaded.
+		/// </summary>
+		/// <param name="harmony">Harmony library instance.</param>
+		public static void Patch(HarmonyLib.Harmony harmony)
+		{
+			var tradeShipConstructor =
+				AccessTools.Constructor(typeof(TradeShip), new[] {typeof(TraderKindDef), typeof(Faction)});
+			var tradeShipGeneration =
+				new HarmonyMethod(AccessTools.Method(typeof(TradeShipGen), nameof(TradeShipGeneration)));
+			harmony.Patch(tradeShipConstructor, postfix: tradeShipGeneration);
+
+			var tradeShipFullTitle = AccessTools.PropertyGetter(typeof(TradeShip), nameof(TradeShip.FullTitle));
+			var tradeShipNamePatch = new HarmonyMethod(AccessTools.Method(typeof(TradeShipGen), nameof(TradeShipLabel)));
+			harmony.Patch(tradeShipFullTitle, postfix: tradeShipNamePatch);
+			var tradeShipCallLabel = AccessTools.Method(typeof(TradeShip), nameof(TradeShip.GetCallLabel));
+			harmony.Patch(tradeShipCallLabel, postfix: tradeShipNamePatch);
+
+			var tradeShipArrival = AccessTools.Method(typeof(IncidentWorker_OrbitalTraderArrival),
+				nameof(IncidentWorker_OrbitalTraderArrival.TryExecuteWorker));
+			var tradeShipArrivalLabel =
+				new HarmonyMethod(AccessTools.Method(typeof(TradeShipGen), nameof(TradeShipArrivalLabel)));
+			harmony.Patch(tradeShipArrival, transpiler: tradeShipArrivalLabel);
+
+			if (HarmonyUtils.TraderShipsEnabled())
+			{
+				return;
+			}
+
+			// See Mod.TraderShips for details.
+			var tradeShipExposeData = AccessTools.Method(typeof(TradeShip), nameof(TradeShip.ExposeData));
+			var tradeShipLoad =
+				new HarmonyMethod(AccessTools.Method(typeof(TradeShipGen), nameof(TradeShipLoad)));
+			harmony.Patch(tradeShipExposeData, postfix: tradeShipLoad);
+
+			var tradeShipDepart = AccessTools.Method(typeof(TradeShip), nameof(TradeShip.Depart));
+			var tradeShipClear =
+				new HarmonyMethod(AccessTools.Method(typeof(TradeShipGen), nameof(TradeShipClear)));
+			harmony.Patch(tradeShipDepart, postfix: tradeShipClear);
+		}
+
+		/// <summary>
+		/// Sets the seed that will be used for random generation of orbital trader information.
+		/// Patches the name of the orbital trader.
+		/// Temporarily changes the label of the TraderKindDef so
 		/// </summary>
 		/// <param name="def">Constructor parameter.</param>
 		/// <param name="faction">Constructor parameter.</param>
 		/// <param name="__instance">TradeShip instance.</param>
-		[HarmonyPostfix]
-		[HarmonyPatch(typeof(TradeShip), MethodType.Constructor, typeof(TraderKindDef), typeof(Faction))]
-		private static void ConstructTraderKindDef(TraderKindDef def, Faction faction, ref TradeShip __instance)
+		private static void TradeShipGeneration(TraderKindDef def, Faction faction, ref TradeShip __instance)
 		{
-			__instance.def = Generator.Def(def, __instance.RandomPriceFactorSeed, __instance.Map?.Tile ?? -1,
-				__instance.faction);
+			Cache.SetSeed(__instance);
+			// The incident worker must know specializations to generate the letter. So for trade ships the cache is filled in
+			// earlier.
+			Cache.TryAdd(__instance.def, __instance.Map?.Tile ?? -1, faction);
 
-			var name = Generator.Name(__instance.def, __instance.faction);
+			var name = Cache.Name(__instance);
 			if (name != null)
 			{
 				__instance.name = name;
@@ -32,21 +77,108 @@ namespace TG.Harmony
 		}
 
 		/// <summary>
-		/// Regenerate the TraderKindDef after loading a trade ship.
-		/// Since the generated TraderKindDef has the same defName as the real one, TradeShip.ExposeData will "save"
-		/// the real TraderKindDef. When it is loaded, it will also get the real TraderKindDef. After the loading process is
-		/// finished, it is replaced with the generated TraderKindDef.
+		/// Obtains the call label of this ship.
+		/// </summary>
+		/// <param name="__instance">Trade Ship.</param>
+		private static void TradeShipLabel(TradeShip __instance, ref string __result)
+		{
+			var label = Util.Label(__instance);
+			__result = $"{__instance.name} ({label})";
+		}
+
+		/// <summary>
+		/// Update TraderKind.Cache when a trade ship is loaded.
 		/// </summary>
 		/// <param name="__instance">TradeShip instance.</param>
-		[HarmonyPostfix]
-		[HarmonyPatch(typeof(TradeShip), nameof(TradeShip.ExposeData))]
-		private static void LoadTraderKindDef(ref TradeShip __instance)
+		private static void TradeShipLoad(TradeShip __instance)
 		{
 			// Wait until Map and PassingShipManager are fully loaded before using them.
-			if (Scribe.mode == LoadSaveMode.PostLoadInit)
+			if (Scribe.mode != LoadSaveMode.PostLoadInit) return;
+			Cache.SetSeed(__instance);
+			Cache.TryAdd(__instance.def, __instance.Map?.Tile ?? -1, __instance.Faction);
+		}
+
+		/// <summary>
+		/// Remove trader information of the settlement from the cache.
+		/// </summary>
+		/// <param name="__instance">Pawn instance</param>
+		private static void TradeShipClear(TradeShip __instance)
+		{
+			Cache.Remove(__instance);
+		}
+
+		private static void SendOrbitalTraderArrivalLetter(IncidentWorker_OrbitalTraderArrival worker, IncidentParms parms,
+			TradeShip trader)
+		{
+			var name = trader.name;
+			var label = trader.def.label;
+			var factionStr = trader.Faction == null
+				? "TraderArrivalNoFaction".Translate()
+				: "TraderArrivalFromFaction".Translate(trader.Faction.Named("FACTION"));
+
+			var specializations = Cache.Specializations(trader);
+
+			TaggedString letterText;
+			if (specializations == null)
 			{
-				__instance.def = Generator.Def(__instance.def, __instance.RandomPriceFactorSeed, __instance.Map?.Tile ?? -1,
-					__instance.faction);
+				letterText = "TraderArrival".Translate(name, label, factionStr);
+			}
+			else
+			{
+				var specializationsStr = "";
+				for (var index = 0; index < specializations.Count - 1; ++index)
+				{
+					if (index > 0)
+					{
+						specializationsStr += ", ";
+					}
+
+					specializationsStr += specializations[index].label;
+				}
+
+				if (specializations.Count > 1)
+				{
+					specializationsStr += ' ' + "AndLower".Translate() + ' ';
+				}
+
+				specializationsStr += specializations[specializations.Count - 1].label;
+
+				letterText = "TraderArrivalSpecializations".Translate(name, label, specializationsStr, factionStr);
+			}
+
+			worker.SendStandardLetter(Util.Label(trader).CapitalizeFirst(), letterText, LetterDefOf.PositiveEvent, parms,
+				LookTargets.Invalid);
+		}
+
+		private static IEnumerable<CodeInstruction> TradeShipArrivalLabel(IEnumerable<CodeInstruction> instructions)
+		{
+			var getFaction = AccessTools.Method(typeof(IncidentWorker_OrbitalTraderArrival),
+				nameof(IncidentWorker_OrbitalTraderArrival.GetFaction));
+			var startLookingForInjectionPoint = false;
+			var injectionStart = false;
+			var injectionEnd = false;
+			foreach (var code in instructions)
+			{
+				// After getFaction is called, look for the injection point.
+				startLookingForInjectionPoint = startLookingForInjectionPoint || code.Calls(getFaction);
+				// Detect the first line that should be replaced.
+				if (startLookingForInjectionPoint && code.opcode == OpCodes.Ldloc_1 && !injectionStart)
+				{
+					injectionStart = true;
+					// Inject the new code. IncidentWorker_OrbitalTraderArrival should have been loaded right before.
+					yield return new CodeInstruction(OpCodes.Ldarg_1); // IncidentParms.
+					yield return new CodeInstruction(OpCodes.Ldloc_1); // TradeShip.
+					yield return new CodeInstruction(OpCodes.Call,
+						AccessTools.Method(typeof(TradeShipGen), nameof(SendOrbitalTraderArrivalLetter)));
+				}
+
+				// Detects the first line that should not be replaced.
+				injectionEnd = injectionEnd || injectionStart && code.opcode == OpCodes.Ldloc_0;
+
+				if (!injectionStart || injectionEnd)
+				{
+					yield return code;
+				}
 			}
 		}
 	}

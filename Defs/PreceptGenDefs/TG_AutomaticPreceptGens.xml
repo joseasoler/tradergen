@@ -43,6 +43,8 @@
 			</li>
 			<li Class="TG.StockGen.Drugs">
 				<drugCategory>Medical</drugCategory>
+				<!-- Prevents Luciferium from being generated. -->
+				<maxTechLevelGenerate>Spacer</maxTechLevelGenerate>
 				<thingDefCountRange>1~2</thingDefCountRange>
 				<totalPriceRange>500~900</totalPriceRange>
 			</li>
@@ -65,7 +67,7 @@
 	<TG.Ideo.PreceptGenDef>
 		<defName>TG_AutomaticDislikesHumanApparel</defName>
 		<stockRules>
-			<li Class="TG.Ideo.Rule.NoHumanLeatherPurchase"/>
+			<li Class="TG.Ideo.Rule.NoHumanLeather"/>
 		</stockRules>
 	</TG.Ideo.PreceptGenDef>
 	<!-- Added automatically for ideologies with any precept setting likesHumanLeatherApparel to true. -->
@@ -94,9 +96,9 @@
 	</TG.Ideo.PreceptGenDef>
 	<!-- Added automatically for ideologies with any precept disallowing farming camps. -->
 	<TG.Ideo.PreceptGenDef>
-		<defName>TG_AutomaticNoRawVegetables</defName>
+		<defName>TG_AutomaticNoRawVegan</defName>
 		<stockRules>
-			<li Class="TG.Ideo.Rule.NoRawVegetables"/>
+			<li Class="TG.Ideo.Rule.NoRawVegan"/>
 		</stockRules>
 	</TG.Ideo.PreceptGenDef>
 </Defs>

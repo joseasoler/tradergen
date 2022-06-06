@@ -1,4 +1,5 @@
-﻿using RimWorld;
+﻿using System.Linq;
+using RimWorld;
 using Verse;
 
 namespace TG.TraderKind
@@ -51,6 +52,19 @@ namespace TG.TraderKind
 			if (faction.def.baseTraderKinds.Contains(def)) return TraderKindCategory.Settlement;
 			if (faction.def.caravanTraderKinds.Contains(def)) return TraderKindCategory.Caravan;
 			return faction.def.visitorTraderKinds.Contains(def) ? TraderKindCategory.Visitor : TraderKindCategory.None;
+		}
+		
+		/// <summary>
+		/// Include specializations in the label of ta trader.
+		/// </summary>
+		/// <param name="trader">Trader being evaluated.</param>
+		/// <returns>Label to use for this ship.</returns>
+		public static string Label(ITrader trader)
+		{
+			var specializations = Cache.Specializations(trader);
+			return specializations == null
+				? trader.TraderKind.label
+				: $"{trader.TraderKind.label} ({string.Join(", ", specializations.Select(specialization => specialization.label))})";
 		}
 	}
 }

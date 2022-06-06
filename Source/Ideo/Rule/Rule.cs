@@ -4,7 +4,7 @@ using Verse;
 namespace TG.Ideo.Rule
 {
 	/// <summary>
-	/// All traders following an ideology with this rule will refuse to purchase, sell or stock the items returned by it.
+	/// All traders following an ideology with this rule will refuse to trade or stock the items returned by it.
 	/// </summary>
 	public abstract class Rule
 	{
@@ -18,11 +18,11 @@ namespace TG.Ideo.Rule
 		}
 
 		/// <summary>
-		/// Items that this rule forbids traders from purchasing.
+		/// Items that this rule forbids traders from trading.
 		/// </summary>
 		/// <param name="def">Item to check.</param>
-		/// <returns>True if the rule forbids purchasing this item.</returns>
-		public virtual bool ForbidsPurchase(in ThingDef def)
+		/// <returns>True if the rule forbids trading this item.</returns>
+		public virtual bool ForbidsTrading(in ThingDef def)
 		{
 			return false;
 		}

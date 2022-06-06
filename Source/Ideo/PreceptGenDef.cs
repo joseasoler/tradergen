@@ -26,7 +26,7 @@ namespace TG.Ideo
 		public List<StockGenerator> settlementStockGens = new List<StockGenerator>();
 
 		/// <summary>
-		/// Contains rules which may prevent stock from being purchased, generated or sold.
+		/// Contains rules which may prevent stock from being traded or generated..
 		/// </summary>
 		public List<Rule.Rule> stockRules = new List<Rule.Rule>();
 
