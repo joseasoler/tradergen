@@ -41,12 +41,12 @@
 		<Compile Include="Harmony\TradeShip.cs" />
 		<Compile Include="Ideo\IdeoStockCache.cs" />
 		<Compile Include="Ideo\PreceptGenDef.cs" />
-		<Compile Include="Ideo\Rule\NoHumanLeather.cs" />
-		<Compile Include="Ideo\Rule\NoRawVegan.cs" />
-		<Compile Include="Ideo\Rule\Rule.cs" />
 		<Compile Include="Logger.cs" />
 		<Compile Include="Mod\Settings.cs" />
 		<Compile Include="Mod\Mod.cs" />
+		<Compile Include="StockRule\NoHumanLeather.cs" />
+		<Compile Include="StockRule\NoRawVegan.cs" />
+		<Compile Include="StockRule\Rule.cs" />
 		<Compile Include="SpecializationCommonality.cs" />
 		<Compile Include="StockGen\Alcohol.cs" />
 		<Compile Include="StockGen\AnimalMultiDef.cs" />

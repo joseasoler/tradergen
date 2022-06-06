@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using Verse;
 
-namespace TG.Ideo.Rule
+namespace TG.StockRule
 {
 	/// <summary>
 	/// All traders following an ideology with this rule will refuse to trade or stock the items returned by it.

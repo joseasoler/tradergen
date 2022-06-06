@@ -90,7 +90,7 @@ namespace TG.Ideo
 		{
 			var key = ideo.id;
 
-			var rules = new List<Rule.Rule>();
+			var rules = new List<StockRule.Rule>();
 			foreach (var preceptGenDef in preceptGenDefs)
 			{
 				_visitorStockGens[key].AddRange(preceptGenDef.visitorStockGens);

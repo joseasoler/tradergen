@@ -1,7 +1,7 @@
 using TG.Things;
 using Verse;
 
-namespace TG.Ideo.Rule
+namespace TG.StockRule
 {
 	/// <summary>
 	/// Prevents stocking any raw vegetable or fruit.

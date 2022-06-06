@@ -1,6 +1,6 @@
 using Verse;
 
-namespace TG.Ideo.Rule
+namespace TG.StockRule
 {
 	/// <summary>
 	/// Prevents trading human leather.

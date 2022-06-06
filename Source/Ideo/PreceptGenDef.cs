@@ -28,7 +28,7 @@ namespace TG.Ideo
 		/// <summary>
 		/// Contains rules which may prevent stock from being traded or generated..
 		/// </summary>
-		public List<Rule.Rule> stockRules = new List<Rule.Rule>();
+		public List<StockRule.Rule> stockRules = new List<StockRule.Rule>();
 
 		/// <summary>
 		/// Displays all XML configuration errors.
