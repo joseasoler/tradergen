@@ -108,4 +108,11 @@
 			<li Class="TG.StockRule.NoRegularMeat"/>
 		</stockRules>
 	</TG.Ideo.PreceptGenDef>
+	<!-- Added automatically for ideologies with any precept disallowing logging camps. -->
+	<TG.Ideo.PreceptGenDef>
+		<defName>TG_AutomaticNoWoodyStock</defName>
+		<stockRules>
+			<li Class="TG.StockRule.NoWoodyStock"/>
+		</stockRules>
+	</TG.Ideo.PreceptGenDef>
 </Defs>

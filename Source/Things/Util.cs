@@ -69,5 +69,15 @@ namespace TG.Things
 		{
 			return def.IsIngestible && FoodUtility.GetMeatSourceCategory(def) == MeatSourceCategory.Undefined;
 		}
+
+		/// <summary>
+		/// Returns true if the provided def is a stuff of the woody category.
+		/// </summary>
+		/// <param name="def">Provided ThingDef</param>
+		/// <returns>True if the stuff is a type of wood.</returns>
+		public static bool IsWoodyStuff(in ThingDef def)
+		{
+			return def.stuffProps?.categories != null && def.stuffProps.categories.Contains(StuffCategoryDefOf.Woody);
+		}
 	}
 }

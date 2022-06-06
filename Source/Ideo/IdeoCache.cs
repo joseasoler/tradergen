@@ -41,12 +41,13 @@ namespace TG.Ideo
 
 		private static List<PreceptGenDef> GatherPreceptGens(RimWorld.Ideo ideo)
 		{
-			// Generic flags which may be added in any precept.
+			// Generic flags which may be added by any precept.
 			var approvesOfCharity = false;
 			var approvesOfSlavery = false;
 			var likesHumanLeatherApparel = false;
 			var willNotStockRawVegetables = false;
 			var willNotStockRegularMeat = false;
+			var willNotStockWood = false;
 
 			var preceptGenDefs = new List<PreceptGenDef>();
 
@@ -57,6 +58,7 @@ namespace TG.Ideo
 				likesHumanLeatherApparel = likesHumanLeatherApparel || precept.def.likesHumanLeatherApparel;
 				willNotStockRawVegetables = willNotStockRawVegetables || precept.def.disallowFarmingCamps;
 				willNotStockRegularMeat = willNotStockRegularMeat || precept.def.disallowHuntingCamps;
+				willNotStockWood = willNotStockWood || precept.def.disallowLoggingCamps;
 			}
 
 
@@ -83,6 +85,11 @@ namespace TG.Ideo
 			if (willNotStockRegularMeat)
 			{
 				preceptGenDefs.Add(PreceptGen.TG_AutomaticNoRegularMeat);
+			}
+
+			if (willNotStockWood)
+			{
+				preceptGenDefs.Add(PreceptGen.TG_AutomaticNoWoodyStock);
 			}
 
 			return preceptGenDefs;
