@@ -11,6 +11,7 @@ namespace TG.DefOf
 		public static PreceptGenDef TG_AutomaticDislikesHumanApparel;
 		public static PreceptGenDef TG_AutomaticLikesHumanApparel;
 		public static PreceptGenDef TG_AutomaticNoRawVegan;
+		public static PreceptGenDef TG_AutomaticNoRegularMeat;
 
 		static PreceptGen() => DefOfHelper.EnsureInitializedInCtor(typeof (PreceptGen));
 	}

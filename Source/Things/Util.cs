@@ -59,5 +59,15 @@ namespace TG.Things
 		{
 			return def.IsIngestible && vegan.Any(flag => def.ingestible.foodType.HasFlag(flag));
 		}
+
+		/// <summary>
+		/// Checks if the def is a type of meat which is not human or insect meat.
+		/// </summary>
+		/// <param name="def">Provided ThingDef</param>
+		/// <returns>True for all meats.</returns>
+		public static bool IsRegularMeat(in ThingDef def)
+		{
+			return def.IsIngestible && FoodUtility.GetMeatSourceCategory(def) == MeatSourceCategory.Undefined;
+		}
 	}
 }

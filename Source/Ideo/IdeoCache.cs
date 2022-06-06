@@ -46,6 +46,7 @@ namespace TG.Ideo
 			var approvesOfSlavery = false;
 			var likesHumanLeatherApparel = false;
 			var willNotStockRawVegetables = false;
+			var willNotStockRegularMeat = false;
 
 			var preceptGenDefs = new List<PreceptGenDef>();
 
@@ -55,6 +56,7 @@ namespace TG.Ideo
 				approvesOfSlavery = approvesOfSlavery || precept.def.approvesOfSlavery;
 				likesHumanLeatherApparel = likesHumanLeatherApparel || precept.def.likesHumanLeatherApparel;
 				willNotStockRawVegetables = willNotStockRawVegetables || precept.def.disallowFarmingCamps;
+				willNotStockRegularMeat = willNotStockRegularMeat || precept.def.disallowHuntingCamps;
 			}
 
 
@@ -76,6 +78,11 @@ namespace TG.Ideo
 			if (willNotStockRawVegetables)
 			{
 				preceptGenDefs.Add(PreceptGen.TG_AutomaticNoRawVegan);
+			}
+
+			if (willNotStockRegularMeat)
+			{
+				preceptGenDefs.Add(PreceptGen.TG_AutomaticNoRegularMeat);
 			}
 
 			return preceptGenDefs;

@@ -101,4 +101,11 @@
 			<li Class="TG.StockRule.NoRawVegan"/>
 		</stockRules>
 	</TG.Ideo.PreceptGenDef>
+	<!-- Added automatically for ideologies with any precept disallowing hunting camps. -->
+	<TG.Ideo.PreceptGenDef>
+		<defName>TG_AutomaticNoRegularMeat</defName>
+		<stockRules>
+			<li Class="TG.StockRule.NoRegularMeat"/>
+		</stockRules>
+	</TG.Ideo.PreceptGenDef>
 </Defs>

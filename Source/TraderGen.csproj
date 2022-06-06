@@ -46,6 +46,7 @@
 		<Compile Include="Mod\Mod.cs" />
 		<Compile Include="StockRule\NoHumanLeather.cs" />
 		<Compile Include="StockRule\NoRawVegan.cs" />
+		<Compile Include="StockRule\NoRegularMeat.cs" />
 		<Compile Include="StockRule\Rule.cs" />
 		<Compile Include="SpecializationCommonality.cs" />
 		<Compile Include="StockGen\Alcohol.cs" />
