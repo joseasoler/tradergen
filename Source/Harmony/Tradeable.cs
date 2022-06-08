@@ -8,7 +8,7 @@ namespace TG.Harmony
 	/// Patches Tradeable to implement TraderGen features.
 	/// </summary>
 	[HarmonyPatch]
-	public class TradeableGen
+	public static class TradeableGen
 	{
 		/// <summary>
 		/// WillTrade results are cached by TraderGen. They may also be overriden by certain features such as Ideology.

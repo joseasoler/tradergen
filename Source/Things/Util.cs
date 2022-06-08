@@ -8,7 +8,7 @@ namespace TG.Things
 	/// <summary>
 	/// Utility functions for dealing with Things and ThingDefs
 	/// </summary>
-	public class Util
+	public static class Util
 	{
 		/// <summary>
 		/// Returns true if the provided def should be considered armor when generating trader stock.

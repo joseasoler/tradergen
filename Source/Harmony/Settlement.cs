@@ -10,7 +10,7 @@ namespace TG.Harmony
 	/// Sets the seed that will be used for random generation of settlement trader information.
 	/// </summary>
 	[HarmonyPatch]
-	public class SettlementGen
+	public static class SettlementGen
 	{
 		/// <summary>
 		/// It is only possible to know which seed to use after Settlement_TraderTracker.RegenerateStock has been called.

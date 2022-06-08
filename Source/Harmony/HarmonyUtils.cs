@@ -6,7 +6,7 @@ namespace TG.Harmony
 	/// <summary>
 	/// Utilities used by TraderGen harmony patching.
 	/// </summary>
-	public class HarmonyUtils
+	public static class HarmonyUtils
 	{
 		// PackageIDs of the Trader Ships mod and its re-textures.
 		private static readonly string[] TraderShipMods =

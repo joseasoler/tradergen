@@ -10,7 +10,7 @@ namespace TG.Harmony
 	/// Patches the trade dialog to take into account TraderGen additions.
 	/// </summary>
 	[HarmonyPatch]
-	public class DialogTrade
+	public static class DialogTrade
 	{
 		/// <summary>
 		/// Returns a TraderGen trader label to use in the trade dialog.

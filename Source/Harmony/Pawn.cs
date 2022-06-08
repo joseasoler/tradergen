@@ -9,7 +9,7 @@ namespace TG.Harmony
 	/// Patches required for trader pawns (visitors and caravans).
 	/// </summary>
 	[HarmonyPatch]
-	public class PawnGen
+	public static class PawnGen
 	{
 		/// <summary>
 		/// Sets the seed that may be used for random generation of visitor or caravan trader information.

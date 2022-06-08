@@ -26,7 +26,7 @@ namespace TG
 		}
 	}
 
-	public class Algorithm
+	public static class Algorithm
 	{
 		/// <summary>
 		/// Choose n elements randomly from the provided list without repetition, weighted with the provided function.

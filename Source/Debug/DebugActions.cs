@@ -7,7 +7,7 @@ using Verse;
 
 namespace TG.Debug
 {
-	public class DebugActions
+	public static class DebugActions
 	{
 		/// <summary>
 		/// Category to use for TraderGen debug actions.

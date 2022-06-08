@@ -10,7 +10,7 @@ namespace TG.Harmony
 	/// Patches the sellable items dialog to take into account TraderGen additions.
 	/// </summary>
 	[HarmonyPatch]
-	public class DialogSellableItems
+	public static class DialogSellableItems
 	{
 		/// <summary>
 		/// TraderGen takes over this calculation.

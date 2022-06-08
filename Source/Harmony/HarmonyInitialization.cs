@@ -7,7 +7,7 @@ namespace TG.Harmony
 	/// Initialization of the Harmony patching of the mod.
 	/// </summary>
 	[StaticConstructorOnStartup]
-	public class HarmonyInitialization
+	public static class HarmonyInitialization
 	{
 		/// <summary>
 		/// Initialization of the Harmony patching of the mod.

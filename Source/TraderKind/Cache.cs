@@ -141,7 +141,6 @@ namespace TG.TraderKind
 			return _specializations.ContainsKey(seed) ? _specializations[seed] : null;
 		}
 
-
 		/// <summary>
 		/// Creates a copy with initialized internal state if necessary. Logs stock generator information if enabled.
 		/// </summary>
