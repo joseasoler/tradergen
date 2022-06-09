@@ -43,6 +43,40 @@ namespace TG.Ideo
 		private static readonly Dictionary<int, HashSet<ThingDef>> _willNotStock = new Dictionary<int, HashSet<ThingDef>>();
 
 		/// <summary>
+		/// Generates a PreceptGen for preferred apparel if the ideology has any.
+		/// </summary>
+		/// <param name="ideo">Ideology being processed.</param>
+		/// <param name="preferredApparels">List of preferred apparels.</param>
+		/// <returns>Null if the ideology has no preferred apparels, a generated PreceptGen otherwise.</returns>
+		private static PreceptGenDef PreferredApparelPreceptGen(RimWorld.Ideo ideo, List<ThingDef> preferredApparels)
+		{
+			if (preferredApparels.NullOrEmpty()) return null;
+
+			var apparelPrecept = PreceptGen.TG_AutomaticPreferredApparel.ShallowClone();
+
+			if (apparelPrecept.visitorStockGens.Count >= 1 &&
+			    apparelPrecept.visitorStockGens[0] is PreferredApparel visitorApparels &&
+			    apparelPrecept.traderStockGens.Count >= 1 &&
+			    apparelPrecept.traderStockGens[0] is PreferredApparel traderApparels &&
+			    apparelPrecept.settlementStockGens.Count >= 1 &&
+			    apparelPrecept.settlementStockGens[0] is PreferredApparel settlementApparels)
+			{
+				Logger.Gen(
+					$"Adding preferred apparel stock generator for these apparels: {string.Join(", ", preferredApparels.Select(def => def.label))}.");
+				visitorApparels.PreferredApparels.UnionWith(preferredApparels);
+				traderApparels.PreferredApparels.UnionWith(preferredApparels);
+				settlementApparels.PreferredApparels.UnionWith(preferredApparels);
+			}
+			else
+			{
+				Logger.ErrorOnce("TG_AutomaticPreferredApparel is not defined correctly.");
+			}
+
+			return apparelPrecept;
+		}
+
+
+		/// <summary>
 		/// Generates a PreceptGen for venerated animals, if required.
 		/// </summary>
 		/// <param name="ideo">Ideology being processed.</param>
@@ -95,6 +129,7 @@ namespace TG.Ideo
 			var willNotStockWood = false;
 
 			var preceptGenDefs = new List<PreceptGenDef>();
+			var preferredApparels = new List<ThingDef>();
 
 			foreach (var precept in ideo.PreceptsListForReading)
 			{
@@ -104,6 +139,10 @@ namespace TG.Ideo
 				willNotStockRawVegetables = willNotStockRawVegetables || precept.def.disallowFarmingCamps;
 				willNotStockRegularMeat = willNotStockRegularMeat || precept.def.disallowHuntingCamps;
 				willNotStockWood = willNotStockWood || precept.def.disallowLoggingCamps;
+				if (precept is Precept_Apparel preceptApparel)
+				{
+					preferredApparels.Add(preceptApparel.apparelDef);
+				}
 			}
 
 			// Automatically adds some PreceptGens based on the precepts checked before.
@@ -134,6 +173,12 @@ namespace TG.Ideo
 			if (willNotStockWood)
 			{
 				preceptGenDefs.Add(PreceptGen.TG_AutomaticNoWoodyStock);
+			}
+
+			var apparelGenDef = PreferredApparelPreceptGen(ideo, preferredApparels);
+			if (apparelGenDef != null)
+			{
+				preceptGenDefs.Add(apparelGenDef);
 			}
 
 			var veneratedGenDef = VeneratedAnimalsPreceptGen(ideo);
