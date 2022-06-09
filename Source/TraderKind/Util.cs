@@ -53,7 +53,7 @@ namespace TG.TraderKind
 			if (faction.def.caravanTraderKinds.Contains(def)) return TraderKindCategory.Caravan;
 			return faction.def.visitorTraderKinds.Contains(def) ? TraderKindCategory.Visitor : TraderKindCategory.None;
 		}
-		
+
 		/// <summary>
 		/// Include specializations in the label of ta trader.
 		/// </summary>
@@ -62,9 +62,9 @@ namespace TG.TraderKind
 		public static string Label(ITrader trader)
 		{
 			var specializations = Cache.Specializations(trader);
-			return specializations == null
-				? trader.TraderKind.label
-				: $"{trader.TraderKind.label} ({string.Join(", ", specializations.Select(specialization => specialization.label))})";
+			return specializations.NullOrEmpty()
+				? trader.TraderKind.label.CapitalizeFirst()
+				: $"{trader.TraderKind.label.CapitalizeFirst()} ({string.Join(", ", specializations.Select(specialization => specialization.label))})";
 		}
 	}
 }
