@@ -42,6 +42,48 @@ namespace TG.Ideo
 		/// </summary>
 		private static readonly Dictionary<int, HashSet<ThingDef>> _willNotStock = new Dictionary<int, HashSet<ThingDef>>();
 
+		/// <summary>
+		/// Generates a PreceptGen for venerated animals, if required.
+		/// </summary>
+		/// <param name="ideo">Ideology being processed.</param>
+		/// <returns>Null if the ideology has no venerated animals, a generated PreceptGen otherwise.</returns>
+		private static PreceptGenDef VeneratedAnimalsPreceptGen(RimWorld.Ideo ideo)
+		{
+			PreceptGenDef veneratedPrecept = null;
+
+			var obtainableVenerated = ideo.VeneratedAnimals.Select(thingDef => thingDef.race.AnyPawnKind)
+				.Where(def => Things.Util.ObtainableAnimal(def)).ToList();
+
+			if (obtainableVenerated.Count > 0)
+			{
+				veneratedPrecept = PreceptGen.TG_AutomaticVeneratedAnimal.ShallowClone();
+				if (veneratedPrecept.visitorStockGens.Count >= 1 &&
+				    veneratedPrecept.visitorStockGens[0] is VeneratedAnimals visitorAnimals &&
+				    veneratedPrecept.traderStockGens.Count >= 1 &&
+				    veneratedPrecept.traderStockGens[0] is VeneratedAnimals traderAnimals &&
+				    veneratedPrecept.settlementStockGens.Count >= 1 &&
+				    veneratedPrecept.settlementStockGens[0] is VeneratedAnimals settlementAnimals)
+				{
+					Logger.Gen(
+						$"Adding venerated animal stock generator for these animals: {string.Join(", ", obtainableVenerated.Select(def => def.label))}.");
+					visitorAnimals.pawnKindDefs = obtainableVenerated;
+					traderAnimals.pawnKindDefs = obtainableVenerated;
+					settlementAnimals.pawnKindDefs = obtainableVenerated;
+				}
+				else
+				{
+					Logger.ErrorOnce("TG_AutomaticVeneratedAnimal is not defined correctly.");
+				}
+			}
+
+			return veneratedPrecept;
+		}
+
+		/// <summary>
+		/// Gathers all PreceptGen definitions for this ideology.
+		/// </summary>
+		/// <param name="ideo">Ideology being processed.</param>
+		/// <returns>List of PreceptGen definitions to apply.</returns>
 		private static List<PreceptGenDef> GatherPreceptGens(RimWorld.Ideo ideo)
 		{
 			// Generic flags which may be added by any precept.
@@ -94,40 +136,20 @@ namespace TG.Ideo
 				preceptGenDefs.Add(PreceptGen.TG_AutomaticNoWoodyStock);
 			}
 
-			var veneratedAnimals = ideo.VeneratedAnimals
-				.Select(thingDef => thingDef.race.AnyPawnKind).Where(def => Things.Util.ObtainableAnimal(def)).ToList();
-
-			if (veneratedAnimals.Count > 0)
+			var veneratedGenDef = VeneratedAnimalsPreceptGen(ideo);
+			if (veneratedGenDef != null)
 			{
-				var veneratedPrecept = PreceptGen.TG_AutomaticVeneratedAnimal.ShallowClone();
-				if (veneratedPrecept.visitorStockGens.Count >= 1 &&
-				    veneratedPrecept.visitorStockGens[0] is VeneratedAnimals visitorAnimals &&
-				    veneratedPrecept.traderStockGens.Count >= 1 &&
-				    veneratedPrecept.traderStockGens[0] is VeneratedAnimals traderAnimals &&
-				    veneratedPrecept.settlementStockGens.Count >= 1 &&
-				    veneratedPrecept.settlementStockGens[0] is VeneratedAnimals settlementAnimals)
-				{
-					Logger.Gen(
-						$"Adding venerated animal stock generator for these animals: {string.Join(", ", veneratedAnimals.Select(def => def.label))}.");
-					visitorAnimals.pawnKindDefs = veneratedAnimals;
-					traderAnimals.pawnKindDefs = veneratedAnimals;
-					settlementAnimals.pawnKindDefs = veneratedAnimals;
-					preceptGenDefs.Add(veneratedPrecept);
-				}
-				else
-				{
-					Logger.ErrorOnce("TG_AutomaticVeneratedAnimal is not defined correctly.");
-				}
+				preceptGenDefs.Add(veneratedGenDef);
 			}
 
 			return preceptGenDefs;
 		}
 
 		/// <summary>
-		/// Precept rules are evaluated only once and their results are cached here.
+		/// Precept stock generators and rules are processed here.
 		/// </summary>
 		/// <param name="ideo">Ideology being evaluated</param>
-		/// <param name="preceptGenDefs">List of precept gen definitions for this ideo.</param>
+		/// <param name="preceptGenDefs">List of PreceptGen definitions for this ideo.</param>
 		private static void EvaluatePreceptGens(RimWorld.Ideo ideo, List<PreceptGenDef> preceptGenDefs)
 		{
 			var key = ideo.id;
@@ -156,6 +178,40 @@ namespace TG.Ideo
 					}
 				}
 			}
+		}
+
+
+		/// <summary>
+		/// Traders following an ideology will refuse to trade or stock the meat of their venerated animals.
+		/// </summary>
+		/// <param name="ideo"></param>
+		private static void AddForbiddenMeats(RimWorld.Ideo ideo)
+		{
+			var forbiddenMeats = new List<ThingDef>();
+			foreach (var veneratedDef in ideo.VeneratedAnimals.Where(veneratedDef =>
+				         veneratedDef.race != null))
+			{
+				// Most animals use the meat type defined in their race. Some modded animals may just have placeholder
+				// and a meat amount value of zero.
+				if (veneratedDef.GetStatValueAbstract(StatDefOf.MeatAmount) > 0 && veneratedDef.race.meatDef != null &&
+				    veneratedDef.race.meatDef.IsIngestible)
+				{
+					forbiddenMeats.Add(veneratedDef.race.meatDef);
+				}
+
+				// Some mods use butcherProducts instead.
+				if (!veneratedDef.butcherProducts.NullOrEmpty())
+				{
+					forbiddenMeats.AddRange(veneratedDef.butcherProducts.Select(defCount => defCount.thingDef)
+						.Where(def => def.IsIngestible));
+				}
+			}
+
+			if (forbiddenMeats.NullOrEmpty()) return;
+			Logger.Gen(
+				$"Forbidding trading and stocking venerated animal meats: {string.Join(", ", forbiddenMeats.Select(def => def.label))}.");
+			_willNotTrade[ideo.id].UnionWith(forbiddenMeats);
+			_willNotStock[ideo.id].UnionWith(forbiddenMeats);
 		}
 
 		public static void Invalidate(RimWorld.Ideo ideo)
@@ -191,6 +247,7 @@ namespace TG.Ideo
 
 			var preceptGenDefs = GatherPreceptGens(ideo);
 			EvaluatePreceptGens(ideo, preceptGenDefs);
+			AddForbiddenMeats(ideo);
 		}
 
 		/// <summary>
