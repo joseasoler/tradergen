@@ -79,5 +79,45 @@ namespace TG.Things
 		{
 			return def.stuffProps?.categories != null && def.stuffProps.categories.Contains(StuffCategoryDefOf.Woody);
 		}
+
+		/// <summary>
+		/// Check if a thing is an exotic item.
+		/// </summary>
+		/// <param name="def">Thing to check.</param>
+		/// <returns>If the thing is an exotic misc item or not.</returns>
+		public static bool IsExotic(in ThingDef def)
+		{
+			// Some mods use "Exotic" instead of "ExoticMisc".
+			return def.tradeTags != null && (def.tradeTags.Contains("ExoticMisc") || def.tradeTags.Contains("Exotic"));
+		}
+
+		/// <summary>
+		/// False for animals which cannot be tamed and all genetic animals from VGE.
+		/// Used to prevent using venerated animals as a loophole to obtain them.
+		/// </summary>
+		/// <param name="def">Pawn being checked.</param>
+		/// <returns>True if a trader could have this animal in stock.</returns>
+		public static bool ObtainableAnimal(in PawnKindDef def)
+		{
+			if (def.race?.comps != null)
+			{
+				foreach (var comp in def.race.comps)
+				{
+					switch (comp.GetType().FullName)
+					{
+						// Mech hybrids in Vanilla Genetics Expanded have this comp.
+						case "GeneticRim.CompProperties_RegisterMechHybridWithAntenna":
+							return false;
+						// Untameable animals use this Vanilla Expanded Framework comp.
+						case "AnimalBehaviours.CompProperties_Untameable":
+							return false;
+					}
+				}
+			}
+
+			// Hybrids and paragons in Vanilla Genetics Expanded use this mod extension.
+			return def.modExtensions == null ||
+			       def.modExtensions.All(extension => extension.GetType().FullName != "GeneticRim.DefExtension_Hybrid");
+		}
 	}
 }

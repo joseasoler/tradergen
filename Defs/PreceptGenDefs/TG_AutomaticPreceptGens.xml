@@ -115,4 +115,29 @@
 			<li Class="TG.StockRule.NoWoodyStock"/>
 		</stockRules>
 	</TG.Ideo.PreceptGenDef>
+	<!-- Added automatically for ideologies with one or more venerated animals. -->
+	<TG.Ideo.PreceptGenDef>
+		<defName>TG_AutomaticVeneratedAnimal</defName>
+		<visitorStockGens>
+			<li Class="TG.StockGen.VeneratedAnimals">
+				<totalPriceRange>25~50</totalPriceRange>
+			</li>
+		</visitorStockGens>
+		<traderStockGens>
+			<li Class="TG.StockGen.VeneratedAnimals">
+				<animalProducts>true</animalProducts>
+				<checkTemperature>true</checkTemperature>
+				<totalPriceRange>125~175</totalPriceRange>
+				<animalProductPriceRange>50~100</animalProductPriceRange>
+			</li>
+		</traderStockGens>
+		<settlementStockGens>
+			<li Class="TG.StockGen.VeneratedAnimals">
+				<animalProducts>true</animalProducts>
+				<checkTemperature>true</checkTemperature>
+				<totalPriceRange>250~350</totalPriceRange>
+				<animalProductPriceRange>300~500</animalProductPriceRange>
+			</li>
+		</settlementStockGens>
+	</TG.Ideo.PreceptGenDef>
 </Defs>

@@ -10,7 +10,7 @@ namespace TG.StockGen
 		protected override bool CanBuy(in ThingDef def)
 		{
 			return def.thingSetMakerTags != null && def.thingSetMakerTags.Contains("AnimalPart") &&
-				def.tradeTags != null && def.tradeTags.Contains("ExoticMisc");
+			       Things.Util.IsExotic(def);
 		}
 	}
 }

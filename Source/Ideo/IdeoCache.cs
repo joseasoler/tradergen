@@ -1,6 +1,9 @@
 using System.Collections.Generic;
+using System.Linq;
+using Force.DeepCloner;
 using RimWorld;
 using TG.DefOf;
+using TG.StockGen;
 using Verse;
 
 namespace TG.Ideo
@@ -61,7 +64,6 @@ namespace TG.Ideo
 				willNotStockWood = willNotStockWood || precept.def.disallowLoggingCamps;
 			}
 
-
 			// Automatically adds some PreceptGens based on the precepts checked before.
 			if (approvesOfCharity)
 			{
@@ -90,6 +92,32 @@ namespace TG.Ideo
 			if (willNotStockWood)
 			{
 				preceptGenDefs.Add(PreceptGen.TG_AutomaticNoWoodyStock);
+			}
+
+			var veneratedAnimals = ideo.VeneratedAnimals
+				.Select(thingDef => thingDef.race.AnyPawnKind).Where(def => Things.Util.ObtainableAnimal(def)).ToList();
+
+			if (veneratedAnimals.Count > 0)
+			{
+				var veneratedPrecept = PreceptGen.TG_AutomaticVeneratedAnimal.ShallowClone();
+				if (veneratedPrecept.visitorStockGens.Count >= 1 &&
+				    veneratedPrecept.visitorStockGens[0] is VeneratedAnimals visitorAnimals &&
+				    veneratedPrecept.traderStockGens.Count >= 1 &&
+				    veneratedPrecept.traderStockGens[0] is VeneratedAnimals traderAnimals &&
+				    veneratedPrecept.settlementStockGens.Count >= 1 &&
+				    veneratedPrecept.settlementStockGens[0] is VeneratedAnimals settlementAnimals)
+				{
+					Logger.Gen(
+						$"Adding venerated animal stock generator for these animals: {string.Join(", ", veneratedAnimals.Select(def => def.label))}.");
+					visitorAnimals.pawnKindDefs = veneratedAnimals;
+					traderAnimals.pawnKindDefs = veneratedAnimals;
+					settlementAnimals.pawnKindDefs = veneratedAnimals;
+					preceptGenDefs.Add(veneratedPrecept);
+				}
+				else
+				{
+					Logger.ErrorOnce("TG_AutomaticVeneratedAnimal is not defined correctly.");
+				}
 			}
 
 			return preceptGenDefs;

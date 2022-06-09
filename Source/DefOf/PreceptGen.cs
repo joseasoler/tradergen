@@ -13,6 +13,7 @@ namespace TG.DefOf
 		public static PreceptGenDef TG_AutomaticNoRawVegan;
 		public static PreceptGenDef TG_AutomaticNoRegularMeat;
 		public static PreceptGenDef TG_AutomaticNoWoodyStock;
+		public static PreceptGenDef TG_AutomaticVeneratedAnimal;
 
 		static PreceptGen() => DefOfHelper.EnsureInitializedInCtor(typeof (PreceptGen));
 	}
