@@ -143,6 +143,13 @@ namespace TG.Ideo
 				{
 					preferredApparels.Add(preceptApparel.apparelDef);
 				}
+
+				var extension = precept.def.GetModExtension<PreceptGenExtension>();
+				if (extension != null)
+				{
+					Logger.Error($"Sanity check! Precept {precept.Label} has an extension!!");
+					preceptGenDefs.Add(extension.def);
+				}
 			}
 
 			// Automatically adds some PreceptGens based on the precepts checked before.

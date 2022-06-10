@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<TG.Ideo.PreceptGenDef>
+		<defName>TG_AnimalConnection_Strong</defName>
+		<visitorStockGens>
+			<li Class="StockGenerator_Animals">
+				<tradeTagsBuy>
+					<li>AnimalPet</li>
+				</tradeTagsBuy>
+			</li>
+		</visitorStockGens>
+		<traderStockGens>
+			<li Class="StockGenerator_Animals">
+				<maxWildness>0.70</maxWildness>
+				<checkTemperature>true</checkTemperature>
+				<tradeTagsSell>
+					<li>AnimalPet</li>
+				</tradeTagsSell>
+				<kindCountRange>1</kindCountRange>
+				<countRange>1~2</countRange>
+			</li>
+		</traderStockGens>
+		<settlementStockGens>
+			<li Class="StockGenerator_Animals">
+				<maxWildness>0.70</maxWildness>
+				<checkTemperature>true</checkTemperature>
+				<tradeTagsSell>
+					<li>AnimalPet</li>
+				</tradeTagsSell>
+				<kindCountRange>1</kindCountRange>
+				<countRange>1~2</countRange>
+			</li>
+		</settlementStockGens>
+	</TG.Ideo.PreceptGenDef>
+</Defs>

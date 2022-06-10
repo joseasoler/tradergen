@@ -41,6 +41,7 @@
 		<Compile Include="Harmony\TradeShip.cs" />
 		<Compile Include="Ideo\IdeoCache.cs" />
 		<Compile Include="Ideo\PreceptGenDef.cs" />
+		<Compile Include="Ideo\PreceptGenExtension.cs" />
 		<Compile Include="Logger.cs" />
 		<Compile Include="Mod\Settings.cs" />
 		<Compile Include="Mod\Mod.cs" />
