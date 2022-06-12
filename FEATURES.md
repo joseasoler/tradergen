@@ -208,4 +208,6 @@ TraderGen should support wares from mods out of the box; please submit a [bug re
 
   * The zoological trader gets access to these specializations: draper, hunting, husbandry and medicine. This draper specialization only sells animal fabrics.
 
+  * The zoological trader will now purchase any exotic animal part, including those from mods such as Alpha Animals or Dinosauria.
+
   * The zoological trader will now purchase most really expensive items that could be resold for profit.
