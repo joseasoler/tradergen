@@ -19,6 +19,18 @@ namespace TG.Mod
 		public IntRange OrbitalSpecializations = IntRange.one;
 
 		/// <summary>
+		/// Some ideologies will add extra stock to the trader that follows them. For example, ideologies approving
+		/// charity may have some medicine in stock while ideologies that love insect meat will always purchase it.
+		/// </summary>
+		public bool IdeologyMayAddStock = true;
+
+		/// <summary>
+		/// When this setting is enabled, certain ideologies will refuse to stock or trade certain items. For example most
+		/// ideologies will reject purchasing human leather and human meat. Body purists will reject purchasing bionics.
+		/// </summary>
+		public bool IdeologyMayForbidTrading = true;
+
+		/// <summary>
 		/// Disable TraderKindDef.commonalityMultFromPopulationIntent calculations.
 		/// </summary>
 		public bool IgnoreColonyPopulationCommonality /* = false */;
@@ -59,8 +71,25 @@ namespace TG.Mod
 			get => _values.OrbitalSpecializations;
 			set => _values.OrbitalSpecializations = value;
 		}
-		
-		
+
+		/// <summary>
+		/// Some ideologies will add extra stock to the trader that follows them.
+		/// </summary>
+		public static bool IdeologyMayAddStock
+		{
+			get => ModsConfig.IdeologyActive && _values.IdeologyMayAddStock;
+			set => _values.IdeologyMayAddStock = value;
+		}
+
+		/// <summary>
+		/// When this setting is enabled, certain ideologies will refuse to stock or trade certain items.
+		/// </summary>
+		public static bool IdeologyMayForbidTrading
+		{
+			get => ModsConfig.IdeologyActive && _values.IdeologyMayForbidTrading;
+			set => _values.IdeologyMayForbidTrading = value;
+		}
+
 		/// <summary>
 		/// Ignore colony population when calculating trader commonality.
 		/// </summary>
@@ -114,13 +143,22 @@ namespace TG.Mod
 		public override void ExposeData()
 		{
 			base.ExposeData();
-			Scribe_Values.Look(ref _values.SellPsylinkNeuroformers, "SellPsylinkNeuroformers");
+			if (ModsConfig.RoyaltyActive)
+			{
+				Scribe_Values.Look(ref _values.SellPsylinkNeuroformers, "SellPsylinkNeuroformers", true);
+			}
 
 			var orbitalSpecializationsMin = _values.OrbitalSpecializations.min;
 			var orbitalSpecializationsMax = _values.OrbitalSpecializations.max;
 			Scribe_Values.Look(ref orbitalSpecializationsMin, "OrbitalSpecializationsMin", 1);
 			Scribe_Values.Look(ref orbitalSpecializationsMax, "OrbitalSpecializationsMax", 1);
 			_values.OrbitalSpecializations = new IntRange(orbitalSpecializationsMin, orbitalSpecializationsMax);
+
+			if (ModsConfig.IdeologyActive)
+			{
+				Scribe_Values.Look(ref _values.IdeologyMayAddStock, "IdeologyMayAddStock", true);
+				Scribe_Values.Look(ref _values.IdeologyMayForbidTrading, "IdeologyMayForbidTrading", true);
+			}
 
 			Scribe_Values.Look(ref _values.IgnoreColonyPopulationCommonality, "IgnoreColonyPopulationCommonality");
 

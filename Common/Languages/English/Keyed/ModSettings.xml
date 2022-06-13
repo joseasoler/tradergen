@@ -2,6 +2,10 @@
 <LanguageData>
 	<TG_OrbitalSpecializations>Number of orbital trader specializations:</TG_OrbitalSpecializations>
 	<TG_OrbitalSpecializationsTooltip>Orbital traders will have a random number of specializations in this interval. Set both values to zero to disable specializations.</TG_OrbitalSpecializationsTooltip>
+	<TG_IdeologyMayAddStock>Trader ideology may add extra stock</TG_IdeologyMayAddStock>
+	<TG_IdeologyMayAddStockTooltip>Some ideologies will add extra stock to the trader that follows them. For example, ideologies approving of charity may have some medicine in stock while ideologies that love insect meat will always purchase it.</TG_IdeologyMayAddStockTooltip>
+	<TG_IdeologyMayForbidTrading>Trader ideology may forbid trading certain items</TG_IdeologyMayForbidTrading>
+	<TG_IdeologyMayForbidTradingTooltip>When this setting is enabled, certain ideologies will refuse to stock or trade certain items. For example most ideologies will reject purchasing human leather and human meat. Body purists will reject purchasing bionics, and so on. This setting may make certain strategies less profitable and the game slightly more difficult.</TG_IdeologyMayForbidTradingTooltip>
 	<TG_IgnoreColonyPopulationCommonality>Ignore colony population when calculating trader commonality</TG_IgnoreColonyPopulationCommonality>
 	<TG_IgnoreColonyPopulationCommonalityTooltip>In vanilla RimWorld, traders such as the slaver orbital trader become less frequent when the population of the colony increases until they cannot appear at all. If this setting is enabled, trader commonality will no longer depend on the colony population. Enabling this setting will simplify increasing your colony population and therefore will make the game easier.</TG_IgnoreColonyPopulationCommonalityTooltip>
 	<TG_SellPsylinkNeuroformers>Psycasting orbital traders sell psylink neuroformers</TG_SellPsylinkNeuroformers>

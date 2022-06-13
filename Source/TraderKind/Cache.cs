@@ -203,7 +203,7 @@ namespace TG.TraderKind
 		/// <param name="faction">Faction of the trader.</param>
 		private static void ApplyIdeology(int seed, TraderKindDef def, int tile, Faction faction)
 		{
-			if (!ModsConfig.IdeologyActive) return;
+			if (!ModsConfig.IdeologyActive || (!Settings.IdeologyMayAddStock && !Settings.IdeologyMayForbidTrading)) return;
 
 			var ideo = faction?.ideos.PrimaryIdeo;
 			if (ideo == null) return;
@@ -213,17 +213,22 @@ namespace TG.TraderKind
 			// The cache is lazily initialized here.
 			IdeoStockCache.TryAdd(ideo);
 
-			var willNotTradeList = IdeoStockCache.WillNotTrade(ideo);
-			var willNotStockList = IdeoStockCache.WillNotStock(ideo);
-			Logger.Gen(
-				$"Adding {willNotTradeList.Count} items that will not be traded and {willNotStockList.Count} items that will not be generated.");
-
-			foreach (var thingDef in IdeoStockCache.WillNotTrade(ideo))
+			if (Settings.IdeologyMayForbidTrading)
 			{
-				_willTrade[seed][thingDef] = false;
+				var willNotTradeList = IdeoStockCache.WillNotTrade(ideo);
+				var willNotStockList = IdeoStockCache.WillNotStock(ideo);
+				Logger.Gen(
+					$"Adding {willNotTradeList.Count} items that will not be traded and {willNotStockList.Count} items that will not be generated.");
+
+				foreach (var thingDef in IdeoStockCache.WillNotTrade(ideo))
+				{
+					_willTrade[seed][thingDef] = false;
+				}
+
+				_willNotStock[seed].UnionWith(IdeoStockCache.WillNotStock(ideo));
 			}
 
-			_willNotStock[seed].UnionWith(IdeoStockCache.WillNotStock(ideo));
+			if (!Settings.IdeologyMayAddStock) return;
 
 			List<StockGenerator> generatorsToAdd = null;
 

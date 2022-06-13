@@ -42,6 +42,21 @@ namespace TG.Mod
 			listing.IntRange(ref orbitalSpecializations, 0, Settings.MaxOrbitalSpecializations);
 			Settings.OrbitalSpecializations = orbitalSpecializations;
 
+			if (ModsConfig.IdeologyActive)
+			{
+				listing.Gap();
+				var mayAdd = Settings.IdeologyMayAddStock;
+				listing.CheckboxLabeled("TG_IdeologyMayAddStock".Translate(), ref mayAdd,
+					"TG_IdeologyMayAddStockTooltip".Translate());
+				Settings.IdeologyMayAddStock = mayAdd;
+
+				listing.Gap();
+				var mayForbid = Settings.IdeologyMayForbidTrading;
+				listing.CheckboxLabeled("TG_IdeologyMayForbidTrading".Translate(), ref mayForbid,
+					"TG_IdeologyMayForbidTradingTooltip".Translate());
+				Settings.IdeologyMayForbidTrading = mayForbid;
+			}
+
 			listing.Gap();
 			var ignoreColonyPopulationCommonality = Settings.IgnoreColonyPopulationCommonality;
 			listing.CheckboxLabeled("TG_IgnoreColonyPopulationCommonality".Translate(), ref ignoreColonyPopulationCommonality,
