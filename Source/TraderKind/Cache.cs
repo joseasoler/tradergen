@@ -136,11 +136,6 @@ namespace TG.TraderKind
 				((TG.StockGen.StockGen) generator).BeforeGen(tile, faction);
 			}
 
-			if (Settings.LogGen && Settings.LogStockGen)
-			{
-				Logger.Gen(StockGen.Util.ToText(generator).ToString());
-			}
-
 			return generator;
 		}
 
