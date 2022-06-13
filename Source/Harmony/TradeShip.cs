@@ -119,7 +119,7 @@ namespace TG.Harmony
 			var specializations = Cache.Specializations(trader);
 
 			TaggedString letterText;
-			if (specializations == null)
+			if (specializations.NullOrEmpty())
 			{
 				letterText = "TraderArrival".Translate(name, label, factionStr);
 			}
