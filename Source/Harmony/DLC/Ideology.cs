@@ -29,7 +29,7 @@ namespace TG.Harmony.DLC
 		/// </summary>
 		private static void InvalidateIdeoCache(ref RimWorld.Ideo __instance)
 		{
-			IdeoStockCache.Invalidate(__instance);
+			IdeoCache.Invalidate(__instance);
 		}
 	}
 }

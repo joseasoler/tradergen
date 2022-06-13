@@ -195,7 +195,7 @@ namespace TG.TraderKind
 
 		/// <summary>
 		/// When the Ideology DLC is active and the trader follows a faction with an ideology, some stock changes dependent
-		/// on precepts will be applied. Check IdeoStockCache for details.
+		/// on precepts will be applied. Check IdeoCache for details.
 		/// </summary>
 		/// <param name="seed">Seed in use.</param>
 		/// <param name="def">Trader</param>
@@ -211,21 +211,21 @@ namespace TG.TraderKind
 			Logger.Gen($"Applying ideology {ideo.name} of faction {faction.def.defName}");
 
 			// The cache is lazily initialized here.
-			IdeoStockCache.TryAdd(ideo);
+			IdeoCache.TryAdd(ideo);
 
 			if (Settings.IdeologyMayForbidTrading)
 			{
-				var willNotTradeList = IdeoStockCache.WillNotTrade(ideo);
-				var willNotStockList = IdeoStockCache.WillNotStock(ideo);
+				var willNotTradeList = IdeoCache.WillNotTrade(ideo);
+				var willNotStockList = IdeoCache.WillNotStock(ideo);
 				Logger.Gen(
 					$"Adding {willNotTradeList.Count} items that will not be traded and {willNotStockList.Count} items that will not be generated.");
 
-				foreach (var thingDef in IdeoStockCache.WillNotTrade(ideo))
+				foreach (var thingDef in IdeoCache.WillNotTrade(ideo))
 				{
 					_willTrade[seed][thingDef] = false;
 				}
 
-				_willNotStock[seed].UnionWith(IdeoStockCache.WillNotStock(ideo));
+				_willNotStock[seed].UnionWith(IdeoCache.WillNotStock(ideo));
 			}
 
 			if (!Settings.IdeologyMayAddStock) return;
@@ -236,14 +236,14 @@ namespace TG.TraderKind
 			switch (traderCategory)
 			{
 				case TraderKindCategory.Visitor:
-					generatorsToAdd = IdeoStockCache.VisitorStockGens(ideo);
+					generatorsToAdd = IdeoCache.VisitorStockGens(ideo);
 					break;
 				case TraderKindCategory.Settlement:
-					generatorsToAdd = IdeoStockCache.SettlementStockGens(ideo);
+					generatorsToAdd = IdeoCache.SettlementStockGens(ideo);
 					break;
 				case TraderKindCategory.Caravan:
 				case TraderKindCategory.Orbital:
-					generatorsToAdd = IdeoStockCache.TraderStockGens(ideo);
+					generatorsToAdd = IdeoCache.TraderStockGens(ideo);
 					break;
 				case TraderKindCategory.None:
 				default:
