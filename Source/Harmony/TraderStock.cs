@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using HarmonyLib;
 using RimWorld;
+using TG.Mod;
 using TG.TraderKind;
 using Verse;
 
@@ -44,6 +45,16 @@ namespace TG.Harmony
 			var tile = parms.tile ?? -1;
 			var faction = parms.makingFaction;
 
+			// Include stock generator information from the original trader.
+			if (Settings.LogGen && Settings.LogStockGen)
+			{
+				foreach (var stockGen in trader.stockGenerators)
+				{
+					Logger.Gen(StockGen.Util.ToText(stockGen).ToString());
+				}
+			}
+
+
 			foreach (var stockGen in Cache.StockGens(Cache.GenerationSeed))
 			{
 				foreach (var thing in stockGen.GenerateThings(tile, faction))
@@ -57,6 +68,11 @@ namespace TG.Harmony
 					{
 						thing.PostGeneratedForTrader(parms.traderDef, tile, faction);
 						outThings.Add(thing);
+					}
+
+					if (Settings.LogGen && Settings.LogStockGen)
+					{
+						Logger.Gen(StockGen.Util.ToText(stockGen).ToString());
 					}
 				}
 			}
