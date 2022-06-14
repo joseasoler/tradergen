@@ -54,7 +54,6 @@ namespace TG.Harmony
 				}
 			}
 
-
 			foreach (var stockGen in Cache.StockGens(Cache.GenerationSeed))
 			{
 				foreach (var thing in stockGen.GenerateThings(tile, faction))

@@ -27,7 +27,7 @@ namespace TG.StockGen
 
 		protected override IEnumerable<Thing> TryMakeForStock(ThingDef def, Faction faction)
 		{
-			if (!ModsConfig.IdeologyActive || faction.ideos?.PrimaryIdeo == null)
+			if (!ModsConfig.IdeologyActive || faction?.ideos?.PrimaryIdeo == null)
 			{
 				Logger.ErrorOnce("PreferredApparel should only be used when Ideology is active with trader having ideos.");
 				yield break;

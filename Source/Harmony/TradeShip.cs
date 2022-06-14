@@ -10,6 +10,7 @@ namespace TG.Harmony
 	/// <summary>
 	/// Handles Orbital Trade Ship information.
 	/// </summary>
+	[HarmonyPatch]
 	public static class TradeShipGen
 	{
 		/// <summary>
@@ -180,6 +181,24 @@ namespace TG.Harmony
 					yield return code;
 				}
 			}
+		}
+
+		/// <summary>
+		/// The vanilla TradeShip.GenerateThings implementation does not pass the faction for some reason.
+		/// </summary>
+		/// <param name="__instance">Trade ship.</param>
+		/// <returns>Always false. TraderGen takes over the execution of this function.</returns>
+		[HarmonyPrefix]
+		[HarmonyPatch(typeof(TradeShip), nameof(TradeShip.GenerateThings))]
+		private static bool TradeShipGeneratePrefix(TradeShip __instance)
+		{
+			__instance.things.TryAddRangeOrTransfer(ThingSetMakerDefOf.TraderStock.root.Generate(new ThingSetMakerParams
+			{
+				traderDef = __instance.def,
+				tile = __instance.Map.Tile,
+				makingFaction = __instance.Faction
+			}));
+			return false;
 		}
 	}
 }
