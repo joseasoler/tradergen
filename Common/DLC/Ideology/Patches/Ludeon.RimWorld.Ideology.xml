@@ -28,6 +28,15 @@
 					</li>
 				</value>
 			</li>
+			<li Class="PatchOperationAddModExtension">
+				<xpath>/Defs/PreceptDef[defName="Blind_Psysense"]
+				</xpath>
+				<value>
+					<li Class="TG.Ideo.PreceptGenExtension">
+						<def>TG_PsyInclined</def>
+					</li>
+				</value>
+			</li>
 		</operations>
 	</Operation>
 </Patch>
