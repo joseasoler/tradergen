@@ -18,6 +18,16 @@
 					</li>
 				</value>
 			</li>
+			<li Class="PatchOperationAddModExtension">
+				<xpath>/Defs/PreceptDef[defName="Blindness_Respected" or defName="Blindness_Elevated" or
+					defName="Blindness_Sublime"]
+				</xpath>
+				<value>
+					<li Class="TG.Ideo.PreceptGenExtension">
+						<def>TG_Blindness_Respected</def>
+					</li>
+				</value>
+			</li>
 		</operations>
 	</Operation>
 </Patch>

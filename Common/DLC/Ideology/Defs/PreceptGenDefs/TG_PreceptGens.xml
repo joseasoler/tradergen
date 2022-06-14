@@ -47,4 +47,24 @@
 			</li>
 		</settlementStockGens>
 	</TG.Ideo.PreceptGenDef>
+	<TG.Ideo.PreceptGenDef>
+		<defName>TG_Blindness_Respected</defName>
+		<visitorStockGens>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>Apparel_Blindfold</thingDef>
+			</li>
+		</visitorStockGens>
+		<traderStockGens>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>Apparel_Blindfold</thingDef>
+				<totalPriceRange>100~200</totalPriceRange>
+			</li>
+		</traderStockGens>
+		<settlementStockGens>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>Apparel_Blindfold</thingDef>
+				<totalPriceRange>200~500</totalPriceRange>
+			</li>
+		</settlementStockGens>
+	</TG.Ideo.PreceptGenDef>
 </Defs>
