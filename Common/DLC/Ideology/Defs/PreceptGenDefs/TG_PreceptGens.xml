@@ -110,6 +110,40 @@
 		</settlementStockGens>
 	</TG.Ideo.PreceptGenDef>
 	<TG.Ideo.PreceptGenDef>
+		<defName>TG_DrugUse_MedicalOnly</defName>
+		<stockRules>
+			<li Class="TG.StockRule.NoDrugs">
+				<drugCategories>
+					<li>Social</li>
+					<li>Hard</li>
+				</drugCategories>
+			</li>
+		</stockRules>
+	</TG.Ideo.PreceptGenDef>
+	<TG.Ideo.PreceptGenDef>
+		<defName>TG_DrugUse_MedicalOrSocial</defName>
+		<stockRules>
+			<li Class="TG.StockRule.NoDrugs">
+				<drugCategories>
+					<li>Hard</li>
+				</drugCategories>
+			</li>
+		</stockRules>
+	</TG.Ideo.PreceptGenDef>
+	<TG.Ideo.PreceptGenDef>
+		<defName>TG_DrugUse_Prohibited</defName>
+		<stockRules>
+			<li Class="TG.StockRule.NoDrugs">
+				<drugCategories>
+					<li>Social</li>
+					<li>Medical</li>
+					<li>Hard</li>
+				</drugCategories>
+			</li>
+
+		</stockRules>
+	</TG.Ideo.PreceptGenDef>
+	<TG.Ideo.PreceptGenDef>
 		<defName>TG_NutrientPasteEating_DontMind</defName>
 		<traderStockGens>
 			<li Class="StockGenerator_SingleDef">
