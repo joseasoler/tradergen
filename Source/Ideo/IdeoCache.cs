@@ -147,7 +147,7 @@ namespace TG.Ideo
 				var extension = precept.def.GetModExtension<PreceptGenExtension>();
 				if (extension != null)
 				{
-					preceptGenDefs.Add(extension.def);
+					preceptGenDefs.AddRange(extension.defs);
 				}
 			}
 

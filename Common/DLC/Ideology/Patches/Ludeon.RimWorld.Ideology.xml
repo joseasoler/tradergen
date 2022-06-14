@@ -7,7 +7,9 @@
 				<xpath>/Defs/PreceptDef[defName="AnimalConnection_Strong"]</xpath>
 				<value>
 					<li Class="TG.Ideo.PreceptGenExtension">
-						<def>TG_AnimalConnection_Strong</def>
+						<defs>
+							<li>TG_AnimalConnection_Strong</li>
+						</defs>
 					</li>
 				</value>
 			</li>
@@ -17,7 +19,9 @@
 				</xpath>
 				<value>
 					<li Class="TG.Ideo.PreceptGenExtension">
-						<def>TG_Blindness_Respected</def>
+						<defs>
+							<li>TG_Blindness_Respected</li>
+						</defs>
 					</li>
 				</value>
 			</li>
@@ -25,7 +29,9 @@
 				<xpath>/Defs/PreceptDef[defName="NutrientPasteEating_DontMind"]</xpath>
 				<value>
 					<li Class="TG.Ideo.PreceptGenExtension">
-						<def>TG_NutrientPasteEating_DontMind</def>
+						<defs>
+							<li>TG_NutrientPasteEating_DontMind</li>
+						</defs>
 					</li>
 				</value>
 			</li>
@@ -34,7 +40,9 @@
 				</xpath>
 				<value>
 					<li Class="TG.Ideo.PreceptGenExtension">
-						<def>TG_PsyInclined</def>
+						<defs>
+							<li>TG_PsyInclined</li>
+						</defs>
 					</li>
 				</value>
 			</li>

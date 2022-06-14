@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using Verse;
 
 namespace TG.Ideo
@@ -8,7 +9,7 @@ namespace TG.Ideo
 	/// </summary>
 	public class PreceptGenExtension : DefModExtension
 	{
-		public PreceptGenDef def;
+		public List<PreceptGenDef> defs = new List<PreceptGenDef>();
 
 		public override IEnumerable<string> ConfigErrors()
 		{
@@ -17,7 +18,7 @@ namespace TG.Ideo
 				yield return error;
 			}
 
-			foreach (var error in def.ConfigErrors())
+			foreach (var error in defs.SelectMany(def => def.ConfigErrors()))
 			{
 				yield return error;
 			}
