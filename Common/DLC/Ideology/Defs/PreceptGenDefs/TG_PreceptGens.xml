@@ -32,4 +32,19 @@
 			</li>
 		</settlementStockGens>
 	</TG.Ideo.PreceptGenDef>
+	<TG.Ideo.PreceptGenDef>
+		<defName>TG_NutrientPasteEating_DontMind</defName>
+		<traderStockGens>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>MealNutrientPaste</thingDef>
+				<totalPriceRange>200~400</totalPriceRange>
+			</li>
+		</traderStockGens>
+		<settlementStockGens>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>MealNutrientPaste</thingDef>
+				<totalPriceRange>400~800</totalPriceRange>
+			</li>
+		</settlementStockGens>
+	</TG.Ideo.PreceptGenDef>
 </Defs>
