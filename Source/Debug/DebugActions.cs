@@ -108,7 +108,7 @@ namespace TG.Debug
 		/// Adds an orbital trader using the stock of any TraderKindDef even if they are not orbital.
 		/// </summary>
 		[DebugAction(DebugCategory, null, false, false, allowedGameStates = AllowedGameStates.PlayingOnMap)]
-		private static void TestAnyTrader()
+		private static void TestTraderStockOnly()
 		{
 			var traderOptions = DefDatabase<TraderKindDef>.AllDefs.Select(def => new DebugMenuOption(def.defName,
 					DebugMenuOptionMode.Action, () =>
