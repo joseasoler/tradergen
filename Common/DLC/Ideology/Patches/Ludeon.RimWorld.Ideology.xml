@@ -59,6 +59,17 @@
 				</value>
 			</li>
 			<li Class="PatchOperationAddModExtension">
+				<xpath>/Defs/PreceptDef[defName="Cannibalism_Preferred" or defName="Cannibalism_RequiredStrong" or defName="Cannibalism_RequiredRavenous"]
+				</xpath>
+				<value>
+					<li Class="TG.Ideo.PreceptGenExtension">
+						<defs>
+							<li>TG_Cannibalism_Preferred</li>
+						</defs>
+					</li>
+				</value>
+			</li>
+			<li Class="PatchOperationAddModExtension">
 				<xpath>/Defs/PreceptDef[defName="NutrientPasteEating_DontMind"]</xpath>
 				<value>
 					<li Class="TG.Ideo.PreceptGenExtension">

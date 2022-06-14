@@ -90,6 +90,26 @@
 		</stockRules>
 	</TG.Ideo.PreceptGenDef>
 	<TG.Ideo.PreceptGenDef>
+		<defName>TG_Cannibalism_Preferred</defName>
+		<visitorStockGens>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>Meat_Human</thingDef>
+			</li>
+		</visitorStockGens>
+		<traderStockGens>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>Meat_Human</thingDef>
+				<totalPriceRange>70~120</totalPriceRange>
+			</li>
+		</traderStockGens>
+		<settlementStockGens>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>Meat_Human</thingDef>
+				<totalPriceRange>150~340</totalPriceRange>
+			</li>
+		</settlementStockGens>
+	</TG.Ideo.PreceptGenDef>
+	<TG.Ideo.PreceptGenDef>
 		<defName>TG_NutrientPasteEating_DontMind</defName>
 		<traderStockGens>
 			<li Class="StockGenerator_SingleDef">
