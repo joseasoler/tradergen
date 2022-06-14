@@ -155,4 +155,19 @@
 			</li>
 		</settlementStockGens>
 	</TG.Ideo.PreceptGenDef>
+	<TG.Ideo.PreceptGenDef>
+		<defName>TG_SlabBed_Preferred</defName>
+		<traderStockGens>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>SlabBed</thingDef>
+				<countRange>1~2</countRange>
+			</li>
+		</traderStockGens>
+		<settlementStockGens>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>SlabBed</thingDef>
+				<countRange>4~6</countRange>
+			</li>
+		</settlementStockGens>
+	</TG.Ideo.PreceptGenDef>
 </Defs>

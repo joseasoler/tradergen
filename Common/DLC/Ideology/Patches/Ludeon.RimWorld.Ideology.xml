@@ -90,6 +90,17 @@
 					</li>
 				</value>
 			</li>
+			<li Class="PatchOperationAddModExtension">
+				<xpath>/Defs/PreceptDef[defName="SlabBed_Preferred"]
+				</xpath>
+				<value>
+					<li Class="TG.Ideo.PreceptGenExtension">
+						<defs>
+							<li>TG_SlabBed_Preferred</li>
+						</defs>
+					</li>
+				</value>
+			</li>
 		</operations>
 	</Operation>
 </Patch>
