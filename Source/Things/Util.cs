@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Linq;
 using RimWorld;
 using TG.DefOf;
@@ -10,6 +11,11 @@ namespace TG.Things
 	/// </summary>
 	public static class Util
 	{
+		/// <summary>
+		/// Caches ThingDefs associated to a HediffDef.
+		/// </summary>
+		private static Dictionary<ThingDef, HediffDef> _hediffDefOf;
+
 		/// <summary>
 		/// Returns true if the provided def should be considered armor when generating trader stock.
 		/// </summary>
@@ -118,6 +124,35 @@ namespace TG.Things
 			// Hybrids and paragons in Vanilla Genetics Expanded use this mod extension.
 			return def.modExtensions == null ||
 			       def.modExtensions.All(extension => extension.GetType().FullName != "GeneticRim.DefExtension_Hybrid");
+		}
+
+		/// <summary>
+		/// Caches ThingDefs that are spawned after a HediffDef is removed.
+		/// </summary>
+		private static void InitializeHediffDefOf()
+		{
+			if (_hediffDefOf != null) return;
+
+			_hediffDefOf = new Dictionary<ThingDef, HediffDef>();
+			foreach (var hediffDef in DefDatabase<HediffDef>.AllDefs)
+			{
+				if (hediffDef.spawnThingOnRemoved != null)
+				{
+					_hediffDefOf[hediffDef.spawnThingOnRemoved] = hediffDef;
+				}
+			}
+		}
+
+		/// <summary>
+		/// A body mod is a thing that spawns after removing a hediff that counts as an implant.
+		/// </summary>
+		/// <param name="def">ThingDef being checked.</param>
+		/// <returns>True if it is a body mod.</returns>
+		public static bool IsBodyMod(in ThingDef def)
+		{
+			InitializeHediffDefOf();
+			// Although technically wood logs are implants,body purists should make an exception and still purchase it.
+			return def != ThingDefOf.WoodLog && _hediffDefOf.ContainsKey(def) && _hediffDefOf[def].countsAsAddedPartOrImplant;
 		}
 	}
 }

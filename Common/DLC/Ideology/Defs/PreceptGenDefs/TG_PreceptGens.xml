@@ -56,6 +56,12 @@
 		</settlementStockGens>
 	</TG.Ideo.PreceptGenDef>
 	<TG.Ideo.PreceptGenDef>
+		<defName>TG_BodyMod_Disapproved</defName>
+		<stockRules>
+			<li Class="TG.StockRule.NoBodyMods"/>
+		</stockRules>
+	</TG.Ideo.PreceptGenDef>
+	<TG.Ideo.PreceptGenDef>
 		<defName>TG_NutrientPasteEating_DontMind</defName>
 		<traderStockGens>
 			<li Class="StockGenerator_SingleDef">

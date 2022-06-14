@@ -47,6 +47,7 @@
 		<Compile Include="Mod\Mod.cs" />
 		<Compile Include="StockGen\PreferredApparel.cs" />
 		<Compile Include="StockGen\VeneratedAnimals.cs" />
+		<Compile Include="StockRule\NoBodyMods.cs" />
 		<Compile Include="StockRule\NoHumanLeather.cs" />
 		<Compile Include="StockRule\NoRawVegan.cs" />
 		<Compile Include="StockRule\NoRegularMeat.cs" />

@@ -26,6 +26,17 @@
 				</value>
 			</li>
 			<li Class="PatchOperationAddModExtension">
+				<xpath>/Defs/PreceptDef[defName="BodyMod_Disapproved" or defName="BodyMod_Abhorrent"]
+				</xpath>
+				<value>
+					<li Class="TG.Ideo.PreceptGenExtension">
+						<defs>
+							<li>TG_BodyMod_Disapproved</li>
+						</defs>
+					</li>
+				</value>
+			</li>
+			<li Class="PatchOperationAddModExtension">
 				<xpath>/Defs/PreceptDef[defName="NutrientPasteEating_DontMind"]</xpath>
 				<value>
 					<li Class="TG.Ideo.PreceptGenExtension">
