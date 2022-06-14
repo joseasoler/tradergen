@@ -31,6 +31,10 @@
 						<commonality>10.0</commonality>
 					</li>
 					<li>
+						<def>TG_Scavenger</def>
+						<commonality>10.0</commonality>
+					</li>
+					<li>
 						<def>TG_Tech</def>
 						<commonality>10.0</commonality>
 					</li>
@@ -97,6 +101,10 @@
 					<li MayRequire="Ludeon.RimWorld.Royalty">
 						<def>TG_Psycasting</def>
 						<commonality>5.0</commonality>
+					</li>
+					<li>
+						<def>TG_Scavenger</def>
+						<commonality>10.0</commonality>
 					</li>
 					<li>
 						<def>TG_Wealth</def>

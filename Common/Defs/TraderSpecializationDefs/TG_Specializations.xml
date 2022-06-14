@@ -427,6 +427,31 @@
 		</stockGens>
 	</TG.TraderSpecializationDef>
 	<TG.TraderSpecializationDef>
+		<defName>TG_Scavenger</defName>
+		<label>scavenger</label>
+		<stockGens>
+			<!-- Sells. -->
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>Steel</thingDef>
+				<countRange>150~300</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>Chemfuel</thingDef>
+				<countRange>150~300</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>ComponentIndustrial</thingDef>
+				<countRange>3~8</countRange>
+			</li>
+			<li Class="TG.StockGen.ExpensiveSimple">
+				<minValuePerUnit>6</minValuePerUnit>
+				<maxValuePerUnit>400</maxValuePerUnit>
+				<thingDefCountRange>4~7</thingDefCountRange>
+				<totalPriceRange>500~1100</totalPriceRange>
+			</li>
+		</stockGens>
+	</TG.TraderSpecializationDef>
+	<TG.TraderSpecializationDef>
 		<defName>TG_Tech</defName>
 		<label>technology</label>
 		<stockGens>

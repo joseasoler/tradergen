@@ -6,6 +6,7 @@ namespace TG.DefOf
 	[RimWorld.DefOf]
 	public class ThingCategory
 	{
+		public static ThingCategoryDef BodyParts;
 		public static ThingCategoryDef BodyPartsNatural;
 		public static ThingCategoryDef Buildings;
 		public static ThingCategoryDef BuildingsJoy;
@@ -16,6 +17,9 @@ namespace TG.DefOf
 		public static ThingCategoryDef FoodRaw;
 		public static ThingCategoryDef Grenades;
 		public static ThingCategoryDef InertRelics;
+
+		[MayRequire("VanillaExpanded.VGeneticsE")]
+		public static ThingCategoryDef GR_GeneticMaterial;
 
 		static ThingCategory() => DefOfHelper.EnsureInitializedInCtor(typeof(ThingCategory));
 	}
