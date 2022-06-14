@@ -82,6 +82,14 @@
 		</stockRules>
 	</TG.Ideo.PreceptGenDef>
 	<TG.Ideo.PreceptGenDef>
+		<defName>TG_Cannibalism_Disapproved</defName>
+		<stockRules>
+			<li Class="TG.StockRule.NoThingDef">
+				<thingDef>Meat_Human</thingDef>
+			</li>
+		</stockRules>
+	</TG.Ideo.PreceptGenDef>
+	<TG.Ideo.PreceptGenDef>
 		<defName>TG_NutrientPasteEating_DontMind</defName>
 		<traderStockGens>
 			<li Class="StockGenerator_SingleDef">

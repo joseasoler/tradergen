@@ -222,6 +222,7 @@ namespace TG.TraderKind
 
 				foreach (var thingDef in IdeoCache.WillNotTrade(ideo))
 				{
+					Logger.Error($"\t{thingDef.defName}");
 					_willTrade[seed][thingDef] = false;
 				}
 
