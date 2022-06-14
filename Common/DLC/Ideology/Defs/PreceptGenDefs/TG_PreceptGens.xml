@@ -140,8 +140,22 @@
 					<li>Hard</li>
 				</drugCategories>
 			</li>
-
 		</stockRules>
+	</TG.Ideo.PreceptGenDef>
+	<TG.Ideo.PreceptGenDef>
+		<defName>TG_FungusEating_Preferred</defName>
+		<traderStockGens>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>RawFungus</thingDef>
+				<totalPriceRange>200~400</totalPriceRange>
+			</li>
+		</traderStockGens>
+		<settlementStockGens>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>RawFungus</thingDef>
+				<totalPriceRange>400~800</totalPriceRange>
+			</li>
+		</settlementStockGens>
 	</TG.Ideo.PreceptGenDef>
 	<TG.Ideo.PreceptGenDef>
 		<defName>TG_NutrientPasteEating_DontMind</defName>
