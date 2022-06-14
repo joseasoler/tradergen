@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
+	<!--
+	Specific PreceptGenDef share the name of their precept. Generic ones have a descriptive name. Sort alphabetically.
+	-->
 	<TG.Ideo.PreceptGenDef>
 		<defName>TG_AnimalConnection_Strong</defName>
 		<visitorStockGens>
