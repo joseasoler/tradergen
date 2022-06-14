@@ -67,7 +67,9 @@
 	<TG.Ideo.PreceptGenDef>
 		<defName>TG_AutomaticDislikesHumanApparel</defName>
 		<stockRules>
-			<li Class="TG.StockRule.NoHumanLeather"/>
+			<li Class="TG.StockRule.NoThingDef">
+				<thingDef>Leather_Human</thingDef>
+			</li>
 		</stockRules>
 	</TG.Ideo.PreceptGenDef>
 	<!-- Added automatically for ideologies with any precept setting likesHumanLeatherApparel to true. -->
