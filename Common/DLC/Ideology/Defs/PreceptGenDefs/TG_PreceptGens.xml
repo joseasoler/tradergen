@@ -56,6 +56,26 @@
 		</settlementStockGens>
 	</TG.Ideo.PreceptGenDef>
 	<TG.Ideo.PreceptGenDef>
+		<defName>TG_BodyMod_Approved</defName>
+		<visitorStockGens>
+			<li Class="TG.StockGen.TechHediff"/>
+		</visitorStockGens>
+		<traderStockGens>
+			<li Class="TG.StockGen.TechHediff">
+				<maxTechLevelGenerate>Spacer</maxTechLevelGenerate>
+				<thingDefCountRange>1~2</thingDefCountRange>
+				<countRange>1</countRange>
+			</li>
+		</traderStockGens>
+		<settlementStockGens>
+			<li Class="TG.StockGen.TechHediff">
+				<maxTechLevelGenerate>Spacer</maxTechLevelGenerate>
+				<thingDefCountRange>2~4</thingDefCountRange>
+				<countRange>1</countRange>
+			</li>
+		</settlementStockGens>
+	</TG.Ideo.PreceptGenDef>
+	<TG.Ideo.PreceptGenDef>
 		<defName>TG_BodyMod_Disapproved</defName>
 		<stockRules>
 			<li Class="TG.StockRule.NoBodyMods"/>
