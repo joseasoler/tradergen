@@ -81,4 +81,19 @@
 			</li>
 		</settlementStockGens>
 	</TG.Ideo.PreceptGenDef>
+	<TG.Ideo.PreceptGenDef>
+		<defName>TG_Corruption_Essential</defName>
+		<traderStockGens>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>VME_Obelisk</thingDef>
+				<countRange>1</countRange>
+			</li>
+		</traderStockGens>
+		<settlementStockGens>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>VME_Obelisk</thingDef>
+				<countRange>2~3</countRange>
+			</li>
+		</settlementStockGens>
+	</TG.Ideo.PreceptGenDef>
 </Defs>
