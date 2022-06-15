@@ -184,4 +184,10 @@
 			<li Class="TG.StockRule.NoLeather"/>
 		</stockRules>
 	</TG.Ideo.PreceptGenDef>
+	<TG.Ideo.PreceptGenDef>
+		<defName>TG_Ranching_Disliked</defName>
+		<stockRules>
+			<li Class="TG.StockRule.NoFarmAnimals"/>
+		</stockRules>
+	</TG.Ideo.PreceptGenDef>
 </Defs>

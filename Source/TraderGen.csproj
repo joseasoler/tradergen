@@ -53,6 +53,7 @@
 		<Compile Include="StockRule\NoArtificialBodyMods.cs" />
 		<Compile Include="StockRule\NoBodyMods.cs" />
 		<Compile Include="StockRule\NoDrugs.cs" />
+		<Compile Include="StockRule\NoFarmAnimals.cs" />
 		<Compile Include="StockRule\NoLeather.cs" />
 		<Compile Include="StockRule\NoNaturalOrgans.cs" />
 		<Compile Include="StockRule\NoNaturalOrganStock.cs" />
