@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<!--
+	Specific PreceptGenDefs share the name of their precept. Generic ones have a descriptive name. Sort alphabetically.
+	-->
+	<TG.Ideo.PreceptGenDef>
+		<defName>TG_Alcohol_Desired</defName>
+		<visitorStockGens>
+			<li Class="TG.StockGen.Alcohol">
+				<thingDefCountRange>1</thingDefCountRange>
+				<totalPriceRange>0~20</totalPriceRange>
+			</li>
+		</visitorStockGens>
+		<traderStockGens>
+			<li Class="TG.StockGen.Alcohol">
+				<thingDefCountRange>1~2</thingDefCountRange>
+				<totalPriceRange>100~200</totalPriceRange>
+			</li>
+		</traderStockGens>
+		<settlementStockGens>
+			<li Class="TG.StockGen.Alcohol">
+				<thingDefCountRange>2~3</thingDefCountRange>
+				<totalPriceRange>300~500</totalPriceRange>
+			</li>
+		</settlementStockGens>
+	</TG.Ideo.PreceptGenDef>
+</Defs>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationSequence">
+		<operations>
+			<!-- Associate precepts with their PreceptGenExtension. Sort alphabetically by PreceptGenDef. -->
+			<li Class="PatchOperationAddModExtension">
+				<xpath>/Defs/PreceptDef[defName="VME_Alcohol_Desired" or defName="VME_Alcohol_Demanded"]</xpath>
+				<value>
+					<li Class="TG.Ideo.PreceptGenExtension">
+						<defs>
+							<li>TG_Alcohol_Desired</li>
+						</defs>
+					</li>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+</Patch>

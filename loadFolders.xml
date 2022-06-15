@@ -6,5 +6,6 @@
 		<li IfModActive="Ludeon.RimWorld.Royalty">Common/DLC/Royalty</li>
 		<li IfModActive="Ludeon.RimWorld.Ideology">Common/DLC/Ideology</li>
 		<li IfModActive="OskarPotocki.VFE.Insectoid">Common/Mods/VFE_Insectoids</li>
+		<li IfModActive="VanillaExpanded.VMemesE">Common/Mods/VIE_MS</li>
 	</v1.3>
 </loadFolders>
