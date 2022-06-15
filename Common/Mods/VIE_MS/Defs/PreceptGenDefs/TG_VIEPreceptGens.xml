@@ -102,4 +102,43 @@
 			</li>
 		</settlementStockGens>
 	</TG.Ideo.PreceptGenDef>
+	<TG.Ideo.PreceptGenDef>
+		<defName>TG_InsectJellyEaten_Loved_Classic</defName>
+		<visitorStockGens>
+			<li Class="TG.StockGen.MultiDef">
+				<thingDefs>
+					<li>InsectJelly</li>
+					<li MayRequire="OskarPotocki.VFE.Insectoid">VFEI_RoyalInsectJelly</li>
+					<li MayRequire="sarg.alphaanimals">AA_BlackInsectJelly</li>
+					<li MayRequire="VanillaExpanded.VCookE">VCE_InsectJellyPreserves</li>
+				</thingDefs>
+			</li>
+		</visitorStockGens>
+		<traderStockGens>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>InsectJelly</thingDef>
+				<totalPriceRange>150~250</totalPriceRange>
+			</li>
+			<li Class="TG.StockGen.MultiDef">
+				<thingDefs>
+					<li MayRequire="OskarPotocki.VFE.Insectoid">VFEI_RoyalInsectJelly</li>
+					<li MayRequire="sarg.alphaanimals">AA_BlackInsectJelly</li>
+					<li MayRequire="VanillaExpanded.VCookE">VCE_InsectJellyPreserves</li>
+				</thingDefs>
+			</li>
+		</traderStockGens>
+		<settlementStockGens>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>InsectJelly</thingDef>
+				<totalPriceRange>400~650</totalPriceRange>
+			</li>
+			<li Class="TG.StockGen.MultiDef">
+				<thingDefs>
+					<li MayRequire="OskarPotocki.VFE.Insectoid">VFEI_RoyalInsectJelly</li>
+					<li MayRequire="sarg.alphaanimals">AA_BlackInsectJelly</li>
+					<li MayRequire="VanillaExpanded.VCookE">VCE_InsectJellyPreserves</li>
+				</thingDefs>
+			</li>
+		</settlementStockGens>
+	</TG.Ideo.PreceptGenDef>
 </Defs>

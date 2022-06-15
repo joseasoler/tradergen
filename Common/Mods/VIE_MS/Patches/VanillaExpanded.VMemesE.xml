@@ -53,6 +53,16 @@
 					</li>
 				</value>
 			</li>
+			<li Class="PatchOperationAddModExtension">
+				<xpath>/Defs/PreceptDef[defName="VME_InsectJellyEaten_Loved_Classic"]</xpath>
+				<value>
+					<li Class="TG.Ideo.PreceptGenExtension">
+						<defs>
+							<li>TG_InsectJellyEaten_Loved_Classic</li>
+						</defs>
+					</li>
+				</value>
+			</li>
 		</operations>
 	</Operation>
 </Patch>
