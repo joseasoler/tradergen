@@ -235,6 +235,12 @@
 		</settlementStockGens>
 	</TG.Ideo.PreceptGenDef>
 	<TG.Ideo.PreceptGenDef>
+		<defName>TG_OrganUse_Abhorrent</defName>
+		<stockRules>
+			<li Class="TG.StockRule.NoNaturalOrgans"/>
+		</stockRules>
+	</TG.Ideo.PreceptGenDef>
+	<TG.Ideo.PreceptGenDef>
 		<defName>TG_OrganUse_HorribleNoSell</defName>
 		<stockRules>
 			<li Class="TG.StockRule.NoNaturalOrganStock"/>

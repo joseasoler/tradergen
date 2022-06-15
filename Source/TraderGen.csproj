@@ -49,6 +49,7 @@
 		<Compile Include="StockGen\VeneratedAnimals.cs" />
 		<Compile Include="StockRule\NoBodyMods.cs" />
 		<Compile Include="StockRule\NoDrugs.cs" />
+		<Compile Include="StockRule\NoNaturalOrgans.cs" />
 		<Compile Include="StockRule\NoNaturalOrganStock.cs" />
 		<Compile Include="StockRule\NoThingDef.cs" />
 		<Compile Include="StockRule\NoRawVegan.cs" />
