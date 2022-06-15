@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationSequence">
+		<operations>
+			<!-- Associate precepts with their PreceptGenExtension. Sort alphabetically by PreceptGenDef. -->
+			<li Class="PatchOperationAddModExtension">
+				<xpath>/Defs/PreceptDef[defName="AM_AnimalRelease_Encouraged" or defName="AM_AnimalSlaughter_Desired"]</xpath>
+				<value>
+					<li Class="TG.Ideo.PreceptGenExtension">
+						<defs>
+							<li>TG_Animal_Purchaser</li>
+						</defs>
+					</li>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+</Patch>

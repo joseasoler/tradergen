@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<!--
+	Specific PreceptGenDefs share the name of their precept. Generic ones have a descriptive name. Sort alphabetically.
+	-->
+	<TG.Ideo.PreceptGenDef>
+		<defName>TG_Animal_Purchaser</defName>
+		<traderStockGens>
+			<li Class="StockGenerator_Animals">
+				<maxWildness>0.70</maxWildness>
+				<tradeTagsBuy>
+					<li>AnimalCommon</li>
+					<li>AnimalExotic</li>
+					<li>AnimalFarm</li>
+					<li>AnimalFighter</li>
+					<li>AnimalInsect</li>
+					<li>AnimalPet</li>
+					<li>AnimalUncommon</li>
+				</tradeTagsBuy>
+			</li>
+		</traderStockGens>
+		<settlementStockGens>
+			<li Class="StockGenerator_Animals">
+				<maxWildness>0.70</maxWildness>
+				<tradeTagsBuy>
+					<li>AnimalCommon</li>
+					<li>AnimalExotic</li>
+					<li>AnimalFarm</li>
+					<li>AnimalFighter</li>
+					<li>AnimalInsect</li>
+					<li>AnimalPet</li>
+					<li>AnimalUncommon</li>
+				</tradeTagsBuy>
+			</li>
+		</settlementStockGens>
+	</TG.Ideo.PreceptGenDef>
+</Defs>
