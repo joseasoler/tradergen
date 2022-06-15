@@ -23,6 +23,16 @@
 					</li>
 				</value>
 			</li>
+			<li Class="PatchOperationAddModExtension">
+				<xpath>/Defs/PreceptDef[defName="VME_AutomationEfficiency_Increased"]</xpath>
+				<value>
+					<li Class="TG.Ideo.PreceptGenExtension">
+						<defs>
+							<li>TG_AutomationEfficiency_Increased</li>
+						</defs>
+					</li>
+				</value>
+			</li>
 		</operations>
 	</Operation>
 </Patch>

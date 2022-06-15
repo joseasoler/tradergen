@@ -45,4 +45,40 @@
 			</li>
 		</settlementStockGens>
 	</TG.Ideo.PreceptGenDef>
+	<TG.Ideo.PreceptGenDef>
+		<defName>TG_AutomationEfficiency_Increased</defName>
+		<visitorStockGens>
+			<li Class="TG.StockGen.MultiDef">
+				<thingDefs>
+					<li>ComponentIndustrial</li>
+					<li>ComponentSpacer</li>
+					<li MayRequire="OskarPotocki.VFE.Mechanoid">VFE_ComponentMechanoid</li>
+				</thingDefs>
+			</li>
+		</visitorStockGens>
+		<traderStockGens>
+			<li Class="TG.StockGen.MultiDef">
+				<thingDefs>
+					<li>ComponentSpacer</li>
+					<li MayRequire="OskarPotocki.VFE.Mechanoid">VFE_ComponentMechanoid</li>
+				</thingDefs>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>ComponentIndustrial</thingDef>
+				<countRange>4~8</countRange>
+			</li>
+		</traderStockGens>
+		<settlementStockGens>
+			<li Class="TG.StockGen.MultiDef">
+				<thingDefs>
+					<li>ComponentSpacer</li>
+					<li MayRequire="OskarPotocki.VFE.Mechanoid">VFE_ComponentMechanoid</li>
+				</thingDefs>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>ComponentIndustrial</thingDef>
+				<countRange>10~20</countRange>
+			</li>
+		</settlementStockGens>
+	</TG.Ideo.PreceptGenDef>
 </Defs>
