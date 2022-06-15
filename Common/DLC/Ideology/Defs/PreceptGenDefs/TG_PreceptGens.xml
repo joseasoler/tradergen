@@ -329,4 +329,43 @@
 			</li>
 		</settlementStockGens>
 	</TG.Ideo.PreceptGenDef>
+	<TG.Ideo.PreceptGenDef>
+		<defName>TG_Ranching_Central</defName>
+		<visitorStockGens>
+			<li Class="StockGenerator_Animals">
+				<maxWildness>0.70</maxWildness>
+				<tradeTagsBuy>
+					<li>AnimalFarm</li>
+				</tradeTagsBuy>
+			</li>
+		</visitorStockGens>
+		<traderStockGens>
+			<li Class="StockGenerator_Animals">
+				<maxWildness>0.70</maxWildness>
+				<checkTemperature>true</checkTemperature>
+				<tradeTagsSell>
+					<li>AnimalFarm</li>
+				</tradeTagsSell>
+				<kindCountRange>1</kindCountRange>
+				<countRange>2~4</countRange>
+				<createMatingPair>
+					<li>AnimalFarm</li>
+				</createMatingPair>
+			</li>
+		</traderStockGens>
+		<settlementStockGens>
+			<li Class="StockGenerator_Animals">
+				<maxWildness>0.70</maxWildness>
+				<checkTemperature>true</checkTemperature>
+				<tradeTagsSell>
+					<li>AnimalFarm</li>
+				</tradeTagsSell>
+				<kindCountRange>2~3</kindCountRange>
+				<countRange>4~6</countRange>
+				<createMatingPair>
+					<li>AnimalFarm</li>
+				</createMatingPair>
+			</li>
+		</settlementStockGens>
+	</TG.Ideo.PreceptGenDef>
 </Defs>
