@@ -241,6 +241,23 @@
 		</stockRules>
 	</TG.Ideo.PreceptGenDef>
 	<TG.Ideo.PreceptGenDef>
+		<defName>TG_OrganUse_Acceptable</defName>
+		<traderStockGens>
+			<li Class="StockGenerator_Category">
+				<categoryDef>BodyPartsNatural</categoryDef>
+				<thingDefCountRange>1~2</thingDefCountRange>
+				<countRange>1</countRange>
+			</li>
+		</traderStockGens>
+		<settlementStockGens>
+			<li Class="StockGenerator_Category">
+				<categoryDef>BodyPartsNatural</categoryDef>
+				<thingDefCountRange>2~4</thingDefCountRange>
+				<countRange>1</countRange>
+			</li>
+		</settlementStockGens>
+	</TG.Ideo.PreceptGenDef>
+	<TG.Ideo.PreceptGenDef>
 		<defName>TG_OrganUse_HorribleNoSell</defName>
 		<stockRules>
 			<li Class="TG.StockRule.NoNaturalOrganStock"/>
