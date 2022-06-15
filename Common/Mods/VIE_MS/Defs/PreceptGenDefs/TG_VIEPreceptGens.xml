@@ -24,4 +24,25 @@
 			</li>
 		</settlementStockGens>
 	</TG.Ideo.PreceptGenDef>
+	<TG.Ideo.PreceptGenDef>
+		<defName>TG_Anonymity_Required</defName>
+		<visitorStockGens>
+			<li Class="TG.StockGen.FullHeadApparel">
+				<thingDefCountRange>1</thingDefCountRange>
+				<countRange>0~1</countRange>
+			</li>
+		</visitorStockGens>
+		<traderStockGens>
+			<li Class="TG.StockGen.FullHeadApparel">
+				<thingDefCountRange>1~2</thingDefCountRange>
+				<countRange>1</countRange>
+			</li>
+		</traderStockGens>
+		<settlementStockGens>
+			<li Class="TG.StockGen.FullHeadApparel">
+				<thingDefCountRange>2~3</thingDefCountRange>
+				<countRange>1~2</countRange>
+			</li>
+		</settlementStockGens>
+	</TG.Ideo.PreceptGenDef>
 </Defs>
