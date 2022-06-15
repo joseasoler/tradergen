@@ -63,6 +63,16 @@
 					</li>
 				</value>
 			</li>
+			<li Class="PatchOperationAddModExtension">
+				<xpath>/Defs/PreceptDef[defName="VME_Insectoids_Exalted"]</xpath>
+				<value>
+					<li Class="TG.Ideo.PreceptGenExtension">
+						<defs>
+							<li>TG_Insectoids_Exalted</li>
+						</defs>
+					</li>
+				</value>
+			</li>
 		</operations>
 	</Operation>
 </Patch>

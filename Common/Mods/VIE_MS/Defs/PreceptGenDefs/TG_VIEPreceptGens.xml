@@ -141,4 +141,41 @@
 			</li>
 		</settlementStockGens>
 	</TG.Ideo.PreceptGenDef>
+	<TG.Ideo.PreceptGenDef>
+		<defName>TG_Insectoids_Exalted</defName>
+		<traderStockGens>
+			<li Class="TG.StockGen.AnimalMultiDef">
+				<pawnKindDefs>
+					<li>Megaspider</li>
+					<li>Spelopede</li>
+					<li>Megascarab</li>
+				</pawnKindDefs>
+				<kindCountRange>1</kindCountRange>
+				<totalPriceRange>200~400</totalPriceRange>
+			</li>
+			<li Class="StockGenerator_Animals">
+				<maxWildness>0.70</maxWildness>
+				<tradeTagsBuy>
+					<li>AnimalInsect</li>
+				</tradeTagsBuy>
+			</li>
+		</traderStockGens>
+		<settlementStockGens>
+			<li Class="TG.StockGen.AnimalMultiDef">
+				<pawnKindDefs>
+					<li>Megaspider</li>
+					<li>Spelopede</li>
+					<li>Megascarab</li>
+				</pawnKindDefs>
+				<kindCountRange>2~3</kindCountRange>
+				<totalPriceRange>300~600</totalPriceRange>
+			</li>
+			<li Class="StockGenerator_Animals">
+				<maxWildness>0.70</maxWildness>
+				<tradeTagsBuy>
+					<li>AnimalInsect</li>
+				</tradeTagsBuy>
+			</li>
+		</settlementStockGens>
+	</TG.Ideo.PreceptGenDef>
 </Defs>
