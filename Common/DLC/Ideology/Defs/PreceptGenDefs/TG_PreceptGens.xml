@@ -264,6 +264,26 @@
 		</stockRules>
 	</TG.Ideo.PreceptGenDef>
 	<TG.Ideo.PreceptGenDef>
+		<defName>TG_Pain_Idealized</defName>
+		<visitorStockGens>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>Apparel_TortureCrown</thingDef>
+			</li>
+		</visitorStockGens>
+		<traderStockGens>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>Apparel_TortureCrown</thingDef>
+				<totalPriceRange>100~200</totalPriceRange>
+			</li>
+		</traderStockGens>
+		<settlementStockGens>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>Apparel_TortureCrown</thingDef>
+				<totalPriceRange>200~500</totalPriceRange>
+			</li>
+		</settlementStockGens>
+	</TG.Ideo.PreceptGenDef>
+	<TG.Ideo.PreceptGenDef>
 		<defName>TG_PsyInclined</defName>
 		<visitorStockGens>
 			<li Class="StockGenerator_BuyTradeTag">
