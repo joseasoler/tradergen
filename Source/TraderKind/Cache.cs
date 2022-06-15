@@ -220,9 +220,12 @@ namespace TG.TraderKind
 				Logger.Gen(
 					$"Adding {willNotTradeList.Count} items that will not be traded and {willNotStockList.Count} items that will not be generated.");
 
+				// ToDo remove after 0.2.0 development is done.
+				Logger.Error($"Not traded: {string.Join(", ", IdeoCache.WillNotTrade(ideo))}");
+				Logger.Error($"Not generated: {string.Join(", ", IdeoCache.WillNotStock(ideo))}");
+
 				foreach (var thingDef in IdeoCache.WillNotTrade(ideo))
 				{
-					Logger.Error($"\t{thingDef.defName}");
 					_willTrade[seed][thingDef] = false;
 				}
 
