@@ -110,6 +110,52 @@
 		</settlementStockGens>
 	</TG.Ideo.PreceptGenDef>
 	<TG.Ideo.PreceptGenDef>
+		<defName>TG_DrugUse_Essential</defName>
+		<visitorStockGens>
+			<li Class="TG.StockGen.Alcohol"/>
+			<li Class="TG.StockGen.Drugs">
+				<drugCategory>Social</drugCategory>
+			</li>
+			<li Class="TG.StockGen.Drugs">
+				<drugCategory>Hard</drugCategory>
+			</li>
+		</visitorStockGens>
+		<traderStockGens>
+			<li Class="TG.StockGen.Alcohol">
+				<thingDefCountRange>1</thingDefCountRange>
+				<totalPriceRange>100~200</totalPriceRange>
+			</li>
+			<li Class="TG.StockGen.Drugs">
+				<drugCategory>Social</drugCategory>
+				<thingDefCountRange>1~2</thingDefCountRange>
+				<totalPriceRange>150~280</totalPriceRange>
+			</li>
+			<li Class="TG.StockGen.Drugs">
+				<drugCategory>Hard</drugCategory>
+				<maxTechLevelGenerate>Spacer</maxTechLevelGenerate>
+				<thingDefCountRange>0~1</thingDefCountRange>
+				<totalPriceRange>100~200</totalPriceRange>
+			</li>
+		</traderStockGens>
+		<settlementStockGens>
+			<li Class="TG.StockGen.Alcohol">
+				<thingDefCountRange>2~3</thingDefCountRange>
+				<totalPriceRange>100~200</totalPriceRange>
+			</li>
+			<li Class="TG.StockGen.Drugs">
+				<drugCategory>Social</drugCategory>
+				<thingDefCountRange>2~4</thingDefCountRange>
+				<totalPriceRange>150~280</totalPriceRange>
+			</li>
+			<li Class="TG.StockGen.Drugs">
+				<drugCategory>Hard</drugCategory>
+				<maxTechLevelGenerate>Spacer</maxTechLevelGenerate>
+				<thingDefCountRange>1~2</thingDefCountRange>
+				<totalPriceRange>100~200</totalPriceRange>
+			</li>
+		</settlementStockGens>
+	</TG.Ideo.PreceptGenDef>
+	<TG.Ideo.PreceptGenDef>
 		<defName>TG_DrugUse_MedicalOnly</defName>
 		<stockRules>
 			<li Class="TG.StockRule.NoDrugs">

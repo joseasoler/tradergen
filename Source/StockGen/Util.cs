@@ -202,6 +202,9 @@ namespace TG.StockGen
 				b.Append($"price: {Enum.GetName(typeof(PriceType), g.price)}\n");
 			}
 
+			// Remove the last end of line character.
+			if (b.Length > 0 && b[b.Length - 1] == '\n') b.Remove(b.Length - 1, 1);
+
 			return b;
 		}
 	}

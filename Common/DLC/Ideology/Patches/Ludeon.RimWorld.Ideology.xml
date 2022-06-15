@@ -70,6 +70,16 @@
 				</value>
 			</li>
 			<li Class="PatchOperationAddModExtension">
+				<xpath>/Defs/PreceptDef[defName="DrugUse_Essential"]</xpath>
+				<value>
+					<li Class="TG.Ideo.PreceptGenExtension">
+						<defs>
+							<li>TG_DrugUse_Essential</li>
+						</defs>
+					</li>
+				</value>
+			</li>
+			<li Class="PatchOperationAddModExtension">
 				<xpath>/Defs/PreceptDef[defName="DrugUse_MedicalOnly"]</xpath>
 				<value>
 					<li Class="TG.Ideo.PreceptGenExtension">

@@ -1,3 +1,5 @@
+using System;
+using System.Text;
 using RimWorld;
 using Verse;
 
@@ -12,6 +14,12 @@ namespace TG.StockGen
 		/// If set to a specific value, it will only generate drugs from the chosen category.
 		/// </summary>
 		public DrugCategory drugCategory = DrugCategory.Any;
+
+		public override void ConditionToText(ref StringBuilder b)
+		{
+			base.ConditionToText(ref b);
+			b.Append($"drugCategory: {Enum.GetName(typeof(DrugCategory), drugCategory)}\n");
+		}
 
 		protected override bool CanBuy(in ThingDef def)
 		{
