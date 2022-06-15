@@ -50,6 +50,7 @@
 		<Compile Include="StockGen\PreferredApparel.cs" />
 		<Compile Include="StockGen\Skulls.cs" />
 		<Compile Include="StockGen\VeneratedAnimals.cs" />
+		<Compile Include="StockRule\NoArtificialBodyMods.cs" />
 		<Compile Include="StockRule\NoBodyMods.cs" />
 		<Compile Include="StockRule\NoDrugs.cs" />
 		<Compile Include="StockRule\NoNaturalOrgans.cs" />

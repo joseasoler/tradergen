@@ -21,6 +21,15 @@ namespace TG.DefOf
 		[MayRequire("VanillaExpanded.VGeneticsE")]
 		public static ThingCategoryDef GR_GeneticMaterial;
 
+		[MayRequire("sarg.alphaanimals")]
+		public static ThingCategoryDef AA_ImplantCategory;
+
+		[MayRequire("OskarPotocki.VFE.Insectoid")]
+		public static ThingCategoryDef VFEI_BodyPartsInsect;
+
+		[MayRequire("VanillaExpanded.VGeneticsE")]
+		public static ThingCategoryDef GR_ImplantCategory;
+
 		static ThingCategory() => DefOfHelper.EnsureInitializedInCtor(typeof(ThingCategory));
 	}
 }

@@ -3,6 +3,7 @@ using System.Linq;
 using RimWorld;
 using TG.DefOf;
 using Verse;
+using ThingCategory = Verse.ThingCategory;
 
 namespace TG.Things
 {
@@ -15,6 +16,12 @@ namespace TG.Things
 		/// Caches ThingDefs associated to a HediffDef.
 		/// </summary>
 		private static Dictionary<ThingDef, HediffDef> _hediffDefOf;
+
+
+		/// <summary>
+		/// Body mod which is not created artificially.
+		/// </summary>
+		private static HashSet<ThingDef> _naturalBodyMod;
 
 		/// <summary>
 		/// Returns true if the provided def should be considered armor when generating trader stock.
@@ -136,9 +143,11 @@ namespace TG.Things
 			if (_hediffDefOf != null) return;
 
 			_hediffDefOf = new Dictionary<ThingDef, HediffDef>();
+
 			foreach (var hediffDef in DefDatabase<HediffDef>.AllDefs)
 			{
-				if (hediffDef.spawnThingOnRemoved != null)
+				if (hediffDef.spawnThingOnRemoved != null &&
+				    DefOf.ThingCategory.BodyParts.DescendantThingDefs.Contains(hediffDef.spawnThingOnRemoved))
 				{
 					_hediffDefOf[hediffDef.spawnThingOnRemoved] = hediffDef;
 				}
@@ -155,6 +164,48 @@ namespace TG.Things
 			InitializeHediffDefOf();
 			// Although technically wood logs are implants,body purists should make an exception and still purchase it.
 			return def != ThingDefOf.WoodLog && _hediffDefOf.ContainsKey(def) && _hediffDefOf[def].countsAsAddedPartOrImplant;
+		}
+
+		private static void InitializeNaturalBodyMods()
+		{
+			if (_naturalBodyMod != null) return;
+
+			// Gather all natural body parts.
+			_naturalBodyMod = DefOf.ThingCategory.BodyPartsNatural.DescendantThingDefs.ToHashSet();
+			if (DefOf.ThingCategory.AA_ImplantCategory != null)
+			{
+				_naturalBodyMod.UnionWith(DefOf.ThingCategory.AA_ImplantCategory.DescendantThingDefs);
+			}
+
+			if (DefOf.ThingCategory.VFEI_BodyPartsInsect != null)
+			{
+				_naturalBodyMod.UnionWith(DefOf.ThingCategory.VFEI_BodyPartsInsect.DescendantThingDefs);
+			}
+
+			if (DefOf.ThingCategory.GR_ImplantCategory != null)
+			{
+				_naturalBodyMod.UnionWith(DefOf.ThingCategory.GR_ImplantCategory.DescendantThingDefs);
+			}
+
+			// Keep only those that count as an added part or implant.
+			_naturalBodyMod.IntersectWith(_hediffDefOf.Keys);
+		}
+
+		/// <summary>
+		/// Thing that counts as an artificial body mod. See ThoughtWorker_Precept_HasNonNaturalProsthetic in VIE-MS.
+		/// </summary>
+		/// <param name="def">ThingDef being checked.</param>
+		/// <returns>True if it is an artificial body mod.</returns>
+		public static bool IsArtificialBodyMod(in ThingDef def)
+		{
+			if (!IsBodyMod(def))
+			{
+				return false;
+			}
+
+			InitializeNaturalBodyMods();
+
+			return IsBodyMod(def) && !_naturalBodyMod.Contains(def);
 		}
 
 		/// <summary>

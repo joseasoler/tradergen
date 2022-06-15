@@ -82,6 +82,12 @@
 		</settlementStockGens>
 	</TG.Ideo.PreceptGenDef>
 	<TG.Ideo.PreceptGenDef>
+		<defName>TG_BodyMod_OnlyBiological</defName>
+		<stockRules>
+			<li Class="TG.StockRule.NoArtificialBodyMods"/>
+		</stockRules>
+	</TG.Ideo.PreceptGenDef>
+	<TG.Ideo.PreceptGenDef>
 		<defName>TG_Corruption_Essential</defName>
 		<traderStockGens>
 			<li Class="StockGenerator_SingleDef">

@@ -34,6 +34,16 @@
 				</value>
 			</li>
 			<li Class="PatchOperationAddModExtension">
+				<xpath>/Defs/PreceptDef[defName="VME_BodyMod_OnlyBiological"]</xpath>
+				<value>
+					<li Class="TG.Ideo.PreceptGenExtension">
+						<defs>
+							<li>TG_BodyMod_OnlyBiological</li>
+						</defs>
+					</li>
+				</value>
+			</li>
+			<li Class="PatchOperationAddModExtension">
 				<xpath>/Defs/PreceptDef[defName="VME_Corruption_Essential"]</xpath>
 				<value>
 					<li Class="TG.Ideo.PreceptGenExtension">
