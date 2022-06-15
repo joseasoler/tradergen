@@ -204,6 +204,41 @@
 		</settlementStockGens>
 	</TG.Ideo.PreceptGenDef>
 	<TG.Ideo.PreceptGenDef>
+		<defName>TG_GauranlenConnection_Strong</defName>
+		<visitorStockGens>
+			<li Class="TG.StockGen.MultiDef">
+				<thingDefs>
+					<li>MedicineHerbal</li>
+					<li>RawBerries</li>
+				</thingDefs>
+				<thingDefCountRange>1~2</thingDefCountRange>
+				<totalPriceRange>10~30</totalPriceRange>
+			</li>
+		</visitorStockGens>
+		<traderStockGens>
+			<li Class="TG.StockGen.MultiDef">
+				<thingDefs>
+					<li>MedicineHerbal</li>
+					<li>RawBerries</li>
+					<li MayRequire="VanillaExpanded.Ideo.Dryads">VDE_Gaubric</li>
+				</thingDefs>
+				<thingDefCountRange>3</thingDefCountRange>
+				<totalPriceRange>100~250</totalPriceRange>
+			</li>
+		</traderStockGens>
+		<settlementStockGens>
+			<li Class="TG.StockGen.MultiDef">
+				<thingDefs>
+					<li>MedicineHerbal</li>
+					<li>RawBerries</li>
+					<li MayRequire="VanillaExpanded.Ideo.Dryads">VDE_Gaubric</li>
+				</thingDefs>
+				<thingDefCountRange>3</thingDefCountRange>
+				<totalPriceRange>400~600</totalPriceRange>
+			</li>
+		</settlementStockGens>
+	</TG.Ideo.PreceptGenDef>
+	<TG.Ideo.PreceptGenDef>
 		<defName>TG_InsectMeatEating_Loved</defName>
 		<visitorStockGens>
 			<li Class="TG.StockGen.InsectMeat"/>
