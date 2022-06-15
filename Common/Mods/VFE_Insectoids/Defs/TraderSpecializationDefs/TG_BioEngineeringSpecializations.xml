@@ -69,7 +69,6 @@
 		<stockGens>
 			<!-- Sells. -->
 			<li Class="TG.StockGen.InsectMeat">
-				<thingDefCountRange>1</thingDefCountRange>
 				<totalPriceRange>800~1150</totalPriceRange>
 			</li>
 			<li Class="TG.StockGen.MultiDef">

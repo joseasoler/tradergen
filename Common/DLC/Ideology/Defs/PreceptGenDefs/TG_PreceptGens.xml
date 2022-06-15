@@ -204,6 +204,22 @@
 		</settlementStockGens>
 	</TG.Ideo.PreceptGenDef>
 	<TG.Ideo.PreceptGenDef>
+		<defName>TG_InsectMeatEating_Loved</defName>
+		<visitorStockGens>
+			<li Class="TG.StockGen.InsectMeat"/>
+		</visitorStockGens>
+		<traderStockGens>
+			<li Class="TG.StockGen.InsectMeat">
+				<totalPriceRange>50~100</totalPriceRange>
+			</li>
+		</traderStockGens>
+		<settlementStockGens>
+			<li Class="TG.StockGen.InsectMeat">
+				<totalPriceRange>150~400</totalPriceRange>
+			</li>
+		</settlementStockGens>
+	</TG.Ideo.PreceptGenDef>
+	<TG.Ideo.PreceptGenDef>
 		<defName>TG_NutrientPasteEating_DontMind</defName>
 		<traderStockGens>
 			<li Class="StockGenerator_SingleDef">

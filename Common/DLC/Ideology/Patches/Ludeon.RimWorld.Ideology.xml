@@ -120,6 +120,16 @@
 				</value>
 			</li>
 			<li Class="PatchOperationAddModExtension">
+				<xpath>/Defs/PreceptDef[defName="InsectMeatEating_Loved"]</xpath>
+				<value>
+					<li Class="TG.Ideo.PreceptGenExtension">
+						<defs>
+							<li>TG_InsectMeatEating_Loved</li>
+						</defs>
+					</li>
+				</value>
+			</li>
+			<li Class="PatchOperationAddModExtension">
 				<xpath>/Defs/PreceptDef[defName="NutrientPasteEating_DontMind"]</xpath>
 				<value>
 					<li Class="TG.Ideo.PreceptGenExtension">
