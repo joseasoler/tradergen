@@ -46,6 +46,7 @@
 		<Compile Include="Mod\Settings.cs" />
 		<Compile Include="Mod\Mod.cs" />
 		<Compile Include="StockGen\PreferredApparel.cs" />
+		<Compile Include="StockGen\Skulls.cs" />
 		<Compile Include="StockGen\VeneratedAnimals.cs" />
 		<Compile Include="StockRule\NoBodyMods.cs" />
 		<Compile Include="StockRule\NoDrugs.cs" />

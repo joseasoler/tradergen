@@ -330,6 +330,24 @@
 		</settlementStockGens>
 	</TG.Ideo.PreceptGenDef>
 	<TG.Ideo.PreceptGenDef>
+		<defName>TG_Skullspike_Desired</defName>
+		<visitorStockGens>
+			<li Class="TG.StockGen.Skulls">
+				<countRange>0~1</countRange>
+			</li>
+		</visitorStockGens>
+		<traderStockGens>
+			<li Class="TG.StockGen.Skulls">
+				<countRange>1~2</countRange>
+			</li>
+		</traderStockGens>
+		<settlementStockGens>
+			<li Class="TG.StockGen.Skulls">
+				<countRange>4~6</countRange>
+			</li>
+		</settlementStockGens>
+	</TG.Ideo.PreceptGenDef>
+	<TG.Ideo.PreceptGenDef>
 		<defName>TG_Ranching_Central</defName>
 		<visitorStockGens>
 			<li Class="StockGenerator_Animals">
