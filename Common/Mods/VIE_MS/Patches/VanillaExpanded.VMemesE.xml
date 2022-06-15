@@ -103,6 +103,16 @@
 					</li>
 				</value>
 			</li>
+			<li Class="PatchOperationAddModExtension">
+				<xpath>/Defs/PreceptDef[defName="VME_TradingPrice_Improved"]</xpath>
+				<value>
+					<li Class="TG.Ideo.PreceptGenExtension">
+						<defs>
+							<li>TG_TradingPrice_Improved</li>
+						</defs>
+					</li>
+				</value>
+			</li>
 		</operations>
 	</Operation>
 </Patch>

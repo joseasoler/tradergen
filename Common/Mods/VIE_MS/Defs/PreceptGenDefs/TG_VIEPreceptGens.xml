@@ -190,4 +190,25 @@
 			<li Class="TG.StockRule.NoFarmAnimals"/>
 		</stockRules>
 	</TG.Ideo.PreceptGenDef>
+	<TG.Ideo.PreceptGenDef>
+		<defName>TG_TradingPrice_Improved</defName>
+		<visitorStockGens>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>Silver</thingDef>
+				<countRange>5~25</countRange>
+			</li>
+		</visitorStockGens>
+		<traderStockGens>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>Silver</thingDef>
+				<countRange>75~120</countRange>
+			</li>
+		</traderStockGens>
+		<settlementStockGens>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>Silver</thingDef>
+				<countRange>160~600</countRange>
+			</li>
+		</settlementStockGens>
+	</TG.Ideo.PreceptGenDef>
 </Defs>
