@@ -69,6 +69,23 @@
 		</settlementStockGens>
 	</TG.Ideo.PreceptGenDef>
 	<TG.Ideo.PreceptGenDef>
+		<defName>TG_CombatProwess_Distance</defName>
+		<traderStockGens>
+			<li Class="TG.StockGen.WeaponRanged">
+				<forceFactionTechLimits>true</forceFactionTechLimits>
+				<thingDefCountRange>1~2</thingDefCountRange>
+				<countRange>1</countRange>
+			</li>
+		</traderStockGens>
+		<settlementStockGens>
+			<li Class="TG.StockGen.WeaponRanged">
+				<forceFactionTechLimits>true</forceFactionTechLimits>
+				<thingDefCountRange>2~4</thingDefCountRange>
+				<countRange>1~2</countRange>
+			</li>
+		</settlementStockGens>
+	</TG.Ideo.PreceptGenDef>
+	<TG.Ideo.PreceptGenDef>
 		<defName>TG_NutrientPasteEating_Preferred</defName>
 		<traderStockGens>
 			<li Class="StockGenerator_SingleDef">
@@ -83,5 +100,4 @@
 			</li>
 		</settlementStockGens>
 	</TG.Ideo.PreceptGenDef>
-
 </Defs>
