@@ -27,6 +27,8 @@ namespace TG.StockGen
 
 		public override void ToText(ref StringBuilder b)
 		{
+			base.ToText(ref b);
+
 			if (thingDefCountRange != IntRange.zero)
 			{
 				b.Append($"thingDefCountRange: {thingDefCountRange}\n");

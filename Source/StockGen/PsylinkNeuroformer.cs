@@ -19,6 +19,7 @@ namespace TG.StockGen
 
 		public override void BeforeGen(in int tile, in Faction faction)
 		{
+			base.BeforeGen(tile, faction);
 			_faction = faction;
 		}
 
