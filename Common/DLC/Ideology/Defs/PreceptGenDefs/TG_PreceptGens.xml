@@ -62,14 +62,14 @@
 		</visitorStockGens>
 		<traderStockGens>
 			<li Class="TG.StockGen.TechHediff">
-				<maxTechLevelGenerate>Spacer</maxTechLevelGenerate>
+				<forceFactionTechLimits>true</forceFactionTechLimits>
 				<thingDefCountRange>1~2</thingDefCountRange>
 				<countRange>1</countRange>
 			</li>
 		</traderStockGens>
 		<settlementStockGens>
 			<li Class="TG.StockGen.TechHediff">
-				<maxTechLevelGenerate>Spacer</maxTechLevelGenerate>
+				<forceFactionTechLimits>true</forceFactionTechLimits>
 				<thingDefCountRange>2~4</thingDefCountRange>
 				<countRange>1</countRange>
 			</li>
@@ -122,34 +122,38 @@
 		</visitorStockGens>
 		<traderStockGens>
 			<li Class="TG.StockGen.Alcohol">
+				<forceFactionTechLimits>true</forceFactionTechLimits>
 				<thingDefCountRange>1</thingDefCountRange>
-				<totalPriceRange>100~200</totalPriceRange>
+				<totalPriceRange>50~100</totalPriceRange>
 			</li>
 			<li Class="TG.StockGen.Drugs">
 				<drugCategory>Social</drugCategory>
+				<forceFactionTechLimits>true</forceFactionTechLimits>
 				<thingDefCountRange>1~2</thingDefCountRange>
-				<totalPriceRange>150~280</totalPriceRange>
+				<totalPriceRange>90~200</totalPriceRange>
 			</li>
 			<li Class="TG.StockGen.Drugs">
 				<drugCategory>Hard</drugCategory>
-				<maxTechLevelGenerate>Spacer</maxTechLevelGenerate>
+				<forceFactionTechLimits>true</forceFactionTechLimits>
 				<thingDefCountRange>0~1</thingDefCountRange>
-				<totalPriceRange>100~200</totalPriceRange>
+				<totalPriceRange>50~100</totalPriceRange>
 			</li>
 		</traderStockGens>
 		<settlementStockGens>
 			<li Class="TG.StockGen.Alcohol">
+				<forceFactionTechLimits>true</forceFactionTechLimits>
 				<thingDefCountRange>2~3</thingDefCountRange>
 				<totalPriceRange>100~200</totalPriceRange>
 			</li>
 			<li Class="TG.StockGen.Drugs">
 				<drugCategory>Social</drugCategory>
+				<forceFactionTechLimits>true</forceFactionTechLimits>
 				<thingDefCountRange>2~4</thingDefCountRange>
 				<totalPriceRange>150~280</totalPriceRange>
 			</li>
 			<li Class="TG.StockGen.Drugs">
 				<drugCategory>Hard</drugCategory>
-				<maxTechLevelGenerate>Spacer</maxTechLevelGenerate>
+				<forceFactionTechLimits>true</forceFactionTechLimits>
 				<thingDefCountRange>1~2</thingDefCountRange>
 				<totalPriceRange>100~200</totalPriceRange>
 			</li>
@@ -280,14 +284,14 @@
 		<traderStockGens>
 			<li Class="StockGenerator_Category">
 				<categoryDef>BodyPartsNatural</categoryDef>
-				<thingDefCountRange>1~2</thingDefCountRange>
+				<thingDefCountRange>0~1</thingDefCountRange>
 				<countRange>1</countRange>
 			</li>
 		</traderStockGens>
 		<settlementStockGens>
 			<li Class="StockGenerator_Category">
 				<categoryDef>BodyPartsNatural</categoryDef>
-				<thingDefCountRange>2~4</thingDefCountRange>
+				<thingDefCountRange>1~2</thingDefCountRange>
 				<countRange>1</countRange>
 			</li>
 		</settlementStockGens>

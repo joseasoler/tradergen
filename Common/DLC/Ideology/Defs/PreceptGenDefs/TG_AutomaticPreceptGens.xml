@@ -26,8 +26,7 @@
 			</li>
 			<li Class="TG.StockGen.Drugs">
 				<drugCategory>Medical</drugCategory>
-				<!-- Prevents Luciferium from being generated. -->
-				<maxTechLevelGenerate>Spacer</maxTechLevelGenerate>
+				<forceFactionTechLimits>true</forceFactionTechLimits>
 				<thingDefCountRange>1</thingDefCountRange>
 				<totalPriceRange>200~400</totalPriceRange>
 			</li>
@@ -43,8 +42,7 @@
 			</li>
 			<li Class="TG.StockGen.Drugs">
 				<drugCategory>Medical</drugCategory>
-				<!-- Prevents Luciferium from being generated. -->
-				<maxTechLevelGenerate>Spacer</maxTechLevelGenerate>
+				<forceFactionTechLimits>true</forceFactionTechLimits>
 				<thingDefCountRange>1~2</thingDefCountRange>
 				<totalPriceRange>500~900</totalPriceRange>
 			</li>

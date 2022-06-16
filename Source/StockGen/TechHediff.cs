@@ -1,3 +1,4 @@
+using System;
 using RimWorld;
 using Verse;
 
@@ -8,6 +9,11 @@ namespace TG.StockGen
 	/// </summary>
 	public class TechHediff : ConditionMatcher
 	{
+		protected override bool ValidTechLevel(in ThingDef def)
+		{
+			return base.ValidTechLevel(def);
+		}
+
 		protected override bool CanBuy(in ThingDef def)
 		{
 			return def.tradeTags != null && def.tradeTags.Contains("TechHediff");
