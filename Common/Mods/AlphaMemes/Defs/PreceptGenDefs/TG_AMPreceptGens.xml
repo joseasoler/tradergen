@@ -73,6 +73,10 @@
 		<traderStockGens>
 			<li Class="TG.StockGen.WeaponRanged">
 				<forceFactionTechLimits>true</forceFactionTechLimits>
+				<excludeWeaponTags>
+					<li MayRequire="VanillaExpanded.VWE">ToolDecent</li>
+					<li MayRequire="OskarPotocki.VFE.Pirates">WarcasketAll</li>
+				</excludeWeaponTags>
 				<thingDefCountRange>1~2</thingDefCountRange>
 				<countRange>1</countRange>
 			</li>
@@ -80,6 +84,10 @@
 		<settlementStockGens>
 			<li Class="TG.StockGen.WeaponRanged">
 				<forceFactionTechLimits>true</forceFactionTechLimits>
+				<excludeWeaponTags>
+					<li MayRequire="VanillaExpanded.VWE">ToolDecent</li>
+					<li MayRequire="OskarPotocki.VFE.Pirates">WarcasketAll</li>
+				</excludeWeaponTags>
 				<thingDefCountRange>2~4</thingDefCountRange>
 				<countRange>1~2</countRange>
 			</li>
