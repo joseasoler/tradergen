@@ -58,17 +58,17 @@
 	<TG.Ideo.PreceptGenDef>
 		<defName>TG_BodyMod_Approved</defName>
 		<visitorStockGens>
-			<li Class="TG.StockGen.TechHediff"/>
+			<li Class="TG.StockGen.ArtificialBodyMod"/>
 		</visitorStockGens>
 		<traderStockGens>
-			<li Class="TG.StockGen.TechHediff">
+			<li Class="TG.StockGen.ArtificialBodyMod">
 				<forceFactionTechLimits>true</forceFactionTechLimits>
 				<thingDefCountRange>1~2</thingDefCountRange>
 				<countRange>1</countRange>
 			</li>
 		</traderStockGens>
 		<settlementStockGens>
-			<li Class="TG.StockGen.TechHediff">
+			<li Class="TG.StockGen.ArtificialBodyMod">
 				<forceFactionTechLimits>true</forceFactionTechLimits>
 				<thingDefCountRange>2~4</thingDefCountRange>
 				<countRange>1</countRange>

@@ -7,16 +7,11 @@ namespace TG.StockGen
 	/// <summary>
 	/// Produces bionics with a selection curve that makes very cheap and very expensive bionics less common.
 	/// </summary>
-	public class TechHediff : ConditionMatcher
+	public class ArtificialBodyMod : ConditionMatcher
 	{
-		protected override bool ValidTechLevel(in ThingDef def)
-		{
-			return base.ValidTechLevel(def);
-		}
-
 		protected override bool CanBuy(in ThingDef def)
 		{
-			return def.tradeTags != null && def.tradeTags.Contains("TechHediff");
+			return Things.Util.IsArtificialBodyMod(def);
 		}
 
 		private static readonly SimpleCurve SelectionWeight = new SimpleCurve

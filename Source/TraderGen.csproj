@@ -66,11 +66,11 @@
 		<Compile Include="SpecializationCommonality.cs" />
 		<Compile Include="StockGen\Alcohol.cs" />
 		<Compile Include="StockGen\AnimalMultiDef.cs" />
+		<Compile Include="StockGen\ArtificialBodyMod.cs" />
 		<Compile Include="StockGen\BuildingsJoy.cs" />
 		<Compile Include="StockGen\ExpensiveSimple.cs" />
 		<Compile Include="StockGen\Drugs.cs" />
 		<Compile Include="StockGen\PsylinkNeuroformer.cs" />
-		<Compile Include="StockGen\TechHediff.cs" />
 		<Compile Include="StockGen\ConditionMatcher.cs" />
 		<Compile Include="StockGen\ExoticAnimalPart.cs" />
 		<Compile Include="StockGen\FoodGluttonous.cs" />

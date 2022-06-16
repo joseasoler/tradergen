@@ -50,7 +50,7 @@
 		<defName>TG_Bionics</defName>
 		<label>bionics</label>
 		<stockGens>
-			<li Class="TG.StockGen.TechHediff">
+			<li Class="TG.StockGen.ArtificialBodyMod">
 				<minTechLevelGenerate>Industrial</minTechLevelGenerate>
 				<maxTechLevelGenerate>Ultra</maxTechLevelGenerate>
 				<thingDefCountRange>2~4</thingDefCountRange>
