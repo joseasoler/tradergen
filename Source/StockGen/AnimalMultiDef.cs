@@ -86,17 +86,18 @@ namespace TG.StockGen
 				_cachedAnimalProducts[pawnKind] = new HashSet<ThingDef>();
 				foreach (var comp in pawnKind.race.comps)
 				{
-					List<ThingDef> animalProductDefs = new List<ThingDef>();
+
+					var animalProductDefs = new List<ThingDef>();
 					switch (comp)
 					{
 						case CompProperties_Shearable shearableComp:
-							animalProductDefs.Add(shearableComp.woolDef);
+							if (shearableComp.woolDef != null) animalProductDefs.Add(shearableComp.woolDef);
 							break;
 						case CompProperties_Milkable milkableComp:
-							animalProductDefs.Add(milkableComp.milkDef);
+							if (milkableComp.milkDef != null) animalProductDefs.Add(milkableComp.milkDef);
 							break;
 						case CompProperties_EggLayer eggComp:
-							animalProductDefs.Add(eggComp.eggUnfertilizedDef);
+							if (eggComp.eggUnfertilizedDef != null) animalProductDefs.Add(eggComp.eggUnfertilizedDef);
 							break;
 						default:
 						{
