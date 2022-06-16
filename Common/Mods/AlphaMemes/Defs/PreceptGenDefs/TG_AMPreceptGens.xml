@@ -86,6 +86,31 @@
 		</settlementStockGens>
 	</TG.Ideo.PreceptGenDef>
 	<TG.Ideo.PreceptGenDef>
+		<defName>TG_CombatProwess_Melee</defName>
+		<traderStockGens>
+			<li Class="TG.StockGen.WeaponMelee">
+				<forceFactionTechLimits>true</forceFactionTechLimits>
+				<excludeWeaponTags>
+					<li MayRequire="VanillaExpanded.VWE">ToolDecent</li>
+					<li MayRequire="OskarPotocki.VFE.Pirates">WarcasketMelee</li>
+				</excludeWeaponTags>
+				<thingDefCountRange>1~2</thingDefCountRange>
+				<countRange>1</countRange>
+			</li>
+		</traderStockGens>
+		<settlementStockGens>
+			<li Class="TG.StockGen.WeaponMelee">
+				<forceFactionTechLimits>true</forceFactionTechLimits>
+				<excludeWeaponTags>
+					<li MayRequire="VanillaExpanded.VWE">ToolDecent</li>
+					<li MayRequire="OskarPotocki.VFE.Pirates">WarcasketMelee</li>
+				</excludeWeaponTags>
+				<thingDefCountRange>2~4</thingDefCountRange>
+				<countRange>1~2</countRange>
+			</li>
+		</settlementStockGens>
+	</TG.Ideo.PreceptGenDef>
+	<TG.Ideo.PreceptGenDef>
 		<defName>TG_NutrientPasteEating_Preferred</defName>
 		<traderStockGens>
 			<li Class="StockGenerator_SingleDef">

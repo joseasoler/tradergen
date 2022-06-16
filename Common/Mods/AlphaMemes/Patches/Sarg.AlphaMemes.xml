@@ -46,6 +46,16 @@
 				</value>
 			</li>
 			<li Class="PatchOperationAddModExtension">
+				<xpath>/Defs/PreceptDef[defName="AM_CombatProwess_Melee"]</xpath>
+				<value>
+					<li Class="TG.Ideo.PreceptGenExtension">
+						<defs>
+							<li>TG_CombatProwess_Melee</li>
+						</defs>
+					</li>
+				</value>
+			</li>
+			<li Class="PatchOperationAddModExtension">
 				<xpath>/Defs/PreceptDef[defName="AM_NutrientPasteEating_Preferred"]</xpath>
 				<value>
 					<li Class="TG.Ideo.PreceptGenExtension">
