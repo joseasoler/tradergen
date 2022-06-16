@@ -119,6 +119,36 @@
 		</settlementStockGens>
 	</TG.Ideo.PreceptGenDef>
 	<TG.Ideo.PreceptGenDef>
+		<defName>TG_Madness_Exalted</defName>
+		<visitorStockGens>
+			<li Class="TG.StockGen.ExpensiveSimple">
+				<forceFactionTechLimits>true</forceFactionTechLimits>
+				<minValuePerUnit>3</minValuePerUnit>
+				<maxValuePerUnit>15</maxValuePerUnit>
+				<thingDefCountRange>1</thingDefCountRange>
+				<totalPriceRange>10~50</totalPriceRange>
+			</li>
+		</visitorStockGens>
+		<traderStockGens>
+			<forceFactionTechLimits>true</forceFactionTechLimits>
+			<li Class="TG.StockGen.ExpensiveSimple">
+				<minValuePerUnit>3</minValuePerUnit>
+				<maxValuePerUnit>90</maxValuePerUnit>
+				<thingDefCountRange>2~3</thingDefCountRange>
+				<totalPriceRange>100~220</totalPriceRange>
+			</li>
+		</traderStockGens>
+		<settlementStockGens>
+			<li Class="TG.StockGen.ExpensiveSimple">
+				<forceFactionTechLimits>true</forceFactionTechLimits>
+				<minValuePerUnit>3</minValuePerUnit>
+				<maxValuePerUnit>2000</maxValuePerUnit>
+				<thingDefCountRange>3~5</thingDefCountRange>
+				<totalPriceRange>300~570</totalPriceRange>
+			</li>
+		</settlementStockGens>
+	</TG.Ideo.PreceptGenDef>
+	<TG.Ideo.PreceptGenDef>
 		<defName>TG_NutrientPasteEating_Preferred</defName>
 		<traderStockGens>
 			<li Class="StockGenerator_SingleDef">
