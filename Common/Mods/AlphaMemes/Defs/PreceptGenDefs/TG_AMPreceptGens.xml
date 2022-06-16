@@ -130,8 +130,8 @@
 			</li>
 		</visitorStockGens>
 		<traderStockGens>
-			<forceFactionTechLimits>true</forceFactionTechLimits>
 			<li Class="TG.StockGen.ExpensiveSimple">
+				<forceFactionTechLimits>true</forceFactionTechLimits>
 				<minValuePerUnit>3</minValuePerUnit>
 				<maxValuePerUnit>90</maxValuePerUnit>
 				<thingDefCountRange>2~3</thingDefCountRange>
