@@ -297,8 +297,6 @@ namespace TG.Ideo
 			_willNotStock[key] = new HashSet<ThingDef>();
 
 			var preceptGenDefs = GatherPreceptGens(ideo);
-			// ToDo remove
-			Logger.Error($"PreceptGens of ideo {ideo.name}: {string.Join(", ", preceptGenDefs)}");
 			EvaluatePreceptGens(ideo, preceptGenDefs);
 			AddForbiddenMeats(ideo);
 		}
