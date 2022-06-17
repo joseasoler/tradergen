@@ -47,6 +47,7 @@
 		<Compile Include="Mod\Mod.cs" />
 		<Compile Include="StockGen\Art.cs" />
 		<Compile Include="StockGen\FullHeadApparel.cs" />
+		<Compile Include="StockGen\IdeoApparel_SingleDef.cs" />
 		<Compile Include="StockGen\IdeoArmor.cs" />
 		<Compile Include="StockGen\IdeoColorApparel.cs" />
 		<Compile Include="StockGen\PreferredApparel.cs" />
