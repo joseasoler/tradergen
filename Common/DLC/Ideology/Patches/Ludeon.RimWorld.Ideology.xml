@@ -48,7 +48,8 @@
 				</value>
 			</li>
 			<li Class="PatchOperationAddModExtension">
-				<xpath>/Defs/PreceptDef[defName="Cannibalism_Disapproved" or defName="Cannibalism_Horrible" or defName="Cannibalism_Abhorrent"]
+				<xpath>/Defs/PreceptDef[defName="Cannibalism_Disapproved" or defName="Cannibalism_Horrible" or
+					defName="Cannibalism_Abhorrent"]
 				</xpath>
 				<value>
 					<li Class="TG.Ideo.PreceptGenExtension">
@@ -59,7 +60,8 @@
 				</value>
 			</li>
 			<li Class="PatchOperationAddModExtension">
-				<xpath>/Defs/PreceptDef[defName="Cannibalism_Preferred" or defName="Cannibalism_RequiredStrong" or defName="Cannibalism_RequiredRavenous"]
+				<xpath>/Defs/PreceptDef[defName="Cannibalism_Preferred" or defName="Cannibalism_RequiredStrong" or
+					defName="Cannibalism_RequiredRavenous"]
 				</xpath>
 				<value>
 					<li Class="TG.Ideo.PreceptGenExtension">
@@ -146,17 +148,6 @@
 					<li Class="TG.Ideo.PreceptGenExtension">
 						<defs>
 							<li>TG_OrganUse_Abhorrent</li>
-						</defs>
-					</li>
-				</value>
-			</li>
-			<li Class="PatchOperationAddModExtension">
-				<xpath>/Defs/PreceptDef[defName="OrganUse_Acceptable"]
-				</xpath>
-				<value>
-					<li Class="TG.Ideo.PreceptGenExtension">
-						<defs>
-							<li>TG_OrganUse_Acceptable</li>
 						</defs>
 					</li>
 				</value>
