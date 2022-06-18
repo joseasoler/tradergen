@@ -107,7 +107,7 @@ namespace TG.Things
 		}
 
 		/// <summary>
-		/// False for animals which cannot be tamed and all genetic animals from VGE.
+		/// False for animals which cannot be tamed, all genetic animals from VGE, and awakened dryads.
 		/// Used to prevent using venerated animals as a loophole to obtain them.
 		/// </summary>
 		/// <param name="def">Pawn being checked.</param>
@@ -128,6 +128,12 @@ namespace TG.Things
 							return false;
 					}
 				}
+			}
+
+			// Prevent awakened dryads.
+			if (def.race?.tradeTags != null && def.race.tradeTags.Contains("VDE_Dryad"))
+			{
+				return false;
 			}
 
 			// Hybrids and paragons in Vanilla Genetics Expanded use this mod extension.
