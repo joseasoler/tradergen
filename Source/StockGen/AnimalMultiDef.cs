@@ -86,7 +86,6 @@ namespace TG.StockGen
 				_cachedAnimalProducts[pawnKind] = new HashSet<ThingDef>();
 				foreach (var comp in pawnKind.race.comps)
 				{
-
 					var animalProductDefs = new List<ThingDef>();
 					switch (comp)
 					{
@@ -221,7 +220,8 @@ namespace TG.StockGen
 				// Generate stock for animal products of the chosen animal.
 				foreach (var productDef in _cachedAnimalProducts[pawnDef])
 				{
-					if (!productDef.tradeability.TraderCanSell() || Things.Util.IsExotic(productDef)) continue;
+					if (!productDef.tradeability.TraderCanSell() || Things.Util.IsExotic(productDef) ||
+					    TraderKind.Cache.WillNotStock(TraderKind.Cache.GenerationSeed, productDef)) continue;
 
 					var productCount = Mathf.RoundToInt(animalProductPriceRange.RandomInRange / productDef.BaseMarketValue);
 					foreach (var thing in StockGeneratorUtility.TryMakeForStock(productDef, productCount, faction))
