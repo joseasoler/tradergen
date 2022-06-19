@@ -45,13 +45,13 @@
 		<traderStockGens>
 			<li Class="TG.StockGen.IdeoApparel_SingleDef">
 				<apparelDef>Apparel_Blindfold</apparelDef>
-				<totalPriceRange>100~200</totalPriceRange>
+				<countRange>1</countRange>
 			</li>
 		</traderStockGens>
 		<settlementStockGens>
 			<li Class="TG.StockGen.IdeoApparel_SingleDef">
 				<apparelDef>Apparel_Blindfold</apparelDef>
-				<totalPriceRange>200~500</totalPriceRange>
+				<countRange>1~2</countRange>
 			</li>
 		</settlementStockGens>
 	</TG.Ideo.PreceptGenDef>

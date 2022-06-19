@@ -127,7 +127,7 @@
 		<traderStockGens>
 			<li Class="TG.StockGen.PreferredApparel">
 				<thingDefCountRange>2~3</thingDefCountRange>
-				<countRange>1~3</countRange>
+				<countRange>1~2</countRange>
 			</li>
 		</traderStockGens>
 		<settlementStockGens>
