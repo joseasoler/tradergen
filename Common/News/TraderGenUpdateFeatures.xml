@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<HugsLib.UpdateFeatureDef Abstract="true" Name="TraderGenUpdateFeature">
+		<defName>TraderGenUpdateFeature</defName>
+		<modNameReadable>TraderGen</modNameReadable>
+		<modIdentifier>joseasoler.TraderGen</modIdentifier>
+		<linkUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2804121197</linkUrl>
+	</HugsLib.UpdateFeatureDef>
+	<HugsLib.UpdateFeatureDef ParentName="TraderGenUpdateFeature">
+		<defName>TraderGen_0_2_0</defName>
+		<assemblyVersion>0.2.0</assemblyVersion>
+		<content>
+			<![CDATA[This new version adds support for the Ideology DLC. It is safe to use it in existing 0.1.x savegames. Now traders will expand their stock depending on the ideoligion they follow. They may have their preferred apparel with their preferred ideology color in stock, or they may keep some of their venerated animals.
+
+Memes also have unique effects in the trader stock. For example, tunneler ideologies will sell some insect meat and raw fungus, and Transhumanist traders will always purchase artificial body modifications and may have some of them in stock. TraderGen has support for more than 50 precepts from Ideology and multiple mods. Now every ideology will have a unique approach to trading!
+
+TraderGen can also limit what traders are willing to purchase or stock depending on their ideology. This feature will affect the difficulty of the game, but it can be disabled in the mod settings. For example, non-cannibal ideologies will refuse to purchase human meat, while ideologies against cutting trees will not have wood in stock.
+
+You can find a detailed list of all the ideology additions in the features page linked in the steam workshop website of TraderGen.
+
+This version also adds a new orbital trader specialization. Scavengers sell steel, chemfuel, some components, and random scavenged items. They are present in bulk and combat orbital traders.
+]]>
+		</content>
+	</HugsLib.UpdateFeatureDef>
+</Defs>
