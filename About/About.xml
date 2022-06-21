@@ -7,21 +7,19 @@
 	</supportedVersions>
 	<url>https://gitlab.com/joseasoler/tradergen</url>
 	<packageId>joseasoler.TraderGen</packageId>
-	<description><![CDATA[TraderGen adds new options for improving trader generation and trader stock.
+	<description><![CDATA[TraderGen is a mod focused on improving trader variety. Every trader will feel different and unique, while fitting seamlessly with the world and mod selection of your current game.
 
-• Orbital traders now have a specialization, which adds a limited amount of stock that could be particularly rare or useful. It is possible to modify the number of specializations or disable the feature entirely through the mod settings.
+In addition to their usual stock, orbital traders now have specializations. Specializations add a limited selection of stock matching a particular theme; even if they share a trader type an ordnance combat supplier will feel very different from a scavenger combat supplier. Orbital traders will now also get more diverse and fitting names.
 
-• Adjustable amount of silver in stock for orbital, settlement, caravan and visitor traders. Compatible with traders from mods.
+With the Ideology DLC, traders will expand their stock depending on the ideoligion they follow. They may have their preferred apparel with their preferred ideology color in stock, or they may keep some of their venerated animals.
 
-• Mod setting for making traders such as the slaver orbital trader appear even when the population of the colony is large.
+Memes also have unique effects in the trader stock. For example, tunneler ideologies will sell some insect meat and raw fungus, and Transhumanist traders will always purchase artificial body modifications and may have some of them in stock. TraderGen has support for more than 50 precepts from Ideology and multiple mods. Now every ideology will have a unique approach to trading!
 
-• Additional features when other mods are enabled.
+TraderGen can also limit what traders are willing to purchase or stock depending on their ideology. This feature will affect the difficulty of the game, but it can be disabled in the mod settings. For example, non-cannibal ideologies will refuse to purchase human meat, while ideologies against cutting trees will not have wood in stock.
 
-• More diversity of names for vanilla orbital traders.
+All of these stock modifications take into account the technological level of their trader. They are also intended to be fully compatible with your modlist (please make a bug report if it doesn't!) and should always generate stock that matches their theme. You can tweak TraderGen to your liking; every feature can be tweaked, enabled or disabled in the mod settings.
 
-• Minor tweaks to vanilla trader stock, aiming at increasing their variety and improving mod compatibility.
-
-You can find a detailed description of all specializations, trader tweaks and mod compatibility features in the project website.
+You can find a detailed description of specializations, ideology features, trader tweaks and mod compatibility features in the project website.
 ]]></description>
 	<modDependencies>
 		<li>
