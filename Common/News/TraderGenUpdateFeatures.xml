@@ -7,6 +7,14 @@
 		<linkUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2804121197</linkUrl>
 	</HugsLib.UpdateFeatureDef>
 	<HugsLib.UpdateFeatureDef ParentName="TraderGenUpdateFeature">
+		<defName>TraderGen_0_2_1</defName>
+		<assemblyVersion>0.2.1</assemblyVersion>
+		<content>
+			<![CDATA[Fixed a TraderGen bug where traders from some mods such as the MiningCo. Spaceship's periodic cargo ship could not trade any items.
+]]>
+		</content>
+	</HugsLib.UpdateFeatureDef>
+	<HugsLib.UpdateFeatureDef ParentName="TraderGenUpdateFeature">
 		<defName>TraderGen_0_2_0</defName>
 		<assemblyVersion>0.2.0</assemblyVersion>
 		<content>
