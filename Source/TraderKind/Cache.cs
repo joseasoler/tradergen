@@ -105,8 +105,12 @@ namespace TG.TraderKind
 			var seed = SeedFromTrader(trader);
 			if (!_willTrade.ContainsKey(seed))
 			{
-				Logger.ErrorOnce($"TraderGen cache is missing data for trader {traderDef.defName} {seed}");
-				return false;
+				// Unfortunately TraderGen needs to explicitly patch every trader generation method in order to support them.
+				// This means that traders not following any of the vanilla creation methods will eventually reach this point.
+				// This is not considered an error as it is not feasible to support every possible mod.
+				Logger.GenOnce($"TraderGen cache is missing data for trader {traderDef.defName} with seed {seed}");
+				// When this happens, rely on the vanilla WillTrade calculations instead.
+				return traderDef.WillTrade(thingDef);
 			}
 
 			if (_willTrade[seed].TryGetValue(thingDef, out var willTradeThingDef)) return willTradeThingDef;

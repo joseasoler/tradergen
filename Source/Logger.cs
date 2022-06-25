@@ -9,6 +9,9 @@ namespace TG
 	/// </summary>
 	public static class Logger
 	{
+		/// <summary>
+		/// All log entries by TraderGen will use this prefix.
+		/// </summary>
 		private const string Prefix = "[TraderGen] ";
 
 		/// <summary>
@@ -30,6 +33,19 @@ namespace TG
 			{
 				Message(text);
 			}
+		}
+
+		/// <summary>
+		/// Logs a trader procedural generation message only once.
+		/// </summary>
+		/// <param name="text">Text to be logged.</param>
+		public static void GenOnce(string text)
+		{
+			if (!Settings.LogGen) return;
+			var key = text.GetHashCode();
+			if (Log.usedKeys.Contains(key)) return;
+			Log.usedKeys.Add(key);
+			Message(text);
 		}
 
 		/// <summary>
