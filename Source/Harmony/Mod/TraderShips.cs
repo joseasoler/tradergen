@@ -16,10 +16,7 @@ namespace TG.Harmony.Mod
 		/// <param name="harmony">Harmony library instance.</param>
 		public static void Patch(HarmonyLib.Harmony harmony)
 		{
-			if (!HarmonyUtils.TraderShipsEnabled())
-			{
-				return;
-			}
+			if (!HarmonyUtils.TraderShipsEnabled()) return;
 
 			var exposeData = AccessTools.Method("TraderShips.LandedShip:ExposeData");
 			var traderShipsLoad = new HarmonyMethod(AccessTools.Method(typeof(TraderShips), nameof(TraderShipsLoad)));
