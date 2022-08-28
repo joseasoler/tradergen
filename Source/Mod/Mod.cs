@@ -85,20 +85,24 @@ namespace TG.Mod
 			TooltipHandler.TipRegion(resetButtonRect, "TG_ResetSettingsTooltip".Translate());
 			listing.Gap(listing.verticalSpacing);
 
-			listing.GapLine(24f);
-			listing.Gap();
-			listing.Label("TG_DevelopmentOptions".Translate(), -1f, "TG_DevelopmentOptionsTooltip".Translate());
-			listing.Gap();
+			if (Prefs.DevMode)
+			{
+				listing.GapLine(24f);
+				listing.Gap();
+				listing.Label("TG_DevelopmentOptions".Translate(), -1f, "TG_DevelopmentOptionsTooltip".Translate());
+				listing.Gap();
 
-			var logGen = Settings.LogGen;
-			listing.CheckboxLabeled("TG_LogTraderGen".Translate(), ref logGen,
-				"TG_LogTraderGenTooltip".Translate());
-			Settings.LogGen = logGen;
+				var logGen = Settings.LogGen;
+				listing.CheckboxLabeled("TG_LogTraderGen".Translate(), ref logGen,
+					"TG_LogTraderGenTooltip".Translate());
+				Settings.LogGen = logGen;
 
-			var logStockGen = Settings.LogStockGen;
-			listing.CheckboxLabeled("TG_LogTraderStockGen".Translate(), ref logStockGen,
-				"TG_LogTraderStockGenTooltip".Translate());
-			Settings.LogStockGen = logStockGen;
+				var logStockGen = Settings.LogStockGen;
+				listing.CheckboxLabeled("TG_LogTraderStockGen".Translate(), ref logStockGen,
+					"TG_LogTraderStockGenTooltip".Translate());
+				Settings.LogStockGen = logStockGen;
+			}
+
 
 			listing.End();
 			base.DoSettingsWindowContents(inRect);
