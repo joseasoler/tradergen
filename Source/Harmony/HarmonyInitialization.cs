@@ -25,6 +25,7 @@ namespace TG.Harmony
 			DLC.Ideology.Patch(harmony);
 			// Manual patching for other mods.
 			Mod.TraderShips.Patch(harmony);
+			Mod.TradeUIRevised.Patch(harmony);
 		}
 	}
 }

@@ -192,6 +192,9 @@ TraderGen should support wares from mods out of the box; please submit a [bug re
 * **[Steampunk: Trader Airships](https://steamcommunity.com/sharedfiles/filedetails/?id=2708154727):** Trader ship stock is generated using the TraderGen rules for orbital traders.
 
 
+* **[Trade UI Revised](https://steamcommunity.com/sharedfiles/filedetails/?id=2683622537):** Orbital trader specializations are shown correctly.
+
+
 * **[Trader Ships](https://steamcommunity.com/sharedfiles/filedetails/?id=2046222331):** Trader ship stock is generated using the TraderGen rules for orbital traders.
 
 

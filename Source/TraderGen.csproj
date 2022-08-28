@@ -32,6 +32,7 @@
 		<Compile Include="Harmony\DialogTrade.cs" />
 		<Compile Include="Harmony\DLC\Ideology.cs" />
 		<Compile Include="Harmony\HarmonyUtils.cs" />
+		<Compile Include="Harmony\Mod\TradeUIRevised.cs" />
 		<Compile Include="Harmony\StockGenerator.cs" />
 		<Compile Include="Harmony\Pawn.cs" />
 		<Compile Include="Harmony\Mod\TraderShips.cs" />
