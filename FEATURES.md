@@ -247,7 +247,11 @@ TraderGen should support wares from mods out of the box; please submit a [bug re
 * **[Vanilla Factions Expanded - Medieval](https://steamcommunity.com/sharedfiles/filedetails/?id=2023513450):** The wine merchant caravan will now purchase other alcohol types and social drugs.
 
 
-* **[Vanilla Factions Expanded - Settlers](https://steamcommunity.com/sharedfiles/filedetails/?id=2052918119):** Orbital traders with the hunting specialization may have hunting rifles in stock.
+* **[Vanilla Factions Expanded - Settlers](https://steamcommunity.com/sharedfiles/filedetails/?id=2052918119):**
+
+  * In caravan raids, the enemy caravan will have its stock tweaked with TraderGen rules.
+
+  * Orbital traders with the hunting specialization may have hunting rifles in stock.
 
 
 * **[Vanilla Furniture Expanded](https://steamcommunity.com/sharedfiles/filedetails/?id=1718190143):** Orbital traders carrying joy furniture will include items from this mod in their stock.
