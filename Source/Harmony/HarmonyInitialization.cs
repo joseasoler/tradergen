@@ -19,6 +19,7 @@ namespace TG.Harmony
 			// Annotation patches.
 			harmony.PatchAll(Assembly.GetExecutingAssembly());
 			// Conditional patches.
+			DialogTrade.Patch(harmony);
 			TradeShipGen.Patch(harmony);
 			// DLC specific patches.
 			DLC.Ideology.Patch(harmony);

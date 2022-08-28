@@ -9,7 +9,6 @@ namespace TG.Harmony
 	/// <summary>
 	/// Patches the trade dialog to take into account TraderGen additions.
 	/// </summary>
-	[HarmonyPatch]
 	public static class DialogTrade
 	{
 		/// <summary>
@@ -22,8 +21,18 @@ namespace TG.Harmony
 			return Util.Label(TradeSession.trader);
 		}
 
-		[HarmonyTranspiler]
-		[HarmonyPatch(typeof(Dialog_Trade), nameof(Dialog_Trade.DoWindowContents))]
+		/// <summary>
+		/// Apply the Harmony patches for trade dialog compatibility.
+		/// </summary>
+		/// <param name="harmony">Harmony library instance.</param>
+		public static void Patch(HarmonyLib.Harmony harmony)
+		{
+			var tradeWindowContents = AccessTools.Method(typeof(Dialog_Trade), nameof(Dialog_Trade.DoWindowContents));
+			var tradeWindowTranspiler =
+				new HarmonyMethod(AccessTools.Method(typeof(DialogTrade), nameof(InjectSpecializations)));
+			harmony.Patch(tradeWindowContents, transpiler: tradeWindowTranspiler);
+		}
+
 		private static IEnumerable<CodeInstruction> InjectSpecializations(IEnumerable<CodeInstruction> instructions)
 		{
 			var labelCapGetter = AccessTools.PropertyGetter(typeof(Def), nameof(Def.LabelCap));

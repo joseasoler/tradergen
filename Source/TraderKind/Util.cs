@@ -55,7 +55,7 @@ namespace TG.TraderKind
 		}
 
 		/// <summary>
-		/// Include specializations in the label of ta trader.
+		/// Include specializations in the label of a trader.
 		/// </summary>
 		/// <param name="trader">Trader being evaluated.</param>
 		/// <returns>Label to use for this ship.</returns>
