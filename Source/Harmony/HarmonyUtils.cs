@@ -34,5 +34,24 @@ namespace TG.Harmony
 
 			return (bool) _traderShipsEnabled;
 		}
+
+		/// <summary>
+		/// Lazily initialized value tracking if the Trade UI revised mod is active.
+		/// </summary>
+		private static bool? _tradeUIRevisedActive;
+
+		/// <summary>
+		/// Returns true if the Trade UI revised mod is being used.
+		/// </summary>
+		/// <returns>True if any of the mentioned mods are being used.</returns>
+		public static bool TradeUIRevisedActive()
+		{
+			if (_tradeUIRevisedActive == null)
+			{
+				_tradeUIRevisedActive = LoadedModManager.RunningMods.Any(pack => pack.PackageId == "hobtook.tradeui");
+			}
+
+			return (bool) _tradeUIRevisedActive;
+		}
 	}
 }

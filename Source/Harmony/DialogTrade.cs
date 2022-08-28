@@ -27,6 +27,8 @@ namespace TG.Harmony
 		/// <param name="harmony">Harmony library instance.</param>
 		public static void Patch(HarmonyLib.Harmony harmony)
 		{
+			if (HarmonyUtils.TradeUIRevisedActive()) return;
+
 			var tradeWindowContents = AccessTools.Method(typeof(Dialog_Trade), nameof(Dialog_Trade.DoWindowContents));
 			var tradeWindowTranspiler =
 				new HarmonyMethod(AccessTools.Method(typeof(DialogTrade), nameof(InjectSpecializations)));
