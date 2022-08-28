@@ -14,6 +14,7 @@
 		<Optimize>true</Optimize>
 		<WarningLevel>4</WarningLevel>
 		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+		<Deterministic>true</Deterministic>
 		<TreatWarningsAsErrors>true</TreatWarningsAsErrors>
 		<OutputPath>..\$(Configuration)\Assemblies\</OutputPath>
 	</PropertyGroup>
