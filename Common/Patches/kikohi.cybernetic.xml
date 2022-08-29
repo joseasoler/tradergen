@@ -45,6 +45,13 @@
 							</li>
 						</value>
 					</li>
+					<!-- Modifications to the bionics trader -->
+					<li Class="PatchOperationAdd">
+						<xpath>/Defs/TraderKindDef[defName="CONN_BionicsTrader"]/stockGenerators</xpath>
+						<value>
+							<li Class="TG.StockGen.ArtificialBodyMod"/>
+						</value>
+					</li>
 				</operations>
 			</match>
 		</nomatch>
