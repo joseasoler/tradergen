@@ -153,6 +153,11 @@ TraderGen should support wares from mods out of the box; please submit a [bug re
 * **[Buyable psylink neuroformers](https://steamcommunity.com/sharedfiles/filedetails/?id=2190288136):** TraderGen is fully compatible with this mod. TraderGen only adds psylink neuroformers to a specific specialization, while Buyable psylink neuroformers adds it to some of the traders regardless of their specialization.
 
 
+* **[Cybernetic Organism and Neural Network](https://steamcommunity.com/sharedfiles/filedetails/?id=2045064990):**
+
+  * The bionics trader gets access to these specializations: drugs, hunting, medicine, organs, psycasting, wealth.
+
+
 * **[Expanded Prosthetics and Organ Engineering](https://steamcommunity.com/sharedfiles/filedetails/?id=725956940):**
 
   * The prosthesis trader gets access to these specializations: drugs, hunting, medicine, organs, psycasting, wealth.
