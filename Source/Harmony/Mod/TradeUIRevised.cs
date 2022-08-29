@@ -13,7 +13,6 @@ namespace TG.Harmony.Mod
 			if (!HarmonyUtils.TradeUIRevisedActive()) return;
 
 			var doWindowContents = AccessTools.Method("TradeUI.Harmony_DialogTrade_FillMainRect:Prefix");
-			Logger.Error($"Transpiling method {doWindowContents}");
 			var tradeWindowTranspiler =
 				new HarmonyMethod(
 					AccessTools.Method(typeof(HarmonyUtils), nameof(HarmonyUtils.AddSpecializationsToTraderLabel)));
