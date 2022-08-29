@@ -159,6 +159,9 @@ TraderGen should support wares from mods out of the box; please submit a [bug re
 
   * The bionics trader will now purchase all prosthetics from any mods.
 
+  * The bionics trader will now purchase most really expensive items that could be resold for profit.
+
+
 * **[Expanded Prosthetics and Organ Engineering](https://steamcommunity.com/sharedfiles/filedetails/?id=725956940):**
 
   * The prosthesis trader gets access to these specializations: drugs, hunting, medicine, organs, psycasting, wealth.
