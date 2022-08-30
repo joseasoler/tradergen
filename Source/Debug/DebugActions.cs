@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using Force.DeepCloner;
 using RimWorld;
@@ -13,6 +14,8 @@ namespace TG.Debug
 		/// Category to use for TraderGen debug actions.
 		/// </summary>
 		private const string DebugCategory = "TraderGen";
+
+		private static HashSet<string> IgnoreRaceComps = new HashSet<string> {"CompBreakLink", "CompUntameable"};
 
 		/// <summary>
 		/// Place all things and animals which can be sold or purchased in the map.
@@ -37,9 +40,8 @@ namespace TG.Debug
 			foreach (var def in DefDatabase<PawnKindDef>.AllDefs)
 			{
 				if (!def.race.race.Animal || def.race.tradeability == Tradeability.None ||
-				    // Prevent untamable animals from VE/AA from appearing.
 				    def.race.comps != null &&
-				    def.race.comps.Any(comp => comp.compClass.Name == "CompUntameable")
+				    def.race.comps.Any(comp => IgnoreRaceComps.Contains(comp.compClass.Name))
 				   )
 				{
 					continue;
