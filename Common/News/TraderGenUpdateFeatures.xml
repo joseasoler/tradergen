@@ -7,6 +7,28 @@
 		<linkUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2804121197</linkUrl>
 	</HugsLib.UpdateFeatureDef>
 	<HugsLib.UpdateFeatureDef ParentName="TraderGenUpdateFeature">
+		<defName>TraderGen_0_3_0</defName>
+		<assemblyVersion>0.3.0</assemblyVersion>
+		<content>
+			<![CDATA[<color=#e1e150>New features:</color>
+
+• New orbital trader specialization, prospector. Sells a random selection of minable resources. In vanilla this includes steel, components, gold, jade, plasteel and uranium. It should also be compatible with all mods; for example it may have some gemstones with Jewelry, or sky steel with Alpha Animals. Present in bulk and orbital traders.
+
+• Followers of the Tunneler or Industrialism memes will have some minable resources in stock. These are chosen from the same pool used by the prospector specialization.
+
+<color=#e1e150>Mod compatibility:</color>
+
+• <i>Trade UI Revised</i> now shows the specializations of orbital traders.
+
+• A new orbital trader specialization is available with <i>Rim-Robots_</i>, synthetics. Sells prosthetics for mechanents and personae, fuel nodes and mechanite cores. It may sometimes have a mech-casket in stock. Present in exotic and slaver orbital traders. It is also present in prosthetics or bionics orbital traders added by other mods.
+
+• <i>Cybernetic Organism and Neural Network</i> adds a bionics trader when Expanded Prosthetics and Organ Engineering or the Forked version are not included in the game. This trader now gets access to the drugs, hunting, medicine, organs, psycasting and wealth specializations. Now it will also purchase all prosthetics from any mods, and most really expensive items.
+
+• With <i>Vanilla Factions Expanded - Settlers</i>, enemy caravans attacked during caravan raid events will have their stock influenced by TraderGen as well.
+]]>
+		</content>
+	</HugsLib.UpdateFeatureDef>
+	<HugsLib.UpdateFeatureDef ParentName="TraderGenUpdateFeature">
 		<defName>TraderGen_0_2_0</defName>
 		<assemblyVersion>0.2.0</assemblyVersion>
 		<content>
