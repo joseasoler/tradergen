@@ -259,6 +259,29 @@
 		</settlementStockGens>
 	</TG.Ideo.PreceptGenDef>
 	<TG.Ideo.PreceptGenDef>
+		<defName>TG_MiningYield_High</defName>
+		<traderStockGens>
+			<li Class="TG.StockGen.MinableResource">
+				<thingDefCountRange>1</thingDefCountRange>
+				<totalPriceRange>150~250</totalPriceRange>
+				<excludedThingDefs>
+					<li>Silver</li>
+					<li MayRequire="VanillaExpanded.VPsycastsE">VPE_Eltex</li>
+				</excludedThingDefs>
+			</li>
+		</traderStockGens>
+		<settlementStockGens>
+			<li Class="TG.StockGen.MinableResource">
+				<thingDefCountRange>2~3</thingDefCountRange>
+				<totalPriceRange>200~300</totalPriceRange>
+				<excludedThingDefs>
+					<li>Silver</li>
+					<li MayRequire="VanillaExpanded.VPsycastsE">VPE_Eltex</li>
+				</excludedThingDefs>
+			</li>
+		</settlementStockGens>
+	</TG.Ideo.PreceptGenDef>
+	<TG.Ideo.PreceptGenDef>
 		<defName>TG_OrganUse_Abhorrent</defName>
 		<stockRules>
 			<li Class="TG.StockRule.NoNaturalOrgans"/>

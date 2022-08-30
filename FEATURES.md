@@ -86,7 +86,7 @@ You can find a list of all changes below. Although the list mentions memes for e
 * Ideologies considering Ranching to be central to their beliefs will have traders with some farm animals in stock.
 * Transhumanist ideologies will always purchase artificial body modifications. They may have some of them in stock as well.
 * Ideologies with the Tree connection meme will have some herbal medicine and berries in stock.
-* Traders following Tunneler ideologies will have some insect meat and fungus in stock.
+* Traders following Tunneler ideologies will have some insect meat and fungus in stock. They will also have some random minable resources in stock.
 * Ideologies with the Cutting trees: disapproved, horrible or prohibited precepts will not have wood in stock.
 * Ideologies forbidding Drug use of certain categories will not purchase them either.
 * Traders from ideologies with the Meat eating: vegetarian disliked, vegetarian hated or vegetarian abhorrent precepts will not purchase raw vegetables.
@@ -118,6 +118,7 @@ You can find a list of all changes below. Although the list mentions memes for e
 * Traders from ideologies following the Eldritch cult structure will have ominous obelisks in stock.
 * Traders adhering to the Fleshcrafters meme will only purchase biological body modifications.
 * Traders from ideologies following the Healthcare meme will have some medicine in stock. Settlements may also have some medical drugs.
+* Followers of the Industrialism meme will have some random minable resources in stock.
 * Ideologies with the Insectoid supremacy meme may have some insect jelly and tamed insectoids in stock.
 * Traders from ideologies with the Party life meme will never leave their base without carrying some alcohol in stock.
 * Traders following the Progressive meme may have some components in stock.

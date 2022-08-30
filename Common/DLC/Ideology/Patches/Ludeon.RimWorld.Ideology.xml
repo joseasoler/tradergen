@@ -142,6 +142,16 @@
 				</value>
 			</li>
 			<li Class="PatchOperationAddModExtension">
+				<xpath>/Defs/PreceptDef[defName="MiningYield_High"]</xpath>
+				<value>
+					<li Class="TG.Ideo.PreceptGenExtension">
+						<defs>
+							<li>TG_MiningYield_High</li>
+						</defs>
+					</li>
+				</value>
+			</li>
+			<li Class="PatchOperationAddModExtension">
 				<xpath>/Defs/PreceptDef[defName="OrganUse_Abhorrent"]
 				</xpath>
 				<value>
