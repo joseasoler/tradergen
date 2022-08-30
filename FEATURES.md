@@ -57,6 +57,9 @@ TraderGen will add between zero and five specializations (depending on mod setti
 * **Scavenger**: Sells steel, chemfuel, components, and random scavenged items. Present in bulk and combat traders.
 
 
+* **Synthetics (with [Rim-Robots_](https://steamcommunity.com/sharedfiles/filedetails/?id=2743171832)):** Sells prosthetics, fuel nodes and mechanite cores. It may sometimes have a mech-casket in stock. Present in exotic and slaver orbital traders.
+
+
 * **Technology:** Has components and materials required for high technology devices. Present in bulk and exotic orbital traders.
 
 
@@ -161,7 +164,7 @@ TraderGen should support wares from mods out of the box; please submit a [bug re
 
 * **[Cybernetic Organism and Neural Network](https://steamcommunity.com/sharedfiles/filedetails/?id=2045064990):**
 
-  * The bionics trader gets access to these specializations: drugs, hunting, medicine, organs, psycasting, wealth.
+  * The bionics trader gets access to these specializations: drugs, hunting, medicine, organs, psycasting, synthetics, wealth.
 
   * The bionics trader will now purchase all prosthetics from any mods.
 
@@ -170,14 +173,14 @@ TraderGen should support wares from mods out of the box; please submit a [bug re
 
 * **[Expanded Prosthetics and Organ Engineering](https://steamcommunity.com/sharedfiles/filedetails/?id=725956940):**
 
-  * The prosthesis trader gets access to these specializations: drugs, hunting, medicine, organs, psycasting, wealth.
+  * The prosthesis trader gets access to these specializations: drugs, hunting, medicine, organs, psycasting, synthetics, wealth.
 
   * The textiles trader gets access to these specializations: biomaterials, cannibal, draper, hunting, husbandry, wealth.
 
 
 * **[Expanded Prosthetics and Organ Engineering - Forked](https://steamcommunity.com/sharedfiles/filedetails/?id=1949064302):**
 
-  * The prosthesis trader gets access to these specializations: drugs, hunting, medicine, organs, psycasting, wealth.
+  * The prosthesis trader gets access to these specializations: drugs, hunting, medicine, organs, psycasting, synthetics, wealth.
 
   * The textiles trader gets access to these specializations: biomaterials, cannibal, draper, hunting, husbandry, wealth.
 

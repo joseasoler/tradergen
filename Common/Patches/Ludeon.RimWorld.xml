@@ -153,6 +153,10 @@
 						<def>TG_Psycasting</def>
 						<commonality>8.0</commonality>
 					</li>
+					<li MayRequire="VexedTrees980.RimRobots">
+						<def>TG_Synthetics</def>
+						<commonality>8.0</commonality>
+					</li>
 					<li>
 						<def>TG_Tech</def>
 						<commonality>10.0</commonality>
@@ -199,6 +203,10 @@
 					<li>
 						<def>TG_Prospector</def>
 						<commonality>10.0</commonality>
+					</li>
+					<li MayRequire="VexedTrees980.RimRobots">
+						<def>TG_Synthetics</def>
+						<commonality>15.0</commonality>
 					</li>
 					<li>
 						<def>TG_Wealth</def>

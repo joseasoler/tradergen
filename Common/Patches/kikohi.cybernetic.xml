@@ -37,6 +37,10 @@
 										<def>TG_Psycasting</def>
 										<commonality>5.0</commonality>
 									</li>
+									<li MayRequire="VexedTrees980.RimRobots">
+										<def>TG_Synthetics</def>
+										<commonality>8.0</commonality>
+									</li>
 									<li>
 										<def>TG_Wealth</def>
 										<commonality>10.0</commonality>
