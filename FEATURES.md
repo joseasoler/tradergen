@@ -48,6 +48,9 @@ TraderGen will add between zero and five specializations (depending on mod setti
 * **Organs:** Sells some human organs and medicine. Present in exotic and slaver orbital traders.
 
 
+* **Prospector:** Sells a random selection of minable resources. In vanilla this includes steel, components, gold, jade, plasteel and uranium. Present in bulk and orbital traders.
+
+
 * **Psycasting (with [Royalty](https://rimworldgame.com/royalty/)):** An uncommon specialization which sells psytrainers, psychic apparel and weapons. If a mod setting is enabled, it will also sell psylink neuroformers if the trader does not belong to the Empire faction. Present in exotic and imperial orbital traders.
 
 
@@ -139,7 +142,9 @@ TraderGen should support wares from mods out of the box; please submit a [bug re
 
 * **[Alpha Animals](https://steamcommunity.com/sharedfiles/filedetails/?id=1541721856):** 
 
-  * The biomaterials specialization may have items created from giant crowned silkie silk, moth silk or sky steel.
+  * Traders with the biomaterials specialization may have items created from giant crowned silkie silk, moth silk or sky steel.
+
+  * Orbital traders with the prospector specialization may have some sky steel in stock.
 
   * Support for the Biological corruptors meme. Check the Ideology section above for details.
 
@@ -183,7 +188,11 @@ TraderGen should support wares from mods out of the box; please submit a [bug re
 * **[Forsakens](https://steamcommunity.com/sharedfiles/filedetails/?id=1728999127):** The biomaterials specialization may have items created from ultima fabric.
 
 
-* **[Jewelry](https://steamcommunity.com/workshop/filedetails/?id=2020964421):** Jewelry orbital trader category.
+* **[Jewelry](https://steamcommunity.com/workshop/filedetails/?id=2020964421):**
+
+  * Jewelry orbital trader specialization.
+
+  * Orbital traders with the prospector specialization may also have some gemstones in stock.
 
 
 * **[Remedies](https://steamcommunity.com/sharedfiles/filedetails/?id=2466826996):** Traders with the medicine specialization will have some poison ivy leaves in stock.
@@ -232,7 +241,7 @@ TraderGen should support wares from mods out of the box; please submit a [bug re
 * **[Vanilla Brewing Expanded - Coffees and Teas](https://steamcommunity.com/sharedfiles/filedetails/?id=2275449762):** Orbital traders belonging to the cannibal specialization can have cannibal coffee in stock.
 
 
-* **[Vanilla Books Expanded](https://steamcommunity.com/workshop/filedetails/?id=2193152410):** Culture orbital trader category.
+* **[Vanilla Books Expanded](https://steamcommunity.com/workshop/filedetails/?id=2193152410):** Culture orbital trader specialization.
 
 
 * **[Vanilla Cooking Expanded](https://steamcommunity.com/sharedfiles/filedetails/?id=2134308519):** Orbital traders with the gourmet specialization have some condiments in stock.

@@ -52,6 +52,7 @@
 		<Compile Include="StockGen\IdeoApparel_SingleDef.cs" />
 		<Compile Include="StockGen\IdeoArmor.cs" />
 		<Compile Include="StockGen\IdeoColorApparel.cs" />
+		<Compile Include="StockGen\MinableResource.cs" />
 		<Compile Include="StockGen\PreferredApparel.cs" />
 		<Compile Include="StockGen\Skulls.cs" />
 		<Compile Include="StockGen\VeneratedAnimals.cs" />

@@ -31,6 +31,10 @@
 						<commonality>10.0</commonality>
 					</li>
 					<li>
+						<def>TG_Prospector</def>
+						<commonality>10.0</commonality>
+					</li>
+					<li>
 						<def>TG_Scavenger</def>
 						<commonality>10.0</commonality>
 					</li>
@@ -191,6 +195,10 @@
 					<li>
 						<def>TG_Organs</def>
 						<commonality>20.0</commonality>
+					</li>
+					<li>
+						<def>TG_Prospector</def>
+						<commonality>10.0</commonality>
 					</li>
 					<li>
 						<def>TG_Wealth</def>

@@ -427,6 +427,20 @@
 		</stockGens>
 	</TG.TraderSpecializationDef>
 	<TG.TraderSpecializationDef>
+		<defName>TG_Prospector</defName>
+		<label>prospector</label>
+		<stockGens>
+			<li Class="TG.StockGen.MinableResource">
+				<thingDefCountRange>2~3</thingDefCountRange>
+				<totalPriceRange>500~700</totalPriceRange>
+				<excludedThingDefs>
+					<li>Silver</li>
+					<li MayRequire="VanillaExpanded.VPsycastsE">VPE_Eltex</li>
+				</excludedThingDefs>
+			</li>
+		</stockGens>
+	</TG.TraderSpecializationDef>
+	<TG.TraderSpecializationDef>
 		<defName>TG_Scavenger</defName>
 		<label>scavenger</label>
 		<stockGens>
