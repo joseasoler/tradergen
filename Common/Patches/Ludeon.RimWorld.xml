@@ -269,22 +269,10 @@
 			</operations>
 		</match>
 	</Operation>
-	<!-- May have some tools in stock. -->
 	<Operation Class="PatchOperationAdd">
 		<xpath>/Defs/TraderKindDef[defName="Base_Outlander_Standard"]/stockGenerators
 		</xpath>
 		<value>
-			<li Class="TG.StockGen.MultiDef" MayRequire="VanillaExpanded.VWE">
-				<thingDefs>
-					<li>VWE_MeleeWeapon_Cleaver</li>
-					<li>VWE_MeleeWeapon_Hammer</li>
-					<li>VWE_MeleeWeapon_Pickaxe</li>
-					<li>VWE_MeleeWeapon_Shovel</li>
-					<li>VWE_MeleeWeapon_Wrench</li>
-				</thingDefs>
-				<thingDefCountRange>0~2</thingDefCountRange>
-				<countRange>1</countRange>
-			</li>
 			<li Class="StockGenerator_SingleDef" MayRequire="VanillaExpanded.VAEAccessories">
 				<thingDef>VAEA_Apparel_ToolBelt</thingDef>
 				<countRange>-1~1</countRange>
