@@ -14,16 +14,21 @@
 					<stockGens>
 						<li Class="StockGenerator_Tag">
 							<tradeTag>SynthUpgrade</tradeTag>
-							<thingDefCountRange>1~2</thingDefCountRange>
+							<thingDefCountRange>2~4</thingDefCountRange>
+							<countRange>1</countRange>
+						</li>
+						<li Class="StockGenerator_Tag">
+							<tradeTag>SynthUpgradeArchotech</tradeTag>
+							<thingDefCountRange>1</thingDefCountRange>
+							<countRange>-4~1</countRange>
+						</li>
+						<li Class="StockGenerator_SingleDef">
+							<thingDef>ComponentMechanent</thingDef>
 							<countRange>1</countRange>
 						</li>
 						<li Class="StockGenerator_SingleDef">
-							<thingDef>RoboticsCoreItem</thingDef>
-							<countRange>1~2</countRange>
-						</li>
-						<li Class="StockGenerator_SingleDef">
 							<thingDef>MechCreationCasket</thingDef>
-							<countRange>0~1</countRange>
+							<countRange>-2~1</countRange>
 						</li>
 						<li Class="StockGenerator_SingleDef">
 							<thingDef>FuelNode_SynthDiet</thingDef>
