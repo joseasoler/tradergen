@@ -57,7 +57,7 @@ TraderGen will add between zero and five specializations (depending on mod setti
 * **Scavenger**: Sells steel, chemfuel, components, and random scavenged items. Present in bulk and combat traders.
 
 
-* **Synthetics (with [Rim-Robots_](https://steamcommunity.com/sharedfiles/filedetails/?id=2743171832)):** Sells synth upgrades, fuel nodes and mechanent components. It may rarely have a mech-casket in stock. Present in exotic and slaver orbital traders.
+* **Synthetics (with [Rim-Robots_](https://steamcommunity.com/sharedfiles/filedetails/?id=2743171832)):** Sells synth upgrades, fuel nodes and a mechanent component. It may rarely have a mech-casket in stock. Present in exotic and slaver orbital traders.
 
 
 * **Technology:** Has components and materials required for high technology devices. Present in bulk and exotic orbital traders.

@@ -7,6 +7,18 @@
 		<linkUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2804121197</linkUrl>
 	</HugsLib.UpdateFeatureDef>
 	<HugsLib.UpdateFeatureDef ParentName="TraderGenUpdateFeature">
+		<defName>TraderGen_0_3_1</defName>
+		<assemblyVersion>0.3.1</assemblyVersion>
+		<content>
+			<![CDATA[<color=#e1e150>Mod compatibility:</color>
+
+• The synthetics orbital trader specialization has been updated for the latest <i>Rim-Robots_</i> release. It now sells synth upgrades, fuel nodes and a mechanent component. It may rarely have a mech-casket in stock.
+
+• Fixed compatibility issues with the <i>Medieval Madness: Tools of the Trade</i> mod.
+]]>
+		</content>
+	</HugsLib.UpdateFeatureDef>
+	<HugsLib.UpdateFeatureDef ParentName="TraderGenUpdateFeature">
 		<defName>TraderGen_0_3_0</defName>
 		<assemblyVersion>0.3.0</assemblyVersion>
 		<content>
