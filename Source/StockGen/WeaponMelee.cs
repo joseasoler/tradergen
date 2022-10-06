@@ -19,7 +19,7 @@ namespace TG.StockGen
 		/// <returns>Random weight of the def.</returns>
 		protected override float Weight(in ThingDef def, in int forTile, in Faction faction)
 		{
-			return StockGenerator_WeaponsMelee.SelectionWeightMarketValueCurve.Evaluate(def.BaseMarketValue);
+			return StockGenerator_MarketValue.SelectionWeightMarketValueCurve.Evaluate(def.BaseMarketValue);
 		}
 	}
 }

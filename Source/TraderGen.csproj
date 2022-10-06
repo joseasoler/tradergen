@@ -97,7 +97,7 @@
 		<Compile Include="TraderKind\Util.cs" />
 		<Compile Include="TraderSpecializationDef.cs" />
 		<Reference Include="System" />
-		<PackageReference Include="Lib.Harmony" Version="2.2.1" ExcludeAssets="runtime" />
+		<PackageReference Include="Lib.Harmony" Version="2.*" ExcludeAssets="runtime" />
 		<PackageReference Include="Krafs.Publicizer" Version="1.0.2">
 		  <PrivateAssets>all</PrivateAssets>
 		  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -110,6 +110,9 @@
 	<!-- Dependencies and source code specific to RimWorld 1.3. -->
 	<ItemGroup Condition="$(Configuration) == '1.3'">
 		<PackageReference Include="Krafs.Rimworld.Ref" Version="1.3.3389" GeneratePathProperty="true" />
+	</ItemGroup>
+	<ItemGroup Condition="$(Configuration) == '1.4'">
+		<PackageReference Include="Krafs.Rimworld.Ref" Version="1.4.*-*" />
 	</ItemGroup>
 
 	<ItemGroup>

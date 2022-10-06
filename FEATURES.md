@@ -303,13 +303,9 @@ TraderGen should support wares from mods out of the box; please submit a [bug re
 
 * **[Vanilla Weapons Expanded](https://steamcommunity.com/sharedfiles/filedetails/?id=1814383360):**
 
-  * Bulk goods orbital traders and outlander settlements may have tools in stock.
-
   * Orbital traders with the hunting specialization may have compound bows in stock.
 
   * Orbital traders with the husbandry specialization may have whips in stock.
-
-  * Orbital traders with the medicine specialization may have scalpels in stock.
 
 
 * **[Vanilla Weapons Expanded - Grenades](https://steamcommunity.com/sharedfiles/filedetails/?id=2194472657):** Orbital traders with the ordnance specialization may also have grenade belts in stock.

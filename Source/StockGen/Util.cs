@@ -148,10 +148,12 @@ namespace TG.StockGen
 				return;
 			}
 
-			if (type == typeof(StockGenerator_WeaponsMelee))
+			if (type == typeof(StockGenerator_MarketValue))
 			{
-				var gen = (StockGenerator_WeaponsMelee) g;
+				var gen = (StockGenerator_MarketValue) g;
+				b.Append($"tradeTag: {gen.tradeTag}\n");
 				b.Append($"weaponTag: {gen.weaponTag}\n");
+				b.Append($"apparelTag: {gen.apparelTag}\n");
 				return;
 			}
 

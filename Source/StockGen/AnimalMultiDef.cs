@@ -212,7 +212,13 @@ namespace TG.StockGen
 				var count = AnimalCount(pawnDef);
 				for (var i = 0; i < count; ++i)
 				{
-					yield return PawnGenerator.GeneratePawn(new PawnGenerationRequest(pawnDef, tile: forTile, newborn: newborn));
+					var pawnGenerationRequest = new PawnGenerationRequest(pawnDef, tile: forTile);
+					if (newborn)
+					{
+						pawnGenerationRequest.AllowedDevelopmentalStages = DevelopmentalStage.Newborn;
+					}
+
+					yield return PawnGenerator.GeneratePawn(pawnGenerationRequest);
 				}
 
 				if (!animalProducts || animalProductPriceRange == FloatRange.Zero) continue;

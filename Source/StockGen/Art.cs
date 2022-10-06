@@ -15,7 +15,7 @@ namespace TG.StockGen
 
 		protected override float Weight(in ThingDef def, in int forTile, in Faction faction)
 		{
-			return StockGenerator_Art.SelectionWeightMarketValueCurve.Evaluate(def.BaseMarketValue);
+			return StockGenerator_MarketValue.SelectionWeightMarketValueCurve.Evaluate(def.BaseMarketValue);
 		}
 	}
 }
