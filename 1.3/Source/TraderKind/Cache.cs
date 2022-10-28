@@ -116,7 +116,10 @@ namespace TG.TraderKind
 			if (_willTrade[seed].TryGetValue(thingDef, out var willTradeThingDef)) return willTradeThingDef;
 
 			willTradeThingDef = Enumerable.Any(traderDef.stockGenerators, stockGen => stockGen.HandlesThingDef(thingDef)) ||
-			                    Enumerable.Any(_stockGens[seed], stockGen => stockGen.HandlesThingDef(thingDef));
+			                    Enumerable.Any(_stockGens[seed], stockGen => stockGen.HandlesThingDef(thingDef)) ||
+			                    // Unfortunately, Yayo's Combat adds its stock through Harmony patching instead of using
+			                    // StockGenerators.
+			                    thingDef.defName.StartsWith("yy_ammo_");
 
 			_willTrade[seed][thingDef] = willTradeThingDef;
 
