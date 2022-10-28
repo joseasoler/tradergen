@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<PropertyGroup>
+		<ProjectGuid>{4C9431F0-8CE6-11EC-B1E5-0800200C9A66}</ProjectGuid>
+		<RootNamespace>TG</RootNamespace>
+		<AssemblyName>TraderGen</AssemblyName>
+
+		<OutputType>Library</OutputType>
+		<TargetFramework>net472</TargetFramework>
+		<TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+		<PlatformTarget>x64</PlatformTarget>
+		<AppDesignerFolder>Properties</AppDesignerFolder>
+		<DebugSymbols>false</DebugSymbols>
+		<Optimize>true</Optimize>
+		<WarningLevel>4</WarningLevel>
+		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+		<Deterministic>true</Deterministic>
+		<TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+		<OutputPath>..\Assemblies\</OutputPath>
+	</PropertyGroup>
+
+	<!-- Dependencies and source code common to all supported RimWorld versions. -->
+	<ItemGroup>
+		<Compile Include="Algorithm.cs" />
+		<Compile Include="Debug\DebugActions.cs" />
+		<Compile Include="DefOf\JoyKind.cs" />
+		<Compile Include="DefOf\PreceptGen.cs" />
+		<Compile Include="DefOf\Thing.cs" />
+		<Compile Include="DefOf\ThingCategory.cs" />
+		<Compile Include="GenExtension.cs" />
+		<Compile Include="Harmony\DialogSellableItems.cs" />
+		<Compile Include="Harmony\DialogTrade.cs" />
+		<Compile Include="Harmony\DLC\Ideology.cs" />
+		<Compile Include="Harmony\HarmonyUtils.cs" />
+		<Compile Include="Harmony\Mod\TradeUIRevised.cs" />
+		<Compile Include="Harmony\StockGenerator.cs" />
+		<Compile Include="Harmony\Pawn.cs" />
+		<Compile Include="Harmony\Mod\TraderShips.cs" />
+		<Compile Include="Harmony\Settlement.cs" />
+		<Compile Include="Harmony\Tradeable.cs" />
+		<Compile Include="Harmony\TraderKind.cs" />
+		<Compile Include="Harmony\TraderStock.cs" />
+		<Compile Include="Harmony\TradeShip.cs" />
+		<Compile Include="Ideo\IdeoCache.cs" />
+		<Compile Include="Ideo\PreceptGenDef.cs" />
+		<Compile Include="Ideo\PreceptGenExtension.cs" />
+		<Compile Include="Logger.cs" />
+		<Compile Include="Mod\Settings.cs" />
+		<Compile Include="Mod\Mod.cs" />
+		<Compile Include="StockGen\Art.cs" />
+		<Compile Include="StockGen\FullHeadApparel.cs" />
+		<Compile Include="StockGen\IdeoApparel_SingleDef.cs" />
+		<Compile Include="StockGen\IdeoArmor.cs" />
+		<Compile Include="StockGen\IdeoColorApparel.cs" />
+		<Compile Include="StockGen\MinableResource.cs" />
+		<Compile Include="StockGen\PreferredApparel.cs" />
+		<Compile Include="StockGen\Skulls.cs" />
+		<Compile Include="StockGen\VeneratedAnimals.cs" />
+		<Compile Include="StockRule\NoArtificialBodyMods.cs" />
+		<Compile Include="StockRule\NoBodyMods.cs" />
+		<Compile Include="StockRule\NoDrugs.cs" />
+		<Compile Include="StockRule\NoFarmAnimals.cs" />
+		<Compile Include="StockRule\NoLeather.cs" />
+		<Compile Include="StockRule\NoNaturalOrgans.cs" />
+		<Compile Include="StockRule\NoNaturalOrganStock.cs" />
+		<Compile Include="StockRule\NoThingDef.cs" />
+		<Compile Include="StockRule\NoRawVegan.cs" />
+		<Compile Include="StockRule\NoRegularMeat.cs" />
+		<Compile Include="StockRule\NoWoodyStock.cs" />
+		<Compile Include="StockRule\Rule.cs" />
+		<Compile Include="SpecializationCommonality.cs" />
+		<Compile Include="StockGen\Alcohol.cs" />
+		<Compile Include="StockGen\AnimalMultiDef.cs" />
+		<Compile Include="StockGen\ArtificialBodyMod.cs" />
+		<Compile Include="StockGen\BuildingsJoy.cs" />
+		<Compile Include="StockGen\ExpensiveSimple.cs" />
+		<Compile Include="StockGen\Drugs.cs" />
+		<Compile Include="StockGen\PsylinkNeuroformer.cs" />
+		<Compile Include="StockGen\ConditionMatcher.cs" />
+		<Compile Include="StockGen\ExoticAnimalPart.cs" />
+		<Compile Include="StockGen\FoodGluttonous.cs" />
+		<Compile Include="StockGen\FromStuff.cs" />
+		<Compile Include="StockGen\RandomStuffFromCategory.cs" />
+		<Compile Include="StockGen\Grenades.cs" />
+		<Compile Include="StockGen\InsectMeat.cs" />
+		<Compile Include="StockGen\Jewelry.cs" />
+		<Compile Include="StockGen\MultiDef.cs" />
+		<Compile Include="StockGen\StockGen.cs" />
+		<Compile Include="StockGen\StuffFromThingDef.cs" />
+		<Compile Include="StockGen\Util.cs" />
+		<Compile Include="StockGen\Weapon.cs" />
+		<Compile Include="StockGen\WeaponMelee.cs" />
+		<Compile Include="StockGen\WeaponRanged.cs" />
+		<Compile Include="Things\Util.cs" />
+		<Compile Include="TraderKind\Cache.cs" />
+		<Compile Include="TraderKind\TraderKindCategory.cs" />
+		<Compile Include="TraderKind\Util.cs" />
+		<Compile Include="TraderSpecializationDef.cs" />
+		<Reference Include="System" />
+		<PackageReference Include="Lib.Harmony" Version="2.2.1" ExcludeAssets="runtime" />
+		<PackageReference Include="Krafs.Publicizer" Version="1.0.2">
+		  <PrivateAssets>all</PrivateAssets>
+		  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="DeepCloner" Version="0.10.4" />
+		<Compile Include="Harmony\HarmonyInitialization.cs" />
+		<Compile Include="Properties\AssemblyInfo.cs" />
+	</ItemGroup>
+
+	<!-- Dependencies and source code specific to RimWorld 1.3. -->
+	<ItemGroup Condition="$(Configuration) == '1.3'">
+		<PackageReference Include="Krafs.Rimworld.Ref" Version="1.3.3389" GeneratePathProperty="true" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<!-- Allow access to private definitions in the RimWorld DLL. -->
+		<Publicize Include="Assembly-CSharp" />
+	</ItemGroup>
+
+	<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+
+</Project>
