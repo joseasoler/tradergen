@@ -1,4 +1,5 @@
-﻿using System.Reflection;
+﻿using System;
+using System.Reflection;
 using Verse;
 
 namespace TG.Harmony
@@ -24,8 +25,24 @@ namespace TG.Harmony
 			// DLC specific patches.
 			DLC.Ideology.Patch(harmony);
 			// Manual patching for other mods.
-			Mod.TraderShips.Patch(harmony);
-			Mod.TradeUIRevised.Patch(harmony);
+			try
+			{
+				Mod.TraderShips.Patch(harmony);
+			}
+			catch (Exception exc)
+			{
+				Logger.Error("Could not apply patch for the Trader Ships mod:");
+				Logger.Error(exc.ToString());
+			}
+			try
+			{
+				Mod.TradeUIRevised.Patch(harmony);
+			}
+			catch (Exception exc)
+			{
+				Logger.Error("Could not apply patch for the Trade UI Revised mod:");
+				Logger.Error(exc.ToString());
+			}
 		}
 	}
 }

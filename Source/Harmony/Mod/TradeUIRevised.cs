@@ -1,4 +1,7 @@
+using System.Linq;
+using System.Reflection;
 using HarmonyLib;
+using Verse;
 
 namespace TG.Harmony.Mod
 {
@@ -12,7 +15,7 @@ namespace TG.Harmony.Mod
 		{
 			if (!HarmonyUtils.TradeUIRevisedActive()) return;
 
-			var doWindowContents = AccessTools.Method("TradeUI.Harmony_DialogTrade_FillMainRect:Prefix");
+			var doWindowContents = AccessTools.Method("TradeUI.TradeUIRework+Harmony_DialogTrade_FillMainRect:Prefix");
 			var tradeWindowTranspiler =
 				new HarmonyMethod(
 					AccessTools.Method(typeof(HarmonyUtils), nameof(HarmonyUtils.AddSpecializationsToTraderLabel)));
