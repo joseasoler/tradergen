@@ -20,7 +20,7 @@ You can find a detailed description of specializations, ideology features, trade
 Development
 ---
 
-To compile this mod on Windows, you will need to install the [.NET Framework 4.7.2 Developer Pack](https://dotnet.microsoft.com/en-us/download/dotnet-framework/net472). On Linux the packages you need vary depending on your distribution of choice. Dependencies are managed using NuGet. Compiling this project does not require any [external dependencies or extra setup steps](https://ludeon.com/forums/index.php?topic=49914.0).
+To compile this mod on Windows, you will need to install the [.NET Framework 4.7.2 Developer Pack](https://dotnet.microsoft.com/en-us/download/dotnet-framework/net472). On Linux the packages you need vary depending on your distribution of choice. Dependencies are managed using NuGet. Your checkout must be placed in the RimWorld/Mods folder to let it find the RimWorld assemblies required for compilation.
 
 Contributions
 ---

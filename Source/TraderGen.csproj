@@ -31,6 +31,8 @@
 		<Compile Include="Harmony\DialogSellableItems.cs" />
 		<Compile Include="Harmony\DialogTrade.cs" />
 		<Compile Include="Harmony\DLC\Ideology.cs" />
+		<Compile Include="Harmony\HarmonyInitialization.cs" />
+
 		<Compile Include="Harmony\HarmonyUtils.cs" />
 		<Compile Include="Harmony\Mod\TradeUIRevised.cs" />
 		<Compile Include="Harmony\StockGenerator.cs" />
@@ -47,6 +49,7 @@
 		<Compile Include="Logger.cs" />
 		<Compile Include="Mod\Settings.cs" />
 		<Compile Include="Mod\Mod.cs" />
+		<Compile Include="Properties\AssemblyInfo.cs" />
 		<Compile Include="StockGen\Art.cs" />
 		<Compile Include="StockGen\FullHeadApparel.cs" />
 		<Compile Include="StockGen\IdeoApparel_SingleDef.cs" />
@@ -103,16 +106,21 @@
 		  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
 		<PackageReference Include="DeepCloner" Version="0.10.4" />
-		<Compile Include="Harmony\HarmonyInitialization.cs" />
-		<Compile Include="Properties\AssemblyInfo.cs" />
-	</ItemGroup>
-
-	<!-- Dependencies and source code specific to RimWorld 1.3. -->
-	<ItemGroup Condition="$(Configuration) == '1.3'">
-		<PackageReference Include="Krafs.Rimworld.Ref" Version="1.3.3389" GeneratePathProperty="true" />
-	</ItemGroup>
-	<ItemGroup Condition="$(Configuration) == '1.4'">
-		<PackageReference Include="Krafs.Rimworld.Ref" Version="1.4.*-*" />
+		<Reference Include="Assembly-CSharp">
+			<HintPath Condition="$([MSBuild]::IsOSPlatform('Windows'))">..\..\..\RimWorldWin64_Data\Managed\Assembly-CSharp.dll</HintPath>
+			<HintPath Condition="$([MSBuild]::IsOSPlatform('Linux'))">..\..\..\RimWorldLinux_Data\Managed\Assembly-CSharp.dll</HintPath>
+			<Private>False</Private>
+		</Reference>
+		<Reference Include="UnityEngine.CoreModule">
+			<HintPath Condition="$([MSBuild]::IsOSPlatform('Windows'))">..\..\..\RimWorldWin64_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+			<HintPath Condition="$([MSBuild]::IsOSPlatform('Linux'))">..\..\..\RimWorldLinux_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+			<Private>False</Private>
+		</Reference>
+		<Reference Include="UnityEngine.TextRenderingModule">
+			<HintPath Condition="$([MSBuild]::IsOSPlatform('Windows'))">..\..\..\RimWorldWin64_Data\Managed\UnityEngine.TextRenderingModule.dll</HintPath>
+			<HintPath Condition="$([MSBuild]::IsOSPlatform('Linux'))">..\..\..\RimWorldLinux_Data\Managed\UnityEngine.TextRenderingModule.dll</HintPath>
+			<Private>False</Private>
+		</Reference>
 	</ItemGroup>
 
 	<ItemGroup>
