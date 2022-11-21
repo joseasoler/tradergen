@@ -14,7 +14,7 @@ namespace TG.StockGen
 		protected override bool ValidTechLevel(in ThingDef def)
 		{
 			var techLevel = def.techLevel;
-			if (def.researchPrerequisites != null)
+			if (def.researchPrerequisites != null && def.researchPrerequisites.Count > 0)
 			{
 				techLevel = def.researchPrerequisites.Max(researchProjectDef => researchProjectDef.techLevel);
 			}
