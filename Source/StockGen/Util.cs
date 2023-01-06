@@ -135,9 +135,16 @@ namespace TG.StockGen
 			if (type == typeof(StockGenerator_Techprints))
 			{
 				var gen = (StockGenerator_Techprints) g;
-				ToText(ref b, "countChances", gen.countChances);
-
-
+				var list = gen.countChances;
+				if (list != null && list.Count > 0)
+				{
+					var stringList = new List<string>();
+					foreach (var countChance in list)
+					{
+						stringList.Add($"[{countChance.count}, {countChance.chance}]");
+					}
+					b.Append($"countChances: {string.Join(", ", stringList)}\n");
+				}
 				return;
 			}
 
