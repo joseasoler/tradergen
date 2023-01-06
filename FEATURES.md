@@ -131,8 +131,11 @@ You can find a list of all changes below. Although the list mentions memes for e
 * Traders from ideologies with the Trader meme will have extra silver in stock.
 * Traders with the Vegan meme will refuse to deal with leather and farm animals.
 
-Tweaks to vanilla traders
+Other tweaks to traders
 ---
+
+* **Increased chance of techprints:** All visitors, caravans and settlements.
+
 
 * **Increased variety of alcoholic beverages (requires mods adding other alcohol types):** Bulk orbital trader, slaver orbital trader, outlander settlements, outlander bulk goods caravan.
 

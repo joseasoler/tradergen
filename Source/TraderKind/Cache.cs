@@ -268,6 +268,61 @@ namespace TG.TraderKind
 		}
 
 		/// <summary>
+		/// Extra stock added to traders which does not fit the other definitions.
+		/// </summary>
+		/// <param name="seed">Seed in use.</param>
+		/// <param name="def">Trader</param>
+		/// <param name="tile">Map tile in which the transaction takes place.</param>
+		/// <param name="faction">Faction of the trader.</param>
+		private static void ApplyExtras(int seed, TraderKindDef def, int tile, Faction faction)
+		{
+			var countChances = new List<CountChance>();
+
+			if (faction.def.baseTraderKinds.Contains(def))
+			{
+				countChances.Add(new CountChance
+				{
+					count = 1,
+					chance = 0.7f
+				});
+				countChances.Add(new CountChance
+				{
+					count = 2,
+					chance = 0.3f
+				});
+			}
+			else if (faction.def.caravanTraderKinds.Contains(def))
+			{
+				countChances.Add(new CountChance
+				{
+					count = 1,
+					chance = 0.5f
+				});
+				countChances.Add(new CountChance
+				{
+					count = 2,
+					chance = 0.1f
+				});
+			}
+			else if (faction.def.visitorTraderKinds.Contains(def))
+			{
+				countChances.Add(new CountChance
+				{
+					count = 1,
+					chance = 0.3f
+				});
+			}
+
+			if (countChances.Count > 0)
+			{
+				StockGenerator_Techprints generator = new StockGenerator_Techprints();
+				generator.countChances = countChances;
+				generator.ResolveReferences(def);
+				_stockGens[seed].Add(generator);
+			}
+		}
+
+		/// <summary>
 		/// Generate extra procedurally generated trader information.
 		/// This process is deterministic; it will always produce the same result with the same template and seed.
 		/// The caller is responsible for setting GenerationSeed before this function is called.
@@ -290,10 +345,14 @@ namespace TG.TraderKind
 			_willNotStock[seed] = new HashSet<ThingDef>();
 			_specializations[seed] = new List<TraderSpecializationDef>();
 
-			Logger.Gen($"Generating trader information for {def.defName} with seed {seed}.");
+			var logStr = faction != null
+				? $"Generating trader information for {def.defName} of faction {faction.def.defName} with seed {seed}."
+				: $"Generating trader information for {def.defName} with seed {seed}.";
+			Logger.Gen(logStr);
 			Rand.PushState(seed);
 			ApplySpecializations(seed, def, tile, faction);
 			ApplyIdeology(seed, def, tile, faction);
+			ApplyExtras(seed, def, tile, faction);
 			Rand.PopState();
 		}
 
