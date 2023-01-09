@@ -280,6 +280,19 @@
 		</value>
 	</Operation>
 	<!-- Outlander bulk goods trader changes. -->
+	<Operation Class="PatchOperationAddModExtension">
+		<xpath>/Defs/TraderKindDef[defName="Caravan_Outlander_BulkGoods"]</xpath>
+		<value>
+			<li Class="TG.GenExtension">
+				<specializations>
+					<li>
+						<def>TG_CaravanWealth</def>
+						<commonality>5.0</commonality>
+					</li>
+				</specializations>
+			</li>
+		</value>
+	</Operation>
 	<!-- Beer is replaced with the mod-friendly StockGen.Alcohol generator. -->
 	<Operation Class="PatchOperationConditional">
 		<xpath>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<TG.TraderSpecializationDef>
+		<defName>TG_CaravanWealth</defName>
+		<label>wealth</label>
+		<stockGens>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>Silver</thingDef>
+				<countRange>1000~1200</countRange>
+			</li>
+		</stockGens>
+	</TG.TraderSpecializationDef>
+</Defs>
