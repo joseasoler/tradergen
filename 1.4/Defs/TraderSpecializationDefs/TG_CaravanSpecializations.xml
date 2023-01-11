@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 	<TG.TraderSpecializationDef>
+		<defName>TG_CaravanProspector</defName>
+		<label>prospector</label>
+		<stockGens>
+			<li Class="TG.StockGen.MinableResource">
+				<thingDefCountRange>2~3</thingDefCountRange>
+				<totalPriceRange>400~600</totalPriceRange>
+				<excludedThingDefs>
+					<li>Silver</li>
+					<li MayRequire="VanillaExpanded.VPsycastsE">VPE_Eltex</li>
+				</excludedThingDefs>
+			</li>
+		</stockGens>
+	</TG.TraderSpecializationDef>
+	<TG.TraderSpecializationDef>
 		<defName>TG_CaravanWealth</defName>
 		<label>wealth</label>
 		<stockGens>

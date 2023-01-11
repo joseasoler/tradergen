@@ -181,7 +181,8 @@ namespace TG.TraderKind
 			var extension = def.GetModExtension<GenExtension>();
 			if (extension == null) return;
 
-			var numSpecializations = Math.Max(Settings.OrbitalSpecializations.RandomInRange, 0);
+			var specializationsRange = def.orbital ? Settings.OrbitalSpecializations : Settings.CaravanSpecializations;
+			var numSpecializations = Math.Max(specializationsRange.RandomInRange, 0);
 			if (numSpecializations <= 0) return;
 
 			var chosenSpecializations =
@@ -276,6 +277,10 @@ namespace TG.TraderKind
 		/// <param name="faction">Faction of the trader.</param>
 		private static void ApplyExtras(int seed, TraderKindDef def, int tile, Faction faction)
 		{
+			if (faction == null)
+			{
+				return;
+			}
 			var countChances = new List<CountChance>();
 
 			if (faction.def.baseTraderKinds.Contains(def))

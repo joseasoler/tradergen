@@ -37,9 +37,14 @@ namespace TG.Mod
 			var listing = new Listing_Standard();
 			listing.Begin(inRect);
 
+			var caravanSpecializations = Settings.CaravanSpecializations;
+			listing.Label("TG_CaravanSpecializations".Translate(), -1, "TG_CaravanSpecializationsTooltip".Translate());
+			listing.IntRange(ref caravanSpecializations, 0, Settings.MaxSpecializations);
+			Settings.CaravanSpecializations = caravanSpecializations;
+
 			var orbitalSpecializations = Settings.OrbitalSpecializations;
 			listing.Label("TG_OrbitalSpecializations".Translate(), -1, "TG_OrbitalSpecializationsTooltip".Translate());
-			listing.IntRange(ref orbitalSpecializations, 0, Settings.MaxOrbitalSpecializations);
+			listing.IntRange(ref orbitalSpecializations, 0, Settings.MaxSpecializations);
 			Settings.OrbitalSpecializations = orbitalSpecializations;
 
 			if (ModsConfig.IdeologyActive)

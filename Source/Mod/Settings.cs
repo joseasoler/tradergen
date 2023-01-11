@@ -13,6 +13,12 @@ namespace TG.Mod
 		public bool SellPsylinkNeuroformers = true;
 
 		/// <summary>
+		/// Caravans will have a random number of specializations in this interval.
+		/// Set both values to zero to disable specializations.
+		/// </summary>
+		public IntRange CaravanSpecializations = IntRange.one;
+
+		/// <summary>
 		/// Orbital traders will have a random number of specializations in this interval.
 		/// Set both values to zero to disable specializations.
 		/// </summary>
@@ -66,6 +72,12 @@ namespace TG.Mod
 			set => _values.SellPsylinkNeuroformers = value;
 		}
 
+		public static IntRange CaravanSpecializations
+		{
+			get => _values.CaravanSpecializations;
+			set => _values.CaravanSpecializations = value;
+		}
+
 		public static IntRange OrbitalSpecializations
 		{
 			get => _values.OrbitalSpecializations;
@@ -100,19 +112,9 @@ namespace TG.Mod
 		}
 
 		/// <summary>
-		/// Minimum allowed value for SilverScaling settings in %.
+		/// Maximum value allowed for Specializations.
 		/// </summary>
-		public const float MinSilverScaling = 5.0f;
-
-		/// <summary>
-		/// Maximum allowed value for SilverScaling settings in %.
-		/// </summary>
-		public const float MaxSilverScaling = 1000.0f;
-
-		/// <summary>
-		/// Maximum value allowed for OrbitalSpecializations.
-		/// </summary>
-		public const int MaxOrbitalSpecializations = 5;
+		public const int MaxSpecializations = 5;
 
 		/// <summary>
 		/// Generate a detailed report of the trader generation process and append it to the log.
@@ -147,6 +149,12 @@ namespace TG.Mod
 			{
 				Scribe_Values.Look(ref _values.SellPsylinkNeuroformers, "SellPsylinkNeuroformers", true);
 			}
+			
+			var caravanSpecializationsMin = _values.CaravanSpecializations.min;
+			var caravanSpecializationsMax = _values.CaravanSpecializations.max;
+			Scribe_Values.Look(ref caravanSpecializationsMin, "CaravanSpecializationsMin", 1);
+			Scribe_Values.Look(ref caravanSpecializationsMax, "CaravanSpecializationsMax", 1);
+			_values.CaravanSpecializations = new IntRange(caravanSpecializationsMin, caravanSpecializationsMax);
 
 			var orbitalSpecializationsMin = _values.OrbitalSpecializations.min;
 			var orbitalSpecializationsMax = _values.OrbitalSpecializations.max;

@@ -286,6 +286,10 @@
 			<li Class="TG.GenExtension">
 				<specializations>
 					<li>
+						<def>TG_CaravanProspector</def>
+						<commonality>10.0</commonality>
+					</li>
+					<li>
 						<def>TG_CaravanWealth</def>
 						<commonality>5.0</commonality>
 					</li>
