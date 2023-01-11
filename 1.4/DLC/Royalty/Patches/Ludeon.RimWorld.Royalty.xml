@@ -99,6 +99,19 @@
 					</li>
 				</value>
 			</li>
+			<li Class="PatchOperationAddModExtension">
+				<xpath>/Defs/TraderKindDef[defName="Empire_Caravan_TraderGeneral"]</xpath>
+				<value>
+					<li Class="TG.GenExtension">
+						<specializations>
+							<li>
+								<def>TG_CaravanWealth</def>
+								<commonality>5.0</commonality>
+							</li>
+						</specializations>
+					</li>
+				</value>
+			</li>
 		</operations>
 	</Operation>
 </Patch>

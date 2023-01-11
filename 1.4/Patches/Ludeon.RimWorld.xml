@@ -323,4 +323,95 @@
 			</operations>
 		</match>
 	</Operation>
+	<Operation Class="PatchOperationAddModExtension">
+		<xpath>/Defs/TraderKindDef[defName="Caravan_Outlander_CombatSupplier"]</xpath>
+		<value>
+			<li Class="TG.GenExtension">
+				<specializations>
+					<li>
+						<def>TG_CaravanWealth</def>
+						<commonality>5.0</commonality>
+					</li>
+				</specializations>
+			</li>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAddModExtension">
+		<xpath>/Defs/TraderKindDef[defName="Caravan_Outlander_Exotic"]</xpath>
+		<value>
+			<li Class="TG.GenExtension">
+				<specializations>
+					<li>
+						<def>TG_CaravanWealth</def>
+						<commonality>5.0</commonality>
+					</li>
+				</specializations>
+			</li>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAddModExtension">
+		<xpath>/Defs/TraderKindDef[defName="Caravan_Outlander_PirateMerchant"]</xpath>
+		<value>
+			<li Class="TG.GenExtension">
+				<specializations>
+					<li>
+						<def>TG_CaravanWealth</def>
+						<commonality>5.0</commonality>
+					</li>
+				</specializations>
+			</li>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAddModExtension">
+		<xpath>/Defs/TraderKindDef[defName="Caravan_Neolithic_BulkGoods"]</xpath>
+		<value>
+			<li Class="TG.GenExtension">
+				<specializations>
+					<li>
+						<def>TG_CaravanWealth</def>
+						<commonality>5.0</commonality>
+					</li>
+				</specializations>
+			</li>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAddModExtension">
+		<xpath>/Defs/TraderKindDef[defName="Caravan_Neolithic_WarMerchant"]</xpath>
+		<value>
+			<li Class="TG.GenExtension">
+				<specializations>
+					<li>
+						<def>TG_CaravanWealth</def>
+						<commonality>5.0</commonality>
+					</li>
+				</specializations>
+			</li>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAddModExtension">
+		<xpath>/Defs/TraderKindDef[defName="Caravan_Neolithic_ShamanMerchant"]</xpath>
+		<value>
+			<li Class="TG.GenExtension">
+				<specializations>
+					<li>
+						<def>TG_CaravanWealth</def>
+						<commonality>5.0</commonality>
+					</li>
+				</specializations>
+			</li>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAddModExtension">
+		<xpath>/Defs/TraderKindDef[defName="Caravan_Neolithic_Slaver"]</xpath>
+		<value>
+			<li Class="TG.GenExtension">
+				<specializations>
+					<li>
+						<def>TG_CaravanWealth</def>
+						<commonality>5.0</commonality>
+					</li>
+				</specializations>
+			</li>
+		</value>
+	</Operation>
 </Patch>
