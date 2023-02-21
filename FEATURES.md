@@ -174,6 +174,9 @@ TraderGen should support wares from mods out of the box; please submit a [bug re
   * The bionics trader will now purchase most really expensive items that could be resold for profit.
 
 
+* **[ESCP - Trolls](https://steamcommunity.com/sharedfiles/filedetails/?id=2878028462):** Orbital traders with the hunting specialization may have troll blood in stock.
+
+
 * **[Expanded Prosthetics and Organ Engineering](https://steamcommunity.com/sharedfiles/filedetails/?id=725956940):**
 
   * The prosthesis trader gets access to these specializations: drugs, hunting, medicine, organs, psycasting, synthetics, wealth.

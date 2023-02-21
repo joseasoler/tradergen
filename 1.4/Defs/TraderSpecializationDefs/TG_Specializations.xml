@@ -256,6 +256,10 @@
 				<thingDefCountRange>0~2</thingDefCountRange>
 				<countRange>1</countRange>
 			</li>
+			<li Class="StockGenerator_SingleDef" MayRequire="SirMashedPotato.ESCP.Trolls">
+				<thingDef>ESCP_TrollBlood</thingDef>
+				<countRange>-5~10</countRange>
+			</li>
 		</stockGens>
 	</TG.TraderSpecializationDef>
 	<TG.TraderSpecializationDef>
