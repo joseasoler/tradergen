@@ -156,6 +156,9 @@ TraderGen should support wares from mods out of the box; please submit a [bug re
   * Support for the Biological corruptors meme. Check the Ideology section above for details.
 
 
+* **[Alpha Bees](https://steamcommunity.com/sharedfiles/filedetails/?id=1558161673):** Orbital traders with the husbandry specialization have temperate and mild bees in stock.
+
+
 * **[Alpha Biomes](https://steamcommunity.com/sharedfiles/filedetails/?id=1841354677):** The biomaterials specialization may have items created from crystalline wood, mushroom stalks or red wood.
 
 
@@ -204,16 +207,13 @@ TraderGen should support wares from mods out of the box; please submit a [bug re
 
   * Orbital traders with the prospector specialization may also have some gemstones in stock.
 
-* **[MorrowRim - Just the Kwama](https://steamcommunity.com/sharedfiles/filedetails/?id=2108009219):** If Vanilla Factions Expanded - Insectoids is alsso loaded, bio-engineering supplier specializations will also have items and creatures from this mod.
+* **[MorrowRim - Just the Kwama](https://steamcommunity.com/sharedfiles/filedetails/?id=2108009219):** If Vanilla Factions Expanded - Insectoids is also loaded, bio-engineering supplier specializations will also have items and creatures from this mod.
 
 
 * **[Remedies](https://steamcommunity.com/sharedfiles/filedetails/?id=2466826996):** Traders with the medicine specialization will have some poison ivy leaves in stock.
 
 
 * **[Replimat](https://steamcommunity.com/sharedfiles/filedetails/?id=1715402900):** Traders with the gourmet or tech specializations may have an isolinear computing module in stock.
-
-
-* **[RimBees](https://steamcommunity.com/sharedfiles/filedetails/?id=1558161673):** Orbital traders with the husbandry specialization have temperate and mild bees in stock.
 
 
 * **[Rim-Effect: Themis Traders](https://steamcommunity.com/sharedfiles/filedetails/?id=2488461271):** Trader ship stock is generated using the TraderGen rules for orbital traders.
@@ -228,7 +228,7 @@ TraderGen should support wares from mods out of the box; please submit a [bug re
 * **[Trader Ships](https://steamcommunity.com/sharedfiles/filedetails/?id=2046222331):** Trader ship stock is generated using the TraderGen rules for orbital traders.
 
 
-* **[Vanilla Animals Expanded — Australia](https://steamcommunity.com/sharedfiles/filedetails/?id=1814987817):** Orbital traders with the ordnance specialization may have some boombats in stock.
+* **[Vanilla Animals Expanded](https://steamcommunity.com/sharedfiles/filedetails/?id=1814987817):** Orbital traders with the ordnance specialization may have some boombats in stock.
 
 
 * **[Vanilla Apparel Expanded](https://steamcommunity.com/sharedfiles/filedetails/?id=1814987817):** Orbital traders with the husbandry specialization may have overalls and fleece shirts in stock.
