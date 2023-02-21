@@ -204,6 +204,8 @@ TraderGen should support wares from mods out of the box; please submit a [bug re
 
   * Orbital traders with the prospector specialization may also have some gemstones in stock.
 
+* **[MorrowRim - Just the Kwama](https://steamcommunity.com/sharedfiles/filedetails/?id=2108009219):** If Vanilla Factions Expanded - Insectoids is alsso loaded, bio-engineering supplier specializations will also have items and creatures from this mod.
+
 
 * **[Remedies](https://steamcommunity.com/sharedfiles/filedetails/?id=2466826996):** Traders with the medicine specialization will have some poison ivy leaves in stock.
 

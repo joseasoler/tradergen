@@ -79,6 +79,8 @@
 					<li>VFEI_EggInsectoidUnfertilized</li>
 					<li MayRequire="sarg.alphaanimals">AA_BlackInsectJelly</li>
 					<li MayRequire="VanillaExpanded.VCookE">VCE_InsectJellyPreserves</li>
+					<li MayRequire="SirMashedPotato.MorrowRim.JustTheKwama">MorrowRim_KwamaEgg</li>
+					<li MayRequire="SirMashedPotato.MorrowRim.JustTheKwama">MorrowRim_ScribJelly</li>
 				</thingDefs>
 				<thingDefCountRange>3~4</thingDefCountRange>
 				<totalPriceRange>600~920</totalPriceRange>
@@ -88,6 +90,7 @@
 					<li>VFEI_VatGrownMilkbeetle</li>
 					<li>VFEI_VatGrownPrincess</li>
 					<li>VFEI_VatGrownRoyalMaggot</li>
+					<li MayRequire="SirMashedPotato.MorrowRim.JustTheKwama">MorrowRim_KwamaScrib</li>
 				</pawnKindDefs>
 				<newborn>true</newborn>
 				<kindCountRange>1~2</kindCountRange>
@@ -134,6 +137,7 @@
 					<li>VFEI_VatGrownSpelopede</li>
 					<li>VFEI_VatGrownWargling</li>
 					<li MayRequire="sarg.alphaanimals">AA_BlackScarab</li>
+					<li MayRequire="SirMashedPotato.MorrowRim.JustTheKwama">MorrowRim_KwamaWarrior</li>
 				</pawnKindDefs>
 				<newborn>true</newborn>
 				<kindCountRange>3~4</kindCountRange>
@@ -199,6 +203,10 @@
 			</li>
 			<li Class="StockGenerator_SingleDef">
 				<thingDef>Hay</thingDef>
+				<totalPriceRange>600~1000</totalPriceRange>
+			</li>
+			<li Class="StockGenerator_SingleDef" MayRequire="SirMashedPotato.MorrowRim.JustTheKwama">
+				<thingDef>MorrowRim_FungalMash</thingDef>
 				<totalPriceRange>600~1000</totalPriceRange>
 			</li>
 			<li Class="TG.StockGen.MultiDef" MayRequire="VanillaExpanded.VAPPE">
