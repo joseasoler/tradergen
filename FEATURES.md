@@ -12,6 +12,9 @@ TraderGen will add between zero and five specializations (depending on mod setti
 * **Bionics:** Adds prostheses between the industrial and ultratech technology levels. Present in combat, exotic, slaver and imperial orbital traders.
 
 
+* **Bloodfeeder (with [Biotech](https://rimworldgame.com/biotech/)):** This uncommon specializations sells hemogen packs, blood torches, melee weapons with higher quality than normal and a single deathrest capacity serum. Present in combat and exotic orbital traders.
+
+
 * **Cannibal:** These traders must be truly desperate... or utterly insane. Present in combat and slaver orbital traders.
 
 
@@ -207,7 +210,11 @@ TraderGen should support wares from mods out of the box; please submit a [bug re
 
   * Orbital traders with the prospector specialization may also have some gemstones in stock.
 
+
 * **[MorrowRim - Just the Kwama](https://steamcommunity.com/sharedfiles/filedetails/?id=2108009219):** If Vanilla Factions Expanded - Insectoids is also loaded, bio-engineering supplier specializations will also have items and creatures from this mod.
+
+
+* **[pphhyy Sanguinary Animals](https://steamcommunity.com/sharedfiles/filedetails/?id=2923829125):** If Biotech is loaded, orbital traders with the bloodfeeder specialization will have some blood scarabs and LeSang fried eggs.
 
 
 * **[Remedies](https://steamcommunity.com/sharedfiles/filedetails/?id=2466826996):** Traders with the medicine specialization will have some poison ivy leaves in stock.

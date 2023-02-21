@@ -86,6 +86,10 @@
 						<def>TG_Bionics</def>
 						<commonality>10.0</commonality>
 					</li>
+					<li MayRequire="Ludeon.RimWorld.Biotech">
+						<def>TG_Bloodfeeder</def>
+						<commonality>3.0</commonality>
+					</li>
 					<li>
 						<def>TG_Cannibal</def>
 						<commonality>3.0</commonality>
@@ -132,6 +136,10 @@
 					<li>
 						<def>TG_Bionics</def>
 						<commonality>10.0</commonality>
+					</li>
+					<li MayRequire="Ludeon.RimWorld.Biotech">
+						<def>TG_Bloodfeeder</def>
+						<commonality>6.0</commonality>
 					</li>
 					<li MayRequire="VanillaExpanded.VBooksE">
 						<def>TG_Culture</def>
