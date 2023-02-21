@@ -53,6 +53,25 @@
 			</rulesFiles>
 		</rulePack>
 	</RulePackDef>
+	<RulePackDef MayRequire="VanillaExpanded.VGeneticsE">
+		<defName>TG_OrbitalNamerGenetics</defName>
+		<include>
+			<li>NamerTraderGeneral</li>
+		</include>
+		<rulePack>
+			<rulesStrings>
+				<li>r_name(p=8)->[GeneticAdjective] [GeneticBusinessType]</li>
+				<li>r_name(p=4)->[businessname] [GeneticBusinessType]</li>
+				<li>r_name(p=4)->[GeneticAdjective] [Animal] [GeneticBusinessType]</li>
+				<li>r_name(p=4)->[GeneticAdjective] [businesstype]</li>
+				<li>r_name(p=2)->[GeneticAdjective] [Animal] [businesstype]</li>
+			</rulesStrings>
+			<rulesFiles>
+				<li>GeneticBusinessType->Words/Nouns/TG_GeneticBusinessTypes</li>
+				<li>GeneticAdjective->Words/Adjectives/TG_GeneticAdjectives</li>
+			</rulesFiles>
+		</rulePack>
+	</RulePackDef>
 	<RulePackDef>
 		<defName>TG_OrbitalNamerSlaver</defName>
 		<include>
