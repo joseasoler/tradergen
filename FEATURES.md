@@ -12,7 +12,7 @@ TraderGen will add between zero and five specializations (depending on mod setti
 * **Bionics:** Adds prostheses between the industrial and ultratech technology levels. Present in combat, exotic, slaver and imperial orbital traders.
 
 
-* **Bloodfeeder (with [Biotech](https://rimworldgame.com/biotech/)):** This uncommon specializations sells hemogen packs, blood torches, melee weapons with higher quality than normal and a single deathrest capacity serum. Present in combat and exotic orbital traders.
+* **Bloodfeeder (with [Biotech](https://rimworldgame.com/biotech/)):** This uncommon specializations sells hemogen packs, blood torches, melee weapons with higher quality than normal and a single deathrest capacity serum. Present in combat, exotic and slaver orbital traders.
 
 
 * **Cannibal:** These traders must be truly desperate... or utterly insane. Present in combat and slaver orbital traders.
