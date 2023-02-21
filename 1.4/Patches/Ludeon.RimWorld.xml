@@ -306,6 +306,7 @@
 			</operations>
 		</match>
 	</Operation>
+	<!--
 	<Operation Class="PatchOperationAddModExtension">
 		<xpath>/Defs/TraderKindDef[defName="Caravan_Outlander_BulkGoods"]</xpath>
 		<value>
@@ -418,4 +419,5 @@
 			</li>
 		</value>
 	</Operation>
+	-->
 </Patch>

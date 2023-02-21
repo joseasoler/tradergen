@@ -99,6 +99,7 @@
 					</li>
 				</value>
 			</li>
+			<!--
 			<li Class="PatchOperationAddModExtension">
 				<xpath>/Defs/TraderKindDef[defName="Empire_Caravan_TraderGeneral"]</xpath>
 				<value>
@@ -112,6 +113,7 @@
 					</li>
 				</value>
 			</li>
+			-->
 		</operations>
 	</Operation>
 </Patch>
