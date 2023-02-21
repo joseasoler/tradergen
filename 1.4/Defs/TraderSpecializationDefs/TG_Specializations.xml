@@ -394,7 +394,7 @@
 			<li Class="TG.StockGen.AnimalMultiDef">
 				<pawnKindDefs>
 					<li>Boomalope</li>
-					<li MayRequire="VanillaExpanded.VAEAU">AEXP_Boombat</li>
+					<li MayRequire="VanillaExpanded.VanillaAnimalsExpanded">AEXP_Boombat</li>
 				</pawnKindDefs>
 				<kindCountRange>1</kindCountRange>
 				<totalPriceRange>200~500</totalPriceRange>
