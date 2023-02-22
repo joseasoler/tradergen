@@ -12,7 +12,7 @@ TraderGen will add between zero and five specializations (depending on mod setti
 * **Bionics:** Adds prostheses between the industrial and ultratech technology levels. Present in combat, exotic, slaver and imperial orbital traders.
 
 
-* **Bloodfeeder (with [Biotech](https://rimworldgame.com/biotech/)):** This uncommon specialization sells hemogen packs, blood torches, melee weapons with higher quality than normal and a single deathrest capacity serum. They will also have a genepack with genes from a bloodfeeder xenotype. Present in combat, exotic and slaver orbital traders.
+* **Bloodfeeder (with [Biotech](https://rimworldgame.com/biotech/)):** This uncommon specialization sells hemogen packs, blood torches, melee weapons with higher quality than normal and a single deathrest capacity serum. They will also have a genepack containing genes of a random bloodfeeder xenotype. Present in combat, exotic and slaver orbital traders.
 
 
 * **Cannibal:** These traders must be truly desperate... or utterly insane. Present in combat and slaver orbital traders.
@@ -69,7 +69,7 @@ TraderGen will add between zero and five specializations (depending on mod setti
 * **Wealth:** This trader has been successful or lucky in the past, and has more silver than usual in stock. This specialization is rare, but it is present in all orbital traders.
 
 
-* **Xenogenetics (with [Biotech](https://rimworldgame.com/biotech/)):** A rare specialization that sells genepacks with genes from specific xenotypes. It will rarely have an archite capsule in stock. Present in exotic and slaver orbital traders.
+* **Xenogenetics (with [Biotech](https://rimworldgame.com/biotech/)):** A rare specialization that sells genepacks containing some of the genes of a specific xenotype. It will rarely have an archite capsule in stock. Present in exotic and slaver orbital traders.
 
 
 Ideology
