@@ -11,7 +11,12 @@ namespace TG.StockGen
 
 		private static float XenotypeWeight(XenotypeDef def)
 		{
-			return def == XenotypeDefOf.Baseliner ? 0.0f : 2.0f * def.factionlessGenerationWeight;
+			if (def == XenotypeDefOf.Baseliner || def.defName == "AG_RandomCustom")
+			{
+				return 0.0f;
+			}
+
+			return 2.0f * def.factionlessGenerationWeight;
 		}
 
 		private static void Initialize()
