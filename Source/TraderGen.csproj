@@ -64,6 +64,7 @@
 		<Compile Include="StockGen\IdeoColorApparel.cs" />
 		<Compile Include="StockGen\MinableResource.cs" />
 		<Compile Include="StockGen\PreferredApparel.cs" />
+		<Compile Include="StockGen\FactionlessXenotypeGenepack.cs" />
 		<Compile Include="StockGen\Skulls.cs" />
 		<Compile Include="StockGen\VeneratedAnimals.cs" />
 		<Compile Include="StockRule\NoArtificialBodyMods.cs" />

@@ -12,7 +12,7 @@ TraderGen will add between zero and five specializations (depending on mod setti
 * **Bionics:** Adds prostheses between the industrial and ultratech technology levels. Present in combat, exotic, slaver and imperial orbital traders.
 
 
-* **Bloodfeeder (with [Biotech](https://rimworldgame.com/biotech/)):** This uncommon specializations sells hemogen packs, blood torches, melee weapons with higher quality than normal and a single deathrest capacity serum. They will also have a genepack with genes from a bloodfeeder xenotype. Present in combat, exotic and slaver orbital traders.
+* **Bloodfeeder (with [Biotech](https://rimworldgame.com/biotech/)):** This uncommon specialization sells hemogen packs, blood torches, melee weapons with higher quality than normal and a single deathrest capacity serum. They will also have a genepack with genes from a bloodfeeder xenotype. Present in combat, exotic and slaver orbital traders.
 
 
 * **Cannibal:** These traders must be truly desperate... or utterly insane. Present in combat and slaver orbital traders.
@@ -67,6 +67,10 @@ TraderGen will add between zero and five specializations (depending on mod setti
 
 
 * **Wealth:** This trader has been successful or lucky in the past, and has more silver than usual in stock. This specialization is rare, but it is present in all orbital traders.
+
+
+* **Xenogenetics (with [Biotech](https://rimworldgame.com/biotech/)):** A rare specialization that sells genepacks with genes from specific xenotypes. It will rarely have an archite capsule in stock. Present in exotic and slaver orbital traders.
+
 
 Ideology
 ---
@@ -176,7 +180,7 @@ TraderGen should support wares from mods out of the box; please submit a [bug re
 
 * **[Cybernetic Organism and Neural Network](https://steamcommunity.com/sharedfiles/filedetails/?id=2045064990):**
 
-  * The bionics trader gets access to these specializations: drugs, hunting, medicine, organs, psycasting, synthetics, wealth.
+  * The bionics trader gets access to these specializations: drugs, hunting, medicine, organs, psycasting, synthetics, wealth and xenogenetics.
 
   * The bionics trader will now purchase all prosthetics from any mods.
 
@@ -188,14 +192,14 @@ TraderGen should support wares from mods out of the box; please submit a [bug re
 
 * **[Expanded Prosthetics and Organ Engineering](https://steamcommunity.com/sharedfiles/filedetails/?id=725956940):**
 
-  * The prosthesis trader gets access to these specializations: drugs, hunting, medicine, organs, psycasting, synthetics, wealth.
+  * The prosthesis trader gets access to these specializations: drugs, hunting, medicine, organs, psycasting, synthetics, wealth and xenogenetics.
 
   * The textiles trader gets access to these specializations: biomaterials, cannibal, draper, hunting, husbandry, wealth.
 
 
 * **[Expanded Prosthetics and Organ Engineering - Forked](https://steamcommunity.com/sharedfiles/filedetails/?id=1949064302):**
 
-  * The prosthesis trader gets access to these specializations: drugs, hunting, medicine, organs, psycasting, synthetics, wealth.
+  * The prosthesis trader gets access to these specializations: drugs, hunting, medicine, organs, psycasting, synthetics, wealth and xenogenetics.
 
   * The textiles trader gets access to these specializations: biomaterials, cannibal, draper, hunting, husbandry, wealth.
 
@@ -299,7 +303,7 @@ TraderGen should support wares from mods out of the box; please submit a [bug re
 
 * **[Vanilla Genetics Expanded](https://steamcommunity.com/sharedfiles/filedetails/?id=2801160906):**
 
-  * The genetics supplier gets access to these specializations: culture, drugs, medicine, tech and wealth.
+  * The genetics supplier gets access to these specializations: culture, drugs, medicine, tech, wealth and xenogenetics.
 
   * Genetics suppliers have names specific to them.
 

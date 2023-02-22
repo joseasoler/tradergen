@@ -645,4 +645,40 @@
 			</li>
 		</stockGens>
 	</TG.TraderSpecializationDef>
+	<TG.TraderSpecializationDef MayRequire="Ludeon.RimWorld.Biotech">
+		<defName>TG_Xenogenetics</defName>
+		<label>xenogenetics</label>
+		<stockGens>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>ArchiteCapsule</thingDef>
+				<countRange>-3~1</countRange>
+			</li>
+			<li Class="TG.StockGen.FactionlessXenotypeGenepack">
+				<architeGenes>0~1</architeGenes>
+				<nonArchiteGenes>2~3</nonArchiteGenes>
+				<countRange>1</countRange>
+			</li>
+			<li Class="TG.StockGen.FactionlessXenotypeGenepack">
+				<architeGenes>0~1</architeGenes>
+				<nonArchiteGenes>2~3</nonArchiteGenes>
+				<countRange>1</countRange>
+			</li>
+			<li Class="TG.StockGen.FactionlessXenotypeGenepack">
+				<architeGenes>0~1</architeGenes>
+				<nonArchiteGenes>2~3</nonArchiteGenes>
+				<countRange>1</countRange>
+			</li>
+			<li Class="TG.StockGen.FactionlessXenotypeGenepack">
+				<architeGenes>1</architeGenes>
+				<nonArchiteGenes>3~4</nonArchiteGenes>
+				<countRange>1</countRange>
+			</li>
+			<li Class="TG.StockGen.FactionlessXenotypeGenepack">
+				<architeGenes>1~2</architeGenes>
+				<nonArchiteGenes>4~6</nonArchiteGenes>
+				<countRange>1</countRange>
+			</li>
+		</stockGens>
+	</TG.TraderSpecializationDef>
+
 </Defs>

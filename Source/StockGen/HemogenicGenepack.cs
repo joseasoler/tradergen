@@ -9,11 +9,6 @@ namespace TG.StockGen
 	{
 		private static List<XenotypeDef> _hemogenicXenotypes;
 
-		public HemogenicGenepack()
-		{
-			thingDefCountRange = IntRange.one;
-		}
-
 		/// <summary>
 		/// Sanguophages have more probability to be chosen, but all xenotypes with hemogenic can appear.
 		/// </summary>

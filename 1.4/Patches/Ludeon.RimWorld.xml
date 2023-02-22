@@ -173,6 +173,10 @@
 						<def>TG_Wealth</def>
 						<commonality>5.0</commonality>
 					</li>
+					<li MayRequire="Ludeon.RimWorld.Biotech">
+						<def>TG_Xenogenetics</def>
+						<commonality>5.0</commonality>
+					</li>
 				</specializations>
 				<extraNameRules>TG_OrbitalNamerExotic</extraNameRules>
 			</li>
@@ -222,6 +226,10 @@
 					</li>
 					<li>
 						<def>TG_Wealth</def>
+						<commonality>5.0</commonality>
+					</li>
+					<li MayRequire="Ludeon.RimWorld.Biotech">
+						<def>TG_Xenogenetics</def>
 						<commonality>5.0</commonality>
 					</li>
 				</specializations>

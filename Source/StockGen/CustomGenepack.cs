@@ -10,7 +10,12 @@ namespace TG.StockGen
 		public IntRange architeGenes = IntRange.zero;
 
 		public IntRange nonArchiteGenes = IntRange.zero;
-		
+
+		public CustomGenepack()
+		{
+			thingDefCountRange = IntRange.one;
+		}
+
 		public override IEnumerable<string> ConfigErrors(TraderKindDef parentDef)
 		{
 			foreach (var err in base.ConfigErrors(parentDef))
