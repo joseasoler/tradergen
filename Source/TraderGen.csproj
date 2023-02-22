@@ -30,6 +30,7 @@
 		<Compile Include="GenExtension.cs" />
 		<Compile Include="Harmony\CaravanArrival.cs" />
 		<Compile Include="Harmony\ChangeStockQuality.cs" />
+		<Compile Include="Harmony\CustomGenepackGenerator.cs" />
 		<Compile Include="Harmony\DialogSellableItems.cs" />
 		<Compile Include="Harmony\DialogTrade.cs" />
 		<Compile Include="Harmony\DLC\Ideology.cs" />
@@ -53,6 +54,8 @@
 		<Compile Include="Mod\Mod.cs" />
 		<Compile Include="Properties\AssemblyInfo.cs" />
 		<Compile Include="StockGen\Art.cs" />
+		<Compile Include="StockGen\CustomGenepack.cs" />
+		<Compile Include="StockGen\HemogenicGenepack.cs" />
 		<Compile Include="StockGen\FullHeadApparel.cs" />
 		<Compile Include="StockGen\HighQuality.cs" />
 		<Compile Include="StockGen\HighQualityWeapons.cs" />

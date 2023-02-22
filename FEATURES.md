@@ -12,7 +12,7 @@ TraderGen will add between zero and five specializations (depending on mod setti
 * **Bionics:** Adds prostheses between the industrial and ultratech technology levels. Present in combat, exotic, slaver and imperial orbital traders.
 
 
-* **Bloodfeeder (with [Biotech](https://rimworldgame.com/biotech/)):** This uncommon specializations sells hemogen packs, blood torches, melee weapons with higher quality than normal and a single deathrest capacity serum. Present in combat, exotic and slaver orbital traders.
+* **Bloodfeeder (with [Biotech](https://rimworldgame.com/biotech/)):** This uncommon specializations sells hemogen packs, blood torches, melee weapons with higher quality than normal and a single deathrest capacity serum. They will also have a genepack with genes from a bloodfeeder xenotype. Present in combat, exotic and slaver orbital traders.
 
 
 * **Cannibal:** These traders must be truly desperate... or utterly insane. Present in combat and slaver orbital traders.
@@ -163,6 +163,9 @@ TraderGen should support wares from mods out of the box; please submit a [bug re
 
 
 * **[Alpha Biomes](https://steamcommunity.com/sharedfiles/filedetails/?id=1841354677):** The biomaterials specialization may have items created from crystalline wood, mushroom stalks or red wood.
+
+
+* **[Alpha Genes](https://steamcommunity.com/sharedfiles/filedetails/?id=2891845502):** Genepacks created by TraderGen never contain genes from this mod. Rip them from enemies or find them in Biotech lab quests instead!
 
 
 * **[Alpha Memes](https://steamcommunity.com/sharedfiles/filedetails/?id=2661356814):** Extensive support for the precepts of this mod. Check the Ideology section above for details.

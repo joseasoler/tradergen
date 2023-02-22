@@ -78,6 +78,11 @@
 				<thingDef>SanguphageMeetingTorch</thingDef>
 				<countRange>1~3</countRange>
 			</li>
+			<li Class="TG.StockGen.HemogenicGenepack">
+				<architeGenes>0~1</architeGenes>
+				<nonArchiteGenes>1~3</nonArchiteGenes>
+				<countRange>1</countRange>
+			</li>
 			<li Class="TG.StockGen.HighQualityWeapons">
 				<weaponTags>
 					<li>MedievalMeleeDecent</li>
