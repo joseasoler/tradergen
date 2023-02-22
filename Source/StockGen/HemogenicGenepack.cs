@@ -9,20 +9,21 @@ namespace TG.StockGen
 	{
 		private static List<XenotypeDef> _hemogenicXenotypes;
 
-		/// <summary>
-		/// Sanguophages have more probability to be chosen, but all xenotypes with hemogenic can appear.
-		/// </summary>
-		/// <param name="def">Hemogenic xenotype to check</param>
-		/// <returns>Random weight of the xenotype.</returns>
-		private static float HemogenicXenotypeWeight(XenotypeDef def)
+		private static float XenotypeWeight(XenotypeDef def)
 		{
-			var value = 1.0f / (1 + _hemogenicXenotypes.Count);
+			if (!def.genes.Contains(GeneDefOf.Hemogenic))
+			{
+				return 0.0f;
+			}
 			if (def == XenotypeDefOf.Sanguophage)
 			{
-				value += 0.3f;
+				// Although sanguophages cannot be found as factionless pawns, they are allowed as an exception as they are
+				// intended to be usual owners of orbital traders with the bloodfeeder specialization.
+				return 1.0f;
 			}
-
-			return value;
+			
+			// For other modded bloodfeeders, their factionless generation weight is respected.
+			return 2.0f * def.factionlessGenerationWeight;
 		}
 
 		private static void Initialize()
@@ -35,7 +36,7 @@ namespace TG.StockGen
 			_hemogenicXenotypes = new List<XenotypeDef>();
 			foreach (var xenotypeDef in DefDatabase<XenotypeDef>.AllDefs)
 			{
-				if (xenotypeDef.genes.Contains(GeneDefOf.Hemogenic))
+				if (XenotypeWeight(xenotypeDef) > 0.0f)
 				{
 					_hemogenicXenotypes.Add(xenotypeDef);
 				}
@@ -51,7 +52,7 @@ namespace TG.StockGen
 				return false;
 			}
 
-			var chosenXenotype = Algorithm.ChooseNWeightedRandomly(_hemogenicXenotypes, HemogenicXenotypeWeight, 1);
+			var chosenXenotype = Algorithm.ChooseNWeightedRandomly(_hemogenicXenotypes, XenotypeWeight, 1);
 			if (chosenXenotype.Count == 0)
 			{
 				Logger.ErrorOnce("TG.StockGen.HemogenicGenepack could not randomly choose a hemogenic xenotype.");
