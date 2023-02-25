@@ -54,7 +54,8 @@ namespace TG.TraderKind
 		{
 			if (trader is Settlement settlement)
 			{
-				return Gen.HashCombineInt(settlement.RandomPriceFactorSeed, settlement.trader.lastStockGenerationTicks);
+				return settlement.trader != null
+					? Gen.HashCombineInt(settlement.RandomPriceFactorSeed, settlement.trader.lastStockGenerationTicks) : 0;
 			}
 
 			return trader.RandomPriceFactorSeed;
