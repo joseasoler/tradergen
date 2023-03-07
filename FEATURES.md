@@ -233,6 +233,9 @@ TraderGen should support wares from mods out of the box; please submit a [bug re
 * **[Rim-Effect: Themis Traders](https://steamcommunity.com/sharedfiles/filedetails/?id=2488461271):** Trader ship stock is generated using the TraderGen rules for orbital traders.
 
 
+* **[SeedsPlease: Lite](https://steamcommunity.com/sharedfiles/filedetails/?id=2586052937):** The greenhouse trader gets access to these specializations: biomaterials, draper, gourmet, husbandry and wealth. They also have a custom name generator.
+
+
 * **[Steampunk: Trader Airships](https://steamcommunity.com/sharedfiles/filedetails/?id=2708154727):** Trader ship stock is generated using the TraderGen rules for orbital traders.
 
 
@@ -282,7 +285,7 @@ TraderGen should support wares from mods out of the box; please submit a [bug re
 
   * The bio-engineering supplier will now purchase most really expensive items that could be resold for profit. It will also purchase insect jelly related items and kibble.
 
-  * Bio-engineering suppliers have names specific to them.
+  * Bio-engineering suppliers have a custom name generator.
 
 
 * **[Vanilla Factions Expanded - Mechanoids](https://steamcommunity.com/sharedfiles/filedetails/?id=2329011599):** Traders with the technology specialization may have a mechanoid component in stock.
@@ -305,7 +308,7 @@ TraderGen should support wares from mods out of the box; please submit a [bug re
 
   * The genetics supplier gets access to these specializations: culture, drugs, medicine, tech, wealth and xenogenetics.
 
-  * Genetics suppliers have names specific to them.
+  * Genetics suppliers have a custom name generator.
 
   * Even if an ideology has a hybrid, paragon or mech hybrid as a venerated animal, traders will not sell them.
 
@@ -345,7 +348,7 @@ TraderGen should support wares from mods out of the box; please submit a [bug re
 
 * **[Zoological Orbital Traders](https://steamcommunity.com/sharedfiles/filedetails/?id=1952216926):**
 
-  * The zoological trader gets access to these specializations: draper, hunting, husbandry and medicine. This draper specialization only sells animal fabrics.
+  * The zoological trader gets access to these specializations: draper, hunting, husbandry, medicine and wealth. This draper specialization only sells animal fabrics.
 
   * The zoological trader will now purchase any exotic animal part, including those from mods such as Alpha Animals or Dinosauria.
 

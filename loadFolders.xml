@@ -13,6 +13,7 @@
 		<li IfModActive="Ludeon.RimWorld.Royalty">1.4/DLC/Royalty</li>
 		<li IfModActive="Ludeon.RimWorld.Ideology">1.4/DLC/Ideology</li>
 		<li IfModActive="Sarg.AlphaMemes">1.4/Mods/AlphaMemes</li>
+		<li IfModActive="Owlchemist.SeedsPleaseLite">1.4/Mods/SeedsPleaseLite</li>
 		<li IfModActive="OskarPotocki.VFE.Insectoid">1.4/Mods/VFE_Insectoids</li>
 		<li IfModActive="VanillaExpanded.VMemesE">1.4/Mods/VIE_MS</li>
 	</v1.4>
