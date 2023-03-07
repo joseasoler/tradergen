@@ -6,6 +6,7 @@ Orbital trader specializations
 
 TraderGen will add between zero and five specializations (depending on mod settings) to each vanilla orbital trader. Some orbital traders from mods are supported as well. Check the Mod support section for details.
 
+
 * **Biomaterials:** This uncommon specialization adds items created with materials obtained from exotic animals or plants. Present in bulk and exotic orbital traders.
 
 
@@ -209,6 +210,9 @@ TraderGen should support wares from mods out of the box; please submit a [bug re
 
 
 * **[Forsakens](https://steamcommunity.com/sharedfiles/filedetails/?id=1728999127):** The biomaterials specialization may have items created from ultima fabric.
+
+
+* **[Gene trader](https://steamcommunity.com/sharedfiles/filedetails/?id=2886375137):** The gene orbital trader can appear with the bloodfeeder, medicine, organs, technology, wealth and xenogenetics specializations.
 
 
 * **[Jewelry](https://steamcommunity.com/workshop/filedetails/?id=2020964421):**
