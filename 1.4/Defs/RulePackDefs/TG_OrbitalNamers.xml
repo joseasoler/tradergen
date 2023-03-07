@@ -7,9 +7,11 @@
 		</include>
 		<rulePack>
 			<rulesStrings>
-				<li>r_name(p=8)->[businessname] [traderkindbusinesstype]</li>
-				<li>r_name(p=2)->[Letter][Letter] [traderkindbusinesstype]</li>
+				<li>r_name(p=4)->[businessname] [traderkindbusinesstype]</li>
+				<li>r_name(p=4)->[Letter][Letter] [traderkindbusinesstype]</li>
 				<li>r_name(p=4)->[maybe_adjective] [NaturalObject] [traderkindbusinesstype]</li>
+				<li>r_name(p=4)->[ConceptPositive] [traderkindbusinesstype]</li>
+				<li>r_name(p=2)->[AdjectiveFriendly] [traderkindbusinesstype]</li>
 			</rulesStrings>
 			<rulesFiles>
 				<li>traderkindbusinesstype->Words/Nouns/TG_BulkBusinessTypes</li>
@@ -23,7 +25,7 @@
 		</include>
 		<rulePack>
 			<rulesStrings>
-				<li>r_name(p=8)->[businessname] [traderkindbusinesstype]</li>
+				<li>r_name(p=4)->[businessname] [traderkindbusinesstype]</li>
 				<li>r_name(p=8)->[weapon] [traderkindbusinesstype]</li>
 				<li>r_name(p=4)->[AdjectiveBadass] [traderkindbusinesstype]</li>
 				<li>r_name(p=2)->[AdjectiveBadass] [Animal] [traderkindbusinesstype]</li>
@@ -44,9 +46,11 @@
 		</include>
 		<rulePack>
 			<rulesStrings>
-				<li>r_name(p=4)->[businessname] [traderkindbusinesstype]</li>
+				<li>r_name(p=2)->[businessname] [traderkindbusinesstype]</li>
 				<li>r_name(p=2)->[Letter][Letter] [traderkindbusinesstype]</li>
-				<li>r_name(p=2)->[maybe_adjective] [PersonAlly] [traderkindbusinesstype]</li>
+				<li>r_name(p=4)->[maybe_adjective] [PersonAlly] [traderkindbusinesstype]</li>
+				<li>r_name(p=4)->[maybe_adjective] [ConceptPositive] [traderkindbusinesstype]</li>
+				<li>r_name(p=2)->[AdjectiveFriendly] [traderkindbusinesstype]</li>
 			</rulesStrings>
 			<rulesFiles>
 				<li>traderkindbusinesstype->Words/Nouns/TG_ExoticBusinessTypes</li>
@@ -81,8 +85,9 @@
 			<rulesStrings>
 				<li>r_name(p=6)->[PersonBadass] [traderkindbusinesstype]</li>
 				<li>r_name(p=4)->[AdjectiveBadass] [traderkindbusinesstype]</li>
-				<li>r_name(p=4)->[businessname] [traderkindbusinesstype]</li>
-				<li>r_name(p=2)->[AdjectiveBadass] [AnimalBadass] [traderkindbusinesstype]</li>
+				<li>r_name(p=4)->[AdjectiveBadass] [AnimalBadass] [traderkindbusinesstype]</li>
+				<li>r_name(p=2)->[AdjectiveBadass] [ConceptBadass]</li>
+				<li>r_name(p=2)->[AdjectiveBadass] [ConceptBadass] [traderkindbusinesstype]</li>
 			</rulesStrings>
 			<rulesFiles>
 				<li>traderkindbusinesstype->Words/Nouns/TG_SlaverBusinessTypes</li>
