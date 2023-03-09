@@ -181,11 +181,16 @@ TraderGen should support wares from mods out of the box; please submit a [bug re
 
 * **[Cybernetic Organism and Neural Network](https://steamcommunity.com/sharedfiles/filedetails/?id=2045064990):**
 
-  * The bionics trader gets access to these specializations: drugs, hunting, medicine, organs, psycasting, synthetics, wealth and xenogenetics.
+  * The bionics orbital trader gets access to these specializations: drugs, hunting, medicine, organs, psycasting, synthetics, wealth and xenogenetics.
 
-  * The bionics trader will now purchase all prosthetics from any mods.
+  * The bionics orbital trader will now purchase all prosthetics from any mods. It will also purchase most really expensive items that could be resold for profit.
 
-  * The bionics trader will now purchase most really expensive items that could be resold for profit.
+
+* **[Eccentric Tech - Fusion Power](https://steamcommunity.com/sharedfiles/filedetails/?id=2742125879):**
+
+  * The mobile refinery orbital trader gets access to these specializations: drugs, medicine, technology, wealth.
+
+  * The fuel tanker orbital trader gets access to these specializations: prospector, scavenger, technology, wealth.
 
 
 * **[ESCP - Trolls](https://steamcommunity.com/sharedfiles/filedetails/?id=2878028462):** Orbital traders with the hunting specialization may have troll blood in stock.
@@ -193,16 +198,16 @@ TraderGen should support wares from mods out of the box; please submit a [bug re
 
 * **[Expanded Prosthetics and Organ Engineering](https://steamcommunity.com/sharedfiles/filedetails/?id=725956940):**
 
-  * The prosthesis trader gets access to these specializations: drugs, hunting, medicine, organs, psycasting, synthetics, wealth and xenogenetics.
+  * The prosthesis orbital trader gets access to these specializations: drugs, hunting, medicine, organs, psycasting, synthetics, wealth and xenogenetics.
 
-  * The textiles trader gets access to these specializations: biomaterials, cannibal, draper, hunting, husbandry, wealth.
+  * The textiles orbital trader gets access to these specializations: biomaterials, cannibal, draper, hunting, husbandry, wealth.
 
 
 * **[Expanded Prosthetics and Organ Engineering - Forked](https://steamcommunity.com/sharedfiles/filedetails/?id=1949064302):**
 
-  * The prosthesis trader gets access to these specializations: drugs, hunting, medicine, organs, psycasting, synthetics, wealth and xenogenetics.
+  * The prosthesis orbital trader gets access to these specializations: drugs, hunting, medicine, organs, psycasting, synthetics, wealth and xenogenetics.
 
-  * The textiles trader gets access to these specializations: biomaterials, cannibal, draper, hunting, husbandry, wealth.
+  * The textiles orbital trader gets access to these specializations: biomaterials, cannibal, draper, hunting, husbandry, wealth.
 
   * Traders with the bionics specialization may rarely have MA-AI chips in stock.
 
