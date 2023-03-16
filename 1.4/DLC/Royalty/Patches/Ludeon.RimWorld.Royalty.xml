@@ -97,6 +97,21 @@
 			</li>
 		</value>
 	</Operation>
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/ThingDef[defName="PsychicAmplifier"]/tradeability</xpath>
+		<match Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef[defName="PsychicAmplifier"]/tradeability</xpath>
+			<value>
+				<tradeability>All</tradeability>
+			</value>
+		</match>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName="PsychicAmplifier"]</xpath>
+			<value>
+				<tradeability>All</tradeability>
+			</value>
+		</nomatch>
+	</Operation>
 	<!--
 	<Operation Class="PatchOperationAddModExtension">
 		<xpath>/Defs/TraderKindDef[defName="Empire_Caravan_TraderGeneral"]</xpath>

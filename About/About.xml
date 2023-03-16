@@ -36,5 +36,6 @@ You can find a detailed description of specializations, ideology features, trade
 		<li>Ludeon.RimWorld.Royalty</li>
 		<li>Ludeon.RimWorld.Ideology</li>
 		<li>Ludeon.RimWorld.Biotech</li>
+		<li>xrushha.BuyablePsylinkNeuroformers</li>
 	</loadAfter>
 </ModMetaData>
