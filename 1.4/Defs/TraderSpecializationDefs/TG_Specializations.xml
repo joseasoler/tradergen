@@ -70,6 +70,18 @@
 				<thingDef>HemogenPack</thingDef>
 				<countRange>5~12</countRange>
 			</li>
+			<li Class="TG.StockGen.MultiDef" MayRequire="vanillaracesexpanded.sanguophage">
+				<thingDefs>
+					<li>VRE_HemogenPack_Animal</li>
+					<li>VRE_HemogenPack_Animal</li>
+					<li>VRE_HemogenPack_Animal</li>
+					<li>VRE_HemogenPack_Corpse</li>
+					<li>VRE_HemogenPack_Corpse</li>
+					<li>VRE_HemogenPack_Sanguophage</li>
+				</thingDefs>
+				<thingDefCountRange>1</thingDefCountRange>
+				<countRange>1~2</countRange>
+			</li>
 			<li Class="StockGenerator_SingleDef">
 				<thingDef>DeathrestCapacitySerum</thingDef>
 				<countRange>1</countRange>

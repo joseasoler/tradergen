@@ -83,8 +83,11 @@ namespace TG.Harmony
 		/// <param name="__instance">Trade Ship.</param>
 		private static void TradeShipLabel(TradeShip __instance, ref string __result)
 		{
-			var label = Util.Label(__instance);
-			__result = $"{__instance.name} ({label})";
+			if (__instance?.TraderKind != null)
+			{
+				var label = Util.Label(__instance);
+				__result = $"{__instance.name} ({label})";
+			}
 		}
 
 		/// <summary>

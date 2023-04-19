@@ -15,15 +15,21 @@ namespace TG.StockGen
 			{
 				return 0.0f;
 			}
+
 			if (def == XenotypeDefOf.Sanguophage)
 			{
 				// Although sanguophages cannot be found as factionless pawns, they are allowed as an exception as they are
 				// intended to be usual owners of orbital traders with the bloodfeeder specialization.
-				return 1.0f;
+				return 1.0F;
 			}
-			
-			// For other modded bloodfeeders, their factionless generation weight is respected.
-			return 2.0f * def.factionlessGenerationWeight;
+
+			if (def.factionlessGenerationWeight > 0)
+			{
+				// For other modded bloodfeeders, their factionless generation weight is respected.
+				return 0.5F * def.factionlessGenerationWeight;
+			}
+
+			return 0.1F;
 		}
 
 		private static void Initialize()

@@ -216,6 +216,15 @@ TraderGen should support wares from mods out of the box; please submit a [bug re
 
 * **[Forsakens](https://steamcommunity.com/sharedfiles/filedetails/?id=1728999127):** The biomaterials specialization may have items created from ultima fabric.
 
+* **[Galaxy Trade Group](https://steamcommunity.com/sharedfiles/filedetails/?id=2956274766)** and **[GTG Orbital Traders](https://steamcommunity.com/sharedfiles/filedetails/?id=2961168731):**
+
+  * The GTG civilian orbital trader can appear with the culture, draper, gourmet, husbandry and wealth specializations.
+
+  * The GTG industrial orbital trader can appear with the biomaterials, craftsmanship, medicine, prospector, tech and wealth specializations.
+
+  * The GTG military orbital trader can appear with the bionics, drugs, ordnance, svanger and wealth specializations.
+
+  * The GTG black market orbital trader can appear with the bloodfeeder, drugs, jewelry, organs, tech, wealth and xenogenetics specializations.
 
 * **[Gene trader](https://steamcommunity.com/sharedfiles/filedetails/?id=2886375137):** The gene orbital trader can appear with the bloodfeeder, medicine, organs, technology, wealth and xenogenetics specializations.
 
