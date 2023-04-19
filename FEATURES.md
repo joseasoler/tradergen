@@ -341,6 +341,9 @@ TraderGen should support wares from mods out of the box; please submit a [bug re
 * **[Vanilla Ideology Expanded - Memes and Structures](https://steamcommunity.com/sharedfiles/filedetails/?id=2636329500):** Extensive support for the precepts of this mod. Check the Ideology section above for details.
 
 
+* **[Vanilla Races Expanded - Sanguophage](https://steamcommunity.com/sharedfiles/filedetails/?id=2963116383):** The bloodfeeder specialization may have animal, corpse or sanguophage hemogen in stock.
+
+
 * **[Vanilla Trading Expanded](https://steamcommunity.com/sharedfiles/filedetails/?id=2785616901):** TraderGen is fully compatible with this mod. The trade companies of the stock market in Vanilla Trading Expanded can use the new orbital trader names added by TraderGen.
 
 
