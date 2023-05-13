@@ -9,14 +9,42 @@ namespace TG.StockGen
 	{
 		private static List<XenotypeDef> _factionlessXenotypes;
 
-		private static float XenotypeWeight(XenotypeDef def)
+		private static readonly HashSet<string> DisallowedXenotypes = new HashSet<string>
 		{
-			if (def == XenotypeDefOf.Baseliner || def.defName == "AG_RandomCustom")
+			// Alpha Genes special random custom xenotype.
+			"AG_RandomCustom"
+		};
+
+		private static bool HasDisallowedGene(XenotypeDef def)
+		{
+			foreach (var gene in def.genes)
 			{
-				return 0.0f;
+				// Hemogenic xenotypes have their own stock generator.
+				if (gene == GeneDefOf.Hemogenic)
+				{
+					return true;
+				}
+
+				// Vanilla Races Expanded - Androids
+				var categoryName = gene.displayCategory.defName;
+				if (categoryName == "VREA_Hardware" || categoryName == "VREA_Subroutine")
+				{
+					return true;
+				}
 			}
 
-			return 2.0f * def.factionlessGenerationWeight;
+			return false;
+		}
+
+		private static bool DisallowedXenotype(XenotypeDef def)
+		{
+			return def == XenotypeDefOf.Baseliner || DisallowedXenotypes.Contains(def.defName) || HasDisallowedGene(def);
+		}
+
+
+		private static float XenotypeWeight(XenotypeDef def)
+		{
+			return DisallowedXenotype(def) ? 0.0F : 2.0F * def.factionlessGenerationWeight;
 		}
 
 		private static void Initialize()
