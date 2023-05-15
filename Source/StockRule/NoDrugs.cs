@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using RimWorld;
 using Verse;
 
-namespace TG.StockRule
+namespace TraderGen.StockRule
 {
 	/// <summary>
 	/// Forbids all drugs from the specified categories.

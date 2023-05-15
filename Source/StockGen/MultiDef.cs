@@ -3,7 +3,7 @@ using System.Text;
 using RimWorld;
 using Verse;
 
-namespace TG.StockGen
+namespace TraderGen.StockGen
 {
 	/// <summary>
 	/// Chooses from a list of MultiDefs. Vanilla MultiDef lacks a thingDefCountRange attribute and therefore always
@@ -22,7 +22,7 @@ namespace TG.StockGen
 
 			if (thingDefs == null || thingDefs.Count == 0)
 			{
-				yield return "TG.StockGen.MultiDef: empty thingDefs list";
+				yield return "TraderGen.StockGen.MultiDef: empty thingDefs list";
 			}
 		}
 

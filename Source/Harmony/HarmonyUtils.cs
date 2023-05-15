@@ -2,10 +2,10 @@ using System.Collections.Generic;
 using System.Linq;
 using HarmonyLib;
 using RimWorld;
-using TG.TraderKind;
+using TraderGen.TraderKind;
 using Verse;
 
-namespace TG.Harmony
+namespace TraderGen.Harmony
 {
 	/// <summary>
 	/// Utilities used by TraderGen harmony patching.

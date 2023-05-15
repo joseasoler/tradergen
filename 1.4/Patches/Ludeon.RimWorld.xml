@@ -4,7 +4,7 @@
 	<Operation Class="PatchOperationAddModExtension">
 		<xpath>/Defs/TraderKindDef[defName="Orbital_BulkGoods"]</xpath>
 		<value>
-			<li Class="TG.GenExtension">
+			<li Class="TraderGen.GenExtension">
 				<specializations>
 					<li>
 						<def>TG_Biomaterials</def>
@@ -67,7 +67,7 @@
 				<li Class="PatchOperationAdd">
 					<xpath>/Defs/TraderKindDef[defName="Orbital_BulkGoods"]/stockGenerators</xpath>
 					<value>
-						<li Class="TG.StockGen.Alcohol">
+						<li Class="TraderGen.StockGen.Alcohol">
 							<thingDefCountRange>0~2</thingDefCountRange>
 							<totalPriceRange>50~300</totalPriceRange>
 						</li>
@@ -80,7 +80,7 @@
 	<Operation Class="PatchOperationAddModExtension">
 		<xpath>/Defs/TraderKindDef[defName="Orbital_CombatSupplier"]</xpath>
 		<value>
-			<li Class="TG.GenExtension">
+			<li Class="TraderGen.GenExtension">
 				<specializations>
 					<li>
 						<def>TG_Bionics</def>
@@ -127,7 +127,7 @@
 	<Operation Class="PatchOperationAddModExtension">
 		<xpath>/Defs/TraderKindDef[defName="Orbital_Exotic"]</xpath>
 		<value>
-			<li Class="TG.GenExtension">
+			<li Class="TraderGen.GenExtension">
 				<specializations>
 					<li>
 						<def>TG_Biomaterials</def>
@@ -186,7 +186,7 @@
 	<Operation Class="PatchOperationAddModExtension">
 		<xpath>/Defs/TraderKindDef[defName="Orbital_PirateMerchant"]</xpath>
 		<value>
-			<li Class="TG.GenExtension">
+			<li Class="TraderGen.GenExtension">
 				<specializations>
 					<li>
 						<def>TG_Bionics</def>
@@ -253,7 +253,7 @@
 				<li Class="PatchOperationAdd">
 					<xpath>/Defs/TraderKindDef[defName="Orbital_PirateMerchant"]/stockGenerators</xpath>
 					<value>
-						<li Class="TG.StockGen.Alcohol">
+						<li Class="TraderGen.StockGen.Alcohol">
 							<thingDefCountRange>0~2</thingDefCountRange>
 							<totalPriceRange>80~200</totalPriceRange>
 						</li>
@@ -280,7 +280,7 @@
 				<li Class="PatchOperationAdd">
 					<xpath>/Defs/TraderKindDef[defName="Base_Outlander_Standard"]/stockGenerators</xpath>
 					<value>
-						<li Class="TG.StockGen.Alcohol">
+						<li Class="TraderGen.StockGen.Alcohol">
 							<thingDefCountRange>0~2</thingDefCountRange>
 							<totalPriceRange>25~200</totalPriceRange>
 						</li>
@@ -317,7 +317,7 @@
 				<li Class="PatchOperationAdd">
 					<xpath>/Defs/TraderKindDef[defName="Caravan_Outlander_BulkGoods"]/stockGenerators</xpath>
 					<value>
-						<li Class="TG.StockGen.Alcohol">
+						<li Class="TraderGen.StockGen.Alcohol">
 							<thingDefCountRange>0~2</thingDefCountRange>
 							<totalPriceRange>0~100</totalPriceRange>
 						</li>
@@ -330,7 +330,7 @@
 	<Operation Class="PatchOperationAddModExtension">
 		<xpath>/Defs/TraderKindDef[defName="Caravan_Outlander_BulkGoods"]</xpath>
 		<value>
-			<li Class="TG.GenExtension">
+			<li Class="TraderGen.GenExtension">
 				<specializations>
 					<li>
 						<def>TG_CaravanProspector</def>
@@ -347,7 +347,7 @@
 	<Operation Class="PatchOperationAddModExtension">
 		<xpath>/Defs/TraderKindDef[defName="Caravan_Outlander_CombatSupplier"]</xpath>
 		<value>
-			<li Class="TG.GenExtension">
+			<li Class="TraderGen.GenExtension">
 				<specializations>
 					<li>
 						<def>TG_CaravanWealth</def>
@@ -360,7 +360,7 @@
 	<Operation Class="PatchOperationAddModExtension">
 		<xpath>/Defs/TraderKindDef[defName="Caravan_Outlander_Exotic"]</xpath>
 		<value>
-			<li Class="TG.GenExtension">
+			<li Class="TraderGen.GenExtension">
 				<specializations>
 					<li>
 						<def>TG_CaravanWealth</def>
@@ -373,7 +373,7 @@
 	<Operation Class="PatchOperationAddModExtension">
 		<xpath>/Defs/TraderKindDef[defName="Caravan_Outlander_PirateMerchant"]</xpath>
 		<value>
-			<li Class="TG.GenExtension">
+			<li Class="TraderGen.GenExtension">
 				<specializations>
 					<li>
 						<def>TG_CaravanProspector</def>
@@ -390,7 +390,7 @@
 	<Operation Class="PatchOperationAddModExtension">
 		<xpath>/Defs/TraderKindDef[defName="Caravan_Neolithic_BulkGoods"]</xpath>
 		<value>
-			<li Class="TG.GenExtension">
+			<li Class="TraderGen.GenExtension">
 				<specializations>
 					<li>
 						<def>TG_CaravanWealth</def>
@@ -403,7 +403,7 @@
 	<Operation Class="PatchOperationAddModExtension">
 		<xpath>/Defs/TraderKindDef[defName="Caravan_Neolithic_WarMerchant"]</xpath>
 		<value>
-			<li Class="TG.GenExtension">
+			<li Class="TraderGen.GenExtension">
 				<specializations>
 					<li>
 						<def>TG_CaravanWealth</def>
@@ -416,7 +416,7 @@
 	<Operation Class="PatchOperationAddModExtension">
 		<xpath>/Defs/TraderKindDef[defName="Caravan_Neolithic_ShamanMerchant"]</xpath>
 		<value>
-			<li Class="TG.GenExtension">
+			<li Class="TraderGen.GenExtension">
 				<specializations>
 					<li>
 						<def>TG_CaravanWealth</def>
@@ -429,7 +429,7 @@
 	<Operation Class="PatchOperationAddModExtension">
 		<xpath>/Defs/TraderKindDef[defName="Caravan_Neolithic_Slaver"]</xpath>
 		<value>
-			<li Class="TG.GenExtension">
+			<li Class="TraderGen.GenExtension">
 				<specializations>
 					<li>
 						<def>TG_CaravanWealth</def>

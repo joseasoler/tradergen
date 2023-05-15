@@ -3,7 +3,7 @@ using System.Linq;
 using System.Text;
 using Verse;
 
-namespace TG.StockGen
+namespace TraderGen.StockGen
 {
 	/// <summary>
 	/// Matches weapons which follow a certain condition (specified by child classes) and match certain weapon tags.

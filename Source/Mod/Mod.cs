@@ -1,9 +1,10 @@
 using System;
-using TG.TraderKind;
+using TG.Mod;
+using TraderGen.TraderKind;
 using UnityEngine;
 using Verse;
 
-namespace TG.Mod
+namespace TraderGen.Mod
 {
 	/// <summary>
 	/// Loads mod settings and displays the mod settings window.

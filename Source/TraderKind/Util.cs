@@ -2,7 +2,7 @@
 using RimWorld;
 using Verse;
 
-namespace TG.TraderKind
+namespace TraderGen.TraderKind
 {
 	/// <summary>
 	/// Helper functions related to TraderKindDefs.

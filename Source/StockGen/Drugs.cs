@@ -3,7 +3,7 @@ using System.Text;
 using RimWorld;
 using Verse;
 
-namespace TG.StockGen
+namespace TraderGen.StockGen
 {
 	/// <summary>
 	/// Generates drugs. Alcoholic and non-alcoholic beverages are ignored as they have specific StockGens.

@@ -1,7 +1,7 @@
 using RimWorld;
 using Verse;
 
-namespace TG.StockGen
+namespace TraderGen.StockGen
 {
 	/// <summary>
 	/// Handles Jewelry from the Jewelry mod. Pieces under 250 silver are significantly more common.

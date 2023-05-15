@@ -1,7 +1,7 @@
 using RimWorld;
 using Verse;
 
-namespace TG.StockGen
+namespace TraderGen.StockGen
 {
 	/// <summary>
 	/// Matches ranged weapons.

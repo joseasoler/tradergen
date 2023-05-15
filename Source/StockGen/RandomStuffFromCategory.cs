@@ -4,7 +4,7 @@ using System.Text;
 using RimWorld;
 using Verse;
 
-namespace TG.StockGen
+namespace TraderGen.StockGen
 {
 	/// <summary>
 	/// Chooses a ThingDef with stuffProps from a specific StuffCategory and generates stock made from it.
@@ -78,7 +78,7 @@ namespace TG.StockGen
 			}
 
 			var defName = stuffCategoryDef != null ? stuffCategoryDef.defName : "null";
-			Logger.ErrorOnce($"TG.StockGen.FromStuff: Could not find random stuffDef from category {defName}");
+			Logger.ErrorOnce($"TraderGen.StockGen.FromStuff: Could not find random stuffDef from category {defName}");
 			_stuffDef = ThingDefOf.Steel;
 		}
 	}

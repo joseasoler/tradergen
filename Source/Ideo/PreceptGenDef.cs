@@ -3,7 +3,7 @@ using System.Linq;
 using RimWorld;
 using Verse;
 
-namespace TG.Ideo
+namespace TraderGen.Ideo
 {
 	/// <summary>
 	/// Associates a precept with the modifications in stock that it should perform in traders following it.

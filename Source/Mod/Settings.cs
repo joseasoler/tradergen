@@ -1,8 +1,9 @@
 using System.Collections.Generic;
 using RimWorld;
-using TG.TraderKind;
+using TraderGen.TraderKind;
 using Verse;
 
+// ToDo change namespace without affecting settings.
 namespace TG.Mod
 {
 	public class SettingValues

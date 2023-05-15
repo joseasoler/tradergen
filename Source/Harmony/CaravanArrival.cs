@@ -5,10 +5,10 @@ using System.Reflection.Emit;
 using System.Text;
 using HarmonyLib;
 using RimWorld;
-using TG.TraderKind;
+using TraderGen.TraderKind;
 using Verse;
 
-namespace TG.Harmony
+namespace TraderGen.Harmony
 {
 	public static class CaravanArrival
 	{

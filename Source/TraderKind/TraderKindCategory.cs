@@ -1,4 +1,4 @@
-﻿namespace TG.TraderKind
+﻿namespace TraderGen.TraderKind
 {
 	/// <summary>
 	/// Separates TraderKindDefs in different categories.

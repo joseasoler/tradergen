@@ -2,7 +2,7 @@ using System;
 using RimWorld;
 using Verse;
 
-namespace TG.StockGen
+namespace TraderGen.StockGen
 {
 	/// <summary>
 	/// Produces bionics with a selection curve that makes very cheap and very expensive bionics less common.

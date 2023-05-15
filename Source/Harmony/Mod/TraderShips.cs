@@ -1,9 +1,9 @@
 ﻿using HarmonyLib;
 using RimWorld;
-using TG.TraderKind;
+using TraderGen.TraderKind;
 using Verse;
 
-namespace TG.Harmony.Mod
+namespace TraderGen.Harmony.Mod
 {
 	/// <summary>
 	/// Compatibility with the Trader Ships mod and its retextures.

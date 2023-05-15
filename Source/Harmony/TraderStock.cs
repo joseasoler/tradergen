@@ -2,10 +2,11 @@
 using HarmonyLib;
 using RimWorld;
 using TG.Mod;
-using TG.TraderKind;
+using TraderGen.Mod;
+using TraderGen.TraderKind;
 using Verse;
 
-namespace TG.Harmony
+namespace TraderGen.Harmony
 {
 	/// <summary>
 	/// Prepares extra TraderGen information before vanilla generation takes place.

@@ -1,7 +1,7 @@
 using System;
 using Verse;
 
-namespace TG.StockGen
+namespace TraderGen.StockGen
 {
 	/// <summary>
 	/// Intended for ideologies with one or more venerated animals.

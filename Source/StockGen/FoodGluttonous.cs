@@ -1,7 +1,7 @@
 using RimWorld;
 using Verse;
 
-namespace TG.StockGen
+namespace TraderGen.StockGen
 {
 	/// <summary>
 	/// Any food having the Gluttonous or VCE_Confectionery JoyKinds.

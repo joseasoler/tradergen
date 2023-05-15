@@ -1,8 +1,8 @@
 using HarmonyLib;
 using RimWorld;
-using TG.TraderKind;
+using TraderGen.TraderKind;
 
-namespace TG.Harmony
+namespace TraderGen.Harmony
 {
 	/// <summary>
 	/// Patches Tradeable to implement TraderGen features.

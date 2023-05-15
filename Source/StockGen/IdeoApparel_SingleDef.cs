@@ -3,7 +3,7 @@ using System.Text;
 using RimWorld;
 using Verse;
 
-namespace TG.StockGen
+namespace TraderGen.StockGen
 {
 	public class IdeoApparel_SingleDef : IdeoColorApparel
 	{
@@ -32,7 +32,7 @@ namespace TG.StockGen
 
 			if (apparelDef == null || !apparelDef.IsApparel)
 			{
-				yield return "TG.StockGen.IdeoApparel_SingleDef: Not associated with an apparel ThingDef.";
+				yield return "TraderGen.StockGen.IdeoApparel_SingleDef: Not associated with an apparel ThingDef.";
 			}
 		}
 

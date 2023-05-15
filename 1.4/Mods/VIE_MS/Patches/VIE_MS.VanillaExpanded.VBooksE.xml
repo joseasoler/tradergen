@@ -9,7 +9,7 @@
 				<li Class="PatchOperationAdd">
 					<xpath>/Defs</xpath>
 					<value>
-						<TG.Ideo.PreceptGenDef>
+						<TraderGen.Ideo.PreceptGenDef>
 							<defName>TG_BookWriting_Exalted</defName>
 							<visitorStockGens>
 								<li Class="StockGenerator_Tag">
@@ -30,13 +30,13 @@
 									<countRange>1</countRange>
 								</li>
 							</settlementStockGens>
-						</TG.Ideo.PreceptGenDef>
+						</TraderGen.Ideo.PreceptGenDef>
 					</value>
 				</li>
 				<li Class="PatchOperationAddModExtension">
 					<xpath>/Defs/PreceptDef[defName="VME_BookWriting_Exalted"]</xpath>
 					<value>
-						<li Class="TG.Ideo.PreceptGenExtension">
+						<li Class="TraderGen.Ideo.PreceptGenExtension">
 							<defs>
 								<li>TG_BookWriting_Exalted</li>
 							</defs>

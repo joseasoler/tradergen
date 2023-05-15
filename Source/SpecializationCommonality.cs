@@ -1,4 +1,4 @@
-﻿namespace TG
+﻿namespace TraderGen
 {
 	/// <summary>
 	/// Group a trader specialization along with its commonality.

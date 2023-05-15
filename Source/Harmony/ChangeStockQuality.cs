@@ -2,7 +2,7 @@ using HarmonyLib;
 using RimWorld;
 using Verse;
 
-namespace TG.Harmony
+namespace TraderGen.Harmony
 {
 	/// <summary>
 	/// Temporarily changes the quality levels of items generated for trader stock.

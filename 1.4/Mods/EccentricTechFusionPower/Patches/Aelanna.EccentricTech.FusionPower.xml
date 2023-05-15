@@ -3,7 +3,7 @@
 	<Operation Class="PatchOperationAddModExtension">
 		<xpath>/Defs/TraderKindDef[defName="Eccentric_Orbital_MobileRefinery"]</xpath>
 		<value>
-			<li Class="TG.GenExtension">
+			<li Class="TraderGen.GenExtension">
 				<specializations>
 					<li>
 						<def>TG_Drugs</def>
@@ -28,7 +28,7 @@
 	<Operation Class="PatchOperationAddModExtension">
 		<xpath>/Defs/TraderKindDef[defName="Eccentric_Orbital_FuelTanker"]</xpath>
 		<value>
-			<li Class="TG.GenExtension">
+			<li Class="TraderGen.GenExtension">
 				<specializations>
 					<li>
 						<def>TG_Prospector</def>

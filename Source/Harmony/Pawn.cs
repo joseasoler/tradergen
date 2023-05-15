@@ -1,9 +1,9 @@
 using HarmonyLib;
 using RimWorld;
-using TG.TraderKind;
+using TraderGen.TraderKind;
 using Verse;
 
-namespace TG.Harmony
+namespace TraderGen.Harmony
 {
 	/// <summary>
 	/// Patches required for trader pawns (visitors and caravans).

@@ -1,8 +1,9 @@
 ﻿using HarmonyLib;
 using RimWorld;
 using TG.Mod;
+using TraderGen.Mod;
 
-namespace TG.Harmony
+namespace TraderGen.Harmony
 {
 	[HarmonyPatch]
 	public static class TraderKind

@@ -3,7 +3,7 @@
 	<Operation Class="PatchOperationAddModExtension">
 		<xpath>/Defs/TraderKindDef[defName="GreenHouseTrader"]</xpath>
 		<value>
-			<li Class="TG.GenExtension">
+			<li Class="TraderGen.GenExtension">
 				<specializations>
 					<li>
 						<def>TG_Biomaterials</def>

@@ -1,8 +1,9 @@
 ﻿using RimWorld;
 using TG.Mod;
+using TraderGen.Mod;
 using Verse;
 
-namespace TG.StockGen
+namespace TraderGen.StockGen
 {
 	/// <summary>
 	/// Adds psylink neuroformers to the trader stock if Royalty is enabled and the mod setting is enabled.

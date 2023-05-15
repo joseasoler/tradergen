@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using Verse;
 
-namespace TG
+namespace TraderGen
 {
 	internal class WeightedElement<T> : IComparable
 	{

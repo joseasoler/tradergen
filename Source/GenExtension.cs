@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Verse;
 
-namespace TG
+namespace TraderGen
 {
 	/// <summary>
 	/// Provides extra data for trader generation.

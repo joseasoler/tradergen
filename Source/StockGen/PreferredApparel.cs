@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using System.Text;
 using Verse;
 
-namespace TG.StockGen
+namespace TraderGen.StockGen
 {
 	/// <summary>
 	/// Purchases specific pieces of apparel. When selling them, they have the color of the trader's ideology.

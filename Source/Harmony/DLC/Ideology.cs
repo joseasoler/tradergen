@@ -1,8 +1,8 @@
 using HarmonyLib;
-using TG.Ideo;
+using TraderGen.Ideo;
 using Verse;
 
-namespace TG.Harmony.DLC
+namespace TraderGen.Harmony.DLC
 {
 	/// <summary>
 	/// Apply the Harmony patches for Ideology compatibility.

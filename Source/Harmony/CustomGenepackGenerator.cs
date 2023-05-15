@@ -3,7 +3,7 @@ using HarmonyLib;
 using RimWorld;
 using Verse;
 
-namespace TG.Harmony
+namespace TraderGen.Harmony
 {
 	[HarmonyPatch(typeof(GeneUtility), nameof(GeneUtility.GenerateGeneSet))]
 	public static class CustomGenepackGenerator

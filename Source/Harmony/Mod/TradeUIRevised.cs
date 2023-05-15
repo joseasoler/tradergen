@@ -3,7 +3,7 @@ using System.Reflection;
 using HarmonyLib;
 using Verse;
 
-namespace TG.Harmony.Mod
+namespace TraderGen.Harmony.Mod
 {
 	public static class TradeUIRevised
 	{

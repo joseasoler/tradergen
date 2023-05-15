@@ -2,10 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using RimWorld;
-using TG.Harmony;
+using TraderGen.Harmony;
 using Verse;
 
-namespace TG.StockGen
+namespace TraderGen.StockGen
 {
 	/// <summary>
 	/// Generate items with a higher quality than normal.
@@ -31,7 +31,7 @@ namespace TG.StockGen
 
 			if (minQuality > maxQuality)
 			{
-				yield return "TG.StockGen.HighQuality: minQuality must be smaller than maxQuality.";
+				yield return "TraderGen.StockGen.HighQuality: minQuality must be smaller than maxQuality.";
 			}
 		}
 

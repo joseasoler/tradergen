@@ -1,7 +1,7 @@
 using RimWorld;
-using TG.Ideo;
+using TraderGen.Ideo;
 
-namespace TG.DefOf
+namespace TraderGen.DefOf
 {
 	[RimWorld.DefOf]
 	public class PreceptGen

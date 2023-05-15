@@ -10,7 +10,7 @@
 				<li Class="PatchOperationAddModExtension">
 					<xpath>/Defs/TraderKindDef[defName="ProsthesesTrader"]</xpath>
 					<value>
-						<li Class="TG.GenExtension">
+						<li Class="TraderGen.GenExtension">
 							<specializations>
 								<li>
 									<def>TG_Drugs</def>
@@ -51,7 +51,7 @@
 				<li Class="PatchOperationAddModExtension">
 					<xpath>/Defs/TraderKindDef[defName="TextilesTrader"]</xpath>
 					<value>
-						<li Class="TG.GenExtension">
+						<li Class="TraderGen.GenExtension">
 							<specializations>
 								<li>
 									<def>TG_Biomaterials</def>

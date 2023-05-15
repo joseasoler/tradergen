@@ -3,7 +3,7 @@
 	<Operation Class="PatchOperationAddModExtension">
 		<xpath>/Defs/TraderKindDef[defName="Orbital_GTGCivilianIndustrial"]</xpath>
 		<value>
-			<li Class="TG.GenExtension">
+			<li Class="TraderGen.GenExtension">
 				<specializations>
 					<li MayRequire="VanillaExpanded.VBooksE">
 						<def>TG_Culture</def>
@@ -32,7 +32,7 @@
 	<Operation Class="PatchOperationAddModExtension">
 		<xpath>/Defs/TraderKindDef[defName="Orbital_GTGIndustrial"]</xpath>
 		<value>
-			<li Class="TG.GenExtension">
+			<li Class="TraderGen.GenExtension">
 				<specializations>
 					<li>
 						<def>TG_Biomaterials</def>
@@ -65,7 +65,7 @@
 	<Operation Class="PatchOperationAddModExtension">
 		<xpath>/Defs/TraderKindDef[defName="Orbital_GTGMilitary"]</xpath>
 		<value>
-			<li Class="TG.GenExtension">
+			<li Class="TraderGen.GenExtension">
 				<specializations>
 					<li>
 						<def>TG_Bionics</def>
@@ -94,7 +94,7 @@
 	<Operation Class="PatchOperationAddModExtension">
 		<xpath>/Defs/TraderKindDef[defName="Orbital_GTGBlackMarket"]</xpath>
 		<value>
-			<li Class="TG.GenExtension">
+			<li Class="TraderGen.GenExtension">
 				<specializations>
 					<li MayRequire="Ludeon.RimWorld.Biotech">
 						<def>TG_Bloodfeeder</def>

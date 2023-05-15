@@ -1,6 +1,6 @@
 using Verse;
 
-namespace TG.StockGen
+namespace TraderGen.StockGen
 {
 	/// <summary>
 	/// Purchases and sells armor. When selling them, they have the color of the trader's ideology.

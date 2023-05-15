@@ -7,7 +7,7 @@
 		<match Class="PatchOperationAddModExtension">
 			<xpath>/Defs/PreceptDef[defName="AM_PsyfocusGain_Dampened"]</xpath>
 			<value>
-				<li Class="TG.Ideo.PreceptGenExtension">
+				<li Class="TraderGen.Ideo.PreceptGenExtension">
 					<defs>
 						<li>TG_PsyInclined</li>
 					</defs>

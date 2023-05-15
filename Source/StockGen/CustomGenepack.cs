@@ -1,9 +1,9 @@
 using System.Collections.Generic;
 using RimWorld;
-using TG.Harmony;
+using TraderGen.Harmony;
 using Verse;
 
-namespace TG.StockGen
+namespace TraderGen.StockGen
 {
 	public abstract class CustomGenepack : ConditionMatcher
 	{
@@ -25,7 +25,7 @@ namespace TG.StockGen
 
 			if (architeGenes == IntRange.zero && nonArchiteGenes == IntRange.zero)
 			{
-				yield return "TG.StockGen.CustomGenepack: cannot generate genepack without genes.";
+				yield return "TraderGen.StockGen.CustomGenepack: cannot generate genepack without genes.";
 			}
 		}
 		protected override bool CanBuy(in ThingDef def)

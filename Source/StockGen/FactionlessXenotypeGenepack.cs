@@ -1,9 +1,9 @@
 using System.Collections.Generic;
 using RimWorld;
-using TG.Harmony;
+using TraderGen.Harmony;
 using Verse;
 
-namespace TG.StockGen
+namespace TraderGen.StockGen
 {
 	public class FactionlessXenotypeGenepack : CustomGenepack
 	{
@@ -69,14 +69,14 @@ namespace TG.StockGen
 			Initialize();
 			if (_factionlessXenotypes == null || _factionlessXenotypes.Count == 0)
 			{
-				Logger.ErrorOnce("TG.StockGen.FactionlessXenotypeGenepack could not find any valid xenotypes.");
+				Logger.ErrorOnce("TraderGen.StockGen.FactionlessXenotypeGenepack could not find any valid xenotypes.");
 				return false;
 			}
 
 			var chosenXenotype = Algorithm.ChooseNWeightedRandomly(_factionlessXenotypes, XenotypeWeight, 1);
 			if (chosenXenotype.Count == 0)
 			{
-				Logger.ErrorOnce("TG.StockGen.FactionlessXenotypeGenepack could not randomly choose a valid xenotype.");
+				Logger.ErrorOnce("TraderGen.StockGen.FactionlessXenotypeGenepack could not randomly choose a valid xenotype.");
 				return false;
 			}
 

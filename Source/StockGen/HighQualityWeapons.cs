@@ -3,7 +3,7 @@ using System.Text;
 using RimWorld;
 using Verse;
 
-namespace TG.StockGen
+namespace TraderGen.StockGen
 {
 	public class HighQualityWeapons : HighQuality
 	{
@@ -18,7 +18,7 @@ namespace TG.StockGen
 
 			if (weaponTags.Count == 0)
 			{
-				yield return "TG.StockGen.HighQualityWeapons: empty weaponTags list";
+				yield return "TraderGen.StockGen.HighQualityWeapons: empty weaponTags list";
 			}
 		}
 		

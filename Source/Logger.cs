@@ -1,8 +1,9 @@
 using System.Collections.Generic;
 using TG.Mod;
+using TraderGen.Mod;
 using Verse;
 
-namespace TG
+namespace TraderGen
 {
 	/// <summary>
 	/// Logs messages conditionally depending on mod settings and prepends a mod-specific prefix.

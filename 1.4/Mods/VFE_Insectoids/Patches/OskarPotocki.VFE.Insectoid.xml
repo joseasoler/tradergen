@@ -6,7 +6,7 @@
 			<li Class="PatchOperationAddModExtension">
 				<xpath>/Defs/TraderKindDef[defName="VFEI_Orbital_BioEngineeringSupplier"]</xpath>
 				<value>
-					<li Class="TG.GenExtension">
+					<li Class="TraderGen.GenExtension">
 						<specializations>
 							<li>
 								<def>TG_InsectoidCraftsmanship</def>
@@ -41,7 +41,7 @@
 			<li Class="PatchOperationAdd">
 				<xpath>/Defs/TraderKindDef[defName="VFEI_Orbital_BioEngineeringSupplier"]/stockGenerators</xpath>
 				<value>
-					<li Class="TG.StockGen.MultiDef">
+					<li Class="TraderGen.StockGen.MultiDef">
 						<thingDefs>
 							<li>InsectJelly</li>
 							<li>Kibble</li>
@@ -51,7 +51,7 @@
 						</thingDefs>
 					</li>
 					<!-- Purchases expensive and resellable items. 56 is chosen to prevent purchase of mortar shells. -->
-					<li Class="TG.StockGen.ExpensiveSimple">
+					<li Class="TraderGen.StockGen.ExpensiveSimple">
 						<minValuePerUnit>56</minValuePerUnit>
 					</li>
 					<li Class="StockGenerator_BuyTradeTag">

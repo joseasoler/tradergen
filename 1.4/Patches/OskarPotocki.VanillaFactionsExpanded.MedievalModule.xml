@@ -10,8 +10,8 @@
 				<li Class="PatchOperationAdd">
 					<xpath>/Defs/TraderKindDef[defName="VFEM_Caravan_Medieval_WineMerchant"]/stockGenerators</xpath>
 					<value>
-						<li Class="TG.StockGen.Alcohol"/>
-						<li Class="TG.StockGen.Drugs">
+						<li Class="TraderGen.StockGen.Alcohol"/>
+						<li Class="TraderGen.StockGen.Drugs">
 							<drugCategory>Social</drugCategory>
 						</li>
 					</value>

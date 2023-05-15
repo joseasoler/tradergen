@@ -3,58 +3,58 @@
 	<!--
 	Specific PreceptGenDefs share the name of their precept. Generic ones have a descriptive name. Sort alphabetically.
 	-->
-	<TG.Ideo.PreceptGenDef>
+	<TraderGen.Ideo.PreceptGenDef>
 		<defName>TG_Alcohol_Desired</defName>
 		<visitorStockGens>
-			<li Class="TG.StockGen.Alcohol">
+			<li Class="TraderGen.StockGen.Alcohol">
 				<forceFactionTechLimits>true</forceFactionTechLimits>
 				<thingDefCountRange>1</thingDefCountRange>
 				<totalPriceRange>0~20</totalPriceRange>
 			</li>
 		</visitorStockGens>
 		<traderStockGens>
-			<li Class="TG.StockGen.Alcohol">
+			<li Class="TraderGen.StockGen.Alcohol">
 				<forceFactionTechLimits>true</forceFactionTechLimits>
 				<thingDefCountRange>1~2</thingDefCountRange>
 				<totalPriceRange>100~200</totalPriceRange>
 			</li>
 		</traderStockGens>
 		<settlementStockGens>
-			<li Class="TG.StockGen.Alcohol">
+			<li Class="TraderGen.StockGen.Alcohol">
 				<forceFactionTechLimits>true</forceFactionTechLimits>
 				<thingDefCountRange>2~3</thingDefCountRange>
 				<totalPriceRange>300~500</totalPriceRange>
 			</li>
 		</settlementStockGens>
-	</TG.Ideo.PreceptGenDef>
-	<TG.Ideo.PreceptGenDef>
+	</TraderGen.Ideo.PreceptGenDef>
+	<TraderGen.Ideo.PreceptGenDef>
 		<defName>TG_Anonymity_Required</defName>
 		<visitorStockGens>
-			<li Class="TG.StockGen.FullHeadApparel">
+			<li Class="TraderGen.StockGen.FullHeadApparel">
 				<forceFactionTechLimits>true</forceFactionTechLimits>
 				<thingDefCountRange>1</thingDefCountRange>
 				<countRange>0~1</countRange>
 			</li>
 		</visitorStockGens>
 		<traderStockGens>
-			<li Class="TG.StockGen.FullHeadApparel">
+			<li Class="TraderGen.StockGen.FullHeadApparel">
 				<forceFactionTechLimits>true</forceFactionTechLimits>
 				<thingDefCountRange>1~2</thingDefCountRange>
 				<countRange>1</countRange>
 			</li>
 		</traderStockGens>
 		<settlementStockGens>
-			<li Class="TG.StockGen.FullHeadApparel">
+			<li Class="TraderGen.StockGen.FullHeadApparel">
 				<forceFactionTechLimits>true</forceFactionTechLimits>
 				<thingDefCountRange>2~3</thingDefCountRange>
 				<countRange>1~2</countRange>
 			</li>
 		</settlementStockGens>
-	</TG.Ideo.PreceptGenDef>
-	<TG.Ideo.PreceptGenDef>
+	</TraderGen.Ideo.PreceptGenDef>
+	<TraderGen.Ideo.PreceptGenDef>
 		<defName>TG_AutomationEfficiency_Increased</defName>
 		<visitorStockGens>
-			<li Class="TG.StockGen.MultiDef">
+			<li Class="TraderGen.StockGen.MultiDef">
 				<thingDefs>
 					<li>ComponentIndustrial</li>
 					<li>ComponentSpacer</li>
@@ -63,7 +63,7 @@
 			</li>
 		</visitorStockGens>
 		<traderStockGens>
-			<li Class="TG.StockGen.MultiDef">
+			<li Class="TraderGen.StockGen.MultiDef">
 				<thingDefs>
 					<li>ComponentSpacer</li>
 					<li MayRequire="OskarPotocki.VFE.Mechanoid">VFE_ComponentMechanoid</li>
@@ -75,7 +75,7 @@
 			</li>
 		</traderStockGens>
 		<settlementStockGens>
-			<li Class="TG.StockGen.MultiDef">
+			<li Class="TraderGen.StockGen.MultiDef">
 				<thingDefs>
 					<li>ComponentSpacer</li>
 					<li MayRequire="OskarPotocki.VFE.Mechanoid">VFE_ComponentMechanoid</li>
@@ -86,14 +86,14 @@
 				<countRange>10~20</countRange>
 			</li>
 		</settlementStockGens>
-	</TG.Ideo.PreceptGenDef>
-	<TG.Ideo.PreceptGenDef>
+	</TraderGen.Ideo.PreceptGenDef>
+	<TraderGen.Ideo.PreceptGenDef>
 		<defName>TG_BodyMod_OnlyBiological</defName>
 		<stockRules>
-			<li Class="TG.StockRule.NoArtificialBodyMods"/>
+			<li Class="TraderGen.StockRule.NoArtificialBodyMods"/>
 		</stockRules>
-	</TG.Ideo.PreceptGenDef>
-	<TG.Ideo.PreceptGenDef>
+	</TraderGen.Ideo.PreceptGenDef>
+	<TraderGen.Ideo.PreceptGenDef>
 		<defName>TG_Corruption_Essential</defName>
 		<traderStockGens>
 			<li Class="StockGenerator_SingleDef">
@@ -107,11 +107,11 @@
 				<countRange>2~3</countRange>
 			</li>
 		</settlementStockGens>
-	</TG.Ideo.PreceptGenDef>
-	<TG.Ideo.PreceptGenDef>
+	</TraderGen.Ideo.PreceptGenDef>
+	<TraderGen.Ideo.PreceptGenDef>
 		<defName>TG_InsectJellyEaten_Loved_Classic</defName>
 		<visitorStockGens>
-			<li Class="TG.StockGen.MultiDef">
+			<li Class="TraderGen.StockGen.MultiDef">
 				<thingDefs>
 					<li>InsectJelly</li>
 					<li MayRequire="OskarPotocki.VFE.Insectoid">VFEI_RoyalInsectJelly</li>
@@ -125,7 +125,7 @@
 				<thingDef>InsectJelly</thingDef>
 				<totalPriceRange>150~250</totalPriceRange>
 			</li>
-			<li Class="TG.StockGen.MultiDef">
+			<li Class="TraderGen.StockGen.MultiDef">
 				<thingDefs>
 					<li>InsectJelly</li>
 					<li MayRequire="OskarPotocki.VFE.Insectoid">VFEI_RoyalInsectJelly</li>
@@ -139,7 +139,7 @@
 				<thingDef>InsectJelly</thingDef>
 				<totalPriceRange>400~650</totalPriceRange>
 			</li>
-			<li Class="TG.StockGen.MultiDef">
+			<li Class="TraderGen.StockGen.MultiDef">
 				<thingDefs>
 					<li>InsectJelly</li>
 					<li MayRequire="OskarPotocki.VFE.Insectoid">VFEI_RoyalInsectJelly</li>
@@ -148,11 +148,11 @@
 				</thingDefs>
 			</li>
 		</settlementStockGens>
-	</TG.Ideo.PreceptGenDef>
-	<TG.Ideo.PreceptGenDef>
+	</TraderGen.Ideo.PreceptGenDef>
+	<TraderGen.Ideo.PreceptGenDef>
 		<defName>TG_Insectoids_Exalted</defName>
 		<traderStockGens>
-			<li Class="TG.StockGen.AnimalMultiDef">
+			<li Class="TraderGen.StockGen.AnimalMultiDef">
 				<pawnKindDefs>
 					<li>Megaspider</li>
 					<li>Spelopede</li>
@@ -169,7 +169,7 @@
 			</li>
 		</traderStockGens>
 		<settlementStockGens>
-			<li Class="TG.StockGen.AnimalMultiDef">
+			<li Class="TraderGen.StockGen.AnimalMultiDef">
 				<pawnKindDefs>
 					<li>Megaspider</li>
 					<li>Spelopede</li>
@@ -185,20 +185,20 @@
 				</tradeTagsBuy>
 			</li>
 		</settlementStockGens>
-	</TG.Ideo.PreceptGenDef>
-	<TG.Ideo.PreceptGenDef>
+	</TraderGen.Ideo.PreceptGenDef>
+	<TraderGen.Ideo.PreceptGenDef>
 		<defName>TG_LeatherApparel_Disliked</defName>
 		<stockRules>
-			<li Class="TG.StockRule.NoLeather"/>
+			<li Class="TraderGen.StockRule.NoLeather"/>
 		</stockRules>
-	</TG.Ideo.PreceptGenDef>
-	<TG.Ideo.PreceptGenDef>
+	</TraderGen.Ideo.PreceptGenDef>
+	<TraderGen.Ideo.PreceptGenDef>
 		<defName>TG_Ranching_Disliked</defName>
 		<stockRules>
-			<li Class="TG.StockRule.NoFarmAnimals"/>
+			<li Class="TraderGen.StockRule.NoFarmAnimals"/>
 		</stockRules>
-	</TG.Ideo.PreceptGenDef>
-	<TG.Ideo.PreceptGenDef>
+	</TraderGen.Ideo.PreceptGenDef>
+	<TraderGen.Ideo.PreceptGenDef>
 		<defName>TG_TradingPrice_Improved</defName>
 		<visitorStockGens>
 			<li Class="StockGenerator_SingleDef">
@@ -218,5 +218,5 @@
 				<countRange>160~600</countRange>
 			</li>
 		</settlementStockGens>
-	</TG.Ideo.PreceptGenDef>
+	</TraderGen.Ideo.PreceptGenDef>
 </Defs>

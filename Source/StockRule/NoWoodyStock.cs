@@ -1,7 +1,7 @@
-using TG.Things;
+using TraderGen.Things;
 using Verse;
 
-namespace TG.StockRule
+namespace TraderGen.StockRule
 {
 	/// <summary>
 	/// Prevents stocking any woody materials.

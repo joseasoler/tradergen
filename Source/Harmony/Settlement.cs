@@ -1,10 +1,10 @@
 using HarmonyLib;
 using RimWorld;
 using RimWorld.Planet;
-using TG.TraderKind;
+using TraderGen.TraderKind;
 using Verse;
 
-namespace TG.Harmony
+namespace TraderGen.Harmony
 {
 	/// <summary>
 	/// Sets the seed that will be used for random generation of settlement trader information.

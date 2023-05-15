@@ -1,7 +1,7 @@
 using System.Linq;
 using Verse;
 
-namespace TG.StockGen
+namespace TraderGen.StockGen
 {
 	/// <summary>
 	/// Matches both vanilla grenades and grenade belts from Vanilla Weapons Expanded - Grenades.

@@ -7,7 +7,7 @@ using RimWorld;
 using UnityEngine;
 using Verse;
 
-namespace TG.StockGen
+namespace TraderGen.StockGen
 {
 	/// <summary>
 	/// Sells kindCountRange random types of animals in pawnKindDefs, with countRange/totalPriceRange in stock for each.
@@ -132,7 +132,7 @@ namespace TG.StockGen
 			foreach (var pawnKindDef in pawnKindDefs.Where(pawnKindDef =>
 				         pawnKindDef.race?.race == null || !pawnKindDef.race.race.Animal))
 			{
-				yield return $"TG.StockGen.AnimalMultiDef: {pawnKindDef} is not an animal.";
+				yield return $"TraderGen.StockGen.AnimalMultiDef: {pawnKindDef} is not an animal.";
 			}
 		}
 

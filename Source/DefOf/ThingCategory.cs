@@ -1,7 +1,7 @@
 using RimWorld;
 using Verse;
 
-namespace TG.DefOf
+namespace TraderGen.DefOf
 {
 	[RimWorld.DefOf]
 	public class ThingCategory

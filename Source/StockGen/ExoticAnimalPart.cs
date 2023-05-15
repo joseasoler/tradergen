@@ -1,6 +1,6 @@
 ﻿using Verse;
 
-namespace TG.StockGen
+namespace TraderGen.StockGen
 {
 	/// <summary>
 	/// Handles items such as elephant tusk or thrumbo horn, but also similar modded items such as gallatross horn.

@@ -10,13 +10,13 @@
 				<li Class="PatchOperationAdd">
 					<xpath>/Defs</xpath>
 					<value>
-						<TG.TraderSpecializationDef>
+						<TraderGen.TraderSpecializationDef>
 							<!-- Excludes leather and fabrics not coming from animals in vanilla. -->
 							<defName>TG_ZoologicalDraper</defName>
 							<label>draper</label>
 							<stockGens>
 								<!-- Sells -->
-								<li Class="TG.StockGen.RandomStuffFromCategory">
+								<li Class="TraderGen.StockGen.RandomStuffFromCategory">
 									<stuffCategoryDef>Fabric</stuffCategoryDef>
 									<maxTechLevelGenerate>Spacer</maxTechLevelGenerate>
 									<excludeStuffDefs>
@@ -29,7 +29,7 @@
 									<thingDefCountRange>4~7</thingDefCountRange>
 									<countRange>1~2</countRange>
 								</li>
-								<li Class="TG.StockGen.RandomStuffFromCategory">
+								<li Class="TraderGen.StockGen.RandomStuffFromCategory">
 									<stuffCategoryDef>Fabric</stuffCategoryDef>
 									<maxTechLevelGenerate>Spacer</maxTechLevelGenerate>
 									<excludeStuffDefs>
@@ -43,14 +43,14 @@
 									<countRange>1~2</countRange>
 								</li>
 							</stockGens>
-						</TG.TraderSpecializationDef>
+						</TraderGen.TraderSpecializationDef>
 					</value>
 				</li>
 				<!-- Specializations for the zoological trader. -->
 				<li Class="PatchOperationAddModExtension">
 					<xpath>/Defs/TraderKindDef[defName="Orbital_ZoologicalTrader"]</xpath>
 					<value>
-						<li Class="TG.GenExtension">
+						<li Class="TraderGen.GenExtension">
 							<specializations>
 								<li>
 									<def>TG_Hunting</def>
@@ -81,12 +81,12 @@
 					<xpath>/Defs/TraderKindDef[defName="Orbital_ZoologicalTrader"]/stockGenerators</xpath>
 					<value>
 						<!-- Purchases any exotic animal part, including those from mods such as Alpha Animals or Dinosauria. -->
-						<li Class="TG.StockGen.ExoticAnimalPart" />
+						<li Class="TraderGen.StockGen.ExoticAnimalPart" />
 						<!--
 						Purchases some really expensive and easily resellable items. 56 is chosen to prevent it from purchasing
 						mortar shells.
 						-->
-						<li Class="TG.StockGen.ExpensiveSimple">
+						<li Class="TraderGen.StockGen.ExpensiveSimple">
 							<minValuePerUnit>56</minValuePerUnit>
 						</li>
 						<li Class="StockGenerator_BuyTradeTag"><tag>ExoticBuilding</tag></li>

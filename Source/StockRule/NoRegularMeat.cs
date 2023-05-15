@@ -1,7 +1,7 @@
-using TG.Things;
+using TraderGen.Things;
 using Verse;
 
-namespace TG.StockRule
+namespace TraderGen.StockRule
 {
 	/// <summary>
 	/// Prevents stocking any meat which is not insect or human meat (handled separately).

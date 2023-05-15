@@ -1,7 +1,7 @@
 using System.Text;
 using RimWorld;
 
-namespace TG.StockGen
+namespace TraderGen.StockGen
 {
 	/// <summary>
 	/// Parent class for all TG StockGenerators.

@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using Force.DeepCloner;
 using RimWorld;
-using TG.TraderKind;
+using TraderGen.TraderKind;
 using Verse;
 
-namespace TG.Debug
+namespace TraderGen.Debug
 {
 	public static class DebugActions
 	{

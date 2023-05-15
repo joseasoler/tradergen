@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-	<TG.TraderSpecializationDef>
+	<TraderGen.TraderSpecializationDef>
 		<defName>TG_Psycasting</defName>
 		<label>psycasting</label>
 		<stockGens>
 			<!-- Sells. -->
-			<li Class="TG.StockGen.PsylinkNeuroformer">
+			<li Class="TraderGen.StockGen.PsylinkNeuroformer">
 				<countRange>1</countRange>
 			</li>
 			<li Class="StockGenerator_Category">
@@ -32,5 +32,5 @@
 				<tag>PsylinkNeuroformer</tag>
 			</li>
 		</stockGens>
-	</TG.TraderSpecializationDef>
+	</TraderGen.TraderSpecializationDef>
 </Defs>

@@ -1,6 +1,6 @@
 using Verse;
 
-namespace TG.StockRule
+namespace TraderGen.StockRule
 {
 	/// <summary>
 	/// Prevents trading and stocking a specific ThingDef.

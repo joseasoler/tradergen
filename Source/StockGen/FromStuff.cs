@@ -1,10 +1,10 @@
 using System.Collections.Generic;
 using System.Text;
 using RimWorld;
-using TG.TraderKind;
+using TraderGen.TraderKind;
 using Verse;
 
-namespace TG.StockGen
+namespace TraderGen.StockGen
 {
 	/// <summary>
 	/// Generates a specific ThingDef with stuffProps, and items which can be made from the same stuff.
@@ -56,11 +56,11 @@ namespace TG.StockGen
 
 			if (_stuffDef == null)
 			{
-				yield return "TG.StockGen.FromStuff has a null ThingDef.";
+				yield return "TraderGen.StockGen.FromStuff has a null ThingDef.";
 			}
 			else if (!_stuffDef.IsStuff)
 			{
-				yield return $"TG.StockGen.FromStuff is using a ThingDef which is not Stuff: {_stuffDef.defName}.";
+				yield return $"TraderGen.StockGen.FromStuff is using a ThingDef which is not Stuff: {_stuffDef.defName}.";
 			}
 		}
 
@@ -74,7 +74,7 @@ namespace TG.StockGen
 		{
 			if (!def.tradeability.TraderCanSell() || !def.MadeFromStuff)
 			{
-				Logger.ErrorOnce($"TG.StockGen.FromStuff cannot generate {def} for trader stock.");
+				Logger.ErrorOnce($"TraderGen.StockGen.FromStuff cannot generate {def} for trader stock.");
 				yield break;
 			}
 

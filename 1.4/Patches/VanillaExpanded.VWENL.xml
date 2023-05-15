@@ -10,7 +10,7 @@
 				<li Class="PatchOperationAdd">
 					<xpath>/Defs/TraderKindDef[defName="Orbital_PirateMerchant"]/stockGenerators</xpath>
 					<value>
-						<li Class="TG.StockGen.WeaponRanged">
+						<li Class="TraderGen.StockGen.WeaponRanged">
 							<minTechLevelGenerate>Industrial</minTechLevelGenerate>
 							<maxTechLevelGenerate>Spacer</maxTechLevelGenerate>
 							<weaponTags>

@@ -1,9 +1,9 @@
 using System.Collections.Generic;
 using RimWorld;
-using TG.Harmony;
+using TraderGen.Harmony;
 using Verse;
 
-namespace TG.StockGen
+namespace TraderGen.StockGen
 {
 	public class HemogenicGenepack : CustomGenepack
 	{
@@ -54,14 +54,14 @@ namespace TG.StockGen
 			Initialize();
 			if (_hemogenicXenotypes == null || _hemogenicXenotypes.Count == 0)
 			{
-				Logger.ErrorOnce("TG.StockGen.HemogenicGenepack could not find any hemogenic xenotypes.");
+				Logger.ErrorOnce("TraderGen.StockGen.HemogenicGenepack could not find any hemogenic xenotypes.");
 				return false;
 			}
 
 			var chosenXenotype = Algorithm.ChooseNWeightedRandomly(_hemogenicXenotypes, XenotypeWeight, 1);
 			if (chosenXenotype.Count == 0)
 			{
-				Logger.ErrorOnce("TG.StockGen.HemogenicGenepack could not randomly choose a hemogenic xenotype.");
+				Logger.ErrorOnce("TraderGen.StockGen.HemogenicGenepack could not randomly choose a hemogenic xenotype.");
 				return false;
 			}
 

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-	<TG.TraderSpecializationDef>
+	<TraderGen.TraderSpecializationDef>
 		<defName>TG_Biomaterials</defName>
 		<label>biomaterials</label>
 		<stockGens>
@@ -8,7 +8,7 @@
 			StuffFromThingDef respects the tradeability of materials set in their mods. For materials which cannot be sold by
 			traders, it will not generate the material itself. It will only generate items created from that material.
 			-->
-			<li Class="TG.StockGen.StuffFromThingDef">
+			<li Class="TraderGen.StockGen.StuffFromThingDef">
 				<availableThingDefs>
 					<li>DevilstrandCloth</li>
 					<li>Synthread</li>
@@ -26,7 +26,7 @@
 				<thingDefCountRange>4~7</thingDefCountRange>
 				<countRange>1~2</countRange>
 			</li>
-			<li Class="TG.StockGen.StuffFromThingDef">
+			<li Class="TraderGen.StockGen.StuffFromThingDef">
 				<availableThingDefs>
 					<li>DevilstrandCloth</li>
 					<li>Synthread</li>
@@ -45,12 +45,12 @@
 				<countRange>1~2</countRange>
 			</li>
 		</stockGens>
-	</TG.TraderSpecializationDef>
-	<TG.TraderSpecializationDef>
+	</TraderGen.TraderSpecializationDef>
+	<TraderGen.TraderSpecializationDef>
 		<defName>TG_Bionics</defName>
 		<label>bionics</label>
 		<stockGens>
-			<li Class="TG.StockGen.ArtificialBodyMod">
+			<li Class="TraderGen.StockGen.ArtificialBodyMod">
 				<minTechLevelGenerate>Industrial</minTechLevelGenerate>
 				<maxTechLevelGenerate>Ultra</maxTechLevelGenerate>
 				<thingDefCountRange>2~4</thingDefCountRange>
@@ -61,8 +61,8 @@
 				<countRange>-1~2</countRange>
 			</li>
 		</stockGens>
-	</TG.TraderSpecializationDef>
-	<TG.TraderSpecializationDef MayRequire="Ludeon.RimWorld.Biotech">
+	</TraderGen.TraderSpecializationDef>
+	<TraderGen.TraderSpecializationDef MayRequire="Ludeon.RimWorld.Biotech">
 		<defName>TG_Bloodfeeder</defName>
 		<label>bloodfeeder</label>
 		<stockGens>
@@ -70,7 +70,7 @@
 				<thingDef>HemogenPack</thingDef>
 				<countRange>5~12</countRange>
 			</li>
-			<li Class="TG.StockGen.MultiDef" MayRequire="vanillaracesexpanded.sanguophage">
+			<li Class="TraderGen.StockGen.MultiDef" MayRequire="vanillaracesexpanded.sanguophage">
 				<thingDefs>
 					<li>VRE_HemogenPack_Animal</li>
 					<li>VRE_HemogenPack_Animal</li>
@@ -90,12 +90,12 @@
 				<thingDef>SanguphageMeetingTorch</thingDef>
 				<countRange>1~3</countRange>
 			</li>
-			<li Class="TG.StockGen.HemogenicGenepack">
+			<li Class="TraderGen.StockGen.HemogenicGenepack">
 				<architeGenes>0~1</architeGenes>
 				<nonArchiteGenes>1~3</nonArchiteGenes>
 				<countRange>1</countRange>
 			</li>
-			<li Class="TG.StockGen.HighQualityWeapons">
+			<li Class="TraderGen.StockGen.HighQualityWeapons">
 				<weaponTags>
 					<li>MedievalMeleeDecent</li>
 				</weaponTags>
@@ -104,7 +104,7 @@
 				<thingDefCountRange>2~4</thingDefCountRange>
 				<countRange>1</countRange>
 			</li>
-			<li Class="TG.StockGen.AnimalMultiDef" MayRequire="pphhyy.SanguinaryAnimals">
+			<li Class="TraderGen.StockGen.AnimalMultiDef" MayRequire="pphhyy.SanguinaryAnimals">
 				<pawnKindDefs>
 					<li>pphhyy_BloodScarab</li>
 				</pawnKindDefs>
@@ -115,8 +115,8 @@
 				<countRange>1~4</countRange>
 			</li>
 		</stockGens>
-	</TG.TraderSpecializationDef>
-	<TG.TraderSpecializationDef>
+	</TraderGen.TraderSpecializationDef>
+	<TraderGen.TraderSpecializationDef>
 		<defName>TG_Cannibal</defName>
 		<label>cannibal</label>
 		<stockGens>
@@ -124,7 +124,7 @@
 				<thingDef>Meat_Human</thingDef>
 				<totalPriceRange>500~1111</totalPriceRange>
 			</li>
-			<li Class="TG.StockGen.StuffFromThingDef">
+			<li Class="TraderGen.StockGen.StuffFromThingDef">
 				<availableThingDefs>
 					<li>Leather_Human</li>
 				</availableThingDefs>
@@ -143,27 +143,27 @@
 				<totalPriceRange>-1000~1000</totalPriceRange>
 			</li>
 		</stockGens>
-	</TG.TraderSpecializationDef>
-	<TG.TraderSpecializationDef>
+	</TraderGen.TraderSpecializationDef>
+	<TraderGen.TraderSpecializationDef>
 		<defName>TG_Craftsmanship</defName>
 		<label>craftsmanship</label>
 		<stockGens>
 			<!-- Sells -->
-			<li Class="TG.StockGen.RandomStuffFromCategory">
+			<li Class="TraderGen.StockGen.RandomStuffFromCategory">
 				<stuffCategoryDef>Woody</stuffCategoryDef>
 				<maxTechLevelGenerate>Spacer</maxTechLevelGenerate>
 				<stuffCountRange>100~200</stuffCountRange>
 				<thingDefCountRange>3~6</thingDefCountRange>
 				<countRange>1~2</countRange>
 			</li>
-			<li Class="TG.StockGen.RandomStuffFromCategory">
+			<li Class="TraderGen.StockGen.RandomStuffFromCategory">
 				<stuffCategoryDef>Stony</stuffCategoryDef>
 				<maxTechLevelGenerate>Spacer</maxTechLevelGenerate>
 				<stuffCountRange>100~200</stuffCountRange>
 				<thingDefCountRange>3~6</thingDefCountRange>
 				<countRange>1~2</countRange>
 			</li>
-			<li Class="TG.StockGen.RandomStuffFromCategory">
+			<li Class="TraderGen.StockGen.RandomStuffFromCategory">
 				<stuffCategoryDef>Metallic</stuffCategoryDef>
 				<maxTechLevelGenerate>Spacer</maxTechLevelGenerate>
 				<excludeStuffDefs>
@@ -181,8 +181,8 @@
 				<categoryDef>StoneBlocks</categoryDef>
 			</li>
 		</stockGens>
-	</TG.TraderSpecializationDef>
-	<TG.TraderSpecializationDef MayRequire="VanillaExpanded.VBooksE">
+	</TraderGen.TraderSpecializationDef>
+	<TraderGen.TraderSpecializationDef MayRequire="VanillaExpanded.VBooksE">
 		<defName>TG_Culture</defName>
 		<label>culture</label>
 		<stockGens>
@@ -194,7 +194,7 @@
 					</li>
 				</countChances>
 			</li>
-			<li Class="TG.StockGen.BuildingsJoy">
+			<li Class="TraderGen.StockGen.BuildingsJoy">
 				<minTechLevelGenerate>Industrial</minTechLevelGenerate>
 				<thingDefCountRange>2~4</thingDefCountRange>
 				<countRange>1</countRange>
@@ -222,12 +222,12 @@
 				<tag>Book</tag>
 			</li>
 		</stockGens>
-	</TG.TraderSpecializationDef>
-	<TG.TraderSpecializationDef>
+	</TraderGen.TraderSpecializationDef>
+	<TraderGen.TraderSpecializationDef>
 		<defName>TG_Draper</defName>
 		<label>draper</label>
 		<stockGens>
-			<li Class="TG.StockGen.RandomStuffFromCategory">
+			<li Class="TraderGen.StockGen.RandomStuffFromCategory">
 				<stuffCategoryDef>Fabric</stuffCategoryDef>
 				<maxTechLevelGenerate>Spacer</maxTechLevelGenerate>
 				<excludeStuffDefs>
@@ -238,7 +238,7 @@
 				<thingDefCountRange>4~7</thingDefCountRange>
 				<countRange>1~2</countRange>
 			</li>
-			<li Class="TG.StockGen.RandomStuffFromCategory">
+			<li Class="TraderGen.StockGen.RandomStuffFromCategory">
 				<stuffCategoryDef>Leathery</stuffCategoryDef>
 				<maxTechLevelGenerate>Spacer</maxTechLevelGenerate>
 				<excludeStuffDefs>
@@ -249,18 +249,18 @@
 				<countRange>1~2</countRange>
 			</li>
 		</stockGens>
-	</TG.TraderSpecializationDef>
-	<TG.TraderSpecializationDef>
+	</TraderGen.TraderSpecializationDef>
+	<TraderGen.TraderSpecializationDef>
 		<defName>TG_Drugs</defName>
 		<label>drugs</label>
 		<stockGens>
 			<!-- Sells. -->
-			<li Class="TG.StockGen.Drugs">
+			<li Class="TraderGen.StockGen.Drugs">
 				<drugCategory>Social</drugCategory>
 				<thingDefCountRange>1~2</thingDefCountRange>
 				<totalPriceRange>700~1400</totalPriceRange>
 			</li>
-			<li Class="TG.StockGen.Drugs">
+			<li Class="TraderGen.StockGen.Drugs">
 				<drugCategory>Hard</drugCategory>
 				<maxTechLevelGenerate>Spacer</maxTechLevelGenerate>
 				<thingDefCountRange>2~3</thingDefCountRange>
@@ -271,17 +271,17 @@
 				<categoryDef>Drugs</categoryDef>
 			</li>
 		</stockGens>
-	</TG.TraderSpecializationDef>
-	<TG.TraderSpecializationDef>
+	</TraderGen.TraderSpecializationDef>
+	<TraderGen.TraderSpecializationDef>
 		<defName>TG_Gourmet</defName>
 		<label>gourmet</label>
 		<stockGens>
 			<!-- Sells. -->
-			<li Class="TG.StockGen.Alcohol">
+			<li Class="TraderGen.StockGen.Alcohol">
 				<thingDefCountRange>1~2</thingDefCountRange>
 				<totalPriceRange>700~1400</totalPriceRange>
 			</li>
-			<li Class="TG.StockGen.Drugs">
+			<li Class="TraderGen.StockGen.Drugs">
 				<drugCategory>Social</drugCategory>
 				<thingDefCountRange>2~3</thingDefCountRange>
 				<totalPriceRange>900~1600</totalPriceRange>
@@ -311,8 +311,8 @@
 				</excludedCategories>
 			</li>
 		</stockGens>
-	</TG.TraderSpecializationDef>
-	<TG.TraderSpecializationDef>
+	</TraderGen.TraderSpecializationDef>
+	<TraderGen.TraderSpecializationDef>
 		<defName>TG_Hunting</defName>
 		<label>hunting</label>
 		<stockGens>
@@ -331,7 +331,7 @@
 				<kindCountRange>2</kindCountRange>
 				<countRange>1~3</countRange>
 			</li>
-			<li Class="TG.StockGen.MultiDef">
+			<li Class="TraderGen.StockGen.MultiDef">
 				<thingDefs>
 					<li>Gun_BoltActionRifle</li>
 					<li>Gun_SniperRifle</li>
@@ -347,7 +347,7 @@
 				<thingDef>Kibble</thingDef>
 				<totalPriceRange>500~1000</totalPriceRange>
 			</li>
-			<li Class="TG.StockGen.ExoticAnimalPart">
+			<li Class="TraderGen.StockGen.ExoticAnimalPart">
 				<thingDefCountRange>0~2</thingDefCountRange>
 				<countRange>1</countRange>
 			</li>
@@ -356,8 +356,8 @@
 				<countRange>-5~10</countRange>
 			</li>
 		</stockGens>
-	</TG.TraderSpecializationDef>
-	<TG.TraderSpecializationDef>
+	</TraderGen.TraderSpecializationDef>
+	<TraderGen.TraderSpecializationDef>
 		<defName>TG_Husbandry</defName>
 		<label>husbandry</label>
 		<stockGens>
@@ -394,7 +394,7 @@
 				<thingDef>Hay</thingDef>
 				<totalPriceRange>500~1000</totalPriceRange>
 			</li>
-			<li Class="TG.StockGen.MultiDef" MayRequire="VanillaExpanded.VAPPE">
+			<li Class="TraderGen.StockGen.MultiDef" MayRequire="VanillaExpanded.VAPPE">
 				<thingDefs>
 					<li>VAE_Apparel_Overalls</li>
 					<li>VAE_Apparel_FleeceShirt</li>
@@ -406,7 +406,7 @@
 				<thingDef>VWE_Tool_Whip</thingDef>
 				<countRange>-2~1</countRange>
 			</li>
-			<li Class="TG.StockGen.MultiDef" MayRequire="sarg.rimbees">
+			<li Class="TraderGen.StockGen.MultiDef" MayRequire="sarg.rimbees">
 				<thingDefs>
 					<li>RB_Bee_Temperate_Drone</li>
 					<li>RB_Bee_Temperate_Queen</li>
@@ -417,23 +417,23 @@
 				<countRange>1~2</countRange>
 			</li>
 		</stockGens>
-	</TG.TraderSpecializationDef>
-	<TG.TraderSpecializationDef MayRequire="kikohi.jewelry">
+	</TraderGen.TraderSpecializationDef>
+	<TraderGen.TraderSpecializationDef MayRequire="kikohi.jewelry">
 		<defName>TG_Jewelry</defName>
 		<label>jewelry</label>
 		<stockGens>
-			<li Class="TG.StockGen.Jewelry">
+			<li Class="TraderGen.StockGen.Jewelry">
 				<thingDefCountRange>4~6</thingDefCountRange>
 				<countRange>1</countRange>
 			</li>
-			<li Class="TG.StockGen.RandomStuffFromCategory">
+			<li Class="TraderGen.StockGen.RandomStuffFromCategory">
 				<stuffCategoryDef>Gemstones</stuffCategoryDef>
 				<maxTechLevelGenerate>Spacer</maxTechLevelGenerate>
 				<stuffCountRange>120~200</stuffCountRange>
 				<thingDefCountRange>2~3</thingDefCountRange>
 				<countRange>1</countRange>
 			</li>
-			<li Class="TG.StockGen.RandomStuffFromCategory">
+			<li Class="TraderGen.StockGen.RandomStuffFromCategory">
 				<stuffCategoryDef>Gemstones</stuffCategoryDef>
 				<maxTechLevelGenerate>Spacer</maxTechLevelGenerate>
 				<stuffCountRange>120~200</stuffCountRange>
@@ -441,8 +441,8 @@
 				<countRange>1</countRange>
 			</li>
 		</stockGens>
-	</TG.TraderSpecializationDef>
-	<TG.TraderSpecializationDef>
+	</TraderGen.TraderSpecializationDef>
+	<TraderGen.TraderSpecializationDef>
 		<defName>TG_Medicine</defName>
 		<label>medicine</label>
 		<stockGens>
@@ -463,7 +463,7 @@
 				<thingDef>Neutroamine</thingDef>
 				<countRange>50~125</countRange>
 			</li>
-			<li Class="TG.StockGen.Drugs">
+			<li Class="TraderGen.StockGen.Drugs">
 				<drugCategory>Medical</drugCategory>
 				<maxTechLevelGenerate>Spacer</maxTechLevelGenerate>
 				<thingDefCountRange>2~3</thingDefCountRange>
@@ -486,8 +486,8 @@
 				<categoryDef>Drugs</categoryDef>
 			</li>
 		</stockGens>
-	</TG.TraderSpecializationDef>
-	<TG.TraderSpecializationDef>
+	</TraderGen.TraderSpecializationDef>
+	<TraderGen.TraderSpecializationDef>
 		<defName>TG_Ordnance</defName>
 		<label>ordnance</label>
 		<stockGens>
@@ -500,7 +500,7 @@
 				<thingDefCountRange>2~3</thingDefCountRange>
 				<totalPriceRange>200~500</totalPriceRange>
 			</li>
-			<li Class="TG.StockGen.Grenades">
+			<li Class="TraderGen.StockGen.Grenades">
 				<minTechLevelGenerate>Industrial</minTechLevelGenerate>
 				<maxTechLevelGenerate>Spacer</maxTechLevelGenerate>
 				<thingDefCountRange>2~3</thingDefCountRange>
@@ -510,7 +510,7 @@
 				<thingDef>Chemfuel</thingDef>
 				<countRange>100~200</countRange>
 			</li>
-			<li Class="TG.StockGen.AnimalMultiDef">
+			<li Class="TraderGen.StockGen.AnimalMultiDef">
 				<pawnKindDefs>
 					<li>Boomalope</li>
 					<li MayRequire="VanillaExpanded.VanillaAnimalsExpanded">AEXP_Boombat</li>
@@ -523,8 +523,8 @@
 				<totalPriceRange>100~200</totalPriceRange>
 			</li>
 		</stockGens>
-	</TG.TraderSpecializationDef>
-	<TG.TraderSpecializationDef>
+	</TraderGen.TraderSpecializationDef>
+	<TraderGen.TraderSpecializationDef>
 		<defName>TG_Organs</defName>
 		<label>organs</label>
 		<stockGens>
@@ -544,12 +544,12 @@
 				<countRange>1</countRange>
 			</li>
 		</stockGens>
-	</TG.TraderSpecializationDef>
-	<TG.TraderSpecializationDef>
+	</TraderGen.TraderSpecializationDef>
+	<TraderGen.TraderSpecializationDef>
 		<defName>TG_Prospector</defName>
 		<label>prospector</label>
 		<stockGens>
-			<li Class="TG.StockGen.MinableResource">
+			<li Class="TraderGen.StockGen.MinableResource">
 				<thingDefCountRange>2~3</thingDefCountRange>
 				<totalPriceRange>500~700</totalPriceRange>
 				<excludedThingDefs>
@@ -558,8 +558,8 @@
 				</excludedThingDefs>
 			</li>
 		</stockGens>
-	</TG.TraderSpecializationDef>
-	<TG.TraderSpecializationDef>
+	</TraderGen.TraderSpecializationDef>
+	<TraderGen.TraderSpecializationDef>
 		<defName>TG_Scavenger</defName>
 		<label>scavenger</label>
 		<stockGens>
@@ -576,15 +576,15 @@
 				<thingDef>ComponentIndustrial</thingDef>
 				<countRange>3~8</countRange>
 			</li>
-			<li Class="TG.StockGen.ExpensiveSimple">
+			<li Class="TraderGen.StockGen.ExpensiveSimple">
 				<minValuePerUnit>6</minValuePerUnit>
 				<maxValuePerUnit>400</maxValuePerUnit>
 				<thingDefCountRange>4~7</thingDefCountRange>
 				<totalPriceRange>500~1100</totalPriceRange>
 			</li>
 		</stockGens>
-	</TG.TraderSpecializationDef>
-	<TG.TraderSpecializationDef MayRequire="VexedTrees980.RimRobots">
+	</TraderGen.TraderSpecializationDef>
+	<TraderGen.TraderSpecializationDef MayRequire="VexedTrees980.RimRobots">
 		<defName>TG_Synthetics</defName>
 		<label>synthetics</label>
 		<stockGens>
@@ -611,8 +611,8 @@
 				<totalPriceRange>300~800</totalPriceRange>
 			</li>
 		</stockGens>
-	</TG.TraderSpecializationDef>
-	<TG.TraderSpecializationDef>
+	</TraderGen.TraderSpecializationDef>
+	<TraderGen.TraderSpecializationDef>
 		<defName>TG_Tech</defName>
 		<label>technology</label>
 		<stockGens>
@@ -646,8 +646,8 @@
 				<countRange>1</countRange>
 			</li>
 		</stockGens>
-	</TG.TraderSpecializationDef>
-	<TG.TraderSpecializationDef>
+	</TraderGen.TraderSpecializationDef>
+	<TraderGen.TraderSpecializationDef>
 		<defName>TG_Wealth</defName>
 		<label>wealth</label>
 		<stockGens>
@@ -656,8 +656,8 @@
 				<countRange>2000~2500</countRange>
 			</li>
 		</stockGens>
-	</TG.TraderSpecializationDef>
-	<TG.TraderSpecializationDef MayRequire="Ludeon.RimWorld.Biotech">
+	</TraderGen.TraderSpecializationDef>
+	<TraderGen.TraderSpecializationDef MayRequire="Ludeon.RimWorld.Biotech">
 		<defName>TG_Xenogenetics</defName>
 		<label>xenogenetics</label>
 		<stockGens>
@@ -665,32 +665,32 @@
 				<thingDef>ArchiteCapsule</thingDef>
 				<countRange>-3~1</countRange>
 			</li>
-			<li Class="TG.StockGen.FactionlessXenotypeGenepack">
+			<li Class="TraderGen.StockGen.FactionlessXenotypeGenepack">
 				<architeGenes>0~1</architeGenes>
 				<nonArchiteGenes>2~3</nonArchiteGenes>
 				<countRange>1</countRange>
 			</li>
-			<li Class="TG.StockGen.FactionlessXenotypeGenepack">
+			<li Class="TraderGen.StockGen.FactionlessXenotypeGenepack">
 				<architeGenes>0~1</architeGenes>
 				<nonArchiteGenes>2~3</nonArchiteGenes>
 				<countRange>1</countRange>
 			</li>
-			<li Class="TG.StockGen.FactionlessXenotypeGenepack">
+			<li Class="TraderGen.StockGen.FactionlessXenotypeGenepack">
 				<architeGenes>0~1</architeGenes>
 				<nonArchiteGenes>2~3</nonArchiteGenes>
 				<countRange>1</countRange>
 			</li>
-			<li Class="TG.StockGen.FactionlessXenotypeGenepack">
+			<li Class="TraderGen.StockGen.FactionlessXenotypeGenepack">
 				<architeGenes>1</architeGenes>
 				<nonArchiteGenes>3~4</nonArchiteGenes>
 				<countRange>1</countRange>
 			</li>
-			<li Class="TG.StockGen.FactionlessXenotypeGenepack">
+			<li Class="TraderGen.StockGen.FactionlessXenotypeGenepack">
 				<architeGenes>1~2</architeGenes>
 				<nonArchiteGenes>4~6</nonArchiteGenes>
 				<countRange>1</countRange>
 			</li>
 		</stockGens>
-	</TG.TraderSpecializationDef>
+	</TraderGen.TraderSpecializationDef>
 
 </Defs>

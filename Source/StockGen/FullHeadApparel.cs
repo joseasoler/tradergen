@@ -1,7 +1,7 @@
 using RimWorld;
 using Verse;
 
-namespace TG.StockGen
+namespace TraderGen.StockGen
 {
 	/// <summary>
 	/// Generates non-armor apparel that fully covers the head of the pawn.

@@ -2,10 +2,10 @@
 using System.Reflection.Emit;
 using HarmonyLib;
 using RimWorld;
-using TG.TraderKind;
+using TraderGen.TraderKind;
 using Verse;
 
-namespace TG.Harmony
+namespace TraderGen.Harmony
 {
 	/// <summary>
 	/// Handles Orbital Trade Ship information.

@@ -1,6 +1,6 @@
 using RimWorld;
 
-namespace TG.DefOf
+namespace TraderGen.DefOf
 {
 	[RimWorld.DefOf]
 	public class JoyKind

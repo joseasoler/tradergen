@@ -3,7 +3,7 @@ using System.Text;
 using RimWorld;
 using Verse;
 
-namespace TG.StockGen
+namespace TraderGen.StockGen
 {
 	/// <summary>
 	/// Generates stock created using a single ThingDef as stuff. This ThingDef is chosen from a list.
@@ -27,7 +27,7 @@ namespace TG.StockGen
 
 			if (availableThingDefs.Count == 0)
 			{
-				yield return "TG.StockGen.StuffFromThingDef: availableThingDefs must not be empty.";
+				yield return "TraderGen.StockGen.StuffFromThingDef: availableThingDefs must not be empty.";
 			}
 		}
 

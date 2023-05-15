@@ -9,10 +9,10 @@
 				<li Class="PatchOperationAdd">
 					<xpath>/Defs</xpath>
 					<value>
-						<TG.Ideo.PreceptGenDef>
+						<TraderGen.Ideo.PreceptGenDef>
 							<defName>TG_OcularWarping</defName>
 							<traderStockGens>
-								<li Class="TG.StockGen.StuffFromThingDef">
+								<li Class="TraderGen.StockGen.StuffFromThingDef">
 									<forceFactionTechLimits>true</forceFactionTechLimits>
 									<availableThingDefs>
 										<li>GU_RedWood</li>
@@ -27,7 +27,7 @@
 								</li>
 							</traderStockGens>
 							<settlementStockGens>
-								<li Class="TG.StockGen.StuffFromThingDef">
+								<li Class="TraderGen.StockGen.StuffFromThingDef">
 									<forceFactionTechLimits>true</forceFactionTechLimits>
 									<availableThingDefs>
 										<li>GU_RedWood</li>
@@ -40,7 +40,7 @@
 									<thingDef>Meat_Dryad_Basic</thingDef>
 									<totalPriceRange>200~300</totalPriceRange>
 								</li>
-								<li Class="TG.StockGen.AnimalMultiDef">
+								<li Class="TraderGen.StockGen.AnimalMultiDef">
 									<pawnKindDefs>
 										<li>AA_Eyeling</li>
 									</pawnKindDefs>
@@ -48,13 +48,13 @@
 									<totalPriceRange>101~300</totalPriceRange>
 								</li>
 							</settlementStockGens>
-						</TG.Ideo.PreceptGenDef>
+						</TraderGen.Ideo.PreceptGenDef>
 					</value>
 				</li>
 				<li Class="PatchOperationAddModExtension">
 					<xpath>/Defs/PreceptDef[defName="AA_OcularWarping"]</xpath>
 					<value>
-						<li Class="TG.Ideo.PreceptGenExtension">
+						<li Class="TraderGen.Ideo.PreceptGenExtension">
 							<defs>
 								<li>TG_OcularWarping</li>
 							</defs>

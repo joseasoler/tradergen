@@ -15,7 +15,7 @@
 					<li Class="PatchOperationAddModExtension">
 						<xpath>/Defs/TraderKindDef[defName="CONN_BionicsTrader"]</xpath>
 						<value>
-							<li Class="TG.GenExtension">
+							<li Class="TraderGen.GenExtension">
 								<specializations>
 									<li>
 										<def>TG_Drugs</def>
@@ -57,9 +57,9 @@
 					<li Class="PatchOperationAdd">
 						<xpath>/Defs/TraderKindDef[defName="CONN_BionicsTrader"]/stockGenerators</xpath>
 						<value>
-							<li Class="TG.StockGen.ArtificialBodyMod"/>
+							<li Class="TraderGen.StockGen.ArtificialBodyMod"/>
 							<!-- Purchase expensive items. 56 is chosen to prevent purchase of mortar shells. -->
-							<li Class="TG.StockGen.ExpensiveSimple">
+							<li Class="TraderGen.StockGen.ExpensiveSimple">
 								<minValuePerUnit>56</minValuePerUnit>
 							</li>
 							<li Class="StockGenerator_BuyTradeTag">

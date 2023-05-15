@@ -3,7 +3,7 @@ using System.Linq;
 using RimWorld;
 using Verse;
 
-namespace TG
+namespace TraderGen
 {
 	/// <summary>
 	/// Defines a trader specialization. May also be used for categories.

@@ -4,7 +4,7 @@
 	<Operation Class="PatchOperationAddModExtension">
 		<xpath>/Defs/PreceptDef[defName="AnimalConnection_Strong"]</xpath>
 		<value>
-			<li Class="TG.Ideo.PreceptGenExtension">
+			<li Class="TraderGen.Ideo.PreceptGenExtension">
 				<defs>
 					<li>TG_AnimalConnection_Strong</li>
 				</defs>
@@ -16,7 +16,7 @@
 			defName="Blindness_Sublime"]
 		</xpath>
 		<value>
-			<li Class="TG.Ideo.PreceptGenExtension">
+			<li Class="TraderGen.Ideo.PreceptGenExtension">
 				<defs>
 					<li>TG_Blindness_Respected</li>
 				</defs>
@@ -27,7 +27,7 @@
 		<xpath>/Defs/PreceptDef[defName="BodyMod_Approved"]
 		</xpath>
 		<value>
-			<li Class="TG.Ideo.PreceptGenExtension">
+			<li Class="TraderGen.Ideo.PreceptGenExtension">
 				<defs>
 					<li>TG_BodyMod_Approved</li>
 				</defs>
@@ -38,7 +38,7 @@
 		<xpath>/Defs/PreceptDef[defName="BodyMod_Disapproved" or defName="BodyMod_Abhorrent"]
 		</xpath>
 		<value>
-			<li Class="TG.Ideo.PreceptGenExtension">
+			<li Class="TraderGen.Ideo.PreceptGenExtension">
 				<defs>
 					<li>TG_BodyMod_Disapproved</li>
 				</defs>
@@ -50,7 +50,7 @@
 			defName="Cannibalism_Abhorrent"]
 		</xpath>
 		<value>
-			<li Class="TG.Ideo.PreceptGenExtension">
+			<li Class="TraderGen.Ideo.PreceptGenExtension">
 				<defs>
 					<li>TG_Cannibalism_Disapproved</li>
 				</defs>
@@ -62,7 +62,7 @@
 			defName="Cannibalism_RequiredRavenous"]
 		</xpath>
 		<value>
-			<li Class="TG.Ideo.PreceptGenExtension">
+			<li Class="TraderGen.Ideo.PreceptGenExtension">
 				<defs>
 					<li>TG_Cannibalism_Preferred</li>
 				</defs>
@@ -72,7 +72,7 @@
 	<Operation Class="PatchOperationAddModExtension">
 		<xpath>/Defs/PreceptDef[defName="DrugUse_Essential"]</xpath>
 		<value>
-			<li Class="TG.Ideo.PreceptGenExtension">
+			<li Class="TraderGen.Ideo.PreceptGenExtension">
 				<defs>
 					<li>TG_DrugUse_Essential</li>
 				</defs>
@@ -82,7 +82,7 @@
 	<Operation Class="PatchOperationAddModExtension">
 		<xpath>/Defs/PreceptDef[defName="DrugUse_MedicalOnly"]</xpath>
 		<value>
-			<li Class="TG.Ideo.PreceptGenExtension">
+			<li Class="TraderGen.Ideo.PreceptGenExtension">
 				<defs>
 					<li>TG_DrugUse_MedicalOnly</li>
 				</defs>
@@ -92,7 +92,7 @@
 	<Operation Class="PatchOperationAddModExtension">
 		<xpath>/Defs/PreceptDef[defName="DrugUse_MedicalOrSocial"]</xpath>
 		<value>
-			<li Class="TG.Ideo.PreceptGenExtension">
+			<li Class="TraderGen.Ideo.PreceptGenExtension">
 				<defs>
 					<li>TG_DrugUse_MedicalOrSocial</li>
 				</defs>
@@ -102,7 +102,7 @@
 	<Operation Class="PatchOperationAddModExtension">
 		<xpath>/Defs/PreceptDef[defName="DrugUse_Prohibited"]</xpath>
 		<value>
-			<li Class="TG.Ideo.PreceptGenExtension">
+			<li Class="TraderGen.Ideo.PreceptGenExtension">
 				<defs>
 					<li>TG_DrugUse_Prohibited</li>
 				</defs>
@@ -112,7 +112,7 @@
 	<Operation Class="PatchOperationAddModExtension">
 		<xpath>/Defs/PreceptDef[defName="FungusEating_Preferred"]</xpath>
 		<value>
-			<li Class="TG.Ideo.PreceptGenExtension">
+			<li Class="TraderGen.Ideo.PreceptGenExtension">
 				<defs>
 					<li>TG_FungusEating_Preferred</li>
 				</defs>
@@ -122,7 +122,7 @@
 	<Operation Class="PatchOperationAddModExtension">
 		<xpath>/Defs/PreceptDef[defName="GauranlenConnection_Strong"]</xpath>
 		<value>
-			<li Class="TG.Ideo.PreceptGenExtension">
+			<li Class="TraderGen.Ideo.PreceptGenExtension">
 				<defs>
 					<li>TG_GauranlenConnection_Strong</li>
 				</defs>
@@ -132,7 +132,7 @@
 	<Operation Class="PatchOperationAddModExtension">
 		<xpath>/Defs/PreceptDef[defName="InsectMeatEating_Loved"]</xpath>
 		<value>
-			<li Class="TG.Ideo.PreceptGenExtension">
+			<li Class="TraderGen.Ideo.PreceptGenExtension">
 				<defs>
 					<li>TG_InsectMeatEating_Loved</li>
 				</defs>
@@ -142,7 +142,7 @@
 	<Operation Class="PatchOperationAddModExtension">
 		<xpath>/Defs/PreceptDef[defName="MiningYield_High"]</xpath>
 		<value>
-			<li Class="TG.Ideo.PreceptGenExtension">
+			<li Class="TraderGen.Ideo.PreceptGenExtension">
 				<defs>
 					<li>TG_MiningYield_High</li>
 				</defs>
@@ -153,7 +153,7 @@
 		<xpath>/Defs/PreceptDef[defName="OrganUse_Abhorrent"]
 		</xpath>
 		<value>
-			<li Class="TG.Ideo.PreceptGenExtension">
+			<li Class="TraderGen.Ideo.PreceptGenExtension">
 				<defs>
 					<li>TG_OrganUse_Abhorrent</li>
 				</defs>
@@ -164,7 +164,7 @@
 		<xpath>/Defs/PreceptDef[defName="OrganUse_HorribleNoSell"]
 		</xpath>
 		<value>
-			<li Class="TG.Ideo.PreceptGenExtension">
+			<li Class="TraderGen.Ideo.PreceptGenExtension">
 				<defs>
 					<li>TG_OrganUse_HorribleNoSell</li>
 				</defs>
@@ -175,7 +175,7 @@
 		<xpath>/Defs/PreceptDef[defName="Pain_Idealized"]
 		</xpath>
 		<value>
-			<li Class="TG.Ideo.PreceptGenExtension">
+			<li Class="TraderGen.Ideo.PreceptGenExtension">
 				<defs>
 					<li>TG_Pain_Idealized</li>
 				</defs>
@@ -186,7 +186,7 @@
 		<xpath>/Defs/PreceptDef[defName="Blind_Psysense"]
 		</xpath>
 		<value>
-			<li Class="TG.Ideo.PreceptGenExtension">
+			<li Class="TraderGen.Ideo.PreceptGenExtension">
 				<defs>
 					<li>TG_PsyInclined</li>
 				</defs>
@@ -197,7 +197,7 @@
 		<xpath>/Defs/PreceptDef[defName="SlabBed_Preferred"]
 		</xpath>
 		<value>
-			<li Class="TG.Ideo.PreceptGenExtension">
+			<li Class="TraderGen.Ideo.PreceptGenExtension">
 				<defs>
 					<li>TG_SlabBed_Preferred</li>
 				</defs>
@@ -208,7 +208,7 @@
 		<xpath>/Defs/PreceptDef[defName="Skullspike_Desired"]
 		</xpath>
 		<value>
-			<li Class="TG.Ideo.PreceptGenExtension">
+			<li Class="TraderGen.Ideo.PreceptGenExtension">
 				<defs>
 					<li>TG_Skullspike_Desired</li>
 				</defs>
@@ -219,7 +219,7 @@
 		<xpath>/Defs/PreceptDef[defName="Ranching_Central"]
 		</xpath>
 		<value>
-			<li Class="TG.Ideo.PreceptGenExtension">
+			<li Class="TraderGen.Ideo.PreceptGenExtension">
 				<defs>
 					<li>TG_Ranching_Central</li>
 				</defs>

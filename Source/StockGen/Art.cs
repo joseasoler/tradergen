@@ -1,7 +1,7 @@
 using RimWorld;
 using Verse;
 
-namespace TG.StockGen
+namespace TraderGen.StockGen
 {
 	/// <summary>
 	/// Reimplementation of StockGenerator_Art. Required in order to apply forceFactionTechLimits.

@@ -4,11 +4,12 @@ using System.Linq;
 using Force.DeepCloner;
 using RimWorld;
 using RimWorld.Planet;
-using TG.Ideo;
 using TG.Mod;
+using TraderGen.Ideo;
+using TraderGen.Mod;
 using Verse;
 
-namespace TG.TraderKind
+namespace TraderGen.TraderKind
 {
 	/// <summary>
 	/// Maps a seed (RandomPriceFactorSeed of the trader) to additional procedurally generated trader information.
@@ -162,9 +163,9 @@ namespace TG.TraderKind
 			var generator = gen.ShallowClone();
 			generator.ResolveReferences(def);
 
-			if (gen.GetType().IsSubclassOf(typeof(TG.StockGen.StockGen)))
+			if (gen.GetType().IsSubclassOf(typeof(StockGen.StockGen)))
 			{
-				((TG.StockGen.StockGen) generator).BeforeGen(tile, faction);
+				((StockGen.StockGen) generator).BeforeGen(tile, faction);
 			}
 
 			return generator;

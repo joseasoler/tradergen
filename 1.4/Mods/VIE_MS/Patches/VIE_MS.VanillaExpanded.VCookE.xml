@@ -9,7 +9,7 @@
 				<li Class="PatchOperationAdd">
 					<xpath>/Defs</xpath>
 					<value>
-						<TG.Ideo.PreceptGenDef>
+						<TraderGen.Ideo.PreceptGenDef>
 							<defName>TG_Sweets_Craved</defName>
 							<visitorStockGens>
 								<li Class="StockGenerator_SingleDef">
@@ -28,7 +28,7 @@
 									<thingDef>Chocolate</thingDef>
 									<countRange>20~40</countRange>
 								</li>
-								<li Class="TG.StockGen.MultiDef">
+								<li Class="TraderGen.StockGen.MultiDef">
 									<thingDefs>
 										<li>VCE_SimpleDessert</li>
 										<li>VCE_FineDessert</li>
@@ -39,13 +39,13 @@
 									<totalPriceRange>400~800</totalPriceRange>
 								</li>
 							</settlementStockGens>
-						</TG.Ideo.PreceptGenDef>
+						</TraderGen.Ideo.PreceptGenDef>
 					</value>
 				</li>
 				<li Class="PatchOperationAddModExtension">
 					<xpath>/Defs/PreceptDef[defName="VME_Sweets_Craved"]</xpath>
 					<value>
-						<li Class="TG.Ideo.PreceptGenExtension">
+						<li Class="TraderGen.Ideo.PreceptGenExtension">
 							<defs>
 								<li>TG_Sweets_Craved</li>
 							</defs>

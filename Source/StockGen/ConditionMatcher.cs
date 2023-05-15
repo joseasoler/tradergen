@@ -5,7 +5,7 @@ using System.Text;
 using RimWorld;
 using Verse;
 
-namespace TG.StockGen
+namespace TraderGen.StockGen
 {
 	/// <summary>
 	/// Purchases any item matching a specific criteria.
@@ -51,7 +51,7 @@ namespace TG.StockGen
 
 			if (minTechLevelGenerate > maxTechLevelGenerate)
 			{
-				yield return "TG.StockGen.ConditionMatcher: minTechLevelGenerate is greater than maxTechLevelGenerate.";
+				yield return "TraderGen.StockGen.ConditionMatcher: minTechLevelGenerate is greater than maxTechLevelGenerate.";
 			}
 		}
 

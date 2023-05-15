@@ -14,7 +14,7 @@
 			</li>
 		</stockGenerators>
 		<modExtensions>
-			<li Class="TG.GenExtension">
+			<li Class="TraderGen.GenExtension">
 				<specializations>
 					<li>
 						<!-- This value will be overwritten by the GenerateOrbitalTrader debug action. -->

@@ -1,6 +1,6 @@
 using Verse;
 
-namespace TG.StockRule
+namespace TraderGen.StockRule
 {
 	/// <summary>
 	/// Traders will never purchase or stock natural organs.

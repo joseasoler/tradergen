@@ -1,11 +1,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using RimWorld;
-using TG.DefOf;
+using TraderGen.DefOf;
 using Verse;
 using ThingCategory = Verse.ThingCategory;
 
-namespace TG.Things
+namespace TraderGen.Things
 {
 	/// <summary>
 	/// Utility functions for dealing with Things and ThingDefs

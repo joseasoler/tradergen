@@ -1,7 +1,7 @@
 using System.Linq;
 using Verse;
 
-namespace TG.StockGen
+namespace TraderGen.StockGen
 {
 	/// <summary>
 	/// Generates recreation buildings. When compared against the vanilla television approach, it also generates

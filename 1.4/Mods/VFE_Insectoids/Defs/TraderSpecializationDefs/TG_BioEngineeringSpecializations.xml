@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
 	<!-- Insectoid-themed specializations, unique to the bio-engineering supplier. -->
-	<TG.TraderSpecializationDef>
+	<TraderGen.TraderSpecializationDef>
 		<defName>TG_InsectoidCraftsmanship</defName>
 		<label>craftsmanship</label>
 		<stockGens>
 			<!-- Sells -->
-			<li Class="TG.StockGen.StuffFromThingDef">
+			<li Class="TraderGen.StockGen.StuffFromThingDef">
 				<availableThingDefs>
 					<li>VFEI_Chitin</li>
 					<li MayRequire="sarg.alphaanimals">VFEI_Chitin</li>
@@ -18,7 +18,7 @@
 				<thingDefCountRange>8~11</thingDefCountRange>
 				<countRange>1</countRange>
 			</li>
-			<li Class="TG.StockGen.AnimalMultiDef">
+			<li Class="TraderGen.StockGen.AnimalMultiDef">
 				<pawnKindDefs>
 					<li>VFEI_VatGrownMilkbeetle</li>
 				</pawnKindDefs>
@@ -34,13 +34,13 @@
 				<categoryDef>ResourcesRaw</categoryDef>
 			</li>
 		</stockGens>
-	</TG.TraderSpecializationDef>
-	<TG.TraderSpecializationDef>
+	</TraderGen.TraderSpecializationDef>
+	<TraderGen.TraderSpecializationDef>
 		<defName>TG_InsectoidDraper</defName>
 		<label>draper</label>
 		<stockGens>
 			<!-- Sells -->
-			<li Class="TG.StockGen.StuffFromThingDef">
+			<li Class="TraderGen.StockGen.StuffFromThingDef">
 				<availableThingDefs>
 					<li>VFEI_Spidersilk</li>
 				</availableThingDefs>
@@ -49,7 +49,7 @@
 				<thingDefCountRange>7~9</thingDefCountRange>
 				<countRange>1</countRange>
 			</li>
-			<li Class="TG.StockGen.AnimalMultiDef">
+			<li Class="TraderGen.StockGen.AnimalMultiDef">
 				<pawnKindDefs>
 					<li>VFEI_VatGrownSpiderweaver</li>
 				</pawnKindDefs>
@@ -62,16 +62,16 @@
 				<categoryDef>Textiles</categoryDef>
 			</li>
 		</stockGens>
-	</TG.TraderSpecializationDef>
-	<TG.TraderSpecializationDef>
+	</TraderGen.TraderSpecializationDef>
+	<TraderGen.TraderSpecializationDef>
 		<defName>TG_InsectoidGourmet</defName>
 		<label>gourmet</label>
 		<stockGens>
 			<!-- Sells. -->
-			<li Class="TG.StockGen.InsectMeat">
+			<li Class="TraderGen.StockGen.InsectMeat">
 				<totalPriceRange>800~1150</totalPriceRange>
 			</li>
-			<li Class="TG.StockGen.MultiDef">
+			<li Class="TraderGen.StockGen.MultiDef">
 				<thingDefs>
 					<li>InsectJelly</li>
 					<li>VFEI_RoyalInsectJelly</li>
@@ -85,7 +85,7 @@
 				<thingDefCountRange>3~4</thingDefCountRange>
 				<totalPriceRange>600~920</totalPriceRange>
 			</li>
-			<li Class="TG.StockGen.AnimalMultiDef">
+			<li Class="TraderGen.StockGen.AnimalMultiDef">
 				<pawnKindDefs>
 					<li>VFEI_VatGrownMilkbeetle</li>
 					<li>VFEI_VatGrownPrincess</li>
@@ -107,8 +107,8 @@
 					<li>EggsFertilized</li>
 				</excludedCategories>
 			</li>
-			<li Class="TG.StockGen.Alcohol"/>
-			<li Class="TG.StockGen.Drugs">
+			<li Class="TraderGen.StockGen.Alcohol"/>
+			<li Class="TraderGen.StockGen.Drugs">
 				<drugCategory>Social</drugCategory>
 			</li>
 			<li Class="StockGenerator_Category" MayRequire="VanillaExpanded.VBrewE">
@@ -121,13 +121,13 @@
 				<categoryDef>VCE_Condiments</categoryDef>
 			</li>
 		</stockGens>
-	</TG.TraderSpecializationDef>
-	<TG.TraderSpecializationDef>
+	</TraderGen.TraderSpecializationDef>
+	<TraderGen.TraderSpecializationDef>
 		<defName>TG_InsectoidHunting</defName>
 		<label>hunting</label>
 		<stockGens>
 			<!-- Sells -->
-			<li Class="TG.StockGen.AnimalMultiDef">
+			<li Class="TraderGen.StockGen.AnimalMultiDef">
 				<pawnKindDefs>
 					<li>VFEI_VatGrownGigalocust</li>
 					<li>VFEI_VatGrownGigascorpion</li>
@@ -147,7 +147,7 @@
 				<thingDef>Kibble</thingDef>
 				<totalPriceRange>600~1000</totalPriceRange>
 			</li>
-			<li Class="TG.StockGen.MultiDef">
+			<li Class="TraderGen.StockGen.MultiDef">
 				<thingDefs>
 					<li>VFE_Apparel_RiotArmor</li>
 					<li>VFE_Apparel_RiotHelmet</li>
@@ -170,15 +170,15 @@
 					<li>AnimalExotic</li>
 				</tradeTagsBuy>
 			</li>
-			<li Class="TG.StockGen.ExoticAnimalPart"/>
+			<li Class="TraderGen.StockGen.ExoticAnimalPart"/>
 		</stockGens>
-	</TG.TraderSpecializationDef>
-	<TG.TraderSpecializationDef>
+	</TraderGen.TraderSpecializationDef>
+	<TraderGen.TraderSpecializationDef>
 		<defName>TG_InsectoidHusbandry</defName>
 		<label>husbandry</label>
 		<stockGens>
 			<!-- Sells -->
-			<li Class="TG.StockGen.AnimalMultiDef">
+			<li Class="TraderGen.StockGen.AnimalMultiDef">
 				<pawnKindDefs>
 					<li>VFEI_VatGrownMilkbeetle</li>
 					<li>VFEI_VatGrownPrincess</li>
@@ -189,7 +189,7 @@
 				<kindCountRange>3~4</kindCountRange>
 				<totalPriceRange>500~800</totalPriceRange>
 			</li>
-			<li Class="TG.StockGen.AnimalMultiDef">
+			<li Class="TraderGen.StockGen.AnimalMultiDef">
 				<pawnKindDefs>
 					<li>VFEI_VatGrownCuterpillar</li>
 				</pawnKindDefs>
@@ -209,7 +209,7 @@
 				<thingDef>MorrowRim_FungalMash</thingDef>
 				<totalPriceRange>600~1000</totalPriceRange>
 			</li>
-			<li Class="TG.StockGen.MultiDef" MayRequire="VanillaExpanded.VAPPE">
+			<li Class="TraderGen.StockGen.MultiDef" MayRequire="VanillaExpanded.VAPPE">
 				<thingDefs>
 					<li>VAE_Apparel_Overalls</li>
 					<li>VAE_Apparel_FleeceShirt</li>
@@ -232,5 +232,5 @@
 				</tradeTagsBuy>
 			</li>
 		</stockGens>
-	</TG.TraderSpecializationDef>
+	</TraderGen.TraderSpecializationDef>
 </Defs>

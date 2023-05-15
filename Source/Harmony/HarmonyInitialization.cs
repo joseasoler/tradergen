@@ -2,7 +2,7 @@
 using System.Reflection;
 using Verse;
 
-namespace TG.Harmony
+namespace TraderGen.Harmony
 {
 	/// <summary>
 	/// Initialization of the Harmony patching of the mod.
