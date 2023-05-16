@@ -301,16 +301,6 @@
 			</operations>
 		</match>
 	</Operation>
-	<Operation Class="PatchOperationAdd">
-		<xpath>/Defs/TraderKindDef[defName="Base_Outlander_Standard"]/stockGenerators
-		</xpath>
-		<value>
-			<li Class="StockGenerator_SingleDef" MayRequire="VanillaExpanded.VAEAccessories">
-				<thingDef>VAEA_Apparel_ToolBelt</thingDef>
-				<countRange>-1~1</countRange>
-			</li>
-		</value>
-	</Operation>
 	<!-- Outlander bulk goods trader changes. -->
 	<!-- Beer is replaced with the mod-friendly StockGen.Alcohol generator. -->
 	<Operation Class="PatchOperationConditional">
