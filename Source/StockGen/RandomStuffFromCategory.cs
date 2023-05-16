@@ -44,8 +44,9 @@ namespace TraderGen.StockGen
 		/// </summary>
 		private static readonly List<string> ExplicitOnlyStuffCategories = new List<string>
 		{
-			"RB_Waxy", // Wax from RimBees
-			"Gemstones" // Gemstones from Jewelry
+			"BMT_ChitinStuff", // Chitin from Biomes!
+			"Gemstones", // Gemstones from Jewelry
+			"RB_Waxy" // Wax from Alpha Bees
 		};
 
 		/// <summary>

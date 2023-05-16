@@ -1,10 +1,9 @@
 using HarmonyLib;
-using RimWorld;
 using RimWorld.Planet;
 using TraderGen.TraderKind;
 using Verse;
 
-namespace TraderGen.Harmony
+namespace TraderGen.Harmony.Settlements
 {
 	/// <summary>
 	/// Sets the seed that will be used for random generation of settlement trader information.
@@ -12,21 +11,6 @@ namespace TraderGen.Harmony
 	[HarmonyPatch]
 	public static class SettlementGen
 	{
-		/// <summary>
-		/// It is only possible to know which seed to use after Settlement_TraderTracker.RegenerateStock has been called.
-		/// But certain entities such as the trade dialog may want to know what the settlement can sell before the stock
-		/// has been generated. Since it is not possible to generate the TraderGen information at that point, TraderGen
-		/// forces the generation of stock to happen earlier, during the "can this settlement trade" checks.
-		/// </summary>
-		/// <param name="__instance">Trader tracker instance</param>
-		[HarmonyPrefix]
-		[HarmonyPatch(typeof(Settlement_TraderTracker), nameof(Settlement_TraderTracker.CanTradeNow), MethodType.Getter)]
-		private static void EnsureStockIsGenerated(Settlement_TraderTracker __instance)
-		{
-			if (__instance.stock != null || __instance.TraderKind == null) return;
-			__instance.RegenerateStock();
-		}
-
 		/// <summary>
 		/// Remove previous trader information of the settlement before a new one is generated, and add the new one.
 		/// </summary>

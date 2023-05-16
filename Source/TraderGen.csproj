@@ -38,10 +38,14 @@
 
 		<Compile Include="Harmony\HarmonyUtils.cs" />
 		<Compile Include="Harmony\Mod\TradeUIRevised.cs" />
+		<Compile Include="Harmony\Settlements\CaravanArrivalAction_Trade_Arrived_Patch.cs" />
+		<Compile Include="Harmony\Settlements\CaravanVisitUtility_TradeCommand_Patch.cs" />
+		<Compile Include="Harmony\Settlements\SettlementGen.cs" />
+		<Compile Include="Harmony\Settlements\SettlementPatchUtil.cs" />
+		<Compile Include="Harmony\Settlements\TransportPodsArrivalAction_Trade_Arrived_Patch.cs" />
 		<Compile Include="Harmony\StockGenerator.cs" />
 		<Compile Include="Harmony\Pawn.cs" />
 		<Compile Include="Harmony\Mod\TraderShips.cs" />
-		<Compile Include="Harmony\Settlement.cs" />
 		<Compile Include="Harmony\Tradeable.cs" />
 		<Compile Include="Harmony\TraderKind.cs" />
 		<Compile Include="Harmony\TraderStock.cs" />
