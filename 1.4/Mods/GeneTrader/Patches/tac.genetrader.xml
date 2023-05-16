@@ -9,6 +9,10 @@
 						<def>TG_Bloodfeeder</def>
 						<commonality>8.0</commonality>
 					</li>
+					<li MayRequire="BiomesTeam.BiomesCaverns">
+						<def>TG_Caveworld</def>
+						<commonality>8.0</commonality>
+					</li>
 					<li>
 						<def>TG_Medicine</def>
 						<commonality>10.0</commonality>

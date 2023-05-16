@@ -19,6 +19,9 @@ TraderGen will add between zero and five specializations (depending on mod setti
 * **Cannibal:** These traders must be truly desperate... or utterly insane. Present in combat and slaver orbital traders.
 
 
+* **Caveworld (with [Biomes! Caverns](https://rimworldgame.com/biotech/)):** Has items created from chitin, some cavern animals and cavern animal products, cooling salves, and harvestable products from caverns in stock. Present in bulk, exotic and slaver traders.
+
+
 * **Craftsmanship:** Adds apparel, furniture and art created from stone, metal or wood to the stock of the trader. Present in bulk and imperial orbital traders.
 
 
@@ -176,6 +179,9 @@ TraderGen should support wares from mods out of the box; please submit a [bug re
 * **[Alpha Memes](https://steamcommunity.com/sharedfiles/filedetails/?id=2661356814):** Extensive support for the precepts of this mod. Check the Ideology section above for details.
 
 
+* ** [Biomes! Caverns](https://rimworldgame.com/biotech/):** Caveworld orbital trader specialization.
+
+
 * **[Buyable psylink neuroformers](https://steamcommunity.com/sharedfiles/filedetails/?id=2190288136):** TraderGen is fully compatible with this mod. TraderGen only adds psylink neuroformers to a specific specialization, while Buyable psylink neuroformers adds it to some of the traders regardless of their specialization.
 
 
@@ -218,15 +224,16 @@ TraderGen should support wares from mods out of the box; please submit a [bug re
 
 * **[Galaxy Trade Group](https://steamcommunity.com/sharedfiles/filedetails/?id=2956274766)** and **[GTG Orbital Traders](https://steamcommunity.com/sharedfiles/filedetails/?id=2961168731):**
 
-  * The GTG civilian orbital trader can appear with the culture, draper, gourmet, husbandry and wealth specializations.
+  * The GTG civilian orbital trader can appear with the caveworld, culture, draper, gourmet, husbandry and wealth specializations.
 
   * The GTG industrial orbital trader can appear with the biomaterials, craftsmanship, medicine, prospector, tech and wealth specializations.
 
   * The GTG military orbital trader can appear with the bionics, drugs, ordnance, svanger and wealth specializations.
 
-  * The GTG black market orbital trader can appear with the bloodfeeder, drugs, jewelry, organs, tech, wealth and xenogenetics specializations.
+  * The GTG black market orbital trader can appear with the bloodfeeder, caveworld, drugs, jewelry, organs, tech, wealth and xenogenetics specializations.
 
-* **[Gene trader](https://steamcommunity.com/sharedfiles/filedetails/?id=2886375137):** The gene orbital trader can appear with the bloodfeeder, medicine, organs, technology, wealth and xenogenetics specializations.
+
+* **[Gene trader](https://steamcommunity.com/sharedfiles/filedetails/?id=2886375137):** The gene orbital trader can appear with the bloodfeeder, caveworld, medicine, organs, technology, wealth and xenogenetics specializations.
 
 
 * **[Jewelry](https://steamcommunity.com/workshop/filedetails/?id=2020964421):**
@@ -299,7 +306,7 @@ TraderGen should support wares from mods out of the box; please submit a [bug re
 
 * **[Vanilla Factions Expanded - Insectoids](https://steamcommunity.com/sharedfiles/filedetails/?id=2149755445):**
 
-  * The bio-engineering supplier gets access to insectoid-themed versions of these specializations: craftsmanship, draper, gourmet, hunting, husbandry and wealth.
+  * The bio-engineering supplier gets access to insectoid-themed versions of these specializations: caveworld, craftsmanship, draper, gourmet, hunting, husbandry and wealth.
 
   * The bio-engineering supplier will now purchase most really expensive items that could be resold for profit. It will also purchase insect jelly related items and kibble.
 
@@ -324,7 +331,7 @@ TraderGen should support wares from mods out of the box; please submit a [bug re
 
 * **[Vanilla Genetics Expanded](https://steamcommunity.com/sharedfiles/filedetails/?id=2801160906):**
 
-  * The genetics supplier gets access to these specializations: culture, drugs, medicine, tech, wealth and xenogenetics.
+  * The genetics supplier gets access to these specializations: caveworld, culture, drugs, medicine, tech, wealth and xenogenetics.
 
   * Genetics suppliers have a custom name generator.
 
@@ -369,7 +376,7 @@ TraderGen should support wares from mods out of the box; please submit a [bug re
 
 * **[Zoological Orbital Traders](https://steamcommunity.com/sharedfiles/filedetails/?id=1952216926):**
 
-  * The zoological trader gets access to these specializations: draper, hunting, husbandry, medicine and wealth. This draper specialization only sells animal fabrics.
+  * The zoological trader gets access to these specializations: caveworld, draper, hunting, husbandry, medicine and wealth. This draper specialization only sells animal fabrics.
 
   * The zoological trader will now purchase any exotic animal part, including those from mods such as Alpha Animals or Dinosauria.
 

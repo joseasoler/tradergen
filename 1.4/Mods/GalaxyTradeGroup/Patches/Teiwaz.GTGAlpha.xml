@@ -5,6 +5,10 @@
 		<value>
 			<li Class="TraderGen.GenExtension">
 				<specializations>
+					<li MayRequire="BiomesTeam.BiomesCaverns">
+						<def>TG_Caveworld</def>
+						<commonality>5.0</commonality>
+					</li>
 					<li MayRequire="VanillaExpanded.VBooksE">
 						<def>TG_Culture</def>
 						<commonality>10.0</commonality>
@@ -99,6 +103,10 @@
 					<li MayRequire="Ludeon.RimWorld.Biotech">
 						<def>TG_Bloodfeeder</def>
 						<commonality>10.0</commonality>
+					</li>
+					<li MayRequire="BiomesTeam.BiomesCaverns">
+						<def>TG_Caveworld</def>
+						<commonality>5.0</commonality>
 					</li>
 					<li>
 						<def>TG_Drugs</def>

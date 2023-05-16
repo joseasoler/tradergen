@@ -144,6 +144,78 @@
 			</li>
 		</stockGens>
 	</TraderGen.TraderSpecializationDef>
+	<TraderGen.TraderSpecializationDef MayRequire="BiomesTeam.BiomesCaverns">
+		<defName>TG_Caveworld</defName>
+		<label>caveworld</label>
+		<stockGens>
+			<!-- Sells -->
+			<li Class="TraderGen.StockGen.RandomStuffFromCategory">
+				<stuffCategoryDef>BMT_ChitinStuff</stuffCategoryDef>
+				<maxTechLevelGenerate>Spacer</maxTechLevelGenerate>
+				<stuffCountRange>120~200</stuffCountRange>
+				<thingDefCountRange>1~3</thingDefCountRange>
+				<countRange>1~2</countRange>
+			</li>
+			<li Class="TraderGen.StockGen.AnimalMultiDef">
+				<pawnKindDefs>
+					<li>BMT_AaroxisDendoria</li>
+					<li>BMT_Boomapillar</li>
+					<li>BMT_BoomMoth</li>
+					<li>BMT_BovineBeetle</li>
+					<li>BMT_CaveCricket</li>
+					<li>BMT_ChemSnail</li>
+					<li>BMT_CrystalFairyMole</li>
+					<li>BMT_Crystalope</li>
+					<li>BMT_FacetMoth</li>
+					<li>BMT_FoundryBeetle</li>
+					<li>BMT_GiantSlug</li>
+					<li>BMT_GiantSnail</li>
+					<li>BMT_Goeto</li>
+					<li>BMT_Jellypot</li>
+					<li>BMT_Jewelbug</li>
+					<li>BMT_Pillbug</li>
+					<li>BMT_Woolybat</li>
+					<li>BMT_WoolySpider</li>
+					<li>BMT_Xyrion</li>
+					<li>BMT_Yooka</li>
+				</pawnKindDefs>
+				<kindCountRange>2~3</kindCountRange>
+				<totalPriceRange>200~400</totalPriceRange>
+				<animalProducts>true</animalProducts>
+				<animalProductPriceRange>75~150</animalProductPriceRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>BMT_CoolingSalve</thingDef>
+				<countRange>2~4</countRange>
+			</li>
+			<!-- Harvest products. -->
+			<li Class="TraderGen.StockGen.MultiDef">
+				<thingDefs>
+					<li>BMT_AbyssalGrapes</li>
+					<li>BMT_BoomSpore</li>
+					<li>BMT_GleamcapSalve</li>
+					<li>BMT_Glimmerslime</li>
+					<li>BMT_HealrootGrass</li>
+					<li>BMT_JadeGlints</li>
+					<li>BMT_Kessinger</li>
+					<li>BMT_MoonlessSilk</li>
+					<li>BMT_MedicineFungal</li>
+					<li>BMT_MushroomWine</li>
+					<li>BMT_MycelialBlocks</li>
+					<li>BMT_MushroomLog</li>
+					<li>BMT_RawDulcis</li>
+					<li>BMT_RawGiantLeaf</li>
+					<li>BMT_RawGlowbulb</li>
+					<li>BMT_RawGreyfields</li>
+					<li>BMT_RawShimmershroom</li>
+					<li>BMT_Starchstalk</li>
+					<li>BMT_StimquillDrug</li>
+				</thingDefs>
+				<thingDefCountRange>1~3</thingDefCountRange>
+				<totalPriceRange>200~400</totalPriceRange>
+			</li>
+		</stockGens>
+	</TraderGen.TraderSpecializationDef>
 	<TraderGen.TraderSpecializationDef>
 		<defName>TG_Craftsmanship</defName>
 		<label>craftsmanship</label>

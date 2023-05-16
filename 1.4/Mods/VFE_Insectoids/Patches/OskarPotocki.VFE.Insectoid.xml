@@ -8,6 +8,10 @@
 				<value>
 					<li Class="TraderGen.GenExtension">
 						<specializations>
+							<li MayRequire="BiomesTeam.BiomesCaverns">
+								<def>TG_Caveworld</def>
+								<commonality>10.0</commonality>
+							</li>
 							<li>
 								<def>TG_InsectoidCraftsmanship</def>
 								<commonality>10.0</commonality>

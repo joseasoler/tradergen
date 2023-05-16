@@ -10,6 +10,10 @@
 						<def>TG_Biomaterials</def>
 						<commonality>5.0</commonality>
 					</li>
+					<li MayRequire="BiomesTeam.BiomesCaverns">
+						<def>TG_Caveworld</def>
+						<commonality>7.0</commonality>
+					</li>
 					<li>
 						<def>TG_Craftsmanship</def>
 						<commonality>10.0</commonality>
@@ -141,6 +145,10 @@
 						<def>TG_Bloodfeeder</def>
 						<commonality>5.0</commonality>
 					</li>
+					<li MayRequire="BiomesTeam.BiomesCaverns">
+						<def>TG_Caveworld</def>
+						<commonality>7.0</commonality>
+					</li>
 					<li MayRequire="VanillaExpanded.VBooksE">
 						<def>TG_Culture</def>
 						<commonality>10.0</commonality>
@@ -199,6 +207,10 @@
 					<li>
 						<def>TG_Cannibal</def>
 						<commonality>10.0</commonality>
+					</li>
+					<li MayRequire="BiomesTeam.BiomesCaverns">
+						<def>TG_Caveworld</def>
+						<commonality>7.0</commonality>
 					</li>
 					<li>
 						<def>TG_Drugs</def>
