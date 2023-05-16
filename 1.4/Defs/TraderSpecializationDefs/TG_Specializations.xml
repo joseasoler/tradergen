@@ -396,6 +396,7 @@
 					<li>AnimalFighter</li>
 				</tradeTagsSell>
 				<tradeTagsBuy>
+					<li>AnimalCommon</li>
 					<li>AnimalPet</li>
 					<li>AnimalUncommon</li>
 					<li>AnimalExotic</li>
