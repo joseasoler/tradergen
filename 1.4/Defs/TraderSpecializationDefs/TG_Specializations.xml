@@ -546,10 +546,6 @@
 				<thingDef>Luciferium</thingDef>
 				<countRange>-3~5</countRange>
 			</li>
-			<li Class="StockGenerator_SingleDef" MayRequire="VanillaExpanded.VAEAccessories">
-				<thingDef>VAEA_Apparel_MedicBag</thingDef>
-				<countRange>0~1</countRange>
-			</li>
 			<li Class="StockGenerator_SingleDef" MayRequire="freefolk.Remedies">
 				<thingDef>FF_PoisonIvyLeaves</thingDef>
 				<countRange>30~50</countRange>

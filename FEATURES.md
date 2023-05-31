@@ -280,8 +280,6 @@ TraderGen should support wares from mods out of the box; please submit a [bug re
 
   * Orbital traders with the hunting specialization may have quivers in stock.
 
-  * Orbital traders with the medicine specialization may have medic bags in stock.
-
 
 * **[Vanilla Brewing Expanded](https://steamcommunity.com/sharedfiles/filedetails/?id=2186560858):**
 
