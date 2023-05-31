@@ -73,7 +73,7 @@ TraderGen will add between zero and five specializations (depending on mod setti
 * **Wealth:** This trader has been successful or lucky in the past, and has more silver than usual in stock. This specialization is rare, but it is present in all orbital traders.
 
 
-* **Xenogenetics (with [Biotech](https://rimworldgame.com/biotech/)):** A rare specialization that sells genepacks containing some of the genes of a specific xenotype. It will rarely have an archite capsule in stock. Present in exotic and slaver orbital traders.
+* **Xenogenetics (with [Biotech](https://rimworldgame.com/biotech/)):** A rare specialization that sells genepacks containing some of the genes of a specific xenotype, and some genepacks with a single gene. It will rarely have an archite capsule in stock. Present in exotic and slaver orbital traders.
 
 
 Ideology

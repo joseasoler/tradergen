@@ -735,6 +735,18 @@
 				<countRange>-3~1</countRange>
 			</li>
 			<li Class="TraderGen.StockGen.FactionlessXenotypeGenepack">
+				<nonArchiteGenes>1</nonArchiteGenes>
+				<countRange>1</countRange>
+			</li>
+			<li Class="TraderGen.StockGen.FactionlessXenotypeGenepack">
+				<nonArchiteGenes>1</nonArchiteGenes>
+				<countRange>1</countRange>
+			</li>
+			<li Class="TraderGen.StockGen.FactionlessXenotypeGenepack">
+				<nonArchiteGenes>1</nonArchiteGenes>
+				<countRange>1</countRange>
+			</li>
+			<li Class="TraderGen.StockGen.FactionlessXenotypeGenepack">
 				<architeGenes>0~1</architeGenes>
 				<nonArchiteGenes>2~3</nonArchiteGenes>
 				<countRange>1</countRange>
