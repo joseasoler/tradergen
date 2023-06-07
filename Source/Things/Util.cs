@@ -150,7 +150,7 @@ namespace TraderGen.Things
 
 			_hediffDefOf = new Dictionary<ThingDef, HediffDef>();
 
-			foreach (var hediffDef in DefDatabase<HediffDef>.AllDefs)
+			foreach (var hediffDef in DefDatabase<HediffDef>.AllDefsListForReading)
 			{
 				if (hediffDef.spawnThingOnRemoved != null &&
 				    DefOf.ThingCategory.BodyParts.DescendantThingDefs.Contains(hediffDef.spawnThingOnRemoved))

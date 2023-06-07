@@ -23,7 +23,7 @@ namespace TraderGen.Debug
 		[DebugAction(DebugCategory, allowedGameStates = AllowedGameStates.PlayingOnMap)]
 		private static void PlaceAllTradeableThings()
 		{
-			foreach (var def in DefDatabase<ThingDef>.AllDefs)
+			foreach (var def in DefDatabase<ThingDef>.AllDefsListForReading)
 			{
 				if (def.category != ThingCategory.Item && def.category != ThingCategory.Building ||
 				    def.tradeability == Tradeability.None || def.building != null && !def.Minifiable ||
@@ -37,7 +37,7 @@ namespace TraderGen.Debug
 				DebugThingPlaceHelper.DebugSpawn(def, UI.MouseCell(), 1);
 			}
 
-			foreach (var def in DefDatabase<PawnKindDef>.AllDefs)
+			foreach (var def in DefDatabase<PawnKindDef>.AllDefsListForReading)
 			{
 				if (!def.race.race.Animal || def.race.tradeability == Tradeability.None ||
 				    def.race.comps != null &&
@@ -58,7 +58,7 @@ namespace TraderGen.Debug
 		[DebugAction(DebugCategory, allowedGameStates = AllowedGameStates.Playing)]
 		private static void GenerateTraderNames()
 		{
-			var options = DefDatabase<TraderKindDef>.AllDefs.Where(t => t.orbital)
+			var options = DefDatabase<TraderKindDef>.AllDefsListForReading.Where(t => t.orbital)
 				.Select(traderKindDef => new DebugMenuOption(traderKindDef.label, DebugMenuOptionMode.Action, () =>
 				{
 					Logger.Message($"{traderKindDef.label}:");
@@ -90,7 +90,7 @@ namespace TraderGen.Debug
 		{
 			var debugOrbitalTrader = DefDatabase<TraderKindDef>.GetNamed("TG_OrbitalDebug");
 
-			var specializationOptions = DefDatabase<TraderSpecializationDef>.AllDefs
+			var specializationOptions = DefDatabase<TraderSpecializationDef>.AllDefsListForReading
 				.Select(specializationDef =>
 					new DebugMenuOption(specializationDef.defName, DebugMenuOptionMode.Action, () =>
 					{
@@ -112,7 +112,7 @@ namespace TraderGen.Debug
 		[DebugAction(DebugCategory, null, false, false, allowedGameStates = AllowedGameStates.PlayingOnMap)]
 		private static void TestTraderStockOnly()
 		{
-			var traderOptions = DefDatabase<TraderKindDef>.AllDefs.Select(def => new DebugMenuOption(def.defName,
+			var traderOptions = DefDatabase<TraderKindDef>.AllDefsListForReading.Select(def => new DebugMenuOption(def.defName,
 					DebugMenuOptionMode.Action, () =>
 					{
 						Find.CurrentMap.passingShipManager.DebugSendAllShipsAway();

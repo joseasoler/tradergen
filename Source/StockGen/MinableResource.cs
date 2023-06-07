@@ -25,7 +25,7 @@ namespace TraderGen.StockGen
 
 			_minableResources = new Dictionary<ThingDef, float>();
 
-			foreach (var thingDef in DefDatabase<ThingDef>.AllDefs)
+			foreach (var thingDef in DefDatabase<ThingDef>.AllDefsListForReading)
 			{
 				if (thingDef.building?.mineableThing != null)
 				{

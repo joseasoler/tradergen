@@ -214,7 +214,7 @@ namespace TraderGen.Ideo
 				rules.AddRange(preceptGenDef.stockRules);
 			}
 
-			foreach (var def in DefDatabase<ThingDef>.AllDefs)
+			foreach (var def in DefDatabase<ThingDef>.AllDefsListForReading)
 			{
 				foreach (var rule in rules)
 				{

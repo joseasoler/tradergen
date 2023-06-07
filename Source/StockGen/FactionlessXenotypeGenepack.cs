@@ -55,7 +55,7 @@ namespace TraderGen.StockGen
 			}
 
 			_factionlessXenotypes = new List<XenotypeDef>();
-			foreach (var xenotypeDef in DefDatabase<XenotypeDef>.AllDefs)
+			foreach (var xenotypeDef in DefDatabase<XenotypeDef>.AllDefsListForReading)
 			{
 				if (XenotypeWeight(xenotypeDef) > 0.0f)
 				{

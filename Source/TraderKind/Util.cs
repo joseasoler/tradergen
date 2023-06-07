@@ -21,7 +21,7 @@ namespace TraderGen.TraderKind
 			// If the trader has no faction, check if it is a base, caravan or visitor of a faction.
 			if (traderFactionDef == null && !def.orbital)
 			{
-				foreach (var factionDef in DefDatabase<FactionDef>.AllDefs)
+				foreach (var factionDef in DefDatabase<FactionDef>.AllDefsListForReading)
 				{
 					if (factionDef.baseTraderKinds.Contains(def) || factionDef.caravanTraderKinds.Contains(def) ||
 					    factionDef.visitorTraderKinds.Contains(def))

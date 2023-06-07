@@ -27,7 +27,7 @@ namespace TraderGen.StockGen
 				thing.stackCount = 1;
 				var sourceComp = thing.TryGetComp<CompHasSources>();
 				var name = PawnBioAndNameGenerator.GenerateFullPawnName(ThingDefOf.Human,
-					primaryCulture: DefDatabase<CultureDef>.AllDefs.RandomElement(),
+					primaryCulture: DefDatabase<CultureDef>.AllDefsListForReading.RandomElement(),
 					gender: Rand.Value < 0.5 ? Gender.Male : Gender.Female);
 				sourceComp.AddSource(name.ToStringShort);
 

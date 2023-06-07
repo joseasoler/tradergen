@@ -49,12 +49,9 @@ namespace TraderGen.StockGen
 			"RB_Waxy" // Wax from Alpha Bees
 		};
 
-		/// <summary>
-		/// Choose a material with the specified category matching certain criteria.
-		/// </summary>
-		protected override void SetStuffDef()
+		private bool ValidStuffDef(ThingDef stuffDef)
 		{
-			var stuffDefs = DefDatabase<ThingDef>.AllDefs.Where(stuffDef =>
+			return
 				// Stuff belonging to the chosen category.
 				stuffDef.stuffProps?.categories != null && stuffDef.stuffProps.categories.Contains(stuffCategoryDef) &&
 				// Stuff which is not excluded from being used.
@@ -68,10 +65,24 @@ namespace TraderGen.StockGen
 				// explicitly. This prevents stuffs having two stuffCategories from being too frequent.
 				ExplicitOnlyStuffCategories.All(cat =>
 					stuffCategoryDef.defName == cat || !stuffDef.stuffProps.categories.Any(c => c.defName == cat)) &&
-				// VFEArch_WoodLog types rely on VFECore.StuffExtension to set its commonality to zero. To avoid a dependency on
-				// VFE or adding complex reflection code, they are hard-coded to be removed here instead.
-				!stuffDef.defName.StartsWith("VFEArch_WoodLog_")
-			);
+				// VFEArch_WoodLog types rely on VFECore.StuffExtension to set its commonality to zero. To avoid dependencies and
+				// reflection, this check is hard-coded instead.
+				!stuffDef.defName.StartsWith("VFEArch_WoodLog_");
+		}
+
+		/// <summary>
+		/// Choose a material with the specified category matching certain criteria.
+		/// </summary>
+		protected override void SetStuffDef()
+		{
+			var stuffDefs = new List<ThingDef>();
+			foreach (var stuffDef in DefDatabase<ThingDef>.AllDefsListForReading)
+			{
+				if (ValidStuffDef(stuffDef))
+				{
+					stuffDefs.Add(stuffDef);
+				}
+			}
 
 			if (stuffDefs.TryRandomElementByWeight(Util.RandomStuffDefWeight, out _stuffDef))
 			{
