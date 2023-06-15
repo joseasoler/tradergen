@@ -37,7 +37,11 @@ namespace TraderGen.Harmony
 		[HarmonyPatch(typeof(Pawn), nameof(Pawn.SpawnSetup))]
 		private static void PawnLoad(Pawn __instance, Map map, bool respawningAfterLoad)
 		{
-			if (!respawningAfterLoad || __instance.trader == null) return;
+			if (!respawningAfterLoad || __instance.trader?.traderKind == null)
+			{
+				return;
+			}
+
 			Cache.SetSeed(__instance);
 			Cache.TryAdd(__instance.trader.traderKind, map?.Tile ?? -1, __instance.Faction);
 		}
