@@ -276,11 +276,6 @@ TraderGen should support wares from mods out of the box; please submit a [bug re
 * **[Vanilla Apparel Expanded](https://steamcommunity.com/sharedfiles/filedetails/?id=1814987817):** Orbital traders with the husbandry specialization may have overalls and fleece shirts in stock.
 
 
-* **[Vanilla Apparel Expanded — Accessories](https://steamcommunity.com/sharedfiles/filedetails/?id=2521176396):**
-
-  * Orbital traders with the hunting specialization may have quivers in stock.
-
-
 * **[Vanilla Brewing Expanded](https://steamcommunity.com/sharedfiles/filedetails/?id=2186560858):**
 
   * Orbital trader specializations distinguish between alcoholic beverages, non-alcoholic beverages and other drugs when appropriate.
