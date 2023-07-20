@@ -68,6 +68,10 @@
 									<def>TG_Medicine</def>
 									<commonality>10.0</commonality>
 								</li>
+								<li MayRequire="Ludeon.RimWorld.Biotech">
+									<def>TG_Refugees</def>
+									<commonality>5.0</commonality>
+								</li>
 								<li>
 									<def>TG_Wealth</def>
 									<commonality>5.0</commonality>

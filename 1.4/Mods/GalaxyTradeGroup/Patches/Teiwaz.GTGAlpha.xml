@@ -5,6 +5,10 @@
 		<value>
 			<li Class="TraderGen.GenExtension">
 				<specializations>
+					<li MayRequire="vanillaracesexpanded.android">
+						<def>TG_Androids</def>
+						<commonality>5.0</commonality>
+					</li>
 					<li MayRequire="BiomesTeam.BiomesCaverns">
 						<def>TG_Caveworld</def>
 						<commonality>5.0</commonality>
@@ -38,6 +42,10 @@
 		<value>
 			<li Class="TraderGen.GenExtension">
 				<specializations>
+					<li MayRequire="vanillaracesexpanded.android">
+						<def>TG_Androids</def>
+						<commonality>5.0</commonality>
+					</li>
 					<li>
 						<def>TG_Biomaterials</def>
 						<commonality>10.0</commonality>
@@ -119,6 +127,10 @@
 					<li>
 						<def>TG_Organs</def>
 						<commonality>10.0</commonality>
+					</li>
+					<li MayRequire="Ludeon.RimWorld.Biotech">
+						<def>TG_Refugees</def>
+						<commonality>5.0</commonality>
 					</li>
 					<li>
 						<def>TG_Tech</def>

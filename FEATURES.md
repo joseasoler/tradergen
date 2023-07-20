@@ -7,13 +7,16 @@ Orbital trader specializations
 TraderGen will add between zero and five specializations (depending on mod settings) to each vanilla orbital trader. Some orbital traders from mods are supported as well. Check the Mod support section for details.
 
 
+* **Androids (with [Vanilla Races Expanded - Android](https://steamcommunity.com/sharedfiles/filedetails/?id=2975771801)):** Has some androids, reactors, android components and neutroamine in stock. Present in bulk, exotic and slaver orbital traders.
+
+
 * **Biomaterials:** This uncommon specialization adds items created with materials obtained from exotic animals or plants. Present in bulk and exotic orbital traders.
 
 
 * **Bionics:** Adds prostheses between the industrial and ultratech technology levels. Present in combat, exotic, slaver and imperial orbital traders.
 
 
-* **Bloodfeeder (with [Biotech](https://rimworldgame.com/biotech/)):** This uncommon specialization sells hemogen packs, blood torches, melee weapons with higher quality than normal and a single deathrest capacity serum. They will also have a genepack containing genes of a random bloodfeeder xenotype. Present in combat, exotic and slaver orbital traders.
+* **Bloodfeeder (with [Biotech](https://rimworldgame.com/biotech/)):** This uncommon specialization sells hemogen packs, blood torches, melee weapons with higher quality than normal, some gold and a single deathrest capacity serum. They will also have a genepack containing genes of a random bloodfeeder xenotype. Present in combat, exotic and slaver orbital traders.
 
 
 * **Cannibal:** These traders must be truly desperate... or utterly insane. Present in combat and slaver orbital traders.
@@ -59,6 +62,9 @@ TraderGen will add between zero and five specializations (depending on mod setti
 
 
 * **Psycasting (with [Royalty](https://rimworldgame.com/royalty/)):** An uncommon specialization which sells psytrainers, psychic apparel and weapons. If a mod setting is enabled, it will also sell psylink neuroformers if the trader does not belong to the Empire faction. Present in exotic and imperial orbital traders.
+
+
+* **Refugees (with [Biotech](https://rimworldgame.com/biotech/)):** Has some colonists from a random xenotype willing to join the colony if their travel fee is paid. It also herbal medicine and packaged survival meals in stock. Present in bulk, combat and slaver orbital traders.
 
 
 * **Scavenger**: Sells steel, chemfuel, components, and random scavenged items. Present in bulk and combat traders.
@@ -204,14 +210,14 @@ TraderGen should support wares from mods out of the box; please submit a [bug re
 
 * **[Expanded Prosthetics and Organ Engineering](https://steamcommunity.com/sharedfiles/filedetails/?id=725956940):**
 
-  * The prosthesis orbital trader gets access to these specializations: drugs, hunting, medicine, organs, psycasting, synthetics, wealth and xenogenetics.
+  * The prosthesis orbital trader gets access to these specializations: androids, drugs, hunting, medicine, organs, psycasting, synthetics, wealth and xenogenetics.
 
   * The textiles orbital trader gets access to these specializations: biomaterials, cannibal, draper, hunting, husbandry, wealth.
 
 
 * **[Expanded Prosthetics and Organ Engineering - Forked](https://steamcommunity.com/sharedfiles/filedetails/?id=1949064302):**
 
-  * The prosthesis orbital trader gets access to these specializations: drugs, hunting, medicine, organs, psycasting, synthetics, wealth and xenogenetics.
+  * The prosthesis orbital trader gets access to these specializations: androids, drugs, hunting, medicine, organs, psycasting, synthetics, wealth and xenogenetics.
 
   * The textiles orbital trader gets access to these specializations: biomaterials, cannibal, draper, hunting, husbandry, wealth.
 
@@ -224,13 +230,13 @@ TraderGen should support wares from mods out of the box; please submit a [bug re
 
 * **[Galaxy Trade Group](https://steamcommunity.com/sharedfiles/filedetails/?id=2956274766)** and **[GTG Orbital Traders](https://steamcommunity.com/sharedfiles/filedetails/?id=2961168731):**
 
-  * The GTG civilian orbital trader can appear with the caveworld, culture, draper, gourmet, husbandry and wealth specializations.
+  * The GTG civilian orbital trader can appear with the android, caveworld, culture, draper, gourmet, husbandry and wealth specializations.
 
-  * The GTG industrial orbital trader can appear with the biomaterials, craftsmanship, medicine, prospector, tech and wealth specializations.
+  * The GTG industrial orbital trader can appear with the android, biomaterials, craftsmanship, medicine, prospector, tech and wealth specializations.
 
   * The GTG military orbital trader can appear with the bionics, drugs, ordnance, svanger and wealth specializations.
 
-  * The GTG black market orbital trader can appear with the bloodfeeder, caveworld, drugs, jewelry, organs, tech, wealth and xenogenetics specializations.
+  * The GTG black market orbital trader can appear with the bloodfeeder, caveworld, drugs, jewelry, organs, refugees, tech, wealth and xenogenetics specializations.
 
 
 * **[Gene trader](https://steamcommunity.com/sharedfiles/filedetails/?id=2886375137):** The gene orbital trader can appear with the bloodfeeder, caveworld, medicine, organs, technology, wealth and xenogenetics specializations.
@@ -367,7 +373,7 @@ TraderGen should support wares from mods out of the box; please submit a [bug re
 
 * **[Zoological Orbital Traders](https://steamcommunity.com/sharedfiles/filedetails/?id=1952216926):**
 
-  * The zoological trader gets access to these specializations: caveworld, draper, hunting, husbandry, medicine and wealth. This draper specialization only sells animal fabrics.
+  * The zoological trader gets access to these specializations: caveworld, draper, hunting, husbandry, medicine, refugees and wealth. This draper specialization only sells animal fabrics.
 
   * The zoological trader will now purchase any exotic animal part, including those from mods such as Alpha Animals or Dinosauria.
 

@@ -6,6 +6,10 @@
 		<value>
 			<li Class="TraderGen.GenExtension">
 				<specializations>
+					<li MayRequire="vanillaracesexpanded.android">
+						<def>TG_Androids</def>
+						<commonality>5.0</commonality>
+					</li>
 					<li>
 						<def>TG_Biomaterials</def>
 						<commonality>5.0</commonality>
@@ -37,6 +41,10 @@
 					<li>
 						<def>TG_Prospector</def>
 						<commonality>10.0</commonality>
+					</li>
+					<li MayRequire="Ludeon.RimWorld.Biotech">
+						<def>TG_Refugees</def>
+						<commonality>5.0</commonality>
 					</li>
 					<li>
 						<def>TG_Scavenger</def>
@@ -114,6 +122,10 @@
 						<def>TG_Psycasting</def>
 						<commonality>5.0</commonality>
 					</li>
+					<li MayRequire="Ludeon.RimWorld.Biotech">
+						<def>TG_Refugees</def>
+						<commonality>5.0</commonality>
+					</li>
 					<li>
 						<def>TG_Scavenger</def>
 						<commonality>10.0</commonality>
@@ -133,6 +145,10 @@
 		<value>
 			<li Class="TraderGen.GenExtension">
 				<specializations>
+					<li MayRequire="vanillaracesexpanded.android">
+						<def>TG_Androids</def>
+						<commonality>5.0</commonality>
+					</li>
 					<li>
 						<def>TG_Biomaterials</def>
 						<commonality>5.0</commonality>
@@ -196,6 +212,10 @@
 		<value>
 			<li Class="TraderGen.GenExtension">
 				<specializations>
+					<li MayRequire="vanillaracesexpanded.android">
+						<def>TG_Androids</def>
+						<commonality>5.0</commonality>
+					</li>
 					<li>
 						<def>TG_Bionics</def>
 						<commonality>10.0</commonality>
@@ -231,6 +251,10 @@
 					<li>
 						<def>TG_Prospector</def>
 						<commonality>10.0</commonality>
+					</li>
+					<li MayRequire="Ludeon.RimWorld.Biotech">
+						<def>TG_Refugees</def>
+						<commonality>5.0</commonality>
 					</li>
 					<li MayRequire="VexedTrees980.RimRobots">
 						<def>TG_Synthetics</def>

@@ -1,5 +1,40 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
+	<TraderGen.TraderSpecializationDef MayRequire="vanillaracesexpanded.android">
+		<defName>TG_Androids</defName>
+		<label>androids</label>
+		<stockGens>
+			<li Class="StockGenerator_Slaves">
+				<respectPopulationIntent>false</respectPopulationIntent>
+				<slaveKindDef>VREA_AndroidBasic</slaveKindDef>
+				<countRange>1~2</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>VREA_Reactor</thingDef>
+				<countRange>1~2</countRange>
+			</li>
+			<li Class="TraderGen.StockGen.MultiDef">
+				<thingDefs>
+					<li>VREA_AirFilter</li>
+					<li>VREA_ArtificialJaw</li>
+					<li>VREA_ArtificialNose</li>
+					<li>VREA_ArtificialRibcage</li>
+					<li>VREA_ArtificialSpine</li>
+					<li>VREA_AudioProcessor</li>
+					<li>VREA_MetabolismRegulator</li>
+					<li>VREA_NeuroPump</li>
+					<li>VREA_Neutrofilter</li>
+					<li>VREA_OpticalUnit</li>
+				</thingDefs>
+				<thingDefCountRange>1~3</thingDefCountRange>
+				<countRange>1~2</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>Neutroamine</thingDef>
+				<countRange>100~225</countRange>
+			</li>
+		</stockGens>
+	</TraderGen.TraderSpecializationDef>
 	<TraderGen.TraderSpecializationDef>
 		<defName>TG_Biomaterials</defName>
 		<label>biomaterials</label>
@@ -114,6 +149,10 @@
 				<thingDef>pphhyy_MealLeSangEggsFried</thingDef>
 				<countRange>1~4</countRange>
 			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>Gold</thingDef>
+				<countRange>30~50</countRange>
+			</li>
 		</stockGens>
 	</TraderGen.TraderSpecializationDef>
 	<TraderGen.TraderSpecializationDef>
@@ -152,12 +191,17 @@
 			<li Class="TraderGen.StockGen.RandomStuffFromCategory">
 				<stuffCategoryDef>BMT_ChitinStuff</stuffCategoryDef>
 				<maxTechLevelGenerate>Spacer</maxTechLevelGenerate>
+				<excludeStuffDefs>
+					<!-- VFE-I chitin has such a high commonality that it always dominates if it is present. -->
+					<li MayRequire="OskarPotocki.VFE.Insectoid">VFEI_Chitin</li>
+				</excludeStuffDefs>
 				<stuffCountRange>120~200</stuffCountRange>
 				<thingDefCountRange>1~3</thingDefCountRange>
 				<countRange>1~2</countRange>
 			</li>
 			<li Class="TraderGen.StockGen.AnimalMultiDef">
 				<pawnKindDefs>
+					<li MayRequire="sarg.alphaanimals">AA_Groundrunner</li>
 					<li>BMT_AaroxisDendoria</li>
 					<li>BMT_Boomapillar</li>
 					<li>BMT_BoomMoth</li>
@@ -167,6 +211,7 @@
 					<li>BMT_CrystalFairyMole</li>
 					<li>BMT_Crystalope</li>
 					<li>BMT_FacetMoth</li>
+					<li>BMT_FleeceSpider</li>
 					<li>BMT_FoundryBeetle</li>
 					<li>BMT_GiantSlug</li>
 					<li>BMT_GiantSnail</li>
@@ -174,8 +219,9 @@
 					<li>BMT_Jellypot</li>
 					<li>BMT_Jewelbug</li>
 					<li>BMT_Pillbug</li>
+					<li>BMT_SandyToad</li>
 					<li>BMT_Woolybat</li>
-					<li>BMT_WoolySpider</li>
+					<li>BMT_WoollySpider</li>
 					<li>BMT_Xyrion</li>
 					<li>BMT_Yooka</li>
 				</pawnKindDefs>
@@ -210,6 +256,9 @@
 					<li>BMT_RawShimmershroom</li>
 					<li>BMT_Starchstalk</li>
 					<li>BMT_StimquillDrug</li>
+					<li MayRequire="VanillaExpanded.VPlantsEMushrooms">VPE_Bileceps</li>
+					<li MayRequire="VanillaExpanded.VPlantsEMushrooms">VPE_Blisscap</li>
+					<li MayRequire="VanillaExpanded.VPlantsEMushrooms">VPE_Mycothread</li>
 				</thingDefs>
 				<thingDefCountRange>1~3</thingDefCountRange>
 				<totalPriceRange>200~400</totalPriceRange>
@@ -649,6 +698,23 @@
 				<maxValuePerUnit>400</maxValuePerUnit>
 				<thingDefCountRange>4~7</thingDefCountRange>
 				<totalPriceRange>500~1100</totalPriceRange>
+			</li>
+		</stockGens>
+	</TraderGen.TraderSpecializationDef>
+	<TraderGen.TraderSpecializationDef MayRequire="Ludeon.RimWorld.Biotech">
+		<defName>TG_Refugees</defName>
+		<label>refugees</label>
+		<stockGens>
+			<li Class="TraderGen.StockGen.Refugees">
+				<countRange>2~5</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>MedicineHerbal</thingDef>
+				<countRange>10~20</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>MealSurvivalPack</thingDef>
+				<countRange>10~20</countRange>
 			</li>
 		</stockGens>
 	</TraderGen.TraderSpecializationDef>

@@ -12,6 +12,10 @@
 					<value>
 						<li Class="TraderGen.GenExtension">
 							<specializations>
+								<li MayRequire="vanillaracesexpanded.android">
+									<def>TG_Androids</def>
+									<commonality>10.0</commonality>
+								</li>
 								<li>
 									<def>TG_Drugs</def>
 									<commonality>10.0</commonality>
