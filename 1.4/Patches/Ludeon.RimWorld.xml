@@ -178,6 +178,10 @@
 						<commonality>10.0</commonality>
 					</li>
 					<li>
+						<def>TG_Nanotechnology</def>
+						<commonality>5.0</commonality>
+					</li>
+					<li>
 						<def>TG_Organs</def>
 						<commonality>5.0</commonality>
 					</li>

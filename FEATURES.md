@@ -52,6 +52,9 @@ TraderGen will add between zero and five specializations (depending on mod setti
 * **Medicine:** Sells different types of medicine, neutroamine and medical drugs. May have small amounts of luciferium in stock. Present in bulk orbital traders.
 
 
+* **Nanotechnology:** Sells shield cores, deathrest capacity serum, luciferium, glitterworld medicine and hyperweave. Present in exotic orbital traders.
+
+
 * **Ordnance:** Sells chemfuel, mortar shells, grenades, and reinforced barrels. May have boomalopes in stock. Present in combat and slaver orbital traders.
 
 
@@ -295,7 +298,11 @@ TraderGen should support wares from mods out of the box; please submit a [bug re
 * **[Vanilla Books Expanded](https://steamcommunity.com/workshop/filedetails/?id=2193152410):** Culture orbital trader specialization.
 
 
-* **[Vanilla Cooking Expanded](https://steamcommunity.com/sharedfiles/filedetails/?id=2134308519):** Orbital traders with the gourmet specialization have some condiments in stock.
+* **[Vanilla Cooking Expanded](https://steamcommunity.com/sharedfiles/filedetails/?id=2134308519):**
+
+  * Orbital traders with the gourmet specialization have some condiments in stock.
+
+  * Orbital traders with the nanotechnology specialization have digestible resurrector nanites in stock.
 
 
 * **[Vanilla Expanded Framework](https://steamcommunity.com/workshop/filedetails/?id=2023507013):** If an animal using the [Untameable](https://github.com/AndroidQuazar/VanillaExpandedFramework/wiki/Untameable) feature is chosen as a venerated animal, TraderGen will not add them to trader stock. This includes multiple creatures from Alpha Animals and some Insectoids from Vanilla Factions Expanded - Insectoids, and other animals from many mods.
@@ -310,7 +317,7 @@ TraderGen should support wares from mods out of the box; please submit a [bug re
   * Bio-engineering suppliers have a custom name generator.
 
 
-* **[Vanilla Factions Expanded - Mechanoids](https://steamcommunity.com/sharedfiles/filedetails/?id=2329011599):** Traders with the technology specialization may have a mechanoid component in stock.
+* **[Vanilla Factions Expanded - Mechanoids](https://steamcommunity.com/sharedfiles/filedetails/?id=2329011599):** Traders with the nanotechnology or technology specializations may have mechanoid components in stock.
 
 
 * **[Vanilla Factions Expanded - Medieval](https://steamcommunity.com/sharedfiles/filedetails/?id=2023513450):** The wine merchant caravan will now purchase other alcohol types and social drugs.
@@ -343,6 +350,9 @@ TraderGen should support wares from mods out of the box; please submit a [bug re
 
 
 * **[Vanilla Ideology Expanded - Memes and Structures](https://steamcommunity.com/sharedfiles/filedetails/?id=2636329500):** Extensive support for the precepts of this mod. Check the Ideology section above for details.
+
+
+* **[Vanilla Plants Expanded - Mushrooms](https://steamcommunity.com/sharedfiles/filedetails/?id=3006389281):** Orbital traders with the caveworld specialization may have products from this mod in stock.
 
 
 * **[Vanilla Races Expanded - Sanguophage](https://steamcommunity.com/sharedfiles/filedetails/?id=2963116383):** The bloodfeeder specialization may have animal, corpse or sanguophage hemogen in stock.

@@ -605,6 +605,40 @@
 		</stockGens>
 	</TraderGen.TraderSpecializationDef>
 	<TraderGen.TraderSpecializationDef>
+		<defName>TG_Nanotechnology</defName>
+		<label>nanotechnology</label>
+		<stockGens>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>Luciferium</thingDef>
+				<countRange>14~25</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef" MayRequire="Ludeon.RimWorld.Royalty">
+				<thingDef>BroadshieldCore</thingDef>
+				<countRange>1~2</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>Hyperweave</thingDef>
+				<totalPriceRange>800~1300</totalPriceRange>
+			</li>
+			<li Class="StockGenerator_SingleDef" MayRequire="OskarPotocki.VFE.Mechanoid">
+				<thingDef>VFE_ComponentMechanoid</thingDef>
+				<countRange>2~5</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>MedicineUltratech</thingDef>
+				<countRange>14~35</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef" MayRequire="Ludeon.RimWorld.Biotech">
+				<thingDef>DeathrestCapacitySerum</thingDef>
+				<countRange>0~2</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef" MayRequire="VanillaExpanded.VCookE">
+				<thingDef>VCE_DigestibleResurrectorNanites</thingDef>
+				<countRange>1~3</countRange>
+			</li>
+		</stockGens>
+	</TraderGen.TraderSpecializationDef>
+	<TraderGen.TraderSpecializationDef>
 		<defName>TG_Ordnance</defName>
 		<label>ordnance</label>
 		<stockGens>
@@ -707,6 +741,7 @@
 		<stockGens>
 			<li Class="TraderGen.StockGen.Refugees">
 				<countRange>2~5</countRange>
+				<price>VeryCheap</price>
 			</li>
 			<li Class="StockGenerator_SingleDef">
 				<thingDef>MedicineHerbal</thingDef>
