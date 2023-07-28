@@ -52,7 +52,7 @@ TraderGen will add between zero and five specializations (depending on mod setti
 * **Medicine:** Sells different types of medicine, neutroamine and medical drugs. May have small amounts of luciferium in stock. Present in bulk orbital traders.
 
 
-* **Nanotechnology:** Sells shield cores, deathrest capacity serum, luciferium, glitterworld medicine and hyperweave. Present in exotic orbital traders.
+* **Nanotechnology:** Sells shield cores (with Royalty), deathrest capacity serums (with Biotech), luciferium, glitterworld medicine and hyperweave. Present in exotic orbital traders.
 
 
 * **Ordnance:** Sells chemfuel, mortar shells, grenades, and reinforced barrels. May have boomalopes in stock. Present in combat and slaver orbital traders.
@@ -67,7 +67,7 @@ TraderGen will add between zero and five specializations (depending on mod setti
 * **Psycasting (with [Royalty](https://rimworldgame.com/royalty/)):** An uncommon specialization which sells psytrainers, psychic apparel and weapons. If a mod setting is enabled, it will also sell psylink neuroformers if the trader does not belong to the Empire faction. Present in exotic and imperial orbital traders.
 
 
-* **Refugees (with [Biotech](https://rimworldgame.com/biotech/)):** Has some colonists from a random xenotype willing to join the colony if their travel fee is paid. It also herbal medicine and packaged survival meals in stock. Present in bulk, combat and slaver orbital traders.
+* **Refugees (with [Biotech](https://rimworldgame.com/biotech/)):** Traders with this specialization have some pawns from a random xenotype willing to join the colony if their travel fee is paid. Non-baseliners are more common than usual, and each group of refugees is always from the same xenotype. These orbital traders also carry some herbal medicine and packaged survival meals. Present in bulk, combat and slaver orbital traders.
 
 
 * **Scavenger**: Sells steel, chemfuel, components, and random scavenged items. Present in bulk and combat traders.

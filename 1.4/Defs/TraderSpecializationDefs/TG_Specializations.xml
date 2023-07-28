@@ -211,7 +211,6 @@
 					<li>BMT_CrystalFairyMole</li>
 					<li>BMT_Crystalope</li>
 					<li>BMT_FacetMoth</li>
-					<li>BMT_FleeceSpider</li>
 					<li>BMT_FoundryBeetle</li>
 					<li>BMT_GiantSlug</li>
 					<li>BMT_GiantSnail</li>
@@ -219,9 +218,8 @@
 					<li>BMT_Jellypot</li>
 					<li>BMT_Jewelbug</li>
 					<li>BMT_Pillbug</li>
-					<li>BMT_SandyToad</li>
 					<li>BMT_Woolybat</li>
-					<li>BMT_WoollySpider</li>
+					<li>BMT_WoolySpider</li>
 					<li>BMT_Xyrion</li>
 					<li>BMT_Yooka</li>
 				</pawnKindDefs>
