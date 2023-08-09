@@ -58,6 +58,7 @@ namespace TraderGen.StockGen
 				if (ModsConfig.IdeologyActive)
 				{
 					_disallowedSale.Add(DefOf.Thing.GauranlenSeed);
+					_disallowedSale.Add(ThingDefOf.Skull);
 				}
 
 				if (ModsConfig.BiotechActive)
@@ -66,6 +67,16 @@ namespace TraderGen.StockGen
 					_disallowedSale.Add(ThingDefOf.Genepack);
 					_disallowedSale.Add(ThingDefOf.HumanEmbryo);
 					_disallowedSale.Add(ThingDefOf.HumanOvum);
+					_disallowedSale.Add(DefOf.Thing.SignalChip);
+					_disallowedSale.Add(DefOf.Thing.PowerfocusChip);
+					_disallowedSale.Add(DefOf.Thing.NanostructuringChip);
+				}
+
+				if (DefOf.Thing.AM_HyperLinkageChip != null)
+				{
+					_disallowedSale.Add(DefOf.Thing.AM_HyperLinkageChip);
+					_disallowedSale.Add(DefOf.Thing.AM_StellarProcessingChip);
+					_disallowedSale.Add(DefOf.Thing.AM_QuantumMatrixChip);
 				}
 
 				if (DefOf.Thing.AG_Alphapack != null)
