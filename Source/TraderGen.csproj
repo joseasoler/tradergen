@@ -113,7 +113,7 @@
 		<Compile Include="TraderKind\Util.cs" />
 		<Compile Include="TraderSpecializationDef.cs" />
 		<Reference Include="System" />
-		<PackageReference Include="Lib.Harmony" Version="2.*" ExcludeAssets="runtime" />
+		<PackageReference Include="Lib.Harmony" Version="2.2.2" ExcludeAssets="runtime" />
 		<PackageReference Include="Krafs.Publicizer" Version="1.0.2">
 		  <PrivateAssets>all</PrivateAssets>
 		  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>

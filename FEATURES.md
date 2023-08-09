@@ -361,6 +361,9 @@ TraderGen should support wares from mods out of the box; please submit a [bug re
 * **[Vanilla Trading Expanded](https://steamcommunity.com/sharedfiles/filedetails/?id=2785616901):** TraderGen is fully compatible with this mod. The trade companies of the stock market in Vanilla Trading Expanded can use the new orbital trader names added by TraderGen.
 
 
+* **[Vanilla Vehicles Expanded](https://steamcommunity.com/sharedfiles/filedetails/?id=3014906877):** The scavenger specialization has some car parts in stock.
+
+
 * **[Vanilla Weapons Expanded](https://steamcommunity.com/sharedfiles/filedetails/?id=1814383360):**
 
   * Orbital traders with the hunting specialization may have compound bows in stock.

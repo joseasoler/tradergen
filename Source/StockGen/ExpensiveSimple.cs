@@ -30,7 +30,7 @@ namespace TraderGen.StockGen
 		private static HashSet<ThingDef> _disallowedPurchase;
 
 		/// <summary>
-		/// Lazily initialized cache of things disallowed from sale.. Initialized in CanSell.
+		/// Lazily initialized cache of things disallowed from sale. Initialized in CanSell.
 		/// </summary>
 		private static HashSet<ThingDef> _disallowedSale;
 
@@ -55,18 +55,33 @@ namespace TraderGen.StockGen
 			{
 				_disallowedSale = new HashSet<ThingDef>();
 				_disallowedSale.AddRange(DefOf.ThingCategory.BodyParts.DescendantThingDefs);
-				if (DefOf.ThingCategory.GR_GeneticMaterial != null)
-				{
-					_disallowedSale.AddRange(DefOf.ThingCategory.GR_GeneticMaterial.DescendantThingDefs);
-				}
-
 				if (ModsConfig.IdeologyActive)
 				{
 					_disallowedSale.Add(DefOf.Thing.GauranlenSeed);
 				}
+
+				if (ModsConfig.BiotechActive)
+				{
+					_disallowedSale.Add(ThingDefOf.Xenogerm);
+					_disallowedSale.Add(ThingDefOf.Genepack);
+					_disallowedSale.Add(ThingDefOf.HumanEmbryo);
+					_disallowedSale.Add(ThingDefOf.HumanOvum);
+				}
+
+				if (DefOf.Thing.AG_Alphapack != null)
+				{
+					_disallowedSale.Add(DefOf.Thing.AG_Alphapack);
+					_disallowedSale.Add(DefOf.Thing.AG_Mixedpack);
+				}
+
+				if (DefOf.ThingCategory.GR_GeneticMaterial != null)
+				{
+					_disallowedSale.AddRange(DefOf.ThingCategory.GR_GeneticMaterial.DescendantThingDefs);
+				}
 			}
 
-			return !_disallowedSale.Contains(def) && ValuePerUnit(def) <= maxValuePerUnit && base.CanSell(def, forTile, faction);
+			return !_disallowedSale.Contains(def) && ValuePerUnit(def) <= maxValuePerUnit &&
+			       base.CanSell(def, forTile, faction);
 		}
 
 		protected override bool CanBuy(in ThingDef def)

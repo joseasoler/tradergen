@@ -731,6 +731,11 @@
 				<thingDefCountRange>4~7</thingDefCountRange>
 				<totalPriceRange>500~1100</totalPriceRange>
 			</li>
+			<li Class="StockGenerator_Category" MayRequire="OskarPotocki.VanillaVehiclesExpanded">
+				<categoryDef>VVE_CarParts</categoryDef>
+				<thingDefCountRange>1~3</thingDefCountRange>
+				<countRange>1~2</countRange>
+			</li>
 		</stockGens>
 	</TraderGen.TraderSpecializationDef>
 	<TraderGen.TraderSpecializationDef MayRequire="Ludeon.RimWorld.Biotech">
