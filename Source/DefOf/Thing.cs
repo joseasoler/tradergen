@@ -15,13 +15,6 @@ namespace TraderGen.DefOf
 		[MayRequire("sarg.alphagenes")] public static ThingDef AG_Alphapack;
 		[MayRequire("sarg.alphagenes")] public static ThingDef AG_Mixedpack;
 
-		[MayRequireBiotech] [MayRequire("sarg.alphamechs")]
-		public static ThingDef AM_HyperLinkageChip;
-		[MayRequireBiotech] [MayRequire("sarg.alphamechs")]
-		public static ThingDef AM_StellarProcessingChip;
-		[MayRequireBiotech] [MayRequire("sarg.alphamechs")]
-		public static ThingDef AM_QuantumMatrixChip;
-
 		static Thing() => DefOfHelper.EnsureInitializedInCtor(typeof(Thing));
 	}
 }

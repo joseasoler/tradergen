@@ -72,11 +72,12 @@ namespace TraderGen.StockGen
 					_disallowedSale.Add(DefOf.Thing.NanostructuringChip);
 				}
 
-				if (DefOf.Thing.AM_HyperLinkageChip != null)
+				// These defs are active if both Alpha Memes and Biotech are active at the same time.
+				if (DefDatabase<ThingDef>.defsByName.TryGetValue("AM_HyperLinkageChip", out ThingDef hyperLinkageChip))
 				{
-					_disallowedSale.Add(DefOf.Thing.AM_HyperLinkageChip);
-					_disallowedSale.Add(DefOf.Thing.AM_StellarProcessingChip);
-					_disallowedSale.Add(DefOf.Thing.AM_QuantumMatrixChip);
+					_disallowedSale.Add(hyperLinkageChip);
+					_disallowedSale.Add(DefDatabase<ThingDef>.GetNamedSilentFail("AM_StellarProcessingChip"));
+					_disallowedSale.Add(DefDatabase<ThingDef>.GetNamedSilentFail("AM_QuantumMatrixChip"));
 				}
 
 				if (DefOf.Thing.AG_Alphapack != null)
