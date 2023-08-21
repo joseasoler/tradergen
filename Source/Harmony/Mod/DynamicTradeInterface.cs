@@ -12,14 +12,12 @@ namespace TraderGen.Harmony.Mod
 		internal static bool Prepare(MethodBase original)
 		{
 			
-			Log.Error($"Prepare method: {ModAssemblies.DynamicTradeInterface()}");
 			return ModAssemblies.DynamicTradeInterface() != null;
 		}
 
 		internal static MethodBase TargetMethod()
 		{
 			var method = ModAssemblies.GetMethod(ModAssemblies.DynamicTradeInterface(), "Window_DynamicTrade", "PreOpen");
-			Log.Error($"Obtained method: {method}");
 			return method;
 		}
 
