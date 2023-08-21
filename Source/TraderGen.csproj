@@ -37,6 +37,10 @@
 		<Compile Include="Harmony\HarmonyInitialization.cs" />
 
 		<Compile Include="Harmony\HarmonyUtils.cs" />
+
+		<Compile Include="Harmony\ModAssemblies.cs" />
+
+		<Compile Include="Harmony\Mod\DynamicTradeInterface.cs" />
 		<Compile Include="Harmony\Mod\TradeUIRevised.cs" />
 		<Compile Include="Harmony\Settlements\CaravanArrivalAction_Trade_Arrived_Patch.cs" />
 		<Compile Include="Harmony\Settlements\CaravanVisitUtility_TradeCommand_Patch.cs" />

@@ -12,6 +12,25 @@ namespace TraderGen.Harmony
 	/// </summary>
 	public static class HarmonyUtils
 	{
+		/// <summary>
+		/// Lazily initialized value tracking if the Dynamic Trade Interface mod is active.
+		/// </summary>
+		private static bool? _dynamicTradeInterfaceActive;
+
+		/// <summary>
+		/// Returns true if the Dynamic Trade Interface mod is being used.
+		/// </summary>
+		/// <returns>True if the mod is being used.</returns>
+		public static bool DynamicTradeInterfaceActive()
+		{
+			if (_dynamicTradeInterfaceActive == null)
+			{
+				_dynamicTradeInterfaceActive = LoadedModManager.RunningMods.Any(pack => pack.PackageId == "zeracronius.dynamictradeinterface");
+			}
+
+			return (bool) _dynamicTradeInterfaceActive;
+		}
+		
 		// PackageIDs of the Trader Ships mod and its re-textures.
 		private static readonly string[] TraderShipMods =
 		{
@@ -47,7 +66,7 @@ namespace TraderGen.Harmony
 		/// <summary>
 		/// Returns true if the Trade UI revised mod is being used.
 		/// </summary>
-		/// <returns>True if any of the mentioned mods are being used.</returns>
+		/// <returns>True if the mod is being used.</returns>
 		public static bool TradeUIRevisedActive()
 		{
 			if (_tradeUIRevisedActive == null)

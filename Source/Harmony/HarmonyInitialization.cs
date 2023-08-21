@@ -15,7 +15,7 @@ namespace TraderGen.Harmony
 		/// </summary>
 		static HarmonyInitialization()
 		{
-			// Initialize state.
+			ModAssemblies.Initialize();
 			var harmony = new HarmonyLib.Harmony("joseasoler.TraderGen");
 			// Annotation patches.
 			harmony.PatchAll(Assembly.GetExecutingAssembly());
