@@ -36,7 +36,7 @@ To compile this mod on Windows, you will need to install the [.NET Framework 4.7
 Contributions
 ---
 
-This project encourages community involvement and contributions. Check the [CONTRIBUTING](CONTRIBUTING.md) file for details. Existing contributors can be checked in the [contributors list](https://gitlab.com/joseasoler/tradergen/-/graphs/main).
+This project encourages community involvement and contributions. Check the [CONTRIBUTING](CONTRIBUTING.md) file for details. Existing contributors can be checked in the [contributors list](https://github.com/joseasoler/tradergen/graphs/contributors).
 
 License
 ---

@@ -18,15 +18,15 @@ All bug reports must provide a HugsLibs log. To obtain one, follow these steps:
 
 If you do not have HugsLib, you can also use a RimWorld log. You can look how to obtain it in [this link](https://steamcommunity.com/sharedfiles/filedetails/?id=725234314).
 
-Please use the [issue tracker](https://gitlab.com/joseasoler/tradergen/-/issues) or the [bug reports thread in the Steam Workshop](https://steamcommunity.com/workshop/filedetails/discussion/2804121197/3274690571067124957/) to report bugs.
+Please use the [issue tracker](https://github.com/joseasoler/tradergen/issues) or the [bug reports thread in the Steam Workshop](https://steamcommunity.com/workshop/filedetails/discussion/2804121197/3274690571067124957/) to report bugs.
 
 Questions
 ---
 
-Questions about the mod can be asked in the discussion thread of TraderGen in the [Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=2804121197) or using the  [issue tracker](https://gitlab.com/joseasoler/tradergen/-/issues).
+Questions about the mod can be asked in the discussion thread of TraderGen in the [Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=2804121197) or using the  [issue tracker](https://github.com/joseasoler/tradergen/issues).
 
 
 Contributions
 ---
 
-The project and its contributions are managed using the [GitLab Flow](https://docs.gitlab.com/ee/topics/gitlab_flow.html). Before submitting a merge request for a feature, create an issue on the [tracker](https://gitlab.com/joseasoler/tradergen/-/issues) to allow for discussing and refining the idea prior to its implementation.
+Before submitting a pull request for a feature, create an issue on the [tracker](https://github.com/joseasoler/tradergen/issues) to allow discussing and refining the idea prior to its implementation.
