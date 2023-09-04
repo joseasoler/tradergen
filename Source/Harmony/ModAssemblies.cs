@@ -14,7 +14,14 @@ namespace TraderGen.Harmony
 				var packageId = pack.PackageId;
 				if (packageId == "zeracronius.dynamictradeinterface")
 				{
-					_dynamicTradeInterface = pack.assemblies.loadedAssemblies[0];
+					if (pack.assemblies == null || pack.assemblies.loadedAssemblies.NullOrEmpty())
+					{
+						Logger.Error($"Could not find assemblies for Dynamic Trade Interface. Patch will not be applied.");
+					}
+					else
+					{
+						_dynamicTradeInterface = pack.assemblies.loadedAssemblies[0];
+					}
 				}
 			}
 		}
@@ -35,7 +42,7 @@ namespace TraderGen.Harmony
 				}
 
 				foreach (var method in type.GetMethods(BindingFlags.Public | BindingFlags.NonPublic |
-					         BindingFlags.Instance | BindingFlags.Static))
+				                                       BindingFlags.Instance | BindingFlags.Static))
 				{
 					if (method.Name.Contains(methodName))
 					{

@@ -2,7 +2,6 @@
 using HarmonyLib;
 using RimWorld;
 using TraderGen.TraderKind;
-using Verse;
 
 namespace TraderGen.Harmony.Mod
 {
