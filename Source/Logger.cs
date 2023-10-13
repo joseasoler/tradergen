@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using TG.Mod;
-using TraderGen.Mod;
 using Verse;
 
 namespace TraderGen
@@ -13,7 +12,7 @@ namespace TraderGen
 		/// <summary>
 		/// All log entries by TraderGen will use this prefix.
 		/// </summary>
-		private const string Prefix = "[TraderGen] ";
+		public const string Prefix = "[TraderGen] ";
 
 		/// <summary>
 		/// Logs a message, prefixed with the mod name.. 

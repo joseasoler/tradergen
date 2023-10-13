@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using RimWorld;
 using Verse;
@@ -22,9 +23,27 @@ namespace TraderGen
 				yield return error;
 			}
 
-			foreach (var error in stockGens.SelectMany(stockGenerator => stockGenerator.ConfigErrors(null)))
+			for (int index = 0; index < stockGens.Count; ++index)
 			{
-				yield return error;
+				List<string> errorList = null;
+				try
+				{
+					IEnumerable<string> errorEnumerable = stockGens[index].ConfigErrors(null);
+					errorList = errorEnumerable.ToList();
+				}
+				catch (Exception exception)
+				{
+					errorList = new List<string>
+					{
+						$"{Logger.Prefix} {defName} could not process config errors of the stock generator in position {index} due to an exception:",
+						$"{exception}"
+					};
+				}
+
+				foreach (var error in errorList)
+				{
+					yield return error;
+				}
 			}
 		}
 	}
