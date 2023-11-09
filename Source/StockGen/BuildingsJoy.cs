@@ -1,5 +1,6 @@
 using System.Linq;
 using Verse;
+using ThingCategory = TraderGen.DefOfs.ThingCategory;
 
 namespace TraderGen.StockGen
 {
@@ -24,7 +25,7 @@ namespace TraderGen.StockGen
 
 		protected override bool CanBuy(in ThingDef def)
 		{
-			return DefOf.ThingCategory.BuildingsJoy.DescendantThingDefs.Contains(def);
+			return ThingCategory.BuildingsJoy.DescendantThingDefs.Contains(def);
 		}
 	}
 }

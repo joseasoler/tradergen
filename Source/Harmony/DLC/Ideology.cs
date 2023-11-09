@@ -1,3 +1,4 @@
+using System.Reflection;
 using HarmonyLib;
 using TraderGen.Ideo;
 using Verse;
@@ -17,9 +18,9 @@ namespace TraderGen.Harmony.DLC
 		{
 			if (!ModsConfig.IdeologyActive) return;
 
-			var recachePrecepts =
+			MethodInfo recachePrecepts =
 				AccessTools.Method(typeof(RimWorld.Ideo), nameof(RimWorld.Ideo.RecachePrecepts));
-			var invalidateIdeoCache =
+			HarmonyMethod invalidateIdeoCache =
 				new HarmonyMethod(AccessTools.Method(typeof(Ideology), nameof(InvalidateIdeoCache)));
 			harmony.Patch(recachePrecepts, postfix: invalidateIdeoCache);
 		}

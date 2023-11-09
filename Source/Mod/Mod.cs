@@ -1,6 +1,4 @@
-using System;
 using TG.Mod;
-using TraderGen.TraderKind;
 using UnityEngine;
 using Verse;
 

@@ -3,8 +3,12 @@ using HarmonyLib;
 using RimWorld;
 using Verse;
 
-namespace TraderGen.Harmony
+namespace TraderGen.StockModification
 {
+	/// <summary>
+	/// Can be used to configure custom genepack generation.
+	/// See GeneUtility_GenerateGeneSet_Patch for details.
+	/// </summary>
 	[HarmonyPatch(typeof(GeneUtility), nameof(GeneUtility.GenerateGeneSet))]
 	public static class CustomGenepackGenerator
 	{
@@ -77,7 +81,7 @@ namespace TraderGen.Harmony
 		/// Generate a genepack with genes from a specific xenotype.
 		/// </summary>
 		/// <returns>Geneset for the pack.</returns>
-		private static GeneSet GenerateFromXenotype()
+		public static GeneSet GenerateFromXenotype()
 		{
 			// Collect genes from the xenotype that could be used in a genepack.
 			var architeGenes = new List<GeneDef>();
@@ -113,36 +117,6 @@ namespace TraderGen.Harmony
 			return result;
 		}
 
-		internal static bool Prefix(ref GeneSet __result, int? seed)
-		{
-			if (!ModsConfig.BiotechActive || Xenotype == null)
-			{
-				return true;
-			}
 
-			if (seed.HasValue)
-			{
-				Rand.PushState(seed.Value);
-			}
-
-			__result = GenerateFromXenotype();
-
-			if (seed.HasValue)
-			{
-				Rand.PopState();
-			}
-
-			if (Name == null)
-			{
-				__result.GenerateName();
-			}
-			else
-			{
-				__result.name = $"{ThingDefOf.Genepack.label} ({Name.ToLower()}, {__result.genes.Count})";
-			}
-			__result.SortGenes();
-
-			return false;
-		}
 	}
 }

@@ -1,4 +1,5 @@
 using RimWorld;
+using TraderGen.DefOfs;
 using Verse;
 
 namespace TraderGen.StockGen
@@ -10,9 +11,8 @@ namespace TraderGen.StockGen
 	{
 		protected override bool CanBuy(in ThingDef def)
 		{
-			return def.IsIngestible && def.ingestible.joyKind != null && (def.ingestible.joyKind == JoyKindDefOf.Gluttonous ||
-			                                                              def.ingestible.joyKind.defName ==
-			                                                              "VCE_Confectionery");
+			return def.IsIngestible && def.ingestible.joyKind != null &&
+				(def.ingestible.joyKind == JoyKindDefOf.Gluttonous || def.ingestible.joyKind == JoyKind.VCE_Confectionery);
 		}
 	}
 }

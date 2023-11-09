@@ -59,7 +59,7 @@ namespace TraderGen.TraderKind
 		/// </summary>
 		/// <param name="trader">Trader being evaluated.</param>
 		/// <returns>Label to use for this ship.</returns>
-		public static string Label(ITrader trader)
+		public static string LabelWithTraderSpecialization(ITrader trader)
 		{
 			var specializations = Cache.Specializations(trader);
 			return specializations.NullOrEmpty()

@@ -36,13 +36,13 @@ namespace TraderGen.Harmony
 			foreach (var type in assembly.GetTypes())
 			{
 				var currentTypeName = type.FullName;
-				if (!currentTypeName.Contains(typeName))
+				if (currentTypeName != null && !currentTypeName.Contains(typeName))
 				{
 					continue;
 				}
 
 				foreach (var method in type.GetMethods(BindingFlags.Public | BindingFlags.NonPublic |
-				                                       BindingFlags.Instance | BindingFlags.Static))
+					         BindingFlags.Instance | BindingFlags.Static))
 				{
 					if (method.Name.Contains(methodName))
 					{

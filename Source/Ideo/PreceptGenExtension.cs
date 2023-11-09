@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using System.Linq;
 using Verse;
 
 namespace TraderGen.Ideo
@@ -18,9 +17,12 @@ namespace TraderGen.Ideo
 				yield return error;
 			}
 
-			foreach (var error in defs.SelectMany(def => def.ConfigErrors()))
+			foreach (PreceptGenDef preceptGenDef in defs)
 			{
-				yield return error;
+				foreach (var error in preceptGenDef.ConfigErrors())
+				{
+					yield return error;
+				}
 			}
 		}
 	}

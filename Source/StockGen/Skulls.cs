@@ -14,7 +14,7 @@ namespace TraderGen.StockGen
 			thingDefCountRange = IntRange.one;
 		}
 
-		protected override IEnumerable<Thing> TryMakeForStock(ThingDef def, Faction faction)
+		protected override IEnumerable<Thing> TryMakeForStock(ThingDef thingDef, Faction faction)
 		{
 			if (!ModsConfig.IdeologyActive)
 			{

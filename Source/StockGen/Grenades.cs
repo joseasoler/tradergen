@@ -1,5 +1,6 @@
 using System.Linq;
 using Verse;
+using ThingCategory = TraderGen.DefOfs.ThingCategory;
 
 namespace TraderGen.StockGen
 {
@@ -11,10 +12,10 @@ namespace TraderGen.StockGen
 		protected override bool CanBuy(in ThingDef def)
 		{
 			// Vanilla grenades belong to the Grenades ThingCategory.
-			return DefOf.ThingCategory.Grenades.DescendantThingDefs.Contains(def) ||
-			       // VWE-G grenade belts are apparel with one of these apparel tags.
-			       def.apparel != null && (def.apparel.tags.Contains("GrenadeDestructiveBelt") ||
-			                               def.apparel.tags.Contains("GrenadeNonDestructiveBelt"));
+			return ThingCategory.Grenades.DescendantThingDefs.Contains(def) ||
+				// VWE-G grenade belts are apparel with one of these apparel tags.
+				def.apparel != null && (def.apparel.tags.Contains("GrenadeDestructiveBelt") ||
+					def.apparel.tags.Contains("GrenadeNonDestructiveBelt"));
 		}
 	}
 }

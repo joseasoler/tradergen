@@ -2,49 +2,34 @@
 using HarmonyLib;
 using RimWorld;
 using TG.Mod;
-using TraderGen.Mod;
 using TraderGen.TraderKind;
 using Verse;
 
-namespace TraderGen.Harmony
+namespace TraderGen.Harmony.StockGeneration
 {
-	/// <summary>
-	/// Prepares extra TraderGen information before vanilla generation takes place.
-	/// Then generates extra TraderGen content after vanilla generation.
-	/// </summary>
-	[HarmonyPatch]
-	public static class TraderStock
+
+	[HarmonyPatch(typeof(ThingSetMaker_TraderStock), nameof(ThingSetMaker_TraderStock.Generate))]
+	internal static class ThingSetMaker_TraderStock_Generate_Patch
 	{
 		/// <summary>
 		/// Prepares the extra TraderGen information. This must be done before vanilla content is generated as TraderGen
 		/// may need to forbid some of the stock they create.
+		/// The seed must have been set beforehand by patches in TradeShip, Pawn or Settlement.
 		/// </summary>
-		/// <param name="parms">Group of parameters to be used for stock generation.</param>
-		/// <param name="outThings">List of generated things.</param>
-		[HarmonyPrefix]
-		[HarmonyPatch(typeof(ThingSetMaker_TraderStock), nameof(ThingSetMaker_TraderStock.Generate))]
-		private static void GeneratePrefix(ThingSetMakerParams parms, ref List<Thing> outThings)
+		private static void Prefix(ThingSetMakerParams parms, ref List<Thing> outThings)
 		{
-			var trader = parms.traderDef;
-			var tile = parms.tile ?? -1;
-			var faction = parms.makingFaction;
-			// Add trader to the cache. The seed must have been set beforehand by patches in TradeShip, Pawn or Settlement.
-			Cache.TryAdd(trader, tile, faction);
+			Cache.TryAdd(parms.traderDef, parms.tile ?? -1, parms.makingFaction);
 		}
-
+		
 		/// <summary>
 		/// Generates extra TraderGen stock after generating the vanilla stock.
 		/// Logs a generated things report if requested.
 		/// </summary>
-		/// <param name="parms">Group of parameters to be used for stock generation.</param>
-		/// <param name="outThings">List of generated things.</param>
-		[HarmonyPostfix]
-		[HarmonyPatch(typeof(ThingSetMaker_TraderStock), nameof(ThingSetMaker_TraderStock.Generate))]
-		private static void GeneratePostfix(ThingSetMakerParams parms, ref List<Thing> outThings)
+		private static void Postfix(ThingSetMakerParams parms, ref List<Thing> outThings)
 		{
-			var trader = parms.traderDef;
-			var tile = parms.tile ?? -1;
-			var faction = parms.makingFaction;
+			TraderKindDef trader = parms.traderDef;
+			int tile = parms.tile ?? -1;
+			Faction faction = parms.makingFaction;
 
 			// Include stock generator information from the original trader.
 			if (Settings.LogGen && Settings.LogStockGen)

@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using RimWorld;
-using TraderGen.Harmony;
+using TraderGen.StockModification;
 using Verse;
 
 namespace TraderGen.StockGen
@@ -24,9 +24,9 @@ namespace TraderGen.StockGen
 
 		public override IEnumerable<string> ConfigErrors(TraderKindDef parentDef)
 		{
-			foreach (var err in base.ConfigErrors(parentDef))
+			foreach (string error in base.ConfigErrors(parentDef))
 			{
-				yield return err;
+				yield return error;
 			}
 
 			if (minQuality > maxQuality)
@@ -44,13 +44,13 @@ namespace TraderGen.StockGen
 
 		public override IEnumerable<Thing> GenerateThings(int forTile, Faction faction = null)
 		{
-			ChangeStockQuality.SetQuality(minQuality, minQuality, maxQuality);
-			foreach (var result in base.GenerateThings(forTile, faction))
+			ChangeStockQuality.Set(minQuality, minQuality, maxQuality);
+			foreach (Thing result in base.GenerateThings(forTile, faction))
 			{
 				yield return result;
 			}
 
-			ChangeStockQuality.ResetQuality();
+			ChangeStockQuality.Reset();
 		}
 	}
 }

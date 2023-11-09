@@ -25,9 +25,9 @@ namespace TraderGen.StockGen
 
 		public override IEnumerable<string> ConfigErrors(TraderKindDef parentDef)
 		{
-			foreach (var err in base.ConfigErrors(parentDef))
+			foreach (string error in base.ConfigErrors(parentDef))
 			{
-				yield return err;
+				yield return error;
 			}
 
 			if (apparelDef == null || !apparelDef.IsApparel)

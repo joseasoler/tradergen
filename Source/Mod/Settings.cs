@@ -1,6 +1,3 @@
-using System.Collections.Generic;
-using RimWorld;
-using TraderGen.TraderKind;
 using Verse;
 
 // ToDo change namespace without affecting settings.

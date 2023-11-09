@@ -1,6 +1,5 @@
 ﻿using RimWorld;
 using TG.Mod;
-using TraderGen.Mod;
 using Verse;
 
 namespace TraderGen.StockGen

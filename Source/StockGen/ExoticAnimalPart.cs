@@ -3,7 +3,7 @@
 namespace TraderGen.StockGen
 {
 	/// <summary>
-	/// Handles items such as elephant tusk or thrumbo horn, but also similar modded items such as gallatross horn.
+	/// Handles items such as elephant tusk or thrumbo horn, and also similar modded items such as gallatross horn.
 	/// </summary>
 	public class ExoticAnimalPart : ConditionMatcher
 	{

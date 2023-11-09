@@ -8,12 +8,12 @@ namespace TraderGen.StockGen
 	public class HighQualityWeapons : HighQuality
 	{
 		public List<string> weaponTags = new List<string>();
-		
+
 		public override IEnumerable<string> ConfigErrors(TraderKindDef parentDef)
 		{
-			foreach (var err in base.ConfigErrors(parentDef))
+			foreach (string error in base.ConfigErrors(parentDef))
 			{
-				yield return err;
+				yield return error;
 			}
 
 			if (weaponTags.Count == 0)

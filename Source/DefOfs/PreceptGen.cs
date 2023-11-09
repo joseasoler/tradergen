@@ -1,9 +1,9 @@
 using RimWorld;
 using TraderGen.Ideo;
 
-namespace TraderGen.DefOf
+namespace TraderGen.DefOfs
 {
-	[RimWorld.DefOf]
+	[DefOf]
 	public class PreceptGen
 	{
 		[MayRequireIdeology] public static PreceptGenDef TG_AutomaticApprovesOfCharity;

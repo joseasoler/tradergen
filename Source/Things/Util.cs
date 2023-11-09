@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using RimWorld;
-using TraderGen.DefOf;
+using TraderGen.DefOfs;
 using Verse;
 using ThingCategory = Verse.ThingCategory;
 
@@ -153,7 +153,7 @@ namespace TraderGen.Things
 			foreach (var hediffDef in DefDatabase<HediffDef>.AllDefsListForReading)
 			{
 				if (hediffDef.spawnThingOnRemoved != null &&
-				    DefOf.ThingCategory.BodyParts.DescendantThingDefs.Contains(hediffDef.spawnThingOnRemoved))
+				    DefOfs.ThingCategory.BodyParts.DescendantThingDefs.Contains(hediffDef.spawnThingOnRemoved))
 				{
 					_hediffDefOf[hediffDef.spawnThingOnRemoved] = hediffDef;
 				}
@@ -177,20 +177,20 @@ namespace TraderGen.Things
 			if (_naturalBodyMod != null) return;
 
 			// Gather all natural body parts.
-			_naturalBodyMod = DefOf.ThingCategory.BodyPartsNatural.DescendantThingDefs.ToHashSet();
-			if (DefOf.ThingCategory.AA_ImplantCategory != null)
+			_naturalBodyMod = DefOfs.ThingCategory.BodyPartsNatural.DescendantThingDefs.ToHashSet();
+			if (DefOfs.ThingCategory.AA_ImplantCategory != null)
 			{
-				_naturalBodyMod.UnionWith(DefOf.ThingCategory.AA_ImplantCategory.DescendantThingDefs);
+				_naturalBodyMod.UnionWith(DefOfs.ThingCategory.AA_ImplantCategory.DescendantThingDefs);
 			}
 
-			if (DefOf.ThingCategory.VFEI_BodyPartsInsect != null)
+			if (DefOfs.ThingCategory.VFEI_BodyPartsInsect != null)
 			{
-				_naturalBodyMod.UnionWith(DefOf.ThingCategory.VFEI_BodyPartsInsect.DescendantThingDefs);
+				_naturalBodyMod.UnionWith(DefOfs.ThingCategory.VFEI_BodyPartsInsect.DescendantThingDefs);
 			}
 
-			if (DefOf.ThingCategory.GR_ImplantCategory != null)
+			if (DefOfs.ThingCategory.GR_ImplantCategory != null)
 			{
-				_naturalBodyMod.UnionWith(DefOf.ThingCategory.GR_ImplantCategory.DescendantThingDefs);
+				_naturalBodyMod.UnionWith(DefOfs.ThingCategory.GR_ImplantCategory.DescendantThingDefs);
 			}
 
 			// Keep only those that count as an added part or implant.

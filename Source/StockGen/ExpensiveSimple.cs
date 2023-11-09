@@ -1,9 +1,8 @@
-using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 using RimWorld;
 using Verse;
+using Thing = TraderGen.DefOfs.Thing;
 
 namespace TraderGen.StockGen
 {
@@ -54,10 +53,10 @@ namespace TraderGen.StockGen
 			if (_disallowedSale == null)
 			{
 				_disallowedSale = new HashSet<ThingDef>();
-				_disallowedSale.AddRange(DefOf.ThingCategory.BodyParts.DescendantThingDefs);
+				_disallowedSale.AddRange(DefOfs.ThingCategory.BodyParts.DescendantThingDefs);
 				if (ModsConfig.IdeologyActive)
 				{
-					_disallowedSale.Add(DefOf.Thing.GauranlenSeed);
+					_disallowedSale.Add(Thing.GauranlenSeed);
 					_disallowedSale.Add(ThingDefOf.Skull);
 				}
 
@@ -67,9 +66,9 @@ namespace TraderGen.StockGen
 					_disallowedSale.Add(ThingDefOf.Genepack);
 					_disallowedSale.Add(ThingDefOf.HumanEmbryo);
 					_disallowedSale.Add(ThingDefOf.HumanOvum);
-					_disallowedSale.Add(DefOf.Thing.SignalChip);
-					_disallowedSale.Add(DefOf.Thing.PowerfocusChip);
-					_disallowedSale.Add(DefOf.Thing.NanostructuringChip);
+					_disallowedSale.Add(Thing.SignalChip);
+					_disallowedSale.Add(Thing.PowerfocusChip);
+					_disallowedSale.Add(Thing.NanostructuringChip);
 				}
 
 				// These defs are active if both Alpha Memes and Biotech are active at the same time.
@@ -80,15 +79,15 @@ namespace TraderGen.StockGen
 					_disallowedSale.Add(DefDatabase<ThingDef>.GetNamedSilentFail("AM_QuantumMatrixChip"));
 				}
 
-				if (DefOf.Thing.AG_Alphapack != null)
+				if (Thing.AG_Alphapack != null)
 				{
-					_disallowedSale.Add(DefOf.Thing.AG_Alphapack);
-					_disallowedSale.Add(DefOf.Thing.AG_Mixedpack);
+					_disallowedSale.Add(Thing.AG_Alphapack);
+					_disallowedSale.Add(Thing.AG_Mixedpack);
 				}
 
-				if (DefOf.ThingCategory.GR_GeneticMaterial != null)
+				if (DefOfs.ThingCategory.GR_GeneticMaterial != null)
 				{
-					_disallowedSale.AddRange(DefOf.ThingCategory.GR_GeneticMaterial.DescendantThingDefs);
+					_disallowedSale.AddRange(DefOfs.ThingCategory.GR_GeneticMaterial.DescendantThingDefs);
 				}
 			}
 
@@ -101,10 +100,10 @@ namespace TraderGen.StockGen
 			if (_disallowedPurchase == null)
 			{
 				_disallowedPurchase = new HashSet<ThingDef>();
-				_disallowedPurchase.AddRange(DefOf.ThingCategory.BodyPartsNatural.DescendantThingDefs);
-				_disallowedPurchase.AddRange(DefOf.ThingCategory.EggsFertilized.DescendantThingDefs);
-				_disallowedPurchase.AddRange(DefOf.ThingCategory.EggsUnfertilized.DescendantThingDefs);
-				_disallowedPurchase.AddRange(DefOf.ThingCategory.InertRelics.DescendantThingDefs);
+				_disallowedPurchase.AddRange(DefOfs.ThingCategory.BodyPartsNatural.DescendantThingDefs);
+				_disallowedPurchase.AddRange(DefOfs.ThingCategory.EggsFertilized.DescendantThingDefs);
+				_disallowedPurchase.AddRange(DefOfs.ThingCategory.EggsUnfertilized.DescendantThingDefs);
+				_disallowedPurchase.AddRange(DefOfs.ThingCategory.InertRelics.DescendantThingDefs);
 			}
 
 			return def.category == ThingCategory.Item && !def.IsApparel && !def.IsWeapon &&

@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using System.Linq;
 using RimWorld;
 using Verse;
 
@@ -41,24 +40,36 @@ namespace TraderGen.Ideo
 				yield return error;
 			}
 
-			foreach (var error in visitorStockGens.SelectMany(stockGenerator => stockGenerator.ConfigErrors(null)))
+			foreach (StockGenerator stockGen in visitorStockGens)
 			{
-				yield return error;
+				foreach (string error in stockGen.ConfigErrors(null))
+				{
+					yield return error;
+				}
 			}
 
-			foreach (var error in traderStockGens.SelectMany(stockGenerator => stockGenerator.ConfigErrors(null)))
+			foreach (StockGenerator stockGen in traderStockGens)
 			{
-				yield return error;
+				foreach (string error in stockGen.ConfigErrors(null))
+				{
+					yield return error;
+				}
 			}
 
-			foreach (var error in settlementStockGens.SelectMany(stockGenerator => stockGenerator.ConfigErrors(null)))
+			foreach (StockGenerator stockGen in settlementStockGens)
 			{
-				yield return error;
+				foreach (string error in stockGen.ConfigErrors(null))
+				{
+					yield return error;
+				}
 			}
 
-			foreach (var error in stockRules.SelectMany(rule => rule.ConfigErrors()))
+			foreach (StockRule.Rule rule in stockRules)
 			{
-				yield return error;
+				foreach (string error in rule.ConfigErrors())
+				{
+					yield return error;
+				}
 			}
 		}
 	}

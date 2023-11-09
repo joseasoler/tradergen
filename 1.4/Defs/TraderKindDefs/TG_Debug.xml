@@ -10,7 +10,7 @@
 		<stockGenerators>
 			<li Class="StockGenerator_SingleDef">
 				<thingDef>Silver</thingDef>
-				<countRange>2000~4000</countRange>
+				<countRange>20000~20000</countRange>
 			</li>
 		</stockGenerators>
 		<modExtensions>

@@ -9,7 +9,6 @@ namespace TraderGen.StockGen
 	/// </summary>
 	public class Alcohol : ConditionMatcher
 	{
-
 		protected override bool CanBuy(in ThingDef def)
 		{
 			return Things.Util.IsAlcohol(def);

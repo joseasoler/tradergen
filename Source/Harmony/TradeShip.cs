@@ -85,7 +85,7 @@ namespace TraderGen.Harmony
 		{
 			if (__instance?.TraderKind != null)
 			{
-				var label = Util.Label(__instance);
+				var label = Util.LabelWithTraderSpecialization(__instance);
 				__result = $"{__instance.name} ({label})";
 			}
 		}
@@ -150,7 +150,7 @@ namespace TraderGen.Harmony
 				letterText = "TraderArrivalSpecializations".Translate(name, label, specializationsStr, factionStr);
 			}
 
-			worker.SendStandardLetter(Util.Label(trader).CapitalizeFirst(), letterText, LetterDefOf.PositiveEvent, parms,
+			worker.SendStandardLetter(Util.LabelWithTraderSpecialization(trader).CapitalizeFirst(), letterText, LetterDefOf.PositiveEvent, parms,
 				LookTargets.Invalid);
 		}
 

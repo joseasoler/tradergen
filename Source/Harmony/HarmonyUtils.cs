@@ -84,7 +84,7 @@ namespace TraderGen.Harmony
 		/// <returns>New label to use.</returns>
 		public static TaggedString TaggedLabel(TaggedString originalLabel)
 		{
-			return Util.Label(TradeSession.trader);
+			return Util.LabelWithTraderSpecialization(TradeSession.trader);
 		}
 
 		/// <summary>

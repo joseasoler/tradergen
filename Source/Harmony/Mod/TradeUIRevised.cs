@@ -1,7 +1,4 @@
-using System.Linq;
-using System.Reflection;
 using HarmonyLib;
-using Verse;
 
 namespace TraderGen.Harmony.Mod
 {

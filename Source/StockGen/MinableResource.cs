@@ -21,11 +21,14 @@ namespace TraderGen.StockGen
 
 		private static void InitializeMinableResources()
 		{
-			if (_minableResources != null) return;
+			if (_minableResources != null)
+			{
+				return;
+			}
 
 			_minableResources = new Dictionary<ThingDef, float>();
 
-			foreach (var thingDef in DefDatabase<ThingDef>.AllDefsListForReading)
+			foreach (ThingDef thingDef in DefDatabase<ThingDef>.AllDefsListForReading)
 			{
 				if (thingDef.building?.mineableThing != null)
 				{

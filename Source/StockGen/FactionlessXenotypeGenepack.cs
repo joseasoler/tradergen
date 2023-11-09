@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using RimWorld;
-using TraderGen.Harmony;
+using TraderGen.StockModification;
 using Verse;
 
 namespace TraderGen.StockGen
@@ -17,16 +17,16 @@ namespace TraderGen.StockGen
 
 		private static bool HasDisallowedGene(XenotypeDef def)
 		{
-			foreach (var gene in def.genes)
+			foreach (GeneDef geneDef in def.genes)
 			{
 				// Hemogenic xenotypes have their own stock generator.
-				if (gene == GeneDefOf.Hemogenic)
+				if (geneDef == GeneDefOf.Hemogenic)
 				{
 					return true;
 				}
 
-				// Vanilla Races Expanded - Androids
-				var categoryName = gene.displayCategory.defName;
+				// Omit android "genes" from Vanilla Races Expanded - Androids.
+				var categoryName = geneDef.displayCategory.defName;
 				if (categoryName == "VREA_Hardware" || categoryName == "VREA_Subroutine")
 				{
 					return true;
@@ -41,7 +41,6 @@ namespace TraderGen.StockGen
 			return def == XenotypeDefOf.Baseliner || DisallowedXenotypes.Contains(def.defName) || HasDisallowedGene(def);
 		}
 
-
 		private static float XenotypeWeight(XenotypeDef def)
 		{
 			return DisallowedXenotype(def) ? 0.0F : 2.0F * def.factionlessGenerationWeight;
@@ -55,7 +54,7 @@ namespace TraderGen.StockGen
 			}
 
 			_factionlessXenotypes = new List<XenotypeDef>();
-			foreach (var xenotypeDef in DefDatabase<XenotypeDef>.AllDefsListForReading)
+			foreach (XenotypeDef xenotypeDef in DefDatabase<XenotypeDef>.AllDefsListForReading)
 			{
 				if (XenotypeWeight(xenotypeDef) > 0.0f)
 				{

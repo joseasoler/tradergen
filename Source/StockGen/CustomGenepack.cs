@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using RimWorld;
-using TraderGen.Harmony;
+using TraderGen.StockModification;
 using Verse;
 
 namespace TraderGen.StockGen
@@ -18,9 +18,9 @@ namespace TraderGen.StockGen
 
 		public override IEnumerable<string> ConfigErrors(TraderKindDef parentDef)
 		{
-			foreach (var err in base.ConfigErrors(parentDef))
+			foreach (string error in base.ConfigErrors(parentDef))
 			{
-				yield return err;
+				yield return error;
 			}
 
 			if (architeGenes == IntRange.zero && nonArchiteGenes == IntRange.zero)
@@ -28,13 +28,14 @@ namespace TraderGen.StockGen
 				yield return "TraderGen.StockGen.CustomGenepack: cannot generate genepack without genes.";
 			}
 		}
+
 		protected override bool CanBuy(in ThingDef def)
 		{
 			return def == ThingDefOf.Genepack;
 		}
-		
+
 		protected abstract bool SetCustomGeneration();
-		
+
 		public override IEnumerable<Thing> GenerateThings(int forTile, Faction faction = null)
 		{
 			if (!SetCustomGeneration())
@@ -44,8 +45,8 @@ namespace TraderGen.StockGen
 
 			CustomGenepackGenerator.ArchiteGeneCount = architeGenes;
 			CustomGenepackGenerator.NonArchiteGeneCount = nonArchiteGenes;
-			
-			foreach (var result in base.GenerateThings(forTile, faction))
+
+			foreach (Thing result in base.GenerateThings(forTile, faction))
 			{
 				yield return result;
 			}

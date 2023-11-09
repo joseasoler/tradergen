@@ -1,9 +1,9 @@
 using RimWorld;
 using Verse;
 
-namespace TraderGen.DefOf
+namespace TraderGen.DefOfs
 {
-	[RimWorld.DefOf]
+	[DefOf]
 	public class Thing
 	{
 		[MayRequireIdeology] public static ThingDef GauranlenSeed;

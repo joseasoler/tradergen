@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Force.DeepCloner;
 using RimWorld;
-using TraderGen.DefOf;
+using TraderGen.DefOfs;
 using TraderGen.StockGen;
 using Verse;
 
@@ -45,10 +45,9 @@ namespace TraderGen.Ideo
 		/// <summary>
 		/// Generates a PreceptGen for preferred apparel if the ideology has any.
 		/// </summary>
-		/// <param name="ideo">Ideology being processed.</param>
 		/// <param name="preferredApparels">List of preferred apparels.</param>
 		/// <returns>Null if the ideology has no preferred apparels, a generated PreceptGen otherwise.</returns>
-		private static PreceptGenDef PreferredApparelPreceptGen(RimWorld.Ideo ideo, List<ThingDef> preferredApparels)
+		private static PreceptGenDef PreferredApparelPreceptGen(List<ThingDef> preferredApparels)
 		{
 			if (preferredApparels.NullOrEmpty()) return null;
 
@@ -181,7 +180,7 @@ namespace TraderGen.Ideo
 				preceptGenDefs.Add(PreceptGen.TG_AutomaticNoWoodyStock);
 			}
 
-			var apparelGenDef = PreferredApparelPreceptGen(ideo, preferredApparels);
+			var apparelGenDef = PreferredApparelPreceptGen(preferredApparels);
 			if (apparelGenDef != null)
 			{
 				preceptGenDefs.Add(apparelGenDef);
@@ -308,7 +307,7 @@ namespace TraderGen.Ideo
 		/// <returns>Extra StockGenerators.</returns>
 		public static List<StockGenerator> VisitorStockGens(RimWorld.Ideo ideo)
 		{
-			return _visitorStockGens.ContainsKey(ideo.id) ? _visitorStockGens[ideo.id] : null;
+			return _visitorStockGens.TryGetValue(ideo.id, out List<StockGenerator> gen) ? gen : null;
 		}
 
 		/// <summary>
@@ -318,7 +317,7 @@ namespace TraderGen.Ideo
 		/// <returns>Extra StockGenerators.</returns>
 		public static List<StockGenerator> TraderStockGens(RimWorld.Ideo ideo)
 		{
-			return _traderStockGens.ContainsKey(ideo.id) ? _traderStockGens[ideo.id] : null;
+			return _traderStockGens.TryGetValue(ideo.id, out List<StockGenerator> gen) ? gen : null;
 		}
 
 		/// <summary>
@@ -328,7 +327,7 @@ namespace TraderGen.Ideo
 		/// <returns>Extra StockGenerators.</returns>
 		public static List<StockGenerator> SettlementStockGens(RimWorld.Ideo ideo)
 		{
-			return _settlementStockGens.ContainsKey(ideo.id) ? _settlementStockGens[ideo.id] : null;
+			return _settlementStockGens.TryGetValue(ideo.id, out List<StockGenerator> gen) ? gen : null;
 		}
 
 		/// <summary>
@@ -338,7 +337,7 @@ namespace TraderGen.Ideo
 		/// <returns>Items that will never be trade.</returns>
 		public static HashSet<ThingDef> WillNotTrade(RimWorld.Ideo ideo)
 		{
-			return _willNotTrade.ContainsKey(ideo.id) ? _willNotTrade[ideo.id] : null;
+			return _willNotTrade.TryGetValue(ideo.id, out HashSet<ThingDef> value) ? value : null;
 		}
 
 		/// <summary>
@@ -348,7 +347,7 @@ namespace TraderGen.Ideo
 		/// <returns>Items that will never be in stock.</returns>
 		public static HashSet<ThingDef> WillNotStock(RimWorld.Ideo ideo)
 		{
-			return _willNotStock.ContainsKey(ideo.id) ? _willNotStock[ideo.id] : null;
+			return _willNotStock.TryGetValue(ideo.id, out HashSet<ThingDef> value) ? value : null;
 		}
 	}
 }

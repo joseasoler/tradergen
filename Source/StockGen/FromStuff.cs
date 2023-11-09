@@ -3,6 +3,7 @@ using System.Text;
 using RimWorld;
 using TraderGen.TraderKind;
 using Verse;
+using ThingCategory = TraderGen.DefOfs.ThingCategory;
 
 namespace TraderGen.StockGen
 {
@@ -49,9 +50,9 @@ namespace TraderGen.StockGen
 				SetStuffDef();
 			}
 
-			foreach (var err in base.ConfigErrors(parentDef))
+			foreach (string error in base.ConfigErrors(parentDef))
 			{
-				yield return err;
+				yield return error;
 			}
 
 			if (_stuffDef == null)
@@ -67,21 +68,21 @@ namespace TraderGen.StockGen
 		/// <summary>
 		/// Generates stock using a ThingDef.
 		/// </summary>
-		/// <param name="def">Thing being generated.</param>
+		/// <param name="thingDef">Thing being generated.</param>
 		/// <param name="faction">Faction of the trader.</param>
 		/// <returns></returns>
-		protected override IEnumerable<Thing> TryMakeForStock(ThingDef def, Faction faction)
+		protected override IEnumerable<Thing> TryMakeForStock(ThingDef thingDef, Faction faction)
 		{
-			if (!def.tradeability.TraderCanSell() || !def.MadeFromStuff)
+			if (!thingDef.tradeability.TraderCanSell() || !thingDef.MadeFromStuff)
 			{
-				Logger.ErrorOnce($"TraderGen.StockGen.FromStuff cannot generate {def} for trader stock.");
+				Logger.ErrorOnce($"TraderGen.StockGen.FromStuff cannot generate {thingDef} for trader stock.");
 				yield break;
 			}
 
-			var stackCount = RandomCountOf(def);
-			for (var index = 0; index < stackCount; ++index)
+			var stackCount = RandomCountOf(thingDef);
+			for (int countIndex = 0; countIndex < stackCount; ++countIndex)
 			{
-				var thing = ThingMaker.MakeThing(def, _stuffDef);
+				var thing = ThingMaker.MakeThing(thingDef, _stuffDef);
 				thing.stackCount = 1;
 				yield return thing;
 			}
@@ -97,13 +98,13 @@ namespace TraderGen.StockGen
 		{
 			if (_stuffDef.tradeability.TraderCanSell() && !Cache.WillNotStock(Cache.GenerationSeed, _stuffDef))
 			{
-				foreach (var thing in StockGeneratorUtility.TryMakeForStock(_stuffDef, stuffCountRange.RandomInRange, faction))
+				foreach (Thing thing in StockGeneratorUtility.TryMakeForStock(_stuffDef, stuffCountRange.RandomInRange, faction))
 				{
 					yield return thing;
 				}
 			}
 
-			foreach (var thing in base.GenerateThings(forTile, faction))
+			foreach (Thing thing in base.GenerateThings(forTile, faction))
 			{
 				yield return thing;
 			}
@@ -122,9 +123,9 @@ namespace TraderGen.StockGen
 			return _stuffDef.IsStuff && _stuffDef.stuffProps.CanMake(def) &&
 			       // Only sell non-armor apparel, furniture or art.
 			       (def.IsApparel && !Things.Util.IsArmor(def) || def.Minifiable &&
-				       (def.IsWithinCategory(DefOf.ThingCategory.BuildingsFurniture) ||
+				       (def.IsWithinCategory(ThingCategory.BuildingsFurniture) ||
 				        def.IsWithinCategory(ThingCategoryDefOf.BuildingsArt) ||
-				        def.IsWithinCategory(DefOf.ThingCategory.BuildingsJoy)));
+				        def.IsWithinCategory(ThingCategory.BuildingsJoy)));
 		}
 
 		/// <summary>

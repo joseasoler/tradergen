@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using RimWorld;
+using UnityEngine;
 using Verse;
 
 namespace TraderGen.StockGen
@@ -21,16 +22,22 @@ namespace TraderGen.StockGen
 			return def.IsApparel && ApparelCondition(def);
 		}
 
-		protected override IEnumerable<Thing> TryMakeForStock(ThingDef def, Faction faction)
+		protected override IEnumerable<Thing> TryMakeForStock(ThingDef thingDef, Faction faction)
 		{
-			if (!ModsConfig.IdeologyActive || faction?.ideos?.PrimaryIdeo == null)
+			if (!ModsConfig.IdeologyActive )
 			{
-				Logger.ErrorOnce("PreferredApparel should only be used when Ideology is active with trader having ideos.");
+				Logger.ErrorOnce("PreferredApparel should only be used when Ideology is active.");
 				yield break;
 			}
 
-			var color = faction.ideos.PrimaryIdeo.ApparelColor;
-			foreach (var thing in base.TryMakeForStock(def, faction))
+			if (faction?.ideos?.PrimaryIdeo == null)
+			{
+				Logger.ErrorOnce("PreferredApparel can only be used by traders that have a faction and an idelogy.");
+				yield break;
+			}
+
+			Color color = faction.ideos.PrimaryIdeo.ApparelColor;
+			foreach (Thing thing in base.TryMakeForStock(thingDef, faction))
 			{
 				thing.SetColor(color);
 				yield return thing;

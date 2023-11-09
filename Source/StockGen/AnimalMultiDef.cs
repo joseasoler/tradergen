@@ -61,9 +61,9 @@ namespace TraderGen.StockGen
 				}
 			}
 
-			var productDef = (ThingDef) _vfeResourceDef.GetValue(comp);
-			var isRandom = (bool) _vfeProductIsRandom.GetValue(comp);
-			var seasonal = (List<string>) _vfeProductSeasonal.GetValue(comp);
+			var productDef = (ThingDef)_vfeResourceDef.GetValue(comp);
+			var isRandom = (bool)_vfeProductIsRandom.GetValue(comp);
+			var seasonal = (List<string>)_vfeProductSeasonal.GetValue(comp);
 
 			if (productDef == null || isRandom || !seasonal.NullOrEmpty())
 			{
@@ -75,34 +75,57 @@ namespace TraderGen.StockGen
 
 		private void UpdateCache()
 		{
-			if (_cachedAnimals != null) return;
-			_cachedAnimals = pawnKindDefs.Select(pawnKindDef => pawnKindDef.race).ToHashSet();
+			if (_cachedAnimals != null)
+			{
+				return;
+			}
+
+			_cachedAnimals = new HashSet<ThingDef>();
+			foreach (PawnKindDef pawnKindDef in pawnKindDefs)
+			{
+				_cachedAnimals.Add(pawnKindDef.race);
+			}
 
 			_cachedAnimalProducts = new Dictionary<PawnKindDef, HashSet<ThingDef>>();
-			if (!animalProducts || animalProductPriceRange == FloatRange.Zero) return;
-
-			foreach (var pawnKind in pawnKindDefs)
+			if (!animalProducts || animalProductPriceRange == FloatRange.Zero)
 			{
-				_cachedAnimalProducts[pawnKind] = new HashSet<ThingDef>();
-				foreach (var comp in pawnKind.race.comps)
+				return;
+			}
+
+			foreach (PawnKindDef pawnKindDef in pawnKindDefs)
+			{
+				_cachedAnimalProducts[pawnKindDef] = new HashSet<ThingDef>();
+				foreach (CompProperties compProperties in pawnKindDef.race.comps)
 				{
-					var animalProductDefs = new List<ThingDef>();
-					switch (comp)
+					List<ThingDef> animalProductDefs = new List<ThingDef>();
+					switch (compProperties)
 					{
 						case CompProperties_Shearable shearableComp:
-							if (shearableComp.woolDef != null) animalProductDefs.Add(shearableComp.woolDef);
+							if (shearableComp.woolDef != null)
+							{
+								animalProductDefs.Add(shearableComp.woolDef);
+							}
+
 							break;
 						case CompProperties_Milkable milkableComp:
-							if (milkableComp.milkDef != null) animalProductDefs.Add(milkableComp.milkDef);
+							if (milkableComp.milkDef != null)
+							{
+								animalProductDefs.Add(milkableComp.milkDef);
+							}
+
 							break;
 						case CompProperties_EggLayer eggComp:
-							if (eggComp.eggUnfertilizedDef != null) animalProductDefs.Add(eggComp.eggUnfertilizedDef);
+							if (eggComp.eggUnfertilizedDef != null)
+							{
+								animalProductDefs.Add(eggComp.eggUnfertilizedDef);
+							}
+
 							break;
 						default:
 						{
-							if (comp.GetType().FullName == VfeAnimalProductComp)
+							if (compProperties.GetType().FullName == VfeAnimalProductComp)
 							{
-								var product = VefAnimalProduct(comp);
+								ThingDef product = VefAnimalProduct(compProperties);
 								if (product != null)
 								{
 									animalProductDefs.Add(product);
@@ -113,10 +136,12 @@ namespace TraderGen.StockGen
 						}
 					}
 
-					foreach (var animalProductDef in animalProductDefs.Where(def =>
-						         def.tradeability.TraderCanSell() && !Things.Util.IsExotic(def)))
+					foreach (ThingDef animalProductDef in animalProductDefs)
 					{
-						_cachedAnimalProducts[pawnKind].Add(animalProductDef);
+						if (animalProductDef.tradeability.TraderCanSell() && !Things.Util.IsExotic(animalProductDef))
+						{
+							_cachedAnimalProducts[pawnKindDef].Add(animalProductDef);
+						}
 					}
 				}
 			}
@@ -129,10 +154,12 @@ namespace TraderGen.StockGen
 				yield return err;
 			}
 
-			foreach (var pawnKindDef in pawnKindDefs.Where(pawnKindDef =>
-				         pawnKindDef.race?.race == null || !pawnKindDef.race.race.Animal))
+			foreach (PawnKindDef pawnKindDef in pawnKindDefs)
 			{
-				yield return $"TraderGen.StockGen.AnimalMultiDef: {pawnKindDef} is not an animal.";
+				if (pawnKindDef.race?.race == null || !pawnKindDef.race.race.Animal)
+				{
+					yield return $"TraderGen.StockGen.AnimalMultiDef: {pawnKindDef} is not an animal.";
+				}
 			}
 		}
 
@@ -181,7 +208,10 @@ namespace TraderGen.StockGen
 		/// <returns>Filtered out list of animals.</returns>
 		private List<PawnKindDef> AcceptablePawnKindDefs(int forTile, Faction faction = null)
 		{
-			if (!checkTemperature) return pawnKindDefs;
+			if (!checkTemperature)
+			{
+				return pawnKindDefs;
+			}
 
 			var tempTile = forTile;
 			if (tempTile == -1 && Find.AnyPlayerHomeMap != null)
@@ -207,12 +237,12 @@ namespace TraderGen.StockGen
 				def => StockGenerator_Animals.SelectionChanceFromWildnessCurve.Evaluate(def.RaceProps.wildness),
 				kindCountRange.RandomInRange);
 
-			foreach (var pawnDef in chosenPawnDefs)
+			foreach (PawnKindDef pawnKindDef in chosenPawnDefs)
 			{
-				var count = AnimalCount(pawnDef);
-				for (var i = 0; i < count; ++i)
+				var count = AnimalCount(pawnKindDef);
+				for (int animalIndex = 0; animalIndex < count; ++animalIndex)
 				{
-					var pawnGenerationRequest = new PawnGenerationRequest(pawnDef, tile: forTile);
+					PawnGenerationRequest pawnGenerationRequest = new PawnGenerationRequest(pawnKindDef, tile: forTile);
 					if (newborn)
 					{
 						pawnGenerationRequest.AllowedDevelopmentalStages = DevelopmentalStage.Newborn;
@@ -221,16 +251,22 @@ namespace TraderGen.StockGen
 					yield return PawnGenerator.GeneratePawn(pawnGenerationRequest);
 				}
 
-				if (!animalProducts || animalProductPriceRange == FloatRange.Zero) continue;
+				if (!animalProducts || animalProductPriceRange == FloatRange.Zero)
+				{
+					continue;
+				}
 
 				// Generate stock for animal products of the chosen animal.
-				foreach (var productDef in _cachedAnimalProducts[pawnDef])
+				foreach (ThingDef productThingDef in _cachedAnimalProducts[pawnKindDef])
 				{
-					if (!productDef.tradeability.TraderCanSell() || Things.Util.IsExotic(productDef) ||
-					    TraderKind.Cache.WillNotStock(TraderKind.Cache.GenerationSeed, productDef)) continue;
+					if (!productThingDef.tradeability.TraderCanSell() || Things.Util.IsExotic(productThingDef) ||
+					    TraderKind.Cache.WillNotStock(TraderKind.Cache.GenerationSeed, productThingDef))
+					{
+						continue;
+					}
 
-					var productCount = Mathf.RoundToInt(animalProductPriceRange.RandomInRange / productDef.BaseMarketValue);
-					foreach (var thing in StockGeneratorUtility.TryMakeForStock(productDef, productCount, faction))
+					int productCount = Mathf.RoundToInt(animalProductPriceRange.RandomInRange / productThingDef.BaseMarketValue);
+					foreach (Thing thing in StockGeneratorUtility.TryMakeForStock(productThingDef, productCount, faction))
 					{
 						yield return thing;
 					}
@@ -241,9 +277,20 @@ namespace TraderGen.StockGen
 		public override bool HandlesThingDef(ThingDef thingDef)
 		{
 			UpdateCache();
+			if (_cachedAnimals.Contains(thingDef))
+			{
+				return true;
+			}
 
-			return _cachedAnimals.Contains(thingDef) ||
-			       _cachedAnimalProducts.Values.Any(products => products.Contains(thingDef));
+			foreach (HashSet<ThingDef> productSet in _cachedAnimalProducts.Values)
+			{
+				if (productSet.Contains(thingDef))
+				{
+					return true;
+				}
+			}
+
+			return false;
 		}
 	}
 }

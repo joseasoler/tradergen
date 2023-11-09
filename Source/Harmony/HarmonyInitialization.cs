@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Reflection;
+using TraderGen.Harmony.Caravans;
 using Verse;
 
 namespace TraderGen.Harmony
@@ -20,8 +21,6 @@ namespace TraderGen.Harmony
 			// Annotation patches.
 			harmony.PatchAll(Assembly.GetExecutingAssembly());
 			// Conditional patches.
-			CaravanArrival.Patch(harmony);
-			DialogTrade.Patch(harmony);
 			TradeShipGen.Patch(harmony);
 			// DLC specific patches.
 			DLC.Ideology.Patch(harmony);
