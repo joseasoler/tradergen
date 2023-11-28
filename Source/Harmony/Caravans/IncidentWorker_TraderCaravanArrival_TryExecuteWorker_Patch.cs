@@ -8,6 +8,11 @@ using Verse;
 
 namespace TraderGen.Harmony.Caravans
 {
+	// This patch is disabled for now. The cavaran specialization feature is not enabled at the moment, so this patch does
+	// not need to run. It also has a conflict with Rim-Effect: Asari and the Reapers, as that mod uses SendLetter in its
+	// transpiler, so it will need to be reworked if it ever needs to come back.
+	
+	/*
 	[HarmonyPatch(typeof(IncidentWorker_TraderCaravanArrival),
 		nameof(IncidentWorker_TraderCaravanArrival.TryExecuteWorker))]
 	internal static class IncidentWorker_TraderCaravanArrival_TryExecuteWorker_Patch
@@ -62,4 +67,5 @@ namespace TraderGen.Harmony.Caravans
 			}
 		}
 	}
+	*/
 }
