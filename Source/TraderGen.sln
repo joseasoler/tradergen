@@ -4,13 +4,10 @@ Project("{4C9431F0-8CE6-11EC-B1E5-0800200C9A66}") = "TraderGen", "TraderGen.cspr
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		1.3|x64 = 1.3|x64
-		1.4|x64 = 1.4|x64
+		1.5|x64 = 1.5|x64
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{4C9431F0-8CE6-11EC-B1E5-0800200C9A66}.1.3|x64.ActiveCfg = 1.3|x64
-		{4C9431F0-8CE6-11EC-B1E5-0800200C9A66}.1.3|x64.Build.0 = 1.3|x64
-		{4C9431F0-8CE6-11EC-B1E5-0800200C9A66}.1.4|x64.ActiveCfg = 1.4|x64
-		{4C9431F0-8CE6-11EC-B1E5-0800200C9A66}.1.4|x64.Build.0 = 1.4|x64
+		{4C9431F0-8CE6-11EC-B1E5-0800200C9A66}.1.5|x64.ActiveCfg = 1.5|x64
+		{4C9431F0-8CE6-11EC-B1E5-0800200C9A66}.1.5|x64.Build.0 = 1.5|x64
 	EndGlobalSection
 EndGlobal

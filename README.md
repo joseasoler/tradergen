@@ -1,6 +1,6 @@
 # TraderGen
 
-[![RimWorld](https://img.shields.io/badge/RimWorld-1.4-informational)](https://rimworldgame.com/) [![Steam Downloads](https://img.shields.io/steam/downloads/2804121197)](https://steamcommunity.com/sharedfiles/filedetails/?id=2804121197) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](CODE_OF_CONDUCT.md)
+[![RimWorld](https://img.shields.io/badge/RimWorld-1.5-informational)](https://rimworldgame.com/) [![Steam Downloads](https://img.shields.io/steam/downloads/2804121197)](https://steamcommunity.com/sharedfiles/filedetails/?id=2804121197) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](CODE_OF_CONDUCT.md)
 
 [TraderGen](https://steamcommunity.com/sharedfiles/filedetails/?id=2804121197) is a [RimWorld](https://rimworldgame.com/) mod focused on improving trader variety and mod compatibility. Every trader will feel different and unique!
 
