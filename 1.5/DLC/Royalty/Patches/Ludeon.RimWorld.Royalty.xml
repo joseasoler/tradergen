@@ -2,7 +2,7 @@
 <Patch>
 	<!-- Specializations and namer of the imperial orbital trader. -->
 	<Operation Class="PatchOperationAddModExtension">
-		<xpath>/Defs/TraderKindDef[defName="Orbital_Empire"]</xpath>
+		<xpath>Defs/TraderKindDef[defName="Orbital_Empire"]</xpath>
 		<value>
 			<li Class="TraderGen.GenExtension">
 				<specializations>
@@ -14,7 +14,7 @@
 						<def>TG_Craftsmanship</def>
 						<commonality>5.0</commonality>
 					</li>
-					<li MayRequire="VanillaExpanded.VBooksE">
+					<li>
 						<def>TG_Culture</def>
 						<commonality>5.0</commonality>
 					</li>
@@ -54,7 +54,7 @@
 	</Operation>
 	<!-- Tweaks for the imperial orbital trader. -->
 	<Operation Class="PatchOperationAdd">
-		<xpath>/Defs/TraderKindDef[defName="Orbital_Empire"]/stockGenerators</xpath>
+		<xpath>Defs/TraderKindDef[defName="Orbital_Empire"]/stockGenerators</xpath>
 		<value>
 			<li Class="TraderGen.StockGen.BuildingsJoy">
 				<minTechLevelGenerate>Industrial</minTechLevelGenerate>
@@ -69,7 +69,7 @@
 	</Operation>
 	<!-- Tweaks for imperial settlements. -->
 	<Operation Class="PatchOperationAdd">
-		<xpath>/Defs/TraderKindDef[defName="Base_Empire_Standard"]/stockGenerators</xpath>
+		<xpath>Defs/TraderKindDef[defName="Base_Empire_Standard"]/stockGenerators</xpath>
 		<value>
 			<li Class="TraderGen.StockGen.BuildingsJoy">
 				<minTechLevelGenerate>Industrial</minTechLevelGenerate>
@@ -84,7 +84,7 @@
 	</Operation>
 	<!-- Tweaks for imperial caravans. -->
 	<Operation Class="PatchOperationAdd">
-		<xpath>/Defs/TraderKindDef[defName="Empire_Caravan_TraderGeneral"]/stockGenerators</xpath>
+		<xpath>Defs/TraderKindDef[defName="Empire_Caravan_TraderGeneral"]/stockGenerators</xpath>
 		<value>
 			<li Class="TraderGen.StockGen.BuildingsJoy">
 				<minTechLevelGenerate>Industrial</minTechLevelGenerate>
@@ -98,15 +98,15 @@
 		</value>
 	</Operation>
 	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/ThingDef[defName="PsychicAmplifier"]/tradeability</xpath>
+		<xpath>Defs/ThingDef[defName="PsychicAmplifier"]/tradeability</xpath>
 		<match Class="PatchOperationReplace">
-			<xpath>/Defs/ThingDef[defName="PsychicAmplifier"]/tradeability</xpath>
+			<xpath>Defs/ThingDef[defName="PsychicAmplifier"]/tradeability</xpath>
 			<value>
 				<tradeability>All</tradeability>
 			</value>
 		</match>
 		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/ThingDef[defName="PsychicAmplifier"]</xpath>
+			<xpath>Defs/ThingDef[defName="PsychicAmplifier"]</xpath>
 			<value>
 				<tradeability>All</tradeability>
 			</value>
@@ -114,7 +114,7 @@
 	</Operation>
 	<!--
 	<Operation Class="PatchOperationAddModExtension">
-		<xpath>/Defs/TraderKindDef[defName="Empire_Caravan_TraderGeneral"]</xpath>
+		<xpath>Defs/TraderKindDef[defName="Empire_Caravan_TraderGeneral"]</xpath>
 		<value>
 			<li Class="TraderGen.GenExtension">
 				<specializations>

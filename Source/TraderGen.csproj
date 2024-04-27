@@ -49,6 +49,7 @@
 
 		<Compile Include="Harmony\Mod\DynamicTradeInterface_Window_DynamicTrade_PreOpen_Patch.cs" />
 		<Compile Include="Harmony\Mod\TradeUIRevised.cs" />
+		<Compile Include="Harmony\Orbital\IncidentWorker_OrbitalTraderArrival_TryExecuteWorker_Patch.cs" />
 		<Compile Include="Harmony\Settlements\CaravanArrivalAction_Trade_Arrived_Patch.cs" />
 		<Compile Include="Harmony\Settlements\CaravanVisitUtility_TradeCommand_Patch.cs" />
 		<Compile Include="Harmony\Settlements\Settlement_PostRemove_Patch.cs" />

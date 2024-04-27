@@ -32,11 +32,13 @@ namespace TraderGen.Harmony
 			var tradeShipCallLabel = AccessTools.Method(typeof(TradeShip), nameof(TradeShip.GetCallLabel));
 			harmony.Patch(tradeShipCallLabel, postfix: tradeShipNamePatch);
 
+			/*
 			var tradeShipArrival = AccessTools.Method(typeof(IncidentWorker_OrbitalTraderArrival),
 				nameof(IncidentWorker_OrbitalTraderArrival.TryExecuteWorker));
 			var tradeShipArrivalLabel =
 				new HarmonyMethod(AccessTools.Method(typeof(TradeShipGen), nameof(TradeShipArrivalLabel)));
 			harmony.Patch(tradeShipArrival, transpiler: tradeShipArrivalLabel);
+		*/
 
 			if (HarmonyUtils.TraderShipsEnabled())
 			{

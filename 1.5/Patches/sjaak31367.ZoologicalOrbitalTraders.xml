@@ -8,7 +8,7 @@
 			<operations>
 				<!-- Unique zoological specializations. -->
 				<li Class="PatchOperationAdd">
-					<xpath>/Defs</xpath>
+					<xpath>Defs</xpath>
 					<value>
 						<TraderGen.TraderSpecializationDef>
 							<!-- Excludes leather and fabrics not coming from animals in vanilla. -->
@@ -48,7 +48,7 @@
 				</li>
 				<!-- Specializations for the zoological trader. -->
 				<li Class="PatchOperationAddModExtension">
-					<xpath>/Defs/TraderKindDef[defName="Orbital_ZoologicalTrader"]</xpath>
+					<xpath>Defs/TraderKindDef[defName="Orbital_ZoologicalTrader"]</xpath>
 					<value>
 						<li Class="TraderGen.GenExtension">
 							<specializations>
@@ -86,7 +86,7 @@
 				</li>
 				<!-- Modifications to the zoological trader. -->
 				<li Class="PatchOperationAdd">
-					<xpath>/Defs/TraderKindDef[defName="Orbital_ZoologicalTrader"]/stockGenerators</xpath>
+					<xpath>Defs/TraderKindDef[defName="Orbital_ZoologicalTrader"]/stockGenerators</xpath>
 					<value>
 						<!-- Purchases any exotic animal part, including those from mods such as Alpha Animals or Dinosauria. -->
 						<li Class="TraderGen.StockGen.ExoticAnimalPart" />

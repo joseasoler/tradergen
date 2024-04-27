@@ -13,7 +13,7 @@
 			<match Class="PatchOperationSequence">
 				<operations>
 					<li Class="PatchOperationAddModExtension">
-						<xpath>/Defs/TraderKindDef[defName="CONN_BionicsTrader"]</xpath>
+						<xpath>Defs/TraderKindDef[defName="CONN_BionicsTrader"]</xpath>
 						<value>
 							<li Class="TraderGen.GenExtension">
 								<specializations>
@@ -55,7 +55,7 @@
 					</li>
 					<!-- Modifications to the bionics trader -->
 					<li Class="PatchOperationAdd">
-						<xpath>/Defs/TraderKindDef[defName="CONN_BionicsTrader"]/stockGenerators</xpath>
+						<xpath>Defs/TraderKindDef[defName="CONN_BionicsTrader"]/stockGenerators</xpath>
 						<value>
 							<li Class="TraderGen.StockGen.ArtificialBodyMod"/>
 							<!-- Purchase expensive items. 56 is chosen to prevent purchase of mortar shells. -->

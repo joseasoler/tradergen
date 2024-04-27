@@ -8,7 +8,7 @@
 		<match Class="PatchOperationSequence">
 			<operations>
 				<li Class="PatchOperationAdd">
-					<xpath>/Defs/ThingDef[defName="TyrannosaurusRexSkull" or defName="TriceratopsHorn"]</xpath>
+					<xpath>Defs/ThingDef[defName="TyrannosaurusRexSkull" or defName="TriceratopsHorn"]</xpath>
 					<value>
 						<thingSetMakerTags>
 							<li>AnimalPart</li>
@@ -16,7 +16,7 @@
 					</value>
 				</li>
 				<li Class="PatchOperationAdd">
-					<xpath>/Defs/ThingDef[defName="TyrannosaurusRexSkull" or defName="TriceratopsHorn"]/tradeTags</xpath>
+					<xpath>Defs/ThingDef[defName="TyrannosaurusRexSkull" or defName="TriceratopsHorn"]/tradeTags</xpath>
 					<value>
 						<li>ExoticMisc</li>
 					</value>

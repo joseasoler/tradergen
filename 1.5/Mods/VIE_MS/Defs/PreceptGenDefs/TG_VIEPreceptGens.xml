@@ -114,7 +114,6 @@
 			<li Class="TraderGen.StockGen.MultiDef">
 				<thingDefs>
 					<li>InsectJelly</li>
-					<li MayRequire="OskarPotocki.VFE.Insectoid">VFEI_RoyalInsectJelly</li>
 					<li MayRequire="sarg.alphaanimals">AA_BlackInsectJelly</li>
 					<li MayRequire="VanillaExpanded.VCookE">VCE_InsectJellyPreserves</li>
 				</thingDefs>
@@ -128,7 +127,6 @@
 			<li Class="TraderGen.StockGen.MultiDef">
 				<thingDefs>
 					<li>InsectJelly</li>
-					<li MayRequire="OskarPotocki.VFE.Insectoid">VFEI_RoyalInsectJelly</li>
 					<li MayRequire="sarg.alphaanimals">AA_BlackInsectJelly</li>
 					<li MayRequire="VanillaExpanded.VCookE">VCE_InsectJellyPreserves</li>
 				</thingDefs>
@@ -142,7 +140,6 @@
 			<li Class="TraderGen.StockGen.MultiDef">
 				<thingDefs>
 					<li>InsectJelly</li>
-					<li MayRequire="OskarPotocki.VFE.Insectoid">VFEI_RoyalInsectJelly</li>
 					<li MayRequire="sarg.alphaanimals">AA_BlackInsectJelly</li>
 					<li MayRequire="VanillaExpanded.VCookE">VCE_InsectJellyPreserves</li>
 				</thingDefs>

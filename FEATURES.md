@@ -28,7 +28,7 @@ TraderGen will add between zero and five specializations (depending on mod setti
 * **Craftsmanship:** Adds apparel, furniture and art created from stone, metal or wood to the stock of the trader. Present in bulk and imperial orbital traders.
 
 
-* **Culture (with [Vanilla Books Expanded](https://steamcommunity.com/workshop/filedetails/?id=2193152410)):** Has recreation buildings, books, blueprints and maps in stock. You can purchase the newspaper of their ship as well. Present in exotic and imperial orbital traders.
+* **Culture:** Has recreation buildings, textbooks, schematics and novels in stock. With Anomaly, they may also have a tome. Present in exotic and imperial orbital traders.
 
 
 * **Draper:** Sells apparel and furniture created from textiles. Present in exotic and imperial orbital traders.
@@ -117,10 +117,6 @@ You can find a list of all changes below. Although the list mentions memes for e
 * Traders with the Slavery: Acceptable or Honorable precepts will always purchase slaves. Their settlements may have some slaves for sale.
 * Traders from ideologies who desire to build skullspikes may have some skulls in stock. These skulls will be generated with the name of their unfortunate owner.
 
-### Alpha Animals
-
-* Traders following the Biological corruptors meme will have some items created from red wood and some immature dryad meat in stock. Settlements may additionally have some eyelings in stock.
-
 ### Alpha Memes
 
 * Traders following the Artist meme will have some art items in stock
@@ -173,8 +169,6 @@ TraderGen should support wares from mods out of the box; please submit a [bug re
 
   * Orbital traders with the prospector specialization may have some sky steel in stock.
 
-  * Support for the Biological corruptors meme. Check the Ideology section above for details.
-
 
 * **[Alpha Bees](https://steamcommunity.com/sharedfiles/filedetails/?id=1558161673):** Orbital traders with the husbandry specialization have temperate and mild bees in stock.
 
@@ -206,9 +200,6 @@ TraderGen should support wares from mods out of the box; please submit a [bug re
   * The mobile refinery orbital trader gets access to these specializations: drugs, medicine, technology, wealth.
 
   * The fuel tanker orbital trader gets access to these specializations: prospector, scavenger, technology, wealth.
-
-
-* **[ESCP - Trolls](https://steamcommunity.com/sharedfiles/filedetails/?id=2878028462):** Orbital traders with the hunting specialization may have troll blood in stock.
 
 
 * **[Expanded Prosthetics and Organ Engineering](https://steamcommunity.com/sharedfiles/filedetails/?id=725956940):**
@@ -252,13 +243,7 @@ TraderGen should support wares from mods out of the box; please submit a [bug re
   * Orbital traders with the prospector specialization may also have some gemstones in stock.
 
 
-* **[MorrowRim - Just the Kwama](https://steamcommunity.com/sharedfiles/filedetails/?id=2108009219):** If Vanilla Factions Expanded - Insectoids is also loaded, bio-engineering supplier specializations will also have items and creatures from this mod.
-
-
 * **[pphhyy Sanguinary Animals](https://steamcommunity.com/sharedfiles/filedetails/?id=2923829125):** If Biotech is loaded, orbital traders with the bloodfeeder specialization will have some blood scarabs and LeSang fried eggs.
-
-
-* **[Remedies](https://steamcommunity.com/sharedfiles/filedetails/?id=2466826996):** Traders with the medicine specialization will have some poison ivy leaves in stock.
 
 
 * **[Replimat](https://steamcommunity.com/sharedfiles/filedetails/?id=1715402900):** Traders with the gourmet or tech specializations may have an isolinear computing module in stock.
@@ -295,9 +280,6 @@ TraderGen should support wares from mods out of the box; please submit a [bug re
 * **[Vanilla Brewing Expanded - Coffees and Teas](https://steamcommunity.com/sharedfiles/filedetails/?id=2275449762):** Orbital traders belonging to the cannibal specialization can have cannibal coffee in stock.
 
 
-* **[Vanilla Books Expanded](https://steamcommunity.com/workshop/filedetails/?id=2193152410):** Culture orbital trader specialization.
-
-
 * **[Vanilla Cooking Expanded](https://steamcommunity.com/sharedfiles/filedetails/?id=2134308519):**
 
   * Orbital traders with the gourmet specialization have some condiments in stock.
@@ -305,22 +287,10 @@ TraderGen should support wares from mods out of the box; please submit a [bug re
   * Orbital traders with the nanotechnology specialization have digestible resurrector nanites in stock.
 
 
-* **[Vanilla Expanded Framework](https://steamcommunity.com/workshop/filedetails/?id=2023507013):** If an animal using the [Untameable](https://github.com/AndroidQuazar/VanillaExpandedFramework/wiki/Untameable) feature is chosen as a venerated animal, TraderGen will not add them to trader stock. This includes multiple creatures from Alpha Animals and some Insectoids from Vanilla Factions Expanded - Insectoids, and other animals from many mods.
-
-
-* **[Vanilla Factions Expanded - Insectoids](https://steamcommunity.com/sharedfiles/filedetails/?id=2149755445):**
-
-  * The bio-engineering supplier gets access to insectoid-themed versions of these specializations: caveworld, craftsmanship, draper, gourmet, hunting, husbandry and wealth.
-
-  * The bio-engineering supplier will now purchase most really expensive items that could be resold for profit. It will also purchase insect jelly related items and kibble.
-
-  * Bio-engineering suppliers have a custom name generator.
+* **[Vanilla Expanded Framework](https://steamcommunity.com/workshop/filedetails/?id=2023507013):** If an animal using the [Untameable](https://github.com/AndroidQuazar/VanillaExpandedFramework/wiki/Untameable) feature is chosen as a venerated animal, TraderGen will not add them to trader stock. This includes multiple creatures from Alpha Animals, and other animals from many mods.
 
 
 * **[Vanilla Factions Expanded - Mechanoids](https://steamcommunity.com/sharedfiles/filedetails/?id=2329011599):** Traders with the nanotechnology or technology specializations may have mechanoid components in stock.
-
-
-* **[Vanilla Factions Expanded - Medieval](https://steamcommunity.com/sharedfiles/filedetails/?id=2023513450):** The wine merchant caravan will now purchase other alcohol types and social drugs.
 
 
 * **[Vanilla Factions Expanded - Settlers](https://steamcommunity.com/sharedfiles/filedetails/?id=2052918119):**

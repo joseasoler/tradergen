@@ -5,23 +5,19 @@
 			<li>Vanilla Weapons Expanded - Non-Lethal</li>
 		</mods>
 		<!--Slavers may have some non-lethal weapons in stock. -->
-		<match Class="PatchOperationSequence">
-			<operations>
-				<li Class="PatchOperationAdd">
-					<xpath>/Defs/TraderKindDef[defName="Orbital_PirateMerchant"]/stockGenerators</xpath>
-					<value>
-						<li Class="TraderGen.StockGen.WeaponRanged">
-							<minTechLevelGenerate>Industrial</minTechLevelGenerate>
-							<maxTechLevelGenerate>Spacer</maxTechLevelGenerate>
-							<weaponTags>
-								<li>NonLethal</li>
-							</weaponTags>
-							<thingDefCountRange>-1~2</thingDefCountRange>
-							<countRange>1~2</countRange>
-						</li>
-					</value>
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/TraderKindDef[defName="Orbital_PirateMerchant"]/stockGenerators</xpath>
+			<value>
+				<li Class="TraderGen.StockGen.WeaponRanged">
+					<minTechLevelGenerate>Industrial</minTechLevelGenerate>
+					<maxTechLevelGenerate>Spacer</maxTechLevelGenerate>
+					<weaponTags>
+						<li>NonLethal</li>
+					</weaponTags>
+					<thingDefCountRange>-1~2</thingDefCountRange>
+					<countRange>1~2</countRange>
 				</li>
-			</operations>
+			</value>
 		</match>
 	</Operation>
 </Patch>

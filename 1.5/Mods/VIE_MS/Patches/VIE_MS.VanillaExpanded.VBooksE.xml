@@ -7,7 +7,7 @@
 		<match Class="PatchOperationSequence">
 			<operations>
 				<li Class="PatchOperationAdd">
-					<xpath>/Defs</xpath>
+					<xpath>Defs</xpath>
 					<value>
 						<TraderGen.Ideo.PreceptGenDef>
 							<defName>TG_BookWriting_Exalted</defName>
@@ -34,7 +34,7 @@
 					</value>
 				</li>
 				<li Class="PatchOperationAddModExtension">
-					<xpath>/Defs/PreceptDef[defName="VME_BookWriting_Exalted"]</xpath>
+					<xpath>Defs/PreceptDef[defName="VME_BookWriting_Exalted"]</xpath>
 					<value>
 						<li Class="TraderGen.Ideo.PreceptGenExtension">
 							<defs>

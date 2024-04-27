@@ -5,7 +5,7 @@
 			<li>Vanilla Genetics Expanded</li>
 		</mods>
 		<match Class="PatchOperationAddModExtension">
-			<xpath>/Defs/TraderKindDef[defName="GR_OrbitalTrader"]</xpath>
+			<xpath>Defs/TraderKindDef[defName="GR_OrbitalTrader"]</xpath>
 			<value>
 				<li Class="TraderGen.GenExtension">
 					<specializations>
@@ -13,7 +13,7 @@
 							<def>TG_Caveworld</def>
 							<commonality>5.0</commonality>
 						</li>
-						<li MayRequire="VanillaExpanded.VBooksE">
+						<li>
 							<def>TG_Culture</def>
 							<commonality>5.0</commonality>
 						</li>

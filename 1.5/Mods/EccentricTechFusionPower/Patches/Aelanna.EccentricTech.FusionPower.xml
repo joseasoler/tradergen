@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Patch>
 	<Operation Class="PatchOperationAddModExtension">
-		<xpath>/Defs/TraderKindDef[defName="Eccentric_Orbital_MobileRefinery"]</xpath>
+		<xpath>Defs/TraderKindDef[defName="Eccentric_Orbital_MobileRefinery"]</xpath>
 		<value>
 			<li Class="TraderGen.GenExtension">
 				<specializations>
@@ -26,7 +26,7 @@
 		</value>
 	</Operation>
 	<Operation Class="PatchOperationAddModExtension">
-		<xpath>/Defs/TraderKindDef[defName="Eccentric_Orbital_FuelTanker"]</xpath>
+		<xpath>Defs/TraderKindDef[defName="Eccentric_Orbital_FuelTanker"]</xpath>
 		<value>
 			<li Class="TraderGen.GenExtension">
 				<specializations>

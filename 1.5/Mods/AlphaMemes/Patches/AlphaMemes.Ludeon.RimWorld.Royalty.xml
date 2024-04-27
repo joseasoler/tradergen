@@ -5,7 +5,7 @@
 			<li>Royalty</li>
 		</mods>
 		<match Class="PatchOperationAddModExtension">
-			<xpath>/Defs/PreceptDef[defName="AM_PsyfocusGain_Dampened"]</xpath>
+			<xpath>Defs/PreceptDef[defName="AM_PsyfocusGain_Dampened"]</xpath>
 			<value>
 				<li Class="TraderGen.Ideo.PreceptGenExtension">
 					<defs>

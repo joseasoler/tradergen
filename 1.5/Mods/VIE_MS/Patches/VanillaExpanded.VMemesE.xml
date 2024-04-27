@@ -2,7 +2,7 @@
 <Patch>
 	<!-- Associate precepts with their PreceptGenExtension. Sort alphabetically by PreceptGenDef. -->
 	<Operation Class="PatchOperationAddModExtension">
-		<xpath>/Defs/PreceptDef[defName="VME_Alcohol_Desired" or defName="VME_Alcohol_Demanded"]</xpath>
+		<xpath>Defs/PreceptDef[defName="VME_Alcohol_Desired" or defName="VME_Alcohol_Demanded"]</xpath>
 		<value>
 			<li Class="TraderGen.Ideo.PreceptGenExtension">
 				<defs>
@@ -12,7 +12,7 @@
 		</value>
 	</Operation>
 	<Operation Class="PatchOperationAddModExtension">
-		<xpath>/Defs/PreceptDef[defName="VME_Anonymity_Required"]</xpath>
+		<xpath>Defs/PreceptDef[defName="VME_Anonymity_Required"]</xpath>
 		<value>
 			<li Class="TraderGen.Ideo.PreceptGenExtension">
 				<defs>
@@ -22,7 +22,7 @@
 		</value>
 	</Operation>
 	<Operation Class="PatchOperationAddModExtension">
-		<xpath>/Defs/PreceptDef[defName="VME_AutomationEfficiency_Increased"]</xpath>
+		<xpath>Defs/PreceptDef[defName="VME_AutomationEfficiency_Increased"]</xpath>
 		<value>
 			<li Class="TraderGen.Ideo.PreceptGenExtension">
 				<defs>
@@ -32,7 +32,7 @@
 		</value>
 	</Operation>
 	<Operation Class="PatchOperationAddModExtension">
-		<xpath>/Defs/PreceptDef[defName="VME_BodyMod_OnlyBiological"]</xpath>
+		<xpath>Defs/PreceptDef[defName="VME_BodyMod_OnlyBiological"]</xpath>
 		<value>
 			<li Class="TraderGen.Ideo.PreceptGenExtension">
 				<defs>
@@ -42,7 +42,7 @@
 		</value>
 	</Operation>
 	<Operation Class="PatchOperationAddModExtension">
-		<xpath>/Defs/PreceptDef[defName="VME_Corruption_Essential"]</xpath>
+		<xpath>Defs/PreceptDef[defName="VME_Corruption_Essential"]</xpath>
 		<value>
 			<li Class="TraderGen.Ideo.PreceptGenExtension">
 				<defs>
@@ -52,7 +52,7 @@
 		</value>
 	</Operation>
 	<Operation Class="PatchOperationAddModExtension">
-		<xpath>/Defs/PreceptDef[defName="VME_InsectJellyEaten_Loved_Classic"]</xpath>
+		<xpath>Defs/PreceptDef[defName="VME_InsectJellyEaten_Loved_Classic"]</xpath>
 		<value>
 			<li Class="TraderGen.Ideo.PreceptGenExtension">
 				<defs>
@@ -62,7 +62,7 @@
 		</value>
 	</Operation>
 	<Operation Class="PatchOperationAddModExtension">
-		<xpath>/Defs/PreceptDef[defName="VME_Insectoids_Exalted"]</xpath>
+		<xpath>Defs/PreceptDef[defName="VME_Insectoids_Exalted"]</xpath>
 		<value>
 			<li Class="TraderGen.Ideo.PreceptGenExtension">
 				<defs>
@@ -72,7 +72,7 @@
 		</value>
 	</Operation>
 	<Operation Class="PatchOperationAddModExtension">
-		<xpath>/Defs/PreceptDef[defName="VME_LeatherApparel_Disliked" or defName="VME_LeatherApparel_Abhorrent"]</xpath>
+		<xpath>Defs/PreceptDef[defName="VME_LeatherApparel_Disliked" or defName="VME_LeatherApparel_Abhorrent"]</xpath>
 		<value>
 			<li Class="TraderGen.Ideo.PreceptGenExtension">
 				<defs>
@@ -82,7 +82,7 @@
 		</value>
 	</Operation>
 	<Operation Class="PatchOperationAddModExtension">
-		<xpath>/Defs/PreceptDef[defName="VME_Ranching_Disliked"]</xpath>
+		<xpath>Defs/PreceptDef[defName="VME_Ranching_Disliked"]</xpath>
 		<value>
 			<li Class="TraderGen.Ideo.PreceptGenExtension">
 				<defs>
@@ -92,7 +92,7 @@
 		</value>
 	</Operation>
 	<Operation Class="PatchOperationAddModExtension">
-		<xpath>/Defs/PreceptDef[defName="VME_Ranching_Nomadic"]</xpath>
+		<xpath>Defs/PreceptDef[defName="VME_Ranching_Nomadic"]</xpath>
 		<value>
 			<li Class="TraderGen.Ideo.PreceptGenExtension">
 				<defs>
@@ -102,7 +102,7 @@
 		</value>
 	</Operation>
 	<Operation Class="PatchOperationAddModExtension">
-		<xpath>/Defs/PreceptDef[defName="VME_TradingPrice_Improved"]</xpath>
+		<xpath>Defs/PreceptDef[defName="VME_TradingPrice_Improved"]</xpath>
 		<value>
 			<li Class="TraderGen.Ideo.PreceptGenExtension">
 				<defs>

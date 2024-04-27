@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Patch>
 	<Operation Class="PatchOperationAddModExtension">
-		<xpath>/Defs/TraderKindDef[defName="Orbital_GeneTrader"]</xpath>
+		<xpath>Defs/TraderKindDef[defName="Orbital_GeneTrader"]</xpath>
 		<value>
 			<li Class="TraderGen.GenExtension">
 				<specializations>
