@@ -13,11 +13,6 @@ namespace TraderGen.Harmony.Orbital
 		nameof(IncidentWorker_OrbitalTraderArrival.TryExecuteWorker))]
 	public static class IncidentWorker_OrbitalTraderArrival_TryExecuteWorker_Patch
 	{
-		public static void SendSpecializationsLetter()
-		{
-		}
-
-
 		private static TaggedString OrbitalTraderLetterLabel(TaggedString _, TradeShip trader)
 		{
 			return Util.LabelWithTraderSpecialization(trader).CapitalizeFirst();
@@ -64,8 +59,7 @@ namespace TraderGen.Harmony.Orbital
 			return letterText;
 		}
 
-
-		public static IEnumerable<CodeInstruction> Original(IEnumerable<CodeInstruction> instructions)
+		public static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions)
 		{
 			MethodInfo originalLabelGetter = AccessTools.PropertyGetter(typeof(Def), nameof(Def.LabelCap));
 
@@ -94,15 +88,6 @@ namespace TraderGen.Harmony.Orbital
 					yield return new CodeInstruction(OpCodes.Ldloc_1); // vis (TradeShip)
 					yield return new CodeInstruction(OpCodes.Call, modifiedLabelMethod);
 				}
-			}
-		}
-
-		public static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions)
-		{
-			foreach (CodeInstruction instruction in Original(instructions))
-			{
-				Log.Error(instruction.ToString());
-				yield return instruction;
 			}
 		}
 	}
