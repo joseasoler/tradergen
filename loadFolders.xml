@@ -25,7 +25,6 @@
 		<li IfModActive="Ludeon.RimWorld.Royalty">1.5/DLC/Royalty</li>
 		<li IfModActive="Ludeon.RimWorld.Ideology">1.5/DLC/Ideology</li>
 		<li IfModActive="Aelanna.EccentricTech.FusionPower">1.5/Mods/EccentricTechFusionPower</li>
-		<li IfModActive="OskarPotocki.VFE.Insectoid">1.5/Mods/VFE_Insectoids</li>
 		<li IfModActive="Owlchemist.SeedsPleaseLite">1.5/Mods/SeedsPleaseLite</li>
 		<li IfModActive="Sarg.AlphaMemes">1.5/Mods/AlphaMemes</li>
 		<li IfModActive="tac.genetrader">1.5/Mods/GeneTrader</li>
