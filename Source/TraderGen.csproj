@@ -36,7 +36,6 @@
 		<Compile Include="GenExtension.cs" />
 		<Compile Include="Harmony\Caravans\IncidentWorker_TraderCaravanArrival_TryExecuteWorker_Patch.cs" />
 		<Compile Include="Harmony\CompQuality_PostPostGeneratedForTrader_Patch.cs" />
-		<Compile Include="Harmony\Dialog_SellableItems_Constructor_Patch.cs" />
 		<Compile Include="Harmony\Dialog_Trade_DoWindowContents_Patch.cs" />
 		<Compile Include="Harmony\Dialog_SellableItems_CalculateSellableItems_Patch.cs" />
 		<Compile Include="Harmony\DLC\Ideology.cs" />
